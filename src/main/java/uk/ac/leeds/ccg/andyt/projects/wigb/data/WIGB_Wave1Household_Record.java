@@ -522,4 +522,403 @@ public class WIGB_Wave1Household_Record extends WIGB_Wave1Or2Household_Record {
         init56();
         init57();
     }
+
+    /**
+     * @return the GContMn
+     */
+    public Double getGContMn() {
+        return GContMn;
+    }
+
+    /**
+     * @return the GContRc
+     */
+    public Double getGContRc() {
+        return GContRc;
+    }
+
+    /**
+     * @return the GContVl
+     */
+    public Double getGContVl() {
+        return GContVl;
+    }
+
+    /**
+     * @return the HRTBYr
+     */
+    public Double getHRTBYr() {
+        return HRTBYr;
+    }
+
+    /**
+     * @return the MDbeh2
+     */
+    public Double getMDbeh2() {
+        return MDbeh2;
+    }
+
+    /**
+     * @return the MDbeh3
+     */
+    public Double getMDbeh3() {
+        return MDbeh3;
+    }
+
+    /**
+     * @return the MDbeh
+     */
+    public Double getMDbeh() {
+        return MDbeh;
+    }
+
+    /**
+     * @return the MDCap2
+     */
+    public Double getMDCap2() {
+        return MDCap2;
+    }
+
+    /**
+     * @return the MDCap3
+     */
+    public Double getMDCap3() {
+        return MDCap3;
+    }
+
+    /**
+     * @return the MDCap
+     */
+    public Double getMDCap() {
+        return MDCap;
+    }
+
+    /**
+     * @return the MDRst2
+     */
+    public Double getMDRst2() {
+        return MDRst2;
+    }
+
+    /**
+     * @return the MDRst3
+     */
+    public Double getMDRst3() {
+        return MDRst3;
+    }
+
+    /**
+     * @return the MDRst
+     */
+    public Double getMDRst() {
+        return MDRst;
+    }
+
+    /**
+     * @return the MDWPf2
+     */
+    public Double getMDWPf2() {
+        return MDWPf2;
+    }
+
+    /**
+     * @return the MDWPf3
+     */
+    public Double getMDWPf3() {
+        return MDWPf3;
+    }
+
+    /**
+     * @return the MDWPf
+     */
+    public Double getMDWPf() {
+        return MDWPf;
+    }
+
+    /**
+     * @return the Mendnum3_i
+     */
+    public Double getMendnum3_i() {
+        return Mendnum3_i;
+    }
+
+    /**
+     * @return the Mendnum3_iflag
+     */
+    public Double getMendnum3_iflag() {
+        return Mendnum3_iflag;
+    }
+
+    /**
+     * @return the MEndv11_i
+     */
+    public Double getMEndv11_i() {
+        return MEndv11_i;
+    }
+
+    /**
+     * @return the MEndv11_iflag
+     */
+    public Double getMEndv11_iflag() {
+        return MEndv11_iflag;
+    }
+
+    /**
+     * @return the MEndv5_i
+     */
+    public Double getMEndv5_i() {
+        return MEndv5_i;
+    }
+
+    /**
+     * @return the MEndv5_iflag
+     */
+    public Double getMEndv5_iflag() {
+        return MEndv5_iflag;
+    }
+
+    /**
+     * @return the MEver
+     */
+    public Double getMEver() {
+        return MEver;
+    }
+
+    /**
+     * @return the MNeg3_i
+     */
+    public Double getMNeg3_i() {
+        return MNeg3_i;
+    }
+
+    /**
+     * @return the MNeg3_iflag
+     */
+    public Double getMNeg3_iflag() {
+        return MNeg3_iflag;
+    }
+
+    /**
+     * @return the NumCivPtr
+     */
+    public Double getNumCivPtr() {
+        return NumCivPtr;
+    }
+
+    /**
+     * @return the VCarO
+     */
+    public Double getVCarO() {
+        return VCarO;
+    }
+
+    /**
+     * @return the Vcarw
+     */
+    public Double getVcarw() {
+        return Vcarw;
+    }
+
+    /**
+     * @return the VModu
+     */
+    public Double getVModu() {
+        return VModu;
+    }
+
+    /**
+     * @return the VNumV2
+     */
+    public Double getVNumV2() {
+        return VNumV2;
+    }
+
+    /**
+     * @return the VNumV3
+     */
+    public Double getVNumV3() {
+        return VNumV3;
+    }
+
+    /**
+     * @return the VNumV4
+     */
+    public Double getVNumV4() {
+        return VNumV4;
+    }
+
+    /**
+     * @return the VNumV5
+     */
+    public Double getVNumV5() {
+        return VNumV5;
+    }
+
+    /**
+     * @return the VNumV
+     */
+    public Double getVNumV() {
+        return VNumV;
+    }
+
+    /**
+     * @return the VOTyp1_i
+     */
+    public Double getVOTyp1_i() {
+        return VOTyp1_i;
+    }
+
+    /**
+     * @return the VOTyp2_i
+     */
+    public Double getVOTyp2_i() {
+        return VOTyp2_i;
+    }
+
+    /**
+     * @return the VOTyp3_i
+     */
+    public Double getVOTyp3_i() {
+        return VOTyp3_i;
+    }
+
+    /**
+     * @return the VOTyp4_i
+     */
+    public Double getVOTyp4_i() {
+        return VOTyp4_i;
+    }
+
+    /**
+     * @return the VOTyp5_i
+     */
+    public Double getVOTyp5_i() {
+        return VOTyp5_i;
+    }
+
+    /**
+     * @return the VPers2
+     */
+    public Double getVPers2() {
+        return VPers2;
+    }
+
+    /**
+     * @return the VPers3
+     */
+    public Double getVPers3() {
+        return VPers3;
+    }
+
+    /**
+     * @return the VPers4
+     */
+    public Double getVPers4() {
+        return VPers4;
+    }
+
+    /**
+     * @return the VPers5
+     */
+    public Double getVPers5() {
+        return VPers5;
+    }
+
+    /**
+     * @return the Vpers6
+     */
+    public Double getVpers6() {
+        return Vpers6;
+    }
+
+    /**
+     * @return the VPers6_i
+     */
+    public Double getVPers6_i() {
+        return VPers6_i;
+    }
+
+    /**
+     * @return the VPers6_iflag
+     */
+    public Double getVPers6_iflag() {
+        return VPers6_iflag;
+    }
+
+    /**
+     * @return the VShPct2
+     */
+    public Double getVShPct2() {
+        return VShPct2;
+    }
+
+    /**
+     * @return the VShPct3
+     */
+    public Double getVShPct3() {
+        return VShPct3;
+    }
+
+    /**
+     * @return the VShPct4
+     */
+    public Double getVShPct4() {
+        return VShPct4;
+    }
+
+    /**
+     * @return the VShPct5
+     */
+    public Double getVShPct5() {
+        return VShPct5;
+    }
+
+    /**
+     * @return the VShPct
+     */
+    public Double getVShPct() {
+        return VShPct;
+    }
+
+    /**
+     * @return the DVPEPV_sum
+     */
+    public Double getDVPEPV_sum() {
+        return DVPEPV_sum;
+    }
+
+    /**
+     * @return the HMortg
+     */
+    public Double getHMortg() {
+        return HMortg;
+    }
+
+    /**
+     * @return the HPHYSW
+     */
+    public Double getHPHYSW() {
+        return HPHYSW;
+    }
+
+    /**
+     * @return the LandOvSeaT_Sum
+     */
+    public Double getLandOvSeaT_Sum() {
+        return LandOvSeaT_Sum;
+    }
+
+    /**
+     * @return the MoArr_sum
+     */
+    public Double getMoArr_sum() {
+        return MoArr_sum;
+    }
+
+    /**
+     * @return the Hhldr
+     */
+    public Double getHhldr() {
+        return Hhldr;
+    }
 }
