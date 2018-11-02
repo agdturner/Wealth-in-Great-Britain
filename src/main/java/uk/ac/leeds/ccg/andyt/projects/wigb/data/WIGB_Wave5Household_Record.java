@@ -51,18 +51,18 @@ public class WIGB_Wave5Household_Record extends WIGB_Wave4Or5Household_Record {
     // Extras 9
     private Double VType3;
     // Extras 10
-    private Double VCarNi;
-    private Double VCarNiflag;
+    private Double VType1_i;
+    private Double VCarN_i;
+    private Double VCarN_iflag;
     private Double VEstVTotal;
     private Double VEstVTotalB;
-    private Double VEstVTotalBi;
-    private Double VEstVTotalBiflag;
-    private Double VEstVTotali;
-    private Double VEstVTotaliflag;
-    private Double VTypeiflag;
-    private Double VOTypiflag;
-    private Double VOVlBi;
-    private Double VOVlBiflag;
+    private Double VEstVTotalB_i;
+    private Double VEstVTotalB_iflag;
+    private Double VEstVTotal_i;
+    private Double VEstVTotal_iflag;
+    private Double VOTyp_iflag;
+    private Double VOVlB_i;
+    private Double VOVlB_iflag;
     // Extras 11
     private Double mendv10i;
     private Double mendv10iflag;
@@ -160,7 +160,7 @@ public class WIGB_Wave5Household_Record extends WIGB_Wave4Or5Household_Record {
             MYPastSPA2 = new Double(split[n]);
         }
         n++;
-        init5();
+        init6();
         // Extras 6        
         if (split[n].trim().isEmpty()) {
             MIntPaid2 = null;
@@ -227,15 +227,15 @@ public class WIGB_Wave5Household_Record extends WIGB_Wave4Or5Household_Record {
         init12();
         // Extras 10
         if (split[n].trim().isEmpty()) {
-            VCarNi = null;
+            VCarN_i = null;
         } else {
-            VCarNi = new Double(split[n]);
+            VCarN_i = new Double(split[n]);
         }
         n++;
         if (split[n].trim().isEmpty()) {
-            VCarNiflag = null;
+            VCarN_iflag = null;
         } else {
-            VCarNiflag = new Double(split[n]);
+            VCarN_iflag = new Double(split[n]);
         }
         n++;
         if (split[n].trim().isEmpty()) {
@@ -251,51 +251,58 @@ public class WIGB_Wave5Household_Record extends WIGB_Wave4Or5Household_Record {
         }
         n++;
         if (split[n].trim().isEmpty()) {
-            VEstVTotalBi = null;
+            VEstVTotal_i = null;
         } else {
-            VEstVTotalBi = new Double(split[n]);
+            VEstVTotal_i = new Double(split[n]);
         }
         n++;
         if (split[n].trim().isEmpty()) {
-            VEstVTotalBiflag = null;
+            VEstVTotalB_i = null;
         } else {
-            VEstVTotalBiflag = new Double(split[n]);
+            VEstVTotalB_i = new Double(split[n]);
         }
         n++;
         if (split[n].trim().isEmpty()) {
-            VEstVTotali = null;
+            VEstVTotalB_iflag = null;
         } else {
-            VEstVTotali = new Double(split[n]);
+            VEstVTotalB_iflag = new Double(split[n]);
         }
         n++;
         if (split[n].trim().isEmpty()) {
-            VEstVTotaliflag = null;
+            VEstVTotal_i = null;
         } else {
-            VEstVTotaliflag = new Double(split[n]);
+            VEstVTotal_i = new Double(split[n]);
         }
         n++;
         if (split[n].trim().isEmpty()) {
-            VTypeiflag = null;
+            VEstVTotal_iflag = null;
         } else {
-            VTypeiflag = new Double(split[n]);
+            VEstVTotal_iflag = new Double(split[n]);
         }
         n++;
         if (split[n].trim().isEmpty()) {
-            VOTypiflag = null;
+            VType_iflag = null;
         } else {
-            VOTypiflag = new Double(split[n]);
+            VType_iflag = new Double(split[n]);
+
         }
         n++;
         if (split[n].trim().isEmpty()) {
-            VOVlBi = null;
+            VOTyp_iflag = null;
         } else {
-            VOVlBi = new Double(split[n]);
+            VOTyp_iflag = new Double(split[n]);
         }
         n++;
         if (split[n].trim().isEmpty()) {
-            VOVlBiflag = null;
+            VOVlB_i = null;
         } else {
-            VOVlBiflag = new Double(split[n]);
+            VOVlB_i = new Double(split[n]);
+        }
+        n++;
+        if (split[n].trim().isEmpty()) {
+            VOVlB_iflag = null;
+        } else {
+            VOVlB_iflag = new Double(split[n]);
         }
         n++;
         init13();
@@ -324,7 +331,7 @@ public class WIGB_Wave5Household_Record extends WIGB_Wave4Or5Household_Record {
         }
         n++;
         init14();
-            // Extras 11
+        // Extras 11
         if (split[n].trim().isEmpty()) {
             VType1i = null;
         } else {
@@ -332,7 +339,7 @@ public class WIGB_Wave5Household_Record extends WIGB_Wave4Or5Household_Record {
         }
         n++;
         init15();
-            // Extras 12
+        // Extras 12
         if (split[n].trim().isEmpty()) {
             VType3i = null;
         } else {
@@ -385,5 +392,9 @@ public class WIGB_Wave5Household_Record extends WIGB_Wave4Or5Household_Record {
             casew1 = new Double(split[n]);
         }
         n++;
+        if (n != split.length) {
+            int debug = 1;
+            System.out.println("n(" + n + ")!= split.length(" + split.length + ")");
+        }
     }
 }

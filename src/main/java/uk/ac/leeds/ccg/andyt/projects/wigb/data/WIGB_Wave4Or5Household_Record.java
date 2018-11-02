@@ -1167,8 +1167,7 @@ public class WIGB_Wave4Or5Household_Record {
         n++;
     }
 
-    protected void init4() {
-
+    protected final void init4() {
         if (split[n].trim().isEmpty()) {
             MInc1 = null;
         } else {
