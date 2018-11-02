@@ -22,39 +22,39 @@ package uk.ac.leeds.ccg.andyt.projects.wigb.data;
 public class WIGB_Wave4Household_Record extends WIGB_Wave4Or5Household_Record {
 
     // Extras 1
-    private Double HIntro;
+    private final Double HIntro;
     // Extras 2
-    private Double EqReas1;
-    private Double EqReas2;
-    private Double EqReas3;
-    private Double EqReas4;
+    private final Double EqReas1;
+    private final Double EqReas2;
+    private final Double EqReas3;
+    private final Double EqReas4;
     // Extras 3
-    private Double VEstV1;
-    private Double VEsVb1;
+    private final Double VEstV1;
+    private final Double VEsVb1;
     // Extras 3
-    private Double VEstV2;
-    private Double VEsVb2;
+    private final Double VEstV2;
+    private final Double VEsVb2;
     // Extras 4
-    private Double VEstV_i;
-    private Double VEstV_iflag;
-    private Double VEstV2_i;
-    private Double VEstV2_iflag;
-    private Double VType_i;
+    private final Double VEstV_i;
+    private final Double VEstV_iflag;
+    private final Double VEstV2_i;
+    private final Double VEstV2_iflag;
+    private final Double VType_i;
     //private Double VType_iflag; // In both, but in very different places!
     // Extras 5
-    private Double VType2_iflag;
+    private final Double VType2_iflag;
     // Extras 6
-    private Double DVTotCarVal;
-    private Double DVTotVanVal;
-    private Double DVTotMotBVal;
+    private final Double DVTotCarVal;
+    private final Double DVTotVanVal;
+    private final Double DVTotMotBVal;
     // Extras 7
-    private Double vesvb3;
+    private final Double vesvb3;
     // Extras 8
-    private Double CASEw3;
-    private Double CASEW2;
-    private Double casew1;
+    private final Double CASEw3;
+    private final Double CASEW2;
+    private final Double casew1;
     // Extras 9
-    private Double dvtotgir_3sf;
+    private final Double dvtotgir_3sf;
     
     public WIGB_Wave4Household_Record(String line) {
         init0(line);
@@ -250,4 +250,166 @@ public class WIGB_Wave4Household_Record extends WIGB_Wave4Or5Household_Record {
         }
     }
 
+    /**
+     * @return the HIntro
+     */
+    public Double getHIntro() {
+        return HIntro;
+    }
+
+    /**
+     * @return the EqReas1
+     */
+    public Double getEqReas1() {
+        return EqReas1;
+    }
+
+    /**
+     * @return the EqReas2
+     */
+    public Double getEqReas2() {
+        return EqReas2;
+    }
+
+    /**
+     * @return the EqReas3
+     */
+    public Double getEqReas3() {
+        return EqReas3;
+    }
+
+    /**
+     * @return the EqReas4
+     */
+    public Double getEqReas4() {
+        return EqReas4;
+    }
+
+    /**
+     * @return the VEstV1
+     */
+    public Double getVEstV1() {
+        return VEstV1;
+    }
+
+    /**
+     * @return the VEsVb1
+     */
+    public Double getVEsVb1() {
+        return VEsVb1;
+    }
+
+    /**
+     * @return the VEstV2
+     */
+    public Double getVEstV2() {
+        return VEstV2;
+    }
+
+    /**
+     * @return the VEsVb2
+     */
+    public Double getVEsVb2() {
+        return VEsVb2;
+    }
+
+    /**
+     * @return the VEstV_i
+     */
+    public Double getVEstV_i() {
+        return VEstV_i;
+    }
+
+    /**
+     * @return the VEstV_iflag
+     */
+    public Double getVEstV_iflag() {
+        return VEstV_iflag;
+    }
+
+    /**
+     * @return the VEstV2_i
+     */
+    public Double getVEstV2_i() {
+        return VEstV2_i;
+    }
+
+    /**
+     * @return the VEstV2_iflag
+     */
+    public Double getVEstV2_iflag() {
+        return VEstV2_iflag;
+    }
+
+    /**
+     * @return the VType_i
+     */
+    public Double getVType_i() {
+        return VType_i;
+    }
+
+    /**
+     * @return the VType2_iflag
+     */
+    public Double getVType2_iflag() {
+        return VType2_iflag;
+    }
+
+    /**
+     * @return the DVTotCarVal
+     */
+    public Double getDVTotCarVal() {
+        return DVTotCarVal;
+    }
+
+    /**
+     * @return the DVTotVanVal
+     */
+    public Double getDVTotVanVal() {
+        return DVTotVanVal;
+    }
+
+    /**
+     * @return the DVTotMotBVal
+     */
+    public Double getDVTotMotBVal() {
+        return DVTotMotBVal;
+    }
+
+    /**
+     * @return the vesvb3
+     */
+    public Double getVesvb3() {
+        return vesvb3;
+    }
+
+    /**
+     * @return the CASEw3
+     */
+    public Double getCASEw3() {
+        return CASEw3;
+    }
+
+    /**
+     * @return the CASEW2
+     */
+    public Double getCASEW2() {
+        return CASEW2;
+    }
+
+    /**
+     * @return the casew1
+     */
+    public Double getCasew1() {
+        return casew1;
+    }
+
+    /**
+     * @return the dvtotgir_3sf
+     */
+    public Double getDvtotgir_3sf() {
+        return dvtotgir_3sf;
+    }
+
+    
 }
