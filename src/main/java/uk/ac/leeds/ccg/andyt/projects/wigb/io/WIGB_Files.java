@@ -27,12 +27,12 @@ public class WIGB_Files extends Generic_Files {
 
     protected transient WIGB_Strings Strings;
 
-    protected WIGB_Files(){}
-    
+    protected WIGB_Files() {
+    }
+
 //    public LR_Files(LR_Strings Strings) {
 //        this.Strings = Strings;
 //    }
-
     /**
      *
      * @param s
@@ -49,19 +49,27 @@ public class WIGB_Files extends Generic_Files {
         }
         return InputDataDir;
     }
-    
+
     public File getInputDataDir(String s) {
         return new File(getInputDataDir(), s);
     }
-    
+
+    public File getWaASInputDir() {
+        File r;
+        r = new File(getInputDataDir(Strings), "WaAS");
+        r = new File(r, "UKDA-7215-tab");
+        r = new File(r, "tab");
+        return r;
+    }
+
     public File getTIDataFile() {
-        File result;
+        File r;
         File dir;
         dir = new File(getInputDataDir(Strings), "TransparencyInternational");
-        result = new File(dir, "Selection.csv");
-        return result;
+        r = new File(dir, "Selection.csv");
+        return r;
     }
-    
+
     public File getGeneratedDataFile(String name, String type) {
         File dir;
         dir = getGeneratedDataDir(Strings);
@@ -69,7 +77,7 @@ public class WIGB_Files extends Generic_Files {
         f = new File(dir, name + "_" + type + "." + Strings.S_dat);
         return f;
     }
-    
+
     public File getEnvDataFile() {
         return new File(getGeneratedDataDir(Strings), "Env.dat");
     }
