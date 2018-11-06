@@ -419,6 +419,7 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
      * @param s4 May be null.
      * @param s5 May be null.
      * @return
+     * @Todo generalise
      */
     public TreeSet<String> getFieldsInCommon(TreeSet<String> s1,
             TreeSet<String> s2, TreeSet<String> s3, TreeSet<String> s4,
