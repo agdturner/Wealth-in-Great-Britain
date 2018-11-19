@@ -5,57 +5,16 @@ package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas;
 public class WIGB_Wave3_PERSON_Record extends WIGB_Wave3Or4Or5_PERSON_Record {
 protected static Double ACCFRAC;
 
-protected static Double ACCFRAC1;
-
-protected static Double ACCFRAC2;
-
 protected static Double AGEASAF1;
 
 protected static Double AGMSAF2T;
 
 protected static Double AGMSAFT1;
 
-protected static Double ALLRET;
-
-protected static Double ALLRET_I;
-
-protected static Double ANXIOUS;
-
-protected static Double ASAF1T;
-
-protected static Double ASAF2T;
-
-protected static Double BACCBEG1;
-
-protected static Double BACCEND1;
-
-protected static Double BACCEND2;
-
-protected static Double BACCEND3;
-
-protected static Double BACCSA1;
-
-protected static Double BACCSB1;
-
-protected static Double BBEFORE1;
-
-protected static Double BCARRY1;
-
+protected static String BACCEND1;
+protected static String BACCEND2;
+protected static String BACCEND3;
 protected static Double BCARRY2;
-
-protected static Double BCARRY3;
-
-protected static Double BDEBTS1;
-
-protected static Double BDIRNI1;
-
-protected static Double BDIRNI1_I;
-
-protected static Double BDIRNI1_IFLAG;
-
-protected static Double BDOCS1;
-
-protected static Double BEMPN1;
 
 protected static Double BENTYPE01;
 
@@ -119,52 +78,6 @@ protected static Double BFUND7;
 
 protected static Double BFUND8;
 
-protected static Double BNATINS1;
-
-protected static Double BONTAX_I;
-
-protected static Double BONTAX_IFLAG;
-
-protected static Double BOTDVDBOPEN1T;
-
-protected static Double BOTDVDBOPEN2T;
-
-protected static Double BOWED1;
-
-protected static Double BOWN1;
-
-protected static Double BPART1;
-
-protected static Double BPAYNUM;
-
-protected static Double BPRFLOSS1;
-
-protected static Double BPRFLOSS2;
-
-protected static Double BPRFLOSS3;
-
-protected static Double BPROFIT1;
-
-protected static Double BPROPN1;
-
-protected static Double BRETIRE1;
-
-protected static Double BSEPPD01;
-
-protected static Double BSEPPD02;
-
-protected static Double BSEPPD03;
-
-protected static Double BSEPPD04;
-
-protected static Double BSEPPD05;
-
-protected static Double BSEPPD06;
-
-protected static Double BSEPPD07;
-
-protected static Double BSEPPD08;
-
 protected static Double BSEPPD09;
 
 protected static Double BSEPPD10;
@@ -189,83 +102,9 @@ protected static Double BSEPPD19;
 
 protected static Double BSEPPD20;
 
-protected static Double BSIZE1;
-
-protected static Double BSTART1;
-
-protected static Double BTAX1;
-
-protected static Double BTOGPD;
-
-protected static Double BTOGSEP;
-
-protected static Double BTYPE1;
-
-protected static Double BTYPE1_I;
-
-protected static Double BTYPE1_IFLAG;
-
-protected static Double BUYLGDST;
-
-protected static Double BVAL1;
-
-protected static Double BVALB1;
-
-protected static Double BVALB3;
-
-protected static Double BYEAR1;
-
-protected static Double CACONTR1;
-
-protected static Double CACONTR2;
-
-protected static Double CACONTR3;
-
-protected static Double CACONTR4;
-
-protected static Double CACONTR5;
-
-protected static Double CACONTR6;
-
-protected static Double CACONTRAM1;
-
-protected static Double CACONTRAM2;
-
-protected static Double CACONTRAM3;
-
-protected static Double CACONTRAM4;
-
-protected static Double CACONTRAM5;
-
-protected static Double CACONTRAM6;
-
-protected static Double CACONTRAMB1;
-
-protected static Double CACONTRAMB2;
-
-protected static Double CACONTRAMB3;
-
-protected static Double CACONTRAMB4;
-
-protected static Double CACONTRAMB5;
-
-protected static Double CACONTRAMB6;
-
-protected static Double CACRNUM;
-
-protected static Double CACTVB;
-
 protected static Double CAEXTRA;
 
-protected static Double CAJISA_I;
-
-protected static Double CAJISA_IFLAG;
-
-protected static Double CAODNUM;
-
 protected static Double CAOLDER;
-
-protected static Double CAOPEN;
 
 protected static Double CAOTHER1;
 
@@ -277,33 +116,13 @@ protected static Double CAOTHER4;
 
 protected static Double CAOTHER5;
 
-protected static Double CASEW2;
-
-protected static Double CASEW3;
-
 protected static Double CATYPE;
-
-protected static Double CCAC1_I;
-
-protected static Double CCAC1_IFLAG;
-
-protected static Double CCAC2_I;
-
-protected static Double CCAC2_IFLAG;
-
-protected static Double CCAC3_I;
-
-protected static Double CCAC3_IFLAG;
 
 protected static Double CCAC4_I;
 
 protected static Double CCAC5_I;
 
-protected static Double CHOICP;
-
 protected static Double COMBPD;
-
-protected static Double COMMI;
 
 protected static Double COMMIT1;
 
@@ -314,8 +133,6 @@ protected static Double COMMIT3;
 protected static Double COMMIT4;
 
 protected static Double COMMIT5;
-
-protected static Double COUPLENUM;
 
 protected static Double COURSE20;
 
@@ -333,23 +150,7 @@ protected static Double CTPAYS;
 
 protected static Double CTPAYW;
 
-protected static Double CURSTAT;
-
-protected static Double CUTDOWN;
-
-protected static Double DADVACT1;
-
-protected static Double DADVACT2;
-
-protected static Double DADVACT3;
-
-protected static Double DADVMTH;
-
 protected static Double DBURDH;
-
-protected static Double DBURDW1;
-
-protected static Double DBURDW2;
 
 protected static Double DBURDW4;
 
@@ -361,121 +162,49 @@ protected static Double DBURDW7;
 
 protected static Double DBURD___W3;
 
-protected static Double DC12BEH1;
-
-protected static Double DC12BEH2;
-
-protected static Double DC12BEH3;
-
 protected static Double DC12BEH4;
 
 protected static Double DC12BEH5;
-
-protected static Double DC12OWE1;
-
-protected static Double DC12OWE2;
-
-protected static Double DC12OWE3;
 
 protected static Double DC12OWE4;
 
 protected static Double DC12OWE5;
 
-protected static Double DCAMC1;
-
 protected static Double DCAMC4;
 
 protected static Double DCAMC5;
-
-protected static Double DCAMD1;
 
 protected static Double DCAMD4;
 
 protected static Double DCAMD5;
 
-protected static Double DCAMOS1_I;
-
-protected static Double DCAMOS1_IFLAG;
-
-protected static Double DCAMOS2_I;
-
-protected static Double DCAMOS2_IFLAG;
-
-protected static Double DCAMOS3_I;
-
-protected static Double DCAMOS3_IFLAG;
-
 protected static Double DCAMOS4_I;
 
 protected static Double DCAMOS5_I;
-
-protected static Double DCAMP1;
 
 protected static Double DCAMP4;
 
 protected static Double DCAMP5;
 
-protected static Double DCCOS1;
-
 protected static Double DCCOS4;
 
 protected static Double DCCOS5;
-
-protected static Double DCCSP1;
 
 protected static Double DCCSP4;
 
 protected static Double DCCSP5;
 
-protected static Double DCESB1;
-
 protected static Double DCESB4;
 
 protected static Double DCESB5;
-
-protected static Double DCINZ1;
 
 protected static Double DCINZ4;
 
 protected static Double DCINZ5;
 
-protected static Double DCNAM1;
-
 protected static Double DCNAM4;
 
 protected static Double DCNAM5;
-
-protected static Double DCNUM1;
-
-protected static Double DCNUM2;
-
-protected static Double DCOINV1;
-
-protected static Double DCOINV1_I;
-
-protected static Double DCOINV1_IFLAG;
-
-protected static Double DCOINV3_I;
-
-protected static Double DCOINV3_IFLAG;
-
-protected static Double DCOINV4;
-
-protected static Double DCOINV4_I;
-
-protected static Double DCOINV4_IFLAG;
-
-protected static Double DCOINV5;
-
-protected static Double DCOINV5_I;
-
-protected static Double DCOINV5_IFLAG;
-
-protected static Double DCOINVB1;
-
-protected static Double DCOINVB4;
-
-protected static Double DCOINVB5;
 
 protected static Double DCONM10;
 
@@ -485,65 +214,29 @@ protected static Double DCONM8;
 
 protected static Double DCONM9;
 
-protected static Double DCOSHV1;
-
-protected static Double DCOSHV1_I;
-
-protected static Double DCOSHV1_IFLAG;
-
-protected static Double DCOSHV3_I;
-
-protected static Double DCOSHV3_IFLAG;
-
-protected static Double DCOSHV4;
-
-protected static Double DCOSHV5;
-
-protected static Double DCOSHVB1;
-
-protected static Double DCOSHVB3;
-
-protected static Double DCOSHVB4;
-
-protected static Double DCOSHVB5;
-
-protected static Double DCPER1;
-
 protected static Double DCPER4;
 
 protected static Double DCPER5;
-
-protected static Double DCREC1;
 
 protected static Double DCREC4;
 
 protected static Double DCREC5;
 
-protected static Double DCRSP1;
-
 protected static Double DCRSP4;
 
 protected static Double DCRSP5;
-
-protected static Double DHBANY08;
 
 protected static Double DHBANY08_I;
 
 protected static Double DHBANY08_IFLAG;
 
-protected static Double DHBANY09;
-
 protected static Double DHBANY09_I;
 
 protected static Double DHBANY09_IFLAG;
 
-protected static Double DHBANY10;
-
 protected static Double DHBANY10_I;
 
 protected static Double DHBANY10_IFLAG;
-
-protected static Double DHBANY11;
 
 protected static Double DHBANY11_I;
 
@@ -556,12 +249,6 @@ protected static Double DHPANY5;
 protected static Double DHPANY6;
 
 protected static Double DHPANY7;
-
-protected static Double DHPBEH1;
-
-protected static Double DHPBEH1_I;
-
-protected static Double DHPBEH1_IFLAG;
 
 protected static Double DHPBEH3;
 
@@ -581,19 +268,11 @@ protected static Double DHPBEH5_I;
 
 protected static Double DHPBEH5_IFLAG;
 
-protected static Double DHPEST1;
-
 protected static Double DHPEST3;
 
 protected static Double DHPEST4;
 
 protected static Double DHPEST5;
-
-protected static Double DHPINS1;
-
-protected static Double DHPINS1_I;
-
-protected static Double DHPINS1_IFLAG;
 
 protected static Double DHPINS3;
 
@@ -613,19 +292,11 @@ protected static Double DHPINS5_I;
 
 protected static Double DHPINS5_IFLAG;
 
-protected static Double DHPINT1;
-
 protected static Double DHPINT3;
 
 protected static Double DHPINT4;
 
 protected static Double DHPINT5;
-
-protected static Double DHPOFT1;
-
-protected static Double DHPOFT1_I;
-
-protected static Double DHPOFT1_IFLAG;
 
 protected static Double DHPOFT3;
 
@@ -645,12 +316,6 @@ protected static Double DHPOFT5_I;
 
 protected static Double DHPOFT5_IFLAG;
 
-protected static Double DHPOWE1;
-
-protected static Double DHPOWE1_I;
-
-protected static Double DHPOWE1_IFLAG;
-
 protected static Double DHPOWE3;
 
 protected static Double DHPOWE3_I;
@@ -669,19 +334,11 @@ protected static Double DHPOWE5_I;
 
 protected static Double DHPOWE5_IFLAG;
 
-protected static Double DHPWEST1;
-
 protected static Double DHPWEST3;
 
 protected static Double DHPWEST4;
 
 protected static Double DHPWEST5;
-
-protected static Double DHPWHNM1;
-
-protected static Double DHPWHNM1_I;
-
-protected static Double DHPWHNM1_IFLAG;
 
 protected static Double DHPWHNM3;
 
@@ -701,12 +358,6 @@ protected static Double DHPWHNM5_I;
 
 protected static Double DHPWHNM5_IFLAG;
 
-protected static Double DHPWHNY1;
-
-protected static Double DHPWHNY1_I;
-
-protected static Double DHPWHNY1_IFLAG;
-
 protected static Double DHPWHNY3;
 
 protected static Double DHPWHNY3_I;
@@ -724,72 +375,6 @@ protected static Double DHPWHNY5;
 protected static Double DHPWHNY5_I;
 
 protected static Double DHPWHNY5_IFLAG;
-
-protected static Double DLBEH1;
-
-protected static Double DLBEH1_I;
-
-protected static Double DLBEH1_IFLAG;
-
-protected static Double DLEST1;
-
-protected static Double DLEST5;
-
-protected static Double DLINS1;
-
-protected static Double DLINS1_I;
-
-protected static Double DLINS1_IFLAG;
-
-protected static Double DLINT1;
-
-protected static Double DLNNM;
-
-protected static Double DLOFT1;
-
-protected static Double DLOFT1_I;
-
-protected static Double DLOFT1_IFLAG;
-
-protected static Double DLOLD1;
-
-protected static Double DLOLD2;
-
-protected static Double DLOLD3;
-
-protected static Double DLOLD4;
-
-protected static Double DLOLD5;
-
-protected static Double DLONM;
-
-protected static Double DLOWE1;
-
-protected static Double DLOWE1_I;
-
-protected static Double DLOWE1_IFLAG;
-
-protected static Double DLSEC1;
-
-protected static Double DLTYPE1;
-
-protected static Double DLTYPE1_I;
-
-protected static Double DLTYPE1_IFLAG;
-
-protected static Double DLWEST1;
-
-protected static Double DLWHNM1;
-
-protected static Double DLWHNM1_I;
-
-protected static Double DLWHNM1_IFLAG;
-
-protected static Double DLWHNY1;
-
-protected static Double DLWHNY1_I;
-
-protected static Double DLWHNY1_IFLAG;
 
 protected static Double DLWHY11;
 
@@ -819,8 +404,6 @@ protected static Double DLWHY27;
 
 protected static Double DLWHY28;
 
-protected static Double DLWHY30;
-
 protected static Double DLWHY31;
 
 protected static Double DLWHY32;
@@ -830,16 +413,6 @@ protected static Double DLWHY33;
 protected static Double DLWHY34;
 
 protected static Double DLWHY35;
-
-protected static Double DLWHY6;
-
-protected static Double DLWHY7;
-
-protected static Double DMOBEH1;
-
-protected static Double DMOBEH1_I;
-
-protected static Double DMOBEH1_IFLAG;
 
 protected static Double DMOBEH3;
 
@@ -859,19 +432,11 @@ protected static Double DMOBEH5_I;
 
 protected static Double DMOBEH5_IFLAG;
 
-protected static Double DMOEST1;
-
 protected static Double DMOEST3;
 
 protected static Double DMOEST4;
 
 protected static Double DMOEST5;
-
-protected static Double DMOINS1;
-
-protected static Double DMOINS1_I;
-
-protected static Double DMOINS1_IFLAG;
 
 protected static Double DMOINS3;
 
@@ -891,19 +456,11 @@ protected static Double DMOINS5_I;
 
 protected static Double DMOINS5_IFLAG;
 
-protected static Double DMOINT1;
-
 protected static Double DMOINT3;
 
 protected static Double DMOINT4;
 
 protected static Double DMOINT5;
-
-protected static Double DMOOFT1;
-
-protected static Double DMOOFT1_I;
-
-protected static Double DMOOFT1_IFLAG;
 
 protected static Double DMOOFT3;
 
@@ -923,12 +480,6 @@ protected static Double DMOOFT5_I;
 
 protected static Double DMOOFT5_IFLAG;
 
-protected static Double DMOOWE1;
-
-protected static Double DMOOWE1_I;
-
-protected static Double DMOOWE1_IFLAG;
-
 protected static Double DMOOWE3;
 
 protected static Double DMOOWE3_I;
@@ -947,19 +498,11 @@ protected static Double DMOOWE5_I;
 
 protected static Double DMOOWE5_IFLAG;
 
-protected static Double DMOWEST1;
-
 protected static Double DMOWEST3;
 
 protected static Double DMOWEST4;
 
 protected static Double DMOWEST5;
-
-protected static Double DMOWHNM1;
-
-protected static Double DMOWHNM1_I;
-
-protected static Double DMOWHNM1_IFLAG;
 
 protected static Double DMOWHNM3;
 
@@ -979,12 +522,6 @@ protected static Double DMOWHNM5_I;
 
 protected static Double DMOWHNM5_IFLAG;
 
-protected static Double DMOWHNY1;
-
-protected static Double DMOWHNY1_I;
-
-protected static Double DMOWHNY1_IFLAG;
-
 protected static Double DMOWHNY3;
 
 protected static Double DMOWHNY3_I;
@@ -1003,99 +540,49 @@ protected static Double DMOWHNY5_I;
 
 protected static Double DMOWHNY5_IFLAG;
 
-protected static Double DS12BEH1;
-
-protected static Double DS12BEH2;
-
-protected static Double DS12BEH3;
-
 protected static Double DS12BEH4;
 
 protected static Double DS12BEH5;
-
-protected static Double DS12OWE1;
-
-protected static Double DS12OWE2;
-
-protected static Double DS12OWE3;
 
 protected static Double DS12OWE4;
 
 protected static Double DS12OWE5;
 
-protected static Double DSAMC1;
-
 protected static Double DSAMC4;
 
 protected static Double DSAMC5;
-
-protected static Double DSAMD1;
 
 protected static Double DSAMD4;
 
 protected static Double DSAMD5;
 
-protected static Double DSAMOS1_I;
-
-protected static Double DSAMOS1_IFLAG;
-
-protected static Double DSAMOS2_I;
-
-protected static Double DSAMOS2_IFLAG;
-
-protected static Double DSAMOS3_I;
-
-protected static Double DSAMOS3_IFLAG;
-
 protected static Double DSAMOS4_I;
 
 protected static Double DSAMOS5_I;
-
-protected static Double DSAMP1;
 
 protected static Double DSAMP4;
 
 protected static Double DSAMP5;
 
-protected static Double DSCOS1;
-
 protected static Double DSCOS4;
 
 protected static Double DSCOS5;
-
-protected static Double DSCSP1;
 
 protected static Double DSCSP4;
 
 protected static Double DSCSP5;
 
-protected static Double DSESB1;
-
 protected static Double DSESB4;
 
 protected static Double DSESB5;
 
-protected static Double DSLAMT1;
-
-protected static Double DSLAMT1_I;
-
-protected static Double DSLAMT1_IFLAG;
-
-protected static Double DSLEST1;
-
 protected static Double DSLEST5_IFLAG;
-
-protected static Double DSLPAY1;
-
-protected static Double DSNAM1;
 
 protected static Double DSNAM4;
 
 protected static Double DSNAM5;
 
 protected static Double DSNUM;
-
-protected static Double DSNUM2;
 
 protected static Double DSONM10;
 
@@ -1105,15 +592,9 @@ protected static Double DSONM8;
 
 protected static Double DSONM9;
 
-protected static Double DSPER1;
-
-protected static Double DSPER3;
-
 protected static Double DSPER4;
 
 protected static Double DSPER5;
-
-protected static Double DSREC1;
 
 protected static Double DSREC4;
 
@@ -1223,73 +704,15 @@ protected static Double DTTOWEB8;
 
 protected static Double DTTOWEB9;
 
-protected static Double DVACCINANNUAL;
-
 protected static Double DVAGE18;
-
-protected static Double DVAGE4;
-
-protected static Double DVAGE5;
-
-protected static Double DVAGE6;
-
-protected static Double DVAGE7;
-
-protected static Double DVAGE9;
 
 protected static Double DVAGEW3BAND;
 
 protected static Double DVBENU1;
 
-protected static Double DVBLDDEBT;
-
-protected static Double DVBLDVAL;
-
-protected static Double DVBLTDEBT;
-
-protected static Double DVBLTVAL;
-
-protected static Double DVBTOGANNUAL;
-
-protected static Double DVCACRVAL_SUM;
-
-protected static Double DVCAODVAL_SUM;
-
-protected static Double DVCAVAL_SUM;
-
-protected static Double DVCCARDNUM_I;
-
-protected static Double DVCCARDNUM_IFLAG;
-
-protected static Double DVCCARDYN_I;
-
-protected static Double DVCCARDYN_IFLAG;
-
 protected static Double DVCOINV;
 
-protected static Double DVCOINV4;
-
-protected static Double DVCOINV5;
-
 protected static Double DVCTCANNUAL;
-
-protected static Double DVDBINC4;
-
-protected static Double DVDBINC5;
-
-protected static Double DVDBINC6;
-
-protected static Double DVDBLUMP4;
-
-protected static Double DVDBLUMP5;
-
-protected static Double DVDBLUMP6;
-
-protected static Double DVDBOPEN1T;
-
-protected static Double DVDBOPEN2T;
-
-protected static Double DVDHPOWE1;
 
 protected static Double DVDHPOWE3;
 
@@ -1297,11 +720,7 @@ protected static Double DVDHPOWE4;
 
 protected static Double DVDHPOWE5;
 
-protected static Double DVDLOWE1;
-
 protected static Double DVDLOWE5;
-
-protected static Double DVDMOOWE1;
 
 protected static Double DVDMOOWE3;
 
@@ -1309,47 +728,9 @@ protected static Double DVDMOOWE4;
 
 protected static Double DVDMOOWE5;
 
-protected static Double DVEMPNO;
-
-protected static Double DVFESHARES_SUM;
-
-protected static Double DVFFASSETS_SUM;
-
-protected static Double DVFINFVAL_SUM;
-
-protected static Double DVGIEMP;
-
-protected static Double DVGIFTANNUAL;
-
-protected static Double DVGIINV;
-
-protected static Double DVGIPPEN;
-
-protected static Double DVGISE;
-
-protected static Double DVGRSBONAMT;
-
-protected static Double DVGRSBONAMT_I;
-
-protected static Double DVGRSBONAMT_IFLAG;
-
-protected static Double DVGRSEMPSECJOB;
-
-protected static Double DVGRSEMPSECJOB_I;
-
-protected static Double DVGRSEMPSECJOB_IFLAG;
-
 protected static Double DVGRSPAY_I;
 
 protected static Double DVGRSPAY_IFLAG;
-
-protected static Double DVGRSRENTAMTANNUAL;
-
-protected static Double DVGRSSESECJOB;
-
-protected static Double DVGRSSESECJOB_I;
-
-protected static Double DVGRSSESECJOB_IFLAG;
 
 protected static Double DVHASBOND;
 
@@ -1361,23 +742,11 @@ protected static Double DVHASEMPSH;
 
 protected static Double DVHASGILT;
 
-protected static Double DVHASHP;
-
 protected static Double DVHASISA;
-
-protected static Double DVHASLF;
 
 protected static Double DVHASLINS;
 
-protected static Double DVHASLNAR;
-
-protected static Double DVHASMOAR;
-
 protected static Double DVHASNHP;
-
-protected static Double DVHASNLF;
-
-protected static Double DVHASNLI;
 
 protected static Double DVHASNOFA;
 
@@ -1387,18 +756,6 @@ protected static Double DVHASOINV;
 
 protected static Double DVHASOTHSH;
 
-protected static Double DVHASPFGRP;
-
-protected static Double DVHASPFOCC;
-
-protected static Double DVHASPFPRIV;
-
-protected static Double DVHASPFRAC;
-
-protected static Double DVHASPFSIPP;
-
-protected static Double DVHASPLINF;
-
 protected static Double DVHASSAVDEP;
 
 protected static Double DVHASSC;
@@ -1407,205 +764,31 @@ protected static Double DVHASSHSAC;
 
 protected static Double DVHASSL;
 
-protected static Double DVHASSLBNK;
-
-protected static Double DVHASSLC;
-
 protected static Double DVHASUTRUST;
-
-protected static Double DVHRPNUM;
-
-protected static Double DVHSEDEBT;
-
-protected static Double DVHSEVAL;
-
-protected static Double DVHSIZE;
-
-protected static Double DVILO3A_I;
-
-protected static Double DVILO3A_IFLAG;
-
-protected static Double DVINHERITANNUAL;
-
-protected static Double DVINSV_SUM;
-
-protected static Double DVIRREGOTHANNUAL;
-
-protected static Double DVISAVAL_SUM;
-
-protected static Double DVLIFEANNUAL;
-
-protected static Double DVLOSDEBT;
-
-protected static Double DVLOSVAL;
-
-protected static Double DVLUKDEBT;
-
-protected static Double DVLUKVAL;
-
-protected static Double DVLUMPPENANNUAL;
-
-protected static Double DVNETBONAMT;
-
-protected static Double DVNETBONAMT_I;
-
-protected static Double DVNETBONAMT_IFLAG;
-
-protected static Double DVNETEMPSECJOB;
-
-protected static Double DVNETEMPSECJOB_I;
-
-protected static Double DVNETEMPSECJOB_IFLAG;
 
 protected static Double DVNETPAY_I;
 
 protected static Double DVNETPAY_IFLAG;
 
-protected static Double DVNETRENTAMTANNUAL;
-
-protected static Double DVNETSESECJOB;
-
-protected static Double DVNIEMP;
-
-protected static Double DVNIINV;
-
-protected static Double DVNIOTHI;
-
-protected static Double DVNIPPEN;
-
-protected static Double DVNISE;
-
-protected static Double DVNUMBU;
-
-protected static Double DVNWFLN_SUM;
-
 protected static Double DVNWHP_SUM;
-
-protected static Double DVNWILN_SUM;
-
-protected static Double DVOIGEGANNUAL_I;
-
-protected static Double DVOIGFRANNUAL_I;
 
 protected static Double DVOIGGTANNUAL;
 
-protected static Double DVOIGGTANNUAL_I;
-
-protected static Double DVOIGMAANNUAL_I;
-
 protected static Double DVOIGOEANNUAL_I;
-
-protected static Double DVOIGOEANNUAL_IFLAG;
-
-protected static Double DVOIGOPANNUAL_I;
 
 protected static Double DVOIGOSANNUAL_I;
 
-protected static Double DVOIGOSANNUAL_IFLAG;
-
 protected static Double DVOIGPPANNUAL_I;
-
-protected static Double DVOIGPPANNUAL_IFLAG;
-
-protected static Double DVOIGROANNUAL_I;
 
 protected static Double DVOIGRRANNUAL;
 
-protected static Double DVOIGRRANNUAL_I;
-
-protected static Double DVOINEGANNUAL_I;
-
-protected static Double DVOINEGANNUAL_IFLAG;
-
-protected static Double DVOINFRANNUAL_I;
-
-protected static Double DVOINFRANNUAL_IFLAG;
-
-protected static Double DVOINGTANNUAL_I;
-
-protected static Double DVOINGTANNUAL_IFLAG;
-
-protected static Double DVOINMAANNUAL_I;
-
-protected static Double DVOINMAANNUAL_IFLAG;
-
-protected static Double DVOINOPANNUAL_I;
-
-protected static Double DVOINOPANNUAL_IFLAG;
-
-protected static Double DVOINROANNUAL_I;
-
-protected static Double DVOINROANNUAL_IFLAG;
-
-protected static Double DVOINRRANNUAL_I;
-
-protected static Double DVOINRRANNUAL_IFLAG;
-
-protected static Double DVOPRDEBT;
-
-protected static Double DVOPRVAL;
-
-protected static Double DVOTHINSANNUAL;
-
-protected static Double DVPENINC1;
-
-protected static Double DVPENINC2;
-
 protected static Double DVPUBLPRIV;
 
-protected static Double DVREDUNANNUAL;
-
 protected static Double DVRENTAMTANNUAL;
-
-protected static Double DVRENTAMTANNUAL_I;
-
-protected static Double DVRENTAMTANNUAL_IFLAG;
-
-protected static Double DVSAME;
 
 protected static Double DVSAME_I;
 
 protected static Double DVSAME_IFLAG;
-
-protected static Double DVSAVAL_SUM;
-
-protected static Double DVSCARDNUM_I;
-
-protected static Double DVSCARDNUM_IFLAG;
-
-protected static Double DVSCARDYN_I;
-
-protected static Double DVSCARDYN_IFLAG;
-
-protected static Double DVSEGRSPAY;
-
-protected static Double DVSEGRSPAY_I;
-
-protected static Double DVSEGRSPAY_IFLAG;
-
-protected static Double DVSENETPAY;
-
-protected static Double DVSENETPAY_I;
-
-protected static Double DVSENETPAY_IFLAG;
-
-protected static Double DVSENO;
-
-protected static Double DVSEPANNUAL01;
-
-protected static Double DVSEPANNUAL02;
-
-protected static Double DVSEPANNUAL03;
-
-protected static Double DVSEPANNUAL04;
-
-protected static Double DVSEPANNUAL05;
-
-protected static Double DVSEPANNUAL06;
-
-protected static Double DVSEPANNUAL07;
-
-protected static Double DVSEPANNUAL08;
 
 protected static Double DVSEPANNUAL09;
 
@@ -1653,8 +836,6 @@ protected static Double DVSPECANNUAL09;
 
 protected static Double DVSPECANNUAL10;
 
-protected static Double DVSPS;
-
 protected static Double DVSTAT;
 
 protected static Double DVTOGTCANNUAL;
@@ -1667,67 +848,17 @@ protected static Double DVTOTTAXANNUAL;
 
 protected static Double DVWAVE;
 
-protected static Double DVWID;
-
-protected static Double DVWINANNUAL;
-
 protected static Double DVWTCANNUAL;
-
-protected static Double DWELLTYP;
 
 protected static Double ECACT;
 
 protected static Double EDAGE;
 
-protected static Double EMPNO;
-
 protected static Double EMPSTAT1;
 
 protected static Double EMPSTAT2;
 
-protected static Double ES2000;
-
 protected static Double ETYPE;
-
-protected static Double EVERWK_I;
-
-protected static Double EVERWK_IFLAG;
-
-protected static Double EYE1;
-
-protected static Double EYE2;
-
-protected static Double EYE3;
-
-protected static Double EYE4;
-
-protected static Double EYE5;
-
-protected static Double EYE6;
-
-protected static Double EYE7;
-
-protected static Double EYE8;
-
-protected static Double FBFAED;
-
-protected static Double FBMOED;
-
-protected static Double FBSIBS;
-
-protected static Double FBSITU;
-
-protected static Double FBTEN;
-
-protected static Double FCISAWD;
-
-protected static Double FCISCE;
-
-protected static Double FCIWDAB;
-
-protected static Double FCIWNUM;
-
-protected static Double FINCV_IFLAG;
 
 protected static Double FINVTY01_IFLAG;
 
@@ -1749,33 +880,15 @@ protected static Double FINVTY09_IFLAG;
 
 protected static Double FINVTY10_IFLAG;
 
-protected static Double FINVTY11_I;
-
 protected static Double FINVTY11_IFLAG;
 
 protected static Double FLNOS5;
 
 protected static Double FLOORN;
 
-protected static Double FNDCASH1;
-
-protected static Double FNDCASH2;
-
-protected static Double FNDCASH3;
-
-protected static Double FNDCASH4;
-
-protected static Double FNDCASH5;
-
 protected static Double FNSVAL1;
 
 protected static Double FNSVAL1_I;
-
-protected static Double FRSTSCH;
-
-protected static Double FSAVAB;
-
-protected static Double FSAVED;
 
 protected static Double FSHADA;
 
@@ -1783,49 +896,9 @@ protected static Double FSHADAB;
 
 protected static Double FSHADD;
 
-protected static Double FSTYPIN4;
-
 protected static Double FSTYPIN5;
 
 protected static Double FSTYPSH5;
-
-protected static Double FTHECST;
-
-protected static Double FTSTUD;
-
-protected static Double FWITHD;
-
-protected static Double GROSSPER;
-
-protected static Double GRSAMK;
-
-protected static Double GRSEESM;
-
-protected static Double GRSEESW;
-
-protected static Double GRSPAYEMPORSE;
-
-protected static Double GSTDNW;
-
-protected static Double HAPPY;
-
-protected static Double HASSHAC;
-
-protected static Double HFINL_SUM;
-
-protected static Double HFINW_EXCENDW_SUM;
-
-protected static Double HHLDR;
-
-protected static Double HIHNUM;
-
-protected static Double HOUSGDSOST;
-
-protected static Double HOUT;
-
-protected static Double HPARR_SUM;
-
-protected static Double HPLFT1;
 
 protected static Double HPLFT3;
 
@@ -1833,19 +906,11 @@ protected static Double HPLFT4;
 
 protected static Double HPLFT5;
 
-protected static Double HPNMN1;
-
-protected static Double HPNMN2;
-
 protected static Double HPNMN3;
 
 protected static Double HPNMN4;
 
 protected static Double HPNMN5;
-
-protected static Double HPNYR1;
-
-protected static Double HPNYR2;
 
 protected static Double HPNYR3;
 
@@ -1858,8 +923,6 @@ protected static Double HPOS3;
 protected static Double HPOS4;
 
 protected static Double HPOS5;
-
-protected static Double HPROX;
 
 protected static Double HRPDVAGE;
 
@@ -1885,8 +948,6 @@ protected static Double HRPIOUT1;
 
 protected static Double HRPNSSEC3;
 
-protected static Double HRPPART;
-
 protected static Double HRPPARTIOUT1;
 
 protected static Double HRPSEX;
@@ -1894,8 +955,6 @@ protected static Double HRPSEX;
 protected static Double HRP_RESP;
 
 protected static Double H_FLAG1;
-
-protected static Double IFBANKACC;
 
 protected static Double IGDS12;
 
@@ -1919,22 +978,6 @@ protected static Double IGDS6;
 
 protected static Double IGDS7;
 
-protected static Double IGIFVAL_IFLAG;
-
-protected static Double IHRCNUM_I;
-
-protected static Double IHRCNUM_IFLAG;
-
-protected static Double IHRECNT_I;
-
-protected static Double IHRECNT_IFLAG;
-
-protected static Double IHSE10;
-
-protected static Double IHSE11;
-
-protected static Double IHSE12;
-
 protected static Double IHSE13;
 
 protected static Double IHSE14;
@@ -1947,45 +990,11 @@ protected static Double IHSE17;
 
 protected static Double IHSE18;
 
-protected static Double IHSE3;
-
 protected static Double IHSE4;
 
 protected static Double IHSE5;
 
 protected static Double IHSE6;
-
-protected static Double IHSE8;
-
-protected static Double IHSE9;
-
-protected static Double ILACC_IFLAG;
-
-protected static Double ILGIFT_I;
-
-protected static Double ILGIFT_IFLAG;
-
-protected static Double ILIFB_I;
-
-protected static Double ILIFB_IFLAG;
-
-protected static Double ILIFE_IFLAG;
-
-protected static Double ILINS_IFLAG;
-
-protected static Double ILNPBAM;
-
-protected static Double ILNPBK;
-
-protected static Double ILNUSE01;
-
-protected static Double ILNUSE02;
-
-protected static Double ILNUSE03;
-
-protected static Double ILNUSE04;
-
-protected static Double ILNUSE05;
 
 protected static Double ILNUSE06;
 
@@ -1996,24 +1005,6 @@ protected static Double ILNUSE08;
 protected static Double ILNUSE09;
 
 protected static Double ILNUSE10;
-
-protected static Double ILNVAL;
-
-protected static Double ILNVALB;
-
-protected static Double ILOAN;
-
-protected static Double ILOTH_IFLAG;
-
-protected static Double ILRED_IFLAG;
-
-protected static Double ILUMP_I;
-
-protected static Double ILUMP_IFLAG;
-
-protected static Double ILUMTY1_I;
-
-protected static Double ILUMTY1_IFLAG;
 
 protected static Double ILUMTY2_I;
 
@@ -2047,16 +1038,6 @@ protected static Double ILUMTY7_I;
 
 protected static Double ILUMTY7_IFLAG;
 
-protected static Double ILUPP_I;
-
-protected static Double ILUPP_IFLAG;
-
-protected static Double ILWIN_IFLAG;
-
-protected static Double INCDROP;
-
-protected static Double INDFREQ;
-
 protected static Double INSPOL;
 
 protected static Double INTRO;
@@ -2067,17 +1048,9 @@ protected static Double ISHRPPART;
 
 protected static Double IVAL1;
 
-protected static Double IVAL1_IFLAG;
-
 protected static Double IVAL2_I;
 
-protected static Double IVAL2_IFLAG;
-
 protected static Double IVAL3_I;
-
-protected static Double IVAL3_IFLAG;
-
-protected static Double IVALB1;
 
 protected static Double IWAT10;
 
@@ -2095,27 +1068,13 @@ protected static Double IWAT17;
 
 protected static Double IWAT18;
 
-protected static Double IWAT6;
-
 protected static Double IWAT8;
 
 protected static Double IWAT9;
 
 protected static Double IWHO;
 
-protected static Double JBAWAY_I;
-
-protected static Double JBAWAY_IFLAG;
-
-protected static Double KNOHOWMUCH;
-
-protected static Double KNOWBALANCE;
-
 protected static Double LIVWTH;
-
-protected static Double LNARR_SUM;
-
-protected static Double LNLFT1;
 
 protected static Double LNMN1;
 
@@ -2137,23 +1096,7 @@ protected static Double LNYR4;
 
 protected static Double LNYR5;
 
-protected static Double LOOKED_I;
-
-protected static Double LOOKED_IFLAG;
-
 protected static Double LVTDAY;
-
-protected static Double MARBEF_I;
-
-protected static Double MARBEF_IFLAG;
-
-protected static Double MARST;
-
-protected static Double MNTHSCAPE;
-
-protected static Double MOARR_SUM;
-
-protected static Double MOLFT1;
 
 protected static Double MOLFT3;
 
@@ -2167,14 +1110,6 @@ protected static Double MOOS4;
 
 protected static Double MOOS5;
 
-protected static Double MRECJB;
-
-protected static Double MTHECST;
-
-protected static Double NEWFCMX;
-
-protected static Double NEWGIFT;
-
 protected static Double NMN1;
 
 protected static Double NMN2;
@@ -2185,47 +1120,7 @@ protected static Double NMN4;
 
 protected static Double NMN5;
 
-protected static Double NOUNITS;
-
-protected static Double NSLBNK1;
-
-protected static Double NSLBNK2;
-
-protected static Double NSLBNK3;
-
-protected static Double NSLC1;
-
-protected static Double NSLC2;
-
-protected static Double NSLC3;
-
 protected static Double NSSEC;
-
-protected static Double NUMADULT;
-
-protected static Double NUMCH18;
-
-protected static Double NUMCHILD;
-
-protected static Double NUMCHSAV;
-
-protected static Double NUMCIVPTR;
-
-protected static Double NUMCOUPLES;
-
-protected static Double NUMCPART;
-
-protected static Double NUMDEPCH;
-
-protected static Double NUMJOB;
-
-protected static Double NUMSSEX;
-
-protected static Double NWFLNVAL1;
-
-protected static Double NWFLNVAL2;
-
-protected static Double NWFLNVAL3;
 
 protected static Double NWHP;
 
@@ -2237,24 +1132,6 @@ protected static Double NWHPVAL2;
 
 protected static Double NWHPVAL3;
 
-protected static Double NWILNVAL1;
-
-protected static Double NWILNVAL2;
-
-protected static Double NWILNVAL3;
-
-protected static Double NWLN;
-
-protected static Double NWLNNO;
-
-protected static Double NWLNNO_I;
-
-protected static Double NWLNNO_IFLAG;
-
-protected static Double NWLN_I;
-
-protected static Double NWLN_IFLAG;
-
 protected static Double NYR1;
 
 protected static Double NYR2;
@@ -2265,53 +1142,9 @@ protected static Double NYR4;
 
 protected static Double NYR5;
 
-protected static Double OEXPINC01;
-
-protected static Double OEXPINC02;
-
-protected static Double OEXPINC03;
-
-protected static Double OEXPINC04;
-
-protected static Double OEXPINC05;
-
-protected static Double OEXPINC06;
-
-protected static Double OEXPINC07;
-
-protected static Double OEXPINC08;
-
-protected static Double OEXPINC09;
-
-protected static Double OEXPINC10;
-
-protected static Double OEXPINC11;
-
-protected static Double OEXPINC12;
-
-protected static Double OEXPINC13;
-
-protected static Double OEXPINC14;
-
-protected static Double OEXPINC15;
-
-protected static Double OFTCHECKED;
-
 protected static Double OIGGT;
 
 protected static Double OIGRR;
-
-protected static Double OIMPRS1;
-
-protected static Double OIMPRS2;
-
-protected static Double OIMPRS3;
-
-protected static Double OIMPRS4;
-
-protected static Double OIMPRS5;
-
-protected static Double OIMPRS6;
 
 protected static Double OIMPRS7;
 
@@ -2319,43 +1152,13 @@ protected static Double OIMPRS8;
 
 protected static Double OIMPRS9;
 
-protected static Double ONOSAVE1;
-
-protected static Double ONOSAVE2;
-
-protected static Double ONOSAVE3;
-
-protected static Double ONOSAVE4;
-
-protected static Double ONOSAVE5;
-
-protected static Double ONOSAVE6;
-
 protected static Double ONOSAVE7;
 
 protected static Double ONOSAVE8;
 
 protected static Double ONOSAVE9;
 
-protected static Double OPENS09;
-
-protected static Double OPENS10;
-
-protected static Double OPENS11;
-
-protected static Double OPENS12;
-
-protected static Double OPENS13;
-
-protected static Double OPENS14;
-
-protected static Double OPENS15;
-
 protected static Double OPENSAV;
-
-protected static Double ORGNSED;
-
-protected static Double ORISKS;
 
 protected static Double ORUNDO09;
 
@@ -2367,53 +1170,17 @@ protected static Double OSAFERE2;
 
 protected static Double OSAFERET;
 
-protected static Double OSAFESAV;
-
-protected static Double OSAV2Y;
-
 protected static Double OSAVA;
 
 protected static Double OSAVB;
 
 protected static Double OSAVC;
 
-protected static Double OSAVEXT;
-
-protected static Double OSITCH;
-
-protected static Double OSLBNK1;
-
-protected static Double OSLBNK2;
-
-protected static Double OSLBNK3;
-
-protected static Double OSLC1;
-
-protected static Double OSLC2;
-
-protected static Double OSLC3;
-
 protected static Double OSLC4;
-
-protected static Double OTHASCH;
-
-protected static Double OTHASVB;
-
-protected static Double OTHASVL;
-
-protected static Double OTHMORT;
-
-protected static Double OTHSRC4_I;
-
-protected static Double OTHSRC4_IFLAG;
 
 protected static Double OTHSRC5_I;
 
 protected static Double OTHSRC5_IFLAG;
-
-protected static Double OTRUST15;
-
-protected static Double OWAIT;
 
 protected static Double OWHYSAV01;
 
@@ -2437,24 +1204,6 @@ protected static Double OWHYSAV10;
 
 protected static Double OWHYSAV11;
 
-protected static Double OWNBUS_I;
-
-protected static Double OWNBUS_IFLAG;
-
-protected static Double OWRSRS01;
-
-protected static Double OWRSRS02;
-
-protected static Double OWRSRS03;
-
-protected static Double OWRSRS04;
-
-protected static Double OWRSRS05;
-
-protected static Double OWRSRS06;
-
-protected static Double OWRSRS07;
-
 protected static Double OWRSRS08;
 
 protected static Double OWRSRS09;
@@ -2464,34 +1213,6 @@ protected static Double OWRSRS10;
 protected static Double PADDFUT;
 
 protected static Double PADDFUT2;
-
-protected static Double PAGESTP;
-
-protected static Double PANYO;
-
-protected static Double PANYO_I;
-
-protected static Double PANYO_IFLAG;
-
-protected static Double PARTGRSPAY;
-
-protected static Double PARTNSSEC;
-
-protected static Double PARTNSSEC3;
-
-protected static Double PARTNSSEC5;
-
-protected static Double PARTNSSEC8;
-
-protected static Double PARTNSSECB;
-
-protected static Double PASTMN1;
-
-protected static Double PASTMN2;
-
-protected static Double PASTYR1;
-
-protected static Double PASTYR2;
 
 protected static Double PAVCAM1;
 
@@ -2517,161 +1238,9 @@ protected static Double PAVCPR1;
 
 protected static Double PAVCPR2;
 
-protected static Double PAVCUV1;
-
-protected static Double PAVCUV1_I;
-
-protected static Double PAVCUV1_IFLAG;
-
-protected static Double PAVCUV2;
-
-protected static Double PAVCUV2_I;
-
-protected static Double PAVCUV2_IFLAG;
-
-protected static Double PAVCVB1;
-
-protected static Double PAVCVB2;
-
-protected static Double PAVDOC1;
-
-protected static Double PAVDOC2;
-
-protected static Double PAYBON_I;
-
-protected static Double PAYBON_IFLAG;
-
-protected static Double PAYINC7;
-
-protected static Double PBDOCS1;
-
-protected static Double PBDOCS2;
-
-protected static Double PBFRAC1;
-
-protected static Double PBFRAC1_I;
-
-protected static Double PBFRAC1_IFLAG;
-
-protected static Double PBFRAC2;
-
-protected static Double PBFRAC2_I;
-
-protected static Double PBFRAC2_IFLAG;
-
-protected static Double PBINCA1;
-
-protected static Double PBINCA2;
-
-protected static Double PBINCF1;
-
-protected static Double PBINCF2;
-
-protected static Double PBINCH1;
-
-protected static Double PBINCH2;
-
-protected static Double PBLMVB1;
-
-protected static Double PBLMVB2;
-
-protected static Double PBLUMV1;
-
-protected static Double PBLUMV1_I;
-
-protected static Double PBLUMV1_IFLAG;
-
-protected static Double PBLUMV2;
-
-protected static Double PBLUMV2_I;
-
-protected static Double PBLUMV2_IFLAG;
-
-protected static Double PBQUAL1;
-
-protected static Double PBQUAL1_I;
-
-protected static Double PBQUAL1_IFLAG;
-
-protected static Double PBQUAL2;
-
-protected static Double PBQUAL2_I;
-
-protected static Double PBQUAL2_IFLAG;
-
-protected static Double PBSTMN1;
-
-protected static Double PBSTMN2;
-
-protected static Double PBSTYR1;
-
-protected static Double PBSTYR2;
-
-protected static Double PCDOCS1;
-
-protected static Double PCDOCS2;
-
-protected static Double PCONT;
-
-protected static Double PCONT_I;
-
-protected static Double PCONT_IFLAG;
-
-protected static Double PCSTMN1;
-
-protected static Double PCSTMN2;
-
-protected static Double PCSTYR1;
-
-protected static Double PCSTYR2;
-
-protected static Double PDBCAL1;
-
-protected static Double PDBCAL2;
-
-protected static Double PDCVAL1;
-
-protected static Double PDCVAL1_I;
-
-protected static Double PDCVAL1_IFLAG;
-
-protected static Double PDCVAL2;
-
-protected static Double PDCVAL2_I;
-
-protected static Double PDCVAL2_IFLAG;
-
 protected static Double PDCVAL3;
 
-protected static Double PDCVB1;
-
-protected static Double PDCVB2;
-
 protected static Double PEMFIN;
-
-protected static Double PENFLAG;
-
-protected static Double PENIND1;
-
-protected static Double PENIND2;
-
-protected static Double PENIND3;
-
-protected static Double PENIND4;
-
-protected static Double PENIND5;
-
-protected static Double PENIND6;
-
-protected static Double PERMJB;
-
-protected static Double PERNOWK;
-
-protected static Double PERSONW2;
-
-protected static Double PERSONW3;
-
-protected static Double PESAME;
 
 protected static Double PESAME_I;
 
@@ -2699,13 +1268,7 @@ protected static Double PEWYNO10;
 
 protected static Double PEWYNO11;
 
-protected static Double PFANEH1;
-
-protected static Double PFANEH2;
-
 protected static Double PFANEH3;
-
-protected static Double PFANEH4;
 
 protected static Double PFANEH5;
 
@@ -2735,37 +1298,19 @@ protected static Double PFANEXY5;
 
 protected static Double PFANEXY6;
 
-protected static Double PFANGA1;
-
-protected static Double PFANGA2;
-
 protected static Double PFANGA3;
-
-protected static Double PFANGA4;
 
 protected static Double PFANGA5;
 
 protected static Double PFANGA6;
 
-protected static Double PFANIF1;
-
-protected static Double PFANIF2;
-
 protected static Double PFANIF3;
-
-protected static Double PFANIF4;
 
 protected static Double PFANIF5;
 
 protected static Double PFANIF6;
 
-protected static Double PFANJT1;
-
-protected static Double PFANJT2;
-
 protected static Double PFANJT3;
-
-protected static Double PFANJT4;
 
 protected static Double PFANJT5;
 
@@ -2783,8 +1328,6 @@ protected static Double PFANLM5;
 
 protected static Double PFANLM6;
 
-protected static Double PFANN1;
-
 protected static Double PFANN10;
 
 protected static Double PFANN11;
@@ -2796,8 +1339,6 @@ protected static Double PFANN13;
 protected static Double PFANN14;
 
 protected static Double PFANN15;
-
-protected static Double PFANN16;
 
 protected static Double PFANN17;
 
@@ -2834,8 +1375,6 @@ protected static Double PFANN30;
 protected static Double PFANN4;
 
 protected static Double PFANN5;
-
-protected static Double PFANN6;
 
 protected static Double PFANN7;
 
@@ -2879,30 +1418,6 @@ protected static Double PFBEG5;
 
 protected static Double PFBEG6;
 
-protected static Double PFCASH1;
-
-protected static Double PFCASH1_I;
-
-protected static Double PFCASH1_IFLAG;
-
-protected static Double PFCASH2;
-
-protected static Double PFCASH2_I;
-
-protected static Double PFCASH2_IFLAG;
-
-protected static Double PFCASH3;
-
-protected static Double PFCASH3_I;
-
-protected static Double PFCASH3_IFLAG;
-
-protected static Double PFCASH4;
-
-protected static Double PFCASH4_I;
-
-protected static Double PFCASH4_IFLAG;
-
 protected static Double PFCASH5;
 
 protected static Double PFCASH5_I;
@@ -2915,77 +1430,7 @@ protected static Double PFCASH6_I;
 
 protected static Double PFCASH6_IFLAG;
 
-protected static Double PFCURV1;
-
-protected static Double PFCURV1_I;
-
-protected static Double PFCURV1_IFLAG;
-
-protected static Double PFCURV2;
-
-protected static Double PFCURV2_I;
-
-protected static Double PFCURV2_IFLAG;
-
-protected static Double PFCURV3;
-
-protected static Double PFCURV3_I;
-
-protected static Double PFCURV3_IFLAG;
-
-protected static Double PFCURV4;
-
-protected static Double PFCURV4_I;
-
-protected static Double PFCURV4_IFLAG;
-
-protected static Double PFCURV5;
-
-protected static Double PFCURV5_I;
-
-protected static Double PFCURV5_IFLAG;
-
-protected static Double PFCURV6;
-
-protected static Double PFCURV6_I;
-
-protected static Double PFCURV6_IFLAG;
-
-protected static Double PFCUVB1;
-
-protected static Double PFCUVB2;
-
-protected static Double PFCUVB3;
-
-protected static Double PFCUVB4;
-
-protected static Double PFCUVB5;
-
-protected static Double PFCUVB6;
-
-protected static Double PFDDV1;
-
-protected static Double PFDDV1_I;
-
-protected static Double PFDDV1_IFLAG;
-
-protected static Double PFDDV2;
-
-protected static Double PFDDV2_I;
-
-protected static Double PFDDV2_IFLAG;
-
-protected static Double PFDDV3;
-
-protected static Double PFDDV3_I;
-
-protected static Double PFDDV3_IFLAG;
-
 protected static Double PFDDV4;
-
-protected static Double PFDDV4_I;
-
-protected static Double PFDDV4_IFLAG;
 
 protected static Double PFDDV5;
 
@@ -2999,45 +1444,11 @@ protected static Double PFDDV6_I;
 
 protected static Double PFDDV6_IFLAG;
 
-protected static Double PFDDVB1;
-
-protected static Double PFDDVB2;
-
-protected static Double PFDDVB3;
-
 protected static Double PFDDVB4;
 
 protected static Double PFDDVB5;
 
 protected static Double PFDDVB6;
-
-protected static Double PFDOCS1;
-
-protected static Double PFDOCS2;
-
-protected static Double PFDOCS3;
-
-protected static Double PFDOCS4;
-
-protected static Double PFDOCS5;
-
-protected static Double PFDOCS6;
-
-protected static Double PFDRAW1;
-
-protected static Double PFDRAW1_I;
-
-protected static Double PFDRAW1_IFLAG;
-
-protected static Double PFDRAW2;
-
-protected static Double PFDRAW2_I;
-
-protected static Double PFDRAW2_IFLAG;
-
-protected static Double PFDRAW3_I;
-
-protected static Double PFDRAW3_IFLAG;
 
 protected static Double PFDRAW4;
 
@@ -3058,8 +1469,6 @@ protected static Double PFDRAW6_I;
 protected static Double PFDRAW6_IFLAG;
 
 protected static Double PFDRA___W3;
-
-protected static Double PFDRINC1;
 
 protected static Double PFDRINC2;
 
@@ -3083,8 +1492,6 @@ protected static Double PFDRINCB5;
 
 protected static Double PFDRINCB6;
 
-protected static Double PFDRVB1;
-
 protected static Double PFDRVB2;
 
 protected static Double PFDRVB3;
@@ -3095,8 +1502,6 @@ protected static Double PFDRVB5;
 
 protected static Double PFDRVB6;
 
-protected static Double PFDRVI1;
-
 protected static Double PFDRVI2;
 
 protected static Double PFDRVI3;
@@ -3106,8 +1511,6 @@ protected static Double PFDRVI4;
 protected static Double PFDRVI5;
 
 protected static Double PFDRVI6;
-
-protected static Double PFEN;
 
 protected static Double PFEND1;
 
@@ -3121,20 +1524,6 @@ protected static Double PFEND5;
 
 protected static Double PFEND6;
 
-protected static Double PFENNUM;
-
-protected static Double PFENNUM_I;
-
-protected static Double PFENNUM_IFLAG;
-
-protected static Double PFEN_I;
-
-protected static Double PFEN_IFLAG;
-
-protected static Double PFFAAG1;
-
-protected static Double PFFAAG2;
-
 protected static Double PFFAAG3;
 
 protected static Double PFFAAG4;
@@ -3143,11 +1532,7 @@ protected static Double PFFAAG5;
 
 protected static Double PFFAAG6;
 
-protected static Double PFFAN1;
-
 protected static Double PFFAN10;
-
-protected static Double PFFAN11;
 
 protected static Double PFFAN12;
 
@@ -3157,15 +1542,11 @@ protected static Double PFFAN14;
 
 protected static Double PFFAN15;
 
-protected static Double PFFAN16;
-
 protected static Double PFFAN17;
 
 protected static Double PFFAN18;
 
 protected static Double PFFAN19;
-
-protected static Double PFFAN2;
 
 protected static Double PFFAN20;
 
@@ -3195,15 +1576,11 @@ protected static Double PFFAN4;
 
 protected static Double PFFAN5;
 
-protected static Double PFFAN6;
-
 protected static Double PFFAN7;
 
 protected static Double PFFAN8;
 
 protected static Double PFFAN9;
-
-protected static Double PFFAWH1;
 
 protected static Double PFFAWH10;
 
@@ -3216,8 +1593,6 @@ protected static Double PFFAWH13;
 protected static Double PFFAWH14;
 
 protected static Double PFFAWH15;
-
-protected static Double PFFAWH16;
 
 protected static Double PFFAWH17;
 
@@ -3267,121 +1642,17 @@ protected static Double PFFAWH4;
 
 protected static Double PFFAWH5;
 
-protected static Double PFFAWH6;
-
 protected static Double PFFAWH7;
 
 protected static Double PFFAWH8;
 
 protected static Double PFFAWH9;
 
-protected static Double PFINCA1;
-
-protected static Double PFINCA1_I;
-
-protected static Double PFINCA1_IFLAG;
-
-protected static Double PFINCA2;
-
-protected static Double PFINCA2_I;
-
-protected static Double PFINCA2_IFLAG;
-
-protected static Double PFINCA3;
-
-protected static Double PFINCA3_I;
-
-protected static Double PFINCA3_IFLAG;
-
-protected static Double PFINCA4;
-
-protected static Double PFINCA4_I;
-
-protected static Double PFINCA4_IFLAG;
-
-protected static Double PFINCA5;
-
-protected static Double PFINCA5_I;
-
-protected static Double PFINCA5_IFLAG;
-
-protected static Double PFINCA6;
-
-protected static Double PFINCA6_I;
-
 protected static Double PFINCA6_IFLAG;
-
-protected static Double PFINCP1;
-
-protected static Double PFINCP1_I;
-
-protected static Double PFINCP1_IFLAG;
-
-protected static Double PFINCP2;
-
-protected static Double PFINCP2_I;
-
-protected static Double PFINCP2_IFLAG;
-
-protected static Double PFINCP3;
-
-protected static Double PFINCP3_I;
-
-protected static Double PFINCP3_IFLAG;
-
-protected static Double PFINCP4;
-
-protected static Double PFINCP4_I;
-
-protected static Double PFINCP4_IFLAG;
-
-protected static Double PFINCP5;
-
-protected static Double PFINCP5_I;
-
-protected static Double PFINCP5_IFLAG;
-
-protected static Double PFINCP6;
-
-protected static Double PFINCP6_I;
-
-protected static Double PFINCP6_IFLAG;
-
-protected static Double PFLMUS1;
-
-protected static Double PFLMUS2;
-
-protected static Double PFLMUS3;
-
-protected static Double PFLMUS4;
 
 protected static Double PFLMUS5;
 
 protected static Double PFLMUS6;
-
-protected static Double PFLMV1;
-
-protected static Double PFLMV1_I;
-
-protected static Double PFLMV1_IFLAG;
-
-protected static Double PFLMV2;
-
-protected static Double PFLMV2_I;
-
-protected static Double PFLMV2_IFLAG;
-
-protected static Double PFLMV3;
-
-protected static Double PFLMV3_I;
-
-protected static Double PFLMV3_IFLAG;
-
-protected static Double PFLMV4;
-
-protected static Double PFLMV4_I;
-
-protected static Double PFLMV4_IFLAG;
 
 protected static Double PFLMV5;
 
@@ -3389,83 +1660,15 @@ protected static Double PFLMV5_I;
 
 protected static Double PFLMV5_IFLAG;
 
-protected static Double PFLMV6;
-
 protected static Double PFLMV6_I;
 
 protected static Double PFLMV6_IFLAG;
-
-protected static Double PFLMVB1;
-
-protected static Double PFLMVB2;
-
-protected static Double PFLMVB3;
 
 protected static Double PFLMVB4;
 
 protected static Double PFLMVB5;
 
 protected static Double PFLMVB6;
-
-protected static Double PFLUM1;
-
-protected static Double PFLUM1_I;
-
-protected static Double PFLUM1_IFLAG;
-
-protected static Double PFLUM2;
-
-protected static Double PFLUM2_I;
-
-protected static Double PFLUM2_IFLAG;
-
-protected static Double PFLUM3;
-
-protected static Double PFLUM3_I;
-
-protected static Double PFLUM3_IFLAG;
-
-protected static Double PFLUM4;
-
-protected static Double PFLUM4_I;
-
-protected static Double PFLUM4_IFLAG;
-
-protected static Double PFLUM5;
-
-protected static Double PFLUM5_I;
-
-protected static Double PFLUM5_IFLAG;
-
-protected static Double PFLUM6;
-
-protected static Double PFLUM6_I;
-
-protected static Double PFLUM6_IFLAG;
-
-protected static Double PFLUMALL1;
-
-protected static Double PFLUMALL1_I;
-
-protected static Double PFLUMALL1_IFLAG;
-
-protected static Double PFLUMALL2;
-
-protected static Double PFLUMALL2_I;
-
-protected static Double PFLUMALL2_IFLAG;
-
-protected static Double PFLUMALL3;
-
-protected static Double PFLUMALL3_I;
-
-protected static Double PFLUMALL3_IFLAG;
-
-protected static Double PFLUMALL4;
-
-protected static Double PFLUMALL4_I;
-
-protected static Double PFLUMALL4_IFLAG;
 
 protected static Double PFLUMALL5;
 
@@ -3478,102 +1681,6 @@ protected static Double PFLUMALL6;
 protected static Double PFLUMALL6_I;
 
 protected static Double PFLUMALL6_IFLAG;
-
-protected static Double PFLUMV1;
-
-protected static Double PFLUMV1_I;
-
-protected static Double PFLUMV1_IFLAG;
-
-protected static Double PFLUMV2;
-
-protected static Double PFLUMV2_I;
-
-protected static Double PFLUMV2_IFLAG;
-
-protected static Double PFLUMV3;
-
-protected static Double PFLUMV3_I;
-
-protected static Double PFLUMV3_IFLAG;
-
-protected static Double PFLUMV4;
-
-protected static Double PFLUMV4_I;
-
-protected static Double PFLUMV4_IFLAG;
-
-protected static Double PFLUMV5;
-
-protected static Double PFLUMV5_I;
-
-protected static Double PFLUMV5_IFLAG;
-
-protected static Double PFLUMV6;
-
-protected static Double PFLUMV6_I;
-
-protected static Double PFLUMV6_IFLAG;
-
-protected static Double PFLUVB1;
-
-protected static Double PFLUVB2;
-
-protected static Double PFLUVB3;
-
-protected static Double PFLUVB4;
-
-protected static Double PFLUVB5;
-
-protected static Double PFLUVB6;
-
-protected static Double PFNEW;
-
-protected static Double PFNEWNO;
-
-protected static Double PFNEWNO_I;
-
-protected static Double PFNEWNO_IFLAG;
-
-protected static Double PFNEW_I;
-
-protected static Double PFNEW_IFLAG;
-
-protected static Double PFOCTY1;
-
-protected static Double PFOCTY1_I;
-
-protected static Double PFOCTY1_IFLAG;
-
-protected static Double PFOCTY2;
-
-protected static Double PFOCTY2_I;
-
-protected static Double PFOCTY2_IFLAG;
-
-protected static Double PFOCTY3;
-
-protected static Double PFOCTY3_I;
-
-protected static Double PFOCTY3_IFLAG;
-
-protected static Double PFOCTY4;
-
-protected static Double PFOCTY4_I;
-
-protected static Double PFOCTY4_IFLAG;
-
-protected static Double PFOCTY5;
-
-protected static Double PFOCTY5_I;
-
-protected static Double PFOCTY5_IFLAG;
-
-protected static Double PFOCTY6;
-
-protected static Double PFOCTY6_I;
-
-protected static Double PFOCTY6_IFLAG;
 
 protected static Double PFPENVB1;
 
@@ -3598,66 +1705,6 @@ protected static Double PFPENVI4;
 protected static Double PFPENVI5;
 
 protected static Double PFPENVI6;
-
-protected static Double PFREC1;
-
-protected static Double PFREC1_I;
-
-protected static Double PFREC1_IFLAG;
-
-protected static Double PFREC2;
-
-protected static Double PFREC2_I;
-
-protected static Double PFREC2_IFLAG;
-
-protected static Double PFREC3;
-
-protected static Double PFREC3_I;
-
-protected static Double PFREC3_IFLAG;
-
-protected static Double PFREC4;
-
-protected static Double PFREC4_I;
-
-protected static Double PFREC4_IFLAG;
-
-protected static Double PFREC5;
-
-protected static Double PFREC5_I;
-
-protected static Double PFREC5_IFLAG;
-
-protected static Double PFREC6;
-
-protected static Double PFREC6_I;
-
-protected static Double PFREC6_IFLAG;
-
-protected static Double PFREM1;
-
-protected static Double PFREM1_I;
-
-protected static Double PFREM1_IFLAG;
-
-protected static Double PFREM2;
-
-protected static Double PFREM2_I;
-
-protected static Double PFREM2_IFLAG;
-
-protected static Double PFREM3;
-
-protected static Double PFREM3_I;
-
-protected static Double PFREM3_IFLAG;
-
-protected static Double PFREM4;
-
-protected static Double PFREM4_I;
-
-protected static Double PFREM4_IFLAG;
 
 protected static Double PFREM5;
 
@@ -3755,147 +1802,17 @@ protected static Double PFSIPTY8;
 
 protected static Double PFSIPTY9;
 
-protected static Double PFSTAT1;
-
-protected static Double PFSTAT2;
-
-protected static Double PFSTAT3;
-
-protected static Double PFSTAT4;
-
-protected static Double PFSTAT5;
-
-protected static Double PFSTAT6;
-
-protected static Double PFSTMM1;
-
-protected static Double PFSTMM2;
-
-protected static Double PFSTMM3;
-
-protected static Double PFSTMM4;
-
-protected static Double PFSTMM5;
-
-protected static Double PFSTMM6;
-
-protected static Double PFSTMY1;
-
-protected static Double PFSTMY2;
-
-protected static Double PFSTMY3;
-
-protected static Double PFSTMY4;
-
-protected static Double PFSTMY5;
-
-protected static Double PFSTMY6;
-
-protected static Double PFTYP1;
-
-protected static Double PFTYP1_I;
-
-protected static Double PFTYP1_IFLAG;
-
-protected static Double PFTYP2;
-
-protected static Double PFTYP2_I;
-
-protected static Double PFTYP2_IFLAG;
-
-protected static Double PFTYP3;
-
-protected static Double PFTYP3_I;
-
-protected static Double PFTYP3_IFLAG;
-
-protected static Double PFTYP4;
-
-protected static Double PFTYP4_I;
-
-protected static Double PFTYP4_IFLAG;
-
-protected static Double PFTYP5;
-
-protected static Double PFTYP5_I;
-
-protected static Double PFTYP5_IFLAG;
-
-protected static Double PFTYP6;
-
-protected static Double PFTYP6_I;
-
-protected static Double PFTYP6_IFLAG;
-
-protected static Double PHYSBUYLGDST;
-
-protected static Double PHYSHOUSGDSOST;
-
-protected static Double PHYSHOUSGDST;
-
-protected static Double PINC;
-
 protected static Double PIRREG;
 
 protected static Double PIRREG2;
 
 protected static Double PMORTC;
 
-protected static Double PMORTC2;
-
-protected static Double PMORTC3;
-
 protected static Double PNEWMEM;
-
-protected static Double PNOWK;
-
-protected static Double PNOWKLN;
-
-protected static Double PNOWKRS;
-
-protected static Double PNUMOS;
-
-protected static Double PNUMOS_I;
-
-protected static Double PNUMOS_IFLAG;
-
-protected static Double POADD1;
-
-protected static Double POADD1_I;
-
-protected static Double POADD1_IFLAG;
-
-protected static Double POADD2;
-
-protected static Double POADD2_I;
-
-protected static Double POADD2_IFLAG;
-
-protected static Double POADD3;
-
-protected static Double POADD3_I;
-
-protected static Double POADD3_IFLAG;
-
-protected static Double POADD4;
-
-protected static Double POADD4_I;
-
-protected static Double POADD4_IFLAG;
 
 protected static Double POADD5;
 
-protected static Double POADD5_I;
-
-protected static Double POADD5_IFLAG;
-
 protected static Double POADD6;
-
-protected static Double POADD6_I;
-
-protected static Double POADD6_IFLAG;
-
-protected static Double POANEH1;
 
 protected static Double POANEH2;
 
@@ -3907,15 +1824,9 @@ protected static Double POANEXY1;
 
 protected static Double POANEXY2;
 
-protected static Double POANGA1;
-
 protected static Double POANGA2;
 
-protected static Double POANIF1;
-
 protected static Double POANIF2;
-
-protected static Double POANJT1;
 
 protected static Double POANJT2;
 
@@ -3923,15 +1834,11 @@ protected static Double POANLM1;
 
 protected static Double POANLM2;
 
-protected static Double POANN1;
-
 protected static Double POANN2;
 
 protected static Double POANN3;
 
 protected static Double POANN4;
-
-protected static Double POANN5;
 
 protected static Double POANN6;
 
@@ -3946,10 +1853,6 @@ protected static Double POANVB2;
 protected static Double POANVI1;
 
 protected static Double POANVI2;
-
-protected static Double POCASH1;
-
-protected static Double POCASH2;
 
 protected static Double POCNDRS1;
 
@@ -3975,14 +1878,6 @@ protected static Double POCNDRS8;
 
 protected static Double POCNDRS9;
 
-protected static Double POCNFG1;
-
-protected static Double POCNFG2;
-
-protected static Double POCNFR1;
-
-protected static Double POCNFR2;
-
 protected static Double POCNHOW1;
 
 protected static Double POCNHOW2;
@@ -4007,10 +1902,6 @@ protected static Double POCNPLN1;
 
 protected static Double POCNPLN2;
 
-protected static Double POCNPR1;
-
-protected static Double POCNPR2;
-
 protected static Double POCNVOL1;
 
 protected static Double POCNVOL2;
@@ -4019,91 +1910,13 @@ protected static Double POCONCH1;
 
 protected static Double POCONCH2;
 
-protected static Double POCONH1;
-
-protected static Double POCONH2;
-
-protected static Double POCTYP1;
-
-protected static Double POCTYP1_I;
-
-protected static Double POCTYP1_IFLAG;
-
-protected static Double POCTYP2;
-
-protected static Double POCTYP2_I;
-
-protected static Double POCTYP2_IFLAG;
-
-protected static Double PODRINC1;
-
-protected static Double PODRINC2;
-
-protected static Double PODRINCB1;
-
-protected static Double PODRINCB2;
-
-protected static Double PODRVB1;
-
-protected static Double PODRVB2;
-
-protected static Double PODRVI1;
-
-protected static Double PODRVI2;
-
-protected static Double POEMAM1;
-
-protected static Double POEMAM2;
-
-protected static Double POEMFG1;
-
-protected static Double POEMFG2;
-
-protected static Double POEMFR1;
-
-protected static Double POEMFR2;
-
-protected static Double POEMP1;
-
-protected static Double POEMP2;
-
-protected static Double POEMPH1;
-
-protected static Double POEMPH2;
-
-protected static Double POEMPR1;
-
-protected static Double POEMPR2;
-
-protected static Double POFAAG1;
-
-protected static Double POFAAG2;
-
-protected static Double POFAN1;
-
 protected static Double POFAN10;
 
 protected static Double POFAN11;
 
 protected static Double POFAN12;
 
-protected static Double POFAN2;
-
-protected static Double POFAN3;
-
-protected static Double POFAN4;
-
-protected static Double POFAN5;
-
-protected static Double POFAN6;
-
-protected static Double POFAN7;
-
-protected static Double POFAN8;
-
 protected static Double POFAN9;
-
-protected static Double POFAWH1;
 
 protected static Double POFAWH10;
 
@@ -4111,15 +1924,11 @@ protected static Double POFAWH11;
 
 protected static Double POFAWH12;
 
-protected static Double POFAWH2;
-
 protected static Double POFAWH3;
 
 protected static Double POFAWH4;
 
 protected static Double POFAWH5;
-
-protected static Double POFAWH6;
 
 protected static Double POFAWH7;
 
@@ -4127,69 +1936,15 @@ protected static Double POFAWH8;
 
 protected static Double POFAWH9;
 
-protected static Double POJOIN1;
-
-protected static Double POJOIN2;
-
-protected static Double POLMUS1;
-
 protected static Double POLMUS10;
 
 protected static Double POLMUS11;
 
 protected static Double POLMUS12;
 
-protected static Double POLMUS2;
-
-protected static Double POLMUS3;
-
-protected static Double POLMUS4;
-
-protected static Double POLMUS5;
-
-protected static Double POLMUS6;
-
-protected static Double POLMUS7;
-
-protected static Double POLMUS8;
-
 protected static Double POLMUS9;
 
-protected static Double POLMV1;
-
-protected static Double POLMV1_I;
-
-protected static Double POLMV1_IFLAG;
-
-protected static Double POLMV2;
-
-protected static Double POLMV2_I;
-
-protected static Double POLMV2_IFLAG;
-
-protected static Double POLMVB1;
-
 protected static Double POLMVB2;
-
-protected static Double POLSYR1;
-
-protected static Double POLSYR2;
-
-protected static Double POLUM1;
-
-protected static Double POLUM1_I;
-
-protected static Double POLUM1_IFLAG;
-
-protected static Double POLUM2;
-
-protected static Double POLUM2_I;
-
-protected static Double POLUM2_IFLAG;
-
-protected static Double POMETH1;
-
-protected static Double POMETH2;
 
 protected static Double POPENVB;
 
@@ -4200,32 +1955,6 @@ protected static Double POPENVI;
 protected static Double POPENVI2;
 
 protected static Double POPYCH;
-
-protected static Double POPYCH2;
-
-protected static Double PORAGE1;
-
-protected static Double PORAGE2;
-
-protected static Double POWER1T;
-
-protected static Double POWER2T;
-
-protected static Double POYRAM1;
-
-protected static Double POYRAM2;
-
-protected static Double PPACCU1;
-
-protected static Double PPACCU2;
-
-protected static Double PPACCU3;
-
-protected static Double PPANEH1;
-
-protected static Double PPANEH2;
-
-protected static Double PPANEH3;
 
 protected static Double PPANEXM1;
 
@@ -4239,53 +1968,21 @@ protected static Double PPANEXY2;
 
 protected static Double PPANEXY3;
 
-protected static Double PPANGA1;
-
-protected static Double PPANGA2;
-
-protected static Double PPANGA3;
-
-protected static Double PPANIF1;
-
-protected static Double PPANIF2;
-
-protected static Double PPANIF3;
-
-protected static Double PPANJT1;
-
-protected static Double PPANJT2;
-
-protected static Double PPANJT3;
-
 protected static Double PPANLM1;
 
 protected static Double PPANLM2;
 
 protected static Double PPANLM3;
 
-protected static Double PPANN1;
-
-protected static Double PPANN10;
-
-protected static Double PPANN11;
-
-protected static Double PPANN12;
-
-protected static Double PPANN2;
-
 protected static Double PPANN3;
 
 protected static Double PPANN4;
-
-protected static Double PPANN5;
 
 protected static Double PPANN6;
 
 protected static Double PPANN7;
 
 protected static Double PPANN8;
-
-protected static Double PPANN9;
 
 protected static Double PPANVB1;
 
@@ -4298,18 +1995,6 @@ protected static Double PPANVI1;
 protected static Double PPANVI2;
 
 protected static Double PPANVI3;
-
-protected static Double PPCASH1;
-
-protected static Double PPCASH2;
-
-protected static Double PPCASH3;
-
-protected static Double PPCNDRS1;
-
-protected static Double PPCNDRS10;
-
-protected static Double PPCNDRS11;
 
 protected static Double PPCNDRS12;
 
@@ -4324,10 +2009,6 @@ protected static Double PPCNDRS16;
 protected static Double PPCNDRS17;
 
 protected static Double PPCNDRS18;
-
-protected static Double PPCNDRS19;
-
-protected static Double PPCNDRS2;
 
 protected static Double PPCNDRS20;
 
@@ -4353,13 +2034,7 @@ protected static Double PPCNDRS8;
 
 protected static Double PPCNDRS9;
 
-protected static Double PPCNHOW1;
-
-protected static Double PPCNHOW2;
-
 protected static Double PPCNHO___W3;
-
-protected static Double PPCNLRS1;
 
 protected static Double PPCNLRS10;
 
@@ -4367,13 +2042,7 @@ protected static Double PPCNLRS11;
 
 protected static Double PPCNLRS12;
 
-protected static Double PPCNLRS2;
-
-protected static Double PPCNLRS3;
-
 protected static Double PPCNLRS4;
-
-protected static Double PPCNLRS5;
 
 protected static Double PPCNLRS6;
 
@@ -4391,105 +2060,21 @@ protected static Double PPCNPLN3;
 
 protected static Double PPCONCH;
 
-protected static Double PPCONCH2;
-
-protected static Double PPCONCH3;
-
-protected static Double PPDOCS1;
-
-protected static Double PPDOCS2;
-
-protected static Double PPDOCS3;
-
-protected static Double PPDRINC1;
-
-protected static Double PPDRINC2;
-
 protected static Double PPDRINC3;
 
 protected static Double PPDRINCB;
 
-protected static Double PPDRINCB2;
-
 protected static Double PPDRINCB3;
-
-protected static Double PPDRVB1;
-
-protected static Double PPDRVB2;
 
 protected static Double PPDRVB3;
 
-protected static Double PPDRVI1;
-
-protected static Double PPDRVI2;
-
 protected static Double PPDRVI3;
-
-protected static Double PPEIRA1;
-
-protected static Double PPEIRA2;
-
-protected static Double PPEIRA3;
-
-protected static Double PPEIRF1;
-
-protected static Double PPEIRF2;
-
-protected static Double PPEIRF3;
-
-protected static Double PPEIRH1;
-
-protected static Double PPEIRH2;
-
-protected static Double PPEIRH3;
-
-protected static Double PPEMAM1;
-
-protected static Double PPEMAM2;
-
-protected static Double PPEMAM3;
-
-protected static Double PPEMFR1;
-
-protected static Double PPEMFR2;
-
-protected static Double PPEMFR3;
-
-protected static Double PPEMP1;
-
-protected static Double PPEMP2;
-
-protected static Double PPEMP3;
-
-protected static Double PPEMPH1;
-
-protected static Double PPEMPH2;
-
-protected static Double PPEMPH3;
-
-protected static Double PPEMPR1;
-
-protected static Double PPEMPR2;
-
-protected static Double PPEMPR3;
-
-protected static Double PPEVRG1;
-
-protected static Double PPEVRG2;
-
-protected static Double PPEVRG3;
-
-protected static Double PPFAAG1;
 
 protected static Double PPFAAG2;
 
 protected static Double PPFAAG3;
 
-protected static Double PPFAN1;
-
 protected static Double PPFAN10;
-
-protected static Double PPFAN11;
 
 protected static Double PPFAN12;
 
@@ -4499,23 +2084,17 @@ protected static Double PPFAN14;
 
 protected static Double PPFAN15;
 
-protected static Double PPFAN2;
-
 protected static Double PPFAN3;
 
 protected static Double PPFAN4;
 
 protected static Double PPFAN5;
 
-protected static Double PPFAN6;
-
 protected static Double PPFAN7;
 
 protected static Double PPFAN8;
 
 protected static Double PPFAN9;
-
-protected static Double PPFAWH1;
 
 protected static Double PPFAWH10;
 
@@ -4527,8 +2106,6 @@ protected static Double PPFAWH13;
 
 protected static Double PPFAWH14;
 
-protected static Double PPFAWH15;
-
 protected static Double PPFAWH16;
 
 protected static Double PPFAWH17;
@@ -4537,19 +2114,13 @@ protected static Double PPFAWH18;
 
 protected static Double PPFAWH19;
 
-protected static Double PPFAWH2;
-
 protected static Double PPFAWH20;
 
 protected static Double PPFAWH21;
 
-protected static Double PPFAWH3;
-
 protected static Double PPFAWH4;
 
 protected static Double PPFAWH5;
-
-protected static Double PPFAWH6;
 
 protected static Double PPFAWH7;
 
@@ -4593,183 +2164,17 @@ protected static Double PPLASY2;
 
 protected static Double PPLASY3;
 
-protected static Double PPLMUS1;
-
-protected static Double PPLMUS2;
-
-protected static Double PPLMUS3;
-
-protected static Double PPLMV1;
-
-protected static Double PPLMV1_I;
-
-protected static Double PPLMV1_IFLAG;
-
-protected static Double PPLMV2;
-
-protected static Double PPLMV2_I;
-
-protected static Double PPLMV2_IFLAG;
-
-protected static Double PPLMV3;
-
-protected static Double PPLMV3_I;
-
-protected static Double PPLMV3_IFLAG;
-
-protected static Double PPLMVB1;
-
-protected static Double PPLMVB2;
-
-protected static Double PPLMVB3;
-
-protected static Double PPLSTA1;
-
-protected static Double PPLSTA2;
-
-protected static Double PPLSTA3;
-
-protected static Double PPLSTP1;
-
-protected static Double PPLSTP2;
-
-protected static Double PPLSTP3;
-
-protected static Double PPLUM1;
-
-protected static Double PPLUM1_I;
-
-protected static Double PPLUM1_IFLAG;
-
-protected static Double PPLUM2;
-
-protected static Double PPLUM2_I;
-
-protected static Double PPLUM2_IFLAG;
-
-protected static Double PPLUM3;
-
-protected static Double PPLUM3_I;
-
-protected static Double PPLUM3_IFLAG;
-
 protected static Double PPNINS1;
 
 protected static Double PPNINS2;
 
 protected static Double PPNINS3;
 
-protected static Double PPORG1;
-
-protected static Double PPORG2;
-
-protected static Double PPORG3;
-
-protected static Double PPPAY1;
-
-protected static Double PPPAY2;
-
-protected static Double PPPAY3;
-
 protected static Double PPRGAM;
-
-protected static Double PPRGAM2;
-
-protected static Double PPRGAM3;
-
-protected static Double PPRGFG1;
-
-protected static Double PPRGFG2;
 
 protected static Double PPRGFG3;
 
-protected static Double PPRGFR1;
-
-protected static Double PPRGFR2;
-
 protected static Double PPRGFR3;
-
-protected static Double PPRGH1;
-
-protected static Double PPRGH2;
-
-protected static Double PPRGH3;
-
-protected static Double PPRGPE1;
-
-protected static Double PPRGPE2;
-
-protected static Double PPRGPE3;
-
-protected static Double PPSIPP1;
-
-protected static Double PPSIPP2;
-
-protected static Double PPSIPP3;
-
-protected static Double PPSTMN1;
-
-protected static Double PPSTMN2;
-
-protected static Double PPSTMN3;
-
-protected static Double PPSTYR1;
-
-protected static Double PPSTYR2;
-
-protected static Double PPSTYR3;
-
-protected static Double PPTYP1;
-
-protected static Double PPTYP2;
-
-protected static Double PPTYP3;
-
-protected static Double PPVAL1;
-
-protected static Double PPVAL1_I;
-
-protected static Double PPVAL1_IFLAG;
-
-protected static Double PPVAL2;
-
-protected static Double PPVAL2_I;
-
-protected static Double PPVAL2_IFLAG;
-
-protected static Double PPVAL3;
-
-protected static Double PPVAL3_I;
-
-protected static Double PPVAL3_IFLAG;
-
-protected static Double PPVALB1;
-
-protected static Double PPVALB2;
-
-protected static Double PPVALB3;
-
-protected static Double PPVINT1;
-
-protected static Double PPVINT2;
-
-protected static Double PPVINT3;
-
-protected static Double PPYRST1;
-
-protected static Double PPYRST2;
-
-protected static Double PPYRST3;
-
-protected static Double PPYSTP1;
-
-protected static Double PPYSTP11;
-
-protected static Double PPYSTP12;
-
-protected static Double PPYSTP13;
-
-protected static Double PPYSTP14;
 
 protected static Double PPYSTP15;
 
@@ -4778,10 +2183,6 @@ protected static Double PPYSTP16;
 protected static Double PPYSTP17;
 
 protected static Double PPYSTP18;
-
-protected static Double PPYSTP19;
-
-protected static Double PPYSTP2;
 
 protected static Double PPYSTP20;
 
@@ -4797,49 +2198,15 @@ protected static Double PPYSTP6;
 
 protected static Double PPYSTP7;
 
-protected static Double PPYSTP8;
-
-protected static Double PPYSTP9;
-
 protected static Double PRCRELIG;
 
-protected static Double PRESMON;
-
-protected static Double PRESYR;
-
-protected static Double PRODTS;
-
 protected static Double PROXPERS;
-
-protected static Double PROXYNUM;
 
 protected static Double PSCHY_F;
 
 protected static Double PSCHY_S;
 
 protected static Double PSCHY_T;
-
-protected static Double PSPEXPA;
-
-protected static Double PSPEXPA_I;
-
-protected static Double PSPEXPA_IFLAG;
-
-protected static Double PSPEXPH;
-
-protected static Double PSPEXPH_I;
-
-protected static Double PSPEXPH_IFLAG;
-
-protected static Double PSPLUM;
-
-protected static Double PSPLUVAL;
-
-protected static Double PSPSE;
-
-protected static Double PSPSE_I;
-
-protected static Double PSPSE_IFLAG;
 
 protected static Double PSTYPE1;
 
@@ -4883,42 +2250,6 @@ protected static Double PSTYPE8;
 
 protected static Double PSTYPE9;
 
-protected static Double PWACCU;
-
-protected static Double PWLUM;
-
-protected static Double PWLUVAL;
-
-protected static Double R01;
-
-protected static Double R02;
-
-protected static Double R03;
-
-protected static Double R04;
-
-protected static Double R05;
-
-protected static Double R06;
-
-protected static Double R07;
-
-protected static Double R08;
-
-protected static Double R09;
-
-protected static Double R10;
-
-protected static Double R11;
-
-protected static Double REGLRPY1_I;
-
-protected static Double REGLRPY1_IFLAG;
-
-protected static Double REGLRPY2_I;
-
-protected static Double REGLRPY2_IFLAG;
-
 protected static Double REGLRPY3;
 
 protected static Double REGLRPY3_I;
@@ -4937,27 +2268,13 @@ protected static Double REGLRPY5_I;
 
 protected static Double REGLRPY5_IFLAG;
 
-protected static Double RELBUS_I;
-
-protected static Double RELBUS_IFLAG;
-
 protected static Double RELIGE;
 
 protected static Double RELIGS;
 
 protected static Double RELIGW;
 
-protected static Double RENTPAY_I;
-
-protected static Double RENTPAY_IFLAG;
-
-protected static Double RESPDNT;
-
-protected static Double RETFRAC;
-
 protected static Double RF;
-
-protected static Double RNYDAY;
 
 protected static Double RPCRET1;
 
@@ -4967,87 +2284,17 @@ protected static Double RPCRET3;
 
 protected static Double RPDBCAL_F;
 
-protected static Double RPFCRET1;
-
-protected static Double RPFCRET2;
-
-protected static Double RPFCRET3;
-
-protected static Double RPFCRET4;
-
-protected static Double RPFCRET5;
-
-protected static Double RPFCRET6;
-
 protected static Double RS;
-
-protected static Double SAMEJOB1;
-
-protected static Double SAMEJOB2;
-
-protected static Double SAMEJOB3;
-
-protected static Double SAMEJOB4;
-
-protected static Double SAMEJOB5;
-
-protected static Double SAMEJOB6;
-
-protected static Double SAMEMP;
-
-protected static Double SAMJOB;
-
-protected static Double SATIS;
-
-protected static Double SAVNUM;
-
-protected static Double SCAC1_I;
-
-protected static Double SCAC1_IFLAG;
-
-protected static Double SCAC2_I;
-
-protected static Double SCAC2_IFLAG;
-
-protected static Double SCAC3_I;
-
-protected static Double SCAC3_IFLAG;
 
 protected static Double SCAC4_I;
 
 protected static Double SCAC5_I;
 
-protected static Double SCHEMEET_I;
-
-protected static Double SCHEMEET_IFLAG;
-
-protected static Double SCNDSCH;
-
-protected static Double SECTOR;
-
-protected static Double SECTR2;
-
 protected static Double SENO;
-
-protected static Double SICCODE;
-
-protected static Double SJEMP1_I;
-
-protected static Double SJEMP1_IFLAG;
-
-protected static Double SJOB2_I;
-
-protected static Double SJOB2_IFLAG;
-
-protected static Double SMTPEN;
 
 protected static String SOA1;
 protected static String SOA2;
 protected static Double SOC2000;
-
-protected static Double SOC2010;
-
-protected static Double SOURC2P;
 
 protected static Double SPASAF_IORIG;
 
@@ -5135,58 +2382,22 @@ protected static Double SPECWHEN9;
 
 protected static Double SPENDM;
 
-protected static Double STARTJ_I;
-
-protected static Double STARTJ_IFLAG;
-
 protected static String STATSWARD;
 protected static Double STATUS;
 
-protected static Double STAT_IFLAG;
-
-protected static Double TACC1;
-
-protected static Double TACC2;
-
 protected static Double TACC3;
-
-protected static Double TADDVB1;
-
-protected static Double TADDVB2;
 
 protected static Double TADDVB3;
 
 protected static Double TADDVL;
 
-protected static Double TADDVL2;
-
 protected static Double TADDVL3;
-
-protected static Double TBCAP1;
-
-protected static Double TBCAP2;
 
 protected static Double TBCAP3;
 
-protected static Double TBCAPY1;
-
-protected static Double TBCAPY2;
-
 protected static Double TBCAPY3;
 
-protected static Double TBCKNO1;
-
-protected static Double TBCKNO2;
-
 protected static Double TBCKNO3;
-
-protected static Double TBEN1;
-
-protected static Double TBEN10;
-
-protected static Double TBEN11;
-
-protected static Double TBEN12;
 
 protected static Double TBEN13;
 
@@ -5202,8 +2413,6 @@ protected static Double TBEN18;
 
 protected static Double TBEN19;
 
-protected static Double TBEN2;
-
 protected static Double TBEN20;
 
 protected static Double TBEN21;
@@ -5214,131 +2423,35 @@ protected static Double TBEN23;
 
 protected static Double TBEN24;
 
-protected static Double TBEN3;
-
-protected static Double TBEN4;
-
-protected static Double TBEN5;
-
 protected static Double TBEN6;
 
 protected static Double TBEN7;
 
 protected static Double TBEN8;
 
-protected static Double TBEN9;
-
-protected static Double TBINC1;
-
-protected static Double TBINC2;
-
 protected static Double TBINC3;
-
-protected static Double TBREC1;
-
-protected static Double TBREC2;
 
 protected static Double TBREC3;
 
-protected static Double TBRECB1;
-
-protected static Double TBRECB2;
-
 protected static Double TBRECB3;
-
-protected static Double TBVALB1;
-
-protected static Double TBVALB2;
 
 protected static Double TBVALB3;
 
-protected static Double TDUP1;
-
-protected static Double TDUP2;
-
 protected static Double TDUP3;
 
-protected static Double TDUPA1;
-
-protected static Double TDUPA2;
-
 protected static Double TDUPA3;
-
-protected static Double TJNT1;
-
-protected static Double TJNT2;
-
-protected static Double TJNT3;
-
-protected static Double TJNT4;
 
 protected static Double TJNT5;
 
 protected static Double TJNT6;
 
-protected static Double TOPDVDBOPEN1T;
-
-protected static Double TOPDVDBOPEN2T;
-
-protected static Double TOTARR_EXCMORT_SUM;
-
-protected static Double TOTBILLARR_SUM;
-
-protected static Double TOTCC_SUM;
-
-protected static Double TOTFLNS_SUM;
-
-protected static Double TOTHP_SUM;
-
-protected static Double TOTLNS_SUM;
-
-protected static Double TOTLOS_SUM;
-
-protected static Double TOTMO_SUM;
-
-protected static Double TOTNLOS_SUM;
-
-protected static Double TOTNSLBNK_SUM;
-
-protected static Double TOTNSLC_SUM;
-
-protected static Double TOTOSLBNK_SUM;
-
-protected static Double TOTOSLC_SUM;
-
-protected static Double TOTPARTGRSPAY;
-
-protected static Double TOTSC_SUM;
-
-protected static Double TOTSLBNK_SUM;
-
-protected static Double TOTSLC_SUM;
-
 protected static Double TRAINEE;
-
-protected static Double TRUST;
-
-protected static Double TSNEW;
 
 protected static Double TSNO3;
 
-protected static Double TSNUM1;
-
-protected static Double TSNUM2;
-
-protected static Double TVAL1;
-
-protected static Double TVAL2;
-
 protected static Double TVAL3;
 
-protected static Double TVALB1;
-
-protected static Double TVALB2;
-
 protected static Double TVALB3;
-
-protected static Double TWHO1;
 
 protected static Double TWHO10;
 
@@ -5358,8 +2471,6 @@ protected static Double TWHO17;
 
 protected static Double TWHO18;
 
-protected static Double TWHO2;
-
 protected static Double TWHO3;
 
 protected static Double TWHO4;
@@ -5368,83 +2479,7 @@ protected static Double TWHO5;
 
 protected static Double TWHO6;
 
-protected static Double TWHO7;
-
-protected static Double TWHO8;
-
 protected static Double TWHO9;
-
-protected static Double UBUYLET;
-
-protected static Double UBUYLET_I;
-
-protected static Double UBUYLET_IFLAG;
-
-protected static Double UDEBTBL;
-
-protected static Double UDEBTBLU;
-
-protected static Double UDEBTBO;
-
-protected static Double UDEBTBOR;
-
-protected static Double UDEBTBOS;
-
-protected static Double UDEBTBS;
-
-protected static Double UDEBTL;
-
-protected static Double UDEBTLU;
-
-protected static Double UDEBTLU_I;
-
-protected static Double UDEBTLU_IFLAG;
-
-protected static Double UDEBTL_I;
-
-protected static Double UDEBTL_IFLAG;
-
-protected static Double UDEBTO;
-
-protected static Double UDEBTOR;
-
-protected static Double UDEBTOR_I;
-
-protected static Double UDEBTOR_IFLAG;
-
-protected static Double UDEBTOS;
-
-protected static Double UDEBTOS_I;
-
-protected static Double UDEBTOS_IFLAG;
-
-protected static Double UDEBTO_I;
-
-protected static Double UDEBTO_IFLAG;
-
-protected static Double UDEBTS;
-
-protected static Double UDEBTS_I;
-
-protected static Double UDEBTS_IFLAG;
-
-protected static Double UGDVBL;
-
-protected static Double UGDVBL_I;
-
-protected static Double UGDVBL_IFLAG;
-
-protected static Double UGDVBOS;
-
-protected static Double UGDVBOS_I;
-
-protected static Double UGDVBOS_IFLAG;
-
-protected static Double UGDVBS;
-
-protected static Double UGDVBS_I;
-
-protected static Double UGDVBS_IFLAG;
 
 protected static Double ULAND10;
 
@@ -5466,11 +2501,7 @@ protected static Double UPROP3_IFLAG;
 
 protected static Double UPROP4_IFLAG;
 
-protected static Double UPROP5_I;
-
 protected static Double UPROP5_IFLAG;
-
-protected static Double UPROP6_I;
 
 protected static Double UPROP6_IFLAG;
 
@@ -5526,92 +2557,6 @@ protected static Double UPRSH6;
 
 protected static Double UPRTYP;
 
-protected static Double UPRTYP10;
-
-protected static Double UPRTYP11;
-
-protected static Double UPRTYP12;
-
-protected static Double UPRTYP13;
-
-protected static Double UPRTYP14;
-
-protected static Double UPRTYP15;
-
-protected static Double UPRTYP16;
-
-protected static Double UPRTYP17;
-
-protected static Double UPRTYP18;
-
-protected static Double UPRTYP2;
-
-protected static Double UPRTYP3;
-
-protected static Double UPRTYP4;
-
-protected static Double UPRTYP5;
-
-protected static Double UPRTYP6;
-
-protected static Double UPRTYP7;
-
-protected static Double UPRTYP8;
-
-protected static Double UPRTYP9;
-
-protected static Double UVALBL;
-
-protected static Double UVALBLU;
-
-protected static Double UVALBO;
-
-protected static Double UVALBOR;
-
-protected static Double UVALBOS;
-
-protected static Double UVALBS;
-
-protected static Double UVALL;
-
-protected static Double UVALLU;
-
-protected static Double UVALLU_I;
-
-protected static Double UVALLU_IFLAG;
-
-protected static Double UVALL_I;
-
-protected static Double UVALL_IFLAG;
-
-protected static Double UVALO;
-
-protected static Double UVALOR;
-
-protected static Double UVALOR_I;
-
-protected static Double UVALOR_IFLAG;
-
-protected static Double UVALOS;
-
-protected static Double UVALOS_I;
-
-protected static Double UVALOS_IFLAG;
-
-protected static Double UVALO_I;
-
-protected static Double UVALO_IFLAG;
-
-protected static Double UVALS;
-
-protected static Double UVALS_I;
-
-protected static Double UVALS_IFLAG;
-
-protected static Double VALPBLUM1;
-
-protected static Double VALPBLUM2;
-
 protected static Double W1W3WGT;
 
 protected static Double W2W3WGT;
@@ -5629,18 +2574,6 @@ protected static Double WHOREATT;
 protected static Double WHORECAR;
 
 protected static Double WHOREMOB;
-
-protected static Double WKBETW;
-
-protected static Double WKHRS;
-
-protected static Double WKHRSIR;
-
-protected static Double WORTH;
-
-protected static Double WRKING_I;
-
-protected static Double WRKING_IFLAG;
 
 protected static Double WTCPD;
 
@@ -5670,24 +2603,7826 @@ protected static Double XICONREM;
 
 protected static Double XICONSC;
 
-protected static Double XINCSE;
+protected final void initACCFRAC(String s) {
+if (!s.trim().isEmpty()) {
+ACCFRAC = new Double(s);
+}
+}
 
-protected static Double XMARSTA;
+protected final void initAGEASAF1(String s) {
+if (!s.trim().isEmpty()) {
+AGEASAF1 = new Double(s);
+}
+}
 
-protected static Double XMARSTA_I;
+protected final void initAGMSAF2T(String s) {
+if (!s.trim().isEmpty()) {
+AGMSAF2T = new Double(s);
+}
+}
 
-protected static Double XMARSTA_IFLAG;
+protected final void initAGMSAFT1(String s) {
+if (!s.trim().isEmpty()) {
+AGMSAFT1 = new Double(s);
+}
+}
+
+protected final void initBACCEND1(String s) {
+if (!s.trim().isEmpty()) {
+BACCEND1 = s;
+}
+}
+
+protected final void initBACCEND2(String s) {
+if (!s.trim().isEmpty()) {
+BACCEND2 = s;
+}
+}
+
+protected final void initBACCEND3(String s) {
+if (!s.trim().isEmpty()) {
+BACCEND3 = s;
+}
+}
+
+protected final void initBCARRY2(String s) {
+if (!s.trim().isEmpty()) {
+BCARRY2 = new Double(s);
+}
+}
+
+protected final void initBENTYPE01(String s) {
+if (!s.trim().isEmpty()) {
+BENTYPE01 = new Double(s);
+}
+}
+
+protected final void initBENTYPE02(String s) {
+if (!s.trim().isEmpty()) {
+BENTYPE02 = new Double(s);
+}
+}
+
+protected final void initBENTYPE03(String s) {
+if (!s.trim().isEmpty()) {
+BENTYPE03 = new Double(s);
+}
+}
+
+protected final void initBENTYPE04(String s) {
+if (!s.trim().isEmpty()) {
+BENTYPE04 = new Double(s);
+}
+}
+
+protected final void initBENTYPE05(String s) {
+if (!s.trim().isEmpty()) {
+BENTYPE05 = new Double(s);
+}
+}
+
+protected final void initBENTYPE06(String s) {
+if (!s.trim().isEmpty()) {
+BENTYPE06 = new Double(s);
+}
+}
+
+protected final void initBENTYPE07(String s) {
+if (!s.trim().isEmpty()) {
+BENTYPE07 = new Double(s);
+}
+}
+
+protected final void initBENTYPE08(String s) {
+if (!s.trim().isEmpty()) {
+BENTYPE08 = new Double(s);
+}
+}
+
+protected final void initBENTYPE09(String s) {
+if (!s.trim().isEmpty()) {
+BENTYPE09 = new Double(s);
+}
+}
+
+protected final void initBENTYPE10(String s) {
+if (!s.trim().isEmpty()) {
+BENTYPE10 = new Double(s);
+}
+}
+
+protected final void initBENTYPE11(String s) {
+if (!s.trim().isEmpty()) {
+BENTYPE11 = new Double(s);
+}
+}
+
+protected final void initBENTYPE12(String s) {
+if (!s.trim().isEmpty()) {
+BENTYPE12 = new Double(s);
+}
+}
+
+protected final void initBFUND11(String s) {
+if (!s.trim().isEmpty()) {
+BFUND11 = new Double(s);
+}
+}
+
+protected final void initBFUND12(String s) {
+if (!s.trim().isEmpty()) {
+BFUND12 = new Double(s);
+}
+}
+
+protected final void initBFUND13(String s) {
+if (!s.trim().isEmpty()) {
+BFUND13 = new Double(s);
+}
+}
+
+protected final void initBFUND14(String s) {
+if (!s.trim().isEmpty()) {
+BFUND14 = new Double(s);
+}
+}
+
+protected final void initBFUND15(String s) {
+if (!s.trim().isEmpty()) {
+BFUND15 = new Double(s);
+}
+}
+
+protected final void initBFUND16(String s) {
+if (!s.trim().isEmpty()) {
+BFUND16 = new Double(s);
+}
+}
+
+protected final void initBFUND18(String s) {
+if (!s.trim().isEmpty()) {
+BFUND18 = new Double(s);
+}
+}
+
+protected final void initBFUND19(String s) {
+if (!s.trim().isEmpty()) {
+BFUND19 = new Double(s);
+}
+}
+
+protected final void initBFUND20(String s) {
+if (!s.trim().isEmpty()) {
+BFUND20 = new Double(s);
+}
+}
+
+protected final void initBFUND21(String s) {
+if (!s.trim().isEmpty()) {
+BFUND21 = new Double(s);
+}
+}
+
+protected final void initBFUND22(String s) {
+if (!s.trim().isEmpty()) {
+BFUND22 = new Double(s);
+}
+}
+
+protected final void initBFUND23(String s) {
+if (!s.trim().isEmpty()) {
+BFUND23 = new Double(s);
+}
+}
+
+protected final void initBFUND24(String s) {
+if (!s.trim().isEmpty()) {
+BFUND24 = new Double(s);
+}
+}
+
+protected final void initBFUND3(String s) {
+if (!s.trim().isEmpty()) {
+BFUND3 = new Double(s);
+}
+}
+
+protected final void initBFUND4(String s) {
+if (!s.trim().isEmpty()) {
+BFUND4 = new Double(s);
+}
+}
+
+protected final void initBFUND5(String s) {
+if (!s.trim().isEmpty()) {
+BFUND5 = new Double(s);
+}
+}
+
+protected final void initBFUND6(String s) {
+if (!s.trim().isEmpty()) {
+BFUND6 = new Double(s);
+}
+}
+
+protected final void initBFUND7(String s) {
+if (!s.trim().isEmpty()) {
+BFUND7 = new Double(s);
+}
+}
+
+protected final void initBFUND8(String s) {
+if (!s.trim().isEmpty()) {
+BFUND8 = new Double(s);
+}
+}
+
+protected final void initBSEPPD09(String s) {
+if (!s.trim().isEmpty()) {
+BSEPPD09 = new Double(s);
+}
+}
+
+protected final void initBSEPPD10(String s) {
+if (!s.trim().isEmpty()) {
+BSEPPD10 = new Double(s);
+}
+}
+
+protected final void initBSEPPD11(String s) {
+if (!s.trim().isEmpty()) {
+BSEPPD11 = new Double(s);
+}
+}
+
+protected final void initBSEPPD12(String s) {
+if (!s.trim().isEmpty()) {
+BSEPPD12 = new Double(s);
+}
+}
+
+protected final void initBSEPPD13(String s) {
+if (!s.trim().isEmpty()) {
+BSEPPD13 = new Double(s);
+}
+}
+
+protected final void initBSEPPD14(String s) {
+if (!s.trim().isEmpty()) {
+BSEPPD14 = new Double(s);
+}
+}
+
+protected final void initBSEPPD15(String s) {
+if (!s.trim().isEmpty()) {
+BSEPPD15 = new Double(s);
+}
+}
+
+protected final void initBSEPPD16(String s) {
+if (!s.trim().isEmpty()) {
+BSEPPD16 = new Double(s);
+}
+}
+
+protected final void initBSEPPD17(String s) {
+if (!s.trim().isEmpty()) {
+BSEPPD17 = new Double(s);
+}
+}
+
+protected final void initBSEPPD18(String s) {
+if (!s.trim().isEmpty()) {
+BSEPPD18 = new Double(s);
+}
+}
+
+protected final void initBSEPPD19(String s) {
+if (!s.trim().isEmpty()) {
+BSEPPD19 = new Double(s);
+}
+}
+
+protected final void initBSEPPD20(String s) {
+if (!s.trim().isEmpty()) {
+BSEPPD20 = new Double(s);
+}
+}
+
+protected final void initCAEXTRA(String s) {
+if (!s.trim().isEmpty()) {
+CAEXTRA = new Double(s);
+}
+}
+
+protected final void initCAOLDER(String s) {
+if (!s.trim().isEmpty()) {
+CAOLDER = new Double(s);
+}
+}
+
+protected final void initCAOTHER1(String s) {
+if (!s.trim().isEmpty()) {
+CAOTHER1 = new Double(s);
+}
+}
+
+protected final void initCAOTHER2(String s) {
+if (!s.trim().isEmpty()) {
+CAOTHER2 = new Double(s);
+}
+}
+
+protected final void initCAOTHER3(String s) {
+if (!s.trim().isEmpty()) {
+CAOTHER3 = new Double(s);
+}
+}
+
+protected final void initCAOTHER4(String s) {
+if (!s.trim().isEmpty()) {
+CAOTHER4 = new Double(s);
+}
+}
+
+protected final void initCAOTHER5(String s) {
+if (!s.trim().isEmpty()) {
+CAOTHER5 = new Double(s);
+}
+}
+
+protected final void initCATYPE(String s) {
+if (!s.trim().isEmpty()) {
+CATYPE = new Double(s);
+}
+}
+
+protected final void initCCAC4_I(String s) {
+if (!s.trim().isEmpty()) {
+CCAC4_I = new Double(s);
+}
+}
+
+protected final void initCCAC5_I(String s) {
+if (!s.trim().isEmpty()) {
+CCAC5_I = new Double(s);
+}
+}
+
+protected final void initCOMBPD(String s) {
+if (!s.trim().isEmpty()) {
+COMBPD = new Double(s);
+}
+}
+
+protected final void initCOMMIT1(String s) {
+if (!s.trim().isEmpty()) {
+COMMIT1 = new Double(s);
+}
+}
+
+protected final void initCOMMIT2(String s) {
+if (!s.trim().isEmpty()) {
+COMMIT2 = new Double(s);
+}
+}
+
+protected final void initCOMMIT3(String s) {
+if (!s.trim().isEmpty()) {
+COMMIT3 = new Double(s);
+}
+}
+
+protected final void initCOMMIT4(String s) {
+if (!s.trim().isEmpty()) {
+COMMIT4 = new Double(s);
+}
+}
+
+protected final void initCOMMIT5(String s) {
+if (!s.trim().isEmpty()) {
+COMMIT5 = new Double(s);
+}
+}
+
+protected final void initCOURSE20(String s) {
+if (!s.trim().isEmpty()) {
+COURSE20 = new Double(s);
+}
+}
+
+protected final void initCREDTYPE1(String s) {
+if (!s.trim().isEmpty()) {
+CREDTYPE1 = new Double(s);
+}
+}
+
+protected final void initCREDTYPE2(String s) {
+if (!s.trim().isEmpty()) {
+CREDTYPE2 = new Double(s);
+}
+}
+
+protected final void initCTCPD(String s) {
+if (!s.trim().isEmpty()) {
+CTCPD = new Double(s);
+}
+}
+
+protected final void initCTOGSEP(String s) {
+if (!s.trim().isEmpty()) {
+CTOGSEP = new Double(s);
+}
+}
+
+protected final void initCTPAY(String s) {
+if (!s.trim().isEmpty()) {
+CTPAY = new Double(s);
+}
+}
+
+protected final void initCTPAYS(String s) {
+if (!s.trim().isEmpty()) {
+CTPAYS = new Double(s);
+}
+}
+
+protected final void initCTPAYW(String s) {
+if (!s.trim().isEmpty()) {
+CTPAYW = new Double(s);
+}
+}
+
+protected final void initDBURDH(String s) {
+if (!s.trim().isEmpty()) {
+DBURDH = new Double(s);
+}
+}
+
+protected final void initDBURDW4(String s) {
+if (!s.trim().isEmpty()) {
+DBURDW4 = new Double(s);
+}
+}
+
+protected final void initDBURDW5(String s) {
+if (!s.trim().isEmpty()) {
+DBURDW5 = new Double(s);
+}
+}
+
+protected final void initDBURDW6(String s) {
+if (!s.trim().isEmpty()) {
+DBURDW6 = new Double(s);
+}
+}
+
+protected final void initDBURDW7(String s) {
+if (!s.trim().isEmpty()) {
+DBURDW7 = new Double(s);
+}
+}
+
+protected final void initDBURD___W3(String s) {
+if (!s.trim().isEmpty()) {
+DBURD___W3 = new Double(s);
+}
+}
+
+protected final void initDC12BEH4(String s) {
+if (!s.trim().isEmpty()) {
+DC12BEH4 = new Double(s);
+}
+}
+
+protected final void initDC12BEH5(String s) {
+if (!s.trim().isEmpty()) {
+DC12BEH5 = new Double(s);
+}
+}
+
+protected final void initDC12OWE4(String s) {
+if (!s.trim().isEmpty()) {
+DC12OWE4 = new Double(s);
+}
+}
+
+protected final void initDC12OWE5(String s) {
+if (!s.trim().isEmpty()) {
+DC12OWE5 = new Double(s);
+}
+}
+
+protected final void initDCAMC4(String s) {
+if (!s.trim().isEmpty()) {
+DCAMC4 = new Double(s);
+}
+}
+
+protected final void initDCAMC5(String s) {
+if (!s.trim().isEmpty()) {
+DCAMC5 = new Double(s);
+}
+}
+
+protected final void initDCAMD4(String s) {
+if (!s.trim().isEmpty()) {
+DCAMD4 = new Double(s);
+}
+}
+
+protected final void initDCAMD5(String s) {
+if (!s.trim().isEmpty()) {
+DCAMD5 = new Double(s);
+}
+}
+
+protected final void initDCAMOS4_I(String s) {
+if (!s.trim().isEmpty()) {
+DCAMOS4_I = new Double(s);
+}
+}
+
+protected final void initDCAMOS5_I(String s) {
+if (!s.trim().isEmpty()) {
+DCAMOS5_I = new Double(s);
+}
+}
+
+protected final void initDCAMP4(String s) {
+if (!s.trim().isEmpty()) {
+DCAMP4 = new Double(s);
+}
+}
+
+protected final void initDCAMP5(String s) {
+if (!s.trim().isEmpty()) {
+DCAMP5 = new Double(s);
+}
+}
+
+protected final void initDCCOS4(String s) {
+if (!s.trim().isEmpty()) {
+DCCOS4 = new Double(s);
+}
+}
+
+protected final void initDCCOS5(String s) {
+if (!s.trim().isEmpty()) {
+DCCOS5 = new Double(s);
+}
+}
+
+protected final void initDCCSP4(String s) {
+if (!s.trim().isEmpty()) {
+DCCSP4 = new Double(s);
+}
+}
+
+protected final void initDCCSP5(String s) {
+if (!s.trim().isEmpty()) {
+DCCSP5 = new Double(s);
+}
+}
+
+protected final void initDCESB4(String s) {
+if (!s.trim().isEmpty()) {
+DCESB4 = new Double(s);
+}
+}
+
+protected final void initDCESB5(String s) {
+if (!s.trim().isEmpty()) {
+DCESB5 = new Double(s);
+}
+}
+
+protected final void initDCINZ4(String s) {
+if (!s.trim().isEmpty()) {
+DCINZ4 = new Double(s);
+}
+}
+
+protected final void initDCINZ5(String s) {
+if (!s.trim().isEmpty()) {
+DCINZ5 = new Double(s);
+}
+}
+
+protected final void initDCNAM4(String s) {
+if (!s.trim().isEmpty()) {
+DCNAM4 = new Double(s);
+}
+}
+
+protected final void initDCNAM5(String s) {
+if (!s.trim().isEmpty()) {
+DCNAM5 = new Double(s);
+}
+}
+
+protected final void initDCONM10(String s) {
+if (!s.trim().isEmpty()) {
+DCONM10 = new Double(s);
+}
+}
+
+protected final void initDCONM7(String s) {
+if (!s.trim().isEmpty()) {
+DCONM7 = new Double(s);
+}
+}
+
+protected final void initDCONM8(String s) {
+if (!s.trim().isEmpty()) {
+DCONM8 = new Double(s);
+}
+}
+
+protected final void initDCONM9(String s) {
+if (!s.trim().isEmpty()) {
+DCONM9 = new Double(s);
+}
+}
+
+protected final void initDCPER4(String s) {
+if (!s.trim().isEmpty()) {
+DCPER4 = new Double(s);
+}
+}
+
+protected final void initDCPER5(String s) {
+if (!s.trim().isEmpty()) {
+DCPER5 = new Double(s);
+}
+}
+
+protected final void initDCREC4(String s) {
+if (!s.trim().isEmpty()) {
+DCREC4 = new Double(s);
+}
+}
+
+protected final void initDCREC5(String s) {
+if (!s.trim().isEmpty()) {
+DCREC5 = new Double(s);
+}
+}
+
+protected final void initDCRSP4(String s) {
+if (!s.trim().isEmpty()) {
+DCRSP4 = new Double(s);
+}
+}
+
+protected final void initDCRSP5(String s) {
+if (!s.trim().isEmpty()) {
+DCRSP5 = new Double(s);
+}
+}
+
+protected final void initDHBANY08_I(String s) {
+if (!s.trim().isEmpty()) {
+DHBANY08_I = new Double(s);
+}
+}
+
+protected final void initDHBANY08_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHBANY08_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHBANY09_I(String s) {
+if (!s.trim().isEmpty()) {
+DHBANY09_I = new Double(s);
+}
+}
+
+protected final void initDHBANY09_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHBANY09_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHBANY10_I(String s) {
+if (!s.trim().isEmpty()) {
+DHBANY10_I = new Double(s);
+}
+}
+
+protected final void initDHBANY10_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHBANY10_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHBANY11_I(String s) {
+if (!s.trim().isEmpty()) {
+DHBANY11_I = new Double(s);
+}
+}
+
+protected final void initDHBANY11_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHBANY11_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHPANY4(String s) {
+if (!s.trim().isEmpty()) {
+DHPANY4 = new Double(s);
+}
+}
+
+protected final void initDHPANY5(String s) {
+if (!s.trim().isEmpty()) {
+DHPANY5 = new Double(s);
+}
+}
+
+protected final void initDHPANY6(String s) {
+if (!s.trim().isEmpty()) {
+DHPANY6 = new Double(s);
+}
+}
+
+protected final void initDHPANY7(String s) {
+if (!s.trim().isEmpty()) {
+DHPANY7 = new Double(s);
+}
+}
+
+protected final void initDHPBEH3(String s) {
+if (!s.trim().isEmpty()) {
+DHPBEH3 = new Double(s);
+}
+}
+
+protected final void initDHPBEH3_I(String s) {
+if (!s.trim().isEmpty()) {
+DHPBEH3_I = new Double(s);
+}
+}
+
+protected final void initDHPBEH3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHPBEH3_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHPBEH4(String s) {
+if (!s.trim().isEmpty()) {
+DHPBEH4 = new Double(s);
+}
+}
+
+protected final void initDHPBEH4_I(String s) {
+if (!s.trim().isEmpty()) {
+DHPBEH4_I = new Double(s);
+}
+}
+
+protected final void initDHPBEH4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHPBEH4_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHPBEH5(String s) {
+if (!s.trim().isEmpty()) {
+DHPBEH5 = new Double(s);
+}
+}
+
+protected final void initDHPBEH5_I(String s) {
+if (!s.trim().isEmpty()) {
+DHPBEH5_I = new Double(s);
+}
+}
+
+protected final void initDHPBEH5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHPBEH5_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHPEST3(String s) {
+if (!s.trim().isEmpty()) {
+DHPEST3 = new Double(s);
+}
+}
+
+protected final void initDHPEST4(String s) {
+if (!s.trim().isEmpty()) {
+DHPEST4 = new Double(s);
+}
+}
+
+protected final void initDHPEST5(String s) {
+if (!s.trim().isEmpty()) {
+DHPEST5 = new Double(s);
+}
+}
+
+protected final void initDHPINS3(String s) {
+if (!s.trim().isEmpty()) {
+DHPINS3 = new Double(s);
+}
+}
+
+protected final void initDHPINS3_I(String s) {
+if (!s.trim().isEmpty()) {
+DHPINS3_I = new Double(s);
+}
+}
+
+protected final void initDHPINS3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHPINS3_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHPINS4(String s) {
+if (!s.trim().isEmpty()) {
+DHPINS4 = new Double(s);
+}
+}
+
+protected final void initDHPINS4_I(String s) {
+if (!s.trim().isEmpty()) {
+DHPINS4_I = new Double(s);
+}
+}
+
+protected final void initDHPINS4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHPINS4_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHPINS5(String s) {
+if (!s.trim().isEmpty()) {
+DHPINS5 = new Double(s);
+}
+}
+
+protected final void initDHPINS5_I(String s) {
+if (!s.trim().isEmpty()) {
+DHPINS5_I = new Double(s);
+}
+}
+
+protected final void initDHPINS5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHPINS5_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHPINT3(String s) {
+if (!s.trim().isEmpty()) {
+DHPINT3 = new Double(s);
+}
+}
+
+protected final void initDHPINT4(String s) {
+if (!s.trim().isEmpty()) {
+DHPINT4 = new Double(s);
+}
+}
+
+protected final void initDHPINT5(String s) {
+if (!s.trim().isEmpty()) {
+DHPINT5 = new Double(s);
+}
+}
+
+protected final void initDHPOFT3(String s) {
+if (!s.trim().isEmpty()) {
+DHPOFT3 = new Double(s);
+}
+}
+
+protected final void initDHPOFT3_I(String s) {
+if (!s.trim().isEmpty()) {
+DHPOFT3_I = new Double(s);
+}
+}
+
+protected final void initDHPOFT3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHPOFT3_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHPOFT4(String s) {
+if (!s.trim().isEmpty()) {
+DHPOFT4 = new Double(s);
+}
+}
+
+protected final void initDHPOFT4_I(String s) {
+if (!s.trim().isEmpty()) {
+DHPOFT4_I = new Double(s);
+}
+}
+
+protected final void initDHPOFT4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHPOFT4_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHPOFT5(String s) {
+if (!s.trim().isEmpty()) {
+DHPOFT5 = new Double(s);
+}
+}
+
+protected final void initDHPOFT5_I(String s) {
+if (!s.trim().isEmpty()) {
+DHPOFT5_I = new Double(s);
+}
+}
+
+protected final void initDHPOFT5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHPOFT5_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHPOWE3(String s) {
+if (!s.trim().isEmpty()) {
+DHPOWE3 = new Double(s);
+}
+}
+
+protected final void initDHPOWE3_I(String s) {
+if (!s.trim().isEmpty()) {
+DHPOWE3_I = new Double(s);
+}
+}
+
+protected final void initDHPOWE3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHPOWE3_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHPOWE4(String s) {
+if (!s.trim().isEmpty()) {
+DHPOWE4 = new Double(s);
+}
+}
+
+protected final void initDHPOWE4_I(String s) {
+if (!s.trim().isEmpty()) {
+DHPOWE4_I = new Double(s);
+}
+}
+
+protected final void initDHPOWE4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHPOWE4_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHPOWE5(String s) {
+if (!s.trim().isEmpty()) {
+DHPOWE5 = new Double(s);
+}
+}
+
+protected final void initDHPOWE5_I(String s) {
+if (!s.trim().isEmpty()) {
+DHPOWE5_I = new Double(s);
+}
+}
+
+protected final void initDHPOWE5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHPOWE5_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHPWEST3(String s) {
+if (!s.trim().isEmpty()) {
+DHPWEST3 = new Double(s);
+}
+}
+
+protected final void initDHPWEST4(String s) {
+if (!s.trim().isEmpty()) {
+DHPWEST4 = new Double(s);
+}
+}
+
+protected final void initDHPWEST5(String s) {
+if (!s.trim().isEmpty()) {
+DHPWEST5 = new Double(s);
+}
+}
+
+protected final void initDHPWHNM3(String s) {
+if (!s.trim().isEmpty()) {
+DHPWHNM3 = new Double(s);
+}
+}
+
+protected final void initDHPWHNM3_I(String s) {
+if (!s.trim().isEmpty()) {
+DHPWHNM3_I = new Double(s);
+}
+}
+
+protected final void initDHPWHNM3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHPWHNM3_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHPWHNM4(String s) {
+if (!s.trim().isEmpty()) {
+DHPWHNM4 = new Double(s);
+}
+}
+
+protected final void initDHPWHNM4_I(String s) {
+if (!s.trim().isEmpty()) {
+DHPWHNM4_I = new Double(s);
+}
+}
+
+protected final void initDHPWHNM4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHPWHNM4_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHPWHNM5(String s) {
+if (!s.trim().isEmpty()) {
+DHPWHNM5 = new Double(s);
+}
+}
+
+protected final void initDHPWHNM5_I(String s) {
+if (!s.trim().isEmpty()) {
+DHPWHNM5_I = new Double(s);
+}
+}
+
+protected final void initDHPWHNM5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHPWHNM5_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHPWHNY3(String s) {
+if (!s.trim().isEmpty()) {
+DHPWHNY3 = new Double(s);
+}
+}
+
+protected final void initDHPWHNY3_I(String s) {
+if (!s.trim().isEmpty()) {
+DHPWHNY3_I = new Double(s);
+}
+}
+
+protected final void initDHPWHNY3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHPWHNY3_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHPWHNY4(String s) {
+if (!s.trim().isEmpty()) {
+DHPWHNY4 = new Double(s);
+}
+}
+
+protected final void initDHPWHNY4_I(String s) {
+if (!s.trim().isEmpty()) {
+DHPWHNY4_I = new Double(s);
+}
+}
+
+protected final void initDHPWHNY4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHPWHNY4_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHPWHNY5(String s) {
+if (!s.trim().isEmpty()) {
+DHPWHNY5 = new Double(s);
+}
+}
+
+protected final void initDHPWHNY5_I(String s) {
+if (!s.trim().isEmpty()) {
+DHPWHNY5_I = new Double(s);
+}
+}
+
+protected final void initDHPWHNY5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHPWHNY5_IFLAG = new Double(s);
+}
+}
+
+protected final void initDLWHY11(String s) {
+if (!s.trim().isEmpty()) {
+DLWHY11 = new Double(s);
+}
+}
+
+protected final void initDLWHY12(String s) {
+if (!s.trim().isEmpty()) {
+DLWHY12 = new Double(s);
+}
+}
+
+protected final void initDLWHY13(String s) {
+if (!s.trim().isEmpty()) {
+DLWHY13 = new Double(s);
+}
+}
+
+protected final void initDLWHY14(String s) {
+if (!s.trim().isEmpty()) {
+DLWHY14 = new Double(s);
+}
+}
+
+protected final void initDLWHY17(String s) {
+if (!s.trim().isEmpty()) {
+DLWHY17 = new Double(s);
+}
+}
+
+protected final void initDLWHY18(String s) {
+if (!s.trim().isEmpty()) {
+DLWHY18 = new Double(s);
+}
+}
+
+protected final void initDLWHY19(String s) {
+if (!s.trim().isEmpty()) {
+DLWHY19 = new Double(s);
+}
+}
+
+protected final void initDLWHY20(String s) {
+if (!s.trim().isEmpty()) {
+DLWHY20 = new Double(s);
+}
+}
+
+protected final void initDLWHY21(String s) {
+if (!s.trim().isEmpty()) {
+DLWHY21 = new Double(s);
+}
+}
+
+protected final void initDLWHY24(String s) {
+if (!s.trim().isEmpty()) {
+DLWHY24 = new Double(s);
+}
+}
+
+protected final void initDLWHY25(String s) {
+if (!s.trim().isEmpty()) {
+DLWHY25 = new Double(s);
+}
+}
+
+protected final void initDLWHY26(String s) {
+if (!s.trim().isEmpty()) {
+DLWHY26 = new Double(s);
+}
+}
+
+protected final void initDLWHY27(String s) {
+if (!s.trim().isEmpty()) {
+DLWHY27 = new Double(s);
+}
+}
+
+protected final void initDLWHY28(String s) {
+if (!s.trim().isEmpty()) {
+DLWHY28 = new Double(s);
+}
+}
+
+protected final void initDLWHY31(String s) {
+if (!s.trim().isEmpty()) {
+DLWHY31 = new Double(s);
+}
+}
+
+protected final void initDLWHY32(String s) {
+if (!s.trim().isEmpty()) {
+DLWHY32 = new Double(s);
+}
+}
+
+protected final void initDLWHY33(String s) {
+if (!s.trim().isEmpty()) {
+DLWHY33 = new Double(s);
+}
+}
+
+protected final void initDLWHY34(String s) {
+if (!s.trim().isEmpty()) {
+DLWHY34 = new Double(s);
+}
+}
+
+protected final void initDLWHY35(String s) {
+if (!s.trim().isEmpty()) {
+DLWHY35 = new Double(s);
+}
+}
+
+protected final void initDMOBEH3(String s) {
+if (!s.trim().isEmpty()) {
+DMOBEH3 = new Double(s);
+}
+}
+
+protected final void initDMOBEH3_I(String s) {
+if (!s.trim().isEmpty()) {
+DMOBEH3_I = new Double(s);
+}
+}
+
+protected final void initDMOBEH3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DMOBEH3_IFLAG = new Double(s);
+}
+}
+
+protected final void initDMOBEH4(String s) {
+if (!s.trim().isEmpty()) {
+DMOBEH4 = new Double(s);
+}
+}
+
+protected final void initDMOBEH4_I(String s) {
+if (!s.trim().isEmpty()) {
+DMOBEH4_I = new Double(s);
+}
+}
+
+protected final void initDMOBEH4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DMOBEH4_IFLAG = new Double(s);
+}
+}
+
+protected final void initDMOBEH5(String s) {
+if (!s.trim().isEmpty()) {
+DMOBEH5 = new Double(s);
+}
+}
+
+protected final void initDMOBEH5_I(String s) {
+if (!s.trim().isEmpty()) {
+DMOBEH5_I = new Double(s);
+}
+}
+
+protected final void initDMOBEH5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DMOBEH5_IFLAG = new Double(s);
+}
+}
+
+protected final void initDMOEST3(String s) {
+if (!s.trim().isEmpty()) {
+DMOEST3 = new Double(s);
+}
+}
+
+protected final void initDMOEST4(String s) {
+if (!s.trim().isEmpty()) {
+DMOEST4 = new Double(s);
+}
+}
+
+protected final void initDMOEST5(String s) {
+if (!s.trim().isEmpty()) {
+DMOEST5 = new Double(s);
+}
+}
+
+protected final void initDMOINS3(String s) {
+if (!s.trim().isEmpty()) {
+DMOINS3 = new Double(s);
+}
+}
+
+protected final void initDMOINS3_I(String s) {
+if (!s.trim().isEmpty()) {
+DMOINS3_I = new Double(s);
+}
+}
+
+protected final void initDMOINS3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DMOINS3_IFLAG = new Double(s);
+}
+}
+
+protected final void initDMOINS4(String s) {
+if (!s.trim().isEmpty()) {
+DMOINS4 = new Double(s);
+}
+}
+
+protected final void initDMOINS4_I(String s) {
+if (!s.trim().isEmpty()) {
+DMOINS4_I = new Double(s);
+}
+}
+
+protected final void initDMOINS4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DMOINS4_IFLAG = new Double(s);
+}
+}
+
+protected final void initDMOINS5(String s) {
+if (!s.trim().isEmpty()) {
+DMOINS5 = new Double(s);
+}
+}
+
+protected final void initDMOINS5_I(String s) {
+if (!s.trim().isEmpty()) {
+DMOINS5_I = new Double(s);
+}
+}
+
+protected final void initDMOINS5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DMOINS5_IFLAG = new Double(s);
+}
+}
+
+protected final void initDMOINT3(String s) {
+if (!s.trim().isEmpty()) {
+DMOINT3 = new Double(s);
+}
+}
+
+protected final void initDMOINT4(String s) {
+if (!s.trim().isEmpty()) {
+DMOINT4 = new Double(s);
+}
+}
+
+protected final void initDMOINT5(String s) {
+if (!s.trim().isEmpty()) {
+DMOINT5 = new Double(s);
+}
+}
+
+protected final void initDMOOFT3(String s) {
+if (!s.trim().isEmpty()) {
+DMOOFT3 = new Double(s);
+}
+}
+
+protected final void initDMOOFT3_I(String s) {
+if (!s.trim().isEmpty()) {
+DMOOFT3_I = new Double(s);
+}
+}
+
+protected final void initDMOOFT3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DMOOFT3_IFLAG = new Double(s);
+}
+}
+
+protected final void initDMOOFT4(String s) {
+if (!s.trim().isEmpty()) {
+DMOOFT4 = new Double(s);
+}
+}
+
+protected final void initDMOOFT4_I(String s) {
+if (!s.trim().isEmpty()) {
+DMOOFT4_I = new Double(s);
+}
+}
+
+protected final void initDMOOFT4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DMOOFT4_IFLAG = new Double(s);
+}
+}
+
+protected final void initDMOOFT5(String s) {
+if (!s.trim().isEmpty()) {
+DMOOFT5 = new Double(s);
+}
+}
+
+protected final void initDMOOFT5_I(String s) {
+if (!s.trim().isEmpty()) {
+DMOOFT5_I = new Double(s);
+}
+}
+
+protected final void initDMOOFT5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DMOOFT5_IFLAG = new Double(s);
+}
+}
+
+protected final void initDMOOWE3(String s) {
+if (!s.trim().isEmpty()) {
+DMOOWE3 = new Double(s);
+}
+}
+
+protected final void initDMOOWE3_I(String s) {
+if (!s.trim().isEmpty()) {
+DMOOWE3_I = new Double(s);
+}
+}
+
+protected final void initDMOOWE3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DMOOWE3_IFLAG = new Double(s);
+}
+}
+
+protected final void initDMOOWE4(String s) {
+if (!s.trim().isEmpty()) {
+DMOOWE4 = new Double(s);
+}
+}
+
+protected final void initDMOOWE4_I(String s) {
+if (!s.trim().isEmpty()) {
+DMOOWE4_I = new Double(s);
+}
+}
+
+protected final void initDMOOWE4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DMOOWE4_IFLAG = new Double(s);
+}
+}
+
+protected final void initDMOOWE5(String s) {
+if (!s.trim().isEmpty()) {
+DMOOWE5 = new Double(s);
+}
+}
+
+protected final void initDMOOWE5_I(String s) {
+if (!s.trim().isEmpty()) {
+DMOOWE5_I = new Double(s);
+}
+}
+
+protected final void initDMOOWE5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DMOOWE5_IFLAG = new Double(s);
+}
+}
+
+protected final void initDMOWEST3(String s) {
+if (!s.trim().isEmpty()) {
+DMOWEST3 = new Double(s);
+}
+}
+
+protected final void initDMOWEST4(String s) {
+if (!s.trim().isEmpty()) {
+DMOWEST4 = new Double(s);
+}
+}
+
+protected final void initDMOWEST5(String s) {
+if (!s.trim().isEmpty()) {
+DMOWEST5 = new Double(s);
+}
+}
+
+protected final void initDMOWHNM3(String s) {
+if (!s.trim().isEmpty()) {
+DMOWHNM3 = new Double(s);
+}
+}
+
+protected final void initDMOWHNM3_I(String s) {
+if (!s.trim().isEmpty()) {
+DMOWHNM3_I = new Double(s);
+}
+}
+
+protected final void initDMOWHNM3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DMOWHNM3_IFLAG = new Double(s);
+}
+}
+
+protected final void initDMOWHNM4(String s) {
+if (!s.trim().isEmpty()) {
+DMOWHNM4 = new Double(s);
+}
+}
+
+protected final void initDMOWHNM4_I(String s) {
+if (!s.trim().isEmpty()) {
+DMOWHNM4_I = new Double(s);
+}
+}
+
+protected final void initDMOWHNM4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DMOWHNM4_IFLAG = new Double(s);
+}
+}
+
+protected final void initDMOWHNM5(String s) {
+if (!s.trim().isEmpty()) {
+DMOWHNM5 = new Double(s);
+}
+}
+
+protected final void initDMOWHNM5_I(String s) {
+if (!s.trim().isEmpty()) {
+DMOWHNM5_I = new Double(s);
+}
+}
+
+protected final void initDMOWHNM5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DMOWHNM5_IFLAG = new Double(s);
+}
+}
+
+protected final void initDMOWHNY3(String s) {
+if (!s.trim().isEmpty()) {
+DMOWHNY3 = new Double(s);
+}
+}
+
+protected final void initDMOWHNY3_I(String s) {
+if (!s.trim().isEmpty()) {
+DMOWHNY3_I = new Double(s);
+}
+}
+
+protected final void initDMOWHNY3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DMOWHNY3_IFLAG = new Double(s);
+}
+}
+
+protected final void initDMOWHNY4(String s) {
+if (!s.trim().isEmpty()) {
+DMOWHNY4 = new Double(s);
+}
+}
+
+protected final void initDMOWHNY4_I(String s) {
+if (!s.trim().isEmpty()) {
+DMOWHNY4_I = new Double(s);
+}
+}
+
+protected final void initDMOWHNY4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DMOWHNY4_IFLAG = new Double(s);
+}
+}
+
+protected final void initDMOWHNY5(String s) {
+if (!s.trim().isEmpty()) {
+DMOWHNY5 = new Double(s);
+}
+}
+
+protected final void initDMOWHNY5_I(String s) {
+if (!s.trim().isEmpty()) {
+DMOWHNY5_I = new Double(s);
+}
+}
+
+protected final void initDMOWHNY5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DMOWHNY5_IFLAG = new Double(s);
+}
+}
+
+protected final void initDS12BEH4(String s) {
+if (!s.trim().isEmpty()) {
+DS12BEH4 = new Double(s);
+}
+}
+
+protected final void initDS12BEH5(String s) {
+if (!s.trim().isEmpty()) {
+DS12BEH5 = new Double(s);
+}
+}
+
+protected final void initDS12OWE4(String s) {
+if (!s.trim().isEmpty()) {
+DS12OWE4 = new Double(s);
+}
+}
+
+protected final void initDS12OWE5(String s) {
+if (!s.trim().isEmpty()) {
+DS12OWE5 = new Double(s);
+}
+}
+
+protected final void initDSAMC4(String s) {
+if (!s.trim().isEmpty()) {
+DSAMC4 = new Double(s);
+}
+}
+
+protected final void initDSAMC5(String s) {
+if (!s.trim().isEmpty()) {
+DSAMC5 = new Double(s);
+}
+}
+
+protected final void initDSAMD4(String s) {
+if (!s.trim().isEmpty()) {
+DSAMD4 = new Double(s);
+}
+}
+
+protected final void initDSAMD5(String s) {
+if (!s.trim().isEmpty()) {
+DSAMD5 = new Double(s);
+}
+}
+
+protected final void initDSAMOS4_I(String s) {
+if (!s.trim().isEmpty()) {
+DSAMOS4_I = new Double(s);
+}
+}
+
+protected final void initDSAMOS5_I(String s) {
+if (!s.trim().isEmpty()) {
+DSAMOS5_I = new Double(s);
+}
+}
+
+protected final void initDSAMP4(String s) {
+if (!s.trim().isEmpty()) {
+DSAMP4 = new Double(s);
+}
+}
+
+protected final void initDSAMP5(String s) {
+if (!s.trim().isEmpty()) {
+DSAMP5 = new Double(s);
+}
+}
+
+protected final void initDSCOS4(String s) {
+if (!s.trim().isEmpty()) {
+DSCOS4 = new Double(s);
+}
+}
+
+protected final void initDSCOS5(String s) {
+if (!s.trim().isEmpty()) {
+DSCOS5 = new Double(s);
+}
+}
+
+protected final void initDSCSP4(String s) {
+if (!s.trim().isEmpty()) {
+DSCSP4 = new Double(s);
+}
+}
+
+protected final void initDSCSP5(String s) {
+if (!s.trim().isEmpty()) {
+DSCSP5 = new Double(s);
+}
+}
+
+protected final void initDSESB4(String s) {
+if (!s.trim().isEmpty()) {
+DSESB4 = new Double(s);
+}
+}
+
+protected final void initDSESB5(String s) {
+if (!s.trim().isEmpty()) {
+DSESB5 = new Double(s);
+}
+}
+
+protected final void initDSLEST5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DSLEST5_IFLAG = new Double(s);
+}
+}
+
+protected final void initDSNAM4(String s) {
+if (!s.trim().isEmpty()) {
+DSNAM4 = new Double(s);
+}
+}
+
+protected final void initDSNAM5(String s) {
+if (!s.trim().isEmpty()) {
+DSNAM5 = new Double(s);
+}
+}
+
+protected final void initDSNUM(String s) {
+if (!s.trim().isEmpty()) {
+DSNUM = new Double(s);
+}
+}
+
+protected final void initDSONM10(String s) {
+if (!s.trim().isEmpty()) {
+DSONM10 = new Double(s);
+}
+}
+
+protected final void initDSONM7(String s) {
+if (!s.trim().isEmpty()) {
+DSONM7 = new Double(s);
+}
+}
+
+protected final void initDSONM8(String s) {
+if (!s.trim().isEmpty()) {
+DSONM8 = new Double(s);
+}
+}
+
+protected final void initDSONM9(String s) {
+if (!s.trim().isEmpty()) {
+DSONM9 = new Double(s);
+}
+}
+
+protected final void initDSPER4(String s) {
+if (!s.trim().isEmpty()) {
+DSPER4 = new Double(s);
+}
+}
+
+protected final void initDSPER5(String s) {
+if (!s.trim().isEmpty()) {
+DSPER5 = new Double(s);
+}
+}
+
+protected final void initDSREC4(String s) {
+if (!s.trim().isEmpty()) {
+DSREC4 = new Double(s);
+}
+}
+
+protected final void initDSREC5(String s) {
+if (!s.trim().isEmpty()) {
+DSREC5 = new Double(s);
+}
+}
+
+protected final void initDSRSP1(String s) {
+if (!s.trim().isEmpty()) {
+DSRSP1 = new Double(s);
+}
+}
+
+protected final void initDSRSP2(String s) {
+if (!s.trim().isEmpty()) {
+DSRSP2 = new Double(s);
+}
+}
+
+protected final void initDSRSP3(String s) {
+if (!s.trim().isEmpty()) {
+DSRSP3 = new Double(s);
+}
+}
+
+protected final void initDSRSP4(String s) {
+if (!s.trim().isEmpty()) {
+DSRSP4 = new Double(s);
+}
+}
+
+protected final void initDSRSP5(String s) {
+if (!s.trim().isEmpty()) {
+DSRSP5 = new Double(s);
+}
+}
+
+protected final void initDTLOWE1(String s) {
+if (!s.trim().isEmpty()) {
+DTLOWE1 = new Double(s);
+}
+}
+
+protected final void initDTLOWE1_I(String s) {
+if (!s.trim().isEmpty()) {
+DTLOWE1_I = new Double(s);
+}
+}
+
+protected final void initDTLOWE1_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DTLOWE1_IFLAG = new Double(s);
+}
+}
+
+protected final void initDTLOWE2(String s) {
+if (!s.trim().isEmpty()) {
+DTLOWE2 = new Double(s);
+}
+}
+
+protected final void initDTLOWE2_I(String s) {
+if (!s.trim().isEmpty()) {
+DTLOWE2_I = new Double(s);
+}
+}
+
+protected final void initDTLOWE2_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DTLOWE2_IFLAG = new Double(s);
+}
+}
+
+protected final void initDTLOWE3(String s) {
+if (!s.trim().isEmpty()) {
+DTLOWE3 = new Double(s);
+}
+}
+
+protected final void initDTLOWE3_I(String s) {
+if (!s.trim().isEmpty()) {
+DTLOWE3_I = new Double(s);
+}
+}
+
+protected final void initDTLOWE3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DTLOWE3_IFLAG = new Double(s);
+}
+}
+
+protected final void initDTLOWE4_I(String s) {
+if (!s.trim().isEmpty()) {
+DTLOWE4_I = new Double(s);
+}
+}
+
+protected final void initDTLOWE4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DTLOWE4_IFLAG = new Double(s);
+}
+}
+
+protected final void initDTLOWE5_I(String s) {
+if (!s.trim().isEmpty()) {
+DTLOWE5_I = new Double(s);
+}
+}
+
+protected final void initDTLOWE5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DTLOWE5_IFLAG = new Double(s);
+}
+}
+
+protected final void initDTLOWEB1(String s) {
+if (!s.trim().isEmpty()) {
+DTLOWEB1 = new Double(s);
+}
+}
+
+protected final void initDTLOWEB2(String s) {
+if (!s.trim().isEmpty()) {
+DTLOWEB2 = new Double(s);
+}
+}
+
+protected final void initDTLOWEB3(String s) {
+if (!s.trim().isEmpty()) {
+DTLOWEB3 = new Double(s);
+}
+}
+
+protected final void initDTLTYPE1(String s) {
+if (!s.trim().isEmpty()) {
+DTLTYPE1 = new Double(s);
+}
+}
+
+protected final void initDTLTYPE1_I(String s) {
+if (!s.trim().isEmpty()) {
+DTLTYPE1_I = new Double(s);
+}
+}
+
+protected final void initDTLTYPE1_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DTLTYPE1_IFLAG = new Double(s);
+}
+}
+
+protected final void initDTLTYPE2(String s) {
+if (!s.trim().isEmpty()) {
+DTLTYPE2 = new Double(s);
+}
+}
+
+protected final void initDTLTYPE2_I(String s) {
+if (!s.trim().isEmpty()) {
+DTLTYPE2_I = new Double(s);
+}
+}
+
+protected final void initDTLTYPE2_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DTLTYPE2_IFLAG = new Double(s);
+}
+}
+
+protected final void initDTLTYPE3(String s) {
+if (!s.trim().isEmpty()) {
+DTLTYPE3 = new Double(s);
+}
+}
+
+protected final void initDTLTYPE3_I(String s) {
+if (!s.trim().isEmpty()) {
+DTLTYPE3_I = new Double(s);
+}
+}
+
+protected final void initDTLTYPE3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DTLTYPE3_IFLAG = new Double(s);
+}
+}
+
+protected final void initDTLTYPE4_I(String s) {
+if (!s.trim().isEmpty()) {
+DTLTYPE4_I = new Double(s);
+}
+}
+
+protected final void initDTLTYPE4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DTLTYPE4_IFLAG = new Double(s);
+}
+}
+
+protected final void initDTLTYPE5_I(String s) {
+if (!s.trim().isEmpty()) {
+DTLTYPE5_I = new Double(s);
+}
+}
+
+protected final void initDTLTYPE5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DTLTYPE5_IFLAG = new Double(s);
+}
+}
+
+protected final void initDTTOWE1(String s) {
+if (!s.trim().isEmpty()) {
+DTTOWE1 = new Double(s);
+}
+}
+
+protected final void initDTTOWE2(String s) {
+if (!s.trim().isEmpty()) {
+DTTOWE2 = new Double(s);
+}
+}
+
+protected final void initDTTOWE3(String s) {
+if (!s.trim().isEmpty()) {
+DTTOWE3 = new Double(s);
+}
+}
+
+protected final void initDTTOWEB1(String s) {
+if (!s.trim().isEmpty()) {
+DTTOWEB1 = new Double(s);
+}
+}
+
+protected final void initDTTOWEB10(String s) {
+if (!s.trim().isEmpty()) {
+DTTOWEB10 = new Double(s);
+}
+}
+
+protected final void initDTTOWEB11(String s) {
+if (!s.trim().isEmpty()) {
+DTTOWEB11 = new Double(s);
+}
+}
+
+protected final void initDTTOWEB12(String s) {
+if (!s.trim().isEmpty()) {
+DTTOWEB12 = new Double(s);
+}
+}
+
+protected final void initDTTOWEB13(String s) {
+if (!s.trim().isEmpty()) {
+DTTOWEB13 = new Double(s);
+}
+}
+
+protected final void initDTTOWEB14(String s) {
+if (!s.trim().isEmpty()) {
+DTTOWEB14 = new Double(s);
+}
+}
+
+protected final void initDTTOWEB15(String s) {
+if (!s.trim().isEmpty()) {
+DTTOWEB15 = new Double(s);
+}
+}
+
+protected final void initDTTOWEB2(String s) {
+if (!s.trim().isEmpty()) {
+DTTOWEB2 = new Double(s);
+}
+}
+
+protected final void initDTTOWEB3(String s) {
+if (!s.trim().isEmpty()) {
+DTTOWEB3 = new Double(s);
+}
+}
+
+protected final void initDTTOWEB4(String s) {
+if (!s.trim().isEmpty()) {
+DTTOWEB4 = new Double(s);
+}
+}
+
+protected final void initDTTOWEB5(String s) {
+if (!s.trim().isEmpty()) {
+DTTOWEB5 = new Double(s);
+}
+}
+
+protected final void initDTTOWEB6(String s) {
+if (!s.trim().isEmpty()) {
+DTTOWEB6 = new Double(s);
+}
+}
+
+protected final void initDTTOWEB7(String s) {
+if (!s.trim().isEmpty()) {
+DTTOWEB7 = new Double(s);
+}
+}
+
+protected final void initDTTOWEB8(String s) {
+if (!s.trim().isEmpty()) {
+DTTOWEB8 = new Double(s);
+}
+}
+
+protected final void initDTTOWEB9(String s) {
+if (!s.trim().isEmpty()) {
+DTTOWEB9 = new Double(s);
+}
+}
+
+protected final void initDVAGE18(String s) {
+if (!s.trim().isEmpty()) {
+DVAGE18 = new Double(s);
+}
+}
+
+protected final void initDVAGEW3BAND(String s) {
+if (!s.trim().isEmpty()) {
+DVAGEW3BAND = new Double(s);
+}
+}
+
+protected final void initDVBENU1(String s) {
+if (!s.trim().isEmpty()) {
+DVBENU1 = new Double(s);
+}
+}
+
+protected final void initDVCOINV(String s) {
+if (!s.trim().isEmpty()) {
+DVCOINV = new Double(s);
+}
+}
+
+protected final void initDVCTCANNUAL(String s) {
+if (!s.trim().isEmpty()) {
+DVCTCANNUAL = new Double(s);
+}
+}
+
+protected final void initDVDHPOWE3(String s) {
+if (!s.trim().isEmpty()) {
+DVDHPOWE3 = new Double(s);
+}
+}
+
+protected final void initDVDHPOWE4(String s) {
+if (!s.trim().isEmpty()) {
+DVDHPOWE4 = new Double(s);
+}
+}
+
+protected final void initDVDHPOWE5(String s) {
+if (!s.trim().isEmpty()) {
+DVDHPOWE5 = new Double(s);
+}
+}
+
+protected final void initDVDLOWE5(String s) {
+if (!s.trim().isEmpty()) {
+DVDLOWE5 = new Double(s);
+}
+}
+
+protected final void initDVDMOOWE3(String s) {
+if (!s.trim().isEmpty()) {
+DVDMOOWE3 = new Double(s);
+}
+}
+
+protected final void initDVDMOOWE4(String s) {
+if (!s.trim().isEmpty()) {
+DVDMOOWE4 = new Double(s);
+}
+}
+
+protected final void initDVDMOOWE5(String s) {
+if (!s.trim().isEmpty()) {
+DVDMOOWE5 = new Double(s);
+}
+}
+
+protected final void initDVGRSPAY_I(String s) {
+if (!s.trim().isEmpty()) {
+DVGRSPAY_I = new Double(s);
+}
+}
+
+protected final void initDVGRSPAY_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DVGRSPAY_IFLAG = new Double(s);
+}
+}
+
+protected final void initDVHASBOND(String s) {
+if (!s.trim().isEmpty()) {
+DVHASBOND = new Double(s);
+}
+}
+
+protected final void initDVHASCC(String s) {
+if (!s.trim().isEmpty()) {
+DVHASCC = new Double(s);
+}
+}
+
+protected final void initDVHASDBR_ORIG(String s) {
+if (!s.trim().isEmpty()) {
+DVHASDBR_ORIG = new Double(s);
+}
+}
+
+protected final void initDVHASEMPSH(String s) {
+if (!s.trim().isEmpty()) {
+DVHASEMPSH = new Double(s);
+}
+}
+
+protected final void initDVHASGILT(String s) {
+if (!s.trim().isEmpty()) {
+DVHASGILT = new Double(s);
+}
+}
+
+protected final void initDVHASISA(String s) {
+if (!s.trim().isEmpty()) {
+DVHASISA = new Double(s);
+}
+}
+
+protected final void initDVHASLINS(String s) {
+if (!s.trim().isEmpty()) {
+DVHASLINS = new Double(s);
+}
+}
+
+protected final void initDVHASNHP(String s) {
+if (!s.trim().isEmpty()) {
+DVHASNHP = new Double(s);
+}
+}
+
+protected final void initDVHASNOFA(String s) {
+if (!s.trim().isEmpty()) {
+DVHASNOFA = new Double(s);
+}
+}
+
+protected final void initDVHASNSP(String s) {
+if (!s.trim().isEmpty()) {
+DVHASNSP = new Double(s);
+}
+}
+
+protected final void initDVHASOINV(String s) {
+if (!s.trim().isEmpty()) {
+DVHASOINV = new Double(s);
+}
+}
+
+protected final void initDVHASOTHSH(String s) {
+if (!s.trim().isEmpty()) {
+DVHASOTHSH = new Double(s);
+}
+}
+
+protected final void initDVHASSAVDEP(String s) {
+if (!s.trim().isEmpty()) {
+DVHASSAVDEP = new Double(s);
+}
+}
+
+protected final void initDVHASSC(String s) {
+if (!s.trim().isEmpty()) {
+DVHASSC = new Double(s);
+}
+}
+
+protected final void initDVHASSHSAC(String s) {
+if (!s.trim().isEmpty()) {
+DVHASSHSAC = new Double(s);
+}
+}
+
+protected final void initDVHASSL(String s) {
+if (!s.trim().isEmpty()) {
+DVHASSL = new Double(s);
+}
+}
+
+protected final void initDVHASUTRUST(String s) {
+if (!s.trim().isEmpty()) {
+DVHASUTRUST = new Double(s);
+}
+}
+
+protected final void initDVNETPAY_I(String s) {
+if (!s.trim().isEmpty()) {
+DVNETPAY_I = new Double(s);
+}
+}
+
+protected final void initDVNETPAY_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DVNETPAY_IFLAG = new Double(s);
+}
+}
+
+protected final void initDVNWHP_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVNWHP_SUM = new Double(s);
+}
+}
+
+protected final void initDVOIGGTANNUAL(String s) {
+if (!s.trim().isEmpty()) {
+DVOIGGTANNUAL = new Double(s);
+}
+}
+
+protected final void initDVOIGOEANNUAL_I(String s) {
+if (!s.trim().isEmpty()) {
+DVOIGOEANNUAL_I = new Double(s);
+}
+}
+
+protected final void initDVOIGOSANNUAL_I(String s) {
+if (!s.trim().isEmpty()) {
+DVOIGOSANNUAL_I = new Double(s);
+}
+}
+
+protected final void initDVOIGPPANNUAL_I(String s) {
+if (!s.trim().isEmpty()) {
+DVOIGPPANNUAL_I = new Double(s);
+}
+}
+
+protected final void initDVOIGRRANNUAL(String s) {
+if (!s.trim().isEmpty()) {
+DVOIGRRANNUAL = new Double(s);
+}
+}
+
+protected final void initDVPUBLPRIV(String s) {
+if (!s.trim().isEmpty()) {
+DVPUBLPRIV = new Double(s);
+}
+}
+
+protected final void initDVRENTAMTANNUAL(String s) {
+if (!s.trim().isEmpty()) {
+DVRENTAMTANNUAL = new Double(s);
+}
+}
+
+protected final void initDVSAME_I(String s) {
+if (!s.trim().isEmpty()) {
+DVSAME_I = new Double(s);
+}
+}
+
+protected final void initDVSAME_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DVSAME_IFLAG = new Double(s);
+}
+}
+
+protected final void initDVSEPANNUAL09(String s) {
+if (!s.trim().isEmpty()) {
+DVSEPANNUAL09 = new Double(s);
+}
+}
+
+protected final void initDVSEPANNUAL10(String s) {
+if (!s.trim().isEmpty()) {
+DVSEPANNUAL10 = new Double(s);
+}
+}
+
+protected final void initDVSEPANNUAL11(String s) {
+if (!s.trim().isEmpty()) {
+DVSEPANNUAL11 = new Double(s);
+}
+}
+
+protected final void initDVSEPANNUAL12(String s) {
+if (!s.trim().isEmpty()) {
+DVSEPANNUAL12 = new Double(s);
+}
+}
+
+protected final void initDVSEPANNUAL13(String s) {
+if (!s.trim().isEmpty()) {
+DVSEPANNUAL13 = new Double(s);
+}
+}
+
+protected final void initDVSEPANNUAL14(String s) {
+if (!s.trim().isEmpty()) {
+DVSEPANNUAL14 = new Double(s);
+}
+}
+
+protected final void initDVSEPANNUAL15(String s) {
+if (!s.trim().isEmpty()) {
+DVSEPANNUAL15 = new Double(s);
+}
+}
+
+protected final void initDVSEPANNUAL16(String s) {
+if (!s.trim().isEmpty()) {
+DVSEPANNUAL16 = new Double(s);
+}
+}
+
+protected final void initDVSEPANNUAL17(String s) {
+if (!s.trim().isEmpty()) {
+DVSEPANNUAL17 = new Double(s);
+}
+}
+
+protected final void initDVSEPANNUAL18(String s) {
+if (!s.trim().isEmpty()) {
+DVSEPANNUAL18 = new Double(s);
+}
+}
+
+protected final void initDVSEPANNUAL19(String s) {
+if (!s.trim().isEmpty()) {
+DVSEPANNUAL19 = new Double(s);
+}
+}
+
+protected final void initDVSEPANNUAL20(String s) {
+if (!s.trim().isEmpty()) {
+DVSEPANNUAL20 = new Double(s);
+}
+}
+
+protected final void initDVSHODVAL(String s) {
+if (!s.trim().isEmpty()) {
+DVSHODVAL = new Double(s);
+}
+}
+
+protected final void initDVSPECANNUAL01(String s) {
+if (!s.trim().isEmpty()) {
+DVSPECANNUAL01 = new Double(s);
+}
+}
+
+protected final void initDVSPECANNUAL02(String s) {
+if (!s.trim().isEmpty()) {
+DVSPECANNUAL02 = new Double(s);
+}
+}
+
+protected final void initDVSPECANNUAL03(String s) {
+if (!s.trim().isEmpty()) {
+DVSPECANNUAL03 = new Double(s);
+}
+}
+
+protected final void initDVSPECANNUAL04(String s) {
+if (!s.trim().isEmpty()) {
+DVSPECANNUAL04 = new Double(s);
+}
+}
+
+protected final void initDVSPECANNUAL05(String s) {
+if (!s.trim().isEmpty()) {
+DVSPECANNUAL05 = new Double(s);
+}
+}
+
+protected final void initDVSPECANNUAL06(String s) {
+if (!s.trim().isEmpty()) {
+DVSPECANNUAL06 = new Double(s);
+}
+}
+
+protected final void initDVSPECANNUAL07(String s) {
+if (!s.trim().isEmpty()) {
+DVSPECANNUAL07 = new Double(s);
+}
+}
+
+protected final void initDVSPECANNUAL08(String s) {
+if (!s.trim().isEmpty()) {
+DVSPECANNUAL08 = new Double(s);
+}
+}
+
+protected final void initDVSPECANNUAL09(String s) {
+if (!s.trim().isEmpty()) {
+DVSPECANNUAL09 = new Double(s);
+}
+}
+
+protected final void initDVSPECANNUAL10(String s) {
+if (!s.trim().isEmpty()) {
+DVSPECANNUAL10 = new Double(s);
+}
+}
+
+protected final void initDVSTAT(String s) {
+if (!s.trim().isEmpty()) {
+DVSTAT = new Double(s);
+}
+}
+
+protected final void initDVTOGTCANNUAL(String s) {
+if (!s.trim().isEmpty()) {
+DVTOGTCANNUAL = new Double(s);
+}
+}
+
+protected final void initDVTOTALLBENANNUAL(String s) {
+if (!s.trim().isEmpty()) {
+DVTOTALLBENANNUAL = new Double(s);
+}
+}
+
+protected final void initDVTOTBENANNUAL(String s) {
+if (!s.trim().isEmpty()) {
+DVTOTBENANNUAL = new Double(s);
+}
+}
+
+protected final void initDVTOTTAXANNUAL(String s) {
+if (!s.trim().isEmpty()) {
+DVTOTTAXANNUAL = new Double(s);
+}
+}
+
+protected final void initDVWAVE(String s) {
+if (!s.trim().isEmpty()) {
+DVWAVE = new Double(s);
+}
+}
+
+protected final void initDVWTCANNUAL(String s) {
+if (!s.trim().isEmpty()) {
+DVWTCANNUAL = new Double(s);
+}
+}
+
+protected final void initECACT(String s) {
+if (!s.trim().isEmpty()) {
+ECACT = new Double(s);
+}
+}
+
+protected final void initEDAGE(String s) {
+if (!s.trim().isEmpty()) {
+EDAGE = new Double(s);
+}
+}
+
+protected final void initEMPSTAT1(String s) {
+if (!s.trim().isEmpty()) {
+EMPSTAT1 = new Double(s);
+}
+}
+
+protected final void initEMPSTAT2(String s) {
+if (!s.trim().isEmpty()) {
+EMPSTAT2 = new Double(s);
+}
+}
+
+protected final void initETYPE(String s) {
+if (!s.trim().isEmpty()) {
+ETYPE = new Double(s);
+}
+}
+
+protected final void initFINVTY01_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+FINVTY01_IFLAG = new Double(s);
+}
+}
+
+protected final void initFINVTY02_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+FINVTY02_IFLAG = new Double(s);
+}
+}
+
+protected final void initFINVTY03_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+FINVTY03_IFLAG = new Double(s);
+}
+}
+
+protected final void initFINVTY04_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+FINVTY04_IFLAG = new Double(s);
+}
+}
+
+protected final void initFINVTY05_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+FINVTY05_IFLAG = new Double(s);
+}
+}
+
+protected final void initFINVTY06_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+FINVTY06_IFLAG = new Double(s);
+}
+}
+
+protected final void initFINVTY07_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+FINVTY07_IFLAG = new Double(s);
+}
+}
+
+protected final void initFINVTY08_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+FINVTY08_IFLAG = new Double(s);
+}
+}
+
+protected final void initFINVTY09_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+FINVTY09_IFLAG = new Double(s);
+}
+}
+
+protected final void initFINVTY10_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+FINVTY10_IFLAG = new Double(s);
+}
+}
+
+protected final void initFINVTY11_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+FINVTY11_IFLAG = new Double(s);
+}
+}
+
+protected final void initFLNOS5(String s) {
+if (!s.trim().isEmpty()) {
+FLNOS5 = new Double(s);
+}
+}
+
+protected final void initFLOORN(String s) {
+if (!s.trim().isEmpty()) {
+FLOORN = new Double(s);
+}
+}
+
+protected final void initFNSVAL1(String s) {
+if (!s.trim().isEmpty()) {
+FNSVAL1 = new Double(s);
+}
+}
+
+protected final void initFNSVAL1_I(String s) {
+if (!s.trim().isEmpty()) {
+FNSVAL1_I = new Double(s);
+}
+}
+
+protected final void initFSHADA(String s) {
+if (!s.trim().isEmpty()) {
+FSHADA = new Double(s);
+}
+}
+
+protected final void initFSHADAB(String s) {
+if (!s.trim().isEmpty()) {
+FSHADAB = new Double(s);
+}
+}
+
+protected final void initFSHADD(String s) {
+if (!s.trim().isEmpty()) {
+FSHADD = new Double(s);
+}
+}
+
+protected final void initFSTYPIN5(String s) {
+if (!s.trim().isEmpty()) {
+FSTYPIN5 = new Double(s);
+}
+}
+
+protected final void initFSTYPSH5(String s) {
+if (!s.trim().isEmpty()) {
+FSTYPSH5 = new Double(s);
+}
+}
+
+protected final void initHPLFT3(String s) {
+if (!s.trim().isEmpty()) {
+HPLFT3 = new Double(s);
+}
+}
+
+protected final void initHPLFT4(String s) {
+if (!s.trim().isEmpty()) {
+HPLFT4 = new Double(s);
+}
+}
+
+protected final void initHPLFT5(String s) {
+if (!s.trim().isEmpty()) {
+HPLFT5 = new Double(s);
+}
+}
+
+protected final void initHPNMN3(String s) {
+if (!s.trim().isEmpty()) {
+HPNMN3 = new Double(s);
+}
+}
+
+protected final void initHPNMN4(String s) {
+if (!s.trim().isEmpty()) {
+HPNMN4 = new Double(s);
+}
+}
+
+protected final void initHPNMN5(String s) {
+if (!s.trim().isEmpty()) {
+HPNMN5 = new Double(s);
+}
+}
+
+protected final void initHPNYR3(String s) {
+if (!s.trim().isEmpty()) {
+HPNYR3 = new Double(s);
+}
+}
+
+protected final void initHPNYR4(String s) {
+if (!s.trim().isEmpty()) {
+HPNYR4 = new Double(s);
+}
+}
+
+protected final void initHPNYR5(String s) {
+if (!s.trim().isEmpty()) {
+HPNYR5 = new Double(s);
+}
+}
+
+protected final void initHPOS3(String s) {
+if (!s.trim().isEmpty()) {
+HPOS3 = new Double(s);
+}
+}
+
+protected final void initHPOS4(String s) {
+if (!s.trim().isEmpty()) {
+HPOS4 = new Double(s);
+}
+}
+
+protected final void initHPOS5(String s) {
+if (!s.trim().isEmpty()) {
+HPOS5 = new Double(s);
+}
+}
+
+protected final void initHRPDVAGE(String s) {
+if (!s.trim().isEmpty()) {
+HRPDVAGE = new Double(s);
+}
+}
+
+protected final void initHRPDVAGE9(String s) {
+if (!s.trim().isEmpty()) {
+HRPDVAGE9 = new Double(s);
+}
+}
+
+protected final void initHRPDVILO3A(String s) {
+if (!s.trim().isEmpty()) {
+HRPDVILO3A = new Double(s);
+}
+}
+
+protected final void initHRPDVMRDF(String s) {
+if (!s.trim().isEmpty()) {
+HRPDVMRDF = new Double(s);
+}
+}
+
+protected final void initHRPEDATTN1(String s) {
+if (!s.trim().isEmpty()) {
+HRPEDATTN1 = new Double(s);
+}
+}
+
+protected final void initHRPEDATTN2(String s) {
+if (!s.trim().isEmpty()) {
+HRPEDATTN2 = new Double(s);
+}
+}
+
+protected final void initHRPEDATTN3(String s) {
+if (!s.trim().isEmpty()) {
+HRPEDATTN3 = new Double(s);
+}
+}
+
+protected final void initHRPEDLEVEL(String s) {
+if (!s.trim().isEmpty()) {
+HRPEDLEVEL = new Double(s);
+}
+}
+
+protected final void initHRPEMPSTAT2(String s) {
+if (!s.trim().isEmpty()) {
+HRPEMPSTAT2 = new Double(s);
+}
+}
+
+protected final void initHRPETHNIC(String s) {
+if (!s.trim().isEmpty()) {
+HRPETHNIC = new Double(s);
+}
+}
+
+protected final void initHRPIOUT1(String s) {
+if (!s.trim().isEmpty()) {
+HRPIOUT1 = new Double(s);
+}
+}
+
+protected final void initHRPNSSEC3(String s) {
+if (!s.trim().isEmpty()) {
+HRPNSSEC3 = new Double(s);
+}
+}
+
+protected final void initHRPPARTIOUT1(String s) {
+if (!s.trim().isEmpty()) {
+HRPPARTIOUT1 = new Double(s);
+}
+}
+
+protected final void initHRPSEX(String s) {
+if (!s.trim().isEmpty()) {
+HRPSEX = new Double(s);
+}
+}
+
+protected final void initHRP_RESP(String s) {
+if (!s.trim().isEmpty()) {
+HRP_RESP = new Double(s);
+}
+}
+
+protected final void initH_FLAG1(String s) {
+if (!s.trim().isEmpty()) {
+H_FLAG1 = new Double(s);
+}
+}
+
+protected final void initIGDS12(String s) {
+if (!s.trim().isEmpty()) {
+IGDS12 = new Double(s);
+}
+}
+
+protected final void initIGDS13(String s) {
+if (!s.trim().isEmpty()) {
+IGDS13 = new Double(s);
+}
+}
+
+protected final void initIGDS14(String s) {
+if (!s.trim().isEmpty()) {
+IGDS14 = new Double(s);
+}
+}
+
+protected final void initIGDS16(String s) {
+if (!s.trim().isEmpty()) {
+IGDS16 = new Double(s);
+}
+}
+
+protected final void initIGDS17(String s) {
+if (!s.trim().isEmpty()) {
+IGDS17 = new Double(s);
+}
+}
+
+protected final void initIGDS18(String s) {
+if (!s.trim().isEmpty()) {
+IGDS18 = new Double(s);
+}
+}
+
+protected final void initIGDS19(String s) {
+if (!s.trim().isEmpty()) {
+IGDS19 = new Double(s);
+}
+}
+
+protected final void initIGDS20(String s) {
+if (!s.trim().isEmpty()) {
+IGDS20 = new Double(s);
+}
+}
+
+protected final void initIGDS21(String s) {
+if (!s.trim().isEmpty()) {
+IGDS21 = new Double(s);
+}
+}
+
+protected final void initIGDS6(String s) {
+if (!s.trim().isEmpty()) {
+IGDS6 = new Double(s);
+}
+}
+
+protected final void initIGDS7(String s) {
+if (!s.trim().isEmpty()) {
+IGDS7 = new Double(s);
+}
+}
+
+protected final void initIHSE13(String s) {
+if (!s.trim().isEmpty()) {
+IHSE13 = new Double(s);
+}
+}
+
+protected final void initIHSE14(String s) {
+if (!s.trim().isEmpty()) {
+IHSE14 = new Double(s);
+}
+}
+
+protected final void initIHSE15(String s) {
+if (!s.trim().isEmpty()) {
+IHSE15 = new Double(s);
+}
+}
+
+protected final void initIHSE16(String s) {
+if (!s.trim().isEmpty()) {
+IHSE16 = new Double(s);
+}
+}
+
+protected final void initIHSE17(String s) {
+if (!s.trim().isEmpty()) {
+IHSE17 = new Double(s);
+}
+}
+
+protected final void initIHSE18(String s) {
+if (!s.trim().isEmpty()) {
+IHSE18 = new Double(s);
+}
+}
+
+protected final void initIHSE4(String s) {
+if (!s.trim().isEmpty()) {
+IHSE4 = new Double(s);
+}
+}
+
+protected final void initIHSE5(String s) {
+if (!s.trim().isEmpty()) {
+IHSE5 = new Double(s);
+}
+}
+
+protected final void initIHSE6(String s) {
+if (!s.trim().isEmpty()) {
+IHSE6 = new Double(s);
+}
+}
+
+protected final void initILNUSE06(String s) {
+if (!s.trim().isEmpty()) {
+ILNUSE06 = new Double(s);
+}
+}
+
+protected final void initILNUSE07(String s) {
+if (!s.trim().isEmpty()) {
+ILNUSE07 = new Double(s);
+}
+}
+
+protected final void initILNUSE08(String s) {
+if (!s.trim().isEmpty()) {
+ILNUSE08 = new Double(s);
+}
+}
+
+protected final void initILNUSE09(String s) {
+if (!s.trim().isEmpty()) {
+ILNUSE09 = new Double(s);
+}
+}
+
+protected final void initILNUSE10(String s) {
+if (!s.trim().isEmpty()) {
+ILNUSE10 = new Double(s);
+}
+}
+
+protected final void initILUMTY2_I(String s) {
+if (!s.trim().isEmpty()) {
+ILUMTY2_I = new Double(s);
+}
+}
+
+protected final void initILUMTY2_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+ILUMTY2_IFLAG = new Double(s);
+}
+}
+
+protected final void initILUMTY3_I(String s) {
+if (!s.trim().isEmpty()) {
+ILUMTY3_I = new Double(s);
+}
+}
+
+protected final void initILUMTY3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+ILUMTY3_IFLAG = new Double(s);
+}
+}
+
+protected final void initILUMTY4(String s) {
+if (!s.trim().isEmpty()) {
+ILUMTY4 = new Double(s);
+}
+}
+
+protected final void initILUMTY4_I(String s) {
+if (!s.trim().isEmpty()) {
+ILUMTY4_I = new Double(s);
+}
+}
+
+protected final void initILUMTY4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+ILUMTY4_IFLAG = new Double(s);
+}
+}
+
+protected final void initILUMTY5(String s) {
+if (!s.trim().isEmpty()) {
+ILUMTY5 = new Double(s);
+}
+}
+
+protected final void initILUMTY5_I(String s) {
+if (!s.trim().isEmpty()) {
+ILUMTY5_I = new Double(s);
+}
+}
+
+protected final void initILUMTY5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+ILUMTY5_IFLAG = new Double(s);
+}
+}
+
+protected final void initILUMTY6(String s) {
+if (!s.trim().isEmpty()) {
+ILUMTY6 = new Double(s);
+}
+}
+
+protected final void initILUMTY6_I(String s) {
+if (!s.trim().isEmpty()) {
+ILUMTY6_I = new Double(s);
+}
+}
+
+protected final void initILUMTY6_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+ILUMTY6_IFLAG = new Double(s);
+}
+}
+
+protected final void initILUMTY7(String s) {
+if (!s.trim().isEmpty()) {
+ILUMTY7 = new Double(s);
+}
+}
+
+protected final void initILUMTY7_I(String s) {
+if (!s.trim().isEmpty()) {
+ILUMTY7_I = new Double(s);
+}
+}
+
+protected final void initILUMTY7_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+ILUMTY7_IFLAG = new Double(s);
+}
+}
+
+protected final void initINSPOL(String s) {
+if (!s.trim().isEmpty()) {
+INSPOL = new Double(s);
+}
+}
+
+protected final void initINTRO(String s) {
+if (!s.trim().isEmpty()) {
+INTRO = new Double(s);
+}
+}
+
+protected final void initISHRP(String s) {
+if (!s.trim().isEmpty()) {
+ISHRP = new Double(s);
+}
+}
+
+protected final void initISHRPPART(String s) {
+if (!s.trim().isEmpty()) {
+ISHRPPART = new Double(s);
+}
+}
+
+protected final void initIVAL1(String s) {
+if (!s.trim().isEmpty()) {
+IVAL1 = new Double(s);
+}
+}
+
+protected final void initIVAL2_I(String s) {
+if (!s.trim().isEmpty()) {
+IVAL2_I = new Double(s);
+}
+}
+
+protected final void initIVAL3_I(String s) {
+if (!s.trim().isEmpty()) {
+IVAL3_I = new Double(s);
+}
+}
+
+protected final void initIWAT10(String s) {
+if (!s.trim().isEmpty()) {
+IWAT10 = new Double(s);
+}
+}
+
+protected final void initIWAT11(String s) {
+if (!s.trim().isEmpty()) {
+IWAT11 = new Double(s);
+}
+}
+
+protected final void initIWAT12(String s) {
+if (!s.trim().isEmpty()) {
+IWAT12 = new Double(s);
+}
+}
+
+protected final void initIWAT14(String s) {
+if (!s.trim().isEmpty()) {
+IWAT14 = new Double(s);
+}
+}
+
+protected final void initIWAT15(String s) {
+if (!s.trim().isEmpty()) {
+IWAT15 = new Double(s);
+}
+}
+
+protected final void initIWAT16(String s) {
+if (!s.trim().isEmpty()) {
+IWAT16 = new Double(s);
+}
+}
+
+protected final void initIWAT17(String s) {
+if (!s.trim().isEmpty()) {
+IWAT17 = new Double(s);
+}
+}
+
+protected final void initIWAT18(String s) {
+if (!s.trim().isEmpty()) {
+IWAT18 = new Double(s);
+}
+}
+
+protected final void initIWAT8(String s) {
+if (!s.trim().isEmpty()) {
+IWAT8 = new Double(s);
+}
+}
+
+protected final void initIWAT9(String s) {
+if (!s.trim().isEmpty()) {
+IWAT9 = new Double(s);
+}
+}
+
+protected final void initIWHO(String s) {
+if (!s.trim().isEmpty()) {
+IWHO = new Double(s);
+}
+}
+
+protected final void initLIVWTH(String s) {
+if (!s.trim().isEmpty()) {
+LIVWTH = new Double(s);
+}
+}
+
+protected final void initLNMN1(String s) {
+if (!s.trim().isEmpty()) {
+LNMN1 = new Double(s);
+}
+}
+
+protected final void initLNMN2(String s) {
+if (!s.trim().isEmpty()) {
+LNMN2 = new Double(s);
+}
+}
+
+protected final void initLNMN3(String s) {
+if (!s.trim().isEmpty()) {
+LNMN3 = new Double(s);
+}
+}
+
+protected final void initLNMN4(String s) {
+if (!s.trim().isEmpty()) {
+LNMN4 = new Double(s);
+}
+}
+
+protected final void initLNMN5(String s) {
+if (!s.trim().isEmpty()) {
+LNMN5 = new Double(s);
+}
+}
+
+protected final void initLNYR1(String s) {
+if (!s.trim().isEmpty()) {
+LNYR1 = new Double(s);
+}
+}
+
+protected final void initLNYR2(String s) {
+if (!s.trim().isEmpty()) {
+LNYR2 = new Double(s);
+}
+}
+
+protected final void initLNYR3(String s) {
+if (!s.trim().isEmpty()) {
+LNYR3 = new Double(s);
+}
+}
+
+protected final void initLNYR4(String s) {
+if (!s.trim().isEmpty()) {
+LNYR4 = new Double(s);
+}
+}
+
+protected final void initLNYR5(String s) {
+if (!s.trim().isEmpty()) {
+LNYR5 = new Double(s);
+}
+}
+
+protected final void initLVTDAY(String s) {
+if (!s.trim().isEmpty()) {
+LVTDAY = new Double(s);
+}
+}
+
+protected final void initMOLFT3(String s) {
+if (!s.trim().isEmpty()) {
+MOLFT3 = new Double(s);
+}
+}
+
+protected final void initMOLFT4(String s) {
+if (!s.trim().isEmpty()) {
+MOLFT4 = new Double(s);
+}
+}
+
+protected final void initMOLFT5(String s) {
+if (!s.trim().isEmpty()) {
+MOLFT5 = new Double(s);
+}
+}
+
+protected final void initMOOS3(String s) {
+if (!s.trim().isEmpty()) {
+MOOS3 = new Double(s);
+}
+}
+
+protected final void initMOOS4(String s) {
+if (!s.trim().isEmpty()) {
+MOOS4 = new Double(s);
+}
+}
+
+protected final void initMOOS5(String s) {
+if (!s.trim().isEmpty()) {
+MOOS5 = new Double(s);
+}
+}
+
+protected final void initNMN1(String s) {
+if (!s.trim().isEmpty()) {
+NMN1 = new Double(s);
+}
+}
+
+protected final void initNMN2(String s) {
+if (!s.trim().isEmpty()) {
+NMN2 = new Double(s);
+}
+}
+
+protected final void initNMN3(String s) {
+if (!s.trim().isEmpty()) {
+NMN3 = new Double(s);
+}
+}
+
+protected final void initNMN4(String s) {
+if (!s.trim().isEmpty()) {
+NMN4 = new Double(s);
+}
+}
+
+protected final void initNMN5(String s) {
+if (!s.trim().isEmpty()) {
+NMN5 = new Double(s);
+}
+}
+
+protected final void initNSSEC(String s) {
+if (!s.trim().isEmpty()) {
+NSSEC = new Double(s);
+}
+}
+
+protected final void initNWHP(String s) {
+if (!s.trim().isEmpty()) {
+NWHP = new Double(s);
+}
+}
+
+protected final void initNWHPNO(String s) {
+if (!s.trim().isEmpty()) {
+NWHPNO = new Double(s);
+}
+}
+
+protected final void initNWHPVAL1(String s) {
+if (!s.trim().isEmpty()) {
+NWHPVAL1 = new Double(s);
+}
+}
+
+protected final void initNWHPVAL2(String s) {
+if (!s.trim().isEmpty()) {
+NWHPVAL2 = new Double(s);
+}
+}
+
+protected final void initNWHPVAL3(String s) {
+if (!s.trim().isEmpty()) {
+NWHPVAL3 = new Double(s);
+}
+}
+
+protected final void initNYR1(String s) {
+if (!s.trim().isEmpty()) {
+NYR1 = new Double(s);
+}
+}
+
+protected final void initNYR2(String s) {
+if (!s.trim().isEmpty()) {
+NYR2 = new Double(s);
+}
+}
+
+protected final void initNYR3(String s) {
+if (!s.trim().isEmpty()) {
+NYR3 = new Double(s);
+}
+}
+
+protected final void initNYR4(String s) {
+if (!s.trim().isEmpty()) {
+NYR4 = new Double(s);
+}
+}
+
+protected final void initNYR5(String s) {
+if (!s.trim().isEmpty()) {
+NYR5 = new Double(s);
+}
+}
+
+protected final void initOIGGT(String s) {
+if (!s.trim().isEmpty()) {
+OIGGT = new Double(s);
+}
+}
+
+protected final void initOIGRR(String s) {
+if (!s.trim().isEmpty()) {
+OIGRR = new Double(s);
+}
+}
+
+protected final void initOIMPRS7(String s) {
+if (!s.trim().isEmpty()) {
+OIMPRS7 = new Double(s);
+}
+}
+
+protected final void initOIMPRS8(String s) {
+if (!s.trim().isEmpty()) {
+OIMPRS8 = new Double(s);
+}
+}
+
+protected final void initOIMPRS9(String s) {
+if (!s.trim().isEmpty()) {
+OIMPRS9 = new Double(s);
+}
+}
+
+protected final void initONOSAVE7(String s) {
+if (!s.trim().isEmpty()) {
+ONOSAVE7 = new Double(s);
+}
+}
+
+protected final void initONOSAVE8(String s) {
+if (!s.trim().isEmpty()) {
+ONOSAVE8 = new Double(s);
+}
+}
+
+protected final void initONOSAVE9(String s) {
+if (!s.trim().isEmpty()) {
+ONOSAVE9 = new Double(s);
+}
+}
+
+protected final void initOPENSAV(String s) {
+if (!s.trim().isEmpty()) {
+OPENSAV = new Double(s);
+}
+}
+
+protected final void initORUNDO09(String s) {
+if (!s.trim().isEmpty()) {
+ORUNDO09 = new Double(s);
+}
+}
+
+protected final void initORUNDO10(String s) {
+if (!s.trim().isEmpty()) {
+ORUNDO10 = new Double(s);
+}
+}
+
+protected final void initORUNDO11(String s) {
+if (!s.trim().isEmpty()) {
+ORUNDO11 = new Double(s);
+}
+}
+
+protected final void initOSAFERE2(String s) {
+if (!s.trim().isEmpty()) {
+OSAFERE2 = new Double(s);
+}
+}
+
+protected final void initOSAFERET(String s) {
+if (!s.trim().isEmpty()) {
+OSAFERET = new Double(s);
+}
+}
+
+protected final void initOSAVA(String s) {
+if (!s.trim().isEmpty()) {
+OSAVA = new Double(s);
+}
+}
+
+protected final void initOSAVB(String s) {
+if (!s.trim().isEmpty()) {
+OSAVB = new Double(s);
+}
+}
+
+protected final void initOSAVC(String s) {
+if (!s.trim().isEmpty()) {
+OSAVC = new Double(s);
+}
+}
+
+protected final void initOSLC4(String s) {
+if (!s.trim().isEmpty()) {
+OSLC4 = new Double(s);
+}
+}
+
+protected final void initOTHSRC5_I(String s) {
+if (!s.trim().isEmpty()) {
+OTHSRC5_I = new Double(s);
+}
+}
+
+protected final void initOTHSRC5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+OTHSRC5_IFLAG = new Double(s);
+}
+}
+
+protected final void initOWHYSAV01(String s) {
+if (!s.trim().isEmpty()) {
+OWHYSAV01 = new Double(s);
+}
+}
+
+protected final void initOWHYSAV02(String s) {
+if (!s.trim().isEmpty()) {
+OWHYSAV02 = new Double(s);
+}
+}
+
+protected final void initOWHYSAV03(String s) {
+if (!s.trim().isEmpty()) {
+OWHYSAV03 = new Double(s);
+}
+}
+
+protected final void initOWHYSAV04(String s) {
+if (!s.trim().isEmpty()) {
+OWHYSAV04 = new Double(s);
+}
+}
+
+protected final void initOWHYSAV05(String s) {
+if (!s.trim().isEmpty()) {
+OWHYSAV05 = new Double(s);
+}
+}
+
+protected final void initOWHYSAV06(String s) {
+if (!s.trim().isEmpty()) {
+OWHYSAV06 = new Double(s);
+}
+}
+
+protected final void initOWHYSAV07(String s) {
+if (!s.trim().isEmpty()) {
+OWHYSAV07 = new Double(s);
+}
+}
+
+protected final void initOWHYSAV08(String s) {
+if (!s.trim().isEmpty()) {
+OWHYSAV08 = new Double(s);
+}
+}
+
+protected final void initOWHYSAV09(String s) {
+if (!s.trim().isEmpty()) {
+OWHYSAV09 = new Double(s);
+}
+}
+
+protected final void initOWHYSAV10(String s) {
+if (!s.trim().isEmpty()) {
+OWHYSAV10 = new Double(s);
+}
+}
+
+protected final void initOWHYSAV11(String s) {
+if (!s.trim().isEmpty()) {
+OWHYSAV11 = new Double(s);
+}
+}
+
+protected final void initOWRSRS08(String s) {
+if (!s.trim().isEmpty()) {
+OWRSRS08 = new Double(s);
+}
+}
+
+protected final void initOWRSRS09(String s) {
+if (!s.trim().isEmpty()) {
+OWRSRS09 = new Double(s);
+}
+}
+
+protected final void initOWRSRS10(String s) {
+if (!s.trim().isEmpty()) {
+OWRSRS10 = new Double(s);
+}
+}
+
+protected final void initPADDFUT(String s) {
+if (!s.trim().isEmpty()) {
+PADDFUT = new Double(s);
+}
+}
+
+protected final void initPADDFUT2(String s) {
+if (!s.trim().isEmpty()) {
+PADDFUT2 = new Double(s);
+}
+}
+
+protected final void initPAVCAM1(String s) {
+if (!s.trim().isEmpty()) {
+PAVCAM1 = new Double(s);
+}
+}
+
+protected final void initPAVCAM2(String s) {
+if (!s.trim().isEmpty()) {
+PAVCAM2 = new Double(s);
+}
+}
+
+protected final void initPAVCFG1(String s) {
+if (!s.trim().isEmpty()) {
+PAVCFG1 = new Double(s);
+}
+}
+
+protected final void initPAVCFG2(String s) {
+if (!s.trim().isEmpty()) {
+PAVCFG2 = new Double(s);
+}
+}
+
+protected final void initPAVCFR1(String s) {
+if (!s.trim().isEmpty()) {
+PAVCFR1 = new Double(s);
+}
+}
+
+protected final void initPAVCFR2(String s) {
+if (!s.trim().isEmpty()) {
+PAVCFR2 = new Double(s);
+}
+}
+
+protected final void initPAVCH1(String s) {
+if (!s.trim().isEmpty()) {
+PAVCH1 = new Double(s);
+}
+}
+
+protected final void initPAVCH2(String s) {
+if (!s.trim().isEmpty()) {
+PAVCH2 = new Double(s);
+}
+}
+
+protected final void initPAVCIN1(String s) {
+if (!s.trim().isEmpty()) {
+PAVCIN1 = new Double(s);
+}
+}
+
+protected final void initPAVCIN2(String s) {
+if (!s.trim().isEmpty()) {
+PAVCIN2 = new Double(s);
+}
+}
+
+protected final void initPAVCPR1(String s) {
+if (!s.trim().isEmpty()) {
+PAVCPR1 = new Double(s);
+}
+}
+
+protected final void initPAVCPR2(String s) {
+if (!s.trim().isEmpty()) {
+PAVCPR2 = new Double(s);
+}
+}
+
+protected final void initPDCVAL3(String s) {
+if (!s.trim().isEmpty()) {
+PDCVAL3 = new Double(s);
+}
+}
+
+protected final void initPEMFIN(String s) {
+if (!s.trim().isEmpty()) {
+PEMFIN = new Double(s);
+}
+}
+
+protected final void initPESAME_I(String s) {
+if (!s.trim().isEmpty()) {
+PESAME_I = new Double(s);
+}
+}
+
+protected final void initPESAME_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PESAME_IFLAG = new Double(s);
+}
+}
+
+protected final void initPEWYNO01(String s) {
+if (!s.trim().isEmpty()) {
+PEWYNO01 = new Double(s);
+}
+}
+
+protected final void initPEWYNO02(String s) {
+if (!s.trim().isEmpty()) {
+PEWYNO02 = new Double(s);
+}
+}
+
+protected final void initPEWYNO03(String s) {
+if (!s.trim().isEmpty()) {
+PEWYNO03 = new Double(s);
+}
+}
+
+protected final void initPEWYNO04(String s) {
+if (!s.trim().isEmpty()) {
+PEWYNO04 = new Double(s);
+}
+}
+
+protected final void initPEWYNO05(String s) {
+if (!s.trim().isEmpty()) {
+PEWYNO05 = new Double(s);
+}
+}
+
+protected final void initPEWYNO06(String s) {
+if (!s.trim().isEmpty()) {
+PEWYNO06 = new Double(s);
+}
+}
+
+protected final void initPEWYNO07(String s) {
+if (!s.trim().isEmpty()) {
+PEWYNO07 = new Double(s);
+}
+}
+
+protected final void initPEWYNO08(String s) {
+if (!s.trim().isEmpty()) {
+PEWYNO08 = new Double(s);
+}
+}
+
+protected final void initPEWYNO09(String s) {
+if (!s.trim().isEmpty()) {
+PEWYNO09 = new Double(s);
+}
+}
+
+protected final void initPEWYNO10(String s) {
+if (!s.trim().isEmpty()) {
+PEWYNO10 = new Double(s);
+}
+}
+
+protected final void initPEWYNO11(String s) {
+if (!s.trim().isEmpty()) {
+PEWYNO11 = new Double(s);
+}
+}
+
+protected final void initPFANEH3(String s) {
+if (!s.trim().isEmpty()) {
+PFANEH3 = new Double(s);
+}
+}
+
+protected final void initPFANEH5(String s) {
+if (!s.trim().isEmpty()) {
+PFANEH5 = new Double(s);
+}
+}
+
+protected final void initPFANEH6(String s) {
+if (!s.trim().isEmpty()) {
+PFANEH6 = new Double(s);
+}
+}
+
+protected final void initPFANEXM1(String s) {
+if (!s.trim().isEmpty()) {
+PFANEXM1 = new Double(s);
+}
+}
+
+protected final void initPFANEXM2(String s) {
+if (!s.trim().isEmpty()) {
+PFANEXM2 = new Double(s);
+}
+}
+
+protected final void initPFANEXM3(String s) {
+if (!s.trim().isEmpty()) {
+PFANEXM3 = new Double(s);
+}
+}
+
+protected final void initPFANEXM4(String s) {
+if (!s.trim().isEmpty()) {
+PFANEXM4 = new Double(s);
+}
+}
+
+protected final void initPFANEXM5(String s) {
+if (!s.trim().isEmpty()) {
+PFANEXM5 = new Double(s);
+}
+}
+
+protected final void initPFANEXM6(String s) {
+if (!s.trim().isEmpty()) {
+PFANEXM6 = new Double(s);
+}
+}
+
+protected final void initPFANEXY1(String s) {
+if (!s.trim().isEmpty()) {
+PFANEXY1 = new Double(s);
+}
+}
+
+protected final void initPFANEXY2(String s) {
+if (!s.trim().isEmpty()) {
+PFANEXY2 = new Double(s);
+}
+}
+
+protected final void initPFANEXY3(String s) {
+if (!s.trim().isEmpty()) {
+PFANEXY3 = new Double(s);
+}
+}
+
+protected final void initPFANEXY4(String s) {
+if (!s.trim().isEmpty()) {
+PFANEXY4 = new Double(s);
+}
+}
+
+protected final void initPFANEXY5(String s) {
+if (!s.trim().isEmpty()) {
+PFANEXY5 = new Double(s);
+}
+}
+
+protected final void initPFANEXY6(String s) {
+if (!s.trim().isEmpty()) {
+PFANEXY6 = new Double(s);
+}
+}
+
+protected final void initPFANGA3(String s) {
+if (!s.trim().isEmpty()) {
+PFANGA3 = new Double(s);
+}
+}
+
+protected final void initPFANGA5(String s) {
+if (!s.trim().isEmpty()) {
+PFANGA5 = new Double(s);
+}
+}
+
+protected final void initPFANGA6(String s) {
+if (!s.trim().isEmpty()) {
+PFANGA6 = new Double(s);
+}
+}
+
+protected final void initPFANIF3(String s) {
+if (!s.trim().isEmpty()) {
+PFANIF3 = new Double(s);
+}
+}
+
+protected final void initPFANIF5(String s) {
+if (!s.trim().isEmpty()) {
+PFANIF5 = new Double(s);
+}
+}
+
+protected final void initPFANIF6(String s) {
+if (!s.trim().isEmpty()) {
+PFANIF6 = new Double(s);
+}
+}
+
+protected final void initPFANJT3(String s) {
+if (!s.trim().isEmpty()) {
+PFANJT3 = new Double(s);
+}
+}
+
+protected final void initPFANJT5(String s) {
+if (!s.trim().isEmpty()) {
+PFANJT5 = new Double(s);
+}
+}
+
+protected final void initPFANJT6(String s) {
+if (!s.trim().isEmpty()) {
+PFANJT6 = new Double(s);
+}
+}
+
+protected final void initPFANLM1(String s) {
+if (!s.trim().isEmpty()) {
+PFANLM1 = new Double(s);
+}
+}
+
+protected final void initPFANLM2(String s) {
+if (!s.trim().isEmpty()) {
+PFANLM2 = new Double(s);
+}
+}
+
+protected final void initPFANLM3(String s) {
+if (!s.trim().isEmpty()) {
+PFANLM3 = new Double(s);
+}
+}
+
+protected final void initPFANLM4(String s) {
+if (!s.trim().isEmpty()) {
+PFANLM4 = new Double(s);
+}
+}
+
+protected final void initPFANLM5(String s) {
+if (!s.trim().isEmpty()) {
+PFANLM5 = new Double(s);
+}
+}
+
+protected final void initPFANLM6(String s) {
+if (!s.trim().isEmpty()) {
+PFANLM6 = new Double(s);
+}
+}
+
+protected final void initPFANN10(String s) {
+if (!s.trim().isEmpty()) {
+PFANN10 = new Double(s);
+}
+}
+
+protected final void initPFANN11(String s) {
+if (!s.trim().isEmpty()) {
+PFANN11 = new Double(s);
+}
+}
+
+protected final void initPFANN12(String s) {
+if (!s.trim().isEmpty()) {
+PFANN12 = new Double(s);
+}
+}
+
+protected final void initPFANN13(String s) {
+if (!s.trim().isEmpty()) {
+PFANN13 = new Double(s);
+}
+}
+
+protected final void initPFANN14(String s) {
+if (!s.trim().isEmpty()) {
+PFANN14 = new Double(s);
+}
+}
+
+protected final void initPFANN15(String s) {
+if (!s.trim().isEmpty()) {
+PFANN15 = new Double(s);
+}
+}
+
+protected final void initPFANN17(String s) {
+if (!s.trim().isEmpty()) {
+PFANN17 = new Double(s);
+}
+}
+
+protected final void initPFANN18(String s) {
+if (!s.trim().isEmpty()) {
+PFANN18 = new Double(s);
+}
+}
+
+protected final void initPFANN19(String s) {
+if (!s.trim().isEmpty()) {
+PFANN19 = new Double(s);
+}
+}
+
+protected final void initPFANN2(String s) {
+if (!s.trim().isEmpty()) {
+PFANN2 = new Double(s);
+}
+}
+
+protected final void initPFANN20(String s) {
+if (!s.trim().isEmpty()) {
+PFANN20 = new Double(s);
+}
+}
+
+protected final void initPFANN21(String s) {
+if (!s.trim().isEmpty()) {
+PFANN21 = new Double(s);
+}
+}
+
+protected final void initPFANN22(String s) {
+if (!s.trim().isEmpty()) {
+PFANN22 = new Double(s);
+}
+}
+
+protected final void initPFANN23(String s) {
+if (!s.trim().isEmpty()) {
+PFANN23 = new Double(s);
+}
+}
+
+protected final void initPFANN24(String s) {
+if (!s.trim().isEmpty()) {
+PFANN24 = new Double(s);
+}
+}
+
+protected final void initPFANN25(String s) {
+if (!s.trim().isEmpty()) {
+PFANN25 = new Double(s);
+}
+}
+
+protected final void initPFANN26(String s) {
+if (!s.trim().isEmpty()) {
+PFANN26 = new Double(s);
+}
+}
+
+protected final void initPFANN27(String s) {
+if (!s.trim().isEmpty()) {
+PFANN27 = new Double(s);
+}
+}
+
+protected final void initPFANN28(String s) {
+if (!s.trim().isEmpty()) {
+PFANN28 = new Double(s);
+}
+}
+
+protected final void initPFANN29(String s) {
+if (!s.trim().isEmpty()) {
+PFANN29 = new Double(s);
+}
+}
+
+protected final void initPFANN3(String s) {
+if (!s.trim().isEmpty()) {
+PFANN3 = new Double(s);
+}
+}
+
+protected final void initPFANN30(String s) {
+if (!s.trim().isEmpty()) {
+PFANN30 = new Double(s);
+}
+}
+
+protected final void initPFANN4(String s) {
+if (!s.trim().isEmpty()) {
+PFANN4 = new Double(s);
+}
+}
+
+protected final void initPFANN5(String s) {
+if (!s.trim().isEmpty()) {
+PFANN5 = new Double(s);
+}
+}
+
+protected final void initPFANN7(String s) {
+if (!s.trim().isEmpty()) {
+PFANN7 = new Double(s);
+}
+}
+
+protected final void initPFANN8(String s) {
+if (!s.trim().isEmpty()) {
+PFANN8 = new Double(s);
+}
+}
+
+protected final void initPFANN9(String s) {
+if (!s.trim().isEmpty()) {
+PFANN9 = new Double(s);
+}
+}
+
+protected final void initPFANVB1(String s) {
+if (!s.trim().isEmpty()) {
+PFANVB1 = new Double(s);
+}
+}
+
+protected final void initPFANVB2(String s) {
+if (!s.trim().isEmpty()) {
+PFANVB2 = new Double(s);
+}
+}
+
+protected final void initPFANVB3(String s) {
+if (!s.trim().isEmpty()) {
+PFANVB3 = new Double(s);
+}
+}
+
+protected final void initPFANVB4(String s) {
+if (!s.trim().isEmpty()) {
+PFANVB4 = new Double(s);
+}
+}
+
+protected final void initPFANVB5(String s) {
+if (!s.trim().isEmpty()) {
+PFANVB5 = new Double(s);
+}
+}
+
+protected final void initPFANVB6(String s) {
+if (!s.trim().isEmpty()) {
+PFANVB6 = new Double(s);
+}
+}
+
+protected final void initPFANVI1(String s) {
+if (!s.trim().isEmpty()) {
+PFANVI1 = new Double(s);
+}
+}
+
+protected final void initPFANVI2(String s) {
+if (!s.trim().isEmpty()) {
+PFANVI2 = new Double(s);
+}
+}
+
+protected final void initPFANVI3(String s) {
+if (!s.trim().isEmpty()) {
+PFANVI3 = new Double(s);
+}
+}
+
+protected final void initPFANVI4(String s) {
+if (!s.trim().isEmpty()) {
+PFANVI4 = new Double(s);
+}
+}
+
+protected final void initPFANVI5(String s) {
+if (!s.trim().isEmpty()) {
+PFANVI5 = new Double(s);
+}
+}
+
+protected final void initPFANVI6(String s) {
+if (!s.trim().isEmpty()) {
+PFANVI6 = new Double(s);
+}
+}
+
+protected final void initPFBEG1(String s) {
+if (!s.trim().isEmpty()) {
+PFBEG1 = new Double(s);
+}
+}
+
+protected final void initPFBEG2(String s) {
+if (!s.trim().isEmpty()) {
+PFBEG2 = new Double(s);
+}
+}
+
+protected final void initPFBEG3(String s) {
+if (!s.trim().isEmpty()) {
+PFBEG3 = new Double(s);
+}
+}
+
+protected final void initPFBEG4(String s) {
+if (!s.trim().isEmpty()) {
+PFBEG4 = new Double(s);
+}
+}
+
+protected final void initPFBEG5(String s) {
+if (!s.trim().isEmpty()) {
+PFBEG5 = new Double(s);
+}
+}
+
+protected final void initPFBEG6(String s) {
+if (!s.trim().isEmpty()) {
+PFBEG6 = new Double(s);
+}
+}
+
+protected final void initPFCASH5(String s) {
+if (!s.trim().isEmpty()) {
+PFCASH5 = new Double(s);
+}
+}
+
+protected final void initPFCASH5_I(String s) {
+if (!s.trim().isEmpty()) {
+PFCASH5_I = new Double(s);
+}
+}
+
+protected final void initPFCASH5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFCASH5_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFCASH6(String s) {
+if (!s.trim().isEmpty()) {
+PFCASH6 = new Double(s);
+}
+}
+
+protected final void initPFCASH6_I(String s) {
+if (!s.trim().isEmpty()) {
+PFCASH6_I = new Double(s);
+}
+}
+
+protected final void initPFCASH6_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFCASH6_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFDDV4(String s) {
+if (!s.trim().isEmpty()) {
+PFDDV4 = new Double(s);
+}
+}
+
+protected final void initPFDDV5(String s) {
+if (!s.trim().isEmpty()) {
+PFDDV5 = new Double(s);
+}
+}
+
+protected final void initPFDDV5_I(String s) {
+if (!s.trim().isEmpty()) {
+PFDDV5_I = new Double(s);
+}
+}
+
+protected final void initPFDDV5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFDDV5_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFDDV6(String s) {
+if (!s.trim().isEmpty()) {
+PFDDV6 = new Double(s);
+}
+}
+
+protected final void initPFDDV6_I(String s) {
+if (!s.trim().isEmpty()) {
+PFDDV6_I = new Double(s);
+}
+}
+
+protected final void initPFDDV6_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFDDV6_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFDDVB4(String s) {
+if (!s.trim().isEmpty()) {
+PFDDVB4 = new Double(s);
+}
+}
+
+protected final void initPFDDVB5(String s) {
+if (!s.trim().isEmpty()) {
+PFDDVB5 = new Double(s);
+}
+}
+
+protected final void initPFDDVB6(String s) {
+if (!s.trim().isEmpty()) {
+PFDDVB6 = new Double(s);
+}
+}
+
+protected final void initPFDRAW4(String s) {
+if (!s.trim().isEmpty()) {
+PFDRAW4 = new Double(s);
+}
+}
+
+protected final void initPFDRAW4_I(String s) {
+if (!s.trim().isEmpty()) {
+PFDRAW4_I = new Double(s);
+}
+}
+
+protected final void initPFDRAW4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFDRAW4_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFDRAW5(String s) {
+if (!s.trim().isEmpty()) {
+PFDRAW5 = new Double(s);
+}
+}
+
+protected final void initPFDRAW5_I(String s) {
+if (!s.trim().isEmpty()) {
+PFDRAW5_I = new Double(s);
+}
+}
+
+protected final void initPFDRAW5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFDRAW5_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFDRAW6(String s) {
+if (!s.trim().isEmpty()) {
+PFDRAW6 = new Double(s);
+}
+}
+
+protected final void initPFDRAW6_I(String s) {
+if (!s.trim().isEmpty()) {
+PFDRAW6_I = new Double(s);
+}
+}
+
+protected final void initPFDRAW6_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFDRAW6_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFDRA___W3(String s) {
+if (!s.trim().isEmpty()) {
+PFDRA___W3 = new Double(s);
+}
+}
+
+protected final void initPFDRINC2(String s) {
+if (!s.trim().isEmpty()) {
+PFDRINC2 = new Double(s);
+}
+}
+
+protected final void initPFDRINC3(String s) {
+if (!s.trim().isEmpty()) {
+PFDRINC3 = new Double(s);
+}
+}
+
+protected final void initPFDRINC4(String s) {
+if (!s.trim().isEmpty()) {
+PFDRINC4 = new Double(s);
+}
+}
+
+protected final void initPFDRINC5(String s) {
+if (!s.trim().isEmpty()) {
+PFDRINC5 = new Double(s);
+}
+}
+
+protected final void initPFDRINC6(String s) {
+if (!s.trim().isEmpty()) {
+PFDRINC6 = new Double(s);
+}
+}
+
+protected final void initPFDRINCB1(String s) {
+if (!s.trim().isEmpty()) {
+PFDRINCB1 = new Double(s);
+}
+}
+
+protected final void initPFDRINCB2(String s) {
+if (!s.trim().isEmpty()) {
+PFDRINCB2 = new Double(s);
+}
+}
+
+protected final void initPFDRINCB3(String s) {
+if (!s.trim().isEmpty()) {
+PFDRINCB3 = new Double(s);
+}
+}
+
+protected final void initPFDRINCB4(String s) {
+if (!s.trim().isEmpty()) {
+PFDRINCB4 = new Double(s);
+}
+}
+
+protected final void initPFDRINCB5(String s) {
+if (!s.trim().isEmpty()) {
+PFDRINCB5 = new Double(s);
+}
+}
+
+protected final void initPFDRINCB6(String s) {
+if (!s.trim().isEmpty()) {
+PFDRINCB6 = new Double(s);
+}
+}
+
+protected final void initPFDRVB2(String s) {
+if (!s.trim().isEmpty()) {
+PFDRVB2 = new Double(s);
+}
+}
+
+protected final void initPFDRVB3(String s) {
+if (!s.trim().isEmpty()) {
+PFDRVB3 = new Double(s);
+}
+}
+
+protected final void initPFDRVB4(String s) {
+if (!s.trim().isEmpty()) {
+PFDRVB4 = new Double(s);
+}
+}
+
+protected final void initPFDRVB5(String s) {
+if (!s.trim().isEmpty()) {
+PFDRVB5 = new Double(s);
+}
+}
+
+protected final void initPFDRVB6(String s) {
+if (!s.trim().isEmpty()) {
+PFDRVB6 = new Double(s);
+}
+}
+
+protected final void initPFDRVI2(String s) {
+if (!s.trim().isEmpty()) {
+PFDRVI2 = new Double(s);
+}
+}
+
+protected final void initPFDRVI3(String s) {
+if (!s.trim().isEmpty()) {
+PFDRVI3 = new Double(s);
+}
+}
+
+protected final void initPFDRVI4(String s) {
+if (!s.trim().isEmpty()) {
+PFDRVI4 = new Double(s);
+}
+}
+
+protected final void initPFDRVI5(String s) {
+if (!s.trim().isEmpty()) {
+PFDRVI5 = new Double(s);
+}
+}
+
+protected final void initPFDRVI6(String s) {
+if (!s.trim().isEmpty()) {
+PFDRVI6 = new Double(s);
+}
+}
+
+protected final void initPFEND1(String s) {
+if (!s.trim().isEmpty()) {
+PFEND1 = new Double(s);
+}
+}
+
+protected final void initPFEND2(String s) {
+if (!s.trim().isEmpty()) {
+PFEND2 = new Double(s);
+}
+}
+
+protected final void initPFEND3(String s) {
+if (!s.trim().isEmpty()) {
+PFEND3 = new Double(s);
+}
+}
+
+protected final void initPFEND4(String s) {
+if (!s.trim().isEmpty()) {
+PFEND4 = new Double(s);
+}
+}
+
+protected final void initPFEND5(String s) {
+if (!s.trim().isEmpty()) {
+PFEND5 = new Double(s);
+}
+}
+
+protected final void initPFEND6(String s) {
+if (!s.trim().isEmpty()) {
+PFEND6 = new Double(s);
+}
+}
+
+protected final void initPFFAAG3(String s) {
+if (!s.trim().isEmpty()) {
+PFFAAG3 = new Double(s);
+}
+}
+
+protected final void initPFFAAG4(String s) {
+if (!s.trim().isEmpty()) {
+PFFAAG4 = new Double(s);
+}
+}
+
+protected final void initPFFAAG5(String s) {
+if (!s.trim().isEmpty()) {
+PFFAAG5 = new Double(s);
+}
+}
+
+protected final void initPFFAAG6(String s) {
+if (!s.trim().isEmpty()) {
+PFFAAG6 = new Double(s);
+}
+}
+
+protected final void initPFFAN10(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN10 = new Double(s);
+}
+}
+
+protected final void initPFFAN12(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN12 = new Double(s);
+}
+}
+
+protected final void initPFFAN13(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN13 = new Double(s);
+}
+}
+
+protected final void initPFFAN14(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN14 = new Double(s);
+}
+}
+
+protected final void initPFFAN15(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN15 = new Double(s);
+}
+}
+
+protected final void initPFFAN17(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN17 = new Double(s);
+}
+}
+
+protected final void initPFFAN18(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN18 = new Double(s);
+}
+}
+
+protected final void initPFFAN19(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN19 = new Double(s);
+}
+}
+
+protected final void initPFFAN20(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN20 = new Double(s);
+}
+}
+
+protected final void initPFFAN21(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN21 = new Double(s);
+}
+}
+
+protected final void initPFFAN22(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN22 = new Double(s);
+}
+}
+
+protected final void initPFFAN23(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN23 = new Double(s);
+}
+}
+
+protected final void initPFFAN24(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN24 = new Double(s);
+}
+}
+
+protected final void initPFFAN25(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN25 = new Double(s);
+}
+}
+
+protected final void initPFFAN26(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN26 = new Double(s);
+}
+}
+
+protected final void initPFFAN27(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN27 = new Double(s);
+}
+}
+
+protected final void initPFFAN28(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN28 = new Double(s);
+}
+}
+
+protected final void initPFFAN29(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN29 = new Double(s);
+}
+}
+
+protected final void initPFFAN3(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN3 = new Double(s);
+}
+}
+
+protected final void initPFFAN30(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN30 = new Double(s);
+}
+}
+
+protected final void initPFFAN4(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN4 = new Double(s);
+}
+}
+
+protected final void initPFFAN5(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN5 = new Double(s);
+}
+}
+
+protected final void initPFFAN7(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN7 = new Double(s);
+}
+}
+
+protected final void initPFFAN8(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN8 = new Double(s);
+}
+}
+
+protected final void initPFFAN9(String s) {
+if (!s.trim().isEmpty()) {
+PFFAN9 = new Double(s);
+}
+}
+
+protected final void initPFFAWH10(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH10 = new Double(s);
+}
+}
+
+protected final void initPFFAWH11(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH11 = new Double(s);
+}
+}
+
+protected final void initPFFAWH12(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH12 = new Double(s);
+}
+}
+
+protected final void initPFFAWH13(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH13 = new Double(s);
+}
+}
+
+protected final void initPFFAWH14(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH14 = new Double(s);
+}
+}
+
+protected final void initPFFAWH15(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH15 = new Double(s);
+}
+}
+
+protected final void initPFFAWH17(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH17 = new Double(s);
+}
+}
+
+protected final void initPFFAWH18(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH18 = new Double(s);
+}
+}
+
+protected final void initPFFAWH19(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH19 = new Double(s);
+}
+}
+
+protected final void initPFFAWH2(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH2 = new Double(s);
+}
+}
+
+protected final void initPFFAWH20(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH20 = new Double(s);
+}
+}
+
+protected final void initPFFAWH21(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH21 = new Double(s);
+}
+}
+
+protected final void initPFFAWH22(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH22 = new Double(s);
+}
+}
+
+protected final void initPFFAWH23(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH23 = new Double(s);
+}
+}
+
+protected final void initPFFAWH24(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH24 = new Double(s);
+}
+}
+
+protected final void initPFFAWH25(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH25 = new Double(s);
+}
+}
+
+protected final void initPFFAWH26(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH26 = new Double(s);
+}
+}
+
+protected final void initPFFAWH27(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH27 = new Double(s);
+}
+}
+
+protected final void initPFFAWH28(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH28 = new Double(s);
+}
+}
+
+protected final void initPFFAWH29(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH29 = new Double(s);
+}
+}
+
+protected final void initPFFAWH3(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH3 = new Double(s);
+}
+}
+
+protected final void initPFFAWH30(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH30 = new Double(s);
+}
+}
+
+protected final void initPFFAWH31(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH31 = new Double(s);
+}
+}
+
+protected final void initPFFAWH32(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH32 = new Double(s);
+}
+}
+
+protected final void initPFFAWH33(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH33 = new Double(s);
+}
+}
+
+protected final void initPFFAWH34(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH34 = new Double(s);
+}
+}
+
+protected final void initPFFAWH35(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH35 = new Double(s);
+}
+}
+
+protected final void initPFFAWH36(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH36 = new Double(s);
+}
+}
+
+protected final void initPFFAWH4(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH4 = new Double(s);
+}
+}
+
+protected final void initPFFAWH5(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH5 = new Double(s);
+}
+}
+
+protected final void initPFFAWH7(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH7 = new Double(s);
+}
+}
+
+protected final void initPFFAWH8(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH8 = new Double(s);
+}
+}
+
+protected final void initPFFAWH9(String s) {
+if (!s.trim().isEmpty()) {
+PFFAWH9 = new Double(s);
+}
+}
+
+protected final void initPFINCA6_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFINCA6_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFLMUS5(String s) {
+if (!s.trim().isEmpty()) {
+PFLMUS5 = new Double(s);
+}
+}
+
+protected final void initPFLMUS6(String s) {
+if (!s.trim().isEmpty()) {
+PFLMUS6 = new Double(s);
+}
+}
+
+protected final void initPFLMV5(String s) {
+if (!s.trim().isEmpty()) {
+PFLMV5 = new Double(s);
+}
+}
+
+protected final void initPFLMV5_I(String s) {
+if (!s.trim().isEmpty()) {
+PFLMV5_I = new Double(s);
+}
+}
+
+protected final void initPFLMV5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFLMV5_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFLMV6_I(String s) {
+if (!s.trim().isEmpty()) {
+PFLMV6_I = new Double(s);
+}
+}
+
+protected final void initPFLMV6_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFLMV6_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFLMVB4(String s) {
+if (!s.trim().isEmpty()) {
+PFLMVB4 = new Double(s);
+}
+}
+
+protected final void initPFLMVB5(String s) {
+if (!s.trim().isEmpty()) {
+PFLMVB5 = new Double(s);
+}
+}
+
+protected final void initPFLMVB6(String s) {
+if (!s.trim().isEmpty()) {
+PFLMVB6 = new Double(s);
+}
+}
+
+protected final void initPFLUMALL5(String s) {
+if (!s.trim().isEmpty()) {
+PFLUMALL5 = new Double(s);
+}
+}
+
+protected final void initPFLUMALL5_I(String s) {
+if (!s.trim().isEmpty()) {
+PFLUMALL5_I = new Double(s);
+}
+}
+
+protected final void initPFLUMALL5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFLUMALL5_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFLUMALL6(String s) {
+if (!s.trim().isEmpty()) {
+PFLUMALL6 = new Double(s);
+}
+}
+
+protected final void initPFLUMALL6_I(String s) {
+if (!s.trim().isEmpty()) {
+PFLUMALL6_I = new Double(s);
+}
+}
+
+protected final void initPFLUMALL6_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFLUMALL6_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFPENVB1(String s) {
+if (!s.trim().isEmpty()) {
+PFPENVB1 = new Double(s);
+}
+}
+
+protected final void initPFPENVB2(String s) {
+if (!s.trim().isEmpty()) {
+PFPENVB2 = new Double(s);
+}
+}
+
+protected final void initPFPENVB3(String s) {
+if (!s.trim().isEmpty()) {
+PFPENVB3 = new Double(s);
+}
+}
+
+protected final void initPFPENVB4(String s) {
+if (!s.trim().isEmpty()) {
+PFPENVB4 = new Double(s);
+}
+}
+
+protected final void initPFPENVB5(String s) {
+if (!s.trim().isEmpty()) {
+PFPENVB5 = new Double(s);
+}
+}
+
+protected final void initPFPENVB6(String s) {
+if (!s.trim().isEmpty()) {
+PFPENVB6 = new Double(s);
+}
+}
+
+protected final void initPFPENVI1(String s) {
+if (!s.trim().isEmpty()) {
+PFPENVI1 = new Double(s);
+}
+}
+
+protected final void initPFPENVI2(String s) {
+if (!s.trim().isEmpty()) {
+PFPENVI2 = new Double(s);
+}
+}
+
+protected final void initPFPENVI3(String s) {
+if (!s.trim().isEmpty()) {
+PFPENVI3 = new Double(s);
+}
+}
+
+protected final void initPFPENVI4(String s) {
+if (!s.trim().isEmpty()) {
+PFPENVI4 = new Double(s);
+}
+}
+
+protected final void initPFPENVI5(String s) {
+if (!s.trim().isEmpty()) {
+PFPENVI5 = new Double(s);
+}
+}
+
+protected final void initPFPENVI6(String s) {
+if (!s.trim().isEmpty()) {
+PFPENVI6 = new Double(s);
+}
+}
+
+protected final void initPFREM5(String s) {
+if (!s.trim().isEmpty()) {
+PFREM5 = new Double(s);
+}
+}
+
+protected final void initPFREM5_I(String s) {
+if (!s.trim().isEmpty()) {
+PFREM5_I = new Double(s);
+}
+}
+
+protected final void initPFREM5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFREM5_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFREM6(String s) {
+if (!s.trim().isEmpty()) {
+PFREM6 = new Double(s);
+}
+}
+
+protected final void initPFREM6_I(String s) {
+if (!s.trim().isEmpty()) {
+PFREM6_I = new Double(s);
+}
+}
+
+protected final void initPFREM6_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFREM6_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFSIPTY1(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY1 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY10(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY10 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY11(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY11 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY12(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY12 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY13(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY13 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY14(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY14 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY15(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY15 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY16(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY16 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY17(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY17 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY18(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY18 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY19(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY19 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY2(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY2 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY20(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY20 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY21(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY21 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY22(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY22 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY23(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY23 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY24(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY24 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY25(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY25 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY26(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY26 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY27(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY27 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY28(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY28 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY29(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY29 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY3(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY3 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY30(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY30 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY31(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY31 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY32(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY32 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY33(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY33 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY34(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY34 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY35(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY35 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY36(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY36 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY37(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY37 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY38(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY38 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY39(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY39 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY4(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY4 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY40(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY40 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY41(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY41 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY42(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY42 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY5(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY5 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY6(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY6 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY7(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY7 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY8(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY8 = new Double(s);
+}
+}
+
+protected final void initPFSIPTY9(String s) {
+if (!s.trim().isEmpty()) {
+PFSIPTY9 = new Double(s);
+}
+}
+
+protected final void initPIRREG(String s) {
+if (!s.trim().isEmpty()) {
+PIRREG = new Double(s);
+}
+}
+
+protected final void initPIRREG2(String s) {
+if (!s.trim().isEmpty()) {
+PIRREG2 = new Double(s);
+}
+}
+
+protected final void initPMORTC(String s) {
+if (!s.trim().isEmpty()) {
+PMORTC = new Double(s);
+}
+}
+
+protected final void initPNEWMEM(String s) {
+if (!s.trim().isEmpty()) {
+PNEWMEM = new Double(s);
+}
+}
+
+protected final void initPOADD5(String s) {
+if (!s.trim().isEmpty()) {
+POADD5 = new Double(s);
+}
+}
+
+protected final void initPOADD6(String s) {
+if (!s.trim().isEmpty()) {
+POADD6 = new Double(s);
+}
+}
+
+protected final void initPOANEH2(String s) {
+if (!s.trim().isEmpty()) {
+POANEH2 = new Double(s);
+}
+}
+
+protected final void initPOANEXM1(String s) {
+if (!s.trim().isEmpty()) {
+POANEXM1 = new Double(s);
+}
+}
+
+protected final void initPOANEXM2(String s) {
+if (!s.trim().isEmpty()) {
+POANEXM2 = new Double(s);
+}
+}
+
+protected final void initPOANEXY1(String s) {
+if (!s.trim().isEmpty()) {
+POANEXY1 = new Double(s);
+}
+}
+
+protected final void initPOANEXY2(String s) {
+if (!s.trim().isEmpty()) {
+POANEXY2 = new Double(s);
+}
+}
+
+protected final void initPOANGA2(String s) {
+if (!s.trim().isEmpty()) {
+POANGA2 = new Double(s);
+}
+}
+
+protected final void initPOANIF2(String s) {
+if (!s.trim().isEmpty()) {
+POANIF2 = new Double(s);
+}
+}
+
+protected final void initPOANJT2(String s) {
+if (!s.trim().isEmpty()) {
+POANJT2 = new Double(s);
+}
+}
+
+protected final void initPOANLM1(String s) {
+if (!s.trim().isEmpty()) {
+POANLM1 = new Double(s);
+}
+}
+
+protected final void initPOANLM2(String s) {
+if (!s.trim().isEmpty()) {
+POANLM2 = new Double(s);
+}
+}
+
+protected final void initPOANN2(String s) {
+if (!s.trim().isEmpty()) {
+POANN2 = new Double(s);
+}
+}
+
+protected final void initPOANN3(String s) {
+if (!s.trim().isEmpty()) {
+POANN3 = new Double(s);
+}
+}
+
+protected final void initPOANN4(String s) {
+if (!s.trim().isEmpty()) {
+POANN4 = new Double(s);
+}
+}
+
+protected final void initPOANN6(String s) {
+if (!s.trim().isEmpty()) {
+POANN6 = new Double(s);
+}
+}
+
+protected final void initPOANN7(String s) {
+if (!s.trim().isEmpty()) {
+POANN7 = new Double(s);
+}
+}
+
+protected final void initPOANN8(String s) {
+if (!s.trim().isEmpty()) {
+POANN8 = new Double(s);
+}
+}
+
+protected final void initPOANVB(String s) {
+if (!s.trim().isEmpty()) {
+POANVB = new Double(s);
+}
+}
+
+protected final void initPOANVB2(String s) {
+if (!s.trim().isEmpty()) {
+POANVB2 = new Double(s);
+}
+}
+
+protected final void initPOANVI1(String s) {
+if (!s.trim().isEmpty()) {
+POANVI1 = new Double(s);
+}
+}
+
+protected final void initPOANVI2(String s) {
+if (!s.trim().isEmpty()) {
+POANVI2 = new Double(s);
+}
+}
+
+protected final void initPOCNDRS1(String s) {
+if (!s.trim().isEmpty()) {
+POCNDRS1 = new Double(s);
+}
+}
+
+protected final void initPOCNDRS10(String s) {
+if (!s.trim().isEmpty()) {
+POCNDRS10 = new Double(s);
+}
+}
+
+protected final void initPOCNDRS11(String s) {
+if (!s.trim().isEmpty()) {
+POCNDRS11 = new Double(s);
+}
+}
+
+protected final void initPOCNDRS12(String s) {
+if (!s.trim().isEmpty()) {
+POCNDRS12 = new Double(s);
+}
+}
+
+protected final void initPOCNDRS2(String s) {
+if (!s.trim().isEmpty()) {
+POCNDRS2 = new Double(s);
+}
+}
+
+protected final void initPOCNDRS3(String s) {
+if (!s.trim().isEmpty()) {
+POCNDRS3 = new Double(s);
+}
+}
+
+protected final void initPOCNDRS4(String s) {
+if (!s.trim().isEmpty()) {
+POCNDRS4 = new Double(s);
+}
+}
+
+protected final void initPOCNDRS5(String s) {
+if (!s.trim().isEmpty()) {
+POCNDRS5 = new Double(s);
+}
+}
+
+protected final void initPOCNDRS6(String s) {
+if (!s.trim().isEmpty()) {
+POCNDRS6 = new Double(s);
+}
+}
+
+protected final void initPOCNDRS7(String s) {
+if (!s.trim().isEmpty()) {
+POCNDRS7 = new Double(s);
+}
+}
+
+protected final void initPOCNDRS8(String s) {
+if (!s.trim().isEmpty()) {
+POCNDRS8 = new Double(s);
+}
+}
+
+protected final void initPOCNDRS9(String s) {
+if (!s.trim().isEmpty()) {
+POCNDRS9 = new Double(s);
+}
+}
+
+protected final void initPOCNHOW1(String s) {
+if (!s.trim().isEmpty()) {
+POCNHOW1 = new Double(s);
+}
+}
+
+protected final void initPOCNHOW2(String s) {
+if (!s.trim().isEmpty()) {
+POCNHOW2 = new Double(s);
+}
+}
+
+protected final void initPOCNLRS1(String s) {
+if (!s.trim().isEmpty()) {
+POCNLRS1 = new Double(s);
+}
+}
+
+protected final void initPOCNLRS2(String s) {
+if (!s.trim().isEmpty()) {
+POCNLRS2 = new Double(s);
+}
+}
+
+protected final void initPOCNLRS3(String s) {
+if (!s.trim().isEmpty()) {
+POCNLRS3 = new Double(s);
+}
+}
+
+protected final void initPOCNLRS4(String s) {
+if (!s.trim().isEmpty()) {
+POCNLRS4 = new Double(s);
+}
+}
+
+protected final void initPOCNLRS5(String s) {
+if (!s.trim().isEmpty()) {
+POCNLRS5 = new Double(s);
+}
+}
+
+protected final void initPOCNLRS6(String s) {
+if (!s.trim().isEmpty()) {
+POCNLRS6 = new Double(s);
+}
+}
+
+protected final void initPOCNLRS7(String s) {
+if (!s.trim().isEmpty()) {
+POCNLRS7 = new Double(s);
+}
+}
+
+protected final void initPOCNLRS8(String s) {
+if (!s.trim().isEmpty()) {
+POCNLRS8 = new Double(s);
+}
+}
+
+protected final void initPOCNPLN1(String s) {
+if (!s.trim().isEmpty()) {
+POCNPLN1 = new Double(s);
+}
+}
+
+protected final void initPOCNPLN2(String s) {
+if (!s.trim().isEmpty()) {
+POCNPLN2 = new Double(s);
+}
+}
+
+protected final void initPOCNVOL1(String s) {
+if (!s.trim().isEmpty()) {
+POCNVOL1 = new Double(s);
+}
+}
+
+protected final void initPOCNVOL2(String s) {
+if (!s.trim().isEmpty()) {
+POCNVOL2 = new Double(s);
+}
+}
+
+protected final void initPOCONCH1(String s) {
+if (!s.trim().isEmpty()) {
+POCONCH1 = new Double(s);
+}
+}
+
+protected final void initPOCONCH2(String s) {
+if (!s.trim().isEmpty()) {
+POCONCH2 = new Double(s);
+}
+}
+
+protected final void initPOFAN10(String s) {
+if (!s.trim().isEmpty()) {
+POFAN10 = new Double(s);
+}
+}
+
+protected final void initPOFAN11(String s) {
+if (!s.trim().isEmpty()) {
+POFAN11 = new Double(s);
+}
+}
+
+protected final void initPOFAN12(String s) {
+if (!s.trim().isEmpty()) {
+POFAN12 = new Double(s);
+}
+}
+
+protected final void initPOFAN9(String s) {
+if (!s.trim().isEmpty()) {
+POFAN9 = new Double(s);
+}
+}
+
+protected final void initPOFAWH10(String s) {
+if (!s.trim().isEmpty()) {
+POFAWH10 = new Double(s);
+}
+}
+
+protected final void initPOFAWH11(String s) {
+if (!s.trim().isEmpty()) {
+POFAWH11 = new Double(s);
+}
+}
+
+protected final void initPOFAWH12(String s) {
+if (!s.trim().isEmpty()) {
+POFAWH12 = new Double(s);
+}
+}
+
+protected final void initPOFAWH3(String s) {
+if (!s.trim().isEmpty()) {
+POFAWH3 = new Double(s);
+}
+}
+
+protected final void initPOFAWH4(String s) {
+if (!s.trim().isEmpty()) {
+POFAWH4 = new Double(s);
+}
+}
+
+protected final void initPOFAWH5(String s) {
+if (!s.trim().isEmpty()) {
+POFAWH5 = new Double(s);
+}
+}
+
+protected final void initPOFAWH7(String s) {
+if (!s.trim().isEmpty()) {
+POFAWH7 = new Double(s);
+}
+}
+
+protected final void initPOFAWH8(String s) {
+if (!s.trim().isEmpty()) {
+POFAWH8 = new Double(s);
+}
+}
+
+protected final void initPOFAWH9(String s) {
+if (!s.trim().isEmpty()) {
+POFAWH9 = new Double(s);
+}
+}
+
+protected final void initPOLMUS10(String s) {
+if (!s.trim().isEmpty()) {
+POLMUS10 = new Double(s);
+}
+}
+
+protected final void initPOLMUS11(String s) {
+if (!s.trim().isEmpty()) {
+POLMUS11 = new Double(s);
+}
+}
+
+protected final void initPOLMUS12(String s) {
+if (!s.trim().isEmpty()) {
+POLMUS12 = new Double(s);
+}
+}
+
+protected final void initPOLMUS9(String s) {
+if (!s.trim().isEmpty()) {
+POLMUS9 = new Double(s);
+}
+}
+
+protected final void initPOLMVB2(String s) {
+if (!s.trim().isEmpty()) {
+POLMVB2 = new Double(s);
+}
+}
+
+protected final void initPOPENVB(String s) {
+if (!s.trim().isEmpty()) {
+POPENVB = new Double(s);
+}
+}
+
+protected final void initPOPENVB2(String s) {
+if (!s.trim().isEmpty()) {
+POPENVB2 = new Double(s);
+}
+}
+
+protected final void initPOPENVI(String s) {
+if (!s.trim().isEmpty()) {
+POPENVI = new Double(s);
+}
+}
+
+protected final void initPOPENVI2(String s) {
+if (!s.trim().isEmpty()) {
+POPENVI2 = new Double(s);
+}
+}
+
+protected final void initPOPYCH(String s) {
+if (!s.trim().isEmpty()) {
+POPYCH = new Double(s);
+}
+}
+
+protected final void initPPANEXM1(String s) {
+if (!s.trim().isEmpty()) {
+PPANEXM1 = new Double(s);
+}
+}
+
+protected final void initPPANEXM2(String s) {
+if (!s.trim().isEmpty()) {
+PPANEXM2 = new Double(s);
+}
+}
+
+protected final void initPPANEXM3(String s) {
+if (!s.trim().isEmpty()) {
+PPANEXM3 = new Double(s);
+}
+}
+
+protected final void initPPANEXY1(String s) {
+if (!s.trim().isEmpty()) {
+PPANEXY1 = new Double(s);
+}
+}
+
+protected final void initPPANEXY2(String s) {
+if (!s.trim().isEmpty()) {
+PPANEXY2 = new Double(s);
+}
+}
+
+protected final void initPPANEXY3(String s) {
+if (!s.trim().isEmpty()) {
+PPANEXY3 = new Double(s);
+}
+}
+
+protected final void initPPANLM1(String s) {
+if (!s.trim().isEmpty()) {
+PPANLM1 = new Double(s);
+}
+}
+
+protected final void initPPANLM2(String s) {
+if (!s.trim().isEmpty()) {
+PPANLM2 = new Double(s);
+}
+}
+
+protected final void initPPANLM3(String s) {
+if (!s.trim().isEmpty()) {
+PPANLM3 = new Double(s);
+}
+}
+
+protected final void initPPANN3(String s) {
+if (!s.trim().isEmpty()) {
+PPANN3 = new Double(s);
+}
+}
+
+protected final void initPPANN4(String s) {
+if (!s.trim().isEmpty()) {
+PPANN4 = new Double(s);
+}
+}
+
+protected final void initPPANN6(String s) {
+if (!s.trim().isEmpty()) {
+PPANN6 = new Double(s);
+}
+}
+
+protected final void initPPANN7(String s) {
+if (!s.trim().isEmpty()) {
+PPANN7 = new Double(s);
+}
+}
+
+protected final void initPPANN8(String s) {
+if (!s.trim().isEmpty()) {
+PPANN8 = new Double(s);
+}
+}
+
+protected final void initPPANVB1(String s) {
+if (!s.trim().isEmpty()) {
+PPANVB1 = new Double(s);
+}
+}
+
+protected final void initPPANVB2(String s) {
+if (!s.trim().isEmpty()) {
+PPANVB2 = new Double(s);
+}
+}
+
+protected final void initPPANVB3(String s) {
+if (!s.trim().isEmpty()) {
+PPANVB3 = new Double(s);
+}
+}
+
+protected final void initPPANVI1(String s) {
+if (!s.trim().isEmpty()) {
+PPANVI1 = new Double(s);
+}
+}
+
+protected final void initPPANVI2(String s) {
+if (!s.trim().isEmpty()) {
+PPANVI2 = new Double(s);
+}
+}
+
+protected final void initPPANVI3(String s) {
+if (!s.trim().isEmpty()) {
+PPANVI3 = new Double(s);
+}
+}
+
+protected final void initPPCNDRS12(String s) {
+if (!s.trim().isEmpty()) {
+PPCNDRS12 = new Double(s);
+}
+}
+
+protected final void initPPCNDRS13(String s) {
+if (!s.trim().isEmpty()) {
+PPCNDRS13 = new Double(s);
+}
+}
+
+protected final void initPPCNDRS14(String s) {
+if (!s.trim().isEmpty()) {
+PPCNDRS14 = new Double(s);
+}
+}
+
+protected final void initPPCNDRS15(String s) {
+if (!s.trim().isEmpty()) {
+PPCNDRS15 = new Double(s);
+}
+}
+
+protected final void initPPCNDRS16(String s) {
+if (!s.trim().isEmpty()) {
+PPCNDRS16 = new Double(s);
+}
+}
+
+protected final void initPPCNDRS17(String s) {
+if (!s.trim().isEmpty()) {
+PPCNDRS17 = new Double(s);
+}
+}
+
+protected final void initPPCNDRS18(String s) {
+if (!s.trim().isEmpty()) {
+PPCNDRS18 = new Double(s);
+}
+}
+
+protected final void initPPCNDRS20(String s) {
+if (!s.trim().isEmpty()) {
+PPCNDRS20 = new Double(s);
+}
+}
+
+protected final void initPPCNDRS21(String s) {
+if (!s.trim().isEmpty()) {
+PPCNDRS21 = new Double(s);
+}
+}
+
+protected final void initPPCNDRS22(String s) {
+if (!s.trim().isEmpty()) {
+PPCNDRS22 = new Double(s);
+}
+}
+
+protected final void initPPCNDRS23(String s) {
+if (!s.trim().isEmpty()) {
+PPCNDRS23 = new Double(s);
+}
+}
+
+protected final void initPPCNDRS24(String s) {
+if (!s.trim().isEmpty()) {
+PPCNDRS24 = new Double(s);
+}
+}
+
+protected final void initPPCNDRS3(String s) {
+if (!s.trim().isEmpty()) {
+PPCNDRS3 = new Double(s);
+}
+}
+
+protected final void initPPCNDRS4(String s) {
+if (!s.trim().isEmpty()) {
+PPCNDRS4 = new Double(s);
+}
+}
+
+protected final void initPPCNDRS5(String s) {
+if (!s.trim().isEmpty()) {
+PPCNDRS5 = new Double(s);
+}
+}
+
+protected final void initPPCNDRS6(String s) {
+if (!s.trim().isEmpty()) {
+PPCNDRS6 = new Double(s);
+}
+}
+
+protected final void initPPCNDRS7(String s) {
+if (!s.trim().isEmpty()) {
+PPCNDRS7 = new Double(s);
+}
+}
+
+protected final void initPPCNDRS8(String s) {
+if (!s.trim().isEmpty()) {
+PPCNDRS8 = new Double(s);
+}
+}
+
+protected final void initPPCNDRS9(String s) {
+if (!s.trim().isEmpty()) {
+PPCNDRS9 = new Double(s);
+}
+}
+
+protected final void initPPCNHO___W3(String s) {
+if (!s.trim().isEmpty()) {
+PPCNHO___W3 = new Double(s);
+}
+}
+
+protected final void initPPCNLRS10(String s) {
+if (!s.trim().isEmpty()) {
+PPCNLRS10 = new Double(s);
+}
+}
+
+protected final void initPPCNLRS11(String s) {
+if (!s.trim().isEmpty()) {
+PPCNLRS11 = new Double(s);
+}
+}
+
+protected final void initPPCNLRS12(String s) {
+if (!s.trim().isEmpty()) {
+PPCNLRS12 = new Double(s);
+}
+}
+
+protected final void initPPCNLRS4(String s) {
+if (!s.trim().isEmpty()) {
+PPCNLRS4 = new Double(s);
+}
+}
+
+protected final void initPPCNLRS6(String s) {
+if (!s.trim().isEmpty()) {
+PPCNLRS6 = new Double(s);
+}
+}
+
+protected final void initPPCNLRS7(String s) {
+if (!s.trim().isEmpty()) {
+PPCNLRS7 = new Double(s);
+}
+}
+
+protected final void initPPCNLRS8(String s) {
+if (!s.trim().isEmpty()) {
+PPCNLRS8 = new Double(s);
+}
+}
+
+protected final void initPPCNLRS9(String s) {
+if (!s.trim().isEmpty()) {
+PPCNLRS9 = new Double(s);
+}
+}
+
+protected final void initPPCNPLN1(String s) {
+if (!s.trim().isEmpty()) {
+PPCNPLN1 = new Double(s);
+}
+}
+
+protected final void initPPCNPLN2(String s) {
+if (!s.trim().isEmpty()) {
+PPCNPLN2 = new Double(s);
+}
+}
+
+protected final void initPPCNPLN3(String s) {
+if (!s.trim().isEmpty()) {
+PPCNPLN3 = new Double(s);
+}
+}
+
+protected final void initPPCONCH(String s) {
+if (!s.trim().isEmpty()) {
+PPCONCH = new Double(s);
+}
+}
+
+protected final void initPPDRINC3(String s) {
+if (!s.trim().isEmpty()) {
+PPDRINC3 = new Double(s);
+}
+}
+
+protected final void initPPDRINCB(String s) {
+if (!s.trim().isEmpty()) {
+PPDRINCB = new Double(s);
+}
+}
+
+protected final void initPPDRINCB3(String s) {
+if (!s.trim().isEmpty()) {
+PPDRINCB3 = new Double(s);
+}
+}
+
+protected final void initPPDRVB3(String s) {
+if (!s.trim().isEmpty()) {
+PPDRVB3 = new Double(s);
+}
+}
+
+protected final void initPPDRVI3(String s) {
+if (!s.trim().isEmpty()) {
+PPDRVI3 = new Double(s);
+}
+}
+
+protected final void initPPFAAG2(String s) {
+if (!s.trim().isEmpty()) {
+PPFAAG2 = new Double(s);
+}
+}
+
+protected final void initPPFAAG3(String s) {
+if (!s.trim().isEmpty()) {
+PPFAAG3 = new Double(s);
+}
+}
+
+protected final void initPPFAN10(String s) {
+if (!s.trim().isEmpty()) {
+PPFAN10 = new Double(s);
+}
+}
+
+protected final void initPPFAN12(String s) {
+if (!s.trim().isEmpty()) {
+PPFAN12 = new Double(s);
+}
+}
+
+protected final void initPPFAN13(String s) {
+if (!s.trim().isEmpty()) {
+PPFAN13 = new Double(s);
+}
+}
+
+protected final void initPPFAN14(String s) {
+if (!s.trim().isEmpty()) {
+PPFAN14 = new Double(s);
+}
+}
+
+protected final void initPPFAN15(String s) {
+if (!s.trim().isEmpty()) {
+PPFAN15 = new Double(s);
+}
+}
+
+protected final void initPPFAN3(String s) {
+if (!s.trim().isEmpty()) {
+PPFAN3 = new Double(s);
+}
+}
+
+protected final void initPPFAN4(String s) {
+if (!s.trim().isEmpty()) {
+PPFAN4 = new Double(s);
+}
+}
+
+protected final void initPPFAN5(String s) {
+if (!s.trim().isEmpty()) {
+PPFAN5 = new Double(s);
+}
+}
+
+protected final void initPPFAN7(String s) {
+if (!s.trim().isEmpty()) {
+PPFAN7 = new Double(s);
+}
+}
+
+protected final void initPPFAN8(String s) {
+if (!s.trim().isEmpty()) {
+PPFAN8 = new Double(s);
+}
+}
+
+protected final void initPPFAN9(String s) {
+if (!s.trim().isEmpty()) {
+PPFAN9 = new Double(s);
+}
+}
+
+protected final void initPPFAWH10(String s) {
+if (!s.trim().isEmpty()) {
+PPFAWH10 = new Double(s);
+}
+}
+
+protected final void initPPFAWH11(String s) {
+if (!s.trim().isEmpty()) {
+PPFAWH11 = new Double(s);
+}
+}
+
+protected final void initPPFAWH12(String s) {
+if (!s.trim().isEmpty()) {
+PPFAWH12 = new Double(s);
+}
+}
+
+protected final void initPPFAWH13(String s) {
+if (!s.trim().isEmpty()) {
+PPFAWH13 = new Double(s);
+}
+}
+
+protected final void initPPFAWH14(String s) {
+if (!s.trim().isEmpty()) {
+PPFAWH14 = new Double(s);
+}
+}
+
+protected final void initPPFAWH16(String s) {
+if (!s.trim().isEmpty()) {
+PPFAWH16 = new Double(s);
+}
+}
+
+protected final void initPPFAWH17(String s) {
+if (!s.trim().isEmpty()) {
+PPFAWH17 = new Double(s);
+}
+}
+
+protected final void initPPFAWH18(String s) {
+if (!s.trim().isEmpty()) {
+PPFAWH18 = new Double(s);
+}
+}
+
+protected final void initPPFAWH19(String s) {
+if (!s.trim().isEmpty()) {
+PPFAWH19 = new Double(s);
+}
+}
+
+protected final void initPPFAWH20(String s) {
+if (!s.trim().isEmpty()) {
+PPFAWH20 = new Double(s);
+}
+}
+
+protected final void initPPFAWH21(String s) {
+if (!s.trim().isEmpty()) {
+PPFAWH21 = new Double(s);
+}
+}
+
+protected final void initPPFAWH4(String s) {
+if (!s.trim().isEmpty()) {
+PPFAWH4 = new Double(s);
+}
+}
+
+protected final void initPPFAWH5(String s) {
+if (!s.trim().isEmpty()) {
+PPFAWH5 = new Double(s);
+}
+}
+
+protected final void initPPFAWH7(String s) {
+if (!s.trim().isEmpty()) {
+PPFAWH7 = new Double(s);
+}
+}
+
+protected final void initPPFAWH8(String s) {
+if (!s.trim().isEmpty()) {
+PPFAWH8 = new Double(s);
+}
+}
+
+protected final void initPPFAWH9(String s) {
+if (!s.trim().isEmpty()) {
+PPFAWH9 = new Double(s);
+}
+}
+
+protected final void initPPIRNO1(String s) {
+if (!s.trim().isEmpty()) {
+PPIRNO1 = new Double(s);
+}
+}
+
+protected final void initPPIRNO2(String s) {
+if (!s.trim().isEmpty()) {
+PPIRNO2 = new Double(s);
+}
+}
+
+protected final void initPPIRNO3(String s) {
+if (!s.trim().isEmpty()) {
+PPIRNO3 = new Double(s);
+}
+}
+
+protected final void initPPIRRA1(String s) {
+if (!s.trim().isEmpty()) {
+PPIRRA1 = new Double(s);
+}
+}
+
+protected final void initPPIRRA2(String s) {
+if (!s.trim().isEmpty()) {
+PPIRRA2 = new Double(s);
+}
+}
+
+protected final void initPPIRRA3(String s) {
+if (!s.trim().isEmpty()) {
+PPIRRA3 = new Double(s);
+}
+}
+
+protected final void initPPIRRF1(String s) {
+if (!s.trim().isEmpty()) {
+PPIRRF1 = new Double(s);
+}
+}
+
+protected final void initPPIRRF2(String s) {
+if (!s.trim().isEmpty()) {
+PPIRRF2 = new Double(s);
+}
+}
+
+protected final void initPPIRRF3(String s) {
+if (!s.trim().isEmpty()) {
+PPIRRF3 = new Double(s);
+}
+}
+
+protected final void initPPIRRH1(String s) {
+if (!s.trim().isEmpty()) {
+PPIRRH1 = new Double(s);
+}
+}
+
+protected final void initPPIRRH2(String s) {
+if (!s.trim().isEmpty()) {
+PPIRRH2 = new Double(s);
+}
+}
+
+protected final void initPPIRRH3(String s) {
+if (!s.trim().isEmpty()) {
+PPIRRH3 = new Double(s);
+}
+}
+
+protected final void initPPIRRY1(String s) {
+if (!s.trim().isEmpty()) {
+PPIRRY1 = new Double(s);
+}
+}
+
+protected final void initPPIRRY2(String s) {
+if (!s.trim().isEmpty()) {
+PPIRRY2 = new Double(s);
+}
+}
+
+protected final void initPPIRRY3(String s) {
+if (!s.trim().isEmpty()) {
+PPIRRY3 = new Double(s);
+}
+}
+
+protected final void initPPLASY1(String s) {
+if (!s.trim().isEmpty()) {
+PPLASY1 = new Double(s);
+}
+}
+
+protected final void initPPLASY2(String s) {
+if (!s.trim().isEmpty()) {
+PPLASY2 = new Double(s);
+}
+}
+
+protected final void initPPLASY3(String s) {
+if (!s.trim().isEmpty()) {
+PPLASY3 = new Double(s);
+}
+}
+
+protected final void initPPNINS1(String s) {
+if (!s.trim().isEmpty()) {
+PPNINS1 = new Double(s);
+}
+}
+
+protected final void initPPNINS2(String s) {
+if (!s.trim().isEmpty()) {
+PPNINS2 = new Double(s);
+}
+}
+
+protected final void initPPNINS3(String s) {
+if (!s.trim().isEmpty()) {
+PPNINS3 = new Double(s);
+}
+}
+
+protected final void initPPRGAM(String s) {
+if (!s.trim().isEmpty()) {
+PPRGAM = new Double(s);
+}
+}
+
+protected final void initPPRGFG3(String s) {
+if (!s.trim().isEmpty()) {
+PPRGFG3 = new Double(s);
+}
+}
+
+protected final void initPPRGFR3(String s) {
+if (!s.trim().isEmpty()) {
+PPRGFR3 = new Double(s);
+}
+}
+
+protected final void initPPYSTP15(String s) {
+if (!s.trim().isEmpty()) {
+PPYSTP15 = new Double(s);
+}
+}
+
+protected final void initPPYSTP16(String s) {
+if (!s.trim().isEmpty()) {
+PPYSTP16 = new Double(s);
+}
+}
+
+protected final void initPPYSTP17(String s) {
+if (!s.trim().isEmpty()) {
+PPYSTP17 = new Double(s);
+}
+}
+
+protected final void initPPYSTP18(String s) {
+if (!s.trim().isEmpty()) {
+PPYSTP18 = new Double(s);
+}
+}
+
+protected final void initPPYSTP20(String s) {
+if (!s.trim().isEmpty()) {
+PPYSTP20 = new Double(s);
+}
+}
+
+protected final void initPPYSTP21(String s) {
+if (!s.trim().isEmpty()) {
+PPYSTP21 = new Double(s);
+}
+}
+
+protected final void initPPYSTP3(String s) {
+if (!s.trim().isEmpty()) {
+PPYSTP3 = new Double(s);
+}
+}
+
+protected final void initPPYSTP4(String s) {
+if (!s.trim().isEmpty()) {
+PPYSTP4 = new Double(s);
+}
+}
+
+protected final void initPPYSTP5(String s) {
+if (!s.trim().isEmpty()) {
+PPYSTP5 = new Double(s);
+}
+}
+
+protected final void initPPYSTP6(String s) {
+if (!s.trim().isEmpty()) {
+PPYSTP6 = new Double(s);
+}
+}
+
+protected final void initPPYSTP7(String s) {
+if (!s.trim().isEmpty()) {
+PPYSTP7 = new Double(s);
+}
+}
+
+protected final void initPRCRELIG(String s) {
+if (!s.trim().isEmpty()) {
+PRCRELIG = new Double(s);
+}
+}
+
+protected final void initPROXPERS(String s) {
+if (!s.trim().isEmpty()) {
+PROXPERS = new Double(s);
+}
+}
+
+protected final void initPSCHY_F(String s) {
+if (!s.trim().isEmpty()) {
+PSCHY_F = new Double(s);
+}
+}
+
+protected final void initPSCHY_S(String s) {
+if (!s.trim().isEmpty()) {
+PSCHY_S = new Double(s);
+}
+}
+
+protected final void initPSCHY_T(String s) {
+if (!s.trim().isEmpty()) {
+PSCHY_T = new Double(s);
+}
+}
+
+protected final void initPSTYPE1(String s) {
+if (!s.trim().isEmpty()) {
+PSTYPE1 = new Double(s);
+}
+}
+
+protected final void initPSTYPE10(String s) {
+if (!s.trim().isEmpty()) {
+PSTYPE10 = new Double(s);
+}
+}
+
+protected final void initPSTYPE11(String s) {
+if (!s.trim().isEmpty()) {
+PSTYPE11 = new Double(s);
+}
+}
+
+protected final void initPSTYPE12(String s) {
+if (!s.trim().isEmpty()) {
+PSTYPE12 = new Double(s);
+}
+}
+
+protected final void initPSTYPE13(String s) {
+if (!s.trim().isEmpty()) {
+PSTYPE13 = new Double(s);
+}
+}
+
+protected final void initPSTYPE14(String s) {
+if (!s.trim().isEmpty()) {
+PSTYPE14 = new Double(s);
+}
+}
+
+protected final void initPSTYPE15(String s) {
+if (!s.trim().isEmpty()) {
+PSTYPE15 = new Double(s);
+}
+}
+
+protected final void initPSTYPE16(String s) {
+if (!s.trim().isEmpty()) {
+PSTYPE16 = new Double(s);
+}
+}
+
+protected final void initPSTYPE17(String s) {
+if (!s.trim().isEmpty()) {
+PSTYPE17 = new Double(s);
+}
+}
+
+protected final void initPSTYPE18(String s) {
+if (!s.trim().isEmpty()) {
+PSTYPE18 = new Double(s);
+}
+}
+
+protected final void initPSTYPE19(String s) {
+if (!s.trim().isEmpty()) {
+PSTYPE19 = new Double(s);
+}
+}
+
+protected final void initPSTYPE2(String s) {
+if (!s.trim().isEmpty()) {
+PSTYPE2 = new Double(s);
+}
+}
+
+protected final void initPSTYPE20(String s) {
+if (!s.trim().isEmpty()) {
+PSTYPE20 = new Double(s);
+}
+}
+
+protected final void initPSTYPE21(String s) {
+if (!s.trim().isEmpty()) {
+PSTYPE21 = new Double(s);
+}
+}
+
+protected final void initPSTYPE3(String s) {
+if (!s.trim().isEmpty()) {
+PSTYPE3 = new Double(s);
+}
+}
+
+protected final void initPSTYPE4(String s) {
+if (!s.trim().isEmpty()) {
+PSTYPE4 = new Double(s);
+}
+}
+
+protected final void initPSTYPE5(String s) {
+if (!s.trim().isEmpty()) {
+PSTYPE5 = new Double(s);
+}
+}
+
+protected final void initPSTYPE6(String s) {
+if (!s.trim().isEmpty()) {
+PSTYPE6 = new Double(s);
+}
+}
+
+protected final void initPSTYPE7(String s) {
+if (!s.trim().isEmpty()) {
+PSTYPE7 = new Double(s);
+}
+}
+
+protected final void initPSTYPE8(String s) {
+if (!s.trim().isEmpty()) {
+PSTYPE8 = new Double(s);
+}
+}
+
+protected final void initPSTYPE9(String s) {
+if (!s.trim().isEmpty()) {
+PSTYPE9 = new Double(s);
+}
+}
+
+protected final void initREGLRPY3(String s) {
+if (!s.trim().isEmpty()) {
+REGLRPY3 = new Double(s);
+}
+}
+
+protected final void initREGLRPY3_I(String s) {
+if (!s.trim().isEmpty()) {
+REGLRPY3_I = new Double(s);
+}
+}
+
+protected final void initREGLRPY3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+REGLRPY3_IFLAG = new Double(s);
+}
+}
+
+protected final void initREGLRPY4(String s) {
+if (!s.trim().isEmpty()) {
+REGLRPY4 = new Double(s);
+}
+}
+
+protected final void initREGLRPY4_I(String s) {
+if (!s.trim().isEmpty()) {
+REGLRPY4_I = new Double(s);
+}
+}
+
+protected final void initREGLRPY4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+REGLRPY4_IFLAG = new Double(s);
+}
+}
+
+protected final void initREGLRPY5(String s) {
+if (!s.trim().isEmpty()) {
+REGLRPY5 = new Double(s);
+}
+}
+
+protected final void initREGLRPY5_I(String s) {
+if (!s.trim().isEmpty()) {
+REGLRPY5_I = new Double(s);
+}
+}
+
+protected final void initREGLRPY5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+REGLRPY5_IFLAG = new Double(s);
+}
+}
+
+protected final void initRELIGE(String s) {
+if (!s.trim().isEmpty()) {
+RELIGE = new Double(s);
+}
+}
+
+protected final void initRELIGS(String s) {
+if (!s.trim().isEmpty()) {
+RELIGS = new Double(s);
+}
+}
+
+protected final void initRELIGW(String s) {
+if (!s.trim().isEmpty()) {
+RELIGW = new Double(s);
+}
+}
+
+protected final void initRF(String s) {
+if (!s.trim().isEmpty()) {
+RF = new Double(s);
+}
+}
+
+protected final void initRPCRET1(String s) {
+if (!s.trim().isEmpty()) {
+RPCRET1 = new Double(s);
+}
+}
+
+protected final void initRPCRET2(String s) {
+if (!s.trim().isEmpty()) {
+RPCRET2 = new Double(s);
+}
+}
+
+protected final void initRPCRET3(String s) {
+if (!s.trim().isEmpty()) {
+RPCRET3 = new Double(s);
+}
+}
+
+protected final void initRPDBCAL_F(String s) {
+if (!s.trim().isEmpty()) {
+RPDBCAL_F = new Double(s);
+}
+}
+
+protected final void initRS(String s) {
+if (!s.trim().isEmpty()) {
+RS = new Double(s);
+}
+}
+
+protected final void initSCAC4_I(String s) {
+if (!s.trim().isEmpty()) {
+SCAC4_I = new Double(s);
+}
+}
+
+protected final void initSCAC5_I(String s) {
+if (!s.trim().isEmpty()) {
+SCAC5_I = new Double(s);
+}
+}
+
+protected final void initSENO(String s) {
+if (!s.trim().isEmpty()) {
+SENO = new Double(s);
+}
+}
+
+protected final void initSOA1(String s) {
+if (!s.trim().isEmpty()) {
+SOA1 = s;
+}
+}
+
+protected final void initSOA2(String s) {
+if (!s.trim().isEmpty()) {
+SOA2 = s;
+}
+}
+
+protected final void initSOC2000(String s) {
+if (!s.trim().isEmpty()) {
+SOC2000 = new Double(s);
+}
+}
+
+protected final void initSPASAF_IORIG(String s) {
+if (!s.trim().isEmpty()) {
+SPASAF_IORIG = new Double(s);
+}
+}
+
+protected final void initSPECAMT10(String s) {
+if (!s.trim().isEmpty()) {
+SPECAMT10 = new Double(s);
+}
+}
+
+protected final void initSPECIAL01(String s) {
+if (!s.trim().isEmpty()) {
+SPECIAL01 = new Double(s);
+}
+}
+
+protected final void initSPECIAL02(String s) {
+if (!s.trim().isEmpty()) {
+SPECIAL02 = new Double(s);
+}
+}
+
+protected final void initSPECIAL03(String s) {
+if (!s.trim().isEmpty()) {
+SPECIAL03 = new Double(s);
+}
+}
+
+protected final void initSPECIAL04(String s) {
+if (!s.trim().isEmpty()) {
+SPECIAL04 = new Double(s);
+}
+}
+
+protected final void initSPECIAL05(String s) {
+if (!s.trim().isEmpty()) {
+SPECIAL05 = new Double(s);
+}
+}
+
+protected final void initSPECIAL06(String s) {
+if (!s.trim().isEmpty()) {
+SPECIAL06 = new Double(s);
+}
+}
+
+protected final void initSPECIAL07(String s) {
+if (!s.trim().isEmpty()) {
+SPECIAL07 = new Double(s);
+}
+}
+
+protected final void initSPECIAL08(String s) {
+if (!s.trim().isEmpty()) {
+SPECIAL08 = new Double(s);
+}
+}
+
+protected final void initSPECIAL09(String s) {
+if (!s.trim().isEmpty()) {
+SPECIAL09 = new Double(s);
+}
+}
+
+protected final void initSPECIAL10(String s) {
+if (!s.trim().isEmpty()) {
+SPECIAL10 = new Double(s);
+}
+}
+
+protected final void initSPECINCL1(String s) {
+if (!s.trim().isEmpty()) {
+SPECINCL1 = new Double(s);
+}
+}
+
+protected final void initSPECINCL10(String s) {
+if (!s.trim().isEmpty()) {
+SPECINCL10 = new Double(s);
+}
+}
+
+protected final void initSPECINCL2(String s) {
+if (!s.trim().isEmpty()) {
+SPECINCL2 = new Double(s);
+}
+}
+
+protected final void initSPECINCL3(String s) {
+if (!s.trim().isEmpty()) {
+SPECINCL3 = new Double(s);
+}
+}
+
+protected final void initSPECINCL4(String s) {
+if (!s.trim().isEmpty()) {
+SPECINCL4 = new Double(s);
+}
+}
+
+protected final void initSPECINCL5(String s) {
+if (!s.trim().isEmpty()) {
+SPECINCL5 = new Double(s);
+}
+}
+
+protected final void initSPECINCL6(String s) {
+if (!s.trim().isEmpty()) {
+SPECINCL6 = new Double(s);
+}
+}
+
+protected final void initSPECINCL7(String s) {
+if (!s.trim().isEmpty()) {
+SPECINCL7 = new Double(s);
+}
+}
+
+protected final void initSPECINCL8(String s) {
+if (!s.trim().isEmpty()) {
+SPECINCL8 = new Double(s);
+}
+}
+
+protected final void initSPECINCL9(String s) {
+if (!s.trim().isEmpty()) {
+SPECINCL9 = new Double(s);
+}
+}
+
+protected final void initSPECPD1(String s) {
+if (!s.trim().isEmpty()) {
+SPECPD1 = new Double(s);
+}
+}
+
+protected final void initSPECPD10(String s) {
+if (!s.trim().isEmpty()) {
+SPECPD10 = new Double(s);
+}
+}
+
+protected final void initSPECPD2(String s) {
+if (!s.trim().isEmpty()) {
+SPECPD2 = new Double(s);
+}
+}
+
+protected final void initSPECPD3(String s) {
+if (!s.trim().isEmpty()) {
+SPECPD3 = new Double(s);
+}
+}
+
+protected final void initSPECPD4(String s) {
+if (!s.trim().isEmpty()) {
+SPECPD4 = new Double(s);
+}
+}
+
+protected final void initSPECPD5(String s) {
+if (!s.trim().isEmpty()) {
+SPECPD5 = new Double(s);
+}
+}
+
+protected final void initSPECPD6(String s) {
+if (!s.trim().isEmpty()) {
+SPECPD6 = new Double(s);
+}
+}
+
+protected final void initSPECPD7(String s) {
+if (!s.trim().isEmpty()) {
+SPECPD7 = new Double(s);
+}
+}
+
+protected final void initSPECPD8(String s) {
+if (!s.trim().isEmpty()) {
+SPECPD8 = new Double(s);
+}
+}
+
+protected final void initSPECPD9(String s) {
+if (!s.trim().isEmpty()) {
+SPECPD9 = new Double(s);
+}
+}
+
+protected final void initSPECWHEN1(String s) {
+if (!s.trim().isEmpty()) {
+SPECWHEN1 = new Double(s);
+}
+}
+
+protected final void initSPECWHEN10(String s) {
+if (!s.trim().isEmpty()) {
+SPECWHEN10 = new Double(s);
+}
+}
+
+protected final void initSPECWHEN2(String s) {
+if (!s.trim().isEmpty()) {
+SPECWHEN2 = new Double(s);
+}
+}
+
+protected final void initSPECWHEN3(String s) {
+if (!s.trim().isEmpty()) {
+SPECWHEN3 = new Double(s);
+}
+}
+
+protected final void initSPECWHEN4(String s) {
+if (!s.trim().isEmpty()) {
+SPECWHEN4 = new Double(s);
+}
+}
+
+protected final void initSPECWHEN5(String s) {
+if (!s.trim().isEmpty()) {
+SPECWHEN5 = new Double(s);
+}
+}
+
+protected final void initSPECWHEN6(String s) {
+if (!s.trim().isEmpty()) {
+SPECWHEN6 = new Double(s);
+}
+}
+
+protected final void initSPECWHEN7(String s) {
+if (!s.trim().isEmpty()) {
+SPECWHEN7 = new Double(s);
+}
+}
+
+protected final void initSPECWHEN8(String s) {
+if (!s.trim().isEmpty()) {
+SPECWHEN8 = new Double(s);
+}
+}
+
+protected final void initSPECWHEN9(String s) {
+if (!s.trim().isEmpty()) {
+SPECWHEN9 = new Double(s);
+}
+}
+
+protected final void initSPENDM(String s) {
+if (!s.trim().isEmpty()) {
+SPENDM = new Double(s);
+}
+}
+
+protected final void initSTATSWARD(String s) {
+if (!s.trim().isEmpty()) {
+STATSWARD = s;
+}
+}
+
+protected final void initSTATUS(String s) {
+if (!s.trim().isEmpty()) {
+STATUS = new Double(s);
+}
+}
+
+protected final void initTACC3(String s) {
+if (!s.trim().isEmpty()) {
+TACC3 = new Double(s);
+}
+}
+
+protected final void initTADDVB3(String s) {
+if (!s.trim().isEmpty()) {
+TADDVB3 = new Double(s);
+}
+}
+
+protected final void initTADDVL(String s) {
+if (!s.trim().isEmpty()) {
+TADDVL = new Double(s);
+}
+}
+
+protected final void initTADDVL3(String s) {
+if (!s.trim().isEmpty()) {
+TADDVL3 = new Double(s);
+}
+}
+
+protected final void initTBCAP3(String s) {
+if (!s.trim().isEmpty()) {
+TBCAP3 = new Double(s);
+}
+}
+
+protected final void initTBCAPY3(String s) {
+if (!s.trim().isEmpty()) {
+TBCAPY3 = new Double(s);
+}
+}
+
+protected final void initTBCKNO3(String s) {
+if (!s.trim().isEmpty()) {
+TBCKNO3 = new Double(s);
+}
+}
+
+protected final void initTBEN13(String s) {
+if (!s.trim().isEmpty()) {
+TBEN13 = new Double(s);
+}
+}
+
+protected final void initTBEN14(String s) {
+if (!s.trim().isEmpty()) {
+TBEN14 = new Double(s);
+}
+}
+
+protected final void initTBEN15(String s) {
+if (!s.trim().isEmpty()) {
+TBEN15 = new Double(s);
+}
+}
+
+protected final void initTBEN16(String s) {
+if (!s.trim().isEmpty()) {
+TBEN16 = new Double(s);
+}
+}
+
+protected final void initTBEN17(String s) {
+if (!s.trim().isEmpty()) {
+TBEN17 = new Double(s);
+}
+}
+
+protected final void initTBEN18(String s) {
+if (!s.trim().isEmpty()) {
+TBEN18 = new Double(s);
+}
+}
+
+protected final void initTBEN19(String s) {
+if (!s.trim().isEmpty()) {
+TBEN19 = new Double(s);
+}
+}
+
+protected final void initTBEN20(String s) {
+if (!s.trim().isEmpty()) {
+TBEN20 = new Double(s);
+}
+}
+
+protected final void initTBEN21(String s) {
+if (!s.trim().isEmpty()) {
+TBEN21 = new Double(s);
+}
+}
+
+protected final void initTBEN22(String s) {
+if (!s.trim().isEmpty()) {
+TBEN22 = new Double(s);
+}
+}
+
+protected final void initTBEN23(String s) {
+if (!s.trim().isEmpty()) {
+TBEN23 = new Double(s);
+}
+}
+
+protected final void initTBEN24(String s) {
+if (!s.trim().isEmpty()) {
+TBEN24 = new Double(s);
+}
+}
+
+protected final void initTBEN6(String s) {
+if (!s.trim().isEmpty()) {
+TBEN6 = new Double(s);
+}
+}
+
+protected final void initTBEN7(String s) {
+if (!s.trim().isEmpty()) {
+TBEN7 = new Double(s);
+}
+}
+
+protected final void initTBEN8(String s) {
+if (!s.trim().isEmpty()) {
+TBEN8 = new Double(s);
+}
+}
+
+protected final void initTBINC3(String s) {
+if (!s.trim().isEmpty()) {
+TBINC3 = new Double(s);
+}
+}
+
+protected final void initTBREC3(String s) {
+if (!s.trim().isEmpty()) {
+TBREC3 = new Double(s);
+}
+}
+
+protected final void initTBRECB3(String s) {
+if (!s.trim().isEmpty()) {
+TBRECB3 = new Double(s);
+}
+}
+
+protected final void initTBVALB3(String s) {
+if (!s.trim().isEmpty()) {
+TBVALB3 = new Double(s);
+}
+}
+
+protected final void initTDUP3(String s) {
+if (!s.trim().isEmpty()) {
+TDUP3 = new Double(s);
+}
+}
+
+protected final void initTDUPA3(String s) {
+if (!s.trim().isEmpty()) {
+TDUPA3 = new Double(s);
+}
+}
+
+protected final void initTJNT5(String s) {
+if (!s.trim().isEmpty()) {
+TJNT5 = new Double(s);
+}
+}
+
+protected final void initTJNT6(String s) {
+if (!s.trim().isEmpty()) {
+TJNT6 = new Double(s);
+}
+}
+
+protected final void initTRAINEE(String s) {
+if (!s.trim().isEmpty()) {
+TRAINEE = new Double(s);
+}
+}
+
+protected final void initTSNO3(String s) {
+if (!s.trim().isEmpty()) {
+TSNO3 = new Double(s);
+}
+}
+
+protected final void initTVAL3(String s) {
+if (!s.trim().isEmpty()) {
+TVAL3 = new Double(s);
+}
+}
+
+protected final void initTVALB3(String s) {
+if (!s.trim().isEmpty()) {
+TVALB3 = new Double(s);
+}
+}
+
+protected final void initTWHO10(String s) {
+if (!s.trim().isEmpty()) {
+TWHO10 = new Double(s);
+}
+}
+
+protected final void initTWHO11(String s) {
+if (!s.trim().isEmpty()) {
+TWHO11 = new Double(s);
+}
+}
+
+protected final void initTWHO12(String s) {
+if (!s.trim().isEmpty()) {
+TWHO12 = new Double(s);
+}
+}
+
+protected final void initTWHO13(String s) {
+if (!s.trim().isEmpty()) {
+TWHO13 = new Double(s);
+}
+}
+
+protected final void initTWHO14(String s) {
+if (!s.trim().isEmpty()) {
+TWHO14 = new Double(s);
+}
+}
+
+protected final void initTWHO15(String s) {
+if (!s.trim().isEmpty()) {
+TWHO15 = new Double(s);
+}
+}
+
+protected final void initTWHO16(String s) {
+if (!s.trim().isEmpty()) {
+TWHO16 = new Double(s);
+}
+}
+
+protected final void initTWHO17(String s) {
+if (!s.trim().isEmpty()) {
+TWHO17 = new Double(s);
+}
+}
+
+protected final void initTWHO18(String s) {
+if (!s.trim().isEmpty()) {
+TWHO18 = new Double(s);
+}
+}
+
+protected final void initTWHO3(String s) {
+if (!s.trim().isEmpty()) {
+TWHO3 = new Double(s);
+}
+}
+
+protected final void initTWHO4(String s) {
+if (!s.trim().isEmpty()) {
+TWHO4 = new Double(s);
+}
+}
+
+protected final void initTWHO5(String s) {
+if (!s.trim().isEmpty()) {
+TWHO5 = new Double(s);
+}
+}
+
+protected final void initTWHO6(String s) {
+if (!s.trim().isEmpty()) {
+TWHO6 = new Double(s);
+}
+}
+
+protected final void initTWHO9(String s) {
+if (!s.trim().isEmpty()) {
+TWHO9 = new Double(s);
+}
+}
+
+protected final void initULAND10(String s) {
+if (!s.trim().isEmpty()) {
+ULAND10 = new Double(s);
+}
+}
+
+protected final void initULAND11(String s) {
+if (!s.trim().isEmpty()) {
+ULAND11 = new Double(s);
+}
+}
+
+protected final void initULAND12(String s) {
+if (!s.trim().isEmpty()) {
+ULAND12 = new Double(s);
+}
+}
+
+protected final void initULAND16(String s) {
+if (!s.trim().isEmpty()) {
+ULAND16 = new Double(s);
+}
+}
+
+protected final void initULAND17(String s) {
+if (!s.trim().isEmpty()) {
+ULAND17 = new Double(s);
+}
+}
+
+protected final void initULAND18(String s) {
+if (!s.trim().isEmpty()) {
+ULAND18 = new Double(s);
+}
+}
+
+protected final void initUPROP1_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+UPROP1_IFLAG = new Double(s);
+}
+}
+
+protected final void initUPROP2_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+UPROP2_IFLAG = new Double(s);
+}
+}
+
+protected final void initUPROP3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+UPROP3_IFLAG = new Double(s);
+}
+}
+
+protected final void initUPROP4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+UPROP4_IFLAG = new Double(s);
+}
+}
+
+protected final void initUPROP5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+UPROP5_IFLAG = new Double(s);
+}
+}
+
+protected final void initUPROP6_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+UPROP6_IFLAG = new Double(s);
+}
+}
+
+protected final void initUPRSH13(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH13 = new Double(s);
+}
+}
+
+protected final void initUPRSH14(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH14 = new Double(s);
+}
+}
+
+protected final void initUPRSH15(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH15 = new Double(s);
+}
+}
+
+protected final void initUPRSH16(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH16 = new Double(s);
+}
+}
+
+protected final void initUPRSH17(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH17 = new Double(s);
+}
+}
+
+protected final void initUPRSH18(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH18 = new Double(s);
+}
+}
+
+protected final void initUPRSH19(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH19 = new Double(s);
+}
+}
+
+protected final void initUPRSH20(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH20 = new Double(s);
+}
+}
+
+protected final void initUPRSH21(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH21 = new Double(s);
+}
+}
+
+protected final void initUPRSH22(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH22 = new Double(s);
+}
+}
+
+protected final void initUPRSH23(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH23 = new Double(s);
+}
+}
+
+protected final void initUPRSH24(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH24 = new Double(s);
+}
+}
+
+protected final void initUPRSH25(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH25 = new Double(s);
+}
+}
+
+protected final void initUPRSH26(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH26 = new Double(s);
+}
+}
+
+protected final void initUPRSH27(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH27 = new Double(s);
+}
+}
+
+protected final void initUPRSH28(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH28 = new Double(s);
+}
+}
+
+protected final void initUPRSH29(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH29 = new Double(s);
+}
+}
+
+protected final void initUPRSH30(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH30 = new Double(s);
+}
+}
+
+protected final void initUPRSH31(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH31 = new Double(s);
+}
+}
+
+protected final void initUPRSH32(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH32 = new Double(s);
+}
+}
+
+protected final void initUPRSH33(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH33 = new Double(s);
+}
+}
+
+protected final void initUPRSH34(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH34 = new Double(s);
+}
+}
+
+protected final void initUPRSH35(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH35 = new Double(s);
+}
+}
+
+protected final void initUPRSH36(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH36 = new Double(s);
+}
+}
+
+protected final void initUPRSH6(String s) {
+if (!s.trim().isEmpty()) {
+UPRSH6 = new Double(s);
+}
+}
+
+protected final void initUPRTYP(String s) {
+if (!s.trim().isEmpty()) {
+UPRTYP = new Double(s);
+}
+}
+
+protected final void initW1W3WGT(String s) {
+if (!s.trim().isEmpty()) {
+W1W3WGT = new Double(s);
+}
+}
+
+protected final void initW2W3WGT(String s) {
+if (!s.trim().isEmpty()) {
+W2W3WGT = new Double(s);
+}
+}
+
+protected final void initW3XSWGT(String s) {
+if (!s.trim().isEmpty()) {
+W3XSWGT = new Double(s);
+}
+}
+
+protected final void initWARD98(String s) {
+if (!s.trim().isEmpty()) {
+WARD98 = new Double(s);
+}
+}
+
+protected final void initWARDC91(String s) {
+if (!s.trim().isEmpty()) {
+WARDC91 = new Double(s);
+}
+}
+
+protected final void initWARDO91(String s) {
+if (!s.trim().isEmpty()) {
+WARDO91 = new Double(s);
+}
+}
+
+protected final void initWHOREATT(String s) {
+if (!s.trim().isEmpty()) {
+WHOREATT = new Double(s);
+}
+}
+
+protected final void initWHORECAR(String s) {
+if (!s.trim().isEmpty()) {
+WHORECAR = new Double(s);
+}
+}
+
+protected final void initWHOREMOB(String s) {
+if (!s.trim().isEmpty()) {
+WHOREMOB = new Double(s);
+}
+}
+
+protected final void initWTCPD(String s) {
+if (!s.trim().isEmpty()) {
+WTCPD = new Double(s);
+}
+}
+
+protected final void initXBCON(String s) {
+if (!s.trim().isEmpty()) {
+XBCON = new Double(s);
+}
+}
+
+protected final void initXBCONREM(String s) {
+if (!s.trim().isEmpty()) {
+XBCONREM = new Double(s);
+}
+}
+
+protected final void initXBCONSC(String s) {
+if (!s.trim().isEmpty()) {
+XBCONSC = new Double(s);
+}
+}
+
+protected final void initXBCRT(String s) {
+if (!s.trim().isEmpty()) {
+XBCRT = new Double(s);
+}
+}
+
+protected final void initXBOK(String s) {
+if (!s.trim().isEmpty()) {
+XBOK = new Double(s);
+}
+}
+
+protected final void initXDCON(String s) {
+if (!s.trim().isEmpty()) {
+XDCON = new Double(s);
+}
+}
+
+protected final void initXDCONREM(String s) {
+if (!s.trim().isEmpty()) {
+XDCONREM = new Double(s);
+}
+}
+
+protected final void initXDCONSC(String s) {
+if (!s.trim().isEmpty()) {
+XDCONSC = new Double(s);
+}
+}
+
+protected final void initXDOK(String s) {
+if (!s.trim().isEmpty()) {
+XDOK = new Double(s);
+}
+}
+
+protected final void initXDREF(String s) {
+if (!s.trim().isEmpty()) {
+XDREF = new Double(s);
+}
+}
+
+protected final void initXICON(String s) {
+if (!s.trim().isEmpty()) {
+XICON = new Double(s);
+}
+}
+
+protected final void initXICONREM(String s) {
+if (!s.trim().isEmpty()) {
+XICONREM = new Double(s);
+}
+}
+
+protected final void initXICONSC(String s) {
+if (!s.trim().isEmpty()) {
+XICONSC = new Double(s);
+}
+}
 
 public Double getACCFRAC() {
 return ACCFRAC;
-}
-
-public Double getACCFRAC1() {
-return ACCFRAC1;
-}
-
-public Double getACCFRAC2() {
-return ACCFRAC2;
 }
 
 public Double getAGEASAF1() {
@@ -5702,88 +10437,20 @@ public Double getAGMSAFT1() {
 return AGMSAFT1;
 }
 
-public Double getALLRET() {
-return ALLRET;
-}
-
-public Double getALLRET_I() {
-return ALLRET_I;
-}
-
-public Double getANXIOUS() {
-return ANXIOUS;
-}
-
-public Double getASAF1T() {
-return ASAF1T;
-}
-
-public Double getASAF2T() {
-return ASAF2T;
-}
-
-public Double getBACCBEG1() {
-return BACCBEG1;
-}
-
-public Double getBACCEND1() {
+public String getBACCEND1() {
 return BACCEND1;
 }
 
-public Double getBACCEND2() {
+public String getBACCEND2() {
 return BACCEND2;
 }
 
-public Double getBACCEND3() {
+public String getBACCEND3() {
 return BACCEND3;
-}
-
-public Double getBACCSA1() {
-return BACCSA1;
-}
-
-public Double getBACCSB1() {
-return BACCSB1;
-}
-
-public Double getBBEFORE1() {
-return BBEFORE1;
-}
-
-public Double getBCARRY1() {
-return BCARRY1;
 }
 
 public Double getBCARRY2() {
 return BCARRY2;
-}
-
-public Double getBCARRY3() {
-return BCARRY3;
-}
-
-public Double getBDEBTS1() {
-return BDEBTS1;
-}
-
-public Double getBDIRNI1() {
-return BDIRNI1;
-}
-
-public Double getBDIRNI1_I() {
-return BDIRNI1_I;
-}
-
-public Double getBDIRNI1_IFLAG() {
-return BDIRNI1_IFLAG;
-}
-
-public Double getBDOCS1() {
-return BDOCS1;
-}
-
-public Double getBEMPN1() {
-return BEMPN1;
 }
 
 public Double getBENTYPE01() {
@@ -5910,98 +10577,6 @@ public Double getBFUND8() {
 return BFUND8;
 }
 
-public Double getBNATINS1() {
-return BNATINS1;
-}
-
-public Double getBONTAX_I() {
-return BONTAX_I;
-}
-
-public Double getBONTAX_IFLAG() {
-return BONTAX_IFLAG;
-}
-
-public Double getBOTDVDBOPEN1T() {
-return BOTDVDBOPEN1T;
-}
-
-public Double getBOTDVDBOPEN2T() {
-return BOTDVDBOPEN2T;
-}
-
-public Double getBOWED1() {
-return BOWED1;
-}
-
-public Double getBOWN1() {
-return BOWN1;
-}
-
-public Double getBPART1() {
-return BPART1;
-}
-
-public Double getBPAYNUM() {
-return BPAYNUM;
-}
-
-public Double getBPRFLOSS1() {
-return BPRFLOSS1;
-}
-
-public Double getBPRFLOSS2() {
-return BPRFLOSS2;
-}
-
-public Double getBPRFLOSS3() {
-return BPRFLOSS3;
-}
-
-public Double getBPROFIT1() {
-return BPROFIT1;
-}
-
-public Double getBPROPN1() {
-return BPROPN1;
-}
-
-public Double getBRETIRE1() {
-return BRETIRE1;
-}
-
-public Double getBSEPPD01() {
-return BSEPPD01;
-}
-
-public Double getBSEPPD02() {
-return BSEPPD02;
-}
-
-public Double getBSEPPD03() {
-return BSEPPD03;
-}
-
-public Double getBSEPPD04() {
-return BSEPPD04;
-}
-
-public Double getBSEPPD05() {
-return BSEPPD05;
-}
-
-public Double getBSEPPD06() {
-return BSEPPD06;
-}
-
-public Double getBSEPPD07() {
-return BSEPPD07;
-}
-
-public Double getBSEPPD08() {
-return BSEPPD08;
-}
-
 public Double getBSEPPD09() {
 return BSEPPD09;
 }
@@ -6050,160 +10625,12 @@ public Double getBSEPPD20() {
 return BSEPPD20;
 }
 
-public Double getBSIZE1() {
-return BSIZE1;
-}
-
-public Double getBSTART1() {
-return BSTART1;
-}
-
-public Double getBTAX1() {
-return BTAX1;
-}
-
-public Double getBTOGPD() {
-return BTOGPD;
-}
-
-public Double getBTOGSEP() {
-return BTOGSEP;
-}
-
-public Double getBTYPE1() {
-return BTYPE1;
-}
-
-public Double getBTYPE1_I() {
-return BTYPE1_I;
-}
-
-public Double getBTYPE1_IFLAG() {
-return BTYPE1_IFLAG;
-}
-
-public Double getBUYLGDST() {
-return BUYLGDST;
-}
-
-public Double getBVAL1() {
-return BVAL1;
-}
-
-public Double getBVALB1() {
-return BVALB1;
-}
-
-public Double getBVALB3() {
-return BVALB3;
-}
-
-public Double getBYEAR1() {
-return BYEAR1;
-}
-
-public Double getCACONTR1() {
-return CACONTR1;
-}
-
-public Double getCACONTR2() {
-return CACONTR2;
-}
-
-public Double getCACONTR3() {
-return CACONTR3;
-}
-
-public Double getCACONTR4() {
-return CACONTR4;
-}
-
-public Double getCACONTR5() {
-return CACONTR5;
-}
-
-public Double getCACONTR6() {
-return CACONTR6;
-}
-
-public Double getCACONTRAM1() {
-return CACONTRAM1;
-}
-
-public Double getCACONTRAM2() {
-return CACONTRAM2;
-}
-
-public Double getCACONTRAM3() {
-return CACONTRAM3;
-}
-
-public Double getCACONTRAM4() {
-return CACONTRAM4;
-}
-
-public Double getCACONTRAM5() {
-return CACONTRAM5;
-}
-
-public Double getCACONTRAM6() {
-return CACONTRAM6;
-}
-
-public Double getCACONTRAMB1() {
-return CACONTRAMB1;
-}
-
-public Double getCACONTRAMB2() {
-return CACONTRAMB2;
-}
-
-public Double getCACONTRAMB3() {
-return CACONTRAMB3;
-}
-
-public Double getCACONTRAMB4() {
-return CACONTRAMB4;
-}
-
-public Double getCACONTRAMB5() {
-return CACONTRAMB5;
-}
-
-public Double getCACONTRAMB6() {
-return CACONTRAMB6;
-}
-
-public Double getCACRNUM() {
-return CACRNUM;
-}
-
-public Double getCACTVB() {
-return CACTVB;
-}
-
 public Double getCAEXTRA() {
 return CAEXTRA;
 }
 
-public Double getCAJISA_I() {
-return CAJISA_I;
-}
-
-public Double getCAJISA_IFLAG() {
-return CAJISA_IFLAG;
-}
-
-public Double getCAODNUM() {
-return CAODNUM;
-}
-
 public Double getCAOLDER() {
 return CAOLDER;
-}
-
-public Double getCAOPEN() {
-return CAOPEN;
 }
 
 public Double getCAOTHER1() {
@@ -6226,40 +10653,8 @@ public Double getCAOTHER5() {
 return CAOTHER5;
 }
 
-public Double getCASEW2() {
-return CASEW2;
-}
-
-public Double getCASEW3() {
-return CASEW3;
-}
-
 public Double getCATYPE() {
 return CATYPE;
-}
-
-public Double getCCAC1_I() {
-return CCAC1_I;
-}
-
-public Double getCCAC1_IFLAG() {
-return CCAC1_IFLAG;
-}
-
-public Double getCCAC2_I() {
-return CCAC2_I;
-}
-
-public Double getCCAC2_IFLAG() {
-return CCAC2_IFLAG;
-}
-
-public Double getCCAC3_I() {
-return CCAC3_I;
-}
-
-public Double getCCAC3_IFLAG() {
-return CCAC3_IFLAG;
 }
 
 public Double getCCAC4_I() {
@@ -6270,16 +10665,8 @@ public Double getCCAC5_I() {
 return CCAC5_I;
 }
 
-public Double getCHOICP() {
-return CHOICP;
-}
-
 public Double getCOMBPD() {
 return COMBPD;
-}
-
-public Double getCOMMI() {
-return COMMI;
 }
 
 public Double getCOMMIT1() {
@@ -6300,10 +10687,6 @@ return COMMIT4;
 
 public Double getCOMMIT5() {
 return COMMIT5;
-}
-
-public Double getCOUPLENUM() {
-return COUPLENUM;
 }
 
 public Double getCOURSE20() {
@@ -6338,40 +10721,8 @@ public Double getCTPAYW() {
 return CTPAYW;
 }
 
-public Double getCURSTAT() {
-return CURSTAT;
-}
-
-public Double getCUTDOWN() {
-return CUTDOWN;
-}
-
-public Double getDADVACT1() {
-return DADVACT1;
-}
-
-public Double getDADVACT2() {
-return DADVACT2;
-}
-
-public Double getDADVACT3() {
-return DADVACT3;
-}
-
-public Double getDADVMTH() {
-return DADVMTH;
-}
-
 public Double getDBURDH() {
 return DBURDH;
-}
-
-public Double getDBURDW1() {
-return DBURDW1;
-}
-
-public Double getDBURDW2() {
-return DBURDW2;
 }
 
 public Double getDBURDW4() {
@@ -6394,36 +10745,12 @@ public Double getDBURD___W3() {
 return DBURD___W3;
 }
 
-public Double getDC12BEH1() {
-return DC12BEH1;
-}
-
-public Double getDC12BEH2() {
-return DC12BEH2;
-}
-
-public Double getDC12BEH3() {
-return DC12BEH3;
-}
-
 public Double getDC12BEH4() {
 return DC12BEH4;
 }
 
 public Double getDC12BEH5() {
 return DC12BEH5;
-}
-
-public Double getDC12OWE1() {
-return DC12OWE1;
-}
-
-public Double getDC12OWE2() {
-return DC12OWE2;
-}
-
-public Double getDC12OWE3() {
-return DC12OWE3;
 }
 
 public Double getDC12OWE4() {
@@ -6434,20 +10761,12 @@ public Double getDC12OWE5() {
 return DC12OWE5;
 }
 
-public Double getDCAMC1() {
-return DCAMC1;
-}
-
 public Double getDCAMC4() {
 return DCAMC4;
 }
 
 public Double getDCAMC5() {
 return DCAMC5;
-}
-
-public Double getDCAMD1() {
-return DCAMD1;
 }
 
 public Double getDCAMD4() {
@@ -6458,40 +10777,12 @@ public Double getDCAMD5() {
 return DCAMD5;
 }
 
-public Double getDCAMOS1_I() {
-return DCAMOS1_I;
-}
-
-public Double getDCAMOS1_IFLAG() {
-return DCAMOS1_IFLAG;
-}
-
-public Double getDCAMOS2_I() {
-return DCAMOS2_I;
-}
-
-public Double getDCAMOS2_IFLAG() {
-return DCAMOS2_IFLAG;
-}
-
-public Double getDCAMOS3_I() {
-return DCAMOS3_I;
-}
-
-public Double getDCAMOS3_IFLAG() {
-return DCAMOS3_IFLAG;
-}
-
 public Double getDCAMOS4_I() {
 return DCAMOS4_I;
 }
 
 public Double getDCAMOS5_I() {
 return DCAMOS5_I;
-}
-
-public Double getDCAMP1() {
-return DCAMP1;
 }
 
 public Double getDCAMP4() {
@@ -6502,20 +10793,12 @@ public Double getDCAMP5() {
 return DCAMP5;
 }
 
-public Double getDCCOS1() {
-return DCCOS1;
-}
-
 public Double getDCCOS4() {
 return DCCOS4;
 }
 
 public Double getDCCOS5() {
 return DCCOS5;
-}
-
-public Double getDCCSP1() {
-return DCCSP1;
 }
 
 public Double getDCCSP4() {
@@ -6526,20 +10809,12 @@ public Double getDCCSP5() {
 return DCCSP5;
 }
 
-public Double getDCESB1() {
-return DCESB1;
-}
-
 public Double getDCESB4() {
 return DCESB4;
 }
 
 public Double getDCESB5() {
 return DCESB5;
-}
-
-public Double getDCINZ1() {
-return DCINZ1;
 }
 
 public Double getDCINZ4() {
@@ -6550,80 +10825,12 @@ public Double getDCINZ5() {
 return DCINZ5;
 }
 
-public Double getDCNAM1() {
-return DCNAM1;
-}
-
 public Double getDCNAM4() {
 return DCNAM4;
 }
 
 public Double getDCNAM5() {
 return DCNAM5;
-}
-
-public Double getDCNUM1() {
-return DCNUM1;
-}
-
-public Double getDCNUM2() {
-return DCNUM2;
-}
-
-public Double getDCOINV1() {
-return DCOINV1;
-}
-
-public Double getDCOINV1_I() {
-return DCOINV1_I;
-}
-
-public Double getDCOINV1_IFLAG() {
-return DCOINV1_IFLAG;
-}
-
-public Double getDCOINV3_I() {
-return DCOINV3_I;
-}
-
-public Double getDCOINV3_IFLAG() {
-return DCOINV3_IFLAG;
-}
-
-public Double getDCOINV4() {
-return DCOINV4;
-}
-
-public Double getDCOINV4_I() {
-return DCOINV4_I;
-}
-
-public Double getDCOINV4_IFLAG() {
-return DCOINV4_IFLAG;
-}
-
-public Double getDCOINV5() {
-return DCOINV5;
-}
-
-public Double getDCOINV5_I() {
-return DCOINV5_I;
-}
-
-public Double getDCOINV5_IFLAG() {
-return DCOINV5_IFLAG;
-}
-
-public Double getDCOINVB1() {
-return DCOINVB1;
-}
-
-public Double getDCOINVB4() {
-return DCOINVB4;
-}
-
-public Double getDCOINVB5() {
-return DCOINVB5;
 }
 
 public Double getDCONM10() {
@@ -6642,64 +10849,12 @@ public Double getDCONM9() {
 return DCONM9;
 }
 
-public Double getDCOSHV1() {
-return DCOSHV1;
-}
-
-public Double getDCOSHV1_I() {
-return DCOSHV1_I;
-}
-
-public Double getDCOSHV1_IFLAG() {
-return DCOSHV1_IFLAG;
-}
-
-public Double getDCOSHV3_I() {
-return DCOSHV3_I;
-}
-
-public Double getDCOSHV3_IFLAG() {
-return DCOSHV3_IFLAG;
-}
-
-public Double getDCOSHV4() {
-return DCOSHV4;
-}
-
-public Double getDCOSHV5() {
-return DCOSHV5;
-}
-
-public Double getDCOSHVB1() {
-return DCOSHVB1;
-}
-
-public Double getDCOSHVB3() {
-return DCOSHVB3;
-}
-
-public Double getDCOSHVB4() {
-return DCOSHVB4;
-}
-
-public Double getDCOSHVB5() {
-return DCOSHVB5;
-}
-
-public Double getDCPER1() {
-return DCPER1;
-}
-
 public Double getDCPER4() {
 return DCPER4;
 }
 
 public Double getDCPER5() {
 return DCPER5;
-}
-
-public Double getDCREC1() {
-return DCREC1;
 }
 
 public Double getDCREC4() {
@@ -6710,20 +10865,12 @@ public Double getDCREC5() {
 return DCREC5;
 }
 
-public Double getDCRSP1() {
-return DCRSP1;
-}
-
 public Double getDCRSP4() {
 return DCRSP4;
 }
 
 public Double getDCRSP5() {
 return DCRSP5;
-}
-
-public Double getDHBANY08() {
-return DHBANY08;
 }
 
 public Double getDHBANY08_I() {
@@ -6734,10 +10881,6 @@ public Double getDHBANY08_IFLAG() {
 return DHBANY08_IFLAG;
 }
 
-public Double getDHBANY09() {
-return DHBANY09;
-}
-
 public Double getDHBANY09_I() {
 return DHBANY09_I;
 }
@@ -6746,20 +10889,12 @@ public Double getDHBANY09_IFLAG() {
 return DHBANY09_IFLAG;
 }
 
-public Double getDHBANY10() {
-return DHBANY10;
-}
-
 public Double getDHBANY10_I() {
 return DHBANY10_I;
 }
 
 public Double getDHBANY10_IFLAG() {
 return DHBANY10_IFLAG;
-}
-
-public Double getDHBANY11() {
-return DHBANY11;
 }
 
 public Double getDHBANY11_I() {
@@ -6784,18 +10919,6 @@ return DHPANY6;
 
 public Double getDHPANY7() {
 return DHPANY7;
-}
-
-public Double getDHPBEH1() {
-return DHPBEH1;
-}
-
-public Double getDHPBEH1_I() {
-return DHPBEH1_I;
-}
-
-public Double getDHPBEH1_IFLAG() {
-return DHPBEH1_IFLAG;
 }
 
 public Double getDHPBEH3() {
@@ -6834,10 +10957,6 @@ public Double getDHPBEH5_IFLAG() {
 return DHPBEH5_IFLAG;
 }
 
-public Double getDHPEST1() {
-return DHPEST1;
-}
-
 public Double getDHPEST3() {
 return DHPEST3;
 }
@@ -6848,18 +10967,6 @@ return DHPEST4;
 
 public Double getDHPEST5() {
 return DHPEST5;
-}
-
-public Double getDHPINS1() {
-return DHPINS1;
-}
-
-public Double getDHPINS1_I() {
-return DHPINS1_I;
-}
-
-public Double getDHPINS1_IFLAG() {
-return DHPINS1_IFLAG;
 }
 
 public Double getDHPINS3() {
@@ -6898,10 +11005,6 @@ public Double getDHPINS5_IFLAG() {
 return DHPINS5_IFLAG;
 }
 
-public Double getDHPINT1() {
-return DHPINT1;
-}
-
 public Double getDHPINT3() {
 return DHPINT3;
 }
@@ -6912,18 +11015,6 @@ return DHPINT4;
 
 public Double getDHPINT5() {
 return DHPINT5;
-}
-
-public Double getDHPOFT1() {
-return DHPOFT1;
-}
-
-public Double getDHPOFT1_I() {
-return DHPOFT1_I;
-}
-
-public Double getDHPOFT1_IFLAG() {
-return DHPOFT1_IFLAG;
 }
 
 public Double getDHPOFT3() {
@@ -6962,18 +11053,6 @@ public Double getDHPOFT5_IFLAG() {
 return DHPOFT5_IFLAG;
 }
 
-public Double getDHPOWE1() {
-return DHPOWE1;
-}
-
-public Double getDHPOWE1_I() {
-return DHPOWE1_I;
-}
-
-public Double getDHPOWE1_IFLAG() {
-return DHPOWE1_IFLAG;
-}
-
 public Double getDHPOWE3() {
 return DHPOWE3;
 }
@@ -7010,10 +11089,6 @@ public Double getDHPOWE5_IFLAG() {
 return DHPOWE5_IFLAG;
 }
 
-public Double getDHPWEST1() {
-return DHPWEST1;
-}
-
 public Double getDHPWEST3() {
 return DHPWEST3;
 }
@@ -7024,18 +11099,6 @@ return DHPWEST4;
 
 public Double getDHPWEST5() {
 return DHPWEST5;
-}
-
-public Double getDHPWHNM1() {
-return DHPWHNM1;
-}
-
-public Double getDHPWHNM1_I() {
-return DHPWHNM1_I;
-}
-
-public Double getDHPWHNM1_IFLAG() {
-return DHPWHNM1_IFLAG;
 }
 
 public Double getDHPWHNM3() {
@@ -7074,18 +11137,6 @@ public Double getDHPWHNM5_IFLAG() {
 return DHPWHNM5_IFLAG;
 }
 
-public Double getDHPWHNY1() {
-return DHPWHNY1;
-}
-
-public Double getDHPWHNY1_I() {
-return DHPWHNY1_I;
-}
-
-public Double getDHPWHNY1_IFLAG() {
-return DHPWHNY1_IFLAG;
-}
-
 public Double getDHPWHNY3() {
 return DHPWHNY3;
 }
@@ -7120,138 +11171,6 @@ return DHPWHNY5_I;
 
 public Double getDHPWHNY5_IFLAG() {
 return DHPWHNY5_IFLAG;
-}
-
-public Double getDLBEH1() {
-return DLBEH1;
-}
-
-public Double getDLBEH1_I() {
-return DLBEH1_I;
-}
-
-public Double getDLBEH1_IFLAG() {
-return DLBEH1_IFLAG;
-}
-
-public Double getDLEST1() {
-return DLEST1;
-}
-
-public Double getDLEST5() {
-return DLEST5;
-}
-
-public Double getDLINS1() {
-return DLINS1;
-}
-
-public Double getDLINS1_I() {
-return DLINS1_I;
-}
-
-public Double getDLINS1_IFLAG() {
-return DLINS1_IFLAG;
-}
-
-public Double getDLINT1() {
-return DLINT1;
-}
-
-public Double getDLNNM() {
-return DLNNM;
-}
-
-public Double getDLOFT1() {
-return DLOFT1;
-}
-
-public Double getDLOFT1_I() {
-return DLOFT1_I;
-}
-
-public Double getDLOFT1_IFLAG() {
-return DLOFT1_IFLAG;
-}
-
-public Double getDLOLD1() {
-return DLOLD1;
-}
-
-public Double getDLOLD2() {
-return DLOLD2;
-}
-
-public Double getDLOLD3() {
-return DLOLD3;
-}
-
-public Double getDLOLD4() {
-return DLOLD4;
-}
-
-public Double getDLOLD5() {
-return DLOLD5;
-}
-
-public Double getDLONM() {
-return DLONM;
-}
-
-public Double getDLOWE1() {
-return DLOWE1;
-}
-
-public Double getDLOWE1_I() {
-return DLOWE1_I;
-}
-
-public Double getDLOWE1_IFLAG() {
-return DLOWE1_IFLAG;
-}
-
-public Double getDLSEC1() {
-return DLSEC1;
-}
-
-public Double getDLTYPE1() {
-return DLTYPE1;
-}
-
-public Double getDLTYPE1_I() {
-return DLTYPE1_I;
-}
-
-public Double getDLTYPE1_IFLAG() {
-return DLTYPE1_IFLAG;
-}
-
-public Double getDLWEST1() {
-return DLWEST1;
-}
-
-public Double getDLWHNM1() {
-return DLWHNM1;
-}
-
-public Double getDLWHNM1_I() {
-return DLWHNM1_I;
-}
-
-public Double getDLWHNM1_IFLAG() {
-return DLWHNM1_IFLAG;
-}
-
-public Double getDLWHNY1() {
-return DLWHNY1;
-}
-
-public Double getDLWHNY1_I() {
-return DLWHNY1_I;
-}
-
-public Double getDLWHNY1_IFLAG() {
-return DLWHNY1_IFLAG;
 }
 
 public Double getDLWHY11() {
@@ -7310,10 +11229,6 @@ public Double getDLWHY28() {
 return DLWHY28;
 }
 
-public Double getDLWHY30() {
-return DLWHY30;
-}
-
 public Double getDLWHY31() {
 return DLWHY31;
 }
@@ -7332,26 +11247,6 @@ return DLWHY34;
 
 public Double getDLWHY35() {
 return DLWHY35;
-}
-
-public Double getDLWHY6() {
-return DLWHY6;
-}
-
-public Double getDLWHY7() {
-return DLWHY7;
-}
-
-public Double getDMOBEH1() {
-return DMOBEH1;
-}
-
-public Double getDMOBEH1_I() {
-return DMOBEH1_I;
-}
-
-public Double getDMOBEH1_IFLAG() {
-return DMOBEH1_IFLAG;
 }
 
 public Double getDMOBEH3() {
@@ -7390,10 +11285,6 @@ public Double getDMOBEH5_IFLAG() {
 return DMOBEH5_IFLAG;
 }
 
-public Double getDMOEST1() {
-return DMOEST1;
-}
-
 public Double getDMOEST3() {
 return DMOEST3;
 }
@@ -7404,18 +11295,6 @@ return DMOEST4;
 
 public Double getDMOEST5() {
 return DMOEST5;
-}
-
-public Double getDMOINS1() {
-return DMOINS1;
-}
-
-public Double getDMOINS1_I() {
-return DMOINS1_I;
-}
-
-public Double getDMOINS1_IFLAG() {
-return DMOINS1_IFLAG;
 }
 
 public Double getDMOINS3() {
@@ -7454,10 +11333,6 @@ public Double getDMOINS5_IFLAG() {
 return DMOINS5_IFLAG;
 }
 
-public Double getDMOINT1() {
-return DMOINT1;
-}
-
 public Double getDMOINT3() {
 return DMOINT3;
 }
@@ -7468,18 +11343,6 @@ return DMOINT4;
 
 public Double getDMOINT5() {
 return DMOINT5;
-}
-
-public Double getDMOOFT1() {
-return DMOOFT1;
-}
-
-public Double getDMOOFT1_I() {
-return DMOOFT1_I;
-}
-
-public Double getDMOOFT1_IFLAG() {
-return DMOOFT1_IFLAG;
 }
 
 public Double getDMOOFT3() {
@@ -7518,18 +11381,6 @@ public Double getDMOOFT5_IFLAG() {
 return DMOOFT5_IFLAG;
 }
 
-public Double getDMOOWE1() {
-return DMOOWE1;
-}
-
-public Double getDMOOWE1_I() {
-return DMOOWE1_I;
-}
-
-public Double getDMOOWE1_IFLAG() {
-return DMOOWE1_IFLAG;
-}
-
 public Double getDMOOWE3() {
 return DMOOWE3;
 }
@@ -7566,10 +11417,6 @@ public Double getDMOOWE5_IFLAG() {
 return DMOOWE5_IFLAG;
 }
 
-public Double getDMOWEST1() {
-return DMOWEST1;
-}
-
 public Double getDMOWEST3() {
 return DMOWEST3;
 }
@@ -7580,18 +11427,6 @@ return DMOWEST4;
 
 public Double getDMOWEST5() {
 return DMOWEST5;
-}
-
-public Double getDMOWHNM1() {
-return DMOWHNM1;
-}
-
-public Double getDMOWHNM1_I() {
-return DMOWHNM1_I;
-}
-
-public Double getDMOWHNM1_IFLAG() {
-return DMOWHNM1_IFLAG;
 }
 
 public Double getDMOWHNM3() {
@@ -7630,18 +11465,6 @@ public Double getDMOWHNM5_IFLAG() {
 return DMOWHNM5_IFLAG;
 }
 
-public Double getDMOWHNY1() {
-return DMOWHNY1;
-}
-
-public Double getDMOWHNY1_I() {
-return DMOWHNY1_I;
-}
-
-public Double getDMOWHNY1_IFLAG() {
-return DMOWHNY1_IFLAG;
-}
-
 public Double getDMOWHNY3() {
 return DMOWHNY3;
 }
@@ -7678,36 +11501,12 @@ public Double getDMOWHNY5_IFLAG() {
 return DMOWHNY5_IFLAG;
 }
 
-public Double getDS12BEH1() {
-return DS12BEH1;
-}
-
-public Double getDS12BEH2() {
-return DS12BEH2;
-}
-
-public Double getDS12BEH3() {
-return DS12BEH3;
-}
-
 public Double getDS12BEH4() {
 return DS12BEH4;
 }
 
 public Double getDS12BEH5() {
 return DS12BEH5;
-}
-
-public Double getDS12OWE1() {
-return DS12OWE1;
-}
-
-public Double getDS12OWE2() {
-return DS12OWE2;
-}
-
-public Double getDS12OWE3() {
-return DS12OWE3;
 }
 
 public Double getDS12OWE4() {
@@ -7718,20 +11517,12 @@ public Double getDS12OWE5() {
 return DS12OWE5;
 }
 
-public Double getDSAMC1() {
-return DSAMC1;
-}
-
 public Double getDSAMC4() {
 return DSAMC4;
 }
 
 public Double getDSAMC5() {
 return DSAMC5;
-}
-
-public Double getDSAMD1() {
-return DSAMD1;
 }
 
 public Double getDSAMD4() {
@@ -7742,40 +11533,12 @@ public Double getDSAMD5() {
 return DSAMD5;
 }
 
-public Double getDSAMOS1_I() {
-return DSAMOS1_I;
-}
-
-public Double getDSAMOS1_IFLAG() {
-return DSAMOS1_IFLAG;
-}
-
-public Double getDSAMOS2_I() {
-return DSAMOS2_I;
-}
-
-public Double getDSAMOS2_IFLAG() {
-return DSAMOS2_IFLAG;
-}
-
-public Double getDSAMOS3_I() {
-return DSAMOS3_I;
-}
-
-public Double getDSAMOS3_IFLAG() {
-return DSAMOS3_IFLAG;
-}
-
 public Double getDSAMOS4_I() {
 return DSAMOS4_I;
 }
 
 public Double getDSAMOS5_I() {
 return DSAMOS5_I;
-}
-
-public Double getDSAMP1() {
-return DSAMP1;
 }
 
 public Double getDSAMP4() {
@@ -7786,20 +11549,12 @@ public Double getDSAMP5() {
 return DSAMP5;
 }
 
-public Double getDSCOS1() {
-return DSCOS1;
-}
-
 public Double getDSCOS4() {
 return DSCOS4;
 }
 
 public Double getDSCOS5() {
 return DSCOS5;
-}
-
-public Double getDSCSP1() {
-return DSCSP1;
 }
 
 public Double getDSCSP4() {
@@ -7810,10 +11565,6 @@ public Double getDSCSP5() {
 return DSCSP5;
 }
 
-public Double getDSESB1() {
-return DSESB1;
-}
-
 public Double getDSESB4() {
 return DSESB4;
 }
@@ -7822,32 +11573,8 @@ public Double getDSESB5() {
 return DSESB5;
 }
 
-public Double getDSLAMT1() {
-return DSLAMT1;
-}
-
-public Double getDSLAMT1_I() {
-return DSLAMT1_I;
-}
-
-public Double getDSLAMT1_IFLAG() {
-return DSLAMT1_IFLAG;
-}
-
-public Double getDSLEST1() {
-return DSLEST1;
-}
-
 public Double getDSLEST5_IFLAG() {
 return DSLEST5_IFLAG;
-}
-
-public Double getDSLPAY1() {
-return DSLPAY1;
-}
-
-public Double getDSNAM1() {
-return DSNAM1;
 }
 
 public Double getDSNAM4() {
@@ -7860,10 +11587,6 @@ return DSNAM5;
 
 public Double getDSNUM() {
 return DSNUM;
-}
-
-public Double getDSNUM2() {
-return DSNUM2;
 }
 
 public Double getDSONM10() {
@@ -7882,24 +11605,12 @@ public Double getDSONM9() {
 return DSONM9;
 }
 
-public Double getDSPER1() {
-return DSPER1;
-}
-
-public Double getDSPER3() {
-return DSPER3;
-}
-
 public Double getDSPER4() {
 return DSPER4;
 }
 
 public Double getDSPER5() {
 return DSPER5;
-}
-
-public Double getDSREC1() {
-return DSREC1;
 }
 
 public Double getDSREC4() {
@@ -8118,32 +11829,8 @@ public Double getDTTOWEB9() {
 return DTTOWEB9;
 }
 
-public Double getDVACCINANNUAL() {
-return DVACCINANNUAL;
-}
-
 public Double getDVAGE18() {
 return DVAGE18;
-}
-
-public Double getDVAGE4() {
-return DVAGE4;
-}
-
-public Double getDVAGE5() {
-return DVAGE5;
-}
-
-public Double getDVAGE6() {
-return DVAGE6;
-}
-
-public Double getDVAGE7() {
-return DVAGE7;
-}
-
-public Double getDVAGE9() {
-return DVAGE9;
 }
 
 public Double getDVAGEW3BAND() {
@@ -8154,104 +11841,12 @@ public Double getDVBENU1() {
 return DVBENU1;
 }
 
-public Double getDVBLDDEBT() {
-return DVBLDDEBT;
-}
-
-public Double getDVBLDVAL() {
-return DVBLDVAL;
-}
-
-public Double getDVBLTDEBT() {
-return DVBLTDEBT;
-}
-
-public Double getDVBLTVAL() {
-return DVBLTVAL;
-}
-
-public Double getDVBTOGANNUAL() {
-return DVBTOGANNUAL;
-}
-
-public Double getDVCACRVAL_SUM() {
-return DVCACRVAL_SUM;
-}
-
-public Double getDVCAODVAL_SUM() {
-return DVCAODVAL_SUM;
-}
-
-public Double getDVCAVAL_SUM() {
-return DVCAVAL_SUM;
-}
-
-public Double getDVCCARDNUM_I() {
-return DVCCARDNUM_I;
-}
-
-public Double getDVCCARDNUM_IFLAG() {
-return DVCCARDNUM_IFLAG;
-}
-
-public Double getDVCCARDYN_I() {
-return DVCCARDYN_I;
-}
-
-public Double getDVCCARDYN_IFLAG() {
-return DVCCARDYN_IFLAG;
-}
-
 public Double getDVCOINV() {
 return DVCOINV;
 }
 
-public Double getDVCOINV4() {
-return DVCOINV4;
-}
-
-public Double getDVCOINV5() {
-return DVCOINV5;
-}
-
 public Double getDVCTCANNUAL() {
 return DVCTCANNUAL;
-}
-
-public Double getDVDBINC4() {
-return DVDBINC4;
-}
-
-public Double getDVDBINC5() {
-return DVDBINC5;
-}
-
-public Double getDVDBINC6() {
-return DVDBINC6;
-}
-
-public Double getDVDBLUMP4() {
-return DVDBLUMP4;
-}
-
-public Double getDVDBLUMP5() {
-return DVDBLUMP5;
-}
-
-public Double getDVDBLUMP6() {
-return DVDBLUMP6;
-}
-
-public Double getDVDBOPEN1T() {
-return DVDBOPEN1T;
-}
-
-public Double getDVDBOPEN2T() {
-return DVDBOPEN2T;
-}
-
-public Double getDVDHPOWE1() {
-return DVDHPOWE1;
 }
 
 public Double getDVDHPOWE3() {
@@ -8266,16 +11861,8 @@ public Double getDVDHPOWE5() {
 return DVDHPOWE5;
 }
 
-public Double getDVDLOWE1() {
-return DVDLOWE1;
-}
-
 public Double getDVDLOWE5() {
 return DVDLOWE5;
-}
-
-public Double getDVDMOOWE1() {
-return DVDMOOWE1;
 }
 
 public Double getDVDMOOWE3() {
@@ -8290,88 +11877,12 @@ public Double getDVDMOOWE5() {
 return DVDMOOWE5;
 }
 
-public Double getDVEMPNO() {
-return DVEMPNO;
-}
-
-public Double getDVFESHARES_SUM() {
-return DVFESHARES_SUM;
-}
-
-public Double getDVFFASSETS_SUM() {
-return DVFFASSETS_SUM;
-}
-
-public Double getDVFINFVAL_SUM() {
-return DVFINFVAL_SUM;
-}
-
-public Double getDVGIEMP() {
-return DVGIEMP;
-}
-
-public Double getDVGIFTANNUAL() {
-return DVGIFTANNUAL;
-}
-
-public Double getDVGIINV() {
-return DVGIINV;
-}
-
-public Double getDVGIPPEN() {
-return DVGIPPEN;
-}
-
-public Double getDVGISE() {
-return DVGISE;
-}
-
-public Double getDVGRSBONAMT() {
-return DVGRSBONAMT;
-}
-
-public Double getDVGRSBONAMT_I() {
-return DVGRSBONAMT_I;
-}
-
-public Double getDVGRSBONAMT_IFLAG() {
-return DVGRSBONAMT_IFLAG;
-}
-
-public Double getDVGRSEMPSECJOB() {
-return DVGRSEMPSECJOB;
-}
-
-public Double getDVGRSEMPSECJOB_I() {
-return DVGRSEMPSECJOB_I;
-}
-
-public Double getDVGRSEMPSECJOB_IFLAG() {
-return DVGRSEMPSECJOB_IFLAG;
-}
-
 public Double getDVGRSPAY_I() {
 return DVGRSPAY_I;
 }
 
 public Double getDVGRSPAY_IFLAG() {
 return DVGRSPAY_IFLAG;
-}
-
-public Double getDVGRSRENTAMTANNUAL() {
-return DVGRSRENTAMTANNUAL;
-}
-
-public Double getDVGRSSESECJOB() {
-return DVGRSSESECJOB;
-}
-
-public Double getDVGRSSESECJOB_I() {
-return DVGRSSESECJOB_I;
-}
-
-public Double getDVGRSSESECJOB_IFLAG() {
-return DVGRSSESECJOB_IFLAG;
 }
 
 public Double getDVHASBOND() {
@@ -8394,40 +11905,16 @@ public Double getDVHASGILT() {
 return DVHASGILT;
 }
 
-public Double getDVHASHP() {
-return DVHASHP;
-}
-
 public Double getDVHASISA() {
 return DVHASISA;
-}
-
-public Double getDVHASLF() {
-return DVHASLF;
 }
 
 public Double getDVHASLINS() {
 return DVHASLINS;
 }
 
-public Double getDVHASLNAR() {
-return DVHASLNAR;
-}
-
-public Double getDVHASMOAR() {
-return DVHASMOAR;
-}
-
 public Double getDVHASNHP() {
 return DVHASNHP;
-}
-
-public Double getDVHASNLF() {
-return DVHASNLF;
-}
-
-public Double getDVHASNLI() {
-return DVHASNLI;
 }
 
 public Double getDVHASNOFA() {
@@ -8446,30 +11933,6 @@ public Double getDVHASOTHSH() {
 return DVHASOTHSH;
 }
 
-public Double getDVHASPFGRP() {
-return DVHASPFGRP;
-}
-
-public Double getDVHASPFOCC() {
-return DVHASPFOCC;
-}
-
-public Double getDVHASPFPRIV() {
-return DVHASPFPRIV;
-}
-
-public Double getDVHASPFRAC() {
-return DVHASPFRAC;
-}
-
-public Double getDVHASPFSIPP() {
-return DVHASPFSIPP;
-}
-
-public Double getDVHASPLINF() {
-return DVHASPLINF;
-}
-
 public Double getDVHASSAVDEP() {
 return DVHASSAVDEP;
 }
@@ -8486,104 +11949,8 @@ public Double getDVHASSL() {
 return DVHASSL;
 }
 
-public Double getDVHASSLBNK() {
-return DVHASSLBNK;
-}
-
-public Double getDVHASSLC() {
-return DVHASSLC;
-}
-
 public Double getDVHASUTRUST() {
 return DVHASUTRUST;
-}
-
-public Double getDVHRPNUM() {
-return DVHRPNUM;
-}
-
-public Double getDVHSEDEBT() {
-return DVHSEDEBT;
-}
-
-public Double getDVHSEVAL() {
-return DVHSEVAL;
-}
-
-public Double getDVHSIZE() {
-return DVHSIZE;
-}
-
-public Double getDVILO3A_I() {
-return DVILO3A_I;
-}
-
-public Double getDVILO3A_IFLAG() {
-return DVILO3A_IFLAG;
-}
-
-public Double getDVINHERITANNUAL() {
-return DVINHERITANNUAL;
-}
-
-public Double getDVINSV_SUM() {
-return DVINSV_SUM;
-}
-
-public Double getDVIRREGOTHANNUAL() {
-return DVIRREGOTHANNUAL;
-}
-
-public Double getDVISAVAL_SUM() {
-return DVISAVAL_SUM;
-}
-
-public Double getDVLIFEANNUAL() {
-return DVLIFEANNUAL;
-}
-
-public Double getDVLOSDEBT() {
-return DVLOSDEBT;
-}
-
-public Double getDVLOSVAL() {
-return DVLOSVAL;
-}
-
-public Double getDVLUKDEBT() {
-return DVLUKDEBT;
-}
-
-public Double getDVLUKVAL() {
-return DVLUKVAL;
-}
-
-public Double getDVLUMPPENANNUAL() {
-return DVLUMPPENANNUAL;
-}
-
-public Double getDVNETBONAMT() {
-return DVNETBONAMT;
-}
-
-public Double getDVNETBONAMT_I() {
-return DVNETBONAMT_I;
-}
-
-public Double getDVNETBONAMT_IFLAG() {
-return DVNETBONAMT_IFLAG;
-}
-
-public Double getDVNETEMPSECJOB() {
-return DVNETEMPSECJOB;
-}
-
-public Double getDVNETEMPSECJOB_I() {
-return DVNETEMPSECJOB_I;
-}
-
-public Double getDVNETEMPSECJOB_IFLAG() {
-return DVNETEMPSECJOB_IFLAG;
 }
 
 public Double getDVNETPAY_I() {
@@ -8594,208 +11961,36 @@ public Double getDVNETPAY_IFLAG() {
 return DVNETPAY_IFLAG;
 }
 
-public Double getDVNETRENTAMTANNUAL() {
-return DVNETRENTAMTANNUAL;
-}
-
-public Double getDVNETSESECJOB() {
-return DVNETSESECJOB;
-}
-
-public Double getDVNIEMP() {
-return DVNIEMP;
-}
-
-public Double getDVNIINV() {
-return DVNIINV;
-}
-
-public Double getDVNIOTHI() {
-return DVNIOTHI;
-}
-
-public Double getDVNIPPEN() {
-return DVNIPPEN;
-}
-
-public Double getDVNISE() {
-return DVNISE;
-}
-
-public Double getDVNUMBU() {
-return DVNUMBU;
-}
-
-public Double getDVNWFLN_SUM() {
-return DVNWFLN_SUM;
-}
-
 public Double getDVNWHP_SUM() {
 return DVNWHP_SUM;
-}
-
-public Double getDVNWILN_SUM() {
-return DVNWILN_SUM;
-}
-
-public Double getDVOIGEGANNUAL_I() {
-return DVOIGEGANNUAL_I;
-}
-
-public Double getDVOIGFRANNUAL_I() {
-return DVOIGFRANNUAL_I;
 }
 
 public Double getDVOIGGTANNUAL() {
 return DVOIGGTANNUAL;
 }
 
-public Double getDVOIGGTANNUAL_I() {
-return DVOIGGTANNUAL_I;
-}
-
-public Double getDVOIGMAANNUAL_I() {
-return DVOIGMAANNUAL_I;
-}
-
 public Double getDVOIGOEANNUAL_I() {
 return DVOIGOEANNUAL_I;
-}
-
-public Double getDVOIGOEANNUAL_IFLAG() {
-return DVOIGOEANNUAL_IFLAG;
-}
-
-public Double getDVOIGOPANNUAL_I() {
-return DVOIGOPANNUAL_I;
 }
 
 public Double getDVOIGOSANNUAL_I() {
 return DVOIGOSANNUAL_I;
 }
 
-public Double getDVOIGOSANNUAL_IFLAG() {
-return DVOIGOSANNUAL_IFLAG;
-}
-
 public Double getDVOIGPPANNUAL_I() {
 return DVOIGPPANNUAL_I;
-}
-
-public Double getDVOIGPPANNUAL_IFLAG() {
-return DVOIGPPANNUAL_IFLAG;
-}
-
-public Double getDVOIGROANNUAL_I() {
-return DVOIGROANNUAL_I;
 }
 
 public Double getDVOIGRRANNUAL() {
 return DVOIGRRANNUAL;
 }
 
-public Double getDVOIGRRANNUAL_I() {
-return DVOIGRRANNUAL_I;
-}
-
-public Double getDVOINEGANNUAL_I() {
-return DVOINEGANNUAL_I;
-}
-
-public Double getDVOINEGANNUAL_IFLAG() {
-return DVOINEGANNUAL_IFLAG;
-}
-
-public Double getDVOINFRANNUAL_I() {
-return DVOINFRANNUAL_I;
-}
-
-public Double getDVOINFRANNUAL_IFLAG() {
-return DVOINFRANNUAL_IFLAG;
-}
-
-public Double getDVOINGTANNUAL_I() {
-return DVOINGTANNUAL_I;
-}
-
-public Double getDVOINGTANNUAL_IFLAG() {
-return DVOINGTANNUAL_IFLAG;
-}
-
-public Double getDVOINMAANNUAL_I() {
-return DVOINMAANNUAL_I;
-}
-
-public Double getDVOINMAANNUAL_IFLAG() {
-return DVOINMAANNUAL_IFLAG;
-}
-
-public Double getDVOINOPANNUAL_I() {
-return DVOINOPANNUAL_I;
-}
-
-public Double getDVOINOPANNUAL_IFLAG() {
-return DVOINOPANNUAL_IFLAG;
-}
-
-public Double getDVOINROANNUAL_I() {
-return DVOINROANNUAL_I;
-}
-
-public Double getDVOINROANNUAL_IFLAG() {
-return DVOINROANNUAL_IFLAG;
-}
-
-public Double getDVOINRRANNUAL_I() {
-return DVOINRRANNUAL_I;
-}
-
-public Double getDVOINRRANNUAL_IFLAG() {
-return DVOINRRANNUAL_IFLAG;
-}
-
-public Double getDVOPRDEBT() {
-return DVOPRDEBT;
-}
-
-public Double getDVOPRVAL() {
-return DVOPRVAL;
-}
-
-public Double getDVOTHINSANNUAL() {
-return DVOTHINSANNUAL;
-}
-
-public Double getDVPENINC1() {
-return DVPENINC1;
-}
-
-public Double getDVPENINC2() {
-return DVPENINC2;
-}
-
 public Double getDVPUBLPRIV() {
 return DVPUBLPRIV;
 }
 
-public Double getDVREDUNANNUAL() {
-return DVREDUNANNUAL;
-}
-
 public Double getDVRENTAMTANNUAL() {
 return DVRENTAMTANNUAL;
-}
-
-public Double getDVRENTAMTANNUAL_I() {
-return DVRENTAMTANNUAL_I;
-}
-
-public Double getDVRENTAMTANNUAL_IFLAG() {
-return DVRENTAMTANNUAL_IFLAG;
-}
-
-public Double getDVSAME() {
-return DVSAME;
 }
 
 public Double getDVSAME_I() {
@@ -8804,86 +11999,6 @@ return DVSAME_I;
 
 public Double getDVSAME_IFLAG() {
 return DVSAME_IFLAG;
-}
-
-public Double getDVSAVAL_SUM() {
-return DVSAVAL_SUM;
-}
-
-public Double getDVSCARDNUM_I() {
-return DVSCARDNUM_I;
-}
-
-public Double getDVSCARDNUM_IFLAG() {
-return DVSCARDNUM_IFLAG;
-}
-
-public Double getDVSCARDYN_I() {
-return DVSCARDYN_I;
-}
-
-public Double getDVSCARDYN_IFLAG() {
-return DVSCARDYN_IFLAG;
-}
-
-public Double getDVSEGRSPAY() {
-return DVSEGRSPAY;
-}
-
-public Double getDVSEGRSPAY_I() {
-return DVSEGRSPAY_I;
-}
-
-public Double getDVSEGRSPAY_IFLAG() {
-return DVSEGRSPAY_IFLAG;
-}
-
-public Double getDVSENETPAY() {
-return DVSENETPAY;
-}
-
-public Double getDVSENETPAY_I() {
-return DVSENETPAY_I;
-}
-
-public Double getDVSENETPAY_IFLAG() {
-return DVSENETPAY_IFLAG;
-}
-
-public Double getDVSENO() {
-return DVSENO;
-}
-
-public Double getDVSEPANNUAL01() {
-return DVSEPANNUAL01;
-}
-
-public Double getDVSEPANNUAL02() {
-return DVSEPANNUAL02;
-}
-
-public Double getDVSEPANNUAL03() {
-return DVSEPANNUAL03;
-}
-
-public Double getDVSEPANNUAL04() {
-return DVSEPANNUAL04;
-}
-
-public Double getDVSEPANNUAL05() {
-return DVSEPANNUAL05;
-}
-
-public Double getDVSEPANNUAL06() {
-return DVSEPANNUAL06;
-}
-
-public Double getDVSEPANNUAL07() {
-return DVSEPANNUAL07;
-}
-
-public Double getDVSEPANNUAL08() {
-return DVSEPANNUAL08;
 }
 
 public Double getDVSEPANNUAL09() {
@@ -8978,10 +12093,6 @@ public Double getDVSPECANNUAL10() {
 return DVSPECANNUAL10;
 }
 
-public Double getDVSPS() {
-return DVSPS;
-}
-
 public Double getDVSTAT() {
 return DVSTAT;
 }
@@ -9006,20 +12117,8 @@ public Double getDVWAVE() {
 return DVWAVE;
 }
 
-public Double getDVWID() {
-return DVWID;
-}
-
-public Double getDVWINANNUAL() {
-return DVWINANNUAL;
-}
-
 public Double getDVWTCANNUAL() {
 return DVWTCANNUAL;
-}
-
-public Double getDWELLTYP() {
-return DWELLTYP;
 }
 
 public Double getECACT() {
@@ -9030,10 +12129,6 @@ public Double getEDAGE() {
 return EDAGE;
 }
 
-public Double getEMPNO() {
-return EMPNO;
-}
-
 public Double getEMPSTAT1() {
 return EMPSTAT1;
 }
@@ -9042,92 +12137,8 @@ public Double getEMPSTAT2() {
 return EMPSTAT2;
 }
 
-public Double getES2000() {
-return ES2000;
-}
-
 public Double getETYPE() {
 return ETYPE;
-}
-
-public Double getEVERWK_I() {
-return EVERWK_I;
-}
-
-public Double getEVERWK_IFLAG() {
-return EVERWK_IFLAG;
-}
-
-public Double getEYE1() {
-return EYE1;
-}
-
-public Double getEYE2() {
-return EYE2;
-}
-
-public Double getEYE3() {
-return EYE3;
-}
-
-public Double getEYE4() {
-return EYE4;
-}
-
-public Double getEYE5() {
-return EYE5;
-}
-
-public Double getEYE6() {
-return EYE6;
-}
-
-public Double getEYE7() {
-return EYE7;
-}
-
-public Double getEYE8() {
-return EYE8;
-}
-
-public Double getFBFAED() {
-return FBFAED;
-}
-
-public Double getFBMOED() {
-return FBMOED;
-}
-
-public Double getFBSIBS() {
-return FBSIBS;
-}
-
-public Double getFBSITU() {
-return FBSITU;
-}
-
-public Double getFBTEN() {
-return FBTEN;
-}
-
-public Double getFCISAWD() {
-return FCISAWD;
-}
-
-public Double getFCISCE() {
-return FCISCE;
-}
-
-public Double getFCIWDAB() {
-return FCIWDAB;
-}
-
-public Double getFCIWNUM() {
-return FCIWNUM;
-}
-
-public Double getFINCV_IFLAG() {
-return FINCV_IFLAG;
 }
 
 public Double getFINVTY01_IFLAG() {
@@ -9170,10 +12181,6 @@ public Double getFINVTY10_IFLAG() {
 return FINVTY10_IFLAG;
 }
 
-public Double getFINVTY11_I() {
-return FINVTY11_I;
-}
-
 public Double getFINVTY11_IFLAG() {
 return FINVTY11_IFLAG;
 }
@@ -9186,44 +12193,12 @@ public Double getFLOORN() {
 return FLOORN;
 }
 
-public Double getFNDCASH1() {
-return FNDCASH1;
-}
-
-public Double getFNDCASH2() {
-return FNDCASH2;
-}
-
-public Double getFNDCASH3() {
-return FNDCASH3;
-}
-
-public Double getFNDCASH4() {
-return FNDCASH4;
-}
-
-public Double getFNDCASH5() {
-return FNDCASH5;
-}
-
 public Double getFNSVAL1() {
 return FNSVAL1;
 }
 
 public Double getFNSVAL1_I() {
 return FNSVAL1_I;
-}
-
-public Double getFRSTSCH() {
-return FRSTSCH;
-}
-
-public Double getFSAVAB() {
-return FSAVAB;
-}
-
-public Double getFSAVED() {
-return FSAVED;
 }
 
 public Double getFSHADA() {
@@ -9238,92 +12213,12 @@ public Double getFSHADD() {
 return FSHADD;
 }
 
-public Double getFSTYPIN4() {
-return FSTYPIN4;
-}
-
 public Double getFSTYPIN5() {
 return FSTYPIN5;
 }
 
 public Double getFSTYPSH5() {
 return FSTYPSH5;
-}
-
-public Double getFTHECST() {
-return FTHECST;
-}
-
-public Double getFTSTUD() {
-return FTSTUD;
-}
-
-public Double getFWITHD() {
-return FWITHD;
-}
-
-public Double getGROSSPER() {
-return GROSSPER;
-}
-
-public Double getGRSAMK() {
-return GRSAMK;
-}
-
-public Double getGRSEESM() {
-return GRSEESM;
-}
-
-public Double getGRSEESW() {
-return GRSEESW;
-}
-
-public Double getGRSPAYEMPORSE() {
-return GRSPAYEMPORSE;
-}
-
-public Double getGSTDNW() {
-return GSTDNW;
-}
-
-public Double getHAPPY() {
-return HAPPY;
-}
-
-public Double getHASSHAC() {
-return HASSHAC;
-}
-
-public Double getHFINL_SUM() {
-return HFINL_SUM;
-}
-
-public Double getHFINW_EXCENDW_SUM() {
-return HFINW_EXCENDW_SUM;
-}
-
-public Double getHHLDR() {
-return HHLDR;
-}
-
-public Double getHIHNUM() {
-return HIHNUM;
-}
-
-public Double getHOUSGDSOST() {
-return HOUSGDSOST;
-}
-
-public Double getHOUT() {
-return HOUT;
-}
-
-public Double getHPARR_SUM() {
-return HPARR_SUM;
-}
-
-public Double getHPLFT1() {
-return HPLFT1;
 }
 
 public Double getHPLFT3() {
@@ -9338,14 +12233,6 @@ public Double getHPLFT5() {
 return HPLFT5;
 }
 
-public Double getHPNMN1() {
-return HPNMN1;
-}
-
-public Double getHPNMN2() {
-return HPNMN2;
-}
-
 public Double getHPNMN3() {
 return HPNMN3;
 }
@@ -9356,14 +12243,6 @@ return HPNMN4;
 
 public Double getHPNMN5() {
 return HPNMN5;
-}
-
-public Double getHPNYR1() {
-return HPNYR1;
-}
-
-public Double getHPNYR2() {
-return HPNYR2;
 }
 
 public Double getHPNYR3() {
@@ -9388,10 +12267,6 @@ return HPOS4;
 
 public Double getHPOS5() {
 return HPOS5;
-}
-
-public Double getHPROX() {
-return HPROX;
 }
 
 public Double getHRPDVAGE() {
@@ -9442,10 +12317,6 @@ public Double getHRPNSSEC3() {
 return HRPNSSEC3;
 }
 
-public Double getHRPPART() {
-return HRPPART;
-}
-
 public Double getHRPPARTIOUT1() {
 return HRPPARTIOUT1;
 }
@@ -9460,10 +12331,6 @@ return HRP_RESP;
 
 public Double getH_FLAG1() {
 return H_FLAG1;
-}
-
-public Double getIFBANKACC() {
-return IFBANKACC;
 }
 
 public Double getIGDS12() {
@@ -9510,38 +12377,6 @@ public Double getIGDS7() {
 return IGDS7;
 }
 
-public Double getIGIFVAL_IFLAG() {
-return IGIFVAL_IFLAG;
-}
-
-public Double getIHRCNUM_I() {
-return IHRCNUM_I;
-}
-
-public Double getIHRCNUM_IFLAG() {
-return IHRCNUM_IFLAG;
-}
-
-public Double getIHRECNT_I() {
-return IHRECNT_I;
-}
-
-public Double getIHRECNT_IFLAG() {
-return IHRECNT_IFLAG;
-}
-
-public Double getIHSE10() {
-return IHSE10;
-}
-
-public Double getIHSE11() {
-return IHSE11;
-}
-
-public Double getIHSE12() {
-return IHSE12;
-}
-
 public Double getIHSE13() {
 return IHSE13;
 }
@@ -9566,10 +12401,6 @@ public Double getIHSE18() {
 return IHSE18;
 }
 
-public Double getIHSE3() {
-return IHSE3;
-}
-
 public Double getIHSE4() {
 return IHSE4;
 }
@@ -9580,70 +12411,6 @@ return IHSE5;
 
 public Double getIHSE6() {
 return IHSE6;
-}
-
-public Double getIHSE8() {
-return IHSE8;
-}
-
-public Double getIHSE9() {
-return IHSE9;
-}
-
-public Double getILACC_IFLAG() {
-return ILACC_IFLAG;
-}
-
-public Double getILGIFT_I() {
-return ILGIFT_I;
-}
-
-public Double getILGIFT_IFLAG() {
-return ILGIFT_IFLAG;
-}
-
-public Double getILIFB_I() {
-return ILIFB_I;
-}
-
-public Double getILIFB_IFLAG() {
-return ILIFB_IFLAG;
-}
-
-public Double getILIFE_IFLAG() {
-return ILIFE_IFLAG;
-}
-
-public Double getILINS_IFLAG() {
-return ILINS_IFLAG;
-}
-
-public Double getILNPBAM() {
-return ILNPBAM;
-}
-
-public Double getILNPBK() {
-return ILNPBK;
-}
-
-public Double getILNUSE01() {
-return ILNUSE01;
-}
-
-public Double getILNUSE02() {
-return ILNUSE02;
-}
-
-public Double getILNUSE03() {
-return ILNUSE03;
-}
-
-public Double getILNUSE04() {
-return ILNUSE04;
-}
-
-public Double getILNUSE05() {
-return ILNUSE05;
 }
 
 public Double getILNUSE06() {
@@ -9664,42 +12431,6 @@ return ILNUSE09;
 
 public Double getILNUSE10() {
 return ILNUSE10;
-}
-
-public Double getILNVAL() {
-return ILNVAL;
-}
-
-public Double getILNVALB() {
-return ILNVALB;
-}
-
-public Double getILOAN() {
-return ILOAN;
-}
-
-public Double getILOTH_IFLAG() {
-return ILOTH_IFLAG;
-}
-
-public Double getILRED_IFLAG() {
-return ILRED_IFLAG;
-}
-
-public Double getILUMP_I() {
-return ILUMP_I;
-}
-
-public Double getILUMP_IFLAG() {
-return ILUMP_IFLAG;
-}
-
-public Double getILUMTY1_I() {
-return ILUMTY1_I;
-}
-
-public Double getILUMTY1_IFLAG() {
-return ILUMTY1_IFLAG;
 }
 
 public Double getILUMTY2_I() {
@@ -9766,26 +12497,6 @@ public Double getILUMTY7_IFLAG() {
 return ILUMTY7_IFLAG;
 }
 
-public Double getILUPP_I() {
-return ILUPP_I;
-}
-
-public Double getILUPP_IFLAG() {
-return ILUPP_IFLAG;
-}
-
-public Double getILWIN_IFLAG() {
-return ILWIN_IFLAG;
-}
-
-public Double getINCDROP() {
-return INCDROP;
-}
-
-public Double getINDFREQ() {
-return INDFREQ;
-}
-
 public Double getINSPOL() {
 return INSPOL;
 }
@@ -9806,28 +12517,12 @@ public Double getIVAL1() {
 return IVAL1;
 }
 
-public Double getIVAL1_IFLAG() {
-return IVAL1_IFLAG;
-}
-
 public Double getIVAL2_I() {
 return IVAL2_I;
 }
 
-public Double getIVAL2_IFLAG() {
-return IVAL2_IFLAG;
-}
-
 public Double getIVAL3_I() {
 return IVAL3_I;
-}
-
-public Double getIVAL3_IFLAG() {
-return IVAL3_IFLAG;
-}
-
-public Double getIVALB1() {
-return IVALB1;
 }
 
 public Double getIWAT10() {
@@ -9862,10 +12557,6 @@ public Double getIWAT18() {
 return IWAT18;
 }
 
-public Double getIWAT6() {
-return IWAT6;
-}
-
 public Double getIWAT8() {
 return IWAT8;
 }
@@ -9878,32 +12569,8 @@ public Double getIWHO() {
 return IWHO;
 }
 
-public Double getJBAWAY_I() {
-return JBAWAY_I;
-}
-
-public Double getJBAWAY_IFLAG() {
-return JBAWAY_IFLAG;
-}
-
-public Double getKNOHOWMUCH() {
-return KNOHOWMUCH;
-}
-
-public Double getKNOWBALANCE() {
-return KNOWBALANCE;
-}
-
 public Double getLIVWTH() {
 return LIVWTH;
-}
-
-public Double getLNARR_SUM() {
-return LNARR_SUM;
-}
-
-public Double getLNLFT1() {
-return LNLFT1;
 }
 
 public Double getLNMN1() {
@@ -9946,40 +12613,8 @@ public Double getLNYR5() {
 return LNYR5;
 }
 
-public Double getLOOKED_I() {
-return LOOKED_I;
-}
-
-public Double getLOOKED_IFLAG() {
-return LOOKED_IFLAG;
-}
-
 public Double getLVTDAY() {
 return LVTDAY;
-}
-
-public Double getMARBEF_I() {
-return MARBEF_I;
-}
-
-public Double getMARBEF_IFLAG() {
-return MARBEF_IFLAG;
-}
-
-public Double getMARST() {
-return MARST;
-}
-
-public Double getMNTHSCAPE() {
-return MNTHSCAPE;
-}
-
-public Double getMOARR_SUM() {
-return MOARR_SUM;
-}
-
-public Double getMOLFT1() {
-return MOLFT1;
 }
 
 public Double getMOLFT3() {
@@ -10006,22 +12641,6 @@ public Double getMOOS5() {
 return MOOS5;
 }
 
-public Double getMRECJB() {
-return MRECJB;
-}
-
-public Double getMTHECST() {
-return MTHECST;
-}
-
-public Double getNEWFCMX() {
-return NEWFCMX;
-}
-
-public Double getNEWGIFT() {
-return NEWGIFT;
-}
-
 public Double getNMN1() {
 return NMN1;
 }
@@ -10042,88 +12661,8 @@ public Double getNMN5() {
 return NMN5;
 }
 
-public Double getNOUNITS() {
-return NOUNITS;
-}
-
-public Double getNSLBNK1() {
-return NSLBNK1;
-}
-
-public Double getNSLBNK2() {
-return NSLBNK2;
-}
-
-public Double getNSLBNK3() {
-return NSLBNK3;
-}
-
-public Double getNSLC1() {
-return NSLC1;
-}
-
-public Double getNSLC2() {
-return NSLC2;
-}
-
-public Double getNSLC3() {
-return NSLC3;
-}
-
 public Double getNSSEC() {
 return NSSEC;
-}
-
-public Double getNUMADULT() {
-return NUMADULT;
-}
-
-public Double getNUMCH18() {
-return NUMCH18;
-}
-
-public Double getNUMCHILD() {
-return NUMCHILD;
-}
-
-public Double getNUMCHSAV() {
-return NUMCHSAV;
-}
-
-public Double getNUMCIVPTR() {
-return NUMCIVPTR;
-}
-
-public Double getNUMCOUPLES() {
-return NUMCOUPLES;
-}
-
-public Double getNUMCPART() {
-return NUMCPART;
-}
-
-public Double getNUMDEPCH() {
-return NUMDEPCH;
-}
-
-public Double getNUMJOB() {
-return NUMJOB;
-}
-
-public Double getNUMSSEX() {
-return NUMSSEX;
-}
-
-public Double getNWFLNVAL1() {
-return NWFLNVAL1;
-}
-
-public Double getNWFLNVAL2() {
-return NWFLNVAL2;
-}
-
-public Double getNWFLNVAL3() {
-return NWFLNVAL3;
 }
 
 public Double getNWHP() {
@@ -10146,42 +12685,6 @@ public Double getNWHPVAL3() {
 return NWHPVAL3;
 }
 
-public Double getNWILNVAL1() {
-return NWILNVAL1;
-}
-
-public Double getNWILNVAL2() {
-return NWILNVAL2;
-}
-
-public Double getNWILNVAL3() {
-return NWILNVAL3;
-}
-
-public Double getNWLN() {
-return NWLN;
-}
-
-public Double getNWLNNO() {
-return NWLNNO;
-}
-
-public Double getNWLNNO_I() {
-return NWLNNO_I;
-}
-
-public Double getNWLNNO_IFLAG() {
-return NWLNNO_IFLAG;
-}
-
-public Double getNWLN_I() {
-return NWLN_I;
-}
-
-public Double getNWLN_IFLAG() {
-return NWLN_IFLAG;
-}
-
 public Double getNYR1() {
 return NYR1;
 }
@@ -10202,100 +12705,12 @@ public Double getNYR5() {
 return NYR5;
 }
 
-public Double getOEXPINC01() {
-return OEXPINC01;
-}
-
-public Double getOEXPINC02() {
-return OEXPINC02;
-}
-
-public Double getOEXPINC03() {
-return OEXPINC03;
-}
-
-public Double getOEXPINC04() {
-return OEXPINC04;
-}
-
-public Double getOEXPINC05() {
-return OEXPINC05;
-}
-
-public Double getOEXPINC06() {
-return OEXPINC06;
-}
-
-public Double getOEXPINC07() {
-return OEXPINC07;
-}
-
-public Double getOEXPINC08() {
-return OEXPINC08;
-}
-
-public Double getOEXPINC09() {
-return OEXPINC09;
-}
-
-public Double getOEXPINC10() {
-return OEXPINC10;
-}
-
-public Double getOEXPINC11() {
-return OEXPINC11;
-}
-
-public Double getOEXPINC12() {
-return OEXPINC12;
-}
-
-public Double getOEXPINC13() {
-return OEXPINC13;
-}
-
-public Double getOEXPINC14() {
-return OEXPINC14;
-}
-
-public Double getOEXPINC15() {
-return OEXPINC15;
-}
-
-public Double getOFTCHECKED() {
-return OFTCHECKED;
-}
-
 public Double getOIGGT() {
 return OIGGT;
 }
 
 public Double getOIGRR() {
 return OIGRR;
-}
-
-public Double getOIMPRS1() {
-return OIMPRS1;
-}
-
-public Double getOIMPRS2() {
-return OIMPRS2;
-}
-
-public Double getOIMPRS3() {
-return OIMPRS3;
-}
-
-public Double getOIMPRS4() {
-return OIMPRS4;
-}
-
-public Double getOIMPRS5() {
-return OIMPRS5;
-}
-
-public Double getOIMPRS6() {
-return OIMPRS6;
 }
 
 public Double getOIMPRS7() {
@@ -10310,30 +12725,6 @@ public Double getOIMPRS9() {
 return OIMPRS9;
 }
 
-public Double getONOSAVE1() {
-return ONOSAVE1;
-}
-
-public Double getONOSAVE2() {
-return ONOSAVE2;
-}
-
-public Double getONOSAVE3() {
-return ONOSAVE3;
-}
-
-public Double getONOSAVE4() {
-return ONOSAVE4;
-}
-
-public Double getONOSAVE5() {
-return ONOSAVE5;
-}
-
-public Double getONOSAVE6() {
-return ONOSAVE6;
-}
-
 public Double getONOSAVE7() {
 return ONOSAVE7;
 }
@@ -10346,44 +12737,8 @@ public Double getONOSAVE9() {
 return ONOSAVE9;
 }
 
-public Double getOPENS09() {
-return OPENS09;
-}
-
-public Double getOPENS10() {
-return OPENS10;
-}
-
-public Double getOPENS11() {
-return OPENS11;
-}
-
-public Double getOPENS12() {
-return OPENS12;
-}
-
-public Double getOPENS13() {
-return OPENS13;
-}
-
-public Double getOPENS14() {
-return OPENS14;
-}
-
-public Double getOPENS15() {
-return OPENS15;
-}
-
 public Double getOPENSAV() {
 return OPENSAV;
-}
-
-public Double getORGNSED() {
-return ORGNSED;
-}
-
-public Double getORISKS() {
-return ORISKS;
 }
 
 public Double getORUNDO09() {
@@ -10406,14 +12761,6 @@ public Double getOSAFERET() {
 return OSAFERET;
 }
 
-public Double getOSAFESAV() {
-return OSAFESAV;
-}
-
-public Double getOSAV2Y() {
-return OSAV2Y;
-}
-
 public Double getOSAVA() {
 return OSAVA;
 }
@@ -10426,64 +12773,8 @@ public Double getOSAVC() {
 return OSAVC;
 }
 
-public Double getOSAVEXT() {
-return OSAVEXT;
-}
-
-public Double getOSITCH() {
-return OSITCH;
-}
-
-public Double getOSLBNK1() {
-return OSLBNK1;
-}
-
-public Double getOSLBNK2() {
-return OSLBNK2;
-}
-
-public Double getOSLBNK3() {
-return OSLBNK3;
-}
-
-public Double getOSLC1() {
-return OSLC1;
-}
-
-public Double getOSLC2() {
-return OSLC2;
-}
-
-public Double getOSLC3() {
-return OSLC3;
-}
-
 public Double getOSLC4() {
 return OSLC4;
-}
-
-public Double getOTHASCH() {
-return OTHASCH;
-}
-
-public Double getOTHASVB() {
-return OTHASVB;
-}
-
-public Double getOTHASVL() {
-return OTHASVL;
-}
-
-public Double getOTHMORT() {
-return OTHMORT;
-}
-
-public Double getOTHSRC4_I() {
-return OTHSRC4_I;
-}
-
-public Double getOTHSRC4_IFLAG() {
-return OTHSRC4_IFLAG;
 }
 
 public Double getOTHSRC5_I() {
@@ -10492,14 +12783,6 @@ return OTHSRC5_I;
 
 public Double getOTHSRC5_IFLAG() {
 return OTHSRC5_IFLAG;
-}
-
-public Double getOTRUST15() {
-return OTRUST15;
-}
-
-public Double getOWAIT() {
-return OWAIT;
 }
 
 public Double getOWHYSAV01() {
@@ -10546,42 +12829,6 @@ public Double getOWHYSAV11() {
 return OWHYSAV11;
 }
 
-public Double getOWNBUS_I() {
-return OWNBUS_I;
-}
-
-public Double getOWNBUS_IFLAG() {
-return OWNBUS_IFLAG;
-}
-
-public Double getOWRSRS01() {
-return OWRSRS01;
-}
-
-public Double getOWRSRS02() {
-return OWRSRS02;
-}
-
-public Double getOWRSRS03() {
-return OWRSRS03;
-}
-
-public Double getOWRSRS04() {
-return OWRSRS04;
-}
-
-public Double getOWRSRS05() {
-return OWRSRS05;
-}
-
-public Double getOWRSRS06() {
-return OWRSRS06;
-}
-
-public Double getOWRSRS07() {
-return OWRSRS07;
-}
-
 public Double getOWRSRS08() {
 return OWRSRS08;
 }
@@ -10600,62 +12847,6 @@ return PADDFUT;
 
 public Double getPADDFUT2() {
 return PADDFUT2;
-}
-
-public Double getPAGESTP() {
-return PAGESTP;
-}
-
-public Double getPANYO() {
-return PANYO;
-}
-
-public Double getPANYO_I() {
-return PANYO_I;
-}
-
-public Double getPANYO_IFLAG() {
-return PANYO_IFLAG;
-}
-
-public Double getPARTGRSPAY() {
-return PARTGRSPAY;
-}
-
-public Double getPARTNSSEC() {
-return PARTNSSEC;
-}
-
-public Double getPARTNSSEC3() {
-return PARTNSSEC3;
-}
-
-public Double getPARTNSSEC5() {
-return PARTNSSEC5;
-}
-
-public Double getPARTNSSEC8() {
-return PARTNSSEC8;
-}
-
-public Double getPARTNSSECB() {
-return PARTNSSECB;
-}
-
-public Double getPASTMN1() {
-return PASTMN1;
-}
-
-public Double getPASTMN2() {
-return PASTMN2;
-}
-
-public Double getPASTYR1() {
-return PASTYR1;
-}
-
-public Double getPASTYR2() {
-return PASTYR2;
 }
 
 public Double getPAVCAM1() {
@@ -10706,316 +12897,12 @@ public Double getPAVCPR2() {
 return PAVCPR2;
 }
 
-public Double getPAVCUV1() {
-return PAVCUV1;
-}
-
-public Double getPAVCUV1_I() {
-return PAVCUV1_I;
-}
-
-public Double getPAVCUV1_IFLAG() {
-return PAVCUV1_IFLAG;
-}
-
-public Double getPAVCUV2() {
-return PAVCUV2;
-}
-
-public Double getPAVCUV2_I() {
-return PAVCUV2_I;
-}
-
-public Double getPAVCUV2_IFLAG() {
-return PAVCUV2_IFLAG;
-}
-
-public Double getPAVCVB1() {
-return PAVCVB1;
-}
-
-public Double getPAVCVB2() {
-return PAVCVB2;
-}
-
-public Double getPAVDOC1() {
-return PAVDOC1;
-}
-
-public Double getPAVDOC2() {
-return PAVDOC2;
-}
-
-public Double getPAYBON_I() {
-return PAYBON_I;
-}
-
-public Double getPAYBON_IFLAG() {
-return PAYBON_IFLAG;
-}
-
-public Double getPAYINC7() {
-return PAYINC7;
-}
-
-public Double getPBDOCS1() {
-return PBDOCS1;
-}
-
-public Double getPBDOCS2() {
-return PBDOCS2;
-}
-
-public Double getPBFRAC1() {
-return PBFRAC1;
-}
-
-public Double getPBFRAC1_I() {
-return PBFRAC1_I;
-}
-
-public Double getPBFRAC1_IFLAG() {
-return PBFRAC1_IFLAG;
-}
-
-public Double getPBFRAC2() {
-return PBFRAC2;
-}
-
-public Double getPBFRAC2_I() {
-return PBFRAC2_I;
-}
-
-public Double getPBFRAC2_IFLAG() {
-return PBFRAC2_IFLAG;
-}
-
-public Double getPBINCA1() {
-return PBINCA1;
-}
-
-public Double getPBINCA2() {
-return PBINCA2;
-}
-
-public Double getPBINCF1() {
-return PBINCF1;
-}
-
-public Double getPBINCF2() {
-return PBINCF2;
-}
-
-public Double getPBINCH1() {
-return PBINCH1;
-}
-
-public Double getPBINCH2() {
-return PBINCH2;
-}
-
-public Double getPBLMVB1() {
-return PBLMVB1;
-}
-
-public Double getPBLMVB2() {
-return PBLMVB2;
-}
-
-public Double getPBLUMV1() {
-return PBLUMV1;
-}
-
-public Double getPBLUMV1_I() {
-return PBLUMV1_I;
-}
-
-public Double getPBLUMV1_IFLAG() {
-return PBLUMV1_IFLAG;
-}
-
-public Double getPBLUMV2() {
-return PBLUMV2;
-}
-
-public Double getPBLUMV2_I() {
-return PBLUMV2_I;
-}
-
-public Double getPBLUMV2_IFLAG() {
-return PBLUMV2_IFLAG;
-}
-
-public Double getPBQUAL1() {
-return PBQUAL1;
-}
-
-public Double getPBQUAL1_I() {
-return PBQUAL1_I;
-}
-
-public Double getPBQUAL1_IFLAG() {
-return PBQUAL1_IFLAG;
-}
-
-public Double getPBQUAL2() {
-return PBQUAL2;
-}
-
-public Double getPBQUAL2_I() {
-return PBQUAL2_I;
-}
-
-public Double getPBQUAL2_IFLAG() {
-return PBQUAL2_IFLAG;
-}
-
-public Double getPBSTMN1() {
-return PBSTMN1;
-}
-
-public Double getPBSTMN2() {
-return PBSTMN2;
-}
-
-public Double getPBSTYR1() {
-return PBSTYR1;
-}
-
-public Double getPBSTYR2() {
-return PBSTYR2;
-}
-
-public Double getPCDOCS1() {
-return PCDOCS1;
-}
-
-public Double getPCDOCS2() {
-return PCDOCS2;
-}
-
-public Double getPCONT() {
-return PCONT;
-}
-
-public Double getPCONT_I() {
-return PCONT_I;
-}
-
-public Double getPCONT_IFLAG() {
-return PCONT_IFLAG;
-}
-
-public Double getPCSTMN1() {
-return PCSTMN1;
-}
-
-public Double getPCSTMN2() {
-return PCSTMN2;
-}
-
-public Double getPCSTYR1() {
-return PCSTYR1;
-}
-
-public Double getPCSTYR2() {
-return PCSTYR2;
-}
-
-public Double getPDBCAL1() {
-return PDBCAL1;
-}
-
-public Double getPDBCAL2() {
-return PDBCAL2;
-}
-
-public Double getPDCVAL1() {
-return PDCVAL1;
-}
-
-public Double getPDCVAL1_I() {
-return PDCVAL1_I;
-}
-
-public Double getPDCVAL1_IFLAG() {
-return PDCVAL1_IFLAG;
-}
-
-public Double getPDCVAL2() {
-return PDCVAL2;
-}
-
-public Double getPDCVAL2_I() {
-return PDCVAL2_I;
-}
-
-public Double getPDCVAL2_IFLAG() {
-return PDCVAL2_IFLAG;
-}
-
 public Double getPDCVAL3() {
 return PDCVAL3;
 }
 
-public Double getPDCVB1() {
-return PDCVB1;
-}
-
-public Double getPDCVB2() {
-return PDCVB2;
-}
-
 public Double getPEMFIN() {
 return PEMFIN;
-}
-
-public Double getPENFLAG() {
-return PENFLAG;
-}
-
-public Double getPENIND1() {
-return PENIND1;
-}
-
-public Double getPENIND2() {
-return PENIND2;
-}
-
-public Double getPENIND3() {
-return PENIND3;
-}
-
-public Double getPENIND4() {
-return PENIND4;
-}
-
-public Double getPENIND5() {
-return PENIND5;
-}
-
-public Double getPENIND6() {
-return PENIND6;
-}
-
-public Double getPERMJB() {
-return PERMJB;
-}
-
-public Double getPERNOWK() {
-return PERNOWK;
-}
-
-public Double getPERSONW2() {
-return PERSONW2;
-}
-
-public Double getPERSONW3() {
-return PERSONW3;
-}
-
-public Double getPESAME() {
-return PESAME;
 }
 
 public Double getPESAME_I() {
@@ -11070,20 +12957,8 @@ public Double getPEWYNO11() {
 return PEWYNO11;
 }
 
-public Double getPFANEH1() {
-return PFANEH1;
-}
-
-public Double getPFANEH2() {
-return PFANEH2;
-}
-
 public Double getPFANEH3() {
 return PFANEH3;
-}
-
-public Double getPFANEH4() {
-return PFANEH4;
 }
 
 public Double getPFANEH5() {
@@ -11142,20 +13017,8 @@ public Double getPFANEXY6() {
 return PFANEXY6;
 }
 
-public Double getPFANGA1() {
-return PFANGA1;
-}
-
-public Double getPFANGA2() {
-return PFANGA2;
-}
-
 public Double getPFANGA3() {
 return PFANGA3;
-}
-
-public Double getPFANGA4() {
-return PFANGA4;
 }
 
 public Double getPFANGA5() {
@@ -11166,20 +13029,8 @@ public Double getPFANGA6() {
 return PFANGA6;
 }
 
-public Double getPFANIF1() {
-return PFANIF1;
-}
-
-public Double getPFANIF2() {
-return PFANIF2;
-}
-
 public Double getPFANIF3() {
 return PFANIF3;
-}
-
-public Double getPFANIF4() {
-return PFANIF4;
 }
 
 public Double getPFANIF5() {
@@ -11190,20 +13041,8 @@ public Double getPFANIF6() {
 return PFANIF6;
 }
 
-public Double getPFANJT1() {
-return PFANJT1;
-}
-
-public Double getPFANJT2() {
-return PFANJT2;
-}
-
 public Double getPFANJT3() {
 return PFANJT3;
-}
-
-public Double getPFANJT4() {
-return PFANJT4;
 }
 
 public Double getPFANJT5() {
@@ -11238,10 +13077,6 @@ public Double getPFANLM6() {
 return PFANLM6;
 }
 
-public Double getPFANN1() {
-return PFANN1;
-}
-
 public Double getPFANN10() {
 return PFANN10;
 }
@@ -11264,10 +13099,6 @@ return PFANN14;
 
 public Double getPFANN15() {
 return PFANN15;
-}
-
-public Double getPFANN16() {
-return PFANN16;
 }
 
 public Double getPFANN17() {
@@ -11340,10 +13171,6 @@ return PFANN4;
 
 public Double getPFANN5() {
 return PFANN5;
-}
-
-public Double getPFANN6() {
-return PFANN6;
 }
 
 public Double getPFANN7() {
@@ -11430,54 +13257,6 @@ public Double getPFBEG6() {
 return PFBEG6;
 }
 
-public Double getPFCASH1() {
-return PFCASH1;
-}
-
-public Double getPFCASH1_I() {
-return PFCASH1_I;
-}
-
-public Double getPFCASH1_IFLAG() {
-return PFCASH1_IFLAG;
-}
-
-public Double getPFCASH2() {
-return PFCASH2;
-}
-
-public Double getPFCASH2_I() {
-return PFCASH2_I;
-}
-
-public Double getPFCASH2_IFLAG() {
-return PFCASH2_IFLAG;
-}
-
-public Double getPFCASH3() {
-return PFCASH3;
-}
-
-public Double getPFCASH3_I() {
-return PFCASH3_I;
-}
-
-public Double getPFCASH3_IFLAG() {
-return PFCASH3_IFLAG;
-}
-
-public Double getPFCASH4() {
-return PFCASH4;
-}
-
-public Double getPFCASH4_I() {
-return PFCASH4_I;
-}
-
-public Double getPFCASH4_IFLAG() {
-return PFCASH4_IFLAG;
-}
-
 public Double getPFCASH5() {
 return PFCASH5;
 }
@@ -11502,148 +13281,8 @@ public Double getPFCASH6_IFLAG() {
 return PFCASH6_IFLAG;
 }
 
-public Double getPFCURV1() {
-return PFCURV1;
-}
-
-public Double getPFCURV1_I() {
-return PFCURV1_I;
-}
-
-public Double getPFCURV1_IFLAG() {
-return PFCURV1_IFLAG;
-}
-
-public Double getPFCURV2() {
-return PFCURV2;
-}
-
-public Double getPFCURV2_I() {
-return PFCURV2_I;
-}
-
-public Double getPFCURV2_IFLAG() {
-return PFCURV2_IFLAG;
-}
-
-public Double getPFCURV3() {
-return PFCURV3;
-}
-
-public Double getPFCURV3_I() {
-return PFCURV3_I;
-}
-
-public Double getPFCURV3_IFLAG() {
-return PFCURV3_IFLAG;
-}
-
-public Double getPFCURV4() {
-return PFCURV4;
-}
-
-public Double getPFCURV4_I() {
-return PFCURV4_I;
-}
-
-public Double getPFCURV4_IFLAG() {
-return PFCURV4_IFLAG;
-}
-
-public Double getPFCURV5() {
-return PFCURV5;
-}
-
-public Double getPFCURV5_I() {
-return PFCURV5_I;
-}
-
-public Double getPFCURV5_IFLAG() {
-return PFCURV5_IFLAG;
-}
-
-public Double getPFCURV6() {
-return PFCURV6;
-}
-
-public Double getPFCURV6_I() {
-return PFCURV6_I;
-}
-
-public Double getPFCURV6_IFLAG() {
-return PFCURV6_IFLAG;
-}
-
-public Double getPFCUVB1() {
-return PFCUVB1;
-}
-
-public Double getPFCUVB2() {
-return PFCUVB2;
-}
-
-public Double getPFCUVB3() {
-return PFCUVB3;
-}
-
-public Double getPFCUVB4() {
-return PFCUVB4;
-}
-
-public Double getPFCUVB5() {
-return PFCUVB5;
-}
-
-public Double getPFCUVB6() {
-return PFCUVB6;
-}
-
-public Double getPFDDV1() {
-return PFDDV1;
-}
-
-public Double getPFDDV1_I() {
-return PFDDV1_I;
-}
-
-public Double getPFDDV1_IFLAG() {
-return PFDDV1_IFLAG;
-}
-
-public Double getPFDDV2() {
-return PFDDV2;
-}
-
-public Double getPFDDV2_I() {
-return PFDDV2_I;
-}
-
-public Double getPFDDV2_IFLAG() {
-return PFDDV2_IFLAG;
-}
-
-public Double getPFDDV3() {
-return PFDDV3;
-}
-
-public Double getPFDDV3_I() {
-return PFDDV3_I;
-}
-
-public Double getPFDDV3_IFLAG() {
-return PFDDV3_IFLAG;
-}
-
 public Double getPFDDV4() {
 return PFDDV4;
-}
-
-public Double getPFDDV4_I() {
-return PFDDV4_I;
-}
-
-public Double getPFDDV4_IFLAG() {
-return PFDDV4_IFLAG;
 }
 
 public Double getPFDDV5() {
@@ -11670,18 +13309,6 @@ public Double getPFDDV6_IFLAG() {
 return PFDDV6_IFLAG;
 }
 
-public Double getPFDDVB1() {
-return PFDDVB1;
-}
-
-public Double getPFDDVB2() {
-return PFDDVB2;
-}
-
-public Double getPFDDVB3() {
-return PFDDVB3;
-}
-
 public Double getPFDDVB4() {
 return PFDDVB4;
 }
@@ -11692,62 +13319,6 @@ return PFDDVB5;
 
 public Double getPFDDVB6() {
 return PFDDVB6;
-}
-
-public Double getPFDOCS1() {
-return PFDOCS1;
-}
-
-public Double getPFDOCS2() {
-return PFDOCS2;
-}
-
-public Double getPFDOCS3() {
-return PFDOCS3;
-}
-
-public Double getPFDOCS4() {
-return PFDOCS4;
-}
-
-public Double getPFDOCS5() {
-return PFDOCS5;
-}
-
-public Double getPFDOCS6() {
-return PFDOCS6;
-}
-
-public Double getPFDRAW1() {
-return PFDRAW1;
-}
-
-public Double getPFDRAW1_I() {
-return PFDRAW1_I;
-}
-
-public Double getPFDRAW1_IFLAG() {
-return PFDRAW1_IFLAG;
-}
-
-public Double getPFDRAW2() {
-return PFDRAW2;
-}
-
-public Double getPFDRAW2_I() {
-return PFDRAW2_I;
-}
-
-public Double getPFDRAW2_IFLAG() {
-return PFDRAW2_IFLAG;
-}
-
-public Double getPFDRAW3_I() {
-return PFDRAW3_I;
-}
-
-public Double getPFDRAW3_IFLAG() {
-return PFDRAW3_IFLAG;
 }
 
 public Double getPFDRAW4() {
@@ -11788,10 +13359,6 @@ return PFDRAW6_IFLAG;
 
 public Double getPFDRA___W3() {
 return PFDRA___W3;
-}
-
-public Double getPFDRINC1() {
-return PFDRINC1;
 }
 
 public Double getPFDRINC2() {
@@ -11838,10 +13405,6 @@ public Double getPFDRINCB6() {
 return PFDRINCB6;
 }
 
-public Double getPFDRVB1() {
-return PFDRVB1;
-}
-
 public Double getPFDRVB2() {
 return PFDRVB2;
 }
@@ -11862,10 +13425,6 @@ public Double getPFDRVB6() {
 return PFDRVB6;
 }
 
-public Double getPFDRVI1() {
-return PFDRVI1;
-}
-
 public Double getPFDRVI2() {
 return PFDRVI2;
 }
@@ -11884,10 +13443,6 @@ return PFDRVI5;
 
 public Double getPFDRVI6() {
 return PFDRVI6;
-}
-
-public Double getPFEN() {
-return PFEN;
 }
 
 public Double getPFEND1() {
@@ -11914,34 +13469,6 @@ public Double getPFEND6() {
 return PFEND6;
 }
 
-public Double getPFENNUM() {
-return PFENNUM;
-}
-
-public Double getPFENNUM_I() {
-return PFENNUM_I;
-}
-
-public Double getPFENNUM_IFLAG() {
-return PFENNUM_IFLAG;
-}
-
-public Double getPFEN_I() {
-return PFEN_I;
-}
-
-public Double getPFEN_IFLAG() {
-return PFEN_IFLAG;
-}
-
-public Double getPFFAAG1() {
-return PFFAAG1;
-}
-
-public Double getPFFAAG2() {
-return PFFAAG2;
-}
-
 public Double getPFFAAG3() {
 return PFFAAG3;
 }
@@ -11958,16 +13485,8 @@ public Double getPFFAAG6() {
 return PFFAAG6;
 }
 
-public Double getPFFAN1() {
-return PFFAN1;
-}
-
 public Double getPFFAN10() {
 return PFFAN10;
-}
-
-public Double getPFFAN11() {
-return PFFAN11;
 }
 
 public Double getPFFAN12() {
@@ -11986,10 +13505,6 @@ public Double getPFFAN15() {
 return PFFAN15;
 }
 
-public Double getPFFAN16() {
-return PFFAN16;
-}
-
 public Double getPFFAN17() {
 return PFFAN17;
 }
@@ -12000,10 +13515,6 @@ return PFFAN18;
 
 public Double getPFFAN19() {
 return PFFAN19;
-}
-
-public Double getPFFAN2() {
-return PFFAN2;
 }
 
 public Double getPFFAN20() {
@@ -12062,10 +13573,6 @@ public Double getPFFAN5() {
 return PFFAN5;
 }
 
-public Double getPFFAN6() {
-return PFFAN6;
-}
-
 public Double getPFFAN7() {
 return PFFAN7;
 }
@@ -12076,10 +13583,6 @@ return PFFAN8;
 
 public Double getPFFAN9() {
 return PFFAN9;
-}
-
-public Double getPFFAWH1() {
-return PFFAWH1;
 }
 
 public Double getPFFAWH10() {
@@ -12104,10 +13607,6 @@ return PFFAWH14;
 
 public Double getPFFAWH15() {
 return PFFAWH15;
-}
-
-public Double getPFFAWH16() {
-return PFFAWH16;
 }
 
 public Double getPFFAWH17() {
@@ -12206,10 +13705,6 @@ public Double getPFFAWH5() {
 return PFFAWH5;
 }
 
-public Double getPFFAWH6() {
-return PFFAWH6;
-}
-
 public Double getPFFAWH7() {
 return PFFAWH7;
 }
@@ -12222,164 +13717,8 @@ public Double getPFFAWH9() {
 return PFFAWH9;
 }
 
-public Double getPFINCA1() {
-return PFINCA1;
-}
-
-public Double getPFINCA1_I() {
-return PFINCA1_I;
-}
-
-public Double getPFINCA1_IFLAG() {
-return PFINCA1_IFLAG;
-}
-
-public Double getPFINCA2() {
-return PFINCA2;
-}
-
-public Double getPFINCA2_I() {
-return PFINCA2_I;
-}
-
-public Double getPFINCA2_IFLAG() {
-return PFINCA2_IFLAG;
-}
-
-public Double getPFINCA3() {
-return PFINCA3;
-}
-
-public Double getPFINCA3_I() {
-return PFINCA3_I;
-}
-
-public Double getPFINCA3_IFLAG() {
-return PFINCA3_IFLAG;
-}
-
-public Double getPFINCA4() {
-return PFINCA4;
-}
-
-public Double getPFINCA4_I() {
-return PFINCA4_I;
-}
-
-public Double getPFINCA4_IFLAG() {
-return PFINCA4_IFLAG;
-}
-
-public Double getPFINCA5() {
-return PFINCA5;
-}
-
-public Double getPFINCA5_I() {
-return PFINCA5_I;
-}
-
-public Double getPFINCA5_IFLAG() {
-return PFINCA5_IFLAG;
-}
-
-public Double getPFINCA6() {
-return PFINCA6;
-}
-
-public Double getPFINCA6_I() {
-return PFINCA6_I;
-}
-
 public Double getPFINCA6_IFLAG() {
 return PFINCA6_IFLAG;
-}
-
-public Double getPFINCP1() {
-return PFINCP1;
-}
-
-public Double getPFINCP1_I() {
-return PFINCP1_I;
-}
-
-public Double getPFINCP1_IFLAG() {
-return PFINCP1_IFLAG;
-}
-
-public Double getPFINCP2() {
-return PFINCP2;
-}
-
-public Double getPFINCP2_I() {
-return PFINCP2_I;
-}
-
-public Double getPFINCP2_IFLAG() {
-return PFINCP2_IFLAG;
-}
-
-public Double getPFINCP3() {
-return PFINCP3;
-}
-
-public Double getPFINCP3_I() {
-return PFINCP3_I;
-}
-
-public Double getPFINCP3_IFLAG() {
-return PFINCP3_IFLAG;
-}
-
-public Double getPFINCP4() {
-return PFINCP4;
-}
-
-public Double getPFINCP4_I() {
-return PFINCP4_I;
-}
-
-public Double getPFINCP4_IFLAG() {
-return PFINCP4_IFLAG;
-}
-
-public Double getPFINCP5() {
-return PFINCP5;
-}
-
-public Double getPFINCP5_I() {
-return PFINCP5_I;
-}
-
-public Double getPFINCP5_IFLAG() {
-return PFINCP5_IFLAG;
-}
-
-public Double getPFINCP6() {
-return PFINCP6;
-}
-
-public Double getPFINCP6_I() {
-return PFINCP6_I;
-}
-
-public Double getPFINCP6_IFLAG() {
-return PFINCP6_IFLAG;
-}
-
-public Double getPFLMUS1() {
-return PFLMUS1;
-}
-
-public Double getPFLMUS2() {
-return PFLMUS2;
-}
-
-public Double getPFLMUS3() {
-return PFLMUS3;
-}
-
-public Double getPFLMUS4() {
-return PFLMUS4;
 }
 
 public Double getPFLMUS5() {
@@ -12388,54 +13727,6 @@ return PFLMUS5;
 
 public Double getPFLMUS6() {
 return PFLMUS6;
-}
-
-public Double getPFLMV1() {
-return PFLMV1;
-}
-
-public Double getPFLMV1_I() {
-return PFLMV1_I;
-}
-
-public Double getPFLMV1_IFLAG() {
-return PFLMV1_IFLAG;
-}
-
-public Double getPFLMV2() {
-return PFLMV2;
-}
-
-public Double getPFLMV2_I() {
-return PFLMV2_I;
-}
-
-public Double getPFLMV2_IFLAG() {
-return PFLMV2_IFLAG;
-}
-
-public Double getPFLMV3() {
-return PFLMV3;
-}
-
-public Double getPFLMV3_I() {
-return PFLMV3_I;
-}
-
-public Double getPFLMV3_IFLAG() {
-return PFLMV3_IFLAG;
-}
-
-public Double getPFLMV4() {
-return PFLMV4;
-}
-
-public Double getPFLMV4_I() {
-return PFLMV4_I;
-}
-
-public Double getPFLMV4_IFLAG() {
-return PFLMV4_IFLAG;
 }
 
 public Double getPFLMV5() {
@@ -12450,28 +13741,12 @@ public Double getPFLMV5_IFLAG() {
 return PFLMV5_IFLAG;
 }
 
-public Double getPFLMV6() {
-return PFLMV6;
-}
-
 public Double getPFLMV6_I() {
 return PFLMV6_I;
 }
 
 public Double getPFLMV6_IFLAG() {
 return PFLMV6_IFLAG;
-}
-
-public Double getPFLMVB1() {
-return PFLMVB1;
-}
-
-public Double getPFLMVB2() {
-return PFLMVB2;
-}
-
-public Double getPFLMVB3() {
-return PFLMVB3;
 }
 
 public Double getPFLMVB4() {
@@ -12484,126 +13759,6 @@ return PFLMVB5;
 
 public Double getPFLMVB6() {
 return PFLMVB6;
-}
-
-public Double getPFLUM1() {
-return PFLUM1;
-}
-
-public Double getPFLUM1_I() {
-return PFLUM1_I;
-}
-
-public Double getPFLUM1_IFLAG() {
-return PFLUM1_IFLAG;
-}
-
-public Double getPFLUM2() {
-return PFLUM2;
-}
-
-public Double getPFLUM2_I() {
-return PFLUM2_I;
-}
-
-public Double getPFLUM2_IFLAG() {
-return PFLUM2_IFLAG;
-}
-
-public Double getPFLUM3() {
-return PFLUM3;
-}
-
-public Double getPFLUM3_I() {
-return PFLUM3_I;
-}
-
-public Double getPFLUM3_IFLAG() {
-return PFLUM3_IFLAG;
-}
-
-public Double getPFLUM4() {
-return PFLUM4;
-}
-
-public Double getPFLUM4_I() {
-return PFLUM4_I;
-}
-
-public Double getPFLUM4_IFLAG() {
-return PFLUM4_IFLAG;
-}
-
-public Double getPFLUM5() {
-return PFLUM5;
-}
-
-public Double getPFLUM5_I() {
-return PFLUM5_I;
-}
-
-public Double getPFLUM5_IFLAG() {
-return PFLUM5_IFLAG;
-}
-
-public Double getPFLUM6() {
-return PFLUM6;
-}
-
-public Double getPFLUM6_I() {
-return PFLUM6_I;
-}
-
-public Double getPFLUM6_IFLAG() {
-return PFLUM6_IFLAG;
-}
-
-public Double getPFLUMALL1() {
-return PFLUMALL1;
-}
-
-public Double getPFLUMALL1_I() {
-return PFLUMALL1_I;
-}
-
-public Double getPFLUMALL1_IFLAG() {
-return PFLUMALL1_IFLAG;
-}
-
-public Double getPFLUMALL2() {
-return PFLUMALL2;
-}
-
-public Double getPFLUMALL2_I() {
-return PFLUMALL2_I;
-}
-
-public Double getPFLUMALL2_IFLAG() {
-return PFLUMALL2_IFLAG;
-}
-
-public Double getPFLUMALL3() {
-return PFLUMALL3;
-}
-
-public Double getPFLUMALL3_I() {
-return PFLUMALL3_I;
-}
-
-public Double getPFLUMALL3_IFLAG() {
-return PFLUMALL3_IFLAG;
-}
-
-public Double getPFLUMALL4() {
-return PFLUMALL4;
-}
-
-public Double getPFLUMALL4_I() {
-return PFLUMALL4_I;
-}
-
-public Double getPFLUMALL4_IFLAG() {
-return PFLUMALL4_IFLAG;
 }
 
 public Double getPFLUMALL5() {
@@ -12628,198 +13783,6 @@ return PFLUMALL6_I;
 
 public Double getPFLUMALL6_IFLAG() {
 return PFLUMALL6_IFLAG;
-}
-
-public Double getPFLUMV1() {
-return PFLUMV1;
-}
-
-public Double getPFLUMV1_I() {
-return PFLUMV1_I;
-}
-
-public Double getPFLUMV1_IFLAG() {
-return PFLUMV1_IFLAG;
-}
-
-public Double getPFLUMV2() {
-return PFLUMV2;
-}
-
-public Double getPFLUMV2_I() {
-return PFLUMV2_I;
-}
-
-public Double getPFLUMV2_IFLAG() {
-return PFLUMV2_IFLAG;
-}
-
-public Double getPFLUMV3() {
-return PFLUMV3;
-}
-
-public Double getPFLUMV3_I() {
-return PFLUMV3_I;
-}
-
-public Double getPFLUMV3_IFLAG() {
-return PFLUMV3_IFLAG;
-}
-
-public Double getPFLUMV4() {
-return PFLUMV4;
-}
-
-public Double getPFLUMV4_I() {
-return PFLUMV4_I;
-}
-
-public Double getPFLUMV4_IFLAG() {
-return PFLUMV4_IFLAG;
-}
-
-public Double getPFLUMV5() {
-return PFLUMV5;
-}
-
-public Double getPFLUMV5_I() {
-return PFLUMV5_I;
-}
-
-public Double getPFLUMV5_IFLAG() {
-return PFLUMV5_IFLAG;
-}
-
-public Double getPFLUMV6() {
-return PFLUMV6;
-}
-
-public Double getPFLUMV6_I() {
-return PFLUMV6_I;
-}
-
-public Double getPFLUMV6_IFLAG() {
-return PFLUMV6_IFLAG;
-}
-
-public Double getPFLUVB1() {
-return PFLUVB1;
-}
-
-public Double getPFLUVB2() {
-return PFLUVB2;
-}
-
-public Double getPFLUVB3() {
-return PFLUVB3;
-}
-
-public Double getPFLUVB4() {
-return PFLUVB4;
-}
-
-public Double getPFLUVB5() {
-return PFLUVB5;
-}
-
-public Double getPFLUVB6() {
-return PFLUVB6;
-}
-
-public Double getPFNEW() {
-return PFNEW;
-}
-
-public Double getPFNEWNO() {
-return PFNEWNO;
-}
-
-public Double getPFNEWNO_I() {
-return PFNEWNO_I;
-}
-
-public Double getPFNEWNO_IFLAG() {
-return PFNEWNO_IFLAG;
-}
-
-public Double getPFNEW_I() {
-return PFNEW_I;
-}
-
-public Double getPFNEW_IFLAG() {
-return PFNEW_IFLAG;
-}
-
-public Double getPFOCTY1() {
-return PFOCTY1;
-}
-
-public Double getPFOCTY1_I() {
-return PFOCTY1_I;
-}
-
-public Double getPFOCTY1_IFLAG() {
-return PFOCTY1_IFLAG;
-}
-
-public Double getPFOCTY2() {
-return PFOCTY2;
-}
-
-public Double getPFOCTY2_I() {
-return PFOCTY2_I;
-}
-
-public Double getPFOCTY2_IFLAG() {
-return PFOCTY2_IFLAG;
-}
-
-public Double getPFOCTY3() {
-return PFOCTY3;
-}
-
-public Double getPFOCTY3_I() {
-return PFOCTY3_I;
-}
-
-public Double getPFOCTY3_IFLAG() {
-return PFOCTY3_IFLAG;
-}
-
-public Double getPFOCTY4() {
-return PFOCTY4;
-}
-
-public Double getPFOCTY4_I() {
-return PFOCTY4_I;
-}
-
-public Double getPFOCTY4_IFLAG() {
-return PFOCTY4_IFLAG;
-}
-
-public Double getPFOCTY5() {
-return PFOCTY5;
-}
-
-public Double getPFOCTY5_I() {
-return PFOCTY5_I;
-}
-
-public Double getPFOCTY5_IFLAG() {
-return PFOCTY5_IFLAG;
-}
-
-public Double getPFOCTY6() {
-return PFOCTY6;
-}
-
-public Double getPFOCTY6_I() {
-return PFOCTY6_I;
-}
-
-public Double getPFOCTY6_IFLAG() {
-return PFOCTY6_IFLAG;
 }
 
 public Double getPFPENVB1() {
@@ -12868,126 +13831,6 @@ return PFPENVI5;
 
 public Double getPFPENVI6() {
 return PFPENVI6;
-}
-
-public Double getPFREC1() {
-return PFREC1;
-}
-
-public Double getPFREC1_I() {
-return PFREC1_I;
-}
-
-public Double getPFREC1_IFLAG() {
-return PFREC1_IFLAG;
-}
-
-public Double getPFREC2() {
-return PFREC2;
-}
-
-public Double getPFREC2_I() {
-return PFREC2_I;
-}
-
-public Double getPFREC2_IFLAG() {
-return PFREC2_IFLAG;
-}
-
-public Double getPFREC3() {
-return PFREC3;
-}
-
-public Double getPFREC3_I() {
-return PFREC3_I;
-}
-
-public Double getPFREC3_IFLAG() {
-return PFREC3_IFLAG;
-}
-
-public Double getPFREC4() {
-return PFREC4;
-}
-
-public Double getPFREC4_I() {
-return PFREC4_I;
-}
-
-public Double getPFREC4_IFLAG() {
-return PFREC4_IFLAG;
-}
-
-public Double getPFREC5() {
-return PFREC5;
-}
-
-public Double getPFREC5_I() {
-return PFREC5_I;
-}
-
-public Double getPFREC5_IFLAG() {
-return PFREC5_IFLAG;
-}
-
-public Double getPFREC6() {
-return PFREC6;
-}
-
-public Double getPFREC6_I() {
-return PFREC6_I;
-}
-
-public Double getPFREC6_IFLAG() {
-return PFREC6_IFLAG;
-}
-
-public Double getPFREM1() {
-return PFREM1;
-}
-
-public Double getPFREM1_I() {
-return PFREM1_I;
-}
-
-public Double getPFREM1_IFLAG() {
-return PFREM1_IFLAG;
-}
-
-public Double getPFREM2() {
-return PFREM2;
-}
-
-public Double getPFREM2_I() {
-return PFREM2_I;
-}
-
-public Double getPFREM2_IFLAG() {
-return PFREM2_IFLAG;
-}
-
-public Double getPFREM3() {
-return PFREM3;
-}
-
-public Double getPFREM3_I() {
-return PFREM3_I;
-}
-
-public Double getPFREM3_IFLAG() {
-return PFREM3_IFLAG;
-}
-
-public Double getPFREM4() {
-return PFREM4;
-}
-
-public Double getPFREM4_I() {
-return PFREM4_I;
-}
-
-public Double getPFREM4_IFLAG() {
-return PFREM4_IFLAG;
 }
 
 public Double getPFREM5() {
@@ -13182,166 +14025,6 @@ public Double getPFSIPTY9() {
 return PFSIPTY9;
 }
 
-public Double getPFSTAT1() {
-return PFSTAT1;
-}
-
-public Double getPFSTAT2() {
-return PFSTAT2;
-}
-
-public Double getPFSTAT3() {
-return PFSTAT3;
-}
-
-public Double getPFSTAT4() {
-return PFSTAT4;
-}
-
-public Double getPFSTAT5() {
-return PFSTAT5;
-}
-
-public Double getPFSTAT6() {
-return PFSTAT6;
-}
-
-public Double getPFSTMM1() {
-return PFSTMM1;
-}
-
-public Double getPFSTMM2() {
-return PFSTMM2;
-}
-
-public Double getPFSTMM3() {
-return PFSTMM3;
-}
-
-public Double getPFSTMM4() {
-return PFSTMM4;
-}
-
-public Double getPFSTMM5() {
-return PFSTMM5;
-}
-
-public Double getPFSTMM6() {
-return PFSTMM6;
-}
-
-public Double getPFSTMY1() {
-return PFSTMY1;
-}
-
-public Double getPFSTMY2() {
-return PFSTMY2;
-}
-
-public Double getPFSTMY3() {
-return PFSTMY3;
-}
-
-public Double getPFSTMY4() {
-return PFSTMY4;
-}
-
-public Double getPFSTMY5() {
-return PFSTMY5;
-}
-
-public Double getPFSTMY6() {
-return PFSTMY6;
-}
-
-public Double getPFTYP1() {
-return PFTYP1;
-}
-
-public Double getPFTYP1_I() {
-return PFTYP1_I;
-}
-
-public Double getPFTYP1_IFLAG() {
-return PFTYP1_IFLAG;
-}
-
-public Double getPFTYP2() {
-return PFTYP2;
-}
-
-public Double getPFTYP2_I() {
-return PFTYP2_I;
-}
-
-public Double getPFTYP2_IFLAG() {
-return PFTYP2_IFLAG;
-}
-
-public Double getPFTYP3() {
-return PFTYP3;
-}
-
-public Double getPFTYP3_I() {
-return PFTYP3_I;
-}
-
-public Double getPFTYP3_IFLAG() {
-return PFTYP3_IFLAG;
-}
-
-public Double getPFTYP4() {
-return PFTYP4;
-}
-
-public Double getPFTYP4_I() {
-return PFTYP4_I;
-}
-
-public Double getPFTYP4_IFLAG() {
-return PFTYP4_IFLAG;
-}
-
-public Double getPFTYP5() {
-return PFTYP5;
-}
-
-public Double getPFTYP5_I() {
-return PFTYP5_I;
-}
-
-public Double getPFTYP5_IFLAG() {
-return PFTYP5_IFLAG;
-}
-
-public Double getPFTYP6() {
-return PFTYP6;
-}
-
-public Double getPFTYP6_I() {
-return PFTYP6_I;
-}
-
-public Double getPFTYP6_IFLAG() {
-return PFTYP6_IFLAG;
-}
-
-public Double getPHYSBUYLGDST() {
-return PHYSBUYLGDST;
-}
-
-public Double getPHYSHOUSGDSOST() {
-return PHYSHOUSGDSOST;
-}
-
-public Double getPHYSHOUSGDST() {
-return PHYSHOUSGDST;
-}
-
-public Double getPINC() {
-return PINC;
-}
-
 public Double getPIRREG() {
 return PIRREG;
 }
@@ -13354,116 +14037,16 @@ public Double getPMORTC() {
 return PMORTC;
 }
 
-public Double getPMORTC2() {
-return PMORTC2;
-}
-
-public Double getPMORTC3() {
-return PMORTC3;
-}
-
 public Double getPNEWMEM() {
 return PNEWMEM;
-}
-
-public Double getPNOWK() {
-return PNOWK;
-}
-
-public Double getPNOWKLN() {
-return PNOWKLN;
-}
-
-public Double getPNOWKRS() {
-return PNOWKRS;
-}
-
-public Double getPNUMOS() {
-return PNUMOS;
-}
-
-public Double getPNUMOS_I() {
-return PNUMOS_I;
-}
-
-public Double getPNUMOS_IFLAG() {
-return PNUMOS_IFLAG;
-}
-
-public Double getPOADD1() {
-return POADD1;
-}
-
-public Double getPOADD1_I() {
-return POADD1_I;
-}
-
-public Double getPOADD1_IFLAG() {
-return POADD1_IFLAG;
-}
-
-public Double getPOADD2() {
-return POADD2;
-}
-
-public Double getPOADD2_I() {
-return POADD2_I;
-}
-
-public Double getPOADD2_IFLAG() {
-return POADD2_IFLAG;
-}
-
-public Double getPOADD3() {
-return POADD3;
-}
-
-public Double getPOADD3_I() {
-return POADD3_I;
-}
-
-public Double getPOADD3_IFLAG() {
-return POADD3_IFLAG;
-}
-
-public Double getPOADD4() {
-return POADD4;
-}
-
-public Double getPOADD4_I() {
-return POADD4_I;
-}
-
-public Double getPOADD4_IFLAG() {
-return POADD4_IFLAG;
 }
 
 public Double getPOADD5() {
 return POADD5;
 }
 
-public Double getPOADD5_I() {
-return POADD5_I;
-}
-
-public Double getPOADD5_IFLAG() {
-return POADD5_IFLAG;
-}
-
 public Double getPOADD6() {
 return POADD6;
-}
-
-public Double getPOADD6_I() {
-return POADD6_I;
-}
-
-public Double getPOADD6_IFLAG() {
-return POADD6_IFLAG;
-}
-
-public Double getPOANEH1() {
-return POANEH1;
 }
 
 public Double getPOANEH2() {
@@ -13486,24 +14069,12 @@ public Double getPOANEXY2() {
 return POANEXY2;
 }
 
-public Double getPOANGA1() {
-return POANGA1;
-}
-
 public Double getPOANGA2() {
 return POANGA2;
 }
 
-public Double getPOANIF1() {
-return POANIF1;
-}
-
 public Double getPOANIF2() {
 return POANIF2;
-}
-
-public Double getPOANJT1() {
-return POANJT1;
 }
 
 public Double getPOANJT2() {
@@ -13518,10 +14089,6 @@ public Double getPOANLM2() {
 return POANLM2;
 }
 
-public Double getPOANN1() {
-return POANN1;
-}
-
 public Double getPOANN2() {
 return POANN2;
 }
@@ -13532,10 +14099,6 @@ return POANN3;
 
 public Double getPOANN4() {
 return POANN4;
-}
-
-public Double getPOANN5() {
-return POANN5;
 }
 
 public Double getPOANN6() {
@@ -13564,14 +14127,6 @@ return POANVI1;
 
 public Double getPOANVI2() {
 return POANVI2;
-}
-
-public Double getPOCASH1() {
-return POCASH1;
-}
-
-public Double getPOCASH2() {
-return POCASH2;
 }
 
 public Double getPOCNDRS1() {
@@ -13622,22 +14177,6 @@ public Double getPOCNDRS9() {
 return POCNDRS9;
 }
 
-public Double getPOCNFG1() {
-return POCNFG1;
-}
-
-public Double getPOCNFG2() {
-return POCNFG2;
-}
-
-public Double getPOCNFR1() {
-return POCNFR1;
-}
-
-public Double getPOCNFR2() {
-return POCNFR2;
-}
-
 public Double getPOCNHOW1() {
 return POCNHOW1;
 }
@@ -13686,14 +14225,6 @@ public Double getPOCNPLN2() {
 return POCNPLN2;
 }
 
-public Double getPOCNPR1() {
-return POCNPR1;
-}
-
-public Double getPOCNPR2() {
-return POCNPR2;
-}
-
 public Double getPOCNVOL1() {
 return POCNVOL1;
 }
@@ -13710,130 +14241,6 @@ public Double getPOCONCH2() {
 return POCONCH2;
 }
 
-public Double getPOCONH1() {
-return POCONH1;
-}
-
-public Double getPOCONH2() {
-return POCONH2;
-}
-
-public Double getPOCTYP1() {
-return POCTYP1;
-}
-
-public Double getPOCTYP1_I() {
-return POCTYP1_I;
-}
-
-public Double getPOCTYP1_IFLAG() {
-return POCTYP1_IFLAG;
-}
-
-public Double getPOCTYP2() {
-return POCTYP2;
-}
-
-public Double getPOCTYP2_I() {
-return POCTYP2_I;
-}
-
-public Double getPOCTYP2_IFLAG() {
-return POCTYP2_IFLAG;
-}
-
-public Double getPODRINC1() {
-return PODRINC1;
-}
-
-public Double getPODRINC2() {
-return PODRINC2;
-}
-
-public Double getPODRINCB1() {
-return PODRINCB1;
-}
-
-public Double getPODRINCB2() {
-return PODRINCB2;
-}
-
-public Double getPODRVB1() {
-return PODRVB1;
-}
-
-public Double getPODRVB2() {
-return PODRVB2;
-}
-
-public Double getPODRVI1() {
-return PODRVI1;
-}
-
-public Double getPODRVI2() {
-return PODRVI2;
-}
-
-public Double getPOEMAM1() {
-return POEMAM1;
-}
-
-public Double getPOEMAM2() {
-return POEMAM2;
-}
-
-public Double getPOEMFG1() {
-return POEMFG1;
-}
-
-public Double getPOEMFG2() {
-return POEMFG2;
-}
-
-public Double getPOEMFR1() {
-return POEMFR1;
-}
-
-public Double getPOEMFR2() {
-return POEMFR2;
-}
-
-public Double getPOEMP1() {
-return POEMP1;
-}
-
-public Double getPOEMP2() {
-return POEMP2;
-}
-
-public Double getPOEMPH1() {
-return POEMPH1;
-}
-
-public Double getPOEMPH2() {
-return POEMPH2;
-}
-
-public Double getPOEMPR1() {
-return POEMPR1;
-}
-
-public Double getPOEMPR2() {
-return POEMPR2;
-}
-
-public Double getPOFAAG1() {
-return POFAAG1;
-}
-
-public Double getPOFAAG2() {
-return POFAAG2;
-}
-
-public Double getPOFAN1() {
-return POFAN1;
-}
-
 public Double getPOFAN10() {
 return POFAN10;
 }
@@ -13846,40 +14253,8 @@ public Double getPOFAN12() {
 return POFAN12;
 }
 
-public Double getPOFAN2() {
-return POFAN2;
-}
-
-public Double getPOFAN3() {
-return POFAN3;
-}
-
-public Double getPOFAN4() {
-return POFAN4;
-}
-
-public Double getPOFAN5() {
-return POFAN5;
-}
-
-public Double getPOFAN6() {
-return POFAN6;
-}
-
-public Double getPOFAN7() {
-return POFAN7;
-}
-
-public Double getPOFAN8() {
-return POFAN8;
-}
-
 public Double getPOFAN9() {
 return POFAN9;
-}
-
-public Double getPOFAWH1() {
-return POFAWH1;
 }
 
 public Double getPOFAWH10() {
@@ -13894,10 +14269,6 @@ public Double getPOFAWH12() {
 return POFAWH12;
 }
 
-public Double getPOFAWH2() {
-return POFAWH2;
-}
-
 public Double getPOFAWH3() {
 return POFAWH3;
 }
@@ -13908,10 +14279,6 @@ return POFAWH4;
 
 public Double getPOFAWH5() {
 return POFAWH5;
-}
-
-public Double getPOFAWH6() {
-return POFAWH6;
 }
 
 public Double getPOFAWH7() {
@@ -13926,18 +14293,6 @@ public Double getPOFAWH9() {
 return POFAWH9;
 }
 
-public Double getPOJOIN1() {
-return POJOIN1;
-}
-
-public Double getPOJOIN2() {
-return POJOIN2;
-}
-
-public Double getPOLMUS1() {
-return POLMUS1;
-}
-
 public Double getPOLMUS10() {
 return POLMUS10;
 }
@@ -13950,108 +14305,12 @@ public Double getPOLMUS12() {
 return POLMUS12;
 }
 
-public Double getPOLMUS2() {
-return POLMUS2;
-}
-
-public Double getPOLMUS3() {
-return POLMUS3;
-}
-
-public Double getPOLMUS4() {
-return POLMUS4;
-}
-
-public Double getPOLMUS5() {
-return POLMUS5;
-}
-
-public Double getPOLMUS6() {
-return POLMUS6;
-}
-
-public Double getPOLMUS7() {
-return POLMUS7;
-}
-
-public Double getPOLMUS8() {
-return POLMUS8;
-}
-
 public Double getPOLMUS9() {
 return POLMUS9;
 }
 
-public Double getPOLMV1() {
-return POLMV1;
-}
-
-public Double getPOLMV1_I() {
-return POLMV1_I;
-}
-
-public Double getPOLMV1_IFLAG() {
-return POLMV1_IFLAG;
-}
-
-public Double getPOLMV2() {
-return POLMV2;
-}
-
-public Double getPOLMV2_I() {
-return POLMV2_I;
-}
-
-public Double getPOLMV2_IFLAG() {
-return POLMV2_IFLAG;
-}
-
-public Double getPOLMVB1() {
-return POLMVB1;
-}
-
 public Double getPOLMVB2() {
 return POLMVB2;
-}
-
-public Double getPOLSYR1() {
-return POLSYR1;
-}
-
-public Double getPOLSYR2() {
-return POLSYR2;
-}
-
-public Double getPOLUM1() {
-return POLUM1;
-}
-
-public Double getPOLUM1_I() {
-return POLUM1_I;
-}
-
-public Double getPOLUM1_IFLAG() {
-return POLUM1_IFLAG;
-}
-
-public Double getPOLUM2() {
-return POLUM2;
-}
-
-public Double getPOLUM2_I() {
-return POLUM2_I;
-}
-
-public Double getPOLUM2_IFLAG() {
-return POLUM2_IFLAG;
-}
-
-public Double getPOMETH1() {
-return POMETH1;
-}
-
-public Double getPOMETH2() {
-return POMETH2;
 }
 
 public Double getPOPENVB() {
@@ -14072,58 +14331,6 @@ return POPENVI2;
 
 public Double getPOPYCH() {
 return POPYCH;
-}
-
-public Double getPOPYCH2() {
-return POPYCH2;
-}
-
-public Double getPORAGE1() {
-return PORAGE1;
-}
-
-public Double getPORAGE2() {
-return PORAGE2;
-}
-
-public Double getPOWER1T() {
-return POWER1T;
-}
-
-public Double getPOWER2T() {
-return POWER2T;
-}
-
-public Double getPOYRAM1() {
-return POYRAM1;
-}
-
-public Double getPOYRAM2() {
-return POYRAM2;
-}
-
-public Double getPPACCU1() {
-return PPACCU1;
-}
-
-public Double getPPACCU2() {
-return PPACCU2;
-}
-
-public Double getPPACCU3() {
-return PPACCU3;
-}
-
-public Double getPPANEH1() {
-return PPANEH1;
-}
-
-public Double getPPANEH2() {
-return PPANEH2;
-}
-
-public Double getPPANEH3() {
-return PPANEH3;
 }
 
 public Double getPPANEXM1() {
@@ -14150,42 +14357,6 @@ public Double getPPANEXY3() {
 return PPANEXY3;
 }
 
-public Double getPPANGA1() {
-return PPANGA1;
-}
-
-public Double getPPANGA2() {
-return PPANGA2;
-}
-
-public Double getPPANGA3() {
-return PPANGA3;
-}
-
-public Double getPPANIF1() {
-return PPANIF1;
-}
-
-public Double getPPANIF2() {
-return PPANIF2;
-}
-
-public Double getPPANIF3() {
-return PPANIF3;
-}
-
-public Double getPPANJT1() {
-return PPANJT1;
-}
-
-public Double getPPANJT2() {
-return PPANJT2;
-}
-
-public Double getPPANJT3() {
-return PPANJT3;
-}
-
 public Double getPPANLM1() {
 return PPANLM1;
 }
@@ -14198,36 +14369,12 @@ public Double getPPANLM3() {
 return PPANLM3;
 }
 
-public Double getPPANN1() {
-return PPANN1;
-}
-
-public Double getPPANN10() {
-return PPANN10;
-}
-
-public Double getPPANN11() {
-return PPANN11;
-}
-
-public Double getPPANN12() {
-return PPANN12;
-}
-
-public Double getPPANN2() {
-return PPANN2;
-}
-
 public Double getPPANN3() {
 return PPANN3;
 }
 
 public Double getPPANN4() {
 return PPANN4;
-}
-
-public Double getPPANN5() {
-return PPANN5;
 }
 
 public Double getPPANN6() {
@@ -14240,10 +14387,6 @@ return PPANN7;
 
 public Double getPPANN8() {
 return PPANN8;
-}
-
-public Double getPPANN9() {
-return PPANN9;
 }
 
 public Double getPPANVB1() {
@@ -14268,30 +14411,6 @@ return PPANVI2;
 
 public Double getPPANVI3() {
 return PPANVI3;
-}
-
-public Double getPPCASH1() {
-return PPCASH1;
-}
-
-public Double getPPCASH2() {
-return PPCASH2;
-}
-
-public Double getPPCASH3() {
-return PPCASH3;
-}
-
-public Double getPPCNDRS1() {
-return PPCNDRS1;
-}
-
-public Double getPPCNDRS10() {
-return PPCNDRS10;
-}
-
-public Double getPPCNDRS11() {
-return PPCNDRS11;
 }
 
 public Double getPPCNDRS12() {
@@ -14320,14 +14439,6 @@ return PPCNDRS17;
 
 public Double getPPCNDRS18() {
 return PPCNDRS18;
-}
-
-public Double getPPCNDRS19() {
-return PPCNDRS19;
-}
-
-public Double getPPCNDRS2() {
-return PPCNDRS2;
 }
 
 public Double getPPCNDRS20() {
@@ -14378,20 +14489,8 @@ public Double getPPCNDRS9() {
 return PPCNDRS9;
 }
 
-public Double getPPCNHOW1() {
-return PPCNHOW1;
-}
-
-public Double getPPCNHOW2() {
-return PPCNHOW2;
-}
-
 public Double getPPCNHO___W3() {
 return PPCNHO___W3;
-}
-
-public Double getPPCNLRS1() {
-return PPCNLRS1;
 }
 
 public Double getPPCNLRS10() {
@@ -14406,20 +14505,8 @@ public Double getPPCNLRS12() {
 return PPCNLRS12;
 }
 
-public Double getPPCNLRS2() {
-return PPCNLRS2;
-}
-
-public Double getPPCNLRS3() {
-return PPCNLRS3;
-}
-
 public Double getPPCNLRS4() {
 return PPCNLRS4;
-}
-
-public Double getPPCNLRS5() {
-return PPCNLRS5;
 }
 
 public Double getPPCNLRS6() {
@@ -14454,34 +14541,6 @@ public Double getPPCONCH() {
 return PPCONCH;
 }
 
-public Double getPPCONCH2() {
-return PPCONCH2;
-}
-
-public Double getPPCONCH3() {
-return PPCONCH3;
-}
-
-public Double getPPDOCS1() {
-return PPDOCS1;
-}
-
-public Double getPPDOCS2() {
-return PPDOCS2;
-}
-
-public Double getPPDOCS3() {
-return PPDOCS3;
-}
-
-public Double getPPDRINC1() {
-return PPDRINC1;
-}
-
-public Double getPPDRINC2() {
-return PPDRINC2;
-}
-
 public Double getPPDRINC3() {
 return PPDRINC3;
 }
@@ -14490,148 +14549,16 @@ public Double getPPDRINCB() {
 return PPDRINCB;
 }
 
-public Double getPPDRINCB2() {
-return PPDRINCB2;
-}
-
 public Double getPPDRINCB3() {
 return PPDRINCB3;
-}
-
-public Double getPPDRVB1() {
-return PPDRVB1;
-}
-
-public Double getPPDRVB2() {
-return PPDRVB2;
 }
 
 public Double getPPDRVB3() {
 return PPDRVB3;
 }
 
-public Double getPPDRVI1() {
-return PPDRVI1;
-}
-
-public Double getPPDRVI2() {
-return PPDRVI2;
-}
-
 public Double getPPDRVI3() {
 return PPDRVI3;
-}
-
-public Double getPPEIRA1() {
-return PPEIRA1;
-}
-
-public Double getPPEIRA2() {
-return PPEIRA2;
-}
-
-public Double getPPEIRA3() {
-return PPEIRA3;
-}
-
-public Double getPPEIRF1() {
-return PPEIRF1;
-}
-
-public Double getPPEIRF2() {
-return PPEIRF2;
-}
-
-public Double getPPEIRF3() {
-return PPEIRF3;
-}
-
-public Double getPPEIRH1() {
-return PPEIRH1;
-}
-
-public Double getPPEIRH2() {
-return PPEIRH2;
-}
-
-public Double getPPEIRH3() {
-return PPEIRH3;
-}
-
-public Double getPPEMAM1() {
-return PPEMAM1;
-}
-
-public Double getPPEMAM2() {
-return PPEMAM2;
-}
-
-public Double getPPEMAM3() {
-return PPEMAM3;
-}
-
-public Double getPPEMFR1() {
-return PPEMFR1;
-}
-
-public Double getPPEMFR2() {
-return PPEMFR2;
-}
-
-public Double getPPEMFR3() {
-return PPEMFR3;
-}
-
-public Double getPPEMP1() {
-return PPEMP1;
-}
-
-public Double getPPEMP2() {
-return PPEMP2;
-}
-
-public Double getPPEMP3() {
-return PPEMP3;
-}
-
-public Double getPPEMPH1() {
-return PPEMPH1;
-}
-
-public Double getPPEMPH2() {
-return PPEMPH2;
-}
-
-public Double getPPEMPH3() {
-return PPEMPH3;
-}
-
-public Double getPPEMPR1() {
-return PPEMPR1;
-}
-
-public Double getPPEMPR2() {
-return PPEMPR2;
-}
-
-public Double getPPEMPR3() {
-return PPEMPR3;
-}
-
-public Double getPPEVRG1() {
-return PPEVRG1;
-}
-
-public Double getPPEVRG2() {
-return PPEVRG2;
-}
-
-public Double getPPEVRG3() {
-return PPEVRG3;
-}
-
-public Double getPPFAAG1() {
-return PPFAAG1;
 }
 
 public Double getPPFAAG2() {
@@ -14642,16 +14569,8 @@ public Double getPPFAAG3() {
 return PPFAAG3;
 }
 
-public Double getPPFAN1() {
-return PPFAN1;
-}
-
 public Double getPPFAN10() {
 return PPFAN10;
-}
-
-public Double getPPFAN11() {
-return PPFAN11;
 }
 
 public Double getPPFAN12() {
@@ -14670,10 +14589,6 @@ public Double getPPFAN15() {
 return PPFAN15;
 }
 
-public Double getPPFAN2() {
-return PPFAN2;
-}
-
 public Double getPPFAN3() {
 return PPFAN3;
 }
@@ -14686,10 +14601,6 @@ public Double getPPFAN5() {
 return PPFAN5;
 }
 
-public Double getPPFAN6() {
-return PPFAN6;
-}
-
 public Double getPPFAN7() {
 return PPFAN7;
 }
@@ -14700,10 +14611,6 @@ return PPFAN8;
 
 public Double getPPFAN9() {
 return PPFAN9;
-}
-
-public Double getPPFAWH1() {
-return PPFAWH1;
 }
 
 public Double getPPFAWH10() {
@@ -14726,10 +14633,6 @@ public Double getPPFAWH14() {
 return PPFAWH14;
 }
 
-public Double getPPFAWH15() {
-return PPFAWH15;
-}
-
 public Double getPPFAWH16() {
 return PPFAWH16;
 }
@@ -14746,10 +14649,6 @@ public Double getPPFAWH19() {
 return PPFAWH19;
 }
 
-public Double getPPFAWH2() {
-return PPFAWH2;
-}
-
 public Double getPPFAWH20() {
 return PPFAWH20;
 }
@@ -14758,20 +14657,12 @@ public Double getPPFAWH21() {
 return PPFAWH21;
 }
 
-public Double getPPFAWH3() {
-return PPFAWH3;
-}
-
 public Double getPPFAWH4() {
 return PPFAWH4;
 }
 
 public Double getPPFAWH5() {
 return PPFAWH5;
-}
-
-public Double getPPFAWH6() {
-return PPFAWH6;
 }
 
 public Double getPPFAWH7() {
@@ -14858,126 +14749,6 @@ public Double getPPLASY3() {
 return PPLASY3;
 }
 
-public Double getPPLMUS1() {
-return PPLMUS1;
-}
-
-public Double getPPLMUS2() {
-return PPLMUS2;
-}
-
-public Double getPPLMUS3() {
-return PPLMUS3;
-}
-
-public Double getPPLMV1() {
-return PPLMV1;
-}
-
-public Double getPPLMV1_I() {
-return PPLMV1_I;
-}
-
-public Double getPPLMV1_IFLAG() {
-return PPLMV1_IFLAG;
-}
-
-public Double getPPLMV2() {
-return PPLMV2;
-}
-
-public Double getPPLMV2_I() {
-return PPLMV2_I;
-}
-
-public Double getPPLMV2_IFLAG() {
-return PPLMV2_IFLAG;
-}
-
-public Double getPPLMV3() {
-return PPLMV3;
-}
-
-public Double getPPLMV3_I() {
-return PPLMV3_I;
-}
-
-public Double getPPLMV3_IFLAG() {
-return PPLMV3_IFLAG;
-}
-
-public Double getPPLMVB1() {
-return PPLMVB1;
-}
-
-public Double getPPLMVB2() {
-return PPLMVB2;
-}
-
-public Double getPPLMVB3() {
-return PPLMVB3;
-}
-
-public Double getPPLSTA1() {
-return PPLSTA1;
-}
-
-public Double getPPLSTA2() {
-return PPLSTA2;
-}
-
-public Double getPPLSTA3() {
-return PPLSTA3;
-}
-
-public Double getPPLSTP1() {
-return PPLSTP1;
-}
-
-public Double getPPLSTP2() {
-return PPLSTP2;
-}
-
-public Double getPPLSTP3() {
-return PPLSTP3;
-}
-
-public Double getPPLUM1() {
-return PPLUM1;
-}
-
-public Double getPPLUM1_I() {
-return PPLUM1_I;
-}
-
-public Double getPPLUM1_IFLAG() {
-return PPLUM1_IFLAG;
-}
-
-public Double getPPLUM2() {
-return PPLUM2;
-}
-
-public Double getPPLUM2_I() {
-return PPLUM2_I;
-}
-
-public Double getPPLUM2_IFLAG() {
-return PPLUM2_IFLAG;
-}
-
-public Double getPPLUM3() {
-return PPLUM3;
-}
-
-public Double getPPLUM3_I() {
-return PPLUM3_I;
-}
-
-public Double getPPLUM3_IFLAG() {
-return PPLUM3_IFLAG;
-}
-
 public Double getPPNINS1() {
 return PPNINS1;
 }
@@ -14990,228 +14761,16 @@ public Double getPPNINS3() {
 return PPNINS3;
 }
 
-public Double getPPORG1() {
-return PPORG1;
-}
-
-public Double getPPORG2() {
-return PPORG2;
-}
-
-public Double getPPORG3() {
-return PPORG3;
-}
-
-public Double getPPPAY1() {
-return PPPAY1;
-}
-
-public Double getPPPAY2() {
-return PPPAY2;
-}
-
-public Double getPPPAY3() {
-return PPPAY3;
-}
-
 public Double getPPRGAM() {
 return PPRGAM;
-}
-
-public Double getPPRGAM2() {
-return PPRGAM2;
-}
-
-public Double getPPRGAM3() {
-return PPRGAM3;
-}
-
-public Double getPPRGFG1() {
-return PPRGFG1;
-}
-
-public Double getPPRGFG2() {
-return PPRGFG2;
 }
 
 public Double getPPRGFG3() {
 return PPRGFG3;
 }
 
-public Double getPPRGFR1() {
-return PPRGFR1;
-}
-
-public Double getPPRGFR2() {
-return PPRGFR2;
-}
-
 public Double getPPRGFR3() {
 return PPRGFR3;
-}
-
-public Double getPPRGH1() {
-return PPRGH1;
-}
-
-public Double getPPRGH2() {
-return PPRGH2;
-}
-
-public Double getPPRGH3() {
-return PPRGH3;
-}
-
-public Double getPPRGPE1() {
-return PPRGPE1;
-}
-
-public Double getPPRGPE2() {
-return PPRGPE2;
-}
-
-public Double getPPRGPE3() {
-return PPRGPE3;
-}
-
-public Double getPPSIPP1() {
-return PPSIPP1;
-}
-
-public Double getPPSIPP2() {
-return PPSIPP2;
-}
-
-public Double getPPSIPP3() {
-return PPSIPP3;
-}
-
-public Double getPPSTMN1() {
-return PPSTMN1;
-}
-
-public Double getPPSTMN2() {
-return PPSTMN2;
-}
-
-public Double getPPSTMN3() {
-return PPSTMN3;
-}
-
-public Double getPPSTYR1() {
-return PPSTYR1;
-}
-
-public Double getPPSTYR2() {
-return PPSTYR2;
-}
-
-public Double getPPSTYR3() {
-return PPSTYR3;
-}
-
-public Double getPPTYP1() {
-return PPTYP1;
-}
-
-public Double getPPTYP2() {
-return PPTYP2;
-}
-
-public Double getPPTYP3() {
-return PPTYP3;
-}
-
-public Double getPPVAL1() {
-return PPVAL1;
-}
-
-public Double getPPVAL1_I() {
-return PPVAL1_I;
-}
-
-public Double getPPVAL1_IFLAG() {
-return PPVAL1_IFLAG;
-}
-
-public Double getPPVAL2() {
-return PPVAL2;
-}
-
-public Double getPPVAL2_I() {
-return PPVAL2_I;
-}
-
-public Double getPPVAL2_IFLAG() {
-return PPVAL2_IFLAG;
-}
-
-public Double getPPVAL3() {
-return PPVAL3;
-}
-
-public Double getPPVAL3_I() {
-return PPVAL3_I;
-}
-
-public Double getPPVAL3_IFLAG() {
-return PPVAL3_IFLAG;
-}
-
-public Double getPPVALB1() {
-return PPVALB1;
-}
-
-public Double getPPVALB2() {
-return PPVALB2;
-}
-
-public Double getPPVALB3() {
-return PPVALB3;
-}
-
-public Double getPPVINT1() {
-return PPVINT1;
-}
-
-public Double getPPVINT2() {
-return PPVINT2;
-}
-
-public Double getPPVINT3() {
-return PPVINT3;
-}
-
-public Double getPPYRST1() {
-return PPYRST1;
-}
-
-public Double getPPYRST2() {
-return PPYRST2;
-}
-
-public Double getPPYRST3() {
-return PPYRST3;
-}
-
-public Double getPPYSTP1() {
-return PPYSTP1;
-}
-
-public Double getPPYSTP11() {
-return PPYSTP11;
-}
-
-public Double getPPYSTP12() {
-return PPYSTP12;
-}
-
-public Double getPPYSTP13() {
-return PPYSTP13;
-}
-
-public Double getPPYSTP14() {
-return PPYSTP14;
 }
 
 public Double getPPYSTP15() {
@@ -15228,14 +14787,6 @@ return PPYSTP17;
 
 public Double getPPYSTP18() {
 return PPYSTP18;
-}
-
-public Double getPPYSTP19() {
-return PPYSTP19;
-}
-
-public Double getPPYSTP2() {
-return PPYSTP2;
 }
 
 public Double getPPYSTP20() {
@@ -15266,36 +14817,12 @@ public Double getPPYSTP7() {
 return PPYSTP7;
 }
 
-public Double getPPYSTP8() {
-return PPYSTP8;
-}
-
-public Double getPPYSTP9() {
-return PPYSTP9;
-}
-
 public Double getPRCRELIG() {
 return PRCRELIG;
 }
 
-public Double getPRESMON() {
-return PRESMON;
-}
-
-public Double getPRESYR() {
-return PRESYR;
-}
-
-public Double getPRODTS() {
-return PRODTS;
-}
-
 public Double getPROXPERS() {
 return PROXPERS;
-}
-
-public Double getPROXYNUM() {
-return PROXYNUM;
 }
 
 public Double getPSCHY_F() {
@@ -15308,50 +14835,6 @@ return PSCHY_S;
 
 public Double getPSCHY_T() {
 return PSCHY_T;
-}
-
-public Double getPSPEXPA() {
-return PSPEXPA;
-}
-
-public Double getPSPEXPA_I() {
-return PSPEXPA_I;
-}
-
-public Double getPSPEXPA_IFLAG() {
-return PSPEXPA_IFLAG;
-}
-
-public Double getPSPEXPH() {
-return PSPEXPH;
-}
-
-public Double getPSPEXPH_I() {
-return PSPEXPH_I;
-}
-
-public Double getPSPEXPH_IFLAG() {
-return PSPEXPH_IFLAG;
-}
-
-public Double getPSPLUM() {
-return PSPLUM;
-}
-
-public Double getPSPLUVAL() {
-return PSPLUVAL;
-}
-
-public Double getPSPSE() {
-return PSPSE;
-}
-
-public Double getPSPSE_I() {
-return PSPSE_I;
-}
-
-public Double getPSPSE_IFLAG() {
-return PSPSE_IFLAG;
 }
 
 public Double getPSTYPE1() {
@@ -15438,78 +14921,6 @@ public Double getPSTYPE9() {
 return PSTYPE9;
 }
 
-public Double getPWACCU() {
-return PWACCU;
-}
-
-public Double getPWLUM() {
-return PWLUM;
-}
-
-public Double getPWLUVAL() {
-return PWLUVAL;
-}
-
-public Double getR01() {
-return R01;
-}
-
-public Double getR02() {
-return R02;
-}
-
-public Double getR03() {
-return R03;
-}
-
-public Double getR04() {
-return R04;
-}
-
-public Double getR05() {
-return R05;
-}
-
-public Double getR06() {
-return R06;
-}
-
-public Double getR07() {
-return R07;
-}
-
-public Double getR08() {
-return R08;
-}
-
-public Double getR09() {
-return R09;
-}
-
-public Double getR10() {
-return R10;
-}
-
-public Double getR11() {
-return R11;
-}
-
-public Double getREGLRPY1_I() {
-return REGLRPY1_I;
-}
-
-public Double getREGLRPY1_IFLAG() {
-return REGLRPY1_IFLAG;
-}
-
-public Double getREGLRPY2_I() {
-return REGLRPY2_I;
-}
-
-public Double getREGLRPY2_IFLAG() {
-return REGLRPY2_IFLAG;
-}
-
 public Double getREGLRPY3() {
 return REGLRPY3;
 }
@@ -15546,14 +14957,6 @@ public Double getREGLRPY5_IFLAG() {
 return REGLRPY5_IFLAG;
 }
 
-public Double getRELBUS_I() {
-return RELBUS_I;
-}
-
-public Double getRELBUS_IFLAG() {
-return RELBUS_IFLAG;
-}
-
 public Double getRELIGE() {
 return RELIGE;
 }
@@ -15566,28 +14969,8 @@ public Double getRELIGW() {
 return RELIGW;
 }
 
-public Double getRENTPAY_I() {
-return RENTPAY_I;
-}
-
-public Double getRENTPAY_IFLAG() {
-return RENTPAY_IFLAG;
-}
-
-public Double getRESPDNT() {
-return RESPDNT;
-}
-
-public Double getRETFRAC() {
-return RETFRAC;
-}
-
 public Double getRF() {
 return RF;
-}
-
-public Double getRNYDAY() {
-return RNYDAY;
 }
 
 public Double getRPCRET1() {
@@ -15606,96 +14989,8 @@ public Double getRPDBCAL_F() {
 return RPDBCAL_F;
 }
 
-public Double getRPFCRET1() {
-return RPFCRET1;
-}
-
-public Double getRPFCRET2() {
-return RPFCRET2;
-}
-
-public Double getRPFCRET3() {
-return RPFCRET3;
-}
-
-public Double getRPFCRET4() {
-return RPFCRET4;
-}
-
-public Double getRPFCRET5() {
-return RPFCRET5;
-}
-
-public Double getRPFCRET6() {
-return RPFCRET6;
-}
-
 public Double getRS() {
 return RS;
-}
-
-public Double getSAMEJOB1() {
-return SAMEJOB1;
-}
-
-public Double getSAMEJOB2() {
-return SAMEJOB2;
-}
-
-public Double getSAMEJOB3() {
-return SAMEJOB3;
-}
-
-public Double getSAMEJOB4() {
-return SAMEJOB4;
-}
-
-public Double getSAMEJOB5() {
-return SAMEJOB5;
-}
-
-public Double getSAMEJOB6() {
-return SAMEJOB6;
-}
-
-public Double getSAMEMP() {
-return SAMEMP;
-}
-
-public Double getSAMJOB() {
-return SAMJOB;
-}
-
-public Double getSATIS() {
-return SATIS;
-}
-
-public Double getSAVNUM() {
-return SAVNUM;
-}
-
-public Double getSCAC1_I() {
-return SCAC1_I;
-}
-
-public Double getSCAC1_IFLAG() {
-return SCAC1_IFLAG;
-}
-
-public Double getSCAC2_I() {
-return SCAC2_I;
-}
-
-public Double getSCAC2_IFLAG() {
-return SCAC2_IFLAG;
-}
-
-public Double getSCAC3_I() {
-return SCAC3_I;
-}
-
-public Double getSCAC3_IFLAG() {
-return SCAC3_IFLAG;
 }
 
 public Double getSCAC4_I() {
@@ -15706,52 +15001,8 @@ public Double getSCAC5_I() {
 return SCAC5_I;
 }
 
-public Double getSCHEMEET_I() {
-return SCHEMEET_I;
-}
-
-public Double getSCHEMEET_IFLAG() {
-return SCHEMEET_IFLAG;
-}
-
-public Double getSCNDSCH() {
-return SCNDSCH;
-}
-
-public Double getSECTOR() {
-return SECTOR;
-}
-
-public Double getSECTR2() {
-return SECTR2;
-}
-
 public Double getSENO() {
 return SENO;
-}
-
-public Double getSICCODE() {
-return SICCODE;
-}
-
-public Double getSJEMP1_I() {
-return SJEMP1_I;
-}
-
-public Double getSJEMP1_IFLAG() {
-return SJEMP1_IFLAG;
-}
-
-public Double getSJOB2_I() {
-return SJOB2_I;
-}
-
-public Double getSJOB2_IFLAG() {
-return SJOB2_IFLAG;
-}
-
-public Double getSMTPEN() {
-return SMTPEN;
 }
 
 public String getSOA1() {
@@ -15764,14 +15015,6 @@ return SOA2;
 
 public Double getSOC2000() {
 return SOC2000;
-}
-
-public Double getSOC2010() {
-return SOC2010;
-}
-
-public Double getSOURC2P() {
-return SOURC2P;
 }
 
 public Double getSPASAF_IORIG() {
@@ -15946,14 +15189,6 @@ public Double getSPENDM() {
 return SPENDM;
 }
 
-public Double getSTARTJ_I() {
-return STARTJ_I;
-}
-
-public Double getSTARTJ_IFLAG() {
-return STARTJ_IFLAG;
-}
-
 public String getSTATSWARD() {
 return STATSWARD;
 }
@@ -15962,28 +15197,8 @@ public Double getSTATUS() {
 return STATUS;
 }
 
-public Double getSTAT_IFLAG() {
-return STAT_IFLAG;
-}
-
-public Double getTACC1() {
-return TACC1;
-}
-
-public Double getTACC2() {
-return TACC2;
-}
-
 public Double getTACC3() {
 return TACC3;
-}
-
-public Double getTADDVB1() {
-return TADDVB1;
-}
-
-public Double getTADDVB2() {
-return TADDVB2;
 }
 
 public Double getTADDVB3() {
@@ -15994,64 +15209,20 @@ public Double getTADDVL() {
 return TADDVL;
 }
 
-public Double getTADDVL2() {
-return TADDVL2;
-}
-
 public Double getTADDVL3() {
 return TADDVL3;
-}
-
-public Double getTBCAP1() {
-return TBCAP1;
-}
-
-public Double getTBCAP2() {
-return TBCAP2;
 }
 
 public Double getTBCAP3() {
 return TBCAP3;
 }
 
-public Double getTBCAPY1() {
-return TBCAPY1;
-}
-
-public Double getTBCAPY2() {
-return TBCAPY2;
-}
-
 public Double getTBCAPY3() {
 return TBCAPY3;
 }
 
-public Double getTBCKNO1() {
-return TBCKNO1;
-}
-
-public Double getTBCKNO2() {
-return TBCKNO2;
-}
-
 public Double getTBCKNO3() {
 return TBCKNO3;
-}
-
-public Double getTBEN1() {
-return TBEN1;
-}
-
-public Double getTBEN10() {
-return TBEN10;
-}
-
-public Double getTBEN11() {
-return TBEN11;
-}
-
-public Double getTBEN12() {
-return TBEN12;
 }
 
 public Double getTBEN13() {
@@ -16082,10 +15253,6 @@ public Double getTBEN19() {
 return TBEN19;
 }
 
-public Double getTBEN2() {
-return TBEN2;
-}
-
 public Double getTBEN20() {
 return TBEN20;
 }
@@ -16106,18 +15273,6 @@ public Double getTBEN24() {
 return TBEN24;
 }
 
-public Double getTBEN3() {
-return TBEN3;
-}
-
-public Double getTBEN4() {
-return TBEN4;
-}
-
-public Double getTBEN5() {
-return TBEN5;
-}
-
 public Double getTBEN6() {
 return TBEN6;
 }
@@ -16130,96 +15285,28 @@ public Double getTBEN8() {
 return TBEN8;
 }
 
-public Double getTBEN9() {
-return TBEN9;
-}
-
-public Double getTBINC1() {
-return TBINC1;
-}
-
-public Double getTBINC2() {
-return TBINC2;
-}
-
 public Double getTBINC3() {
 return TBINC3;
-}
-
-public Double getTBREC1() {
-return TBREC1;
-}
-
-public Double getTBREC2() {
-return TBREC2;
 }
 
 public Double getTBREC3() {
 return TBREC3;
 }
 
-public Double getTBRECB1() {
-return TBRECB1;
-}
-
-public Double getTBRECB2() {
-return TBRECB2;
-}
-
 public Double getTBRECB3() {
 return TBRECB3;
-}
-
-public Double getTBVALB1() {
-return TBVALB1;
-}
-
-public Double getTBVALB2() {
-return TBVALB2;
 }
 
 public Double getTBVALB3() {
 return TBVALB3;
 }
 
-public Double getTDUP1() {
-return TDUP1;
-}
-
-public Double getTDUP2() {
-return TDUP2;
-}
-
 public Double getTDUP3() {
 return TDUP3;
 }
 
-public Double getTDUPA1() {
-return TDUPA1;
-}
-
-public Double getTDUPA2() {
-return TDUPA2;
-}
-
 public Double getTDUPA3() {
 return TDUPA3;
-}
-
-public Double getTJNT1() {
-return TJNT1;
-}
-
-public Double getTJNT2() {
-return TJNT2;
-}
-
-public Double getTJNT3() {
-return TJNT3;
-}
-
-public Double getTJNT4() {
-return TJNT4;
 }
 
 public Double getTJNT5() {
@@ -16230,132 +15317,20 @@ public Double getTJNT6() {
 return TJNT6;
 }
 
-public Double getTOPDVDBOPEN1T() {
-return TOPDVDBOPEN1T;
-}
-
-public Double getTOPDVDBOPEN2T() {
-return TOPDVDBOPEN2T;
-}
-
-public Double getTOTARR_EXCMORT_SUM() {
-return TOTARR_EXCMORT_SUM;
-}
-
-public Double getTOTBILLARR_SUM() {
-return TOTBILLARR_SUM;
-}
-
-public Double getTOTCC_SUM() {
-return TOTCC_SUM;
-}
-
-public Double getTOTFLNS_SUM() {
-return TOTFLNS_SUM;
-}
-
-public Double getTOTHP_SUM() {
-return TOTHP_SUM;
-}
-
-public Double getTOTLNS_SUM() {
-return TOTLNS_SUM;
-}
-
-public Double getTOTLOS_SUM() {
-return TOTLOS_SUM;
-}
-
-public Double getTOTMO_SUM() {
-return TOTMO_SUM;
-}
-
-public Double getTOTNLOS_SUM() {
-return TOTNLOS_SUM;
-}
-
-public Double getTOTNSLBNK_SUM() {
-return TOTNSLBNK_SUM;
-}
-
-public Double getTOTNSLC_SUM() {
-return TOTNSLC_SUM;
-}
-
-public Double getTOTOSLBNK_SUM() {
-return TOTOSLBNK_SUM;
-}
-
-public Double getTOTOSLC_SUM() {
-return TOTOSLC_SUM;
-}
-
-public Double getTOTPARTGRSPAY() {
-return TOTPARTGRSPAY;
-}
-
-public Double getTOTSC_SUM() {
-return TOTSC_SUM;
-}
-
-public Double getTOTSLBNK_SUM() {
-return TOTSLBNK_SUM;
-}
-
-public Double getTOTSLC_SUM() {
-return TOTSLC_SUM;
-}
-
 public Double getTRAINEE() {
 return TRAINEE;
-}
-
-public Double getTRUST() {
-return TRUST;
-}
-
-public Double getTSNEW() {
-return TSNEW;
 }
 
 public Double getTSNO3() {
 return TSNO3;
 }
 
-public Double getTSNUM1() {
-return TSNUM1;
-}
-
-public Double getTSNUM2() {
-return TSNUM2;
-}
-
-public Double getTVAL1() {
-return TVAL1;
-}
-
-public Double getTVAL2() {
-return TVAL2;
-}
-
 public Double getTVAL3() {
 return TVAL3;
 }
 
-public Double getTVALB1() {
-return TVALB1;
-}
-
-public Double getTVALB2() {
-return TVALB2;
-}
-
 public Double getTVALB3() {
 return TVALB3;
-}
-
-public Double getTWHO1() {
-return TWHO1;
 }
 
 public Double getTWHO10() {
@@ -16394,10 +15369,6 @@ public Double getTWHO18() {
 return TWHO18;
 }
 
-public Double getTWHO2() {
-return TWHO2;
-}
-
 public Double getTWHO3() {
 return TWHO3;
 }
@@ -16414,160 +15385,8 @@ public Double getTWHO6() {
 return TWHO6;
 }
 
-public Double getTWHO7() {
-return TWHO7;
-}
-
-public Double getTWHO8() {
-return TWHO8;
-}
-
 public Double getTWHO9() {
 return TWHO9;
-}
-
-public Double getUBUYLET() {
-return UBUYLET;
-}
-
-public Double getUBUYLET_I() {
-return UBUYLET_I;
-}
-
-public Double getUBUYLET_IFLAG() {
-return UBUYLET_IFLAG;
-}
-
-public Double getUDEBTBL() {
-return UDEBTBL;
-}
-
-public Double getUDEBTBLU() {
-return UDEBTBLU;
-}
-
-public Double getUDEBTBO() {
-return UDEBTBO;
-}
-
-public Double getUDEBTBOR() {
-return UDEBTBOR;
-}
-
-public Double getUDEBTBOS() {
-return UDEBTBOS;
-}
-
-public Double getUDEBTBS() {
-return UDEBTBS;
-}
-
-public Double getUDEBTL() {
-return UDEBTL;
-}
-
-public Double getUDEBTLU() {
-return UDEBTLU;
-}
-
-public Double getUDEBTLU_I() {
-return UDEBTLU_I;
-}
-
-public Double getUDEBTLU_IFLAG() {
-return UDEBTLU_IFLAG;
-}
-
-public Double getUDEBTL_I() {
-return UDEBTL_I;
-}
-
-public Double getUDEBTL_IFLAG() {
-return UDEBTL_IFLAG;
-}
-
-public Double getUDEBTO() {
-return UDEBTO;
-}
-
-public Double getUDEBTOR() {
-return UDEBTOR;
-}
-
-public Double getUDEBTOR_I() {
-return UDEBTOR_I;
-}
-
-public Double getUDEBTOR_IFLAG() {
-return UDEBTOR_IFLAG;
-}
-
-public Double getUDEBTOS() {
-return UDEBTOS;
-}
-
-public Double getUDEBTOS_I() {
-return UDEBTOS_I;
-}
-
-public Double getUDEBTOS_IFLAG() {
-return UDEBTOS_IFLAG;
-}
-
-public Double getUDEBTO_I() {
-return UDEBTO_I;
-}
-
-public Double getUDEBTO_IFLAG() {
-return UDEBTO_IFLAG;
-}
-
-public Double getUDEBTS() {
-return UDEBTS;
-}
-
-public Double getUDEBTS_I() {
-return UDEBTS_I;
-}
-
-public Double getUDEBTS_IFLAG() {
-return UDEBTS_IFLAG;
-}
-
-public Double getUGDVBL() {
-return UGDVBL;
-}
-
-public Double getUGDVBL_I() {
-return UGDVBL_I;
-}
-
-public Double getUGDVBL_IFLAG() {
-return UGDVBL_IFLAG;
-}
-
-public Double getUGDVBOS() {
-return UGDVBOS;
-}
-
-public Double getUGDVBOS_I() {
-return UGDVBOS_I;
-}
-
-public Double getUGDVBOS_IFLAG() {
-return UGDVBOS_IFLAG;
-}
-
-public Double getUGDVBS() {
-return UGDVBS;
-}
-
-public Double getUGDVBS_I() {
-return UGDVBS_I;
-}
-
-public Double getUGDVBS_IFLAG() {
-return UGDVBS_IFLAG;
 }
 
 public Double getULAND10() {
@@ -16610,16 +15429,8 @@ public Double getUPROP4_IFLAG() {
 return UPROP4_IFLAG;
 }
 
-public Double getUPROP5_I() {
-return UPROP5_I;
-}
-
 public Double getUPROP5_IFLAG() {
 return UPROP5_IFLAG;
-}
-
-public Double getUPROP6_I() {
-return UPROP6_I;
 }
 
 public Double getUPROP6_IFLAG() {
@@ -16730,178 +15541,6 @@ public Double getUPRTYP() {
 return UPRTYP;
 }
 
-public Double getUPRTYP10() {
-return UPRTYP10;
-}
-
-public Double getUPRTYP11() {
-return UPRTYP11;
-}
-
-public Double getUPRTYP12() {
-return UPRTYP12;
-}
-
-public Double getUPRTYP13() {
-return UPRTYP13;
-}
-
-public Double getUPRTYP14() {
-return UPRTYP14;
-}
-
-public Double getUPRTYP15() {
-return UPRTYP15;
-}
-
-public Double getUPRTYP16() {
-return UPRTYP16;
-}
-
-public Double getUPRTYP17() {
-return UPRTYP17;
-}
-
-public Double getUPRTYP18() {
-return UPRTYP18;
-}
-
-public Double getUPRTYP2() {
-return UPRTYP2;
-}
-
-public Double getUPRTYP3() {
-return UPRTYP3;
-}
-
-public Double getUPRTYP4() {
-return UPRTYP4;
-}
-
-public Double getUPRTYP5() {
-return UPRTYP5;
-}
-
-public Double getUPRTYP6() {
-return UPRTYP6;
-}
-
-public Double getUPRTYP7() {
-return UPRTYP7;
-}
-
-public Double getUPRTYP8() {
-return UPRTYP8;
-}
-
-public Double getUPRTYP9() {
-return UPRTYP9;
-}
-
-public Double getUVALBL() {
-return UVALBL;
-}
-
-public Double getUVALBLU() {
-return UVALBLU;
-}
-
-public Double getUVALBO() {
-return UVALBO;
-}
-
-public Double getUVALBOR() {
-return UVALBOR;
-}
-
-public Double getUVALBOS() {
-return UVALBOS;
-}
-
-public Double getUVALBS() {
-return UVALBS;
-}
-
-public Double getUVALL() {
-return UVALL;
-}
-
-public Double getUVALLU() {
-return UVALLU;
-}
-
-public Double getUVALLU_I() {
-return UVALLU_I;
-}
-
-public Double getUVALLU_IFLAG() {
-return UVALLU_IFLAG;
-}
-
-public Double getUVALL_I() {
-return UVALL_I;
-}
-
-public Double getUVALL_IFLAG() {
-return UVALL_IFLAG;
-}
-
-public Double getUVALO() {
-return UVALO;
-}
-
-public Double getUVALOR() {
-return UVALOR;
-}
-
-public Double getUVALOR_I() {
-return UVALOR_I;
-}
-
-public Double getUVALOR_IFLAG() {
-return UVALOR_IFLAG;
-}
-
-public Double getUVALOS() {
-return UVALOS;
-}
-
-public Double getUVALOS_I() {
-return UVALOS_I;
-}
-
-public Double getUVALOS_IFLAG() {
-return UVALOS_IFLAG;
-}
-
-public Double getUVALO_I() {
-return UVALO_I;
-}
-
-public Double getUVALO_IFLAG() {
-return UVALO_IFLAG;
-}
-
-public Double getUVALS() {
-return UVALS;
-}
-
-public Double getUVALS_I() {
-return UVALS_I;
-}
-
-public Double getUVALS_IFLAG() {
-return UVALS_IFLAG;
-}
-
-public Double getVALPBLUM1() {
-return VALPBLUM1;
-}
-
-public Double getVALPBLUM2() {
-return VALPBLUM2;
-}
-
 public Double getW1W3WGT() {
 return W1W3WGT;
 }
@@ -16936,30 +15575,6 @@ return WHORECAR;
 
 public Double getWHOREMOB() {
 return WHOREMOB;
-}
-
-public Double getWKBETW() {
-return WKBETW;
-}
-
-public Double getWKHRS() {
-return WKHRS;
-}
-
-public Double getWKHRSIR() {
-return WKHRSIR;
-}
-
-public Double getWORTH() {
-return WORTH;
-}
-
-public Double getWRKING_I() {
-return WRKING_I;
-}
-
-public Double getWRKING_IFLAG() {
-return WRKING_IFLAG;
 }
 
 public Double getWTCPD() {
@@ -17018,11576 +15633,3860 @@ public Double getXICONSC() {
 return XICONSC;
 }
 
-public Double getXINCSE() {
-return XINCSE;
-}
-
-public Double getXMARSTA() {
-return XMARSTA;
-}
-
-public Double getXMARSTA_I() {
-return XMARSTA_I;
-}
-
-public Double getXMARSTA_IFLAG() {
-return XMARSTA_IFLAG;
-}
-
 public WIGB_Wave3_PERSON_Record(String line) {
-split = line.split("\t");
-if (!split[0].trim().isEmpty()) {
-PERSONW1 = new Double(split[0]);
-}
-if (!split[1].trim().isEmpty()) {
-PERSONW2 = new Double(split[1]);
-}
-if (!split[2].trim().isEmpty()) {
-PERSONW3 = new Double(split[2]);
-}
-if (!split[3].trim().isEmpty()) {
-DVWAVE = new Double(split[3]);
-}
-if (!split[4].trim().isEmpty()) {
-CURSTAT = new Double(split[4]);
-}
-if (!split[5].trim().isEmpty()) {
-RPDBCAL_F = new Double(split[5]);
-}
-if (!split[6].trim().isEmpty()) {
-STATUS = new Double(split[6]);
-}
-if (!split[7].trim().isEmpty()) {
-DVAGEW3BAND = new Double(split[7]);
-}
-if (!split[8].trim().isEmpty()) {
-XMARSTA = new Double(split[8]);
-}
-if (!split[9].trim().isEmpty()) {
-MARBEF = new Double(split[9]);
-}
-if (!split[10].trim().isEmpty()) {
-LIVWTH = new Double(split[10]);
-}
-if (!split[11].trim().isEmpty()) {
-HHLDR = new Double(split[11]);
-}
-if (!split[12].trim().isEmpty()) {
-DVAGE4 = new Double(split[12]);
-}
-if (!split[13].trim().isEmpty()) {
-DVAGE5 = new Double(split[13]);
-}
-if (!split[14].trim().isEmpty()) {
-DVAGE6 = new Double(split[14]);
-}
-if (!split[15].trim().isEmpty()) {
-DVAGE7 = new Double(split[15]);
-}
-if (!split[16].trim().isEmpty()) {
-DVAGE9 = new Double(split[16]);
-}
-if (!split[17].trim().isEmpty()) {
-DVAGE17 = new Double(split[17]);
-}
-if (!split[18].trim().isEmpty()) {
-DVAGE18 = new Double(split[18]);
-}
-if (!split[19].trim().isEmpty()) {
-WORKAGE = new Double(split[19]);
-}
-if (!split[20].trim().isEmpty()) {
-NUMADULT = new Double(split[20]);
-}
-if (!split[21].trim().isEmpty()) {
-NUMCHILD = new Double(split[21]);
-}
-if (!split[22].trim().isEmpty()) {
-NUMCIVPTR = new Double(split[22]);
-}
-if (!split[23].trim().isEmpty()) {
-NUMSSEX = new Double(split[23]);
-}
-if (!split[24].trim().isEmpty()) {
-NUMCPART = new Double(split[24]);
-}
-if (!split[25].trim().isEmpty()) {
-NUMCH18 = new Double(split[25]);
-}
-if (!split[26].trim().isEmpty()) {
-PENFLAG = new Double(split[26]);
-}
-if (!split[27].trim().isEmpty()) {
-FTED = new Double(split[27]);
-}
-if (!split[28].trim().isEmpty()) {
-FTED19 = new Double(split[28]);
-}
-if (!split[29].trim().isEmpty()) {
-TRAINEE = new Double(split[29]);
-}
-if (!split[30].trim().isEmpty()) {
-QUALCHK = new Double(split[30]);
-}
-if (!split[31].trim().isEmpty()) {
-HIHNUM = new Double(split[31]);
-}
-if (!split[32].trim().isEmpty()) {
-DVHRPNUM = new Double(split[32]);
-}
-if (!split[33].trim().isEmpty()) {
-HRPPART = new Double(split[33]);
-}
-if (!split[34].trim().isEmpty()) {
-R01 = new Double(split[34]);
-}
-if (!split[35].trim().isEmpty()) {
-R02 = new Double(split[35]);
-}
-if (!split[36].trim().isEmpty()) {
-R03 = new Double(split[36]);
-}
-if (!split[37].trim().isEmpty()) {
-R04 = new Double(split[37]);
-}
-if (!split[38].trim().isEmpty()) {
-R05 = new Double(split[38]);
-}
-if (!split[39].trim().isEmpty()) {
-R06 = new Double(split[39]);
-}
-if (!split[40].trim().isEmpty()) {
-R07 = new Double(split[40]);
-}
-if (!split[41].trim().isEmpty()) {
-R08 = new Double(split[41]);
-}
-if (!split[42].trim().isEmpty()) {
-R09 = new Double(split[42]);
-}
-if (!split[43].trim().isEmpty()) {
-R10 = new Double(split[43]);
-}
-if (!split[44].trim().isEmpty()) {
-R11 = new Double(split[44]);
-}
-if (!split[45].trim().isEmpty()) {
-RESPDNT = new Double(split[45]);
-}
-if (!split[46].trim().isEmpty()) {
-PARTNER = new Double(split[46]);
-}
-if (!split[47].trim().isEmpty()) {
-PARTNO = new Double(split[47]);
-}
-if (!split[48].trim().isEmpty()) {
-ISDEP = new Double(split[48]);
-}
-if (!split[49].trim().isEmpty()) {
-ISNDEP = new Double(split[49]);
-}
-if (!split[50].trim().isEmpty()) {
-NUMDEPCH = new Double(split[50]);
-}
-if (!split[51].trim().isEmpty()) {
-HASCHD = new Double(split[51]);
-}
-if (!split[52].trim().isEmpty()) {
-HASDEP = new Double(split[52]);
-}
-if (!split[53].trim().isEmpty()) {
-HASNDEP = new Double(split[53]);
-}
-if (!split[54].trim().isEmpty()) {
-SINGPAR = new Double(split[54]);
-}
-if (!split[55].trim().isEmpty()) {
-PERSPROX = new Double(split[55]);
-}
-if (!split[56].trim().isEmpty()) {
-PROXYNUM = new Double(split[56]);
-}
-if (!split[57].trim().isEmpty()) {
-PRCRELIG = new Double(split[57]);
-}
-if (!split[58].trim().isEmpty()) {
-WRKING = new Double(split[58]);
-}
-if (!split[59].trim().isEmpty()) {
-SCHEMEET = new Double(split[59]);
-}
-if (!split[60].trim().isEmpty()) {
-JBAWAY = new Double(split[60]);
-}
-if (!split[61].trim().isEmpty()) {
-OWNBUS = new Double(split[61]);
-}
-if (!split[62].trim().isEmpty()) {
-RELBUS = new Double(split[62]);
-}
-if (!split[63].trim().isEmpty()) {
-LOOKED = new Double(split[63]);
-}
-if (!split[64].trim().isEmpty()) {
-STARTJ = new Double(split[64]);
-}
-if (!split[65].trim().isEmpty()) {
-LKTIME = new Double(split[65]);
-}
-if (!split[66].trim().isEmpty()) {
-YINACT = new Double(split[66]);
-}
-if (!split[67].trim().isEmpty()) {
-DVILO3A = new Double(split[67]);
-}
-if (!split[68].trim().isEmpty()) {
-DVILO4A = new Double(split[68]);
-}
-if (!split[69].trim().isEmpty()) {
-WKBETW = new Double(split[69]);
-}
-if (!split[70].trim().isEmpty()) {
-MRECJB = new Double(split[70]);
-}
-if (!split[71].trim().isEmpty()) {
-SAMJOB = new Double(split[71]);
-}
-if (!split[72].trim().isEmpty()) {
-SAMEMP = new Double(split[72]);
-}
-if (!split[73].trim().isEmpty()) {
-PERNOWK = new Double(split[73]);
-}
-if (!split[74].trim().isEmpty()) {
-EMPSTAT1 = new Double(split[74]);
-}
-if (!split[75].trim().isEmpty()) {
-NUMJOB = new Double(split[75]);
-}
-if (!split[76].trim().isEmpty()) {
-DTJBL = new Double(split[76]);
-}
-if (!split[77].trim().isEmpty()) {
-DVJB12ML = new Double(split[77]);
-}
-if (!split[78].trim().isEmpty()) {
-SAMEJOB1 = new Double(split[78]);
-}
-if (!split[79].trim().isEmpty()) {
-SAMEJOB2 = new Double(split[79]);
-}
-if (!split[80].trim().isEmpty()) {
-SAMEJOB3 = new Double(split[80]);
-}
-if (!split[81].trim().isEmpty()) {
-SAMEJOB4 = new Double(split[81]);
-}
-if (!split[82].trim().isEmpty()) {
-SAMEJOB5 = new Double(split[82]);
-}
-if (!split[83].trim().isEmpty()) {
-SAMEJOB6 = new Double(split[83]);
-}
-if (!split[84].trim().isEmpty()) {
-SECTOR = new Double(split[84]);
-}
-if (!split[85].trim().isEmpty()) {
-SECTR2 = new Double(split[85]);
-}
-if (!split[86].trim().isEmpty()) {
-ETYPE = new Double(split[86]);
-}
-if (!split[87].trim().isEmpty()) {
-STAT = new Double(split[87]);
-}
-if (!split[88].trim().isEmpty()) {
-DVSTAT = new Double(split[88]);
-}
-if (!split[89].trim().isEmpty()) {
-SVISE = new Double(split[89]);
-}
-if (!split[90].trim().isEmpty()) {
-EMPNO = new Double(split[90]);
-}
-if (!split[91].trim().isEmpty()) {
-EMPN = new Double(split[91]);
-}
-if (!split[92].trim().isEmpty()) {
-ONETEN = new Double(split[92]);
-}
-if (!split[93].trim().isEmpty()) {
-DVEMPNO = new Double(split[93]);
-}
-if (!split[94].trim().isEmpty()) {
-SOLO = new Double(split[94]);
-}
-if (!split[95].trim().isEmpty()) {
-DVSENO = new Double(split[95]);
-}
-if (!split[96].trim().isEmpty()) {
-SENO = new Double(split[96]);
-}
-if (!split[97].trim().isEmpty()) {
-SEMN = new Double(split[97]);
-}
-if (!split[98].trim().isEmpty()) {
-FTPTWK = new Double(split[98]);
-}
-if (!split[99].trim().isEmpty()) {
-WKHRS = new Double(split[99]);
-}
-if (!split[100].trim().isEmpty()) {
-WKHRSIR = new Double(split[100]);
-}
-if (!split[101].trim().isEmpty()) {
-EMPSTY = new Double(split[101]);
-}
-if (!split[102].trim().isEmpty()) {
-SEMPSTY = new Double(split[102]);
-}
-if (!split[103].trim().isEmpty()) {
-PERMJB = new Double(split[103]);
-}
-if (!split[104].trim().isEmpty()) {
-TEA = new Double(split[104]);
-}
-if (!split[105].trim().isEmpty()) {
-PNOWK = new Double(split[105]);
-}
-if (!split[106].trim().isEmpty()) {
-PNOWKLN = new Double(split[106]);
-}
-if (!split[107].trim().isEmpty()) {
-EDATTN1 = new Double(split[107]);
-}
-if (!split[108].trim().isEmpty()) {
-EDATTN2 = new Double(split[108]);
-}
-if (!split[109].trim().isEmpty()) {
-EDATTN3 = new Double(split[109]);
-}
-if (!split[110].trim().isEmpty()) {
-ENROLL = new Double(split[110]);
-}
-if (!split[111].trim().isEmpty()) {
-ATTEND = new Double(split[111]);
-}
-if (!split[112].trim().isEmpty()) {
-COURSE = new Double(split[112]);
-}
-if (!split[113].trim().isEmpty()) {
-COURSE20 = new Double(split[113]);
-}
-if (!split[114].trim().isEmpty()) {
-EDAGE = new Double(split[114]);
-}
-if (!split[115].trim().isEmpty()) {
-FTSTUD = new Double(split[115]);
-}
-if (!split[116].trim().isEmpty()) {
-JOBNO = new Double(split[116]);
-}
-if (!split[117].trim().isEmpty()) {
-BTYPE1 = new Double(split[117]);
-}
-if (!split[118].trim().isEmpty()) {
-BDIRNI1 = new Double(split[118]);
-}
-if (!split[119].trim().isEmpty()) {
-BOWN1 = new Double(split[119]);
-}
-if (!split[120].trim().isEmpty()) {
-BPROPN1 = new Double(split[120]);
-}
-if (!split[121].trim().isEmpty()) {
-BACCSA1 = new Double(split[121]);
-}
-if (!split[122].trim().isEmpty()) {
-BACCSB1 = new Double(split[122]);
-}
-if (!split[123].trim().isEmpty()) {
-BPART1 = new Double(split[123]);
-}
-if (!split[124].trim().isEmpty()) {
-BACCBEG1 = new Double(split[124]);
-}
-if (!split[125].trim().isEmpty()) {
-BACCEND1 = new Double(split[125]);
-}
-if (!split[126].trim().isEmpty()) {
-BDOCS1 = new Double(split[126]);
-}
-if (!split[127].trim().isEmpty()) {
-BPROFIT1 = new Double(split[127]);
-}
-if (!split[128].trim().isEmpty()) {
-BPRFLOSS1 = new Double(split[128]);
-}
-if (!split[129].trim().isEmpty()) {
-BTAX1 = new Double(split[129]);
-}
-if (!split[130].trim().isEmpty()) {
-BNATINS1 = new Double(split[130]);
-}
-if (!split[131].trim().isEmpty()) {
-BBEFORE1 = new Double(split[131]);
-}
-if (!split[132].trim().isEmpty()) {
-BCARRY1 = new Double(split[132]);
-}
-if (!split[133].trim().isEmpty()) {
-BSIZE1 = new Double(split[133]);
-}
-if (!split[134].trim().isEmpty()) {
-BEMPN1 = new Double(split[134]);
-}
-if (!split[135].trim().isEmpty()) {
-BYEAR1 = new Double(split[135]);
-}
-if (!split[136].trim().isEmpty()) {
-BSTART1 = new Double(split[136]);
-}
-if (!split[137].trim().isEmpty()) {
-BFUND1 = new Double(split[137]);
-}
-if (!split[138].trim().isEmpty()) {
-BFUND2 = new Double(split[138]);
-}
-if (!split[139].trim().isEmpty()) {
-BFUND3 = new Double(split[139]);
-}
-if (!split[140].trim().isEmpty()) {
-BFUND4 = new Double(split[140]);
-}
-if (!split[141].trim().isEmpty()) {
-BFUND5 = new Double(split[141]);
-}
-if (!split[142].trim().isEmpty()) {
-BFUND6 = new Double(split[142]);
-}
-if (!split[143].trim().isEmpty()) {
-BFUND7 = new Double(split[143]);
-}
-if (!split[144].trim().isEmpty()) {
-BFUND8 = new Double(split[144]);
-}
-if (!split[145].trim().isEmpty()) {
-BRETIRE1 = new Double(split[145]);
-}
-if (!split[146].trim().isEmpty()) {
-BDEBTS1 = new Double(split[146]);
-}
-if (!split[147].trim().isEmpty()) {
-BOWED1 = new Double(split[147]);
-}
-if (!split[148].trim().isEmpty()) {
-BVAL1 = new Double(split[148]);
-}
-if (!split[149].trim().isEmpty()) {
-BVALB1 = new Double(split[149]);
-}
-if (!split[150].trim().isEmpty()) {
-BTYPE2 = new Double(split[150]);
-}
-if (!split[151].trim().isEmpty()) {
-BDIRNI2 = new Double(split[151]);
-}
-if (!split[152].trim().isEmpty()) {
-BOWN2 = new Double(split[152]);
-}
-if (!split[153].trim().isEmpty()) {
-BPROPN2 = new Double(split[153]);
-}
-if (!split[154].trim().isEmpty()) {
-BACCSA2 = new Double(split[154]);
-}
-if (!split[155].trim().isEmpty()) {
-BACCSB2 = new Double(split[155]);
-}
-if (!split[156].trim().isEmpty()) {
-BPART2 = new Double(split[156]);
-}
-if (!split[157].trim().isEmpty()) {
-BACCBEG2 = new Double(split[157]);
-}
-if (!split[158].trim().isEmpty()) {
-BACCEND2 = new Double(split[158]);
-}
-if (!split[159].trim().isEmpty()) {
-BDOCS2 = new Double(split[159]);
-}
-if (!split[160].trim().isEmpty()) {
-BPROFIT2 = new Double(split[160]);
-}
-if (!split[161].trim().isEmpty()) {
-BPRFLOSS2 = new Double(split[161]);
-}
-if (!split[162].trim().isEmpty()) {
-BTAX2 = new Double(split[162]);
-}
-if (!split[163].trim().isEmpty()) {
-BNATINS2 = new Double(split[163]);
-}
-if (!split[164].trim().isEmpty()) {
-BBEFORE2 = new Double(split[164]);
-}
-if (!split[165].trim().isEmpty()) {
-BCARRY2 = new Double(split[165]);
-}
-if (!split[166].trim().isEmpty()) {
-BSIZE2 = new Double(split[166]);
-}
-if (!split[167].trim().isEmpty()) {
-BEMPN2 = new Double(split[167]);
-}
-if (!split[168].trim().isEmpty()) {
-BYEAR2 = new Double(split[168]);
-}
-if (!split[169].trim().isEmpty()) {
-BSTART2 = new Double(split[169]);
-}
-if (!split[170].trim().isEmpty()) {
-BFUND9 = new Double(split[170]);
-}
-if (!split[171].trim().isEmpty()) {
-BFUND10 = new Double(split[171]);
-}
-if (!split[172].trim().isEmpty()) {
-BFUND11 = new Double(split[172]);
-}
-if (!split[173].trim().isEmpty()) {
-BFUND12 = new Double(split[173]);
-}
-if (!split[174].trim().isEmpty()) {
-BFUND13 = new Double(split[174]);
-}
-if (!split[175].trim().isEmpty()) {
-BFUND14 = new Double(split[175]);
-}
-if (!split[176].trim().isEmpty()) {
-BFUND15 = new Double(split[176]);
-}
-if (!split[177].trim().isEmpty()) {
-BFUND16 = new Double(split[177]);
-}
-if (!split[178].trim().isEmpty()) {
-BRETIRE2 = new Double(split[178]);
-}
-if (!split[179].trim().isEmpty()) {
-BDEBTS2 = new Double(split[179]);
-}
-if (!split[180].trim().isEmpty()) {
-BOWED2 = new Double(split[180]);
-}
-if (!split[181].trim().isEmpty()) {
-BVAL2 = new Double(split[181]);
-}
-if (!split[182].trim().isEmpty()) {
-BVALB2 = new Double(split[182]);
-}
-if (!split[183].trim().isEmpty()) {
-BTYPE3 = new Double(split[183]);
-}
-if (!split[184].trim().isEmpty()) {
-BDIRNI3 = new Double(split[184]);
-}
-if (!split[185].trim().isEmpty()) {
-BOWN3 = new Double(split[185]);
-}
-if (!split[186].trim().isEmpty()) {
-BPROPN3 = new Double(split[186]);
-}
-if (!split[187].trim().isEmpty()) {
-BACCSA3 = new Double(split[187]);
-}
-if (!split[188].trim().isEmpty()) {
-BACCSB3 = new Double(split[188]);
-}
-if (!split[189].trim().isEmpty()) {
-BPART3 = new Double(split[189]);
-}
-if (!split[190].trim().isEmpty()) {
-BACCBEG3 = new Double(split[190]);
-}
-if (!split[191].trim().isEmpty()) {
-BACCEND3 = new Double(split[191]);
-}
-if (!split[192].trim().isEmpty()) {
-BDOCS3 = new Double(split[192]);
-}
-if (!split[193].trim().isEmpty()) {
-BPROFIT3 = new Double(split[193]);
-}
-if (!split[194].trim().isEmpty()) {
-BPRFLOSS3 = new Double(split[194]);
-}
-if (!split[195].trim().isEmpty()) {
-BTAX3 = new Double(split[195]);
-}
-if (!split[196].trim().isEmpty()) {
-BNATINS3 = new Double(split[196]);
-}
-if (!split[197].trim().isEmpty()) {
-BBEFORE3 = new Double(split[197]);
-}
-if (!split[198].trim().isEmpty()) {
-BCARRY3 = new Double(split[198]);
-}
-if (!split[199].trim().isEmpty()) {
-BSIZE3 = new Double(split[199]);
-}
-if (!split[200].trim().isEmpty()) {
-BEMPN3 = new Double(split[200]);
-}
-if (!split[201].trim().isEmpty()) {
-BYEAR3 = new Double(split[201]);
-}
-if (!split[202].trim().isEmpty()) {
-BSTART3 = new Double(split[202]);
-}
-if (!split[203].trim().isEmpty()) {
-BFUND17 = new Double(split[203]);
-}
-if (!split[204].trim().isEmpty()) {
-BFUND18 = new Double(split[204]);
-}
-if (!split[205].trim().isEmpty()) {
-BFUND19 = new Double(split[205]);
-}
-if (!split[206].trim().isEmpty()) {
-BFUND20 = new Double(split[206]);
-}
-if (!split[207].trim().isEmpty()) {
-BFUND21 = new Double(split[207]);
-}
-if (!split[208].trim().isEmpty()) {
-BFUND22 = new Double(split[208]);
-}
-if (!split[209].trim().isEmpty()) {
-BFUND23 = new Double(split[209]);
-}
-if (!split[210].trim().isEmpty()) {
-BFUND24 = new Double(split[210]);
-}
-if (!split[211].trim().isEmpty()) {
-BRETIRE3 = new Double(split[211]);
-}
-if (!split[212].trim().isEmpty()) {
-BDEBTS3 = new Double(split[212]);
-}
-if (!split[213].trim().isEmpty()) {
-BOWED3 = new Double(split[213]);
-}
-if (!split[214].trim().isEmpty()) {
-BVAL3 = new Double(split[214]);
-}
-if (!split[215].trim().isEmpty()) {
-BVALB3 = new Double(split[215]);
-}
-if (!split[216].trim().isEmpty()) {
-BPAST = new Double(split[216]);
-}
-if (!split[217].trim().isEmpty()) {
-BSELLYR = new Double(split[217]);
-}
-if (!split[218].trim().isEmpty()) {
-BSELLAM = new Double(split[218]);
-}
-if (!split[219].trim().isEmpty()) {
-BSELLAB = new Double(split[219]);
-}
-if (!split[220].trim().isEmpty()) {
-BSELLTX = new Double(split[220]);
-}
-if (!split[221].trim().isEmpty()) {
-BMOREBUS = new Double(split[221]);
-}
-if (!split[222].trim().isEmpty()) {
-BWORTH = new Double(split[222]);
-}
-if (!split[223].trim().isEmpty()) {
-BWORTHB = new Double(split[223]);
-}
-if (!split[224].trim().isEmpty()) {
-PAYPER = new Double(split[224]);
-}
-if (!split[225].trim().isEmpty()) {
-PAYESP = new Double(split[225]);
-}
-if (!split[226].trim().isEmpty()) {
-PAYESM = new Double(split[226]);
-}
-if (!split[227].trim().isEmpty()) {
-GRSESP = new Double(split[227]);
-}
-if (!split[228].trim().isEmpty()) {
-GRSESM = new Double(split[228]);
-}
-if (!split[229].trim().isEmpty()) {
-PAYINC1 = new Double(split[229]);
-}
-if (!split[230].trim().isEmpty()) {
-PAYINC2 = new Double(split[230]);
-}
-if (!split[231].trim().isEmpty()) {
-PAYINC3 = new Double(split[231]);
-}
-if (!split[232].trim().isEmpty()) {
-PAYINC4 = new Double(split[232]);
-}
-if (!split[233].trim().isEmpty()) {
-PAYINC5 = new Double(split[233]);
-}
-if (!split[234].trim().isEmpty()) {
-PAYINC6 = new Double(split[234]);
-}
-if (!split[235].trim().isEmpty()) {
-PAYINC7 = new Double(split[235]);
-}
-if (!split[236].trim().isEmpty()) {
-SMTPEN = new Double(split[236]);
-}
-if (!split[237].trim().isEmpty()) {
-PAYSLP = new Double(split[237]);
-}
-if (!split[238].trim().isEmpty()) {
-PAYBON = new Double(split[238]);
-}
-if (!split[239].trim().isEmpty()) {
-BONTAX = new Double(split[239]);
-}
-if (!split[240].trim().isEmpty()) {
-EMSHAR1 = new Double(split[240]);
-}
-if (!split[241].trim().isEmpty()) {
-EMSHAR2 = new Double(split[241]);
-}
-if (!split[242].trim().isEmpty()) {
-EMSHAR3 = new Double(split[242]);
-}
-if (!split[243].trim().isEmpty()) {
-SEPER = new Double(split[243]);
-}
-if (!split[244].trim().isEmpty()) {
-SEAMK = new Double(split[244]);
-}
-if (!split[245].trim().isEmpty()) {
-SEESW = new Double(split[245]);
-}
-if (!split[246].trim().isEmpty()) {
-SEESM = new Double(split[246]);
-}
-if (!split[247].trim().isEmpty()) {
-GROSSPER = new Double(split[247]);
-}
-if (!split[248].trim().isEmpty()) {
-GRSAMK = new Double(split[248]);
-}
-if (!split[249].trim().isEmpty()) {
-GRSEESW = new Double(split[249]);
-}
-if (!split[250].trim().isEmpty()) {
-GRSEESM = new Double(split[250]);
-}
-if (!split[251].trim().isEmpty()) {
-SEPEL = new Double(split[251]);
-}
-if (!split[252].trim().isEmpty()) {
-SJOB2 = new Double(split[252]);
-}
-if (!split[253].trim().isEmpty()) {
-SJEMP1 = new Double(split[253]);
-}
-if (!split[254].trim().isEmpty()) {
-SJEMP2 = new Double(split[254]);
-}
-if (!split[255].trim().isEmpty()) {
-INTRO = new Double(split[255]);
-}
-if (!split[256].trim().isEmpty()) {
-BENTYPE01 = new Double(split[256]);
-}
-if (!split[257].trim().isEmpty()) {
-BENTYPE02 = new Double(split[257]);
-}
-if (!split[258].trim().isEmpty()) {
-BENTYPE03 = new Double(split[258]);
-}
-if (!split[259].trim().isEmpty()) {
-BENTYPE04 = new Double(split[259]);
-}
-if (!split[260].trim().isEmpty()) {
-BENTYPE05 = new Double(split[260]);
-}
-if (!split[261].trim().isEmpty()) {
-BENTYPE06 = new Double(split[261]);
-}
-if (!split[262].trim().isEmpty()) {
-BENTYPE07 = new Double(split[262]);
-}
-if (!split[263].trim().isEmpty()) {
-BENTYPE08 = new Double(split[263]);
-}
-if (!split[264].trim().isEmpty()) {
-BENTYPE09 = new Double(split[264]);
-}
-if (!split[265].trim().isEmpty()) {
-BENTYPE10 = new Double(split[265]);
-}
-if (!split[266].trim().isEmpty()) {
-BENTYPE11 = new Double(split[266]);
-}
-if (!split[267].trim().isEmpty()) {
-BENTYPE12 = new Double(split[267]);
-}
-if (!split[268].trim().isEmpty()) {
-BTOGSEP = new Double(split[268]);
-}
-if (!split[269].trim().isEmpty()) {
-BPAYNUM = new Double(split[269]);
-}
-if (!split[270].trim().isEmpty()) {
-BTOGPD = new Double(split[270]);
-}
-if (!split[271].trim().isEmpty()) {
-BSEPPD01 = new Double(split[271]);
-}
-if (!split[272].trim().isEmpty()) {
-BSEPPD02 = new Double(split[272]);
-}
-if (!split[273].trim().isEmpty()) {
-BSEPPD03 = new Double(split[273]);
-}
-if (!split[274].trim().isEmpty()) {
-BSEPPD04 = new Double(split[274]);
-}
-if (!split[275].trim().isEmpty()) {
-BSEPPD05 = new Double(split[275]);
-}
-if (!split[276].trim().isEmpty()) {
-BSEPPD06 = new Double(split[276]);
-}
-if (!split[277].trim().isEmpty()) {
-BSEPPD07 = new Double(split[277]);
-}
-if (!split[278].trim().isEmpty()) {
-BSEPPD08 = new Double(split[278]);
-}
-if (!split[279].trim().isEmpty()) {
-BSEPPD09 = new Double(split[279]);
-}
-if (!split[280].trim().isEmpty()) {
-BSEPPD10 = new Double(split[280]);
-}
-if (!split[281].trim().isEmpty()) {
-BSEPPD11 = new Double(split[281]);
-}
-if (!split[282].trim().isEmpty()) {
-BSEPPD12 = new Double(split[282]);
-}
-if (!split[283].trim().isEmpty()) {
-BSEPPD13 = new Double(split[283]);
-}
-if (!split[284].trim().isEmpty()) {
-BSEPPD14 = new Double(split[284]);
-}
-if (!split[285].trim().isEmpty()) {
-BSEPPD15 = new Double(split[285]);
-}
-if (!split[286].trim().isEmpty()) {
-BSEPPD16 = new Double(split[286]);
-}
-if (!split[287].trim().isEmpty()) {
-BSEPPD17 = new Double(split[287]);
-}
-if (!split[288].trim().isEmpty()) {
-BSEPPD18 = new Double(split[288]);
-}
-if (!split[289].trim().isEmpty()) {
-BSEPPD19 = new Double(split[289]);
-}
-if (!split[290].trim().isEmpty()) {
-BSEPPD20 = new Double(split[290]);
-}
-if (!split[291].trim().isEmpty()) {
-CREDTYPE1 = new Double(split[291]);
-}
-if (!split[292].trim().isEmpty()) {
-CREDTYPE2 = new Double(split[292]);
-}
-if (!split[293].trim().isEmpty()) {
-CTOGSEP = new Double(split[293]);
-}
-if (!split[294].trim().isEmpty()) {
-WTCPD = new Double(split[294]);
-}
-if (!split[295].trim().isEmpty()) {
-CTCPD = new Double(split[295]);
-}
-if (!split[296].trim().isEmpty()) {
-COMBPD = new Double(split[296]);
-}
-if (!split[297].trim().isEmpty()) {
-SPECIAL01 = new Double(split[297]);
-}
-if (!split[298].trim().isEmpty()) {
-SPECIAL02 = new Double(split[298]);
-}
-if (!split[299].trim().isEmpty()) {
-SPECIAL03 = new Double(split[299]);
-}
-if (!split[300].trim().isEmpty()) {
-SPECIAL04 = new Double(split[300]);
-}
-if (!split[301].trim().isEmpty()) {
-SPECIAL05 = new Double(split[301]);
-}
-if (!split[302].trim().isEmpty()) {
-SPECIAL06 = new Double(split[302]);
-}
-if (!split[303].trim().isEmpty()) {
-SPECIAL07 = new Double(split[303]);
-}
-if (!split[304].trim().isEmpty()) {
-SPECIAL08 = new Double(split[304]);
-}
-if (!split[305].trim().isEmpty()) {
-SPECIAL09 = new Double(split[305]);
-}
-if (!split[306].trim().isEmpty()) {
-SPECIAL10 = new Double(split[306]);
-}
-if (!split[307].trim().isEmpty()) {
-WHORECAR = new Double(split[307]);
-}
-if (!split[308].trim().isEmpty()) {
-WHOREMOB = new Double(split[308]);
-}
-if (!split[309].trim().isEmpty()) {
-WHOREATT = new Double(split[309]);
-}
-if (!split[310].trim().isEmpty()) {
-SPECPD1 = new Double(split[310]);
-}
-if (!split[311].trim().isEmpty()) {
-SPECWHEN1 = new Double(split[311]);
-}
-if (!split[312].trim().isEmpty()) {
-SPECINCL1 = new Double(split[312]);
-}
-if (!split[313].trim().isEmpty()) {
-SPECPD2 = new Double(split[313]);
-}
-if (!split[314].trim().isEmpty()) {
-SPECWHEN2 = new Double(split[314]);
-}
-if (!split[315].trim().isEmpty()) {
-SPECINCL2 = new Double(split[315]);
-}
-if (!split[316].trim().isEmpty()) {
-SPECPD3 = new Double(split[316]);
-}
-if (!split[317].trim().isEmpty()) {
-SPECWHEN3 = new Double(split[317]);
-}
-if (!split[318].trim().isEmpty()) {
-SPECINCL3 = new Double(split[318]);
-}
-if (!split[319].trim().isEmpty()) {
-SPECPD4 = new Double(split[319]);
-}
-if (!split[320].trim().isEmpty()) {
-SPECWHEN4 = new Double(split[320]);
-}
-if (!split[321].trim().isEmpty()) {
-SPECINCL4 = new Double(split[321]);
-}
-if (!split[322].trim().isEmpty()) {
-SPECPD5 = new Double(split[322]);
-}
-if (!split[323].trim().isEmpty()) {
-SPECWHEN5 = new Double(split[323]);
-}
-if (!split[324].trim().isEmpty()) {
-SPECINCL5 = new Double(split[324]);
-}
-if (!split[325].trim().isEmpty()) {
-SPECPD6 = new Double(split[325]);
-}
-if (!split[326].trim().isEmpty()) {
-SPECWHEN6 = new Double(split[326]);
-}
-if (!split[327].trim().isEmpty()) {
-SPECINCL6 = new Double(split[327]);
-}
-if (!split[328].trim().isEmpty()) {
-SPECPD7 = new Double(split[328]);
-}
-if (!split[329].trim().isEmpty()) {
-SPECWHEN7 = new Double(split[329]);
-}
-if (!split[330].trim().isEmpty()) {
-SPECINCL7 = new Double(split[330]);
-}
-if (!split[331].trim().isEmpty()) {
-SPECPD8 = new Double(split[331]);
-}
-if (!split[332].trim().isEmpty()) {
-SPECWHEN8 = new Double(split[332]);
-}
-if (!split[333].trim().isEmpty()) {
-SPECINCL8 = new Double(split[333]);
-}
-if (!split[334].trim().isEmpty()) {
-SPECPD9 = new Double(split[334]);
-}
-if (!split[335].trim().isEmpty()) {
-SPECWHEN9 = new Double(split[335]);
-}
-if (!split[336].trim().isEmpty()) {
-SPECINCL9 = new Double(split[336]);
-}
-if (!split[337].trim().isEmpty()) {
-SPECAMT10 = new Double(split[337]);
-}
-if (!split[338].trim().isEmpty()) {
-SPECPD10 = new Double(split[338]);
-}
-if (!split[339].trim().isEmpty()) {
-SPECWHEN10 = new Double(split[339]);
-}
-if (!split[340].trim().isEmpty()) {
-SPECINCL10 = new Double(split[340]);
-}
-if (!split[341].trim().isEmpty()) {
-OSAVA = new Double(split[341]);
-}
-if (!split[342].trim().isEmpty()) {
-OSAVB = new Double(split[342]);
-}
-if (!split[343].trim().isEmpty()) {
-OSAVC = new Double(split[343]);
-}
-if (!split[344].trim().isEmpty()) {
-OWAIT = new Double(split[344]);
-}
-if (!split[345].trim().isEmpty()) {
-OLEFT = new Double(split[345]);
-}
-if (!split[346].trim().isEmpty()) {
-OLEFTDO = new Double(split[346]);
-}
-if (!split[347].trim().isEmpty()) {
-OSAV2Y = new Double(split[347]);
-}
-if (!split[348].trim().isEmpty()) {
-OWHYSAV01 = new Double(split[348]);
-}
-if (!split[349].trim().isEmpty()) {
-OWHYSAV02 = new Double(split[349]);
-}
-if (!split[350].trim().isEmpty()) {
-OWHYSAV03 = new Double(split[350]);
-}
-if (!split[351].trim().isEmpty()) {
-OWHYSAV04 = new Double(split[351]);
-}
-if (!split[352].trim().isEmpty()) {
-OWHYSAV05 = new Double(split[352]);
-}
-if (!split[353].trim().isEmpty()) {
-OWHYSAV06 = new Double(split[353]);
-}
-if (!split[354].trim().isEmpty()) {
-OWHYSAV07 = new Double(split[354]);
-}
-if (!split[355].trim().isEmpty()) {
-OWHYSAV08 = new Double(split[355]);
-}
-if (!split[356].trim().isEmpty()) {
-OWHYSAV09 = new Double(split[356]);
-}
-if (!split[357].trim().isEmpty()) {
-OWHYSAV10 = new Double(split[357]);
-}
-if (!split[358].trim().isEmpty()) {
-OWHYSAV11 = new Double(split[358]);
-}
-if (!split[359].trim().isEmpty()) {
-ONOSAVE1 = new Double(split[359]);
-}
-if (!split[360].trim().isEmpty()) {
-ONOSAVE2 = new Double(split[360]);
-}
-if (!split[361].trim().isEmpty()) {
-ONOSAVE3 = new Double(split[361]);
-}
-if (!split[362].trim().isEmpty()) {
-ONOSAVE4 = new Double(split[362]);
-}
-if (!split[363].trim().isEmpty()) {
-ONOSAVE5 = new Double(split[363]);
-}
-if (!split[364].trim().isEmpty()) {
-ONOSAVE6 = new Double(split[364]);
-}
-if (!split[365].trim().isEmpty()) {
-ONOSAVE7 = new Double(split[365]);
-}
-if (!split[366].trim().isEmpty()) {
-ONOSAVE8 = new Double(split[366]);
-}
-if (!split[367].trim().isEmpty()) {
-ONOSAVE9 = new Double(split[367]);
-}
-if (!split[368].trim().isEmpty()) {
-OINTEND = new Double(split[368]);
-}
-if (!split[369].trim().isEmpty()) {
-OSAVEXT = new Double(split[369]);
-}
-if (!split[370].trim().isEmpty()) {
-PSIT = new Double(split[370]);
-}
-if (!split[371].trim().isEmpty()) {
-PSITF = new Double(split[371]);
-}
-if (!split[372].trim().isEmpty()) {
-PNOWKRS = new Double(split[372]);
-}
-if (!split[373].trim().isEmpty()) {
-PAGESTP = new Double(split[373]);
-}
-if (!split[374].trim().isEmpty()) {
-PEXPRET = new Double(split[374]);
-}
-if (!split[375].trim().isEmpty()) {
-PAGERET = new Double(split[375]);
-}
-if (!split[376].trim().isEmpty()) {
-PFULRET = new Double(split[376]);
-}
-if (!split[377].trim().isEmpty()) {
-PEARLRS = new Double(split[377]);
-}
-if (!split[378].trim().isEmpty()) {
-OLONG = new Double(split[378]);
-}
-if (!split[379].trim().isEmpty()) {
-OLONGYR = new Double(split[379]);
-}
-if (!split[380].trim().isEmpty()) {
-OSAFERET = new Double(split[380]);
-}
-if (!split[381].trim().isEmpty()) {
-OSAFERE2 = new Double(split[381]);
-}
-if (!split[382].trim().isEmpty()) {
-OUNDER = new Double(split[382]);
-}
-if (!split[383].trim().isEmpty()) {
-PESAME = new Double(split[383]);
-}
-if (!split[384].trim().isEmpty()) {
-PEMOFF = new Double(split[384]);
-}
-if (!split[385].trim().isEmpty()) {
-PEMELG = new Double(split[385]);
-}
-if (!split[386].trim().isEmpty()) {
-PEMMEM = new Double(split[386]);
-}
-if (!split[387].trim().isEmpty()) {
-PNEWMEM = new Double(split[387]);
-}
-if (!split[388].trim().isEmpty()) {
-PEWYNO01 = new Double(split[388]);
-}
-if (!split[389].trim().isEmpty()) {
-PEWYNO02 = new Double(split[389]);
-}
-if (!split[390].trim().isEmpty()) {
-PEWYNO03 = new Double(split[390]);
-}
-if (!split[391].trim().isEmpty()) {
-PEWYNO04 = new Double(split[391]);
-}
-if (!split[392].trim().isEmpty()) {
-PEWYNO05 = new Double(split[392]);
-}
-if (!split[393].trim().isEmpty()) {
-PEWYNO06 = new Double(split[393]);
-}
-if (!split[394].trim().isEmpty()) {
-PEWYNO07 = new Double(split[394]);
-}
-if (!split[395].trim().isEmpty()) {
-PEWYNO08 = new Double(split[395]);
-}
-if (!split[396].trim().isEmpty()) {
-PEWYNO09 = new Double(split[396]);
-}
-if (!split[397].trim().isEmpty()) {
-PEWYNO10 = new Double(split[397]);
-}
-if (!split[398].trim().isEmpty()) {
-PEWYNO11 = new Double(split[398]);
-}
-if (!split[399].trim().isEmpty()) {
-PEMFIN = new Double(split[399]);
-}
-if (!split[400].trim().isEmpty()) {
-PCONT = new Double(split[400]);
-}
-if (!split[401].trim().isEmpty()) {
-PANYO = new Double(split[401]);
-}
-if (!split[402].trim().isEmpty()) {
-PNUMOS = new Double(split[402]);
-}
-if (!split[403].trim().isEmpty()) {
-POCNMSC = new Double(split[403]);
-}
-if (!split[404].trim().isEmpty()) {
-PPRNMSC = new Double(split[404]);
-}
-if (!split[405].trim().isEmpty()) {
-PSCHM_F = new Double(split[405]);
-}
-if (!split[406].trim().isEmpty()) {
-PSCHY_F = new Double(split[406]);
-}
-if (!split[407].trim().isEmpty()) {
-PSCHM_S = new Double(split[407]);
-}
-if (!split[408].trim().isEmpty()) {
-PSCHY_S = new Double(split[408]);
-}
-if (!split[409].trim().isEmpty()) {
-PSCHM_T = new Double(split[409]);
-}
-if (!split[410].trim().isEmpty()) {
-PSCHY_T = new Double(split[410]);
-}
-if (!split[411].trim().isEmpty()) {
-POCTYP1 = new Double(split[411]);
-}
-if (!split[412].trim().isEmpty()) {
-POJOIN1 = new Double(split[412]);
-}
-if (!split[413].trim().isEmpty()) {
-PORAGE1 = new Double(split[413]);
-}
-if (!split[414].trim().isEmpty()) {
-POMETH1 = new Double(split[414]);
-}
-if (!split[415].trim().isEmpty()) {
-POPYCH = new Double(split[415]);
-}
-if (!split[416].trim().isEmpty()) {
-POCONH1 = new Double(split[416]);
-}
-if (!split[417].trim().isEmpty()) {
-POCNPR1 = new Double(split[417]);
-}
-if (!split[418].trim().isEmpty()) {
-POCNFR1 = new Double(split[418]);
-}
-if (!split[419].trim().isEmpty()) {
-POCNFG1 = new Double(split[419]);
-}
-if (!split[420].trim().isEmpty()) {
-POLSYR1 = new Double(split[420]);
-}
-if (!split[421].trim().isEmpty()) {
-POYRAM1 = new Double(split[421]);
-}
-if (!split[422].trim().isEmpty()) {
-POEMP1 = new Double(split[422]);
-}
-if (!split[423].trim().isEmpty()) {
-POEMPH1 = new Double(split[423]);
-}
-if (!split[424].trim().isEmpty()) {
-POEMAM1 = new Double(split[424]);
-}
-if (!split[425].trim().isEmpty()) {
-POEMPR1 = new Double(split[425]);
-}
-if (!split[426].trim().isEmpty()) {
-POEMFR1 = new Double(split[426]);
-}
-if (!split[427].trim().isEmpty()) {
-POEMFG1 = new Double(split[427]);
-}
-if (!split[428].trim().isEmpty()) {
-POADD1 = new Double(split[428]);
-}
-if (!split[429].trim().isEmpty()) {
-POADD2 = new Double(split[429]);
-}
-if (!split[430].trim().isEmpty()) {
-POADD3 = new Double(split[430]);
-}
-if (!split[431].trim().isEmpty()) {
-PAVCH1 = new Double(split[431]);
-}
-if (!split[432].trim().isEmpty()) {
-PAVCAM1 = new Double(split[432]);
-}
-if (!split[433].trim().isEmpty()) {
-PAVCPR1 = new Double(split[433]);
-}
-if (!split[434].trim().isEmpty()) {
-PAVCFR1 = new Double(split[434]);
-}
-if (!split[435].trim().isEmpty()) {
-PAVCFG1 = new Double(split[435]);
-}
-if (!split[436].trim().isEmpty()) {
-PAVCIN1 = new Double(split[436]);
-}
-if (!split[437].trim().isEmpty()) {
-PIRREG = new Double(split[437]);
-}
-if (!split[438].trim().isEmpty()) {
-PADDFUT = new Double(split[438]);
-}
-if (!split[439].trim().isEmpty()) {
-POCONCH1 = new Double(split[439]);
-}
-if (!split[440].trim().isEmpty()) {
-POCNHOW1 = new Double(split[440]);
-}
-if (!split[441].trim().isEmpty()) {
-POCNVOL1 = new Double(split[441]);
-}
-if (!split[442].trim().isEmpty()) {
-POCNLRS1 = new Double(split[442]);
-}
-if (!split[443].trim().isEmpty()) {
-POCNLRS2 = new Double(split[443]);
-}
-if (!split[444].trim().isEmpty()) {
-POCNLRS3 = new Double(split[444]);
-}
-if (!split[445].trim().isEmpty()) {
-POCNLRS4 = new Double(split[445]);
-}
-if (!split[446].trim().isEmpty()) {
-POCNDRS1 = new Double(split[446]);
-}
-if (!split[447].trim().isEmpty()) {
-POCNDRS2 = new Double(split[447]);
-}
-if (!split[448].trim().isEmpty()) {
-POCNDRS3 = new Double(split[448]);
-}
-if (!split[449].trim().isEmpty()) {
-POCNDRS4 = new Double(split[449]);
-}
-if (!split[450].trim().isEmpty()) {
-POCNDRS5 = new Double(split[450]);
-}
-if (!split[451].trim().isEmpty()) {
-POCNDRS6 = new Double(split[451]);
-}
-if (!split[452].trim().isEmpty()) {
-POCNPLN1 = new Double(split[452]);
-}
-if (!split[453].trim().isEmpty()) {
-PDBCAL1 = new Double(split[453]);
-}
-if (!split[454].trim().isEmpty()) {
-PBFRAC1 = new Double(split[454]);
-}
-if (!split[455].trim().isEmpty()) {
-PBQUAL1 = new Double(split[455]);
-}
-if (!split[456].trim().isEmpty()) {
-PBLUMV1 = new Double(split[456]);
-}
-if (!split[457].trim().isEmpty()) {
-PBINCH1 = new Double(split[457]);
-}
-if (!split[458].trim().isEmpty()) {
-PBINCF1 = new Double(split[458]);
-}
-if (!split[459].trim().isEmpty()) {
-PBINCA1 = new Double(split[459]);
-}
-if (!split[460].trim().isEmpty()) {
-PBDOCS1 = new Double(split[460]);
-}
-if (!split[461].trim().isEmpty()) {
-PBSTYR1 = new Double(split[461]);
-}
-if (!split[462].trim().isEmpty()) {
-PBSTMN1 = new Double(split[462]);
-}
-if (!split[463].trim().isEmpty()) {
-PAVCUV1 = new Double(split[463]);
-}
-if (!split[464].trim().isEmpty()) {
-PAVCVB1 = new Double(split[464]);
-}
-if (!split[465].trim().isEmpty()) {
-PAVDOC1 = new Double(split[465]);
-}
-if (!split[466].trim().isEmpty()) {
-PASTYR1 = new Double(split[466]);
-}
-if (!split[467].trim().isEmpty()) {
-PASTMN1 = new Double(split[467]);
-}
-if (!split[468].trim().isEmpty()) {
-PDCVAL1 = new Double(split[468]);
-}
-if (!split[469].trim().isEmpty()) {
-PDCVB1 = new Double(split[469]);
-}
-if (!split[470].trim().isEmpty()) {
-PCDOCS1 = new Double(split[470]);
-}
-if (!split[471].trim().isEmpty()) {
-PCSTYR1 = new Double(split[471]);
-}
-if (!split[472].trim().isEmpty()) {
-PCSTMN1 = new Double(split[472]);
-}
-if (!split[473].trim().isEmpty()) {
-POLUM1 = new Double(split[473]);
-}
-if (!split[474].trim().isEmpty()) {
-POLMV1 = new Double(split[474]);
-}
-if (!split[475].trim().isEmpty()) {
-POLMVB1 = new Double(split[475]);
-}
-if (!split[476].trim().isEmpty()) {
-POLMUS1 = new Double(split[476]);
-}
-if (!split[477].trim().isEmpty()) {
-POLMUS2 = new Double(split[477]);
-}
-if (!split[478].trim().isEmpty()) {
-POLMUS3 = new Double(split[478]);
-}
-if (!split[479].trim().isEmpty()) {
-POLMUS4 = new Double(split[479]);
-}
-if (!split[480].trim().isEmpty()) {
-POLMUS5 = new Double(split[480]);
-}
-if (!split[481].trim().isEmpty()) {
-POLMUS6 = new Double(split[481]);
-}
-if (!split[482].trim().isEmpty()) {
-POCASH1 = new Double(split[482]);
-}
-if (!split[483].trim().isEmpty()) {
-POANN1 = new Double(split[483]);
-}
-if (!split[484].trim().isEmpty()) {
-POANN2 = new Double(split[484]);
-}
-if (!split[485].trim().isEmpty()) {
-POANN3 = new Double(split[485]);
-}
-if (!split[486].trim().isEmpty()) {
-POANN4 = new Double(split[486]);
-}
-if (!split[487].trim().isEmpty()) {
-POANLM1 = new Double(split[487]);
-}
-if (!split[488].trim().isEmpty()) {
-POANEXY1 = new Double(split[488]);
-}
-if (!split[489].trim().isEmpty()) {
-POANEXM1 = new Double(split[489]);
-}
-if (!split[490].trim().isEmpty()) {
-POANJT1 = new Double(split[490]);
-}
-if (!split[491].trim().isEmpty()) {
-POANIF1 = new Double(split[491]);
-}
-if (!split[492].trim().isEmpty()) {
-POANEH1 = new Double(split[492]);
-}
-if (!split[493].trim().isEmpty()) {
-POANGA1 = new Double(split[493]);
-}
-if (!split[494].trim().isEmpty()) {
-POANVI1 = new Double(split[494]);
-}
-if (!split[495].trim().isEmpty()) {
-POANVB = new Double(split[495]);
-}
-if (!split[496].trim().isEmpty()) {
-PODRVI1 = new Double(split[496]);
-}
-if (!split[497].trim().isEmpty()) {
-PODRVB1 = new Double(split[497]);
-}
-if (!split[498].trim().isEmpty()) {
-PODRINC1 = new Double(split[498]);
-}
-if (!split[499].trim().isEmpty()) {
-PODRINCB1 = new Double(split[499]);
-}
-if (!split[500].trim().isEmpty()) {
-POPENVI = new Double(split[500]);
-}
-if (!split[501].trim().isEmpty()) {
-POPENVB = new Double(split[501]);
-}
-if (!split[502].trim().isEmpty()) {
-POFAN1 = new Double(split[502]);
-}
-if (!split[503].trim().isEmpty()) {
-POFAN2 = new Double(split[503]);
-}
-if (!split[504].trim().isEmpty()) {
-POFAN3 = new Double(split[504]);
-}
-if (!split[505].trim().isEmpty()) {
-POFAN4 = new Double(split[505]);
-}
-if (!split[506].trim().isEmpty()) {
-POFAN5 = new Double(split[506]);
-}
-if (!split[507].trim().isEmpty()) {
-POFAN6 = new Double(split[507]);
-}
-if (!split[508].trim().isEmpty()) {
-POFAWH1 = new Double(split[508]);
-}
-if (!split[509].trim().isEmpty()) {
-POFAWH2 = new Double(split[509]);
-}
-if (!split[510].trim().isEmpty()) {
-POFAWH3 = new Double(split[510]);
-}
-if (!split[511].trim().isEmpty()) {
-POFAWH4 = new Double(split[511]);
-}
-if (!split[512].trim().isEmpty()) {
-POFAWH5 = new Double(split[512]);
-}
-if (!split[513].trim().isEmpty()) {
-POFAWH6 = new Double(split[513]);
-}
-if (!split[514].trim().isEmpty()) {
-POFAAG1 = new Double(split[514]);
-}
-if (!split[515].trim().isEmpty()) {
-POCTYP2 = new Double(split[515]);
-}
-if (!split[516].trim().isEmpty()) {
-POJOIN2 = new Double(split[516]);
-}
-if (!split[517].trim().isEmpty()) {
-PORAGE2 = new Double(split[517]);
-}
-if (!split[518].trim().isEmpty()) {
-POMETH2 = new Double(split[518]);
-}
-if (!split[519].trim().isEmpty()) {
-POPYCH2 = new Double(split[519]);
-}
-if (!split[520].trim().isEmpty()) {
-POCONH2 = new Double(split[520]);
-}
-if (!split[521].trim().isEmpty()) {
-POCNPR2 = new Double(split[521]);
-}
-if (!split[522].trim().isEmpty()) {
-POCNFR2 = new Double(split[522]);
-}
-if (!split[523].trim().isEmpty()) {
-POCNFG2 = new Double(split[523]);
-}
-if (!split[524].trim().isEmpty()) {
-POLSYR2 = new Double(split[524]);
-}
-if (!split[525].trim().isEmpty()) {
-POYRAM2 = new Double(split[525]);
-}
-if (!split[526].trim().isEmpty()) {
-POEMP2 = new Double(split[526]);
-}
-if (!split[527].trim().isEmpty()) {
-POEMPH2 = new Double(split[527]);
-}
-if (!split[528].trim().isEmpty()) {
-POEMAM2 = new Double(split[528]);
-}
-if (!split[529].trim().isEmpty()) {
-POEMPR2 = new Double(split[529]);
-}
-if (!split[530].trim().isEmpty()) {
-POEMFR2 = new Double(split[530]);
-}
-if (!split[531].trim().isEmpty()) {
-POEMFG2 = new Double(split[531]);
-}
-if (!split[532].trim().isEmpty()) {
-POADD4 = new Double(split[532]);
-}
-if (!split[533].trim().isEmpty()) {
-POADD5 = new Double(split[533]);
-}
-if (!split[534].trim().isEmpty()) {
-POADD6 = new Double(split[534]);
-}
-if (!split[535].trim().isEmpty()) {
-PAVCH2 = new Double(split[535]);
-}
-if (!split[536].trim().isEmpty()) {
-PAVCAM2 = new Double(split[536]);
-}
-if (!split[537].trim().isEmpty()) {
-PAVCPR2 = new Double(split[537]);
-}
-if (!split[538].trim().isEmpty()) {
-PAVCFR2 = new Double(split[538]);
-}
-if (!split[539].trim().isEmpty()) {
-PAVCFG2 = new Double(split[539]);
-}
-if (!split[540].trim().isEmpty()) {
-PAVCIN2 = new Double(split[540]);
-}
-if (!split[541].trim().isEmpty()) {
-PIRREG2 = new Double(split[541]);
-}
-if (!split[542].trim().isEmpty()) {
-PADDFUT2 = new Double(split[542]);
-}
-if (!split[543].trim().isEmpty()) {
-POCONCH2 = new Double(split[543]);
-}
-if (!split[544].trim().isEmpty()) {
-POCNHOW2 = new Double(split[544]);
-}
-if (!split[545].trim().isEmpty()) {
-POCNVOL2 = new Double(split[545]);
-}
-if (!split[546].trim().isEmpty()) {
-POCNLRS5 = new Double(split[546]);
-}
-if (!split[547].trim().isEmpty()) {
-POCNLRS6 = new Double(split[547]);
-}
-if (!split[548].trim().isEmpty()) {
-POCNLRS7 = new Double(split[548]);
-}
-if (!split[549].trim().isEmpty()) {
-POCNLRS8 = new Double(split[549]);
-}
-if (!split[550].trim().isEmpty()) {
-POCNDRS7 = new Double(split[550]);
-}
-if (!split[551].trim().isEmpty()) {
-POCNDRS8 = new Double(split[551]);
-}
-if (!split[552].trim().isEmpty()) {
-POCNDRS9 = new Double(split[552]);
-}
-if (!split[553].trim().isEmpty()) {
-POCNDRS10 = new Double(split[553]);
-}
-if (!split[554].trim().isEmpty()) {
-POCNDRS11 = new Double(split[554]);
-}
-if (!split[555].trim().isEmpty()) {
-POCNDRS12 = new Double(split[555]);
-}
-if (!split[556].trim().isEmpty()) {
-POCNPLN2 = new Double(split[556]);
-}
-if (!split[557].trim().isEmpty()) {
-PDBCAL2 = new Double(split[557]);
-}
-if (!split[558].trim().isEmpty()) {
-PBFRAC2 = new Double(split[558]);
-}
-if (!split[559].trim().isEmpty()) {
-PBQUAL2 = new Double(split[559]);
-}
-if (!split[560].trim().isEmpty()) {
-PBLUMV2 = new Double(split[560]);
-}
-if (!split[561].trim().isEmpty()) {
-PBLMVB2 = new Double(split[561]);
-}
-if (!split[562].trim().isEmpty()) {
-PBINCH2 = new Double(split[562]);
-}
-if (!split[563].trim().isEmpty()) {
-PBINCF2 = new Double(split[563]);
-}
-if (!split[564].trim().isEmpty()) {
-PBINCA2 = new Double(split[564]);
-}
-if (!split[565].trim().isEmpty()) {
-PBDOCS2 = new Double(split[565]);
-}
-if (!split[566].trim().isEmpty()) {
-PBSTYR2 = new Double(split[566]);
-}
-if (!split[567].trim().isEmpty()) {
-PBSTMN2 = new Double(split[567]);
-}
-if (!split[568].trim().isEmpty()) {
-PAVCUV2 = new Double(split[568]);
-}
-if (!split[569].trim().isEmpty()) {
-PAVCVB2 = new Double(split[569]);
-}
-if (!split[570].trim().isEmpty()) {
-PAVDOC2 = new Double(split[570]);
-}
-if (!split[571].trim().isEmpty()) {
-PASTYR2 = new Double(split[571]);
-}
-if (!split[572].trim().isEmpty()) {
-PASTMN2 = new Double(split[572]);
-}
-if (!split[573].trim().isEmpty()) {
-PDCVAL2 = new Double(split[573]);
-}
-if (!split[574].trim().isEmpty()) {
-PDCVB2 = new Double(split[574]);
-}
-if (!split[575].trim().isEmpty()) {
-PCDOCS2 = new Double(split[575]);
-}
-if (!split[576].trim().isEmpty()) {
-PCSTYR2 = new Double(split[576]);
-}
-if (!split[577].trim().isEmpty()) {
-PCSTMN2 = new Double(split[577]);
-}
-if (!split[578].trim().isEmpty()) {
-POLUM2 = new Double(split[578]);
-}
-if (!split[579].trim().isEmpty()) {
-POLMV2 = new Double(split[579]);
-}
-if (!split[580].trim().isEmpty()) {
-POLMVB2 = new Double(split[580]);
-}
-if (!split[581].trim().isEmpty()) {
-POLMUS7 = new Double(split[581]);
-}
-if (!split[582].trim().isEmpty()) {
-POLMUS8 = new Double(split[582]);
-}
-if (!split[583].trim().isEmpty()) {
-POLMUS9 = new Double(split[583]);
-}
-if (!split[584].trim().isEmpty()) {
-POLMUS10 = new Double(split[584]);
-}
-if (!split[585].trim().isEmpty()) {
-POLMUS11 = new Double(split[585]);
-}
-if (!split[586].trim().isEmpty()) {
-POLMUS12 = new Double(split[586]);
-}
-if (!split[587].trim().isEmpty()) {
-POCASH2 = new Double(split[587]);
-}
-if (!split[588].trim().isEmpty()) {
-POANN5 = new Double(split[588]);
-}
-if (!split[589].trim().isEmpty()) {
-POANN6 = new Double(split[589]);
-}
-if (!split[590].trim().isEmpty()) {
-POANN7 = new Double(split[590]);
-}
-if (!split[591].trim().isEmpty()) {
-POANN8 = new Double(split[591]);
-}
-if (!split[592].trim().isEmpty()) {
-POANLM2 = new Double(split[592]);
-}
-if (!split[593].trim().isEmpty()) {
-POANEXY2 = new Double(split[593]);
-}
-if (!split[594].trim().isEmpty()) {
-POANEXM2 = new Double(split[594]);
-}
-if (!split[595].trim().isEmpty()) {
-POANJT2 = new Double(split[595]);
-}
-if (!split[596].trim().isEmpty()) {
-POANIF2 = new Double(split[596]);
-}
-if (!split[597].trim().isEmpty()) {
-POANEH2 = new Double(split[597]);
-}
-if (!split[598].trim().isEmpty()) {
-POANGA2 = new Double(split[598]);
-}
-if (!split[599].trim().isEmpty()) {
-POANVI2 = new Double(split[599]);
-}
-if (!split[600].trim().isEmpty()) {
-POANVB2 = new Double(split[600]);
-}
-if (!split[601].trim().isEmpty()) {
-PODRVI2 = new Double(split[601]);
-}
-if (!split[602].trim().isEmpty()) {
-PODRVB2 = new Double(split[602]);
-}
-if (!split[603].trim().isEmpty()) {
-PODRINC2 = new Double(split[603]);
-}
-if (!split[604].trim().isEmpty()) {
-PODRINCB2 = new Double(split[604]);
-}
-if (!split[605].trim().isEmpty()) {
-POPENVI2 = new Double(split[605]);
-}
-if (!split[606].trim().isEmpty()) {
-POPENVB2 = new Double(split[606]);
-}
-if (!split[607].trim().isEmpty()) {
-POFAN7 = new Double(split[607]);
-}
-if (!split[608].trim().isEmpty()) {
-POFAN8 = new Double(split[608]);
-}
-if (!split[609].trim().isEmpty()) {
-POFAN9 = new Double(split[609]);
-}
-if (!split[610].trim().isEmpty()) {
-POFAN10 = new Double(split[610]);
-}
-if (!split[611].trim().isEmpty()) {
-POFAN11 = new Double(split[611]);
-}
-if (!split[612].trim().isEmpty()) {
-POFAN12 = new Double(split[612]);
-}
-if (!split[613].trim().isEmpty()) {
-POFAWH7 = new Double(split[613]);
-}
-if (!split[614].trim().isEmpty()) {
-POFAWH8 = new Double(split[614]);
-}
-if (!split[615].trim().isEmpty()) {
-POFAWH9 = new Double(split[615]);
-}
-if (!split[616].trim().isEmpty()) {
-POFAWH10 = new Double(split[616]);
-}
-if (!split[617].trim().isEmpty()) {
-POFAWH11 = new Double(split[617]);
-}
-if (!split[618].trim().isEmpty()) {
-POFAWH12 = new Double(split[618]);
-}
-if (!split[619].trim().isEmpty()) {
-POFAAG2 = new Double(split[619]);
-}
-if (!split[620].trim().isEmpty()) {
-PPYRST1 = new Double(split[620]);
-}
-if (!split[621].trim().isEmpty()) {
-PPORG1 = new Double(split[621]);
-}
-if (!split[622].trim().isEmpty()) {
-PPTYP1 = new Double(split[622]);
-}
-if (!split[623].trim().isEmpty()) {
-PPSIPP1 = new Double(split[623]);
-}
-if (!split[624].trim().isEmpty()) {
-PPPAY1 = new Double(split[624]);
-}
-if (!split[625].trim().isEmpty()) {
-PPRGH1 = new Double(split[625]);
-}
-if (!split[626].trim().isEmpty()) {
-PPRGAM = new Double(split[626]);
-}
-if (!split[627].trim().isEmpty()) {
-PPRGPE1 = new Double(split[627]);
-}
-if (!split[628].trim().isEmpty()) {
-PPRGFR1 = new Double(split[628]);
-}
-if (!split[629].trim().isEmpty()) {
-PPRGFG1 = new Double(split[629]);
-}
-if (!split[630].trim().isEmpty()) {
-PPIRRY1 = new Double(split[630]);
-}
-if (!split[631].trim().isEmpty()) {
-PPIRRH1 = new Double(split[631]);
-}
-if (!split[632].trim().isEmpty()) {
-PPIRRA1 = new Double(split[632]);
-}
-if (!split[633].trim().isEmpty()) {
-PPIRRF1 = new Double(split[633]);
-}
-if (!split[634].trim().isEmpty()) {
-PPIRNO1 = new Double(split[634]);
-}
-if (!split[635].trim().isEmpty()) {
-PPLASY1 = new Double(split[635]);
-}
-if (!split[636].trim().isEmpty()) {
-PPLSTA1 = new Double(split[636]);
-}
-if (!split[637].trim().isEmpty()) {
-PPLSTP1 = new Double(split[637]);
-}
-if (!split[638].trim().isEmpty()) {
-PPEVRG1 = new Double(split[638]);
-}
-if (!split[639].trim().isEmpty()) {
-PPYSTP1 = new Double(split[639]);
-}
-if (!split[640].trim().isEmpty()) {
-PPYSTP2 = new Double(split[640]);
-}
-if (!split[641].trim().isEmpty()) {
-PPYSTP3 = new Double(split[641]);
-}
-if (!split[642].trim().isEmpty()) {
-PPYSTP4 = new Double(split[642]);
-}
-if (!split[643].trim().isEmpty()) {
-PPYSTP5 = new Double(split[643]);
-}
-if (!split[644].trim().isEmpty()) {
-PPYSTP6 = new Double(split[644]);
-}
-if (!split[645].trim().isEmpty()) {
-PPYSTP7 = new Double(split[645]);
-}
-if (!split[646].trim().isEmpty()) {
-PPCONCH = new Double(split[646]);
-}
-if (!split[647].trim().isEmpty()) {
-PPCNHOW1 = new Double(split[647]);
-}
-if (!split[648].trim().isEmpty()) {
-PPCNLRS1 = new Double(split[648]);
-}
-if (!split[649].trim().isEmpty()) {
-PPCNLRS2 = new Double(split[649]);
-}
-if (!split[650].trim().isEmpty()) {
-PPCNLRS3 = new Double(split[650]);
-}
-if (!split[651].trim().isEmpty()) {
-PPCNLRS4 = new Double(split[651]);
-}
-if (!split[652].trim().isEmpty()) {
-PPCNDRS1 = new Double(split[652]);
-}
-if (!split[653].trim().isEmpty()) {
-PPCNDRS2 = new Double(split[653]);
-}
-if (!split[654].trim().isEmpty()) {
-PPCNDRS3 = new Double(split[654]);
-}
-if (!split[655].trim().isEmpty()) {
-PPCNDRS4 = new Double(split[655]);
-}
-if (!split[656].trim().isEmpty()) {
-PPCNDRS5 = new Double(split[656]);
-}
-if (!split[657].trim().isEmpty()) {
-PPCNDRS6 = new Double(split[657]);
-}
-if (!split[658].trim().isEmpty()) {
-PPCNDRS7 = new Double(split[658]);
-}
-if (!split[659].trim().isEmpty()) {
-PPCNDRS8 = new Double(split[659]);
-}
-if (!split[660].trim().isEmpty()) {
-PPCNPLN1 = new Double(split[660]);
-}
-if (!split[661].trim().isEmpty()) {
-PPEMP1 = new Double(split[661]);
-}
-if (!split[662].trim().isEmpty()) {
-PPEMPH1 = new Double(split[662]);
-}
-if (!split[663].trim().isEmpty()) {
-PPEMAM1 = new Double(split[663]);
-}
-if (!split[664].trim().isEmpty()) {
-PPEMPR1 = new Double(split[664]);
-}
-if (!split[665].trim().isEmpty()) {
-PPEMFR1 = new Double(split[665]);
-}
-if (!split[666].trim().isEmpty()) {
-PPEIRH1 = new Double(split[666]);
-}
-if (!split[667].trim().isEmpty()) {
-PPEIRA1 = new Double(split[667]);
-}
-if (!split[668].trim().isEmpty()) {
-PPEIRF1 = new Double(split[668]);
-}
-if (!split[669].trim().isEmpty()) {
-PPNINS1 = new Double(split[669]);
-}
-if (!split[670].trim().isEmpty()) {
-PPVINT1 = new Double(split[670]);
-}
-if (!split[671].trim().isEmpty()) {
-PSTYPE1 = new Double(split[671]);
-}
-if (!split[672].trim().isEmpty()) {
-PSTYPE2 = new Double(split[672]);
-}
-if (!split[673].trim().isEmpty()) {
-PSTYPE3 = new Double(split[673]);
-}
-if (!split[674].trim().isEmpty()) {
-PSTYPE4 = new Double(split[674]);
-}
-if (!split[675].trim().isEmpty()) {
-PSTYPE5 = new Double(split[675]);
-}
-if (!split[676].trim().isEmpty()) {
-PSTYPE6 = new Double(split[676]);
-}
-if (!split[677].trim().isEmpty()) {
-PSTYPE7 = new Double(split[677]);
-}
-if (!split[678].trim().isEmpty()) {
-PPVAL1 = new Double(split[678]);
-}
-if (!split[679].trim().isEmpty()) {
-PPVALB1 = new Double(split[679]);
-}
-if (!split[680].trim().isEmpty()) {
-PPDOCS1 = new Double(split[680]);
-}
-if (!split[681].trim().isEmpty()) {
-PPSTYR1 = new Double(split[681]);
-}
-if (!split[682].trim().isEmpty()) {
-PPSTMN1 = new Double(split[682]);
-}
-if (!split[683].trim().isEmpty()) {
-PMORTC = new Double(split[683]);
-}
-if (!split[684].trim().isEmpty()) {
-PPLUM1 = new Double(split[684]);
-}
-if (!split[685].trim().isEmpty()) {
-PPLMV1 = new Double(split[685]);
-}
-if (!split[686].trim().isEmpty()) {
-PPLMVB1 = new Double(split[686]);
-}
-if (!split[687].trim().isEmpty()) {
-PPLMUS1 = new Double(split[687]);
-}
-if (!split[688].trim().isEmpty()) {
-PPCASH1 = new Double(split[688]);
-}
-if (!split[689].trim().isEmpty()) {
-PPANN1 = new Double(split[689]);
-}
-if (!split[690].trim().isEmpty()) {
-PPANN2 = new Double(split[690]);
-}
-if (!split[691].trim().isEmpty()) {
-PPANN3 = new Double(split[691]);
-}
-if (!split[692].trim().isEmpty()) {
-PPANN4 = new Double(split[692]);
-}
-if (!split[693].trim().isEmpty()) {
-PPANLM1 = new Double(split[693]);
-}
-if (!split[694].trim().isEmpty()) {
-PPANEXY1 = new Double(split[694]);
-}
-if (!split[695].trim().isEmpty()) {
-PPANEXM1 = new Double(split[695]);
-}
-if (!split[696].trim().isEmpty()) {
-PPANJT1 = new Double(split[696]);
-}
-if (!split[697].trim().isEmpty()) {
-PPANIF1 = new Double(split[697]);
-}
-if (!split[698].trim().isEmpty()) {
-PPANEH1 = new Double(split[698]);
-}
-if (!split[699].trim().isEmpty()) {
-PPANGA1 = new Double(split[699]);
-}
-if (!split[700].trim().isEmpty()) {
-PPANVI1 = new Double(split[700]);
-}
-if (!split[701].trim().isEmpty()) {
-PPANVB1 = new Double(split[701]);
-}
-if (!split[702].trim().isEmpty()) {
-PPDRVI1 = new Double(split[702]);
-}
-if (!split[703].trim().isEmpty()) {
-PPDRVB1 = new Double(split[703]);
-}
-if (!split[704].trim().isEmpty()) {
-PPDRINC1 = new Double(split[704]);
-}
-if (!split[705].trim().isEmpty()) {
-PPDRINCB = new Double(split[705]);
-}
-if (!split[706].trim().isEmpty()) {
-PPFAN1 = new Double(split[706]);
-}
-if (!split[707].trim().isEmpty()) {
-PPFAN2 = new Double(split[707]);
-}
-if (!split[708].trim().isEmpty()) {
-PPFAN3 = new Double(split[708]);
-}
-if (!split[709].trim().isEmpty()) {
-PPFAN4 = new Double(split[709]);
-}
-if (!split[710].trim().isEmpty()) {
-PPFAN5 = new Double(split[710]);
-}
-if (!split[711].trim().isEmpty()) {
-PPFAWH1 = new Double(split[711]);
-}
-if (!split[712].trim().isEmpty()) {
-PPFAWH2 = new Double(split[712]);
-}
-if (!split[713].trim().isEmpty()) {
-PPFAWH3 = new Double(split[713]);
-}
-if (!split[714].trim().isEmpty()) {
-PPFAWH4 = new Double(split[714]);
-}
-if (!split[715].trim().isEmpty()) {
-PPFAWH5 = new Double(split[715]);
-}
-if (!split[716].trim().isEmpty()) {
-PPFAWH6 = new Double(split[716]);
-}
-if (!split[717].trim().isEmpty()) {
-PPFAWH7 = new Double(split[717]);
-}
-if (!split[718].trim().isEmpty()) {
-PPFAAG1 = new Double(split[718]);
-}
-if (!split[719].trim().isEmpty()) {
-PPACCU1 = new Double(split[719]);
-}
-if (!split[720].trim().isEmpty()) {
-PPYRST2 = new Double(split[720]);
-}
-if (!split[721].trim().isEmpty()) {
-PPORG2 = new Double(split[721]);
-}
-if (!split[722].trim().isEmpty()) {
-PPTYP2 = new Double(split[722]);
-}
-if (!split[723].trim().isEmpty()) {
-PPSIPP2 = new Double(split[723]);
-}
-if (!split[724].trim().isEmpty()) {
-PPPAY2 = new Double(split[724]);
-}
-if (!split[725].trim().isEmpty()) {
-PPRGH2 = new Double(split[725]);
-}
-if (!split[726].trim().isEmpty()) {
-PPRGAM2 = new Double(split[726]);
-}
-if (!split[727].trim().isEmpty()) {
-PPRGPE2 = new Double(split[727]);
-}
-if (!split[728].trim().isEmpty()) {
-PPRGFR2 = new Double(split[728]);
-}
-if (!split[729].trim().isEmpty()) {
-PPRGFG2 = new Double(split[729]);
-}
-if (!split[730].trim().isEmpty()) {
-PPIRRY2 = new Double(split[730]);
-}
-if (!split[731].trim().isEmpty()) {
-PPIRRH2 = new Double(split[731]);
-}
-if (!split[732].trim().isEmpty()) {
-PPIRRA2 = new Double(split[732]);
-}
-if (!split[733].trim().isEmpty()) {
-PPIRRF2 = new Double(split[733]);
-}
-if (!split[734].trim().isEmpty()) {
-PPIRNO2 = new Double(split[734]);
-}
-if (!split[735].trim().isEmpty()) {
-PPLASY2 = new Double(split[735]);
-}
-if (!split[736].trim().isEmpty()) {
-PPLSTA2 = new Double(split[736]);
-}
-if (!split[737].trim().isEmpty()) {
-PPLSTP2 = new Double(split[737]);
-}
-if (!split[738].trim().isEmpty()) {
-PPEVRG2 = new Double(split[738]);
-}
-if (!split[739].trim().isEmpty()) {
-PPYSTP8 = new Double(split[739]);
-}
-if (!split[740].trim().isEmpty()) {
-PPYSTP9 = new Double(split[740]);
-}
-if (!split[741].trim().isEmpty()) {
-PPYSTP10 = new Double(split[741]);
-}
-if (!split[742].trim().isEmpty()) {
-PPYSTP11 = new Double(split[742]);
-}
-if (!split[743].trim().isEmpty()) {
-PPYSTP12 = new Double(split[743]);
-}
-if (!split[744].trim().isEmpty()) {
-PPYSTP13 = new Double(split[744]);
-}
-if (!split[745].trim().isEmpty()) {
-PPYSTP14 = new Double(split[745]);
-}
-if (!split[746].trim().isEmpty()) {
-PPCONCH2 = new Double(split[746]);
-}
-if (!split[747].trim().isEmpty()) {
-PPCNHOW2 = new Double(split[747]);
-}
-if (!split[748].trim().isEmpty()) {
-PPCNLRS5 = new Double(split[748]);
-}
-if (!split[749].trim().isEmpty()) {
-PPCNLRS6 = new Double(split[749]);
-}
-if (!split[750].trim().isEmpty()) {
-PPCNLRS7 = new Double(split[750]);
-}
-if (!split[751].trim().isEmpty()) {
-PPCNLRS8 = new Double(split[751]);
-}
-if (!split[752].trim().isEmpty()) {
-PPCNDRS9 = new Double(split[752]);
-}
-if (!split[753].trim().isEmpty()) {
-PPCNDRS10 = new Double(split[753]);
-}
-if (!split[754].trim().isEmpty()) {
-PPCNDRS11 = new Double(split[754]);
-}
-if (!split[755].trim().isEmpty()) {
-PPCNDRS12 = new Double(split[755]);
-}
-if (!split[756].trim().isEmpty()) {
-PPCNDRS13 = new Double(split[756]);
-}
-if (!split[757].trim().isEmpty()) {
-PPCNDRS14 = new Double(split[757]);
-}
-if (!split[758].trim().isEmpty()) {
-PPCNDRS15 = new Double(split[758]);
-}
-if (!split[759].trim().isEmpty()) {
-PPCNDRS16 = new Double(split[759]);
-}
-if (!split[760].trim().isEmpty()) {
-PPCNPLN2 = new Double(split[760]);
-}
-if (!split[761].trim().isEmpty()) {
-PPEMP2 = new Double(split[761]);
-}
-if (!split[762].trim().isEmpty()) {
-PPEMPH2 = new Double(split[762]);
-}
-if (!split[763].trim().isEmpty()) {
-PPEMAM2 = new Double(split[763]);
-}
-if (!split[764].trim().isEmpty()) {
-PPEMPR2 = new Double(split[764]);
-}
-if (!split[765].trim().isEmpty()) {
-PPEMFR2 = new Double(split[765]);
-}
-if (!split[766].trim().isEmpty()) {
-PPEIRH2 = new Double(split[766]);
-}
-if (!split[767].trim().isEmpty()) {
-PPEIRA2 = new Double(split[767]);
-}
-if (!split[768].trim().isEmpty()) {
-PPEIRF2 = new Double(split[768]);
-}
-if (!split[769].trim().isEmpty()) {
-PPNINS2 = new Double(split[769]);
-}
-if (!split[770].trim().isEmpty()) {
-PPVINT2 = new Double(split[770]);
-}
-if (!split[771].trim().isEmpty()) {
-PSTYPE8 = new Double(split[771]);
-}
-if (!split[772].trim().isEmpty()) {
-PSTYPE9 = new Double(split[772]);
-}
-if (!split[773].trim().isEmpty()) {
-PSTYPE10 = new Double(split[773]);
-}
-if (!split[774].trim().isEmpty()) {
-PSTYPE11 = new Double(split[774]);
-}
-if (!split[775].trim().isEmpty()) {
-PSTYPE12 = new Double(split[775]);
-}
-if (!split[776].trim().isEmpty()) {
-PSTYPE13 = new Double(split[776]);
-}
-if (!split[777].trim().isEmpty()) {
-PSTYPE14 = new Double(split[777]);
-}
-if (!split[778].trim().isEmpty()) {
-PPVAL2 = new Double(split[778]);
-}
-if (!split[779].trim().isEmpty()) {
-PPVALB2 = new Double(split[779]);
-}
-if (!split[780].trim().isEmpty()) {
-PPDOCS2 = new Double(split[780]);
-}
-if (!split[781].trim().isEmpty()) {
-PPSTYR2 = new Double(split[781]);
-}
-if (!split[782].trim().isEmpty()) {
-PPSTMN2 = new Double(split[782]);
-}
-if (!split[783].trim().isEmpty()) {
-PMORTC2 = new Double(split[783]);
-}
-if (!split[784].trim().isEmpty()) {
-PPLUM2 = new Double(split[784]);
-}
-if (!split[785].trim().isEmpty()) {
-PPLMV2 = new Double(split[785]);
-}
-if (!split[786].trim().isEmpty()) {
-PPLMVB2 = new Double(split[786]);
-}
-if (!split[787].trim().isEmpty()) {
-PPLMUS2 = new Double(split[787]);
-}
-if (!split[788].trim().isEmpty()) {
-PPCASH2 = new Double(split[788]);
-}
-if (!split[789].trim().isEmpty()) {
-PPANN5 = new Double(split[789]);
-}
-if (!split[790].trim().isEmpty()) {
-PPANN6 = new Double(split[790]);
-}
-if (!split[791].trim().isEmpty()) {
-PPANN7 = new Double(split[791]);
-}
-if (!split[792].trim().isEmpty()) {
-PPANN8 = new Double(split[792]);
-}
-if (!split[793].trim().isEmpty()) {
-PPANLM2 = new Double(split[793]);
-}
-if (!split[794].trim().isEmpty()) {
-PPANEXY2 = new Double(split[794]);
-}
-if (!split[795].trim().isEmpty()) {
-PPANEXM2 = new Double(split[795]);
-}
-if (!split[796].trim().isEmpty()) {
-PPANJT2 = new Double(split[796]);
-}
-if (!split[797].trim().isEmpty()) {
-PPANIF2 = new Double(split[797]);
-}
-if (!split[798].trim().isEmpty()) {
-PPANEH2 = new Double(split[798]);
-}
-if (!split[799].trim().isEmpty()) {
-PPANGA2 = new Double(split[799]);
-}
-if (!split[800].trim().isEmpty()) {
-PPANVI2 = new Double(split[800]);
-}
-if (!split[801].trim().isEmpty()) {
-PPANVB2 = new Double(split[801]);
-}
-if (!split[802].trim().isEmpty()) {
-PPDRVI2 = new Double(split[802]);
-}
-if (!split[803].trim().isEmpty()) {
-PPDRVB2 = new Double(split[803]);
-}
-if (!split[804].trim().isEmpty()) {
-PPDRINC2 = new Double(split[804]);
-}
-if (!split[805].trim().isEmpty()) {
-PPDRINCB2 = new Double(split[805]);
-}
-if (!split[806].trim().isEmpty()) {
-PPFAN6 = new Double(split[806]);
-}
-if (!split[807].trim().isEmpty()) {
-PPFAN7 = new Double(split[807]);
-}
-if (!split[808].trim().isEmpty()) {
-PPFAN8 = new Double(split[808]);
-}
-if (!split[809].trim().isEmpty()) {
-PPFAN9 = new Double(split[809]);
-}
-if (!split[810].trim().isEmpty()) {
-PPFAN10 = new Double(split[810]);
-}
-if (!split[811].trim().isEmpty()) {
-PPFAWH8 = new Double(split[811]);
-}
-if (!split[812].trim().isEmpty()) {
-PPFAWH9 = new Double(split[812]);
-}
-if (!split[813].trim().isEmpty()) {
-PPFAWH10 = new Double(split[813]);
-}
-if (!split[814].trim().isEmpty()) {
-PPFAWH11 = new Double(split[814]);
-}
-if (!split[815].trim().isEmpty()) {
-PPFAWH12 = new Double(split[815]);
-}
-if (!split[816].trim().isEmpty()) {
-PPFAWH13 = new Double(split[816]);
-}
-if (!split[817].trim().isEmpty()) {
-PPFAWH14 = new Double(split[817]);
-}
-if (!split[818].trim().isEmpty()) {
-PPFAAG2 = new Double(split[818]);
-}
-if (!split[819].trim().isEmpty()) {
-PPACCU2 = new Double(split[819]);
-}
-if (!split[820].trim().isEmpty()) {
-PPYRST3 = new Double(split[820]);
-}
-if (!split[821].trim().isEmpty()) {
-PPORG3 = new Double(split[821]);
-}
-if (!split[822].trim().isEmpty()) {
-PPTYP3 = new Double(split[822]);
-}
-if (!split[823].trim().isEmpty()) {
-PPSIPP3 = new Double(split[823]);
-}
-if (!split[824].trim().isEmpty()) {
-PPPAY3 = new Double(split[824]);
-}
-if (!split[825].trim().isEmpty()) {
-PPRGH3 = new Double(split[825]);
-}
-if (!split[826].trim().isEmpty()) {
-PPRGAM3 = new Double(split[826]);
-}
-if (!split[827].trim().isEmpty()) {
-PPRGPE3 = new Double(split[827]);
-}
-if (!split[828].trim().isEmpty()) {
-PPRGFR3 = new Double(split[828]);
-}
-if (!split[829].trim().isEmpty()) {
-PPRGFG3 = new Double(split[829]);
-}
-if (!split[830].trim().isEmpty()) {
-PPIRRY3 = new Double(split[830]);
-}
-if (!split[831].trim().isEmpty()) {
-PPIRRH3 = new Double(split[831]);
-}
-if (!split[832].trim().isEmpty()) {
-PPIRRA3 = new Double(split[832]);
-}
-if (!split[833].trim().isEmpty()) {
-PPIRRF3 = new Double(split[833]);
-}
-if (!split[834].trim().isEmpty()) {
-PPIRNO3 = new Double(split[834]);
-}
-if (!split[835].trim().isEmpty()) {
-PPLASY3 = new Double(split[835]);
-}
-if (!split[836].trim().isEmpty()) {
-PPLSTA3 = new Double(split[836]);
-}
-if (!split[837].trim().isEmpty()) {
-PPLSTP3 = new Double(split[837]);
-}
-if (!split[838].trim().isEmpty()) {
-PPEVRG3 = new Double(split[838]);
-}
-if (!split[839].trim().isEmpty()) {
-PPYSTP15 = new Double(split[839]);
-}
-if (!split[840].trim().isEmpty()) {
-PPYSTP16 = new Double(split[840]);
-}
-if (!split[841].trim().isEmpty()) {
-PPYSTP17 = new Double(split[841]);
-}
-if (!split[842].trim().isEmpty()) {
-PPYSTP18 = new Double(split[842]);
-}
-if (!split[843].trim().isEmpty()) {
-PPYSTP19 = new Double(split[843]);
-}
-if (!split[844].trim().isEmpty()) {
-PPYSTP20 = new Double(split[844]);
-}
-if (!split[845].trim().isEmpty()) {
-PPYSTP21 = new Double(split[845]);
-}
-if (!split[846].trim().isEmpty()) {
-PPCONCH3 = new Double(split[846]);
-}
-if (!split[847].trim().isEmpty()) {
-PPCNHO___W3 = new Double(split[847]);
-}
-if (!split[848].trim().isEmpty()) {
-PPCNLRS9 = new Double(split[848]);
-}
-if (!split[849].trim().isEmpty()) {
-PPCNLRS10 = new Double(split[849]);
-}
-if (!split[850].trim().isEmpty()) {
-PPCNLRS11 = new Double(split[850]);
-}
-if (!split[851].trim().isEmpty()) {
-PPCNLRS12 = new Double(split[851]);
-}
-if (!split[852].trim().isEmpty()) {
-PPCNDRS17 = new Double(split[852]);
-}
-if (!split[853].trim().isEmpty()) {
-PPCNDRS18 = new Double(split[853]);
-}
-if (!split[854].trim().isEmpty()) {
-PPCNDRS19 = new Double(split[854]);
-}
-if (!split[855].trim().isEmpty()) {
-PPCNDRS20 = new Double(split[855]);
-}
-if (!split[856].trim().isEmpty()) {
-PPCNDRS21 = new Double(split[856]);
-}
-if (!split[857].trim().isEmpty()) {
-PPCNDRS22 = new Double(split[857]);
-}
-if (!split[858].trim().isEmpty()) {
-PPCNDRS23 = new Double(split[858]);
-}
-if (!split[859].trim().isEmpty()) {
-PPCNDRS24 = new Double(split[859]);
-}
-if (!split[860].trim().isEmpty()) {
-PPCNPLN3 = new Double(split[860]);
-}
-if (!split[861].trim().isEmpty()) {
-PPEMP3 = new Double(split[861]);
-}
-if (!split[862].trim().isEmpty()) {
-PPEMPH3 = new Double(split[862]);
-}
-if (!split[863].trim().isEmpty()) {
-PPEMAM3 = new Double(split[863]);
-}
-if (!split[864].trim().isEmpty()) {
-PPEMPR3 = new Double(split[864]);
-}
-if (!split[865].trim().isEmpty()) {
-PPEMFR3 = new Double(split[865]);
-}
-if (!split[866].trim().isEmpty()) {
-PPEIRH3 = new Double(split[866]);
-}
-if (!split[867].trim().isEmpty()) {
-PPEIRA3 = new Double(split[867]);
-}
-if (!split[868].trim().isEmpty()) {
-PPEIRF3 = new Double(split[868]);
-}
-if (!split[869].trim().isEmpty()) {
-PPNINS3 = new Double(split[869]);
-}
-if (!split[870].trim().isEmpty()) {
-PPVINT3 = new Double(split[870]);
-}
-if (!split[871].trim().isEmpty()) {
-PSTYPE15 = new Double(split[871]);
-}
-if (!split[872].trim().isEmpty()) {
-PSTYPE16 = new Double(split[872]);
-}
-if (!split[873].trim().isEmpty()) {
-PSTYPE17 = new Double(split[873]);
-}
-if (!split[874].trim().isEmpty()) {
-PSTYPE18 = new Double(split[874]);
-}
-if (!split[875].trim().isEmpty()) {
-PSTYPE19 = new Double(split[875]);
-}
-if (!split[876].trim().isEmpty()) {
-PSTYPE20 = new Double(split[876]);
-}
-if (!split[877].trim().isEmpty()) {
-PSTYPE21 = new Double(split[877]);
-}
-if (!split[878].trim().isEmpty()) {
-PPVAL3 = new Double(split[878]);
-}
-if (!split[879].trim().isEmpty()) {
-PPVALB3 = new Double(split[879]);
-}
-if (!split[880].trim().isEmpty()) {
-PPDOCS3 = new Double(split[880]);
-}
-if (!split[881].trim().isEmpty()) {
-PPSTYR3 = new Double(split[881]);
-}
-if (!split[882].trim().isEmpty()) {
-PPSTMN3 = new Double(split[882]);
-}
-if (!split[883].trim().isEmpty()) {
-PMORTC3 = new Double(split[883]);
-}
-if (!split[884].trim().isEmpty()) {
-PPLUM3 = new Double(split[884]);
-}
-if (!split[885].trim().isEmpty()) {
-PPLMV3 = new Double(split[885]);
-}
-if (!split[886].trim().isEmpty()) {
-PPLMVB3 = new Double(split[886]);
-}
-if (!split[887].trim().isEmpty()) {
-PPLMUS3 = new Double(split[887]);
-}
-if (!split[888].trim().isEmpty()) {
-PPCASH3 = new Double(split[888]);
-}
-if (!split[889].trim().isEmpty()) {
-PPANN9 = new Double(split[889]);
-}
-if (!split[890].trim().isEmpty()) {
-PPANN10 = new Double(split[890]);
-}
-if (!split[891].trim().isEmpty()) {
-PPANN11 = new Double(split[891]);
-}
-if (!split[892].trim().isEmpty()) {
-PPANN12 = new Double(split[892]);
-}
-if (!split[893].trim().isEmpty()) {
-PPANLM3 = new Double(split[893]);
-}
-if (!split[894].trim().isEmpty()) {
-PPANEXY3 = new Double(split[894]);
-}
-if (!split[895].trim().isEmpty()) {
-PPANEXM3 = new Double(split[895]);
-}
-if (!split[896].trim().isEmpty()) {
-PPANJT3 = new Double(split[896]);
-}
-if (!split[897].trim().isEmpty()) {
-PPANIF3 = new Double(split[897]);
-}
-if (!split[898].trim().isEmpty()) {
-PPANEH3 = new Double(split[898]);
-}
-if (!split[899].trim().isEmpty()) {
-PPANGA3 = new Double(split[899]);
-}
-if (!split[900].trim().isEmpty()) {
-PPANVI3 = new Double(split[900]);
-}
-if (!split[901].trim().isEmpty()) {
-PPANVB3 = new Double(split[901]);
-}
-if (!split[902].trim().isEmpty()) {
-PPDRVI3 = new Double(split[902]);
-}
-if (!split[903].trim().isEmpty()) {
-PPDRVB3 = new Double(split[903]);
-}
-if (!split[904].trim().isEmpty()) {
-PPDRINC3 = new Double(split[904]);
-}
-if (!split[905].trim().isEmpty()) {
-PPDRINCB3 = new Double(split[905]);
-}
-if (!split[906].trim().isEmpty()) {
-PPFAN11 = new Double(split[906]);
-}
-if (!split[907].trim().isEmpty()) {
-PPFAN12 = new Double(split[907]);
-}
-if (!split[908].trim().isEmpty()) {
-PPFAN13 = new Double(split[908]);
-}
-if (!split[909].trim().isEmpty()) {
-PPFAN14 = new Double(split[909]);
-}
-if (!split[910].trim().isEmpty()) {
-PPFAN15 = new Double(split[910]);
-}
-if (!split[911].trim().isEmpty()) {
-PPFAWH15 = new Double(split[911]);
-}
-if (!split[912].trim().isEmpty()) {
-PPFAWH16 = new Double(split[912]);
-}
-if (!split[913].trim().isEmpty()) {
-PPFAWH17 = new Double(split[913]);
-}
-if (!split[914].trim().isEmpty()) {
-PPFAWH18 = new Double(split[914]);
-}
-if (!split[915].trim().isEmpty()) {
-PPFAWH19 = new Double(split[915]);
-}
-if (!split[916].trim().isEmpty()) {
-PPFAWH20 = new Double(split[916]);
-}
-if (!split[917].trim().isEmpty()) {
-PPFAWH21 = new Double(split[917]);
-}
-if (!split[918].trim().isEmpty()) {
-PPFAAG3 = new Double(split[918]);
-}
-if (!split[919].trim().isEmpty()) {
-PPACCU3 = new Double(split[919]);
-}
-if (!split[920].trim().isEmpty()) {
-PFNEW = new Double(split[920]);
-}
-if (!split[921].trim().isEmpty()) {
-PFNEWNO = new Double(split[921]);
-}
-if (!split[922].trim().isEmpty()) {
-PEVERC = new Double(split[922]);
-}
-if (!split[923].trim().isEmpty()) {
-PEVERNC = new Double(split[923]);
-}
-if (!split[924].trim().isEmpty()) {
-PRETAIN = new Double(split[924]);
-}
-if (!split[925].trim().isEmpty()) {
-PFNUM = new Double(split[925]);
-}
-if (!split[926].trim().isEmpty()) {
-PFEN = new Double(split[926]);
-}
-if (!split[927].trim().isEmpty()) {
-PFENNUM = new Double(split[927]);
-}
-if (!split[928].trim().isEmpty()) {
-RPFCRET1 = new Double(split[928]);
-}
-if (!split[929].trim().isEmpty()) {
-RPFCRET2 = new Double(split[929]);
-}
-if (!split[930].trim().isEmpty()) {
-RPFCRET3 = new Double(split[930]);
-}
-if (!split[931].trim().isEmpty()) {
-RPFCRET4 = new Double(split[931]);
-}
-if (!split[932].trim().isEmpty()) {
-RPFCRET5 = new Double(split[932]);
-}
-if (!split[933].trim().isEmpty()) {
-RPFCRET6 = new Double(split[933]);
-}
-if (!split[934].trim().isEmpty()) {
-RPCRET1 = new Double(split[934]);
-}
-if (!split[935].trim().isEmpty()) {
-RPCRET2 = new Double(split[935]);
-}
-if (!split[936].trim().isEmpty()) {
-RPCRET3 = new Double(split[936]);
-}
-if (!split[937].trim().isEmpty()) {
-PFTYP1 = new Double(split[937]);
-}
-if (!split[938].trim().isEmpty()) {
-PFOCTY1 = new Double(split[938]);
-}
-if (!split[939].trim().isEmpty()) {
-PFLUM1 = new Double(split[939]);
-}
-if (!split[940].trim().isEmpty()) {
-PFLMV1 = new Double(split[940]);
-}
-if (!split[941].trim().isEmpty()) {
-PFLMVB1 = new Double(split[941]);
-}
-if (!split[942].trim().isEmpty()) {
-PFLMUS1 = new Double(split[942]);
-}
-if (!split[943].trim().isEmpty()) {
-PFLUMALL1 = new Double(split[943]);
-}
-if (!split[944].trim().isEmpty()) {
-PFCASH1 = new Double(split[944]);
-}
-if (!split[945].trim().isEmpty()) {
-PFANN1 = new Double(split[945]);
-}
-if (!split[946].trim().isEmpty()) {
-PFANN2 = new Double(split[946]);
-}
-if (!split[947].trim().isEmpty()) {
-PFANN3 = new Double(split[947]);
-}
-if (!split[948].trim().isEmpty()) {
-PFANN4 = new Double(split[948]);
-}
-if (!split[949].trim().isEmpty()) {
-PFANN5 = new Double(split[949]);
-}
-if (!split[950].trim().isEmpty()) {
-PFREM1 = new Double(split[950]);
-}
-if (!split[951].trim().isEmpty()) {
-PFANLM1 = new Double(split[951]);
-}
-if (!split[952].trim().isEmpty()) {
-PFANEXY1 = new Double(split[952]);
-}
-if (!split[953].trim().isEmpty()) {
-PFANEXM1 = new Double(split[953]);
-}
-if (!split[954].trim().isEmpty()) {
-PFANJT1 = new Double(split[954]);
-}
-if (!split[955].trim().isEmpty()) {
-PFANIF1 = new Double(split[955]);
-}
-if (!split[956].trim().isEmpty()) {
-PFANEH1 = new Double(split[956]);
-}
-if (!split[957].trim().isEmpty()) {
-PFANGA1 = new Double(split[957]);
-}
-if (!split[958].trim().isEmpty()) {
-PFANVI1 = new Double(split[958]);
-}
-if (!split[959].trim().isEmpty()) {
-PFANVB1 = new Double(split[959]);
-}
-if (!split[960].trim().isEmpty()) {
-PFDRVI1 = new Double(split[960]);
-}
-if (!split[961].trim().isEmpty()) {
-PFDRVB1 = new Double(split[961]);
-}
-if (!split[962].trim().isEmpty()) {
-PFDRINC1 = new Double(split[962]);
-}
-if (!split[963].trim().isEmpty()) {
-PFDRINCB1 = new Double(split[963]);
-}
-if (!split[964].trim().isEmpty()) {
-PFPENVI1 = new Double(split[964]);
-}
-if (!split[965].trim().isEmpty()) {
-PFPENVB1 = new Double(split[965]);
-}
-if (!split[966].trim().isEmpty()) {
-PFFAN1 = new Double(split[966]);
-}
-if (!split[967].trim().isEmpty()) {
-PFFAN2 = new Double(split[967]);
-}
-if (!split[968].trim().isEmpty()) {
-PFFAN3 = new Double(split[968]);
-}
-if (!split[969].trim().isEmpty()) {
-PFFAN4 = new Double(split[969]);
-}
-if (!split[970].trim().isEmpty()) {
-PFFAN5 = new Double(split[970]);
-}
-if (!split[971].trim().isEmpty()) {
-PFFAWH1 = new Double(split[971]);
-}
-if (!split[972].trim().isEmpty()) {
-PFFAWH2 = new Double(split[972]);
-}
-if (!split[973].trim().isEmpty()) {
-PFFAWH3 = new Double(split[973]);
-}
-if (!split[974].trim().isEmpty()) {
-PFFAWH4 = new Double(split[974]);
-}
-if (!split[975].trim().isEmpty()) {
-PFFAWH5 = new Double(split[975]);
-}
-if (!split[976].trim().isEmpty()) {
-PFFAWH6 = new Double(split[976]);
-}
-if (!split[977].trim().isEmpty()) {
-PFFAAG1 = new Double(split[977]);
-}
-if (!split[978].trim().isEmpty()) {
-PFREC1 = new Double(split[978]);
-}
-if (!split[979].trim().isEmpty()) {
-PFDRAW1 = new Double(split[979]);
-}
-if (!split[980].trim().isEmpty()) {
-PFDDV1 = new Double(split[980]);
-}
-if (!split[981].trim().isEmpty()) {
-PFDDVB1 = new Double(split[981]);
-}
-if (!split[982].trim().isEmpty()) {
-PFBEG1 = new Double(split[982]);
-}
-if (!split[983].trim().isEmpty()) {
-PFEND1 = new Double(split[983]);
-}
-if (!split[984].trim().isEmpty()) {
-PFSIPTY1 = new Double(split[984]);
-}
-if (!split[985].trim().isEmpty()) {
-PFSIPTY2 = new Double(split[985]);
-}
-if (!split[986].trim().isEmpty()) {
-PFSIPTY3 = new Double(split[986]);
-}
-if (!split[987].trim().isEmpty()) {
-PFSIPTY4 = new Double(split[987]);
-}
-if (!split[988].trim().isEmpty()) {
-PFSIPTY5 = new Double(split[988]);
-}
-if (!split[989].trim().isEmpty()) {
-PFSIPTY6 = new Double(split[989]);
-}
-if (!split[990].trim().isEmpty()) {
-PFSIPTY7 = new Double(split[990]);
-}
-if (!split[991].trim().isEmpty()) {
-PFCURV1 = new Double(split[991]);
-}
-if (!split[992].trim().isEmpty()) {
-PFCUVB1 = new Double(split[992]);
-}
-if (!split[993].trim().isEmpty()) {
-PFLUMV1 = new Double(split[993]);
-}
-if (!split[994].trim().isEmpty()) {
-PFLUVB1 = new Double(split[994]);
-}
-if (!split[995].trim().isEmpty()) {
-PFINCP1 = new Double(split[995]);
-}
-if (!split[996].trim().isEmpty()) {
-PFINCA1 = new Double(split[996]);
-}
-if (!split[997].trim().isEmpty()) {
-PFDOCS1 = new Double(split[997]);
-}
-if (!split[998].trim().isEmpty()) {
-PFSTMY1 = new Double(split[998]);
-}
-if (!split[999].trim().isEmpty()) {
-PFSTMM1 = new Double(split[999]);
-}
-if (!split[1000].trim().isEmpty()) {
-PFSTAT1 = new Double(split[1000]);
-}
-if (!split[1001].trim().isEmpty()) {
-PFTYP2 = new Double(split[1001]);
-}
-if (!split[1002].trim().isEmpty()) {
-PFOCTY2 = new Double(split[1002]);
-}
-if (!split[1003].trim().isEmpty()) {
-PFLUM2 = new Double(split[1003]);
-}
-if (!split[1004].trim().isEmpty()) {
-PFLMV2 = new Double(split[1004]);
-}
-if (!split[1005].trim().isEmpty()) {
-PFLMVB2 = new Double(split[1005]);
-}
-if (!split[1006].trim().isEmpty()) {
-PFLMUS2 = new Double(split[1006]);
-}
-if (!split[1007].trim().isEmpty()) {
-PFLUMALL2 = new Double(split[1007]);
-}
-if (!split[1008].trim().isEmpty()) {
-PFCASH2 = new Double(split[1008]);
-}
-if (!split[1009].trim().isEmpty()) {
-PFANN6 = new Double(split[1009]);
-}
-if (!split[1010].trim().isEmpty()) {
-PFANN7 = new Double(split[1010]);
-}
-if (!split[1011].trim().isEmpty()) {
-PFANN8 = new Double(split[1011]);
-}
-if (!split[1012].trim().isEmpty()) {
-PFANN9 = new Double(split[1012]);
-}
-if (!split[1013].trim().isEmpty()) {
-PFANN10 = new Double(split[1013]);
-}
-if (!split[1014].trim().isEmpty()) {
-PFREM2 = new Double(split[1014]);
-}
-if (!split[1015].trim().isEmpty()) {
-PFANLM2 = new Double(split[1015]);
-}
-if (!split[1016].trim().isEmpty()) {
-PFANEXY2 = new Double(split[1016]);
-}
-if (!split[1017].trim().isEmpty()) {
-PFANEXM2 = new Double(split[1017]);
-}
-if (!split[1018].trim().isEmpty()) {
-PFANJT2 = new Double(split[1018]);
-}
-if (!split[1019].trim().isEmpty()) {
-PFANIF2 = new Double(split[1019]);
-}
-if (!split[1020].trim().isEmpty()) {
-PFANEH2 = new Double(split[1020]);
-}
-if (!split[1021].trim().isEmpty()) {
-PFANGA2 = new Double(split[1021]);
-}
-if (!split[1022].trim().isEmpty()) {
-PFANVI2 = new Double(split[1022]);
-}
-if (!split[1023].trim().isEmpty()) {
-PFANVB2 = new Double(split[1023]);
-}
-if (!split[1024].trim().isEmpty()) {
-PFDRVI2 = new Double(split[1024]);
-}
-if (!split[1025].trim().isEmpty()) {
-PFDRVB2 = new Double(split[1025]);
-}
-if (!split[1026].trim().isEmpty()) {
-PFDRINC2 = new Double(split[1026]);
-}
-if (!split[1027].trim().isEmpty()) {
-PFDRINCB2 = new Double(split[1027]);
-}
-if (!split[1028].trim().isEmpty()) {
-PFPENVI2 = new Double(split[1028]);
-}
-if (!split[1029].trim().isEmpty()) {
-PFPENVB2 = new Double(split[1029]);
-}
-if (!split[1030].trim().isEmpty()) {
-PFFAN6 = new Double(split[1030]);
-}
-if (!split[1031].trim().isEmpty()) {
-PFFAN7 = new Double(split[1031]);
-}
-if (!split[1032].trim().isEmpty()) {
-PFFAN8 = new Double(split[1032]);
-}
-if (!split[1033].trim().isEmpty()) {
-PFFAN9 = new Double(split[1033]);
-}
-if (!split[1034].trim().isEmpty()) {
-PFFAN10 = new Double(split[1034]);
-}
-if (!split[1035].trim().isEmpty()) {
-PFFAWH7 = new Double(split[1035]);
-}
-if (!split[1036].trim().isEmpty()) {
-PFFAWH8 = new Double(split[1036]);
-}
-if (!split[1037].trim().isEmpty()) {
-PFFAWH9 = new Double(split[1037]);
-}
-if (!split[1038].trim().isEmpty()) {
-PFFAWH10 = new Double(split[1038]);
-}
-if (!split[1039].trim().isEmpty()) {
-PFFAWH11 = new Double(split[1039]);
-}
-if (!split[1040].trim().isEmpty()) {
-PFFAWH12 = new Double(split[1040]);
-}
-if (!split[1041].trim().isEmpty()) {
-PFFAAG2 = new Double(split[1041]);
-}
-if (!split[1042].trim().isEmpty()) {
-PFREC2 = new Double(split[1042]);
-}
-if (!split[1043].trim().isEmpty()) {
-PFDRAW2 = new Double(split[1043]);
-}
-if (!split[1044].trim().isEmpty()) {
-PFDDV2 = new Double(split[1044]);
-}
-if (!split[1045].trim().isEmpty()) {
-PFDDVB2 = new Double(split[1045]);
-}
-if (!split[1046].trim().isEmpty()) {
-PFBEG2 = new Double(split[1046]);
-}
-if (!split[1047].trim().isEmpty()) {
-PFEND2 = new Double(split[1047]);
-}
-if (!split[1048].trim().isEmpty()) {
-PFSIPTY8 = new Double(split[1048]);
-}
-if (!split[1049].trim().isEmpty()) {
-PFSIPTY9 = new Double(split[1049]);
-}
-if (!split[1050].trim().isEmpty()) {
-PFSIPTY10 = new Double(split[1050]);
-}
-if (!split[1051].trim().isEmpty()) {
-PFSIPTY11 = new Double(split[1051]);
-}
-if (!split[1052].trim().isEmpty()) {
-PFSIPTY12 = new Double(split[1052]);
-}
-if (!split[1053].trim().isEmpty()) {
-PFSIPTY13 = new Double(split[1053]);
-}
-if (!split[1054].trim().isEmpty()) {
-PFSIPTY14 = new Double(split[1054]);
-}
-if (!split[1055].trim().isEmpty()) {
-PFCURV2 = new Double(split[1055]);
-}
-if (!split[1056].trim().isEmpty()) {
-PFCUVB2 = new Double(split[1056]);
-}
-if (!split[1057].trim().isEmpty()) {
-PFLUMV2 = new Double(split[1057]);
-}
-if (!split[1058].trim().isEmpty()) {
-PFLUVB2 = new Double(split[1058]);
-}
-if (!split[1059].trim().isEmpty()) {
-PFINCP2 = new Double(split[1059]);
-}
-if (!split[1060].trim().isEmpty()) {
-PFINCA2 = new Double(split[1060]);
-}
-if (!split[1061].trim().isEmpty()) {
-PFDOCS2 = new Double(split[1061]);
-}
-if (!split[1062].trim().isEmpty()) {
-PFSTMY2 = new Double(split[1062]);
-}
-if (!split[1063].trim().isEmpty()) {
-PFSTMM2 = new Double(split[1063]);
-}
-if (!split[1064].trim().isEmpty()) {
-PFSTAT2 = new Double(split[1064]);
-}
-if (!split[1065].trim().isEmpty()) {
-PFTYP3 = new Double(split[1065]);
-}
-if (!split[1066].trim().isEmpty()) {
-PFOCTY3 = new Double(split[1066]);
-}
-if (!split[1067].trim().isEmpty()) {
-PFLUM3 = new Double(split[1067]);
-}
-if (!split[1068].trim().isEmpty()) {
-PFLMV3 = new Double(split[1068]);
-}
-if (!split[1069].trim().isEmpty()) {
-PFLMVB3 = new Double(split[1069]);
-}
-if (!split[1070].trim().isEmpty()) {
-PFLMUS3 = new Double(split[1070]);
-}
-if (!split[1071].trim().isEmpty()) {
-PFLUMALL3 = new Double(split[1071]);
-}
-if (!split[1072].trim().isEmpty()) {
-PFCASH3 = new Double(split[1072]);
-}
-if (!split[1073].trim().isEmpty()) {
-PFANN11 = new Double(split[1073]);
-}
-if (!split[1074].trim().isEmpty()) {
-PFANN12 = new Double(split[1074]);
-}
-if (!split[1075].trim().isEmpty()) {
-PFANN13 = new Double(split[1075]);
-}
-if (!split[1076].trim().isEmpty()) {
-PFANN14 = new Double(split[1076]);
-}
-if (!split[1077].trim().isEmpty()) {
-PFANN15 = new Double(split[1077]);
-}
-if (!split[1078].trim().isEmpty()) {
-PFREM3 = new Double(split[1078]);
-}
-if (!split[1079].trim().isEmpty()) {
-PFANLM3 = new Double(split[1079]);
-}
-if (!split[1080].trim().isEmpty()) {
-PFANEXY3 = new Double(split[1080]);
-}
-if (!split[1081].trim().isEmpty()) {
-PFANEXM3 = new Double(split[1081]);
-}
-if (!split[1082].trim().isEmpty()) {
-PFANJT3 = new Double(split[1082]);
-}
-if (!split[1083].trim().isEmpty()) {
-PFANIF3 = new Double(split[1083]);
-}
-if (!split[1084].trim().isEmpty()) {
-PFANEH3 = new Double(split[1084]);
-}
-if (!split[1085].trim().isEmpty()) {
-PFANGA3 = new Double(split[1085]);
-}
-if (!split[1086].trim().isEmpty()) {
-PFANVI3 = new Double(split[1086]);
-}
-if (!split[1087].trim().isEmpty()) {
-PFANVB3 = new Double(split[1087]);
-}
-if (!split[1088].trim().isEmpty()) {
-PFDRVI3 = new Double(split[1088]);
-}
-if (!split[1089].trim().isEmpty()) {
-PFDRVB3 = new Double(split[1089]);
-}
-if (!split[1090].trim().isEmpty()) {
-PFDRINC3 = new Double(split[1090]);
-}
-if (!split[1091].trim().isEmpty()) {
-PFDRINCB3 = new Double(split[1091]);
-}
-if (!split[1092].trim().isEmpty()) {
-PFPENVI3 = new Double(split[1092]);
-}
-if (!split[1093].trim().isEmpty()) {
-PFPENVB3 = new Double(split[1093]);
-}
-if (!split[1094].trim().isEmpty()) {
-PFFAN11 = new Double(split[1094]);
-}
-if (!split[1095].trim().isEmpty()) {
-PFFAN12 = new Double(split[1095]);
-}
-if (!split[1096].trim().isEmpty()) {
-PFFAN13 = new Double(split[1096]);
-}
-if (!split[1097].trim().isEmpty()) {
-PFFAN14 = new Double(split[1097]);
-}
-if (!split[1098].trim().isEmpty()) {
-PFFAN15 = new Double(split[1098]);
-}
-if (!split[1099].trim().isEmpty()) {
-PFFAWH13 = new Double(split[1099]);
-}
-if (!split[1100].trim().isEmpty()) {
-PFFAWH14 = new Double(split[1100]);
-}
-if (!split[1101].trim().isEmpty()) {
-PFFAWH15 = new Double(split[1101]);
-}
-if (!split[1102].trim().isEmpty()) {
-PFFAWH16 = new Double(split[1102]);
-}
-if (!split[1103].trim().isEmpty()) {
-PFFAWH17 = new Double(split[1103]);
-}
-if (!split[1104].trim().isEmpty()) {
-PFFAWH18 = new Double(split[1104]);
-}
-if (!split[1105].trim().isEmpty()) {
-PFFAAG3 = new Double(split[1105]);
-}
-if (!split[1106].trim().isEmpty()) {
-PFREC3 = new Double(split[1106]);
-}
-if (!split[1107].trim().isEmpty()) {
-PFDRA___W3 = new Double(split[1107]);
-}
-if (!split[1108].trim().isEmpty()) {
-PFDDV3 = new Double(split[1108]);
-}
-if (!split[1109].trim().isEmpty()) {
-PFDDVB3 = new Double(split[1109]);
-}
-if (!split[1110].trim().isEmpty()) {
-PFBEG3 = new Double(split[1110]);
-}
-if (!split[1111].trim().isEmpty()) {
-PFEND3 = new Double(split[1111]);
-}
-if (!split[1112].trim().isEmpty()) {
-PFSIPTY15 = new Double(split[1112]);
-}
-if (!split[1113].trim().isEmpty()) {
-PFSIPTY16 = new Double(split[1113]);
-}
-if (!split[1114].trim().isEmpty()) {
-PFSIPTY17 = new Double(split[1114]);
-}
-if (!split[1115].trim().isEmpty()) {
-PFSIPTY18 = new Double(split[1115]);
-}
-if (!split[1116].trim().isEmpty()) {
-PFSIPTY19 = new Double(split[1116]);
-}
-if (!split[1117].trim().isEmpty()) {
-PFSIPTY20 = new Double(split[1117]);
-}
-if (!split[1118].trim().isEmpty()) {
-PFSIPTY21 = new Double(split[1118]);
-}
-if (!split[1119].trim().isEmpty()) {
-PFCURV3 = new Double(split[1119]);
-}
-if (!split[1120].trim().isEmpty()) {
-PFCUVB3 = new Double(split[1120]);
-}
-if (!split[1121].trim().isEmpty()) {
-PFLUMV3 = new Double(split[1121]);
-}
-if (!split[1122].trim().isEmpty()) {
-PFLUVB3 = new Double(split[1122]);
-}
-if (!split[1123].trim().isEmpty()) {
-PFINCP3 = new Double(split[1123]);
-}
-if (!split[1124].trim().isEmpty()) {
-PFINCA3 = new Double(split[1124]);
-}
-if (!split[1125].trim().isEmpty()) {
-PFDOCS3 = new Double(split[1125]);
-}
-if (!split[1126].trim().isEmpty()) {
-PFSTMY3 = new Double(split[1126]);
-}
-if (!split[1127].trim().isEmpty()) {
-PFSTMM3 = new Double(split[1127]);
-}
-if (!split[1128].trim().isEmpty()) {
-PFSTAT3 = new Double(split[1128]);
-}
-if (!split[1129].trim().isEmpty()) {
-PFTYP4 = new Double(split[1129]);
-}
-if (!split[1130].trim().isEmpty()) {
-PFOCTY4 = new Double(split[1130]);
-}
-if (!split[1131].trim().isEmpty()) {
-PFLUM4 = new Double(split[1131]);
-}
-if (!split[1132].trim().isEmpty()) {
-PFLMV4 = new Double(split[1132]);
-}
-if (!split[1133].trim().isEmpty()) {
-PFLMVB4 = new Double(split[1133]);
-}
-if (!split[1134].trim().isEmpty()) {
-PFLMUS4 = new Double(split[1134]);
-}
-if (!split[1135].trim().isEmpty()) {
-PFLUMALL4 = new Double(split[1135]);
-}
-if (!split[1136].trim().isEmpty()) {
-PFCASH4 = new Double(split[1136]);
-}
-if (!split[1137].trim().isEmpty()) {
-PFANN16 = new Double(split[1137]);
-}
-if (!split[1138].trim().isEmpty()) {
-PFANN17 = new Double(split[1138]);
-}
-if (!split[1139].trim().isEmpty()) {
-PFANN18 = new Double(split[1139]);
-}
-if (!split[1140].trim().isEmpty()) {
-PFANN19 = new Double(split[1140]);
-}
-if (!split[1141].trim().isEmpty()) {
-PFANN20 = new Double(split[1141]);
-}
-if (!split[1142].trim().isEmpty()) {
-PFREM4 = new Double(split[1142]);
-}
-if (!split[1143].trim().isEmpty()) {
-PFANLM4 = new Double(split[1143]);
-}
-if (!split[1144].trim().isEmpty()) {
-PFANEXY4 = new Double(split[1144]);
-}
-if (!split[1145].trim().isEmpty()) {
-PFANEXM4 = new Double(split[1145]);
-}
-if (!split[1146].trim().isEmpty()) {
-PFANJT4 = new Double(split[1146]);
-}
-if (!split[1147].trim().isEmpty()) {
-PFANIF4 = new Double(split[1147]);
-}
-if (!split[1148].trim().isEmpty()) {
-PFANEH4 = new Double(split[1148]);
-}
-if (!split[1149].trim().isEmpty()) {
-PFANGA4 = new Double(split[1149]);
-}
-if (!split[1150].trim().isEmpty()) {
-PFANVI4 = new Double(split[1150]);
-}
-if (!split[1151].trim().isEmpty()) {
-PFANVB4 = new Double(split[1151]);
-}
-if (!split[1152].trim().isEmpty()) {
-PFDRVI4 = new Double(split[1152]);
-}
-if (!split[1153].trim().isEmpty()) {
-PFDRVB4 = new Double(split[1153]);
-}
-if (!split[1154].trim().isEmpty()) {
-PFDRINC4 = new Double(split[1154]);
-}
-if (!split[1155].trim().isEmpty()) {
-PFDRINCB4 = new Double(split[1155]);
-}
-if (!split[1156].trim().isEmpty()) {
-PFPENVI4 = new Double(split[1156]);
-}
-if (!split[1157].trim().isEmpty()) {
-PFPENVB4 = new Double(split[1157]);
-}
-if (!split[1158].trim().isEmpty()) {
-PFFAN16 = new Double(split[1158]);
-}
-if (!split[1159].trim().isEmpty()) {
-PFFAN17 = new Double(split[1159]);
-}
-if (!split[1160].trim().isEmpty()) {
-PFFAN18 = new Double(split[1160]);
-}
-if (!split[1161].trim().isEmpty()) {
-PFFAN19 = new Double(split[1161]);
-}
-if (!split[1162].trim().isEmpty()) {
-PFFAN20 = new Double(split[1162]);
-}
-if (!split[1163].trim().isEmpty()) {
-PFFAWH19 = new Double(split[1163]);
-}
-if (!split[1164].trim().isEmpty()) {
-PFFAWH20 = new Double(split[1164]);
-}
-if (!split[1165].trim().isEmpty()) {
-PFFAWH21 = new Double(split[1165]);
-}
-if (!split[1166].trim().isEmpty()) {
-PFFAWH22 = new Double(split[1166]);
-}
-if (!split[1167].trim().isEmpty()) {
-PFFAWH23 = new Double(split[1167]);
-}
-if (!split[1168].trim().isEmpty()) {
-PFFAWH24 = new Double(split[1168]);
-}
-if (!split[1169].trim().isEmpty()) {
-PFFAAG4 = new Double(split[1169]);
-}
-if (!split[1170].trim().isEmpty()) {
-PFREC4 = new Double(split[1170]);
-}
-if (!split[1171].trim().isEmpty()) {
-PFDRAW4 = new Double(split[1171]);
-}
-if (!split[1172].trim().isEmpty()) {
-PFDDV4 = new Double(split[1172]);
-}
-if (!split[1173].trim().isEmpty()) {
-PFDDVB4 = new Double(split[1173]);
-}
-if (!split[1174].trim().isEmpty()) {
-PFBEG4 = new Double(split[1174]);
-}
-if (!split[1175].trim().isEmpty()) {
-PFEND4 = new Double(split[1175]);
-}
-if (!split[1176].trim().isEmpty()) {
-PFSIPTY22 = new Double(split[1176]);
-}
-if (!split[1177].trim().isEmpty()) {
-PFSIPTY23 = new Double(split[1177]);
-}
-if (!split[1178].trim().isEmpty()) {
-PFSIPTY24 = new Double(split[1178]);
-}
-if (!split[1179].trim().isEmpty()) {
-PFSIPTY25 = new Double(split[1179]);
-}
-if (!split[1180].trim().isEmpty()) {
-PFSIPTY26 = new Double(split[1180]);
-}
-if (!split[1181].trim().isEmpty()) {
-PFSIPTY27 = new Double(split[1181]);
-}
-if (!split[1182].trim().isEmpty()) {
-PFSIPTY28 = new Double(split[1182]);
-}
-if (!split[1183].trim().isEmpty()) {
-PFCURV4 = new Double(split[1183]);
-}
-if (!split[1184].trim().isEmpty()) {
-PFCUVB4 = new Double(split[1184]);
-}
-if (!split[1185].trim().isEmpty()) {
-PFLUMV4 = new Double(split[1185]);
-}
-if (!split[1186].trim().isEmpty()) {
-PFLUVB4 = new Double(split[1186]);
-}
-if (!split[1187].trim().isEmpty()) {
-PFINCP4 = new Double(split[1187]);
-}
-if (!split[1188].trim().isEmpty()) {
-PFINCA4 = new Double(split[1188]);
-}
-if (!split[1189].trim().isEmpty()) {
-PFDOCS4 = new Double(split[1189]);
-}
-if (!split[1190].trim().isEmpty()) {
-PFSTMY4 = new Double(split[1190]);
-}
-if (!split[1191].trim().isEmpty()) {
-PFSTMM4 = new Double(split[1191]);
-}
-if (!split[1192].trim().isEmpty()) {
-PFSTAT4 = new Double(split[1192]);
-}
-if (!split[1193].trim().isEmpty()) {
-PFTYP5 = new Double(split[1193]);
-}
-if (!split[1194].trim().isEmpty()) {
-PFOCTY5 = new Double(split[1194]);
-}
-if (!split[1195].trim().isEmpty()) {
-PFLUM5 = new Double(split[1195]);
-}
-if (!split[1196].trim().isEmpty()) {
-PFLMV5 = new Double(split[1196]);
-}
-if (!split[1197].trim().isEmpty()) {
-PFLMVB5 = new Double(split[1197]);
-}
-if (!split[1198].trim().isEmpty()) {
-PFLMUS5 = new Double(split[1198]);
-}
-if (!split[1199].trim().isEmpty()) {
-PFLUMALL5 = new Double(split[1199]);
-}
-if (!split[1200].trim().isEmpty()) {
-PFCASH5 = new Double(split[1200]);
-}
-if (!split[1201].trim().isEmpty()) {
-PFANN21 = new Double(split[1201]);
-}
-if (!split[1202].trim().isEmpty()) {
-PFANN22 = new Double(split[1202]);
-}
-if (!split[1203].trim().isEmpty()) {
-PFANN23 = new Double(split[1203]);
-}
-if (!split[1204].trim().isEmpty()) {
-PFANN24 = new Double(split[1204]);
-}
-if (!split[1205].trim().isEmpty()) {
-PFANN25 = new Double(split[1205]);
-}
-if (!split[1206].trim().isEmpty()) {
-PFREM5 = new Double(split[1206]);
-}
-if (!split[1207].trim().isEmpty()) {
-PFANLM5 = new Double(split[1207]);
-}
-if (!split[1208].trim().isEmpty()) {
-PFANEXY5 = new Double(split[1208]);
-}
-if (!split[1209].trim().isEmpty()) {
-PFANEXM5 = new Double(split[1209]);
-}
-if (!split[1210].trim().isEmpty()) {
-PFANJT5 = new Double(split[1210]);
-}
-if (!split[1211].trim().isEmpty()) {
-PFANIF5 = new Double(split[1211]);
-}
-if (!split[1212].trim().isEmpty()) {
-PFANEH5 = new Double(split[1212]);
-}
-if (!split[1213].trim().isEmpty()) {
-PFANGA5 = new Double(split[1213]);
-}
-if (!split[1214].trim().isEmpty()) {
-PFANVI5 = new Double(split[1214]);
-}
-if (!split[1215].trim().isEmpty()) {
-PFANVB5 = new Double(split[1215]);
-}
-if (!split[1216].trim().isEmpty()) {
-PFDRVI5 = new Double(split[1216]);
-}
-if (!split[1217].trim().isEmpty()) {
-PFDRVB5 = new Double(split[1217]);
-}
-if (!split[1218].trim().isEmpty()) {
-PFDRINC5 = new Double(split[1218]);
-}
-if (!split[1219].trim().isEmpty()) {
-PFDRINCB5 = new Double(split[1219]);
-}
-if (!split[1220].trim().isEmpty()) {
-PFPENVI5 = new Double(split[1220]);
-}
-if (!split[1221].trim().isEmpty()) {
-PFPENVB5 = new Double(split[1221]);
-}
-if (!split[1222].trim().isEmpty()) {
-PFFAN21 = new Double(split[1222]);
-}
-if (!split[1223].trim().isEmpty()) {
-PFFAN22 = new Double(split[1223]);
-}
-if (!split[1224].trim().isEmpty()) {
-PFFAN23 = new Double(split[1224]);
-}
-if (!split[1225].trim().isEmpty()) {
-PFFAN24 = new Double(split[1225]);
-}
-if (!split[1226].trim().isEmpty()) {
-PFFAN25 = new Double(split[1226]);
-}
-if (!split[1227].trim().isEmpty()) {
-PFFAWH25 = new Double(split[1227]);
-}
-if (!split[1228].trim().isEmpty()) {
-PFFAWH26 = new Double(split[1228]);
-}
-if (!split[1229].trim().isEmpty()) {
-PFFAWH27 = new Double(split[1229]);
-}
-if (!split[1230].trim().isEmpty()) {
-PFFAWH28 = new Double(split[1230]);
-}
-if (!split[1231].trim().isEmpty()) {
-PFFAWH29 = new Double(split[1231]);
-}
-if (!split[1232].trim().isEmpty()) {
-PFFAWH30 = new Double(split[1232]);
-}
-if (!split[1233].trim().isEmpty()) {
-PFFAAG5 = new Double(split[1233]);
-}
-if (!split[1234].trim().isEmpty()) {
-PFREC5 = new Double(split[1234]);
-}
-if (!split[1235].trim().isEmpty()) {
-PFDRAW5 = new Double(split[1235]);
-}
-if (!split[1236].trim().isEmpty()) {
-PFDDV5 = new Double(split[1236]);
-}
-if (!split[1237].trim().isEmpty()) {
-PFDDVB5 = new Double(split[1237]);
-}
-if (!split[1238].trim().isEmpty()) {
-PFBEG5 = new Double(split[1238]);
-}
-if (!split[1239].trim().isEmpty()) {
-PFEND5 = new Double(split[1239]);
-}
-if (!split[1240].trim().isEmpty()) {
-PFSIPTY29 = new Double(split[1240]);
-}
-if (!split[1241].trim().isEmpty()) {
-PFSIPTY30 = new Double(split[1241]);
-}
-if (!split[1242].trim().isEmpty()) {
-PFSIPTY31 = new Double(split[1242]);
-}
-if (!split[1243].trim().isEmpty()) {
-PFSIPTY32 = new Double(split[1243]);
-}
-if (!split[1244].trim().isEmpty()) {
-PFSIPTY33 = new Double(split[1244]);
-}
-if (!split[1245].trim().isEmpty()) {
-PFSIPTY34 = new Double(split[1245]);
-}
-if (!split[1246].trim().isEmpty()) {
-PFSIPTY35 = new Double(split[1246]);
-}
-if (!split[1247].trim().isEmpty()) {
-PFCURV5 = new Double(split[1247]);
-}
-if (!split[1248].trim().isEmpty()) {
-PFCUVB5 = new Double(split[1248]);
-}
-if (!split[1249].trim().isEmpty()) {
-PFLUMV5 = new Double(split[1249]);
-}
-if (!split[1250].trim().isEmpty()) {
-PFLUVB5 = new Double(split[1250]);
-}
-if (!split[1251].trim().isEmpty()) {
-PFINCP5 = new Double(split[1251]);
-}
-if (!split[1252].trim().isEmpty()) {
-PFINCA5 = new Double(split[1252]);
-}
-if (!split[1253].trim().isEmpty()) {
-PFDOCS5 = new Double(split[1253]);
-}
-if (!split[1254].trim().isEmpty()) {
-PFSTMY5 = new Double(split[1254]);
-}
-if (!split[1255].trim().isEmpty()) {
-PFSTMM5 = new Double(split[1255]);
-}
-if (!split[1256].trim().isEmpty()) {
-PFSTAT5 = new Double(split[1256]);
-}
-if (!split[1257].trim().isEmpty()) {
-PFTYP6 = new Double(split[1257]);
-}
-if (!split[1258].trim().isEmpty()) {
-PFOCTY6 = new Double(split[1258]);
-}
-if (!split[1259].trim().isEmpty()) {
-PFLUM6 = new Double(split[1259]);
-}
-if (!split[1260].trim().isEmpty()) {
-PFLMV6 = new Double(split[1260]);
-}
-if (!split[1261].trim().isEmpty()) {
-PFLMVB6 = new Double(split[1261]);
-}
-if (!split[1262].trim().isEmpty()) {
-PFLMUS6 = new Double(split[1262]);
-}
-if (!split[1263].trim().isEmpty()) {
-PFLUMALL6 = new Double(split[1263]);
-}
-if (!split[1264].trim().isEmpty()) {
-PFCASH6 = new Double(split[1264]);
-}
-if (!split[1265].trim().isEmpty()) {
-PFANN26 = new Double(split[1265]);
-}
-if (!split[1266].trim().isEmpty()) {
-PFANN27 = new Double(split[1266]);
-}
-if (!split[1267].trim().isEmpty()) {
-PFANN28 = new Double(split[1267]);
-}
-if (!split[1268].trim().isEmpty()) {
-PFANN29 = new Double(split[1268]);
-}
-if (!split[1269].trim().isEmpty()) {
-PFANN30 = new Double(split[1269]);
-}
-if (!split[1270].trim().isEmpty()) {
-PFREM6 = new Double(split[1270]);
-}
-if (!split[1271].trim().isEmpty()) {
-PFANLM6 = new Double(split[1271]);
-}
-if (!split[1272].trim().isEmpty()) {
-PFANEXY6 = new Double(split[1272]);
-}
-if (!split[1273].trim().isEmpty()) {
-PFANEXM6 = new Double(split[1273]);
-}
-if (!split[1274].trim().isEmpty()) {
-PFANJT6 = new Double(split[1274]);
-}
-if (!split[1275].trim().isEmpty()) {
-PFANIF6 = new Double(split[1275]);
-}
-if (!split[1276].trim().isEmpty()) {
-PFANEH6 = new Double(split[1276]);
-}
-if (!split[1277].trim().isEmpty()) {
-PFANGA6 = new Double(split[1277]);
-}
-if (!split[1278].trim().isEmpty()) {
-PFANVI6 = new Double(split[1278]);
-}
-if (!split[1279].trim().isEmpty()) {
-PFANVB6 = new Double(split[1279]);
-}
-if (!split[1280].trim().isEmpty()) {
-PFDRVI6 = new Double(split[1280]);
-}
-if (!split[1281].trim().isEmpty()) {
-PFDRVB6 = new Double(split[1281]);
-}
-if (!split[1282].trim().isEmpty()) {
-PFDRINC6 = new Double(split[1282]);
-}
-if (!split[1283].trim().isEmpty()) {
-PFDRINCB6 = new Double(split[1283]);
-}
-if (!split[1284].trim().isEmpty()) {
-PFPENVI6 = new Double(split[1284]);
-}
-if (!split[1285].trim().isEmpty()) {
-PFPENVB6 = new Double(split[1285]);
-}
-if (!split[1286].trim().isEmpty()) {
-PFFAN26 = new Double(split[1286]);
-}
-if (!split[1287].trim().isEmpty()) {
-PFFAN27 = new Double(split[1287]);
-}
-if (!split[1288].trim().isEmpty()) {
-PFFAN28 = new Double(split[1288]);
-}
-if (!split[1289].trim().isEmpty()) {
-PFFAN29 = new Double(split[1289]);
-}
-if (!split[1290].trim().isEmpty()) {
-PFFAN30 = new Double(split[1290]);
-}
-if (!split[1291].trim().isEmpty()) {
-PFFAWH31 = new Double(split[1291]);
-}
-if (!split[1292].trim().isEmpty()) {
-PFFAWH32 = new Double(split[1292]);
-}
-if (!split[1293].trim().isEmpty()) {
-PFFAWH33 = new Double(split[1293]);
-}
-if (!split[1294].trim().isEmpty()) {
-PFFAWH34 = new Double(split[1294]);
-}
-if (!split[1295].trim().isEmpty()) {
-PFFAWH35 = new Double(split[1295]);
-}
-if (!split[1296].trim().isEmpty()) {
-PFFAWH36 = new Double(split[1296]);
-}
-if (!split[1297].trim().isEmpty()) {
-PFFAAG6 = new Double(split[1297]);
-}
-if (!split[1298].trim().isEmpty()) {
-PFREC6 = new Double(split[1298]);
-}
-if (!split[1299].trim().isEmpty()) {
-PFDRAW6 = new Double(split[1299]);
-}
-if (!split[1300].trim().isEmpty()) {
-PFDDV6 = new Double(split[1300]);
-}
-if (!split[1301].trim().isEmpty()) {
-PFDDVB6 = new Double(split[1301]);
-}
-if (!split[1302].trim().isEmpty()) {
-PFBEG6 = new Double(split[1302]);
-}
-if (!split[1303].trim().isEmpty()) {
-PFEND6 = new Double(split[1303]);
-}
-if (!split[1304].trim().isEmpty()) {
-PFSIPTY36 = new Double(split[1304]);
-}
-if (!split[1305].trim().isEmpty()) {
-PFSIPTY37 = new Double(split[1305]);
-}
-if (!split[1306].trim().isEmpty()) {
-PFSIPTY38 = new Double(split[1306]);
-}
-if (!split[1307].trim().isEmpty()) {
-PFSIPTY39 = new Double(split[1307]);
-}
-if (!split[1308].trim().isEmpty()) {
-PFSIPTY40 = new Double(split[1308]);
-}
-if (!split[1309].trim().isEmpty()) {
-PFSIPTY41 = new Double(split[1309]);
-}
-if (!split[1310].trim().isEmpty()) {
-PFSIPTY42 = new Double(split[1310]);
-}
-if (!split[1311].trim().isEmpty()) {
-PFCURV6 = new Double(split[1311]);
-}
-if (!split[1312].trim().isEmpty()) {
-PFCUVB6 = new Double(split[1312]);
-}
-if (!split[1313].trim().isEmpty()) {
-PFLUMV6 = new Double(split[1313]);
-}
-if (!split[1314].trim().isEmpty()) {
-PFLUVB6 = new Double(split[1314]);
-}
-if (!split[1315].trim().isEmpty()) {
-PFINCP6 = new Double(split[1315]);
-}
-if (!split[1316].trim().isEmpty()) {
-PFINCA6 = new Double(split[1316]);
-}
-if (!split[1317].trim().isEmpty()) {
-PFDOCS6 = new Double(split[1317]);
-}
-if (!split[1318].trim().isEmpty()) {
-PFSTMY6 = new Double(split[1318]);
-}
-if (!split[1319].trim().isEmpty()) {
-PFSTMM6 = new Double(split[1319]);
-}
-if (!split[1320].trim().isEmpty()) {
-PFSTAT6 = new Double(split[1320]);
-}
-if (!split[1321].trim().isEmpty()) {
-PWID = new Double(split[1321]);
-}
-if (!split[1322].trim().isEmpty()) {
-PWIDFUT = new Double(split[1322]);
-}
-if (!split[1323].trim().isEmpty()) {
-PWLUM = new Double(split[1323]);
-}
-if (!split[1324].trim().isEmpty()) {
-PWLUVAL = new Double(split[1324]);
-}
-if (!split[1325].trim().isEmpty()) {
-PWEXPH = new Double(split[1325]);
-}
-if (!split[1326].trim().isEmpty()) {
-PWEXPA = new Double(split[1326]);
-}
-if (!split[1327].trim().isEmpty()) {
-PSPSE = new Double(split[1327]);
-}
-if (!split[1328].trim().isEmpty()) {
-PSPLUM = new Double(split[1328]);
-}
-if (!split[1329].trim().isEmpty()) {
-PSPLUVAL = new Double(split[1329]);
-}
-if (!split[1330].trim().isEmpty()) {
-PSPEXPH = new Double(split[1330]);
-}
-if (!split[1331].trim().isEmpty()) {
-PSPEXPA = new Double(split[1331]);
-}
-if (!split[1332].trim().isEmpty()) {
-PWACCU = new Double(split[1332]);
-}
-if (!split[1333].trim().isEmpty()) {
-OPENS01 = new Double(split[1333]);
-}
-if (!split[1334].trim().isEmpty()) {
-OPENS02 = new Double(split[1334]);
-}
-if (!split[1335].trim().isEmpty()) {
-OPENS03 = new Double(split[1335]);
-}
-if (!split[1336].trim().isEmpty()) {
-OPENS04 = new Double(split[1336]);
-}
-if (!split[1337].trim().isEmpty()) {
-OPENS05 = new Double(split[1337]);
-}
-if (!split[1338].trim().isEmpty()) {
-OPENS06 = new Double(split[1338]);
-}
-if (!split[1339].trim().isEmpty()) {
-OPENS07 = new Double(split[1339]);
-}
-if (!split[1340].trim().isEmpty()) {
-OPENS08 = new Double(split[1340]);
-}
-if (!split[1341].trim().isEmpty()) {
-OPENS09 = new Double(split[1341]);
-}
-if (!split[1342].trim().isEmpty()) {
-OPENS10 = new Double(split[1342]);
-}
-if (!split[1343].trim().isEmpty()) {
-OPENS11 = new Double(split[1343]);
-}
-if (!split[1344].trim().isEmpty()) {
-OPENS12 = new Double(split[1344]);
-}
-if (!split[1345].trim().isEmpty()) {
-OPENS13 = new Double(split[1345]);
-}
-if (!split[1346].trim().isEmpty()) {
-OPENS14 = new Double(split[1346]);
-}
-if (!split[1347].trim().isEmpty()) {
-OPENS15 = new Double(split[1347]);
-}
-if (!split[1348].trim().isEmpty()) {
-OEXPINC01 = new Double(split[1348]);
-}
-if (!split[1349].trim().isEmpty()) {
-OEXPINC02 = new Double(split[1349]);
-}
-if (!split[1350].trim().isEmpty()) {
-OEXPINC03 = new Double(split[1350]);
-}
-if (!split[1351].trim().isEmpty()) {
-OEXPINC04 = new Double(split[1351]);
-}
-if (!split[1352].trim().isEmpty()) {
-OEXPINC05 = new Double(split[1352]);
-}
-if (!split[1353].trim().isEmpty()) {
-OEXPINC06 = new Double(split[1353]);
-}
-if (!split[1354].trim().isEmpty()) {
-OEXPINC07 = new Double(split[1354]);
-}
-if (!split[1355].trim().isEmpty()) {
-OEXPINC08 = new Double(split[1355]);
-}
-if (!split[1356].trim().isEmpty()) {
-OEXPINC09 = new Double(split[1356]);
-}
-if (!split[1357].trim().isEmpty()) {
-OEXPINC10 = new Double(split[1357]);
-}
-if (!split[1358].trim().isEmpty()) {
-OEXPINC11 = new Double(split[1358]);
-}
-if (!split[1359].trim().isEmpty()) {
-OEXPINC12 = new Double(split[1359]);
-}
-if (!split[1360].trim().isEmpty()) {
-OEXPINC13 = new Double(split[1360]);
-}
-if (!split[1361].trim().isEmpty()) {
-OEXPINC14 = new Double(split[1361]);
-}
-if (!split[1362].trim().isEmpty()) {
-OEXPINC15 = new Double(split[1362]);
-}
-if (!split[1363].trim().isEmpty()) {
-OLARGE = new Double(split[1363]);
-}
-if (!split[1364].trim().isEmpty()) {
-OPENSAV = new Double(split[1364]);
-}
-if (!split[1365].trim().isEmpty()) {
-OSTANDL = new Double(split[1365]);
-}
-if (!split[1366].trim().isEmpty()) {
-FINVTY01 = new Double(split[1366]);
-}
-if (!split[1367].trim().isEmpty()) {
-FINVTY02 = new Double(split[1367]);
-}
-if (!split[1368].trim().isEmpty()) {
-FINVTY03 = new Double(split[1368]);
-}
-if (!split[1369].trim().isEmpty()) {
-FINVTY04 = new Double(split[1369]);
-}
-if (!split[1370].trim().isEmpty()) {
-FINVTY05 = new Double(split[1370]);
-}
-if (!split[1371].trim().isEmpty()) {
-FINVTY06 = new Double(split[1371]);
-}
-if (!split[1372].trim().isEmpty()) {
-FINVTY07 = new Double(split[1372]);
-}
-if (!split[1373].trim().isEmpty()) {
-FINVTY08 = new Double(split[1373]);
-}
-if (!split[1374].trim().isEmpty()) {
-FINVTY09 = new Double(split[1374]);
-}
-if (!split[1375].trim().isEmpty()) {
-FINVTY10 = new Double(split[1375]);
-}
-if (!split[1376].trim().isEmpty()) {
-FINVTY11 = new Double(split[1376]);
-}
-if (!split[1377].trim().isEmpty()) {
-DCOSHV1 = new Double(split[1377]);
-}
-if (!split[1378].trim().isEmpty()) {
-DCOSHVB1 = new Double(split[1378]);
-}
-if (!split[1379].trim().isEmpty()) {
-DCOSHV2 = new Double(split[1379]);
-}
-if (!split[1380].trim().isEmpty()) {
-DCOSHVB2 = new Double(split[1380]);
-}
-if (!split[1381].trim().isEmpty()) {
-DCOSHV3 = new Double(split[1381]);
-}
-if (!split[1382].trim().isEmpty()) {
-DCOSHVB3 = new Double(split[1382]);
-}
-if (!split[1383].trim().isEmpty()) {
-DCOSHV4 = new Double(split[1383]);
-}
-if (!split[1384].trim().isEmpty()) {
-DCOSHVB4 = new Double(split[1384]);
-}
-if (!split[1385].trim().isEmpty()) {
-DCOSHV5 = new Double(split[1385]);
-}
-if (!split[1386].trim().isEmpty()) {
-DCOSHVB5 = new Double(split[1386]);
-}
-if (!split[1387].trim().isEmpty()) {
-DCOINV1 = new Double(split[1387]);
-}
-if (!split[1388].trim().isEmpty()) {
-DCOINVB1 = new Double(split[1388]);
-}
-if (!split[1389].trim().isEmpty()) {
-DCOINV2 = new Double(split[1389]);
-}
-if (!split[1390].trim().isEmpty()) {
-DCOINVB2 = new Double(split[1390]);
-}
-if (!split[1391].trim().isEmpty()) {
-DCOINV3 = new Double(split[1391]);
-}
-if (!split[1392].trim().isEmpty()) {
-DCOINVB3 = new Double(split[1392]);
-}
-if (!split[1393].trim().isEmpty()) {
-DCOINV4 = new Double(split[1393]);
-}
-if (!split[1394].trim().isEmpty()) {
-DCOINVB4 = new Double(split[1394]);
-}
-if (!split[1395].trim().isEmpty()) {
-DCOINV5 = new Double(split[1395]);
-}
-if (!split[1396].trim().isEmpty()) {
-DCOINVB5 = new Double(split[1396]);
-}
-if (!split[1397].trim().isEmpty()) {
-FCACSH = new Double(split[1397]);
-}
-if (!split[1398].trim().isEmpty()) {
-FCNUMSH = new Double(split[1398]);
-}
-if (!split[1399].trim().isEmpty()) {
-FCNUMIN = new Double(split[1399]);
-}
-if (!split[1400].trim().isEmpty()) {
-FCSUPPR = new Double(split[1400]);
-}
-if (!split[1401].trim().isEmpty()) {
-FCOVDSH = new Double(split[1401]);
-}
-if (!split[1402].trim().isEmpty()) {
-FCOVNSH = new Double(split[1402]);
-}
-if (!split[1403].trim().isEmpty()) {
-FCSHVAL = new Double(split[1403]);
-}
-if (!split[1404].trim().isEmpty()) {
-FCSHVLB = new Double(split[1404]);
-}
-if (!split[1405].trim().isEmpty()) {
-FCOVDIN = new Double(split[1405]);
-}
-if (!split[1406].trim().isEmpty()) {
-FCOVNIN = new Double(split[1406]);
-}
-if (!split[1407].trim().isEmpty()) {
-FCOVDIF = new Double(split[1407]);
-}
-if (!split[1408].trim().isEmpty()) {
-FCINVAL = new Double(split[1408]);
-}
-if (!split[1409].trim().isEmpty()) {
-FCINVLB = new Double(split[1409]);
-}
-if (!split[1410].trim().isEmpty()) {
-FSACSH = new Double(split[1410]);
-}
-if (!split[1411].trim().isEmpty()) {
-FSNUMSH = new Double(split[1411]);
-}
-if (!split[1412].trim().isEmpty()) {
-FSNUMIN = new Double(split[1412]);
-}
-if (!split[1413].trim().isEmpty()) {
-FSSUPPR = new Double(split[1413]);
-}
-if (!split[1414].trim().isEmpty()) {
-FSTYPSH1 = new Double(split[1414]);
-}
-if (!split[1415].trim().isEmpty()) {
-FSTYPSH2 = new Double(split[1415]);
-}
-if (!split[1416].trim().isEmpty()) {
-FSTYPSH3 = new Double(split[1416]);
-}
-if (!split[1417].trim().isEmpty()) {
-FSTYPSH4 = new Double(split[1417]);
-}
-if (!split[1418].trim().isEmpty()) {
-FSTYPSH5 = new Double(split[1418]);
-}
-if (!split[1419].trim().isEmpty()) {
-FSTYPIN1 = new Double(split[1419]);
-}
-if (!split[1420].trim().isEmpty()) {
-FSTYPIN2 = new Double(split[1420]);
-}
-if (!split[1421].trim().isEmpty()) {
-FSTYPIN3 = new Double(split[1421]);
-}
-if (!split[1422].trim().isEmpty()) {
-FSTYPIN4 = new Double(split[1422]);
-}
-if (!split[1423].trim().isEmpty()) {
-FSTYPIN5 = new Double(split[1423]);
-}
-if (!split[1424].trim().isEmpty()) {
-FSSHVAL = new Double(split[1424]);
-}
-if (!split[1425].trim().isEmpty()) {
-FSSHVLB = new Double(split[1425]);
-}
-if (!split[1426].trim().isEmpty()) {
-FSINVAL = new Double(split[1426]);
-}
-if (!split[1427].trim().isEmpty()) {
-FSINVLB = new Double(split[1427]);
-}
-if (!split[1428].trim().isEmpty()) {
-FSOSHAV = new Double(split[1428]);
-}
-if (!split[1429].trim().isEmpty()) {
-FSOSVLB = new Double(split[1429]);
-}
-if (!split[1430].trim().isEmpty()) {
-FISA1 = new Double(split[1430]);
-}
-if (!split[1431].trim().isEmpty()) {
-FISA2 = new Double(split[1431]);
-}
-if (!split[1432].trim().isEmpty()) {
-FCISAV = new Double(split[1432]);
-}
-if (!split[1433].trim().isEmpty()) {
-FCISAB = new Double(split[1433]);
-}
-if (!split[1434].trim().isEmpty()) {
-FIISAV = new Double(split[1434]);
-}
-if (!split[1435].trim().isEmpty()) {
-FIISAB = new Double(split[1435]);
-}
-if (!split[1436].trim().isEmpty()) {
-FKISAV = new Double(split[1436]);
-}
-if (!split[1437].trim().isEmpty()) {
-FKISAB = new Double(split[1437]);
-}
-if (!split[1438].trim().isEmpty()) {
-NEWFCMX = new Double(split[1438]);
-}
-if (!split[1439].trim().isEmpty()) {
-FCISAWD = new Double(split[1439]);
-}
-if (!split[1440].trim().isEmpty()) {
-FCIWNUM = new Double(split[1440]);
-}
-if (!split[1441].trim().isEmpty()) {
-FCIWDAB = new Double(split[1441]);
-}
-if (!split[1442].trim().isEmpty()) {
-FCISCE = new Double(split[1442]);
-}
-if (!split[1443].trim().isEmpty()) {
-FBONDTY1 = new Double(split[1443]);
-}
-if (!split[1444].trim().isEmpty()) {
-FBONDTY2 = new Double(split[1444]);
-}
-if (!split[1445].trim().isEmpty()) {
-FBONDTY3 = new Double(split[1445]);
-}
-if (!split[1446].trim().isEmpty()) {
-FBONDV = new Double(split[1446]);
-}
-if (!split[1447].trim().isEmpty()) {
-FBONDVB = new Double(split[1447]);
-}
-if (!split[1448].trim().isEmpty()) {
-FCOLLV = new Double(split[1448]);
-}
-if (!split[1449].trim().isEmpty()) {
-FCOLLVB = new Double(split[1449]);
-}
-if (!split[1450].trim().isEmpty()) {
-FESHA = new Double(split[1450]);
-}
-if (!split[1451].trim().isEmpty()) {
-FESHAV = new Double(split[1451]);
-}
-if (!split[1452].trim().isEmpty()) {
-FESHVB = new Double(split[1452]);
-}
-if (!split[1453].trim().isEmpty()) {
-FEOPTV = new Double(split[1453]);
-}
-if (!split[1454].trim().isEmpty()) {
-FEOPVB = new Double(split[1454]);
-}
-if (!split[1455].trim().isEmpty()) {
-FSHARE1 = new Double(split[1455]);
-}
-if (!split[1456].trim().isEmpty()) {
-FSHARE2 = new Double(split[1456]);
-}
-if (!split[1457].trim().isEmpty()) {
-FSHARE3 = new Double(split[1457]);
-}
-if (!split[1458].trim().isEmpty()) {
-FSHUKV = new Double(split[1458]);
-}
-if (!split[1459].trim().isEmpty()) {
-FSHUKVB = new Double(split[1459]);
-}
-if (!split[1460].trim().isEmpty()) {
-FSHOSV = new Double(split[1460]);
-}
-if (!split[1461].trim().isEmpty()) {
-FSHOSVB = new Double(split[1461]);
-}
-if (!split[1462].trim().isEmpty()) {
-FSHADD = new Double(split[1462]);
-}
-if (!split[1463].trim().isEmpty()) {
-FSHADA = new Double(split[1463]);
-}
-if (!split[1464].trim().isEmpty()) {
-FSHADAB = new Double(split[1464]);
-}
-if (!split[1465].trim().isEmpty()) {
-FNSAV1 = new Double(split[1465]);
-}
-if (!split[1466].trim().isEmpty()) {
-FNSAV2 = new Double(split[1466]);
-}
-if (!split[1467].trim().isEmpty()) {
-FNSAV3 = new Double(split[1467]);
-}
-if (!split[1468].trim().isEmpty()) {
-FNSAV4 = new Double(split[1468]);
-}
-if (!split[1469].trim().isEmpty()) {
-FNSVAL1 = new Double(split[1469]);
-}
-if (!split[1470].trim().isEmpty()) {
-FNSVB = new Double(split[1470]);
-}
-if (!split[1471].trim().isEmpty()) {
-FGILTS1 = new Double(split[1471]);
-}
-if (!split[1472].trim().isEmpty()) {
-FGILTS2 = new Double(split[1472]);
-}
-if (!split[1473].trim().isEmpty()) {
-FGILTS3 = new Double(split[1473]);
-}
-if (!split[1474].trim().isEmpty()) {
-FGILTS4 = new Double(split[1474]);
-}
-if (!split[1475].trim().isEmpty()) {
-FGLTUKV = new Double(split[1475]);
-}
-if (!split[1476].trim().isEmpty()) {
-FGUKVB = new Double(split[1476]);
-}
-if (!split[1477].trim().isEmpty()) {
-FGLTFOV = new Double(split[1477]);
-}
-if (!split[1478].trim().isEmpty()) {
-FGFOVB = new Double(split[1478]);
-}
-if (!split[1479].trim().isEmpty()) {
-FLFENV = new Double(split[1479]);
-}
-if (!split[1480].trim().isEmpty()) {
-FLFENVB = new Double(split[1480]);
-}
-if (!split[1481].trim().isEmpty()) {
-FLFSIV = new Double(split[1481]);
-}
-if (!split[1482].trim().isEmpty()) {
-FLFSIVB = new Double(split[1482]);
-}
-if (!split[1483].trim().isEmpty()) {
-FLFFSV = new Double(split[1483]);
-}
-if (!split[1484].trim().isEmpty()) {
-FLFFSVB = new Double(split[1484]);
-}
-if (!split[1485].trim().isEmpty()) {
-FLFTEV = new Double(split[1485]);
-}
-if (!split[1486].trim().isEmpty()) {
-FLFTEVB = new Double(split[1486]);
-}
-if (!split[1487].trim().isEmpty()) {
-FINS = new Double(split[1487]);
-}
-if (!split[1488].trim().isEmpty()) {
-FINSV = new Double(split[1488]);
-}
-if (!split[1489].trim().isEmpty()) {
-FLPROD1 = new Double(split[1489]);
-}
-if (!split[1490].trim().isEmpty()) {
-FLPROD2 = new Double(split[1490]);
-}
-if (!split[1491].trim().isEmpty()) {
-FLPROD3 = new Double(split[1491]);
-}
-if (!split[1492].trim().isEmpty()) {
-FLPROD4 = new Double(split[1492]);
-}
-if (!split[1493].trim().isEmpty()) {
-FINVOTV = new Double(split[1493]);
-}
-if (!split[1494].trim().isEmpty()) {
-FINVOVB = new Double(split[1494]);
-}
-if (!split[1495].trim().isEmpty()) {
-FINCVB = new Double(split[1495]);
-}
-if (!split[1496].trim().isEmpty()) {
-FINFSAV1 = new Double(split[1496]);
-}
-if (!split[1497].trim().isEmpty()) {
-FINFSAV2 = new Double(split[1497]);
-}
-if (!split[1498].trim().isEmpty()) {
-FINFSAV3 = new Double(split[1498]);
-}
-if (!split[1499].trim().isEmpty()) {
-FINFSAV4 = new Double(split[1499]);
-}
-if (!split[1500].trim().isEmpty()) {
-FINFLV = new Double(split[1500]);
-}
-if (!split[1501].trim().isEmpty()) {
-FLOANVB = new Double(split[1501]);
-}
-if (!split[1502].trim().isEmpty()) {
-FINFV = new Double(split[1502]);
-}
-if (!split[1503].trim().isEmpty()) {
-FINFVB = new Double(split[1503]);
-}
-if (!split[1504].trim().isEmpty()) {
-FSAVED = new Double(split[1504]);
-}
-if (!split[1505].trim().isEmpty()) {
-FWITHD = new Double(split[1505]);
-}
-if (!split[1506].trim().isEmpty()) {
-FSAVAB = new Double(split[1506]);
-}
-if (!split[1507].trim().isEmpty()) {
-UPROP1 = new Double(split[1507]);
-}
-if (!split[1508].trim().isEmpty()) {
-UPROP2 = new Double(split[1508]);
-}
-if (!split[1509].trim().isEmpty()) {
-UPROP3 = new Double(split[1509]);
-}
-if (!split[1510].trim().isEmpty()) {
-UPROP4 = new Double(split[1510]);
-}
-if (!split[1511].trim().isEmpty()) {
-UNMTYP = new Double(split[1511]);
-}
-if (!split[1512].trim().isEmpty()) {
-UNUMHS = new Double(split[1512]);
-}
-if (!split[1513].trim().isEmpty()) {
-UBUYLET = new Double(split[1513]);
-}
-if (!split[1514].trim().isEmpty()) {
-UNUMBD = new Double(split[1514]);
-}
-if (!split[1515].trim().isEmpty()) {
-UNUMLA = new Double(split[1515]);
-}
-if (!split[1516].trim().isEmpty()) {
-UNUMOV = new Double(split[1516]);
-}
-if (!split[1517].trim().isEmpty()) {
-UNUMRE = new Double(split[1517]);
-}
-if (!split[1518].trim().isEmpty()) {
-UPRTYP = new Double(split[1518]);
-}
-if (!split[1519].trim().isEmpty()) {
-UPRSH1 = new Double(split[1519]);
-}
-if (!split[1520].trim().isEmpty()) {
-UPRSH2 = new Double(split[1520]);
-}
-if (!split[1521].trim().isEmpty()) {
-UPRTYP2 = new Double(split[1521]);
-}
-if (!split[1522].trim().isEmpty()) {
-UPRSH3 = new Double(split[1522]);
-}
-if (!split[1523].trim().isEmpty()) {
-UPRSH4 = new Double(split[1523]);
-}
-if (!split[1524].trim().isEmpty()) {
-UPRTYP3 = new Double(split[1524]);
-}
-if (!split[1525].trim().isEmpty()) {
-UPRSH5 = new Double(split[1525]);
-}
-if (!split[1526].trim().isEmpty()) {
-UPRSH6 = new Double(split[1526]);
-}
-if (!split[1527].trim().isEmpty()) {
-UPRTYP4 = new Double(split[1527]);
-}
-if (!split[1528].trim().isEmpty()) {
-UPRTYP5 = new Double(split[1528]);
-}
-if (!split[1529].trim().isEmpty()) {
-UPRTYP6 = new Double(split[1529]);
-}
-if (!split[1530].trim().isEmpty()) {
-UPRTYP7 = new Double(split[1530]);
-}
-if (!split[1531].trim().isEmpty()) {
-UPRSH13 = new Double(split[1531]);
-}
-if (!split[1532].trim().isEmpty()) {
-UPRSH14 = new Double(split[1532]);
-}
-if (!split[1533].trim().isEmpty()) {
-UPRTYP8 = new Double(split[1533]);
-}
-if (!split[1534].trim().isEmpty()) {
-UPRSH15 = new Double(split[1534]);
-}
-if (!split[1535].trim().isEmpty()) {
-UPRSH16 = new Double(split[1535]);
-}
-if (!split[1536].trim().isEmpty()) {
-UPRTYP9 = new Double(split[1536]);
-}
-if (!split[1537].trim().isEmpty()) {
-UPRSH17 = new Double(split[1537]);
-}
-if (!split[1538].trim().isEmpty()) {
-UPRSH18 = new Double(split[1538]);
-}
-if (!split[1539].trim().isEmpty()) {
-UPRTYP10 = new Double(split[1539]);
-}
-if (!split[1540].trim().isEmpty()) {
-UPRSH19 = new Double(split[1540]);
-}
-if (!split[1541].trim().isEmpty()) {
-UPRSH20 = new Double(split[1541]);
-}
-if (!split[1542].trim().isEmpty()) {
-ULAND10 = new Double(split[1542]);
-}
-if (!split[1543].trim().isEmpty()) {
-UPRTYP11 = new Double(split[1543]);
-}
-if (!split[1544].trim().isEmpty()) {
-UPRSH21 = new Double(split[1544]);
-}
-if (!split[1545].trim().isEmpty()) {
-UPRSH22 = new Double(split[1545]);
-}
-if (!split[1546].trim().isEmpty()) {
-ULAND11 = new Double(split[1546]);
-}
-if (!split[1547].trim().isEmpty()) {
-UPRTYP12 = new Double(split[1547]);
-}
-if (!split[1548].trim().isEmpty()) {
-UPRSH23 = new Double(split[1548]);
-}
-if (!split[1549].trim().isEmpty()) {
-UPRSH24 = new Double(split[1549]);
-}
-if (!split[1550].trim().isEmpty()) {
-ULAND12 = new Double(split[1550]);
-}
-if (!split[1551].trim().isEmpty()) {
-UPRTYP13 = new Double(split[1551]);
-}
-if (!split[1552].trim().isEmpty()) {
-UPRSH25 = new Double(split[1552]);
-}
-if (!split[1553].trim().isEmpty()) {
-UPRSH26 = new Double(split[1553]);
-}
-if (!split[1554].trim().isEmpty()) {
-UPRTYP14 = new Double(split[1554]);
-}
-if (!split[1555].trim().isEmpty()) {
-UPRSH27 = new Double(split[1555]);
-}
-if (!split[1556].trim().isEmpty()) {
-UPRSH28 = new Double(split[1556]);
-}
-if (!split[1557].trim().isEmpty()) {
-UPRTYP15 = new Double(split[1557]);
-}
-if (!split[1558].trim().isEmpty()) {
-UPRSH29 = new Double(split[1558]);
-}
-if (!split[1559].trim().isEmpty()) {
-UPRSH30 = new Double(split[1559]);
-}
-if (!split[1560].trim().isEmpty()) {
-UPRTYP16 = new Double(split[1560]);
-}
-if (!split[1561].trim().isEmpty()) {
-UPRSH31 = new Double(split[1561]);
-}
-if (!split[1562].trim().isEmpty()) {
-UPRSH32 = new Double(split[1562]);
-}
-if (!split[1563].trim().isEmpty()) {
-ULAND16 = new Double(split[1563]);
-}
-if (!split[1564].trim().isEmpty()) {
-UPRTYP17 = new Double(split[1564]);
-}
-if (!split[1565].trim().isEmpty()) {
-UPRSH33 = new Double(split[1565]);
-}
-if (!split[1566].trim().isEmpty()) {
-UPRSH34 = new Double(split[1566]);
-}
-if (!split[1567].trim().isEmpty()) {
-ULAND17 = new Double(split[1567]);
-}
-if (!split[1568].trim().isEmpty()) {
-UPRTYP18 = new Double(split[1568]);
-}
-if (!split[1569].trim().isEmpty()) {
-UPRSH35 = new Double(split[1569]);
-}
-if (!split[1570].trim().isEmpty()) {
-UPRSH36 = new Double(split[1570]);
-}
-if (!split[1571].trim().isEmpty()) {
-ULAND18 = new Double(split[1571]);
-}
-if (!split[1572].trim().isEmpty()) {
-DCNUM2 = new Double(split[1572]);
-}
-if (!split[1573].trim().isEmpty()) {
-DCANY = new Double(split[1573]);
-}
-if (!split[1574].trim().isEmpty()) {
-DCANU = new Double(split[1574]);
-}
-if (!split[1575].trim().isEmpty()) {
-DCNUM1 = new Double(split[1575]);
-}
-if (!split[1576].trim().isEmpty()) {
-DCCOS1 = new Double(split[1576]);
-}
-if (!split[1577].trim().isEmpty()) {
-DCCSP1 = new Double(split[1577]);
-}
-if (!split[1578].trim().isEmpty()) {
-DCNAM1 = new Double(split[1578]);
-}
-if (!split[1579].trim().isEmpty()) {
-DCONM1 = new Double(split[1579]);
-}
-if (!split[1580].trim().isEmpty()) {
-DCONM2 = new Double(split[1580]);
-}
-if (!split[1581].trim().isEmpty()) {
-DCRSP1 = new Double(split[1581]);
-}
-if (!split[1582].trim().isEmpty()) {
-DCREC1 = new Double(split[1582]);
-}
-if (!split[1583].trim().isEmpty()) {
-DCPER1 = new Double(split[1583]);
-}
-if (!split[1584].trim().isEmpty()) {
-DCAMC1 = new Double(split[1584]);
-}
-if (!split[1585].trim().isEmpty()) {
-DCAMP1 = new Double(split[1585]);
-}
-if (!split[1586].trim().isEmpty()) {
-DCAMD1 = new Double(split[1586]);
-}
-if (!split[1587].trim().isEmpty()) {
-DCESB1 = new Double(split[1587]);
-}
-if (!split[1588].trim().isEmpty()) {
-DCINZ1 = new Double(split[1588]);
-}
-if (!split[1589].trim().isEmpty()) {
-DC12BEH1 = new Double(split[1589]);
-}
-if (!split[1590].trim().isEmpty()) {
-DC12OWE1 = new Double(split[1590]);
-}
-if (!split[1591].trim().isEmpty()) {
-DCCOS2 = new Double(split[1591]);
-}
-if (!split[1592].trim().isEmpty()) {
-DCCSP2 = new Double(split[1592]);
-}
-if (!split[1593].trim().isEmpty()) {
-DCNAM2 = new Double(split[1593]);
-}
-if (!split[1594].trim().isEmpty()) {
-DCONM3 = new Double(split[1594]);
-}
-if (!split[1595].trim().isEmpty()) {
-DCONM4 = new Double(split[1595]);
-}
-if (!split[1596].trim().isEmpty()) {
-DCRSP2 = new Double(split[1596]);
-}
-if (!split[1597].trim().isEmpty()) {
-DCREC2 = new Double(split[1597]);
-}
-if (!split[1598].trim().isEmpty()) {
-DCPER2 = new Double(split[1598]);
-}
-if (!split[1599].trim().isEmpty()) {
-DCAMC2 = new Double(split[1599]);
-}
-if (!split[1600].trim().isEmpty()) {
-DCAMP2 = new Double(split[1600]);
-}
-if (!split[1601].trim().isEmpty()) {
-DCAMD2 = new Double(split[1601]);
-}
-if (!split[1602].trim().isEmpty()) {
-DCESB2 = new Double(split[1602]);
-}
-if (!split[1603].trim().isEmpty()) {
-DCINZ2 = new Double(split[1603]);
-}
-if (!split[1604].trim().isEmpty()) {
-DC12BEH2 = new Double(split[1604]);
-}
-if (!split[1605].trim().isEmpty()) {
-DC12OWE2 = new Double(split[1605]);
-}
-if (!split[1606].trim().isEmpty()) {
-DCCOS3 = new Double(split[1606]);
-}
-if (!split[1607].trim().isEmpty()) {
-DCCSP3 = new Double(split[1607]);
-}
-if (!split[1608].trim().isEmpty()) {
-DCNAM3 = new Double(split[1608]);
-}
-if (!split[1609].trim().isEmpty()) {
-DCONM5 = new Double(split[1609]);
-}
-if (!split[1610].trim().isEmpty()) {
-DCONM6 = new Double(split[1610]);
-}
-if (!split[1611].trim().isEmpty()) {
-DCRSP3 = new Double(split[1611]);
-}
-if (!split[1612].trim().isEmpty()) {
-DCREC3 = new Double(split[1612]);
-}
-if (!split[1613].trim().isEmpty()) {
-DCPER3 = new Double(split[1613]);
-}
-if (!split[1614].trim().isEmpty()) {
-DCAMC3 = new Double(split[1614]);
-}
-if (!split[1615].trim().isEmpty()) {
-DCAMP3 = new Double(split[1615]);
-}
-if (!split[1616].trim().isEmpty()) {
-DCAMD3 = new Double(split[1616]);
-}
-if (!split[1617].trim().isEmpty()) {
-DCESB3 = new Double(split[1617]);
-}
-if (!split[1618].trim().isEmpty()) {
-DCINZ3 = new Double(split[1618]);
-}
-if (!split[1619].trim().isEmpty()) {
-DC12BEH3 = new Double(split[1619]);
-}
-if (!split[1620].trim().isEmpty()) {
-DC12OWE3 = new Double(split[1620]);
-}
-if (!split[1621].trim().isEmpty()) {
-DCCOS4 = new Double(split[1621]);
-}
-if (!split[1622].trim().isEmpty()) {
-DCCSP4 = new Double(split[1622]);
-}
-if (!split[1623].trim().isEmpty()) {
-DCNAM4 = new Double(split[1623]);
-}
-if (!split[1624].trim().isEmpty()) {
-DCONM7 = new Double(split[1624]);
-}
-if (!split[1625].trim().isEmpty()) {
-DCONM8 = new Double(split[1625]);
-}
-if (!split[1626].trim().isEmpty()) {
-DCRSP4 = new Double(split[1626]);
-}
-if (!split[1627].trim().isEmpty()) {
-DCREC4 = new Double(split[1627]);
-}
-if (!split[1628].trim().isEmpty()) {
-DCPER4 = new Double(split[1628]);
-}
-if (!split[1629].trim().isEmpty()) {
-DCAMC4 = new Double(split[1629]);
-}
-if (!split[1630].trim().isEmpty()) {
-DCAMP4 = new Double(split[1630]);
-}
-if (!split[1631].trim().isEmpty()) {
-DCAMD4 = new Double(split[1631]);
-}
-if (!split[1632].trim().isEmpty()) {
-DCESB4 = new Double(split[1632]);
-}
-if (!split[1633].trim().isEmpty()) {
-DCINZ4 = new Double(split[1633]);
-}
-if (!split[1634].trim().isEmpty()) {
-DC12BEH4 = new Double(split[1634]);
-}
-if (!split[1635].trim().isEmpty()) {
-DC12OWE4 = new Double(split[1635]);
-}
-if (!split[1636].trim().isEmpty()) {
-DCCOS5 = new Double(split[1636]);
-}
-if (!split[1637].trim().isEmpty()) {
-DCCSP5 = new Double(split[1637]);
-}
-if (!split[1638].trim().isEmpty()) {
-DCNAM5 = new Double(split[1638]);
-}
-if (!split[1639].trim().isEmpty()) {
-DCONM9 = new Double(split[1639]);
-}
-if (!split[1640].trim().isEmpty()) {
-DCONM10 = new Double(split[1640]);
-}
-if (!split[1641].trim().isEmpty()) {
-DCRSP5 = new Double(split[1641]);
-}
-if (!split[1642].trim().isEmpty()) {
-DCREC5 = new Double(split[1642]);
-}
-if (!split[1643].trim().isEmpty()) {
-DCPER5 = new Double(split[1643]);
-}
-if (!split[1644].trim().isEmpty()) {
-DCAMC5 = new Double(split[1644]);
-}
-if (!split[1645].trim().isEmpty()) {
-DCAMP5 = new Double(split[1645]);
-}
-if (!split[1646].trim().isEmpty()) {
-DCAMD5 = new Double(split[1646]);
-}
-if (!split[1647].trim().isEmpty()) {
-DCESB5 = new Double(split[1647]);
-}
-if (!split[1648].trim().isEmpty()) {
-DCINZ5 = new Double(split[1648]);
-}
-if (!split[1649].trim().isEmpty()) {
-DC12BEH5 = new Double(split[1649]);
-}
-if (!split[1650].trim().isEmpty()) {
-DC12OWE5 = new Double(split[1650]);
-}
-if (!split[1651].trim().isEmpty()) {
-DSNUM2 = new Double(split[1651]);
-}
-if (!split[1652].trim().isEmpty()) {
-DSANY1 = new Double(split[1652]);
-}
-if (!split[1653].trim().isEmpty()) {
-DSANY2 = new Double(split[1653]);
-}
-if (!split[1654].trim().isEmpty()) {
-DSANU1 = new Double(split[1654]);
-}
-if (!split[1655].trim().isEmpty()) {
-DSANU2 = new Double(split[1655]);
-}
-if (!split[1656].trim().isEmpty()) {
-DSNUM = new Double(split[1656]);
-}
-if (!split[1657].trim().isEmpty()) {
-DSCOS1 = new Double(split[1657]);
-}
-if (!split[1658].trim().isEmpty()) {
-DSCSP1 = new Double(split[1658]);
-}
-if (!split[1659].trim().isEmpty()) {
-DSNAM1 = new Double(split[1659]);
-}
-if (!split[1660].trim().isEmpty()) {
-DSONM1 = new Double(split[1660]);
-}
-if (!split[1661].trim().isEmpty()) {
-DSONM2 = new Double(split[1661]);
-}
-if (!split[1662].trim().isEmpty()) {
-DSRSP1 = new Double(split[1662]);
-}
-if (!split[1663].trim().isEmpty()) {
-DSREC1 = new Double(split[1663]);
-}
-if (!split[1664].trim().isEmpty()) {
-DSPER1 = new Double(split[1664]);
-}
-if (!split[1665].trim().isEmpty()) {
-DSAMC1 = new Double(split[1665]);
-}
-if (!split[1666].trim().isEmpty()) {
-DSAMP1 = new Double(split[1666]);
-}
-if (!split[1667].trim().isEmpty()) {
-DSAMD1 = new Double(split[1667]);
-}
-if (!split[1668].trim().isEmpty()) {
-DSESB1 = new Double(split[1668]);
-}
-if (!split[1669].trim().isEmpty()) {
-DS12BEH1 = new Double(split[1669]);
-}
-if (!split[1670].trim().isEmpty()) {
-DS12OWE1 = new Double(split[1670]);
-}
-if (!split[1671].trim().isEmpty()) {
-DSCOS2 = new Double(split[1671]);
-}
-if (!split[1672].trim().isEmpty()) {
-DSCSP2 = new Double(split[1672]);
-}
-if (!split[1673].trim().isEmpty()) {
-DSNAM2 = new Double(split[1673]);
-}
-if (!split[1674].trim().isEmpty()) {
-DSONM3 = new Double(split[1674]);
-}
-if (!split[1675].trim().isEmpty()) {
-DSONM4 = new Double(split[1675]);
-}
-if (!split[1676].trim().isEmpty()) {
-DSRSP2 = new Double(split[1676]);
-}
-if (!split[1677].trim().isEmpty()) {
-DSREC2 = new Double(split[1677]);
-}
-if (!split[1678].trim().isEmpty()) {
-DSPER2 = new Double(split[1678]);
-}
-if (!split[1679].trim().isEmpty()) {
-DSAMC2 = new Double(split[1679]);
-}
-if (!split[1680].trim().isEmpty()) {
-DSAMP2 = new Double(split[1680]);
-}
-if (!split[1681].trim().isEmpty()) {
-DSAMD2 = new Double(split[1681]);
-}
-if (!split[1682].trim().isEmpty()) {
-DSESB2 = new Double(split[1682]);
-}
-if (!split[1683].trim().isEmpty()) {
-DS12BEH2 = new Double(split[1683]);
-}
-if (!split[1684].trim().isEmpty()) {
-DS12OWE2 = new Double(split[1684]);
-}
-if (!split[1685].trim().isEmpty()) {
-DSCOS3 = new Double(split[1685]);
-}
-if (!split[1686].trim().isEmpty()) {
-DSCSP3 = new Double(split[1686]);
-}
-if (!split[1687].trim().isEmpty()) {
-DSNAM3 = new Double(split[1687]);
-}
-if (!split[1688].trim().isEmpty()) {
-DSONM5 = new Double(split[1688]);
-}
-if (!split[1689].trim().isEmpty()) {
-DSONM6 = new Double(split[1689]);
-}
-if (!split[1690].trim().isEmpty()) {
-DSRSP3 = new Double(split[1690]);
-}
-if (!split[1691].trim().isEmpty()) {
-DSREC3 = new Double(split[1691]);
-}
-if (!split[1692].trim().isEmpty()) {
-DSPER3 = new Double(split[1692]);
-}
-if (!split[1693].trim().isEmpty()) {
-DSAMC3 = new Double(split[1693]);
-}
-if (!split[1694].trim().isEmpty()) {
-DSAMP3 = new Double(split[1694]);
-}
-if (!split[1695].trim().isEmpty()) {
-DSAMD3 = new Double(split[1695]);
-}
-if (!split[1696].trim().isEmpty()) {
-DSESB3 = new Double(split[1696]);
-}
-if (!split[1697].trim().isEmpty()) {
-DS12BEH3 = new Double(split[1697]);
-}
-if (!split[1698].trim().isEmpty()) {
-DS12OWE3 = new Double(split[1698]);
-}
-if (!split[1699].trim().isEmpty()) {
-DSCOS4 = new Double(split[1699]);
-}
-if (!split[1700].trim().isEmpty()) {
-DSCSP4 = new Double(split[1700]);
-}
-if (!split[1701].trim().isEmpty()) {
-DSNAM4 = new Double(split[1701]);
-}
-if (!split[1702].trim().isEmpty()) {
-DSONM7 = new Double(split[1702]);
-}
-if (!split[1703].trim().isEmpty()) {
-DSONM8 = new Double(split[1703]);
-}
-if (!split[1704].trim().isEmpty()) {
-DSRSP4 = new Double(split[1704]);
-}
-if (!split[1705].trim().isEmpty()) {
-DSREC4 = new Double(split[1705]);
-}
-if (!split[1706].trim().isEmpty()) {
-DSPER4 = new Double(split[1706]);
-}
-if (!split[1707].trim().isEmpty()) {
-DSAMC4 = new Double(split[1707]);
-}
-if (!split[1708].trim().isEmpty()) {
-DSAMP4 = new Double(split[1708]);
-}
-if (!split[1709].trim().isEmpty()) {
-DSAMD4 = new Double(split[1709]);
-}
-if (!split[1710].trim().isEmpty()) {
-DSESB4 = new Double(split[1710]);
-}
-if (!split[1711].trim().isEmpty()) {
-DS12BEH4 = new Double(split[1711]);
-}
-if (!split[1712].trim().isEmpty()) {
-DS12OWE4 = new Double(split[1712]);
-}
-if (!split[1713].trim().isEmpty()) {
-DSCOS5 = new Double(split[1713]);
-}
-if (!split[1714].trim().isEmpty()) {
-DSCSP5 = new Double(split[1714]);
-}
-if (!split[1715].trim().isEmpty()) {
-DSNAM5 = new Double(split[1715]);
-}
-if (!split[1716].trim().isEmpty()) {
-DSONM9 = new Double(split[1716]);
-}
-if (!split[1717].trim().isEmpty()) {
-DSONM10 = new Double(split[1717]);
-}
-if (!split[1718].trim().isEmpty()) {
-DSRSP5 = new Double(split[1718]);
-}
-if (!split[1719].trim().isEmpty()) {
-DSREC5 = new Double(split[1719]);
-}
-if (!split[1720].trim().isEmpty()) {
-DSPER5 = new Double(split[1720]);
-}
-if (!split[1721].trim().isEmpty()) {
-DSAMC5 = new Double(split[1721]);
-}
-if (!split[1722].trim().isEmpty()) {
-DSAMP5 = new Double(split[1722]);
-}
-if (!split[1723].trim().isEmpty()) {
-DSAMD5 = new Double(split[1723]);
-}
-if (!split[1724].trim().isEmpty()) {
-DSESB5 = new Double(split[1724]);
-}
-if (!split[1725].trim().isEmpty()) {
-DS12BEH5 = new Double(split[1725]);
-}
-if (!split[1726].trim().isEmpty()) {
-DS12OWE5 = new Double(split[1726]);
-}
-if (!split[1727].trim().isEmpty()) {
-PRESMON = new Double(split[1727]);
-}
-if (!split[1728].trim().isEmpty()) {
-PRESYR = new Double(split[1728]);
-}
-if (!split[1729].trim().isEmpty()) {
-DMOANY = new Double(split[1729]);
-}
-if (!split[1730].trim().isEmpty()) {
-DMONUM = new Double(split[1730]);
-}
-if (!split[1731].trim().isEmpty()) {
-DMOINS1 = new Double(split[1731]);
-}
-if (!split[1732].trim().isEmpty()) {
-DMOEST1 = new Double(split[1732]);
-}
-if (!split[1733].trim().isEmpty()) {
-DMOOFT1 = new Double(split[1733]);
-}
-if (!split[1734].trim().isEmpty()) {
-DMOWHNY1 = new Double(split[1734]);
-}
-if (!split[1735].trim().isEmpty()) {
-DMOWHNM1 = new Double(split[1735]);
-}
-if (!split[1736].trim().isEmpty()) {
-DMOWEST1 = new Double(split[1736]);
-}
-if (!split[1737].trim().isEmpty()) {
-DMOINT1 = new Double(split[1737]);
-}
-if (!split[1738].trim().isEmpty()) {
-DMOBEH1 = new Double(split[1738]);
-}
-if (!split[1739].trim().isEmpty()) {
-DMOOWE1 = new Double(split[1739]);
-}
-if (!split[1740].trim().isEmpty()) {
-DMOINS2 = new Double(split[1740]);
-}
-if (!split[1741].trim().isEmpty()) {
-DMOEST2 = new Double(split[1741]);
-}
-if (!split[1742].trim().isEmpty()) {
-DMOOFT2 = new Double(split[1742]);
-}
-if (!split[1743].trim().isEmpty()) {
-DMOWHNY2 = new Double(split[1743]);
-}
-if (!split[1744].trim().isEmpty()) {
-DMOWHNM2 = new Double(split[1744]);
-}
-if (!split[1745].trim().isEmpty()) {
-DMOWEST2 = new Double(split[1745]);
-}
-if (!split[1746].trim().isEmpty()) {
-DMOINT2 = new Double(split[1746]);
-}
-if (!split[1747].trim().isEmpty()) {
-DMOBEH2 = new Double(split[1747]);
-}
-if (!split[1748].trim().isEmpty()) {
-DMOOWE2 = new Double(split[1748]);
-}
-if (!split[1749].trim().isEmpty()) {
-DMOINS3 = new Double(split[1749]);
-}
-if (!split[1750].trim().isEmpty()) {
-DMOEST3 = new Double(split[1750]);
-}
-if (!split[1751].trim().isEmpty()) {
-DMOOFT3 = new Double(split[1751]);
-}
-if (!split[1752].trim().isEmpty()) {
-DMOWHNY3 = new Double(split[1752]);
-}
-if (!split[1753].trim().isEmpty()) {
-DMOWHNM3 = new Double(split[1753]);
-}
-if (!split[1754].trim().isEmpty()) {
-DMOWEST3 = new Double(split[1754]);
-}
-if (!split[1755].trim().isEmpty()) {
-DMOINT3 = new Double(split[1755]);
-}
-if (!split[1756].trim().isEmpty()) {
-DMOBEH3 = new Double(split[1756]);
-}
-if (!split[1757].trim().isEmpty()) {
-DMOOWE3 = new Double(split[1757]);
-}
-if (!split[1758].trim().isEmpty()) {
-DMOINS4 = new Double(split[1758]);
-}
-if (!split[1759].trim().isEmpty()) {
-DMOEST4 = new Double(split[1759]);
-}
-if (!split[1760].trim().isEmpty()) {
-DMOOFT4 = new Double(split[1760]);
-}
-if (!split[1761].trim().isEmpty()) {
-DMOWHNY4 = new Double(split[1761]);
-}
-if (!split[1762].trim().isEmpty()) {
-DMOWHNM4 = new Double(split[1762]);
-}
-if (!split[1763].trim().isEmpty()) {
-DMOWEST4 = new Double(split[1763]);
-}
-if (!split[1764].trim().isEmpty()) {
-DMOINT4 = new Double(split[1764]);
-}
-if (!split[1765].trim().isEmpty()) {
-DMOBEH4 = new Double(split[1765]);
-}
-if (!split[1766].trim().isEmpty()) {
-DMOOWE4 = new Double(split[1766]);
-}
-if (!split[1767].trim().isEmpty()) {
-DMOINS5 = new Double(split[1767]);
-}
-if (!split[1768].trim().isEmpty()) {
-DMOEST5 = new Double(split[1768]);
-}
-if (!split[1769].trim().isEmpty()) {
-DMOOFT5 = new Double(split[1769]);
-}
-if (!split[1770].trim().isEmpty()) {
-DMOWHNY5 = new Double(split[1770]);
-}
-if (!split[1771].trim().isEmpty()) {
-DMOWHNM5 = new Double(split[1771]);
-}
-if (!split[1772].trim().isEmpty()) {
-DMOWEST5 = new Double(split[1772]);
-}
-if (!split[1773].trim().isEmpty()) {
-DMOINT5 = new Double(split[1773]);
-}
-if (!split[1774].trim().isEmpty()) {
-DMOBEH5 = new Double(split[1774]);
-}
-if (!split[1775].trim().isEmpty()) {
-DMOOWE5 = new Double(split[1775]);
-}
-if (!split[1776].trim().isEmpty()) {
-DHPANY1 = new Double(split[1776]);
-}
-if (!split[1777].trim().isEmpty()) {
-DHPANY2 = new Double(split[1777]);
-}
-if (!split[1778].trim().isEmpty()) {
-DHPANY3 = new Double(split[1778]);
-}
-if (!split[1779].trim().isEmpty()) {
-DHPANY4 = new Double(split[1779]);
-}
-if (!split[1780].trim().isEmpty()) {
-DHPANY5 = new Double(split[1780]);
-}
-if (!split[1781].trim().isEmpty()) {
-DHPANY6 = new Double(split[1781]);
-}
-if (!split[1782].trim().isEmpty()) {
-DHPANY7 = new Double(split[1782]);
-}
-if (!split[1783].trim().isEmpty()) {
-DHPNUM = new Double(split[1783]);
-}
-if (!split[1784].trim().isEmpty()) {
-DHPINS1 = new Double(split[1784]);
-}
-if (!split[1785].trim().isEmpty()) {
-DHPEST1 = new Double(split[1785]);
-}
-if (!split[1786].trim().isEmpty()) {
-DHPOFT1 = new Double(split[1786]);
-}
-if (!split[1787].trim().isEmpty()) {
-DHPWHNY1 = new Double(split[1787]);
-}
-if (!split[1788].trim().isEmpty()) {
-DHPWHNM1 = new Double(split[1788]);
-}
-if (!split[1789].trim().isEmpty()) {
-DHPWEST1 = new Double(split[1789]);
-}
-if (!split[1790].trim().isEmpty()) {
-DHPINT1 = new Double(split[1790]);
-}
-if (!split[1791].trim().isEmpty()) {
-DHPBEH1 = new Double(split[1791]);
-}
-if (!split[1792].trim().isEmpty()) {
-DHPOWE1 = new Double(split[1792]);
-}
-if (!split[1793].trim().isEmpty()) {
-DTTOWE1 = new Double(split[1793]);
-}
-if (!split[1794].trim().isEmpty()) {
-DTTOWEB1 = new Double(split[1794]);
-}
-if (!split[1795].trim().isEmpty()) {
-DTTOWE2 = new Double(split[1795]);
-}
-if (!split[1796].trim().isEmpty()) {
-DTTOWEB2 = new Double(split[1796]);
-}
-if (!split[1797].trim().isEmpty()) {
-DTTOWE3 = new Double(split[1797]);
-}
-if (!split[1798].trim().isEmpty()) {
-DTTOWEB3 = new Double(split[1798]);
-}
-if (!split[1799].trim().isEmpty()) {
-DHPINS2 = new Double(split[1799]);
-}
-if (!split[1800].trim().isEmpty()) {
-DHPEST2 = new Double(split[1800]);
-}
-if (!split[1801].trim().isEmpty()) {
-DHPOFT2 = new Double(split[1801]);
-}
-if (!split[1802].trim().isEmpty()) {
-DHPWHNY2 = new Double(split[1802]);
-}
-if (!split[1803].trim().isEmpty()) {
-DHPWHNM2 = new Double(split[1803]);
-}
-if (!split[1804].trim().isEmpty()) {
-DHPWEST2 = new Double(split[1804]);
-}
-if (!split[1805].trim().isEmpty()) {
-DHPINT2 = new Double(split[1805]);
-}
-if (!split[1806].trim().isEmpty()) {
-DHPBEH2 = new Double(split[1806]);
-}
-if (!split[1807].trim().isEmpty()) {
-DHPOWE2 = new Double(split[1807]);
-}
-if (!split[1808].trim().isEmpty()) {
-DTTOWEB4 = new Double(split[1808]);
-}
-if (!split[1809].trim().isEmpty()) {
-DTTOWEB5 = new Double(split[1809]);
-}
-if (!split[1810].trim().isEmpty()) {
-DTTOWEB6 = new Double(split[1810]);
-}
-if (!split[1811].trim().isEmpty()) {
-DHPINS3 = new Double(split[1811]);
-}
-if (!split[1812].trim().isEmpty()) {
-DHPEST3 = new Double(split[1812]);
-}
-if (!split[1813].trim().isEmpty()) {
-DHPOFT3 = new Double(split[1813]);
-}
-if (!split[1814].trim().isEmpty()) {
-DHPWHNY3 = new Double(split[1814]);
-}
-if (!split[1815].trim().isEmpty()) {
-DHPWHNM3 = new Double(split[1815]);
-}
-if (!split[1816].trim().isEmpty()) {
-DHPWEST3 = new Double(split[1816]);
-}
-if (!split[1817].trim().isEmpty()) {
-DHPINT3 = new Double(split[1817]);
-}
-if (!split[1818].trim().isEmpty()) {
-DHPBEH3 = new Double(split[1818]);
-}
-if (!split[1819].trim().isEmpty()) {
-DHPOWE3 = new Double(split[1819]);
-}
-if (!split[1820].trim().isEmpty()) {
-DTTOWEB7 = new Double(split[1820]);
-}
-if (!split[1821].trim().isEmpty()) {
-DTTOWEB8 = new Double(split[1821]);
-}
-if (!split[1822].trim().isEmpty()) {
-DTTOWEB9 = new Double(split[1822]);
-}
-if (!split[1823].trim().isEmpty()) {
-DHPINS4 = new Double(split[1823]);
-}
-if (!split[1824].trim().isEmpty()) {
-DHPEST4 = new Double(split[1824]);
-}
-if (!split[1825].trim().isEmpty()) {
-DHPOFT4 = new Double(split[1825]);
-}
-if (!split[1826].trim().isEmpty()) {
-DHPWHNY4 = new Double(split[1826]);
-}
-if (!split[1827].trim().isEmpty()) {
-DHPWHNM4 = new Double(split[1827]);
-}
-if (!split[1828].trim().isEmpty()) {
-DHPWEST4 = new Double(split[1828]);
-}
-if (!split[1829].trim().isEmpty()) {
-DHPINT4 = new Double(split[1829]);
-}
-if (!split[1830].trim().isEmpty()) {
-DHPBEH4 = new Double(split[1830]);
-}
-if (!split[1831].trim().isEmpty()) {
-DHPOWE4 = new Double(split[1831]);
-}
-if (!split[1832].trim().isEmpty()) {
-DTTOWEB10 = new Double(split[1832]);
-}
-if (!split[1833].trim().isEmpty()) {
-DTTOWEB11 = new Double(split[1833]);
-}
-if (!split[1834].trim().isEmpty()) {
-DTTOWEB12 = new Double(split[1834]);
-}
-if (!split[1835].trim().isEmpty()) {
-DHPINS5 = new Double(split[1835]);
-}
-if (!split[1836].trim().isEmpty()) {
-DHPEST5 = new Double(split[1836]);
-}
-if (!split[1837].trim().isEmpty()) {
-DHPOFT5 = new Double(split[1837]);
-}
-if (!split[1838].trim().isEmpty()) {
-DHPWHNY5 = new Double(split[1838]);
-}
-if (!split[1839].trim().isEmpty()) {
-DHPWHNM5 = new Double(split[1839]);
-}
-if (!split[1840].trim().isEmpty()) {
-DHPWEST5 = new Double(split[1840]);
-}
-if (!split[1841].trim().isEmpty()) {
-DHPINT5 = new Double(split[1841]);
-}
-if (!split[1842].trim().isEmpty()) {
-DHPBEH5 = new Double(split[1842]);
-}
-if (!split[1843].trim().isEmpty()) {
-DHPOWE5 = new Double(split[1843]);
-}
-if (!split[1844].trim().isEmpty()) {
-DTTOWEB13 = new Double(split[1844]);
-}
-if (!split[1845].trim().isEmpty()) {
-DTTOWEB14 = new Double(split[1845]);
-}
-if (!split[1846].trim().isEmpty()) {
-DTTOWEB15 = new Double(split[1846]);
-}
-if (!split[1847].trim().isEmpty()) {
-NWHP = new Double(split[1847]);
-}
-if (!split[1848].trim().isEmpty()) {
-NWHPNO = new Double(split[1848]);
-}
-if (!split[1849].trim().isEmpty()) {
-DLONM = new Double(split[1849]);
-}
-if (!split[1850].trim().isEmpty()) {
-DLOLD1 = new Double(split[1850]);
-}
-if (!split[1851].trim().isEmpty()) {
-DLOLD2 = new Double(split[1851]);
-}
-if (!split[1852].trim().isEmpty()) {
-DLOLD3 = new Double(split[1852]);
-}
-if (!split[1853].trim().isEmpty()) {
-DLOLD4 = new Double(split[1853]);
-}
-if (!split[1854].trim().isEmpty()) {
-DLOLD5 = new Double(split[1854]);
-}
-if (!split[1855].trim().isEmpty()) {
-DLANY = new Double(split[1855]);
-}
-if (!split[1856].trim().isEmpty()) {
-DLNNM = new Double(split[1856]);
-}
-if (!split[1857].trim().isEmpty()) {
-DLNUM = new Double(split[1857]);
-}
-if (!split[1858].trim().isEmpty()) {
-DLTYPE1 = new Double(split[1858]);
-}
-if (!split[1859].trim().isEmpty()) {
-DSLPAY1 = new Double(split[1859]);
-}
-if (!split[1860].trim().isEmpty()) {
-DSLAMT1 = new Double(split[1860]);
-}
-if (!split[1861].trim().isEmpty()) {
-DSLEST1 = new Double(split[1861]);
-}
-if (!split[1862].trim().isEmpty()) {
-DLWHY1 = new Double(split[1862]);
-}
-if (!split[1863].trim().isEmpty()) {
-DLWHY2 = new Double(split[1863]);
-}
-if (!split[1864].trim().isEmpty()) {
-DLWHY3 = new Double(split[1864]);
-}
-if (!split[1865].trim().isEmpty()) {
-DLWHY4 = new Double(split[1865]);
-}
-if (!split[1866].trim().isEmpty()) {
-DLWHY5 = new Double(split[1866]);
-}
-if (!split[1867].trim().isEmpty()) {
-DLWHY6 = new Double(split[1867]);
-}
-if (!split[1868].trim().isEmpty()) {
-DLWHY7 = new Double(split[1868]);
-}
-if (!split[1869].trim().isEmpty()) {
-DLSEC1 = new Double(split[1869]);
-}
-if (!split[1870].trim().isEmpty()) {
-DLINS1 = new Double(split[1870]);
-}
-if (!split[1871].trim().isEmpty()) {
-DLEST1 = new Double(split[1871]);
-}
-if (!split[1872].trim().isEmpty()) {
-DLOFT1 = new Double(split[1872]);
-}
-if (!split[1873].trim().isEmpty()) {
-DLWHNY1 = new Double(split[1873]);
-}
-if (!split[1874].trim().isEmpty()) {
-DLWHNM1 = new Double(split[1874]);
-}
-if (!split[1875].trim().isEmpty()) {
-DLWEST1 = new Double(split[1875]);
-}
-if (!split[1876].trim().isEmpty()) {
-DLINT1 = new Double(split[1876]);
-}
-if (!split[1877].trim().isEmpty()) {
-DLBEH1 = new Double(split[1877]);
-}
-if (!split[1878].trim().isEmpty()) {
-DLOWE1 = new Double(split[1878]);
-}
-if (!split[1879].trim().isEmpty()) {
-DLTYPE2 = new Double(split[1879]);
-}
-if (!split[1880].trim().isEmpty()) {
-DSLPAY2 = new Double(split[1880]);
-}
-if (!split[1881].trim().isEmpty()) {
-DSLAMT2 = new Double(split[1881]);
-}
-if (!split[1882].trim().isEmpty()) {
-DSLEST2 = new Double(split[1882]);
-}
-if (!split[1883].trim().isEmpty()) {
-DLWHY8 = new Double(split[1883]);
-}
-if (!split[1884].trim().isEmpty()) {
-DLWHY9 = new Double(split[1884]);
-}
-if (!split[1885].trim().isEmpty()) {
-DLWHY10 = new Double(split[1885]);
-}
-if (!split[1886].trim().isEmpty()) {
-DLWHY11 = new Double(split[1886]);
-}
-if (!split[1887].trim().isEmpty()) {
-DLWHY12 = new Double(split[1887]);
-}
-if (!split[1888].trim().isEmpty()) {
-DLWHY13 = new Double(split[1888]);
-}
-if (!split[1889].trim().isEmpty()) {
-DLWHY14 = new Double(split[1889]);
-}
-if (!split[1890].trim().isEmpty()) {
-DLSEC2 = new Double(split[1890]);
-}
-if (!split[1891].trim().isEmpty()) {
-DLINS2 = new Double(split[1891]);
-}
-if (!split[1892].trim().isEmpty()) {
-DLEST2 = new Double(split[1892]);
-}
-if (!split[1893].trim().isEmpty()) {
-DLOFT2 = new Double(split[1893]);
-}
-if (!split[1894].trim().isEmpty()) {
-DLWHNY2 = new Double(split[1894]);
-}
-if (!split[1895].trim().isEmpty()) {
-DLWHNM2 = new Double(split[1895]);
-}
-if (!split[1896].trim().isEmpty()) {
-DLWEST2 = new Double(split[1896]);
-}
-if (!split[1897].trim().isEmpty()) {
-DLINT2 = new Double(split[1897]);
-}
-if (!split[1898].trim().isEmpty()) {
-DLBEH2 = new Double(split[1898]);
-}
-if (!split[1899].trim().isEmpty()) {
-DLOWE2 = new Double(split[1899]);
-}
-if (!split[1900].trim().isEmpty()) {
-DLTYPE3 = new Double(split[1900]);
-}
-if (!split[1901].trim().isEmpty()) {
-DSLPAY3 = new Double(split[1901]);
-}
-if (!split[1902].trim().isEmpty()) {
-DSLAMT3 = new Double(split[1902]);
-}
-if (!split[1903].trim().isEmpty()) {
-DSLEST3 = new Double(split[1903]);
-}
-if (!split[1904].trim().isEmpty()) {
-DLWHY15 = new Double(split[1904]);
-}
-if (!split[1905].trim().isEmpty()) {
-DLWHY16 = new Double(split[1905]);
-}
-if (!split[1906].trim().isEmpty()) {
-DLWHY17 = new Double(split[1906]);
-}
-if (!split[1907].trim().isEmpty()) {
-DLWHY18 = new Double(split[1907]);
-}
-if (!split[1908].trim().isEmpty()) {
-DLWHY19 = new Double(split[1908]);
-}
-if (!split[1909].trim().isEmpty()) {
-DLWHY20 = new Double(split[1909]);
-}
-if (!split[1910].trim().isEmpty()) {
-DLWHY21 = new Double(split[1910]);
-}
-if (!split[1911].trim().isEmpty()) {
-DLSEC3 = new Double(split[1911]);
-}
-if (!split[1912].trim().isEmpty()) {
-DLINS3 = new Double(split[1912]);
-}
-if (!split[1913].trim().isEmpty()) {
-DLEST3 = new Double(split[1913]);
-}
-if (!split[1914].trim().isEmpty()) {
-DLOFT3 = new Double(split[1914]);
-}
-if (!split[1915].trim().isEmpty()) {
-DLWHNY3 = new Double(split[1915]);
-}
-if (!split[1916].trim().isEmpty()) {
-DLWHNM3 = new Double(split[1916]);
-}
-if (!split[1917].trim().isEmpty()) {
-DLWEST3 = new Double(split[1917]);
-}
-if (!split[1918].trim().isEmpty()) {
-DLINT3 = new Double(split[1918]);
-}
-if (!split[1919].trim().isEmpty()) {
-DLBEH3 = new Double(split[1919]);
-}
-if (!split[1920].trim().isEmpty()) {
-DLOWE3 = new Double(split[1920]);
-}
-if (!split[1921].trim().isEmpty()) {
-DLTYPE4 = new Double(split[1921]);
-}
-if (!split[1922].trim().isEmpty()) {
-DSLPAY4 = new Double(split[1922]);
-}
-if (!split[1923].trim().isEmpty()) {
-DSLAMT4 = new Double(split[1923]);
-}
-if (!split[1924].trim().isEmpty()) {
-DSLEST4 = new Double(split[1924]);
-}
-if (!split[1925].trim().isEmpty()) {
-DLWHY22 = new Double(split[1925]);
-}
-if (!split[1926].trim().isEmpty()) {
-DLWHY23 = new Double(split[1926]);
-}
-if (!split[1927].trim().isEmpty()) {
-DLWHY24 = new Double(split[1927]);
-}
-if (!split[1928].trim().isEmpty()) {
-DLWHY25 = new Double(split[1928]);
-}
-if (!split[1929].trim().isEmpty()) {
-DLWHY26 = new Double(split[1929]);
-}
-if (!split[1930].trim().isEmpty()) {
-DLWHY27 = new Double(split[1930]);
-}
-if (!split[1931].trim().isEmpty()) {
-DLWHY28 = new Double(split[1931]);
-}
-if (!split[1932].trim().isEmpty()) {
-DLSEC4 = new Double(split[1932]);
-}
-if (!split[1933].trim().isEmpty()) {
-DLINS4 = new Double(split[1933]);
-}
-if (!split[1934].trim().isEmpty()) {
-DLEST4 = new Double(split[1934]);
-}
-if (!split[1935].trim().isEmpty()) {
-DLOFT4 = new Double(split[1935]);
-}
-if (!split[1936].trim().isEmpty()) {
-DLWHNY4 = new Double(split[1936]);
-}
-if (!split[1937].trim().isEmpty()) {
-DLWHNM4 = new Double(split[1937]);
-}
-if (!split[1938].trim().isEmpty()) {
-DLWEST4 = new Double(split[1938]);
-}
-if (!split[1939].trim().isEmpty()) {
-DLINT4 = new Double(split[1939]);
-}
-if (!split[1940].trim().isEmpty()) {
-DLBEH4 = new Double(split[1940]);
-}
-if (!split[1941].trim().isEmpty()) {
-DLOWE4 = new Double(split[1941]);
-}
-if (!split[1942].trim().isEmpty()) {
-DLTYPE5 = new Double(split[1942]);
-}
-if (!split[1943].trim().isEmpty()) {
-DSLPAY5 = new Double(split[1943]);
-}
-if (!split[1944].trim().isEmpty()) {
-DSLAMT5 = new Double(split[1944]);
-}
-if (!split[1945].trim().isEmpty()) {
-DSLEST5 = new Double(split[1945]);
-}
-if (!split[1946].trim().isEmpty()) {
-DLWHY29 = new Double(split[1946]);
-}
-if (!split[1947].trim().isEmpty()) {
-DLWHY30 = new Double(split[1947]);
-}
-if (!split[1948].trim().isEmpty()) {
-DLWHY31 = new Double(split[1948]);
-}
-if (!split[1949].trim().isEmpty()) {
-DLWHY32 = new Double(split[1949]);
-}
-if (!split[1950].trim().isEmpty()) {
-DLWHY33 = new Double(split[1950]);
-}
-if (!split[1951].trim().isEmpty()) {
-DLWHY34 = new Double(split[1951]);
-}
-if (!split[1952].trim().isEmpty()) {
-DLWHY35 = new Double(split[1952]);
-}
-if (!split[1953].trim().isEmpty()) {
-DLSEC5 = new Double(split[1953]);
-}
-if (!split[1954].trim().isEmpty()) {
-DLINS5 = new Double(split[1954]);
-}
-if (!split[1955].trim().isEmpty()) {
-DLEST5 = new Double(split[1955]);
-}
-if (!split[1956].trim().isEmpty()) {
-DLOFT5 = new Double(split[1956]);
-}
-if (!split[1957].trim().isEmpty()) {
-DLWHNY5 = new Double(split[1957]);
-}
-if (!split[1958].trim().isEmpty()) {
-DLWHNM5 = new Double(split[1958]);
-}
-if (!split[1959].trim().isEmpty()) {
-DLWEST5 = new Double(split[1959]);
-}
-if (!split[1960].trim().isEmpty()) {
-DLINT5 = new Double(split[1960]);
-}
-if (!split[1961].trim().isEmpty()) {
-DLBEH5 = new Double(split[1961]);
-}
-if (!split[1962].trim().isEmpty()) {
-DLOWE5 = new Double(split[1962]);
-}
-if (!split[1963].trim().isEmpty()) {
-NWLN = new Double(split[1963]);
-}
-if (!split[1964].trim().isEmpty()) {
-NWLNNO = new Double(split[1964]);
-}
-if (!split[1965].trim().isEmpty()) {
-DTLTYPE1 = new Double(split[1965]);
-}
-if (!split[1966].trim().isEmpty()) {
-DTLOWE1 = new Double(split[1966]);
-}
-if (!split[1967].trim().isEmpty()) {
-DTLOWEB1 = new Double(split[1967]);
-}
-if (!split[1968].trim().isEmpty()) {
-DTLTYPE2 = new Double(split[1968]);
-}
-if (!split[1969].trim().isEmpty()) {
-DTLOWE2 = new Double(split[1969]);
-}
-if (!split[1970].trim().isEmpty()) {
-DTLOWEB2 = new Double(split[1970]);
-}
-if (!split[1971].trim().isEmpty()) {
-DTLTYPE3 = new Double(split[1971]);
-}
-if (!split[1972].trim().isEmpty()) {
-DTLOWE3 = new Double(split[1972]);
-}
-if (!split[1973].trim().isEmpty()) {
-DTLOWEB3 = new Double(split[1973]);
-}
-if (!split[1974].trim().isEmpty()) {
-DHBFIX = new Double(split[1974]);
-}
-if (!split[1975].trim().isEmpty()) {
-DHBANY01 = new Double(split[1975]);
-}
-if (!split[1976].trim().isEmpty()) {
-DHBANY02 = new Double(split[1976]);
-}
-if (!split[1977].trim().isEmpty()) {
-DHBANY03 = new Double(split[1977]);
-}
-if (!split[1978].trim().isEmpty()) {
-DHBANY04 = new Double(split[1978]);
-}
-if (!split[1979].trim().isEmpty()) {
-DHBANY05 = new Double(split[1979]);
-}
-if (!split[1980].trim().isEmpty()) {
-DHBANY06 = new Double(split[1980]);
-}
-if (!split[1981].trim().isEmpty()) {
-DHBANY07 = new Double(split[1981]);
-}
-if (!split[1982].trim().isEmpty()) {
-DHBANY08 = new Double(split[1982]);
-}
-if (!split[1983].trim().isEmpty()) {
-DHBANY09 = new Double(split[1983]);
-}
-if (!split[1984].trim().isEmpty()) {
-DHBANY10 = new Double(split[1984]);
-}
-if (!split[1985].trim().isEmpty()) {
-DHBANY11 = new Double(split[1985]);
-}
-if (!split[1986].trim().isEmpty()) {
-DHBAMT01 = new Double(split[1986]);
-}
-if (!split[1987].trim().isEmpty()) {
-DHBAMT02 = new Double(split[1987]);
-}
-if (!split[1988].trim().isEmpty()) {
-DHBAMT03 = new Double(split[1988]);
-}
-if (!split[1989].trim().isEmpty()) {
-DHBAMT04 = new Double(split[1989]);
-}
-if (!split[1990].trim().isEmpty()) {
-DHBAMT05 = new Double(split[1990]);
-}
-if (!split[1991].trim().isEmpty()) {
-DHBAMT06 = new Double(split[1991]);
-}
-if (!split[1992].trim().isEmpty()) {
-DHBAMT07 = new Double(split[1992]);
-}
-if (!split[1993].trim().isEmpty()) {
-DHBAMT08 = new Double(split[1993]);
-}
-if (!split[1994].trim().isEmpty()) {
-DHBAMT09 = new Double(split[1994]);
-}
-if (!split[1995].trim().isEmpty()) {
-DHBAMT10 = new Double(split[1995]);
-}
-if (!split[1996].trim().isEmpty()) {
-DHBAMT11 = new Double(split[1996]);
-}
-if (!split[1997].trim().isEmpty()) {
-DHBEST01 = new Double(split[1997]);
-}
-if (!split[1998].trim().isEmpty()) {
-DHBEST02 = new Double(split[1998]);
-}
-if (!split[1999].trim().isEmpty()) {
-DHBEST03 = new Double(split[1999]);
-}
-if (!split[2000].trim().isEmpty()) {
-DHBEST04 = new Double(split[2000]);
-}
-if (!split[2001].trim().isEmpty()) {
-DHBEST05 = new Double(split[2001]);
-}
-if (!split[2002].trim().isEmpty()) {
-DHBEST06 = new Double(split[2002]);
-}
-if (!split[2003].trim().isEmpty()) {
-DHBEST07 = new Double(split[2003]);
-}
-if (!split[2004].trim().isEmpty()) {
-DHBEST08 = new Double(split[2004]);
-}
-if (!split[2005].trim().isEmpty()) {
-DHBEST09 = new Double(split[2005]);
-}
-if (!split[2006].trim().isEmpty()) {
-DHBEST10 = new Double(split[2006]);
-}
-if (!split[2007].trim().isEmpty()) {
-DHBEST11 = new Double(split[2007]);
-}
-if (!split[2008].trim().isEmpty()) {
-DBURD = new Double(split[2008]);
-}
-if (!split[2009].trim().isEmpty()) {
-DBURDA = new Double(split[2009]);
-}
-if (!split[2010].trim().isEmpty()) {
-DBURDW1 = new Double(split[2010]);
-}
-if (!split[2011].trim().isEmpty()) {
-DBURDW2 = new Double(split[2011]);
-}
-if (!split[2012].trim().isEmpty()) {
-DBURD___W3 = new Double(split[2012]);
-}
-if (!split[2013].trim().isEmpty()) {
-DBURDW4 = new Double(split[2013]);
-}
-if (!split[2014].trim().isEmpty()) {
-DBURDW5 = new Double(split[2014]);
-}
-if (!split[2015].trim().isEmpty()) {
-DBURDW6 = new Double(split[2015]);
-}
-if (!split[2016].trim().isEmpty()) {
-DBURDW7 = new Double(split[2016]);
-}
-if (!split[2017].trim().isEmpty()) {
-DADVMTH = new Double(split[2017]);
-}
-if (!split[2018].trim().isEmpty()) {
-DADVACT1 = new Double(split[2018]);
-}
-if (!split[2019].trim().isEmpty()) {
-DADVACT2 = new Double(split[2019]);
-}
-if (!split[2020].trim().isEmpty()) {
-DADVACT3 = new Double(split[2020]);
-}
-if (!split[2021].trim().isEmpty()) {
-DBURDH = new Double(split[2021]);
-}
-if (!split[2022].trim().isEmpty()) {
-INSPOL = new Double(split[2022]);
-}
-if (!split[2023].trim().isEmpty()) {
-COMMIT1 = new Double(split[2023]);
-}
-if (!split[2024].trim().isEmpty()) {
-COMMIT2 = new Double(split[2024]);
-}
-if (!split[2025].trim().isEmpty()) {
-COMMIT3 = new Double(split[2025]);
-}
-if (!split[2026].trim().isEmpty()) {
-COMMIT4 = new Double(split[2026]);
-}
-if (!split[2027].trim().isEmpty()) {
-COMMIT5 = new Double(split[2027]);
-}
-if (!split[2028].trim().isEmpty()) {
-XINSOL = new Double(split[2028]);
-}
-if (!split[2029].trim().isEmpty()) {
-XINTYP = new Double(split[2029]);
-}
-if (!split[2030].trim().isEmpty()) {
-XINCSE = new Double(split[2030]);
-}
-if (!split[2031].trim().isEmpty()) {
-XBCONSC = new Double(split[2031]);
-}
-if (!split[2032].trim().isEmpty()) {
-XBCON = new Double(split[2032]);
-}
-if (!split[2033].trim().isEmpty()) {
-XBCONREM = new Double(split[2033]);
-}
-if (!split[2034].trim().isEmpty()) {
-XBOK = new Double(split[2034]);
-}
-if (!split[2035].trim().isEmpty()) {
-XBCRT = new Double(split[2035]);
-}
-if (!split[2036].trim().isEmpty()) {
-XDCONSC = new Double(split[2036]);
-}
-if (!split[2037].trim().isEmpty()) {
-XDCON = new Double(split[2037]);
-}
-if (!split[2038].trim().isEmpty()) {
-XDCONREM = new Double(split[2038]);
-}
-if (!split[2039].trim().isEmpty()) {
-XDOK = new Double(split[2039]);
-}
-if (!split[2040].trim().isEmpty()) {
-XDREF = new Double(split[2040]);
-}
-if (!split[2041].trim().isEmpty()) {
-XICONSC = new Double(split[2041]);
-}
-if (!split[2042].trim().isEmpty()) {
-XICON = new Double(split[2042]);
-}
-if (!split[2043].trim().isEmpty()) {
-XICONREM = new Double(split[2043]);
-}
-if (!split[2044].trim().isEmpty()) {
-RENTPAY = new Double(split[2044]);
-}
-if (!split[2045].trim().isEmpty()) {
-DVRENTAMTANNUAL = new Double(split[2045]);
-}
-if (!split[2046].trim().isEmpty()) {
-OTHSRC1 = new Double(split[2046]);
-}
-if (!split[2047].trim().isEmpty()) {
-OTHSRC2 = new Double(split[2047]);
-}
-if (!split[2048].trim().isEmpty()) {
-OTHSRC3 = new Double(split[2048]);
-}
-if (!split[2049].trim().isEmpty()) {
-OIGRR = new Double(split[2049]);
-}
-if (!split[2050].trim().isEmpty()) {
-OIGGT = new Double(split[2050]);
-}
-if (!split[2051].trim().isEmpty()) {
-REGLRPY1 = new Double(split[2051]);
-}
-if (!split[2052].trim().isEmpty()) {
-REGLRPY2 = new Double(split[2052]);
-}
-if (!split[2053].trim().isEmpty()) {
-REGLRPY3 = new Double(split[2053]);
-}
-if (!split[2054].trim().isEmpty()) {
-REGLRPY4 = new Double(split[2054]);
-}
-if (!split[2055].trim().isEmpty()) {
-REGLRPY5 = new Double(split[2055]);
-}
-if (!split[2056].trim().isEmpty()) {
-OTRUST01 = new Double(split[2056]);
-}
-if (!split[2057].trim().isEmpty()) {
-OTRUST02 = new Double(split[2057]);
-}
-if (!split[2058].trim().isEmpty()) {
-OTRUST03 = new Double(split[2058]);
-}
-if (!split[2059].trim().isEmpty()) {
-OTRUST04 = new Double(split[2059]);
-}
-if (!split[2060].trim().isEmpty()) {
-OTRUST05 = new Double(split[2060]);
-}
-if (!split[2061].trim().isEmpty()) {
-OTRUST06 = new Double(split[2061]);
-}
-if (!split[2062].trim().isEmpty()) {
-OTRUST07 = new Double(split[2062]);
-}
-if (!split[2063].trim().isEmpty()) {
-OTRUST08 = new Double(split[2063]);
-}
-if (!split[2064].trim().isEmpty()) {
-OTRUST09 = new Double(split[2064]);
-}
-if (!split[2065].trim().isEmpty()) {
-OTRUST10 = new Double(split[2065]);
-}
-if (!split[2066].trim().isEmpty()) {
-OTRUST11 = new Double(split[2066]);
-}
-if (!split[2067].trim().isEmpty()) {
-OTRUST12 = new Double(split[2067]);
-}
-if (!split[2068].trim().isEmpty()) {
-OTRUST13 = new Double(split[2068]);
-}
-if (!split[2069].trim().isEmpty()) {
-OTRUST14 = new Double(split[2069]);
-}
-if (!split[2070].trim().isEmpty()) {
-OTRUST15 = new Double(split[2070]);
-}
-if (!split[2071].trim().isEmpty()) {
-OSITUAT = new Double(split[2071]);
-}
-if (!split[2072].trim().isEmpty()) {
-OSITCH = new Double(split[2072]);
-}
-if (!split[2073].trim().isEmpty()) {
-OIMPRS1 = new Double(split[2073]);
-}
-if (!split[2074].trim().isEmpty()) {
-OIMPRS2 = new Double(split[2074]);
-}
-if (!split[2075].trim().isEmpty()) {
-OIMPRS3 = new Double(split[2075]);
-}
-if (!split[2076].trim().isEmpty()) {
-OIMPRS4 = new Double(split[2076]);
-}
-if (!split[2077].trim().isEmpty()) {
-OIMPRS5 = new Double(split[2077]);
-}
-if (!split[2078].trim().isEmpty()) {
-OIMPRS6 = new Double(split[2078]);
-}
-if (!split[2079].trim().isEmpty()) {
-OIMPRS7 = new Double(split[2079]);
-}
-if (!split[2080].trim().isEmpty()) {
-OIMPRS8 = new Double(split[2080]);
-}
-if (!split[2081].trim().isEmpty()) {
-OIMPRS9 = new Double(split[2081]);
-}
-if (!split[2082].trim().isEmpty()) {
-OWRSRS01 = new Double(split[2082]);
-}
-if (!split[2083].trim().isEmpty()) {
-OWRSRS02 = new Double(split[2083]);
-}
-if (!split[2084].trim().isEmpty()) {
-OWRSRS03 = new Double(split[2084]);
-}
-if (!split[2085].trim().isEmpty()) {
-OWRSRS04 = new Double(split[2085]);
-}
-if (!split[2086].trim().isEmpty()) {
-OWRSRS05 = new Double(split[2086]);
-}
-if (!split[2087].trim().isEmpty()) {
-OWRSRS06 = new Double(split[2087]);
-}
-if (!split[2088].trim().isEmpty()) {
-OWRSRS07 = new Double(split[2088]);
-}
-if (!split[2089].trim().isEmpty()) {
-OWRSRS08 = new Double(split[2089]);
-}
-if (!split[2090].trim().isEmpty()) {
-OWRSRS09 = new Double(split[2090]);
-}
-if (!split[2091].trim().isEmpty()) {
-OWRSRS10 = new Double(split[2091]);
-}
-if (!split[2092].trim().isEmpty()) {
-ORETINC = new Double(split[2092]);
-}
-if (!split[2093].trim().isEmpty()) {
-SELECTAD = new Double(split[2093]);
-}
-if (!split[2094].trim().isEmpty()) {
-CACTF = new Double(split[2094]);
-}
-if (!split[2095].trim().isEmpty()) {
-CACTV = new Double(split[2095]);
-}
-if (!split[2096].trim().isEmpty()) {
-CACTVB = new Double(split[2096]);
-}
-if (!split[2097].trim().isEmpty()) {
-CATYPE = new Double(split[2097]);
-}
-if (!split[2098].trim().isEmpty()) {
-CAOPEN = new Double(split[2098]);
-}
-if (!split[2099].trim().isEmpty()) {
-CACONTR1 = new Double(split[2099]);
-}
-if (!split[2100].trim().isEmpty()) {
-CACONTR2 = new Double(split[2100]);
-}
-if (!split[2101].trim().isEmpty()) {
-CACONTR3 = new Double(split[2101]);
-}
-if (!split[2102].trim().isEmpty()) {
-CACONTR4 = new Double(split[2102]);
-}
-if (!split[2103].trim().isEmpty()) {
-CACONTR5 = new Double(split[2103]);
-}
-if (!split[2104].trim().isEmpty()) {
-CACONTR6 = new Double(split[2104]);
-}
-if (!split[2105].trim().isEmpty()) {
-CAEXTRA = new Double(split[2105]);
-}
-if (!split[2106].trim().isEmpty()) {
-CASAV = new Double(split[2106]);
-}
-if (!split[2107].trim().isEmpty()) {
-CASVV = new Double(split[2107]);
-}
-if (!split[2108].trim().isEmpty()) {
-CASVB = new Double(split[2108]);
-}
-if (!split[2109].trim().isEmpty()) {
-CACONTRAM1 = new Double(split[2109]);
-}
-if (!split[2110].trim().isEmpty()) {
-CACONTRAMB1 = new Double(split[2110]);
-}
-if (!split[2111].trim().isEmpty()) {
-CACONTRAM2 = new Double(split[2111]);
-}
-if (!split[2112].trim().isEmpty()) {
-CACONTRAMB2 = new Double(split[2112]);
-}
-if (!split[2113].trim().isEmpty()) {
-CACONTRAM3 = new Double(split[2113]);
-}
-if (!split[2114].trim().isEmpty()) {
-CACONTRAMB3 = new Double(split[2114]);
-}
-if (!split[2115].trim().isEmpty()) {
-CACONTRAM4 = new Double(split[2115]);
-}
-if (!split[2116].trim().isEmpty()) {
-CACONTRAMB4 = new Double(split[2116]);
-}
-if (!split[2117].trim().isEmpty()) {
-CACONTRAM5 = new Double(split[2117]);
-}
-if (!split[2118].trim().isEmpty()) {
-CACONTRAMB5 = new Double(split[2118]);
-}
-if (!split[2119].trim().isEmpty()) {
-CACONTRAM6 = new Double(split[2119]);
-}
-if (!split[2120].trim().isEmpty()) {
-CACONTRAMB6 = new Double(split[2120]);
-}
-if (!split[2121].trim().isEmpty()) {
-CAOLDER = new Double(split[2121]);
-}
-if (!split[2122].trim().isEmpty()) {
-CAOTHER1 = new Double(split[2122]);
-}
-if (!split[2123].trim().isEmpty()) {
-CAOTHER2 = new Double(split[2123]);
-}
-if (!split[2124].trim().isEmpty()) {
-CAOTHER3 = new Double(split[2124]);
-}
-if (!split[2125].trim().isEmpty()) {
-CAOTHER4 = new Double(split[2125]);
-}
-if (!split[2126].trim().isEmpty()) {
-CAOTHER5 = new Double(split[2126]);
-}
-if (!split[2127].trim().isEmpty()) {
-NUMCHSAV = new Double(split[2127]);
-}
-if (!split[2128].trim().isEmpty()) {
-OCSVR1 = new Double(split[2128]);
-}
-if (!split[2129].trim().isEmpty()) {
-OCSVR2 = new Double(split[2129]);
-}
-if (!split[2130].trim().isEmpty()) {
-OCSVR3 = new Double(split[2130]);
-}
-if (!split[2131].trim().isEmpty()) {
-OCSVR4 = new Double(split[2131]);
-}
-if (!split[2132].trim().isEmpty()) {
-OCSVR5 = new Double(split[2132]);
-}
-if (!split[2133].trim().isEmpty()) {
-OCSVR6 = new Double(split[2133]);
-}
-if (!split[2134].trim().isEmpty()) {
-OCSVR7 = new Double(split[2134]);
-}
-if (!split[2135].trim().isEmpty()) {
-OCSVR8 = new Double(split[2135]);
-}
-if (!split[2136].trim().isEmpty()) {
-IHRECNT = new Double(split[2136]);
-}
-if (!split[2137].trim().isEmpty()) {
-IHRCNUM = new Double(split[2137]);
-}
-if (!split[2138].trim().isEmpty()) {
-IWAT1 = new Double(split[2138]);
-}
-if (!split[2139].trim().isEmpty()) {
-IWAT2 = new Double(split[2139]);
-}
-if (!split[2140].trim().isEmpty()) {
-IWAT3 = new Double(split[2140]);
-}
-if (!split[2141].trim().isEmpty()) {
-IWAT4 = new Double(split[2141]);
-}
-if (!split[2142].trim().isEmpty()) {
-IWAT5 = new Double(split[2142]);
-}
-if (!split[2143].trim().isEmpty()) {
-IWAT6 = new Double(split[2143]);
-}
-if (!split[2144].trim().isEmpty()) {
-IWHO = new Double(split[2144]);
-}
-if (!split[2145].trim().isEmpty()) {
-IVAL1 = new Double(split[2145]);
-}
-if (!split[2146].trim().isEmpty()) {
-IVALB1 = new Double(split[2146]);
-}
-if (!split[2147].trim().isEmpty()) {
-IHSE1 = new Double(split[2147]);
-}
-if (!split[2148].trim().isEmpty()) {
-IHSE2 = new Double(split[2148]);
-}
-if (!split[2149].trim().isEmpty()) {
-IHSE3 = new Double(split[2149]);
-}
-if (!split[2150].trim().isEmpty()) {
-IHSE4 = new Double(split[2150]);
-}
-if (!split[2151].trim().isEmpty()) {
-IHSE5 = new Double(split[2151]);
-}
-if (!split[2152].trim().isEmpty()) {
-IHSE6 = new Double(split[2152]);
-}
-if (!split[2153].trim().isEmpty()) {
-IGDS1 = new Double(split[2153]);
-}
-if (!split[2154].trim().isEmpty()) {
-IGDS2 = new Double(split[2154]);
-}
-if (!split[2155].trim().isEmpty()) {
-IGDS3 = new Double(split[2155]);
-}
-if (!split[2156].trim().isEmpty()) {
-IGDS4 = new Double(split[2156]);
-}
-if (!split[2157].trim().isEmpty()) {
-IGDS5 = new Double(split[2157]);
-}
-if (!split[2158].trim().isEmpty()) {
-IGDS6 = new Double(split[2158]);
-}
-if (!split[2159].trim().isEmpty()) {
-IGDS7 = new Double(split[2159]);
-}
-if (!split[2160].trim().isEmpty()) {
-IWAT7 = new Double(split[2160]);
-}
-if (!split[2161].trim().isEmpty()) {
-IWAT8 = new Double(split[2161]);
-}
-if (!split[2162].trim().isEmpty()) {
-IWAT9 = new Double(split[2162]);
-}
-if (!split[2163].trim().isEmpty()) {
-IWAT10 = new Double(split[2163]);
-}
-if (!split[2164].trim().isEmpty()) {
-IWAT11 = new Double(split[2164]);
-}
-if (!split[2165].trim().isEmpty()) {
-IWAT12 = new Double(split[2165]);
-}
-if (!split[2166].trim().isEmpty()) {
-IWHO2 = new Double(split[2166]);
-}
-if (!split[2167].trim().isEmpty()) {
-IVALB2 = new Double(split[2167]);
-}
-if (!split[2168].trim().isEmpty()) {
-IHSE7 = new Double(split[2168]);
-}
-if (!split[2169].trim().isEmpty()) {
-IHSE8 = new Double(split[2169]);
-}
-if (!split[2170].trim().isEmpty()) {
-IHSE9 = new Double(split[2170]);
-}
-if (!split[2171].trim().isEmpty()) {
-IHSE10 = new Double(split[2171]);
-}
-if (!split[2172].trim().isEmpty()) {
-IHSE11 = new Double(split[2172]);
-}
-if (!split[2173].trim().isEmpty()) {
-IHSE12 = new Double(split[2173]);
-}
-if (!split[2174].trim().isEmpty()) {
-IGDS8 = new Double(split[2174]);
-}
-if (!split[2175].trim().isEmpty()) {
-IGDS9 = new Double(split[2175]);
-}
-if (!split[2176].trim().isEmpty()) {
-IGDS10 = new Double(split[2176]);
-}
-if (!split[2177].trim().isEmpty()) {
-IGDS11 = new Double(split[2177]);
-}
-if (!split[2178].trim().isEmpty()) {
-IGDS12 = new Double(split[2178]);
-}
-if (!split[2179].trim().isEmpty()) {
-IGDS13 = new Double(split[2179]);
-}
-if (!split[2180].trim().isEmpty()) {
-IGDS14 = new Double(split[2180]);
-}
-if (!split[2181].trim().isEmpty()) {
-IWAT13 = new Double(split[2181]);
-}
-if (!split[2182].trim().isEmpty()) {
-IWAT14 = new Double(split[2182]);
-}
-if (!split[2183].trim().isEmpty()) {
-IWAT15 = new Double(split[2183]);
-}
-if (!split[2184].trim().isEmpty()) {
-IWAT16 = new Double(split[2184]);
-}
-if (!split[2185].trim().isEmpty()) {
-IWAT17 = new Double(split[2185]);
-}
-if (!split[2186].trim().isEmpty()) {
-IWAT18 = new Double(split[2186]);
-}
-if (!split[2187].trim().isEmpty()) {
-IWHO3 = new Double(split[2187]);
-}
-if (!split[2188].trim().isEmpty()) {
-IVALB3 = new Double(split[2188]);
-}
-if (!split[2189].trim().isEmpty()) {
-IHSE13 = new Double(split[2189]);
-}
-if (!split[2190].trim().isEmpty()) {
-IHSE14 = new Double(split[2190]);
-}
-if (!split[2191].trim().isEmpty()) {
-IHSE15 = new Double(split[2191]);
-}
-if (!split[2192].trim().isEmpty()) {
-IHSE16 = new Double(split[2192]);
-}
-if (!split[2193].trim().isEmpty()) {
-IHSE17 = new Double(split[2193]);
-}
-if (!split[2194].trim().isEmpty()) {
-IHSE18 = new Double(split[2194]);
-}
-if (!split[2195].trim().isEmpty()) {
-IGDS15 = new Double(split[2195]);
-}
-if (!split[2196].trim().isEmpty()) {
-IGDS16 = new Double(split[2196]);
-}
-if (!split[2197].trim().isEmpty()) {
-IGDS17 = new Double(split[2197]);
-}
-if (!split[2198].trim().isEmpty()) {
-IGDS18 = new Double(split[2198]);
-}
-if (!split[2199].trim().isEmpty()) {
-IGDS19 = new Double(split[2199]);
-}
-if (!split[2200].trim().isEmpty()) {
-IGDS20 = new Double(split[2200]);
-}
-if (!split[2201].trim().isEmpty()) {
-IGDS21 = new Double(split[2201]);
-}
-if (!split[2202].trim().isEmpty()) {
-ILGIFT = new Double(split[2202]);
-}
-if (!split[2203].trim().isEmpty()) {
-IGFVALB = new Double(split[2203]);
-}
-if (!split[2204].trim().isEmpty()) {
-NEWGIFT = new Double(split[2204]);
-}
-if (!split[2205].trim().isEmpty()) {
-ILOAN = new Double(split[2205]);
-}
-if (!split[2206].trim().isEmpty()) {
-ILNUSE01 = new Double(split[2206]);
-}
-if (!split[2207].trim().isEmpty()) {
-ILNUSE02 = new Double(split[2207]);
-}
-if (!split[2208].trim().isEmpty()) {
-ILNUSE03 = new Double(split[2208]);
-}
-if (!split[2209].trim().isEmpty()) {
-ILNUSE04 = new Double(split[2209]);
-}
-if (!split[2210].trim().isEmpty()) {
-ILNUSE05 = new Double(split[2210]);
-}
-if (!split[2211].trim().isEmpty()) {
-ILNUSE06 = new Double(split[2211]);
-}
-if (!split[2212].trim().isEmpty()) {
-ILNUSE07 = new Double(split[2212]);
-}
-if (!split[2213].trim().isEmpty()) {
-ILNUSE08 = new Double(split[2213]);
-}
-if (!split[2214].trim().isEmpty()) {
-ILNUSE09 = new Double(split[2214]);
-}
-if (!split[2215].trim().isEmpty()) {
-ILNUSE10 = new Double(split[2215]);
-}
-if (!split[2216].trim().isEmpty()) {
-ILNVAL = new Double(split[2216]);
-}
-if (!split[2217].trim().isEmpty()) {
-ILNVALB = new Double(split[2217]);
-}
-if (!split[2218].trim().isEmpty()) {
-ILNPBK = new Double(split[2218]);
-}
-if (!split[2219].trim().isEmpty()) {
-ILNPBAM = new Double(split[2219]);
-}
-if (!split[2220].trim().isEmpty()) {
-ILUMP = new Double(split[2220]);
-}
-if (!split[2221].trim().isEmpty()) {
-ILUMTY1 = new Double(split[2221]);
-}
-if (!split[2222].trim().isEmpty()) {
-ILUMTY2 = new Double(split[2222]);
-}
-if (!split[2223].trim().isEmpty()) {
-ILUMTY3 = new Double(split[2223]);
-}
-if (!split[2224].trim().isEmpty()) {
-ILUMTY4 = new Double(split[2224]);
-}
-if (!split[2225].trim().isEmpty()) {
-ILUMTY5 = new Double(split[2225]);
-}
-if (!split[2226].trim().isEmpty()) {
-ILUMTY6 = new Double(split[2226]);
-}
-if (!split[2227].trim().isEmpty()) {
-ILUMTY7 = new Double(split[2227]);
-}
-if (!split[2228].trim().isEmpty()) {
-ILIFB = new Double(split[2228]);
-}
-if (!split[2229].trim().isEmpty()) {
-ILUPP = new Double(split[2229]);
-}
-if (!split[2230].trim().isEmpty()) {
-ILUPB = new Double(split[2230]);
-}
-if (!split[2231].trim().isEmpty()) {
-ILACB = new Double(split[2231]);
-}
-if (!split[2232].trim().isEmpty()) {
-ILINB = new Double(split[2232]);
-}
-if (!split[2233].trim().isEmpty()) {
-ILRDB = new Double(split[2233]);
-}
-if (!split[2234].trim().isEmpty()) {
-ILWNB = new Double(split[2234]);
-}
-if (!split[2235].trim().isEmpty()) {
-ILOTB = new Double(split[2235]);
-}
-if (!split[2236].trim().isEmpty()) {
-TINTRO = new Double(split[2236]);
-}
-if (!split[2237].trim().isEmpty()) {
-TSETT = new Double(split[2237]);
-}
-if (!split[2238].trim().isEmpty()) {
-TSNUM1 = new Double(split[2238]);
-}
-if (!split[2239].trim().isEmpty()) {
-TSNEW = new Double(split[2239]);
-}
-if (!split[2240].trim().isEmpty()) {
-TSNUM2 = new Double(split[2240]);
-}
-if (!split[2241].trim().isEmpty()) {
-TJNT1 = new Double(split[2241]);
-}
-if (!split[2242].trim().isEmpty()) {
-TJNT2 = new Double(split[2242]);
-}
-if (!split[2243].trim().isEmpty()) {
-TACC1 = new Double(split[2243]);
-}
-if (!split[2244].trim().isEmpty()) {
-TBEN1 = new Double(split[2244]);
-}
-if (!split[2245].trim().isEmpty()) {
-TBEN2 = new Double(split[2245]);
-}
-if (!split[2246].trim().isEmpty()) {
-TBEN3 = new Double(split[2246]);
-}
-if (!split[2247].trim().isEmpty()) {
-TBEN4 = new Double(split[2247]);
-}
-if (!split[2248].trim().isEmpty()) {
-TBEN5 = new Double(split[2248]);
-}
-if (!split[2249].trim().isEmpty()) {
-TBEN6 = new Double(split[2249]);
-}
-if (!split[2250].trim().isEmpty()) {
-TBEN7 = new Double(split[2250]);
-}
-if (!split[2251].trim().isEmpty()) {
-TBEN8 = new Double(split[2251]);
-}
-if (!split[2252].trim().isEmpty()) {
-TVAL1 = new Double(split[2252]);
-}
-if (!split[2253].trim().isEmpty()) {
-TVALB1 = new Double(split[2253]);
-}
-if (!split[2254].trim().isEmpty()) {
-TDUP1 = new Double(split[2254]);
-}
-if (!split[2255].trim().isEmpty()) {
-TDUPA1 = new Double(split[2255]);
-}
-if (!split[2256].trim().isEmpty()) {
-TADDVL = new Double(split[2256]);
-}
-if (!split[2257].trim().isEmpty()) {
-TADDVB1 = new Double(split[2257]);
-}
-if (!split[2258].trim().isEmpty()) {
-TJNT3 = new Double(split[2258]);
-}
-if (!split[2259].trim().isEmpty()) {
-TJNT4 = new Double(split[2259]);
-}
-if (!split[2260].trim().isEmpty()) {
-TACC2 = new Double(split[2260]);
-}
-if (!split[2261].trim().isEmpty()) {
-TBEN9 = new Double(split[2261]);
-}
-if (!split[2262].trim().isEmpty()) {
-TBEN10 = new Double(split[2262]);
-}
-if (!split[2263].trim().isEmpty()) {
-TBEN11 = new Double(split[2263]);
-}
-if (!split[2264].trim().isEmpty()) {
-TBEN12 = new Double(split[2264]);
-}
-if (!split[2265].trim().isEmpty()) {
-TBEN13 = new Double(split[2265]);
-}
-if (!split[2266].trim().isEmpty()) {
-TBEN14 = new Double(split[2266]);
-}
-if (!split[2267].trim().isEmpty()) {
-TBEN15 = new Double(split[2267]);
-}
-if (!split[2268].trim().isEmpty()) {
-TBEN16 = new Double(split[2268]);
-}
-if (!split[2269].trim().isEmpty()) {
-TVAL2 = new Double(split[2269]);
-}
-if (!split[2270].trim().isEmpty()) {
-TVALB2 = new Double(split[2270]);
-}
-if (!split[2271].trim().isEmpty()) {
-TDUP2 = new Double(split[2271]);
-}
-if (!split[2272].trim().isEmpty()) {
-TDUPA2 = new Double(split[2272]);
-}
-if (!split[2273].trim().isEmpty()) {
-TADDVL2 = new Double(split[2273]);
-}
-if (!split[2274].trim().isEmpty()) {
-TADDVB2 = new Double(split[2274]);
-}
-if (!split[2275].trim().isEmpty()) {
-TSNO3 = new Double(split[2275]);
-}
-if (!split[2276].trim().isEmpty()) {
-TJNT5 = new Double(split[2276]);
-}
-if (!split[2277].trim().isEmpty()) {
-TJNT6 = new Double(split[2277]);
-}
-if (!split[2278].trim().isEmpty()) {
-TACC3 = new Double(split[2278]);
-}
-if (!split[2279].trim().isEmpty()) {
-TBEN17 = new Double(split[2279]);
-}
-if (!split[2280].trim().isEmpty()) {
-TBEN18 = new Double(split[2280]);
-}
-if (!split[2281].trim().isEmpty()) {
-TBEN19 = new Double(split[2281]);
-}
-if (!split[2282].trim().isEmpty()) {
-TBEN20 = new Double(split[2282]);
-}
-if (!split[2283].trim().isEmpty()) {
-TBEN21 = new Double(split[2283]);
-}
-if (!split[2284].trim().isEmpty()) {
-TBEN22 = new Double(split[2284]);
-}
-if (!split[2285].trim().isEmpty()) {
-TBEN23 = new Double(split[2285]);
-}
-if (!split[2286].trim().isEmpty()) {
-TBEN24 = new Double(split[2286]);
-}
-if (!split[2287].trim().isEmpty()) {
-TVAL3 = new Double(split[2287]);
-}
-if (!split[2288].trim().isEmpty()) {
-TVALB3 = new Double(split[2288]);
-}
-if (!split[2289].trim().isEmpty()) {
-TDUP3 = new Double(split[2289]);
-}
-if (!split[2290].trim().isEmpty()) {
-TDUPA3 = new Double(split[2290]);
-}
-if (!split[2291].trim().isEmpty()) {
-TADDVL3 = new Double(split[2291]);
-}
-if (!split[2292].trim().isEmpty()) {
-TADDVB3 = new Double(split[2292]);
-}
-if (!split[2293].trim().isEmpty()) {
-TBENEF = new Double(split[2293]);
-}
-if (!split[2294].trim().isEmpty()) {
-TBENNUM = new Double(split[2294]);
-}
-if (!split[2295].trim().isEmpty()) {
-TWHO1 = new Double(split[2295]);
-}
-if (!split[2296].trim().isEmpty()) {
-TWHO2 = new Double(split[2296]);
-}
-if (!split[2297].trim().isEmpty()) {
-TWHO3 = new Double(split[2297]);
-}
-if (!split[2298].trim().isEmpty()) {
-TWHO4 = new Double(split[2298]);
-}
-if (!split[2299].trim().isEmpty()) {
-TWHO5 = new Double(split[2299]);
-}
-if (!split[2300].trim().isEmpty()) {
-TWHO6 = new Double(split[2300]);
-}
-if (!split[2301].trim().isEmpty()) {
-TBINC1 = new Double(split[2301]);
-}
-if (!split[2302].trim().isEmpty()) {
-TBREC1 = new Double(split[2302]);
-}
-if (!split[2303].trim().isEmpty()) {
-TBRECB1 = new Double(split[2303]);
-}
-if (!split[2304].trim().isEmpty()) {
-TBCAP1 = new Double(split[2304]);
-}
-if (!split[2305].trim().isEmpty()) {
-TBCKNO1 = new Double(split[2305]);
-}
-if (!split[2306].trim().isEmpty()) {
-TBCAPY1 = new Double(split[2306]);
-}
-if (!split[2307].trim().isEmpty()) {
-TBVALB1 = new Double(split[2307]);
-}
-if (!split[2308].trim().isEmpty()) {
-TWHO7 = new Double(split[2308]);
-}
-if (!split[2309].trim().isEmpty()) {
-TWHO8 = new Double(split[2309]);
-}
-if (!split[2310].trim().isEmpty()) {
-TWHO9 = new Double(split[2310]);
-}
-if (!split[2311].trim().isEmpty()) {
-TWHO10 = new Double(split[2311]);
-}
-if (!split[2312].trim().isEmpty()) {
-TWHO11 = new Double(split[2312]);
-}
-if (!split[2313].trim().isEmpty()) {
-TWHO12 = new Double(split[2313]);
-}
-if (!split[2314].trim().isEmpty()) {
-TBINC2 = new Double(split[2314]);
-}
-if (!split[2315].trim().isEmpty()) {
-TBREC2 = new Double(split[2315]);
-}
-if (!split[2316].trim().isEmpty()) {
-TBRECB2 = new Double(split[2316]);
-}
-if (!split[2317].trim().isEmpty()) {
-TBCAP2 = new Double(split[2317]);
-}
-if (!split[2318].trim().isEmpty()) {
-TBCKNO2 = new Double(split[2318]);
-}
-if (!split[2319].trim().isEmpty()) {
-TBCAPY2 = new Double(split[2319]);
-}
-if (!split[2320].trim().isEmpty()) {
-TBVALB2 = new Double(split[2320]);
-}
-if (!split[2321].trim().isEmpty()) {
-TWHO13 = new Double(split[2321]);
-}
-if (!split[2322].trim().isEmpty()) {
-TWHO14 = new Double(split[2322]);
-}
-if (!split[2323].trim().isEmpty()) {
-TWHO15 = new Double(split[2323]);
-}
-if (!split[2324].trim().isEmpty()) {
-TWHO16 = new Double(split[2324]);
-}
-if (!split[2325].trim().isEmpty()) {
-TWHO17 = new Double(split[2325]);
-}
-if (!split[2326].trim().isEmpty()) {
-TWHO18 = new Double(split[2326]);
-}
-if (!split[2327].trim().isEmpty()) {
-TBINC3 = new Double(split[2327]);
-}
-if (!split[2328].trim().isEmpty()) {
-TBREC3 = new Double(split[2328]);
-}
-if (!split[2329].trim().isEmpty()) {
-TBRECB3 = new Double(split[2329]);
-}
-if (!split[2330].trim().isEmpty()) {
-TBCAP3 = new Double(split[2330]);
-}
-if (!split[2331].trim().isEmpty()) {
-TBCKNO3 = new Double(split[2331]);
-}
-if (!split[2332].trim().isEmpty()) {
-TBCAPY3 = new Double(split[2332]);
-}
-if (!split[2333].trim().isEmpty()) {
-TBVALB3 = new Double(split[2333]);
-}
-if (!split[2334].trim().isEmpty()) {
-OTHASCH = new Double(split[2334]);
-}
-if (!split[2335].trim().isEmpty()) {
-OTHASVL = new Double(split[2335]);
-}
-if (!split[2336].trim().isEmpty()) {
-OTHASVB = new Double(split[2336]);
-}
-if (!split[2337].trim().isEmpty()) {
-COMMI = new Double(split[2337]);
-}
-if (!split[2338].trim().isEmpty()) {
-ORUNOUT = new Double(split[2338]);
-}
-if (!split[2339].trim().isEmpty()) {
-ORUNDO01 = new Double(split[2339]);
-}
-if (!split[2340].trim().isEmpty()) {
-ORUNDO02 = new Double(split[2340]);
-}
-if (!split[2341].trim().isEmpty()) {
-ORUNDO03 = new Double(split[2341]);
-}
-if (!split[2342].trim().isEmpty()) {
-ORUNDO04 = new Double(split[2342]);
-}
-if (!split[2343].trim().isEmpty()) {
-ORUNDO05 = new Double(split[2343]);
-}
-if (!split[2344].trim().isEmpty()) {
-ORUNDO06 = new Double(split[2344]);
-}
-if (!split[2345].trim().isEmpty()) {
-ORUNDO07 = new Double(split[2345]);
-}
-if (!split[2346].trim().isEmpty()) {
-ORUNDO08 = new Double(split[2346]);
-}
-if (!split[2347].trim().isEmpty()) {
-ORUNDO09 = new Double(split[2347]);
-}
-if (!split[2348].trim().isEmpty()) {
-ORUNDO10 = new Double(split[2348]);
-}
-if (!split[2349].trim().isEmpty()) {
-ORUNDO11 = new Double(split[2349]);
-}
-if (!split[2350].trim().isEmpty()) {
-IFBANKACC = new Double(split[2350]);
-}
-if (!split[2351].trim().isEmpty()) {
-KNOWBALANCE = new Double(split[2351]);
-}
-if (!split[2352].trim().isEmpty()) {
-OFTCHECKED = new Double(split[2352]);
-}
-if (!split[2353].trim().isEmpty()) {
-KNOHOWMUCH = new Double(split[2353]);
-}
-if (!split[2354].trim().isEmpty()) {
-INCDROP = new Double(split[2354]);
-}
-if (!split[2355].trim().isEmpty()) {
-FNDCASH1 = new Double(split[2355]);
-}
-if (!split[2356].trim().isEmpty()) {
-FNDCASH2 = new Double(split[2356]);
-}
-if (!split[2357].trim().isEmpty()) {
-FNDCASH3 = new Double(split[2357]);
-}
-if (!split[2358].trim().isEmpty()) {
-FNDCASH4 = new Double(split[2358]);
-}
-if (!split[2359].trim().isEmpty()) {
-FNDCASH5 = new Double(split[2359]);
-}
-if (!split[2360].trim().isEmpty()) {
-ORGNSED = new Double(split[2360]);
-}
-if (!split[2361].trim().isEmpty()) {
-RNYDAY = new Double(split[2361]);
-}
-if (!split[2362].trim().isEmpty()) {
-LVTDAY = new Double(split[2362]);
-}
-if (!split[2363].trim().isEmpty()) {
-SPENDM = new Double(split[2363]);
-}
-if (!split[2364].trim().isEmpty()) {
-GSTDNW = new Double(split[2364]);
-}
-if (!split[2365].trim().isEmpty()) {
-PRODTS = new Double(split[2365]);
-}
-if (!split[2366].trim().isEmpty()) {
-SOURC2P = new Double(split[2366]);
-}
-if (!split[2367].trim().isEmpty()) {
-CHOICP = new Double(split[2367]);
-}
-if (!split[2368].trim().isEmpty()) {
-EYE1 = new Double(split[2368]);
-}
-if (!split[2369].trim().isEmpty()) {
-EYE2 = new Double(split[2369]);
-}
-if (!split[2370].trim().isEmpty()) {
-EYE3 = new Double(split[2370]);
-}
-if (!split[2371].trim().isEmpty()) {
-EYE4 = new Double(split[2371]);
-}
-if (!split[2372].trim().isEmpty()) {
-EYE5 = new Double(split[2372]);
-}
-if (!split[2373].trim().isEmpty()) {
-EYE6 = new Double(split[2373]);
-}
-if (!split[2374].trim().isEmpty()) {
-EYE7 = new Double(split[2374]);
-}
-if (!split[2375].trim().isEmpty()) {
-EYE8 = new Double(split[2375]);
-}
-if (!split[2376].trim().isEmpty()) {
-INDFREQ = new Double(split[2376]);
-}
-if (!split[2377].trim().isEmpty()) {
-ORISKA = new Double(split[2377]);
-}
-if (!split[2378].trim().isEmpty()) {
-ORISKC = new Double(split[2378]);
-}
-if (!split[2379].trim().isEmpty()) {
-OSAFESAV = new Double(split[2379]);
-}
-if (!split[2380].trim().isEmpty()) {
-ORISKS = new Double(split[2380]);
-}
-if (!split[2381].trim().isEmpty()) {
-QHEALTH1 = new Double(split[2381]);
-}
-if (!split[2382].trim().isEmpty()) {
-CUTDOWN = new Double(split[2382]);
-}
-if (!split[2383].trim().isEmpty()) {
-LSILL = new Double(split[2383]);
-}
-if (!split[2384].trim().isEmpty()) {
-ILLLIM = new Double(split[2384]);
-}
-if (!split[2385].trim().isEmpty()) {
-DISTYPE1 = new Double(split[2385]);
-}
-if (!split[2386].trim().isEmpty()) {
-DISTYPE2 = new Double(split[2386]);
-}
-if (!split[2387].trim().isEmpty()) {
-DISTYPE3 = new Double(split[2387]);
-}
-if (!split[2388].trim().isEmpty()) {
-DISTYPE4 = new Double(split[2388]);
-}
-if (!split[2389].trim().isEmpty()) {
-DISTYPE5 = new Double(split[2389]);
-}
-if (!split[2390].trim().isEmpty()) {
-DISTYPE6 = new Double(split[2390]);
-}
-if (!split[2391].trim().isEmpty()) {
-DISTYPE7 = new Double(split[2391]);
-}
-if (!split[2392].trim().isEmpty()) {
-DISTYPE8 = new Double(split[2392]);
-}
-if (!split[2393].trim().isEmpty()) {
-DISTYPE9 = new Double(split[2393]);
-}
-if (!split[2394].trim().isEmpty()) {
-DISEVER = new Double(split[2394]);
-}
-if (!split[2395].trim().isEmpty()) {
-FBSITU = new Double(split[2395]);
-}
-if (!split[2396].trim().isEmpty()) {
-FBSIBS = new Double(split[2396]);
-}
-if (!split[2397].trim().isEmpty()) {
-FBTEN = new Double(split[2397]);
-}
-if (!split[2398].trim().isEmpty()) {
-FBFAED = new Double(split[2398]);
-}
-if (!split[2399].trim().isEmpty()) {
-FBMOED = new Double(split[2399]);
-}
-if (!split[2400].trim().isEmpty()) {
-FTHECST = new Double(split[2400]);
-}
-if (!split[2401].trim().isEmpty()) {
-MTHECST = new Double(split[2401]);
-}
-if (!split[2402].trim().isEmpty()) {
-DWELLTYP = new Double(split[2402]);
-}
-if (!split[2403].trim().isEmpty()) {
-FLOORN = new Double(split[2403]);
-}
-if (!split[2404].trim().isEmpty()) {
-IOUT1 = new Double(split[2404]);
-}
-if (!split[2405].trim().isEmpty()) {
-PROXPERS = new Double(split[2405]);
-}
-if (!split[2406].trim().isEmpty()) {
-NOUNITS = new Double(split[2406]);
-}
-if (!split[2407].trim().isEmpty()) {
-DVBENU1 = new Double(split[2407]);
-}
-if (!split[2408].trim().isEmpty()) {
-DVNUMBU = new Double(split[2408]);
-}
-if (!split[2409].trim().isEmpty()) {
-ES2000 = new Double(split[2409]);
-}
-if (!split[2410].trim().isEmpty()) {
-NSSEC = new Double(split[2410]);
-}
-if (!split[2411].trim().isEmpty()) {
-NSSECB = new Double(split[2411]);
-}
-if (!split[2412].trim().isEmpty()) {
-NSSEC5 = new Double(split[2412]);
-}
-if (!split[2413].trim().isEmpty()) {
-NSSEC3 = new Double(split[2413]);
-}
-if (!split[2414].trim().isEmpty()) {
-HOUT = new Double(split[2414]);
-}
-if (!split[2415].trim().isEmpty()) {
-HPROX = new Double(split[2415]);
-}
-if (!split[2416].trim().isEmpty()) {
-PENIND1 = new Double(split[2416]);
-}
-if (!split[2417].trim().isEmpty()) {
-PENIND2 = new Double(split[2417]);
-}
-if (!split[2418].trim().isEmpty()) {
-PENIND3 = new Double(split[2418]);
-}
-if (!split[2419].trim().isEmpty()) {
-PENIND4 = new Double(split[2419]);
-}
-if (!split[2420].trim().isEmpty()) {
-PENIND5 = new Double(split[2420]);
-}
-if (!split[2421].trim().isEmpty()) {
-PENIND6 = new Double(split[2421]);
-}
-if (!split[2422].trim().isEmpty()) {
-UVALS = new Double(split[2422]);
-}
-if (!split[2423].trim().isEmpty()) {
-UVALBS = new Double(split[2423]);
-}
-if (!split[2424].trim().isEmpty()) {
-UDEBTS = new Double(split[2424]);
-}
-if (!split[2425].trim().isEmpty()) {
-UDEBTBS = new Double(split[2425]);
-}
-if (!split[2426].trim().isEmpty()) {
-UGDVBS = new Double(split[2426]);
-}
-if (!split[2427].trim().isEmpty()) {
-UVALL = new Double(split[2427]);
-}
-if (!split[2428].trim().isEmpty()) {
-UVALBL = new Double(split[2428]);
-}
-if (!split[2429].trim().isEmpty()) {
-UDEBTL = new Double(split[2429]);
-}
-if (!split[2430].trim().isEmpty()) {
-UDEBTBL = new Double(split[2430]);
-}
-if (!split[2431].trim().isEmpty()) {
-UGDVBL = new Double(split[2431]);
-}
-if (!split[2432].trim().isEmpty()) {
-UVALO = new Double(split[2432]);
-}
-if (!split[2433].trim().isEmpty()) {
-UVALBO = new Double(split[2433]);
-}
-if (!split[2434].trim().isEmpty()) {
-UDEBTO = new Double(split[2434]);
-}
-if (!split[2435].trim().isEmpty()) {
-UDEBTBO = new Double(split[2435]);
-}
-if (!split[2436].trim().isEmpty()) {
-UVALLU = new Double(split[2436]);
-}
-if (!split[2437].trim().isEmpty()) {
-UVALBLU = new Double(split[2437]);
-}
-if (!split[2438].trim().isEmpty()) {
-UDEBTLU = new Double(split[2438]);
-}
-if (!split[2439].trim().isEmpty()) {
-UDEBTBLU = new Double(split[2439]);
-}
-if (!split[2440].trim().isEmpty()) {
-UVALOS = new Double(split[2440]);
-}
-if (!split[2441].trim().isEmpty()) {
-UVALBOS = new Double(split[2441]);
-}
-if (!split[2442].trim().isEmpty()) {
-UDEBTOS = new Double(split[2442]);
-}
-if (!split[2443].trim().isEmpty()) {
-UDEBTBOS = new Double(split[2443]);
-}
-if (!split[2444].trim().isEmpty()) {
-UGDVBOS = new Double(split[2444]);
-}
-if (!split[2445].trim().isEmpty()) {
-UVALOR = new Double(split[2445]);
-}
-if (!split[2446].trim().isEmpty()) {
-UVALBOR = new Double(split[2446]);
-}
-if (!split[2447].trim().isEmpty()) {
-UDEBTOR = new Double(split[2447]);
-}
-if (!split[2448].trim().isEmpty()) {
-UDEBTBOR = new Double(split[2448]);
-}
-if (!split[2449].trim().isEmpty()) {
-RELIGE = new Double(split[2449]);
-}
-if (!split[2450].trim().isEmpty()) {
-RELIGW = new Double(split[2450]);
-}
-if (!split[2451].trim().isEmpty()) {
-RELIGS = new Double(split[2451]);
-}
-if (!split[2452].trim().isEmpty()) {
-CTPAY = new Double(split[2452]);
-}
-if (!split[2453].trim().isEmpty()) {
-CTPAYW = new Double(split[2453]);
-}
-if (!split[2454].trim().isEmpty()) {
-CTPAYS = new Double(split[2454]);
-}
-if (!split[2455].trim().isEmpty()) {
-EVERWK = new Double(split[2455]);
-}
-if (!split[2456].trim().isEmpty()) {
-PDCVAL3 = new Double(split[2456]);
-}
-if (!split[2457].trim().isEmpty()) {
-DVPUBLPRIV = new Double(split[2457]);
-}
-if (!split[2458].trim().isEmpty()) {
-UDEBTS_I = new Double(split[2458]);
-}
-if (!split[2459].trim().isEmpty()) {
-UDEBTS_IFLAG = new Double(split[2459]);
-}
-if (!split[2460].trim().isEmpty()) {
-UDEBTL_I = new Double(split[2460]);
-}
-if (!split[2461].trim().isEmpty()) {
-UDEBTL_IFLAG = new Double(split[2461]);
-}
-if (!split[2462].trim().isEmpty()) {
-UDEBTO_I = new Double(split[2462]);
-}
-if (!split[2463].trim().isEmpty()) {
-UDEBTO_IFLAG = new Double(split[2463]);
-}
-if (!split[2464].trim().isEmpty()) {
-UDEBTLU_I = new Double(split[2464]);
-}
-if (!split[2465].trim().isEmpty()) {
-UDEBTLU_IFLAG = new Double(split[2465]);
-}
-if (!split[2466].trim().isEmpty()) {
-UDEBTOS_I = new Double(split[2466]);
-}
-if (!split[2467].trim().isEmpty()) {
-UDEBTOS_IFLAG = new Double(split[2467]);
-}
-if (!split[2468].trim().isEmpty()) {
-UDEBTOR_I = new Double(split[2468]);
-}
-if (!split[2469].trim().isEmpty()) {
-UDEBTOR_IFLAG = new Double(split[2469]);
-}
-if (!split[2470].trim().isEmpty()) {
-UPROP1_I = new Double(split[2470]);
-}
-if (!split[2471].trim().isEmpty()) {
-UPROP1_IFLAG = new Double(split[2471]);
-}
-if (!split[2472].trim().isEmpty()) {
-UPROP2_I = new Double(split[2472]);
-}
-if (!split[2473].trim().isEmpty()) {
-UPROP2_IFLAG = new Double(split[2473]);
-}
-if (!split[2474].trim().isEmpty()) {
-UPROP3_I = new Double(split[2474]);
-}
-if (!split[2475].trim().isEmpty()) {
-UPROP3_IFLAG = new Double(split[2475]);
-}
-if (!split[2476].trim().isEmpty()) {
-UPROP4_I = new Double(split[2476]);
-}
-if (!split[2477].trim().isEmpty()) {
-UPROP4_IFLAG = new Double(split[2477]);
-}
-if (!split[2478].trim().isEmpty()) {
-UPROP5_I = new Double(split[2478]);
-}
-if (!split[2479].trim().isEmpty()) {
-UPROP5_IFLAG = new Double(split[2479]);
-}
-if (!split[2480].trim().isEmpty()) {
-UPROP6_I = new Double(split[2480]);
-}
-if (!split[2481].trim().isEmpty()) {
-UPROP6_IFLAG = new Double(split[2481]);
-}
-if (!split[2482].trim().isEmpty()) {
-UNUMHS_I = new Double(split[2482]);
-}
-if (!split[2483].trim().isEmpty()) {
-UNUMHS_IFLAG = new Double(split[2483]);
-}
-if (!split[2484].trim().isEmpty()) {
-UBUYLET_I = new Double(split[2484]);
-}
-if (!split[2485].trim().isEmpty()) {
-UBUYLET_IFLAG = new Double(split[2485]);
-}
-if (!split[2486].trim().isEmpty()) {
-UNUMBD_I = new Double(split[2486]);
-}
-if (!split[2487].trim().isEmpty()) {
-UNUMBD_IFLAG = new Double(split[2487]);
-}
-if (!split[2488].trim().isEmpty()) {
-UNUMLA_I = new Double(split[2488]);
-}
-if (!split[2489].trim().isEmpty()) {
-UNUMLA_IFLAG = new Double(split[2489]);
-}
-if (!split[2490].trim().isEmpty()) {
-UNUMOV_I = new Double(split[2490]);
-}
-if (!split[2491].trim().isEmpty()) {
-UNUMOV_IFLAG = new Double(split[2491]);
-}
-if (!split[2492].trim().isEmpty()) {
-UNUMRE_I = new Double(split[2492]);
-}
-if (!split[2493].trim().isEmpty()) {
-UNUMRE_IFLAG = new Double(split[2493]);
-}
-if (!split[2494].trim().isEmpty()) {
-UVALS_I = new Double(split[2494]);
-}
-if (!split[2495].trim().isEmpty()) {
-UVALS_IFLAG = new Double(split[2495]);
-}
-if (!split[2496].trim().isEmpty()) {
-UVALL_I = new Double(split[2496]);
-}
-if (!split[2497].trim().isEmpty()) {
-UVALL_IFLAG = new Double(split[2497]);
-}
-if (!split[2498].trim().isEmpty()) {
-UVALO_I = new Double(split[2498]);
-}
-if (!split[2499].trim().isEmpty()) {
-UVALO_IFLAG = new Double(split[2499]);
-}
-if (!split[2500].trim().isEmpty()) {
-UVALLU_I = new Double(split[2500]);
-}
-if (!split[2501].trim().isEmpty()) {
-UVALLU_IFLAG = new Double(split[2501]);
-}
-if (!split[2502].trim().isEmpty()) {
-UVALOS_I = new Double(split[2502]);
-}
-if (!split[2503].trim().isEmpty()) {
-UVALOS_IFLAG = new Double(split[2503]);
-}
-if (!split[2504].trim().isEmpty()) {
-UVALOR_I = new Double(split[2504]);
-}
-if (!split[2505].trim().isEmpty()) {
-UVALOR_IFLAG = new Double(split[2505]);
-}
-if (!split[2506].trim().isEmpty()) {
-UGDVBS_I = new Double(split[2506]);
-}
-if (!split[2507].trim().isEmpty()) {
-UGDVBS_IFLAG = new Double(split[2507]);
-}
-if (!split[2508].trim().isEmpty()) {
-UGDVBL_I = new Double(split[2508]);
-}
-if (!split[2509].trim().isEmpty()) {
-UGDVBL_IFLAG = new Double(split[2509]);
-}
-if (!split[2510].trim().isEmpty()) {
-UGDVBOS_I = new Double(split[2510]);
-}
-if (!split[2511].trim().isEmpty()) {
-UGDVBOS_IFLAG = new Double(split[2511]);
-}
-if (!split[2512].trim().isEmpty()) {
-DVHSEDEBT = new Double(split[2512]);
-}
-if (!split[2513].trim().isEmpty()) {
-DVBLTDEBT = new Double(split[2513]);
-}
-if (!split[2514].trim().isEmpty()) {
-DVBLDDEBT = new Double(split[2514]);
-}
-if (!split[2515].trim().isEmpty()) {
-DVLUKDEBT = new Double(split[2515]);
-}
-if (!split[2516].trim().isEmpty()) {
-DVLOSDEBT = new Double(split[2516]);
-}
-if (!split[2517].trim().isEmpty()) {
-DVOPRDEBT = new Double(split[2517]);
-}
-if (!split[2518].trim().isEmpty()) {
-DVHSEVAL = new Double(split[2518]);
-}
-if (!split[2519].trim().isEmpty()) {
-DVBLTVAL = new Double(split[2519]);
-}
-if (!split[2520].trim().isEmpty()) {
-DVBLDVAL = new Double(split[2520]);
-}
-if (!split[2521].trim().isEmpty()) {
-DVLUKVAL = new Double(split[2521]);
-}
-if (!split[2522].trim().isEmpty()) {
-DVLOSVAL = new Double(split[2522]);
-}
-if (!split[2523].trim().isEmpty()) {
-DVOPRVAL = new Double(split[2523]);
-}
-if (!split[2524].trim().isEmpty()) {
-OTHMORT = new Double(split[2524]);
-}
-if (!split[2525].trim().isEmpty()) {
-HOUSGDST = new Double(split[2525]);
-}
-if (!split[2526].trim().isEmpty()) {
-BUYLGDST = new Double(split[2526]);
-}
-if (!split[2527].trim().isEmpty()) {
-HOUSGDSOST = new Double(split[2527]);
-}
-if (!split[2528].trim().isEmpty()) {
-PHYSHOUSGDST = new Double(split[2528]);
-}
-if (!split[2529].trim().isEmpty()) {
-PHYSBUYLGDST = new Double(split[2529]);
-}
-if (!split[2530].trim().isEmpty()) {
-PHYSHOUSGDSOST = new Double(split[2530]);
-}
-if (!split[2531].trim().isEmpty()) {
-TYPE = new Double(split[2531]);
-}
-if (!split[2532].trim().isEmpty()) {
-P_FLAG1 = new Double(split[2532]);
-}
-if (!split[2533].trim().isEmpty()) {
-P_FLAG3 = new Double(split[2533]);
-}
-if (!split[2534].trim().isEmpty()) {
-P_FLAG4 = new Double(split[2534]);
-}
-if (!split[2535].trim().isEmpty()) {
-H_FLAG1 = new Double(split[2535]);
-}
-if (!split[2536].trim().isEmpty()) {
-DVSAME = new Double(split[2536]);
-}
-if (!split[2537].trim().isEmpty()) {
-PBLMVB1 = new Double(split[2537]);
-}
-if (!split[2538].trim().isEmpty()) {
-ALLRET = new Double(split[2538]);
-}
-if (!split[2539].trim().isEmpty()) {
-NUMCOUPLES = new Double(split[2539]);
-}
-if (!split[2540].trim().isEmpty()) {
-COUPLENUM = new Double(split[2540]);
-}
-if (!split[2541].trim().isEmpty()) {
-PARTNSSEC = new Double(split[2541]);
-}
-if (!split[2542].trim().isEmpty()) {
-PARTNSSECB = new Double(split[2542]);
-}
-if (!split[2543].trim().isEmpty()) {
-PARTNSSEC8 = new Double(split[2543]);
-}
-if (!split[2544].trim().isEmpty()) {
-PARTNSSEC5 = new Double(split[2544]);
-}
-if (!split[2545].trim().isEmpty()) {
-PARTNSSEC3 = new Double(split[2545]);
-}
-if (!split[2546].trim().isEmpty()) {
-HRPEDLEVEL = new Double(split[2546]);
-}
-if (!split[2547].trim().isEmpty()) {
-WRKING_I = new Double(split[2547]);
-}
-if (!split[2548].trim().isEmpty()) {
-WRKING_IFLAG = new Double(split[2548]);
-}
-if (!split[2549].trim().isEmpty()) {
-SCHEMEET_I = new Double(split[2549]);
-}
-if (!split[2550].trim().isEmpty()) {
-SCHEMEET_IFLAG = new Double(split[2550]);
-}
-if (!split[2551].trim().isEmpty()) {
-JBAWAY_I = new Double(split[2551]);
-}
-if (!split[2552].trim().isEmpty()) {
-JBAWAY_IFLAG = new Double(split[2552]);
-}
-if (!split[2553].trim().isEmpty()) {
-OWNBUS_I = new Double(split[2553]);
-}
-if (!split[2554].trim().isEmpty()) {
-OWNBUS_IFLAG = new Double(split[2554]);
-}
-if (!split[2555].trim().isEmpty()) {
-RELBUS_I = new Double(split[2555]);
-}
-if (!split[2556].trim().isEmpty()) {
-RELBUS_IFLAG = new Double(split[2556]);
-}
-if (!split[2557].trim().isEmpty()) {
-LOOKED_I = new Double(split[2557]);
-}
-if (!split[2558].trim().isEmpty()) {
-LOOKED_IFLAG = new Double(split[2558]);
-}
-if (!split[2559].trim().isEmpty()) {
-STARTJ_I = new Double(split[2559]);
-}
-if (!split[2560].trim().isEmpty()) {
-STARTJ_IFLAG = new Double(split[2560]);
-}
-if (!split[2561].trim().isEmpty()) {
-DVILO3A_I = new Double(split[2561]);
-}
-if (!split[2562].trim().isEmpty()) {
-DVILO3A_IFLAG = new Double(split[2562]);
-}
-if (!split[2563].trim().isEmpty()) {
-EVERWK_I = new Double(split[2563]);
-}
-if (!split[2564].trim().isEmpty()) {
-EVERWK_IFLAG = new Double(split[2564]);
-}
-if (!split[2565].trim().isEmpty()) {
-STAT_I = new Double(split[2565]);
-}
-if (!split[2566].trim().isEmpty()) {
-STAT_IFLAG = new Double(split[2566]);
-}
-if (!split[2567].trim().isEmpty()) {
-BTYPE1_I = new Double(split[2567]);
-}
-if (!split[2568].trim().isEmpty()) {
-BTYPE1_IFLAG = new Double(split[2568]);
-}
-if (!split[2569].trim().isEmpty()) {
-BDIRNI1_I = new Double(split[2569]);
-}
-if (!split[2570].trim().isEmpty()) {
-BDIRNI1_IFLAG = new Double(split[2570]);
-}
-if (!split[2571].trim().isEmpty()) {
-SEX = new Double(split[2571]);
-}
-if (!split[2572].trim().isEmpty()) {
-DVSAME_I = new Double(split[2572]);
-}
-if (!split[2573].trim().isEmpty()) {
-DVSAME_IFLAG = new Double(split[2573]);
-}
-if (!split[2574].trim().isEmpty()) {
-PESAME_I = new Double(split[2574]);
-}
-if (!split[2575].trim().isEmpty()) {
-PESAME_IFLAG = new Double(split[2575]);
-}
-if (!split[2576].trim().isEmpty()) {
-PEMOFF_I = new Double(split[2576]);
-}
-if (!split[2577].trim().isEmpty()) {
-PEMOFF_IFLAG = new Double(split[2577]);
-}
-if (!split[2578].trim().isEmpty()) {
-PEMELG_I = new Double(split[2578]);
-}
-if (!split[2579].trim().isEmpty()) {
-PEMELG_IFLAG = new Double(split[2579]);
-}
-if (!split[2580].trim().isEmpty()) {
-PEMMEM_I = new Double(split[2580]);
-}
-if (!split[2581].trim().isEmpty()) {
-PEMMEM_IFLAG = new Double(split[2581]);
-}
-if (!split[2582].trim().isEmpty()) {
-PCONT_I = new Double(split[2582]);
-}
-if (!split[2583].trim().isEmpty()) {
-PCONT_IFLAG = new Double(split[2583]);
-}
-if (!split[2584].trim().isEmpty()) {
-PANYO_I = new Double(split[2584]);
-}
-if (!split[2585].trim().isEmpty()) {
-PANYO_IFLAG = new Double(split[2585]);
-}
-if (!split[2586].trim().isEmpty()) {
-PNUMOS_I = new Double(split[2586]);
-}
-if (!split[2587].trim().isEmpty()) {
-PNUMOS_IFLAG = new Double(split[2587]);
-}
-if (!split[2588].trim().isEmpty()) {
-PSCHM_F_I = new Double(split[2588]);
-}
-if (!split[2589].trim().isEmpty()) {
-PSCHM_F_IFLAG = new Double(split[2589]);
-}
-if (!split[2590].trim().isEmpty()) {
-PSCHM_S_I = new Double(split[2590]);
-}
-if (!split[2591].trim().isEmpty()) {
-PSCHM_S_IFLAG = new Double(split[2591]);
-}
-if (!split[2592].trim().isEmpty()) {
-PSCHM_T_I = new Double(split[2592]);
-}
-if (!split[2593].trim().isEmpty()) {
-PSCHM_T_IFLAG = new Double(split[2593]);
-}
-if (!split[2594].trim().isEmpty()) {
-POCNMSC_I = new Double(split[2594]);
-}
-if (!split[2595].trim().isEmpty()) {
-POCNMSC_IFLAG = new Double(split[2595]);
-}
-if (!split[2596].trim().isEmpty()) {
-POCTYP1_I = new Double(split[2596]);
-}
-if (!split[2597].trim().isEmpty()) {
-POCTYP1_IFLAG = new Double(split[2597]);
-}
-if (!split[2598].trim().isEmpty()) {
-POCTYP2_I = new Double(split[2598]);
-}
-if (!split[2599].trim().isEmpty()) {
-POCTYP2_IFLAG = new Double(split[2599]);
-}
-if (!split[2600].trim().isEmpty()) {
-PBFRAC1_I = new Double(split[2600]);
-}
-if (!split[2601].trim().isEmpty()) {
-PBFRAC1_IFLAG = new Double(split[2601]);
-}
-if (!split[2602].trim().isEmpty()) {
-PBFRAC2_I = new Double(split[2602]);
-}
-if (!split[2603].trim().isEmpty()) {
-PBFRAC2_IFLAG = new Double(split[2603]);
-}
-if (!split[2604].trim().isEmpty()) {
-PBQUAL1_I = new Double(split[2604]);
-}
-if (!split[2605].trim().isEmpty()) {
-PBQUAL1_IFLAG = new Double(split[2605]);
-}
-if (!split[2606].trim().isEmpty()) {
-PBQUAL2_I = new Double(split[2606]);
-}
-if (!split[2607].trim().isEmpty()) {
-PBQUAL2_IFLAG = new Double(split[2607]);
-}
-if (!split[2608].trim().isEmpty()) {
-PBLUMV1_I = new Double(split[2608]);
-}
-if (!split[2609].trim().isEmpty()) {
-PBLUMV1_IFLAG = new Double(split[2609]);
-}
-if (!split[2610].trim().isEmpty()) {
-PBLUMV2_I = new Double(split[2610]);
-}
-if (!split[2611].trim().isEmpty()) {
-PBLUMV2_IFLAG = new Double(split[2611]);
-}
-if (!split[2612].trim().isEmpty()) {
-ASAF2T = new Double(split[2612]);
-}
-if (!split[2613].trim().isEmpty()) {
-POWER1T = new Double(split[2613]);
-}
-if (!split[2614].trim().isEmpty()) {
-POWER2T = new Double(split[2614]);
-}
-if (!split[2615].trim().isEmpty()) {
-PPRNMSC_I = new Double(split[2615]);
-}
-if (!split[2616].trim().isEmpty()) {
-PPRNMSC_IFLAG = new Double(split[2616]);
-}
-if (!split[2617].trim().isEmpty()) {
-PPVAL1_I = new Double(split[2617]);
-}
-if (!split[2618].trim().isEmpty()) {
-PPVAL1_IFLAG = new Double(split[2618]);
-}
-if (!split[2619].trim().isEmpty()) {
-PPVAL2_I = new Double(split[2619]);
-}
-if (!split[2620].trim().isEmpty()) {
-PPVAL2_IFLAG = new Double(split[2620]);
-}
-if (!split[2621].trim().isEmpty()) {
-PPVAL3_I = new Double(split[2621]);
-}
-if (!split[2622].trim().isEmpty()) {
-PPVAL3_IFLAG = new Double(split[2622]);
-}
-if (!split[2623].trim().isEmpty()) {
-W3XSWGT = new Double(split[2623]);
-}
-if (!split[2624].trim().isEmpty()) {
-W1W3WGT = new Double(split[2624]);
-}
-if (!split[2625].trim().isEmpty()) {
-W2W3WGT = new Double(split[2625]);
-}
-if (!split[2626].trim().isEmpty()) {
-PDCVAL1_I = new Double(split[2626]);
-}
-if (!split[2627].trim().isEmpty()) {
-PDCVAL1_IFLAG = new Double(split[2627]);
-}
-if (!split[2628].trim().isEmpty()) {
-PDCVAL2_I = new Double(split[2628]);
-}
-if (!split[2629].trim().isEmpty()) {
-PDCVAL2_IFLAG = new Double(split[2629]);
-}
-if (!split[2630].trim().isEmpty()) {
-POADD1_I = new Double(split[2630]);
-}
-if (!split[2631].trim().isEmpty()) {
-POADD1_IFLAG = new Double(split[2631]);
-}
-if (!split[2632].trim().isEmpty()) {
-POADD2_I = new Double(split[2632]);
-}
-if (!split[2633].trim().isEmpty()) {
-POADD2_IFLAG = new Double(split[2633]);
-}
-if (!split[2634].trim().isEmpty()) {
-POADD3_I = new Double(split[2634]);
-}
-if (!split[2635].trim().isEmpty()) {
-POADD3_IFLAG = new Double(split[2635]);
-}
-if (!split[2636].trim().isEmpty()) {
-POADD4_I = new Double(split[2636]);
-}
-if (!split[2637].trim().isEmpty()) {
-POADD4_IFLAG = new Double(split[2637]);
-}
-if (!split[2638].trim().isEmpty()) {
-POADD5_I = new Double(split[2638]);
-}
-if (!split[2639].trim().isEmpty()) {
-POADD5_IFLAG = new Double(split[2639]);
-}
-if (!split[2640].trim().isEmpty()) {
-POADD6_I = new Double(split[2640]);
-}
-if (!split[2641].trim().isEmpty()) {
-POADD6_IFLAG = new Double(split[2641]);
-}
-if (!split[2642].trim().isEmpty()) {
-PAVCUV1_I = new Double(split[2642]);
-}
-if (!split[2643].trim().isEmpty()) {
-PAVCUV1_IFLAG = new Double(split[2643]);
-}
-if (!split[2644].trim().isEmpty()) {
-PAVCUV2_I = new Double(split[2644]);
-}
-if (!split[2645].trim().isEmpty()) {
-PAVCUV2_IFLAG = new Double(split[2645]);
-}
-if (!split[2646].trim().isEmpty()) {
-DVHASAVC = new Double(split[2646]);
-}
-if (!split[2647].trim().isEmpty()) {
-DVPAVCUV = new Double(split[2647]);
-}
-if (!split[2648].trim().isEmpty()) {
-DVHASDC = new Double(split[2648]);
-}
-if (!split[2649].trim().isEmpty()) {
-DVVALDCOS = new Double(split[2649]);
-}
-if (!split[2650].trim().isEmpty()) {
-DVPPVAL = new Double(split[2650]);
-}
-if (!split[2651].trim().isEmpty()) {
-DVHASPP = new Double(split[2651]);
-}
-if (!split[2652].trim().isEmpty()) {
-DVHASDB = new Double(split[2652]);
-}
-if (!split[2653].trim().isEmpty()) {
-FRSTSCH = new Double(split[2653]);
-}
-if (!split[2654].trim().isEmpty()) {
-ACCFRAC1 = new Double(split[2654]);
-}
-if (!split[2655].trim().isEmpty()) {
-ACCFRAC2 = new Double(split[2655]);
-}
-if (!split[2656].trim().isEmpty()) {
-VALPBLUM1 = new Double(split[2656]);
-}
-if (!split[2657].trim().isEmpty()) {
-VALPBLUM2 = new Double(split[2657]);
-}
-if (!split[2658].trim().isEmpty()) {
-DVVALDBLUM = new Double(split[2658]);
-}
-if (!split[2659].trim().isEmpty()) {
-DVPENINC1 = new Double(split[2659]);
-}
-if (!split[2660].trim().isEmpty()) {
-DVPENINC2 = new Double(split[2660]);
-}
-if (!split[2661].trim().isEmpty()) {
-ASAF1T = new Double(split[2661]);
-}
-if (!split[2662].trim().isEmpty()) {
-TOPDVDBOPEN1T = new Double(split[2662]);
-}
-if (!split[2663].trim().isEmpty()) {
-BOTDVDBOPEN1T = new Double(split[2663]);
-}
-if (!split[2664].trim().isEmpty()) {
-DVDBOPEN1T = new Double(split[2664]);
-}
-if (!split[2665].trim().isEmpty()) {
-TOPDVDBOPEN2T = new Double(split[2665]);
-}
-if (!split[2666].trim().isEmpty()) {
-BOTDVDBOPEN2T = new Double(split[2666]);
-}
-if (!split[2667].trim().isEmpty()) {
-DVDBOPEN2T = new Double(split[2667]);
-}
-if (!split[2668].trim().isEmpty()) {
-DVVALDBT = new Double(split[2668]);
-}
-if (!split[2669].trim().isEmpty()) {
-TRUST = new Double(split[2669]);
-}
-if (!split[2670].trim().isEmpty()) {
-FSACSH_I = new Double(split[2670]);
-}
-if (!split[2671].trim().isEmpty()) {
-FSNUMIN_I = new Double(split[2671]);
-}
-if (!split[2672].trim().isEmpty()) {
-FSINVAL_I = new Double(split[2672]);
-}
-if (!split[2673].trim().isEmpty()) {
-FSSHVAL_I = new Double(split[2673]);
-}
-if (!split[2674].trim().isEmpty()) {
-FSNUMSH_I = new Double(split[2674]);
-}
-if (!split[2675].trim().isEmpty()) {
-FINVTY01_I = new Double(split[2675]);
-}
-if (!split[2676].trim().isEmpty()) {
-FINVTY02_I = new Double(split[2676]);
-}
-if (!split[2677].trim().isEmpty()) {
-FINVTY03_I = new Double(split[2677]);
-}
-if (!split[2678].trim().isEmpty()) {
-FINVTY04_I = new Double(split[2678]);
-}
-if (!split[2679].trim().isEmpty()) {
-FINVTY05_I = new Double(split[2679]);
-}
-if (!split[2680].trim().isEmpty()) {
-FINVTY06_I = new Double(split[2680]);
-}
-if (!split[2681].trim().isEmpty()) {
-FINVTY07_I = new Double(split[2681]);
-}
-if (!split[2682].trim().isEmpty()) {
-FINVTY08_I = new Double(split[2682]);
-}
-if (!split[2683].trim().isEmpty()) {
-FINVTY09_I = new Double(split[2683]);
-}
-if (!split[2684].trim().isEmpty()) {
-FINVTY10_I = new Double(split[2684]);
-}
-if (!split[2685].trim().isEmpty()) {
-FINVTY11_I = new Double(split[2685]);
-}
-if (!split[2686].trim().isEmpty()) {
-FCACSH_I = new Double(split[2686]);
-}
-if (!split[2687].trim().isEmpty()) {
-FCNUMSH_I = new Double(split[2687]);
-}
-if (!split[2688].trim().isEmpty()) {
-FCNUMIN_I = new Double(split[2688]);
-}
-if (!split[2689].trim().isEmpty()) {
-FCOVDSH_I = new Double(split[2689]);
-}
-if (!split[2690].trim().isEmpty()) {
-FCOVNSH_I = new Double(split[2690]);
-}
-if (!split[2691].trim().isEmpty()) {
-DCOSHV1_I = new Double(split[2691]);
-}
-if (!split[2692].trim().isEmpty()) {
-DCOSHV2_I = new Double(split[2692]);
-}
-if (!split[2693].trim().isEmpty()) {
-DCOSHV3_I = new Double(split[2693]);
-}
-if (!split[2694].trim().isEmpty()) {
-FCSHVAL_I = new Double(split[2694]);
-}
-if (!split[2695].trim().isEmpty()) {
-FCOVDIN_I = new Double(split[2695]);
-}
-if (!split[2696].trim().isEmpty()) {
-FCOVNIN_I = new Double(split[2696]);
-}
-if (!split[2697].trim().isEmpty()) {
-DCOINV1_I = new Double(split[2697]);
-}
-if (!split[2698].trim().isEmpty()) {
-DCOINV2_I = new Double(split[2698]);
-}
-if (!split[2699].trim().isEmpty()) {
-DCOINV3_I = new Double(split[2699]);
-}
-if (!split[2700].trim().isEmpty()) {
-DCOINV4_I = new Double(split[2700]);
-}
-if (!split[2701].trim().isEmpty()) {
-DCOINV5_I = new Double(split[2701]);
-}
-if (!split[2702].trim().isEmpty()) {
-FCINVAL_I = new Double(split[2702]);
-}
-if (!split[2703].trim().isEmpty()) {
-FISA1_I = new Double(split[2703]);
-}
-if (!split[2704].trim().isEmpty()) {
-FISA2_I = new Double(split[2704]);
-}
-if (!split[2705].trim().isEmpty()) {
-FCISAV_I = new Double(split[2705]);
-}
-if (!split[2706].trim().isEmpty()) {
-FIISAV_I = new Double(split[2706]);
-}
-if (!split[2707].trim().isEmpty()) {
-FKISAV_I = new Double(split[2707]);
-}
-if (!split[2708].trim().isEmpty()) {
-FBONDV_I = new Double(split[2708]);
-}
-if (!split[2709].trim().isEmpty()) {
-FCOLLV_I = new Double(split[2709]);
-}
-if (!split[2710].trim().isEmpty()) {
-FESHA_I = new Double(split[2710]);
-}
-if (!split[2711].trim().isEmpty()) {
-FESHAV_I = new Double(split[2711]);
-}
-if (!split[2712].trim().isEmpty()) {
-FEOPTV_I = new Double(split[2712]);
-}
-if (!split[2713].trim().isEmpty()) {
-FSHARE1_I = new Double(split[2713]);
-}
-if (!split[2714].trim().isEmpty()) {
-FSHARE2_I = new Double(split[2714]);
-}
-if (!split[2715].trim().isEmpty()) {
-FSHARE3_I = new Double(split[2715]);
-}
-if (!split[2716].trim().isEmpty()) {
-FSHUKV_I = new Double(split[2716]);
-}
-if (!split[2717].trim().isEmpty()) {
-FSHOSV_I = new Double(split[2717]);
-}
-if (!split[2718].trim().isEmpty()) {
-FNSVAL1_I = new Double(split[2718]);
-}
-if (!split[2719].trim().isEmpty()) {
-FGILTS1_I = new Double(split[2719]);
-}
-if (!split[2720].trim().isEmpty()) {
-FGILTS2_I = new Double(split[2720]);
-}
-if (!split[2721].trim().isEmpty()) {
-FGILTS3_I = new Double(split[2721]);
-}
-if (!split[2722].trim().isEmpty()) {
-FGILTS4_I = new Double(split[2722]);
-}
-if (!split[2723].trim().isEmpty()) {
-FGLTUKV_I = new Double(split[2723]);
-}
-if (!split[2724].trim().isEmpty()) {
-FGLTFOV_I = new Double(split[2724]);
-}
-if (!split[2725].trim().isEmpty()) {
-FINS_I = new Double(split[2725]);
-}
-if (!split[2726].trim().isEmpty()) {
-FINSV_I = new Double(split[2726]);
-}
-if (!split[2727].trim().isEmpty()) {
-FLPROD1_I = new Double(split[2727]);
-}
-if (!split[2728].trim().isEmpty()) {
-FLPROD2_I = new Double(split[2728]);
-}
-if (!split[2729].trim().isEmpty()) {
-FLPROD3_I = new Double(split[2729]);
-}
-if (!split[2730].trim().isEmpty()) {
-FLPROD4_I = new Double(split[2730]);
-}
-if (!split[2731].trim().isEmpty()) {
-FLFENV_I = new Double(split[2731]);
-}
-if (!split[2732].trim().isEmpty()) {
-FLFSIV_I = new Double(split[2732]);
-}
-if (!split[2733].trim().isEmpty()) {
-FLFFSV_I = new Double(split[2733]);
-}
-if (!split[2734].trim().isEmpty()) {
-FLFTEV_I = new Double(split[2734]);
-}
-if (!split[2735].trim().isEmpty()) {
-FINVOTV_I = new Double(split[2735]);
-}
-if (!split[2736].trim().isEmpty()) {
-FSACSH_IFLAG = new Double(split[2736]);
-}
-if (!split[2737].trim().isEmpty()) {
-FSNUMIN_IFLAG = new Double(split[2737]);
-}
-if (!split[2738].trim().isEmpty()) {
-FSSHVAL_IFLAG = new Double(split[2738]);
-}
-if (!split[2739].trim().isEmpty()) {
-FSINVAL_IFLAG = new Double(split[2739]);
-}
-if (!split[2740].trim().isEmpty()) {
-FSNUMSH_IFLAG = new Double(split[2740]);
-}
-if (!split[2741].trim().isEmpty()) {
-FINVTY01_IFLAG = new Double(split[2741]);
-}
-if (!split[2742].trim().isEmpty()) {
-FINVTY02_IFLAG = new Double(split[2742]);
-}
-if (!split[2743].trim().isEmpty()) {
-FINVTY03_IFLAG = new Double(split[2743]);
-}
-if (!split[2744].trim().isEmpty()) {
-FINVTY04_IFLAG = new Double(split[2744]);
-}
-if (!split[2745].trim().isEmpty()) {
-FINVTY05_IFLAG = new Double(split[2745]);
-}
-if (!split[2746].trim().isEmpty()) {
-FINVTY06_IFLAG = new Double(split[2746]);
-}
-if (!split[2747].trim().isEmpty()) {
-FINVTY07_IFLAG = new Double(split[2747]);
-}
-if (!split[2748].trim().isEmpty()) {
-FINVTY08_IFLAG = new Double(split[2748]);
-}
-if (!split[2749].trim().isEmpty()) {
-FINVTY09_IFLAG = new Double(split[2749]);
-}
-if (!split[2750].trim().isEmpty()) {
-FINVTY10_IFLAG = new Double(split[2750]);
-}
-if (!split[2751].trim().isEmpty()) {
-FINVTY11_IFLAG = new Double(split[2751]);
-}
-if (!split[2752].trim().isEmpty()) {
-FCACSH_IFLAG = new Double(split[2752]);
-}
-if (!split[2753].trim().isEmpty()) {
-FCNUMSH_IFLAG = new Double(split[2753]);
-}
-if (!split[2754].trim().isEmpty()) {
-FCNUMIN_IFLAG = new Double(split[2754]);
-}
-if (!split[2755].trim().isEmpty()) {
-FCOVDSH_IFLAG = new Double(split[2755]);
-}
-if (!split[2756].trim().isEmpty()) {
-FCOVNSH_IFLAG = new Double(split[2756]);
-}
-if (!split[2757].trim().isEmpty()) {
-DCOSHV1_IFLAG = new Double(split[2757]);
-}
-if (!split[2758].trim().isEmpty()) {
-DCOSHV2_IFLAG = new Double(split[2758]);
-}
-if (!split[2759].trim().isEmpty()) {
-DCOSHV3_IFLAG = new Double(split[2759]);
-}
-if (!split[2760].trim().isEmpty()) {
-FCSHVAL_IFLAG = new Double(split[2760]);
-}
-if (!split[2761].trim().isEmpty()) {
-FCOVDIN_IFLAG = new Double(split[2761]);
-}
-if (!split[2762].trim().isEmpty()) {
-FCOVNIN_IFLAG = new Double(split[2762]);
-}
-if (!split[2763].trim().isEmpty()) {
-DCOINV1_IFLAG = new Double(split[2763]);
-}
-if (!split[2764].trim().isEmpty()) {
-DCOINV2_IFLAG = new Double(split[2764]);
-}
-if (!split[2765].trim().isEmpty()) {
-DCOINV3_IFLAG = new Double(split[2765]);
-}
-if (!split[2766].trim().isEmpty()) {
-DCOINV4_IFLAG = new Double(split[2766]);
-}
-if (!split[2767].trim().isEmpty()) {
-DCOINV5_IFLAG = new Double(split[2767]);
-}
-if (!split[2768].trim().isEmpty()) {
-FCINVAL_IFLAG = new Double(split[2768]);
-}
-if (!split[2769].trim().isEmpty()) {
-FISA1_IFLAG = new Double(split[2769]);
-}
-if (!split[2770].trim().isEmpty()) {
-FISA2_IFLAG = new Double(split[2770]);
-}
-if (!split[2771].trim().isEmpty()) {
-FCISAV_IFLAG = new Double(split[2771]);
-}
-if (!split[2772].trim().isEmpty()) {
-FIISAV_IFLAG = new Double(split[2772]);
-}
-if (!split[2773].trim().isEmpty()) {
-FKISAV_IFLAG = new Double(split[2773]);
-}
-if (!split[2774].trim().isEmpty()) {
-FBONDV_IFLAG = new Double(split[2774]);
-}
-if (!split[2775].trim().isEmpty()) {
-FCOLLV_IFLAG = new Double(split[2775]);
-}
-if (!split[2776].trim().isEmpty()) {
-FESHA_IFLAG = new Double(split[2776]);
-}
-if (!split[2777].trim().isEmpty()) {
-FESHAV_IFLAG = new Double(split[2777]);
-}
-if (!split[2778].trim().isEmpty()) {
-FEOPTV_IFLAG = new Double(split[2778]);
-}
-if (!split[2779].trim().isEmpty()) {
-FSHARE1_IFLAG = new Double(split[2779]);
-}
-if (!split[2780].trim().isEmpty()) {
-FSHARE2_IFLAG = new Double(split[2780]);
-}
-if (!split[2781].trim().isEmpty()) {
-FSHARE3_IFLAG = new Double(split[2781]);
-}
-if (!split[2782].trim().isEmpty()) {
-FSHUKV_IFLAG = new Double(split[2782]);
-}
-if (!split[2783].trim().isEmpty()) {
-FSHOSV_IFLAG = new Double(split[2783]);
-}
-if (!split[2784].trim().isEmpty()) {
-FNSVAL_IFLAG = new Double(split[2784]);
-}
-if (!split[2785].trim().isEmpty()) {
-FGILTS1_IFLAG = new Double(split[2785]);
-}
-if (!split[2786].trim().isEmpty()) {
-FGILTS2_IFLAG = new Double(split[2786]);
-}
-if (!split[2787].trim().isEmpty()) {
-FGILTS3_IFLAG = new Double(split[2787]);
-}
-if (!split[2788].trim().isEmpty()) {
-FGILTS4_IFLAG = new Double(split[2788]);
-}
-if (!split[2789].trim().isEmpty()) {
-FGLTUKV_IFLAG = new Double(split[2789]);
-}
-if (!split[2790].trim().isEmpty()) {
-FGLTFOV_IFLAG = new Double(split[2790]);
-}
-if (!split[2791].trim().isEmpty()) {
-FINS_IFLAG = new Double(split[2791]);
-}
-if (!split[2792].trim().isEmpty()) {
-FINSV_IFLAG = new Double(split[2792]);
-}
-if (!split[2793].trim().isEmpty()) {
-FLPROD1_IFLAG = new Double(split[2793]);
-}
-if (!split[2794].trim().isEmpty()) {
-FLPROD2_IFLAG = new Double(split[2794]);
-}
-if (!split[2795].trim().isEmpty()) {
-FLPROD3_IFLAG = new Double(split[2795]);
-}
-if (!split[2796].trim().isEmpty()) {
-FLPROD4_IFLAG = new Double(split[2796]);
-}
-if (!split[2797].trim().isEmpty()) {
-FLFENV_IFLAG = new Double(split[2797]);
-}
-if (!split[2798].trim().isEmpty()) {
-FLFSIV_IFLAG = new Double(split[2798]);
-}
-if (!split[2799].trim().isEmpty()) {
-FLFFSV_IFLAG = new Double(split[2799]);
-}
-if (!split[2800].trim().isEmpty()) {
-FLFTEV_IFLAG = new Double(split[2800]);
-}
-if (!split[2801].trim().isEmpty()) {
-FINVOTV_IFLAG = new Double(split[2801]);
-}
-if (!split[2802].trim().isEmpty()) {
-PEVERC_I = new Double(split[2802]);
-}
-if (!split[2803].trim().isEmpty()) {
-PEVERC_IFLAG = new Double(split[2803]);
-}
-if (!split[2804].trim().isEmpty()) {
-PEVERNC_I = new Double(split[2804]);
-}
-if (!split[2805].trim().isEmpty()) {
-PEVERNC_IFLAG = new Double(split[2805]);
-}
-if (!split[2806].trim().isEmpty()) {
-PRETAIN_I = new Double(split[2806]);
-}
-if (!split[2807].trim().isEmpty()) {
-PRETAIN_IFLAG = new Double(split[2807]);
-}
-if (!split[2808].trim().isEmpty()) {
-PFNUM_I = new Double(split[2808]);
-}
-if (!split[2809].trim().isEmpty()) {
-PFNUM_IFLAG = new Double(split[2809]);
-}
-if (!split[2810].trim().isEmpty()) {
-PFNEW_I = new Double(split[2810]);
-}
-if (!split[2811].trim().isEmpty()) {
-PFNEW_IFLAG = new Double(split[2811]);
-}
-if (!split[2812].trim().isEmpty()) {
-PFNEWNO_I = new Double(split[2812]);
-}
-if (!split[2813].trim().isEmpty()) {
-PFNEWNO_IFLAG = new Double(split[2813]);
-}
-if (!split[2814].trim().isEmpty()) {
-ALLRET_I = new Double(split[2814]);
-}
-if (!split[2815].trim().isEmpty()) {
-PFTYP1_I = new Double(split[2815]);
-}
-if (!split[2816].trim().isEmpty()) {
-PFTYP1_IFLAG = new Double(split[2816]);
-}
-if (!split[2817].trim().isEmpty()) {
-PFTYP2_I = new Double(split[2817]);
-}
-if (!split[2818].trim().isEmpty()) {
-PFTYP2_IFLAG = new Double(split[2818]);
-}
-if (!split[2819].trim().isEmpty()) {
-PFTYP3_I = new Double(split[2819]);
-}
-if (!split[2820].trim().isEmpty()) {
-PFTYP3_IFLAG = new Double(split[2820]);
-}
-if (!split[2821].trim().isEmpty()) {
-PFTYP4_I = new Double(split[2821]);
-}
-if (!split[2822].trim().isEmpty()) {
-PFTYP4_IFLAG = new Double(split[2822]);
-}
-if (!split[2823].trim().isEmpty()) {
-PFTYP5_I = new Double(split[2823]);
-}
-if (!split[2824].trim().isEmpty()) {
-PFTYP5_IFLAG = new Double(split[2824]);
-}
-if (!split[2825].trim().isEmpty()) {
-PFTYP6_I = new Double(split[2825]);
-}
-if (!split[2826].trim().isEmpty()) {
-PFTYP6_IFLAG = new Double(split[2826]);
-}
-if (!split[2827].trim().isEmpty()) {
-PFOCTY1_I = new Double(split[2827]);
-}
-if (!split[2828].trim().isEmpty()) {
-PFOCTY1_IFLAG = new Double(split[2828]);
-}
-if (!split[2829].trim().isEmpty()) {
-PFOCTY2_I = new Double(split[2829]);
-}
-if (!split[2830].trim().isEmpty()) {
-PFOCTY2_IFLAG = new Double(split[2830]);
-}
-if (!split[2831].trim().isEmpty()) {
-PFOCTY3_I = new Double(split[2831]);
-}
-if (!split[2832].trim().isEmpty()) {
-PFOCTY3_IFLAG = new Double(split[2832]);
-}
-if (!split[2833].trim().isEmpty()) {
-PFOCTY4_I = new Double(split[2833]);
-}
-if (!split[2834].trim().isEmpty()) {
-PFOCTY4_IFLAG = new Double(split[2834]);
-}
-if (!split[2835].trim().isEmpty()) {
-PFOCTY5_I = new Double(split[2835]);
-}
-if (!split[2836].trim().isEmpty()) {
-PFOCTY5_IFLAG = new Double(split[2836]);
-}
-if (!split[2837].trim().isEmpty()) {
-PFOCTY6_I = new Double(split[2837]);
-}
-if (!split[2838].trim().isEmpty()) {
-PFOCTY6_IFLAG = new Double(split[2838]);
-}
-if (!split[2839].trim().isEmpty()) {
-PFLUM1_I = new Double(split[2839]);
-}
-if (!split[2840].trim().isEmpty()) {
-PFLUM1_IFLAG = new Double(split[2840]);
-}
-if (!split[2841].trim().isEmpty()) {
-PFLUM2_I = new Double(split[2841]);
-}
-if (!split[2842].trim().isEmpty()) {
-PFLUM2_IFLAG = new Double(split[2842]);
-}
-if (!split[2843].trim().isEmpty()) {
-PFLUM3_I = new Double(split[2843]);
-}
-if (!split[2844].trim().isEmpty()) {
-PFLUM3_IFLAG = new Double(split[2844]);
-}
-if (!split[2845].trim().isEmpty()) {
-PFLUM4_I = new Double(split[2845]);
-}
-if (!split[2846].trim().isEmpty()) {
-PFLUM4_IFLAG = new Double(split[2846]);
-}
-if (!split[2847].trim().isEmpty()) {
-PFLUM5_I = new Double(split[2847]);
-}
-if (!split[2848].trim().isEmpty()) {
-PFLUM5_IFLAG = new Double(split[2848]);
-}
-if (!split[2849].trim().isEmpty()) {
-PFLUM6_I = new Double(split[2849]);
-}
-if (!split[2850].trim().isEmpty()) {
-PFLUM6_IFLAG = new Double(split[2850]);
-}
-if (!split[2851].trim().isEmpty()) {
-PFLUMALL1_I = new Double(split[2851]);
-}
-if (!split[2852].trim().isEmpty()) {
-PFLUMALL1_IFLAG = new Double(split[2852]);
-}
-if (!split[2853].trim().isEmpty()) {
-PFLUMALL2_I = new Double(split[2853]);
-}
-if (!split[2854].trim().isEmpty()) {
-PFLUMALL2_IFLAG = new Double(split[2854]);
-}
-if (!split[2855].trim().isEmpty()) {
-PFLUMALL3_I = new Double(split[2855]);
-}
-if (!split[2856].trim().isEmpty()) {
-PFLUMALL3_IFLAG = new Double(split[2856]);
-}
-if (!split[2857].trim().isEmpty()) {
-PFLUMALL4_I = new Double(split[2857]);
-}
-if (!split[2858].trim().isEmpty()) {
-PFLUMALL4_IFLAG = new Double(split[2858]);
-}
-if (!split[2859].trim().isEmpty()) {
-PFLUMALL5_I = new Double(split[2859]);
-}
-if (!split[2860].trim().isEmpty()) {
-PFLUMALL5_IFLAG = new Double(split[2860]);
-}
-if (!split[2861].trim().isEmpty()) {
-PFLUMALL6_I = new Double(split[2861]);
-}
-if (!split[2862].trim().isEmpty()) {
-PFLUMALL6_IFLAG = new Double(split[2862]);
-}
-if (!split[2863].trim().isEmpty()) {
-PFCASH1_I = new Double(split[2863]);
-}
-if (!split[2864].trim().isEmpty()) {
-PFCASH1_IFLAG = new Double(split[2864]);
-}
-if (!split[2865].trim().isEmpty()) {
-PFCASH2_I = new Double(split[2865]);
-}
-if (!split[2866].trim().isEmpty()) {
-PFCASH2_IFLAG = new Double(split[2866]);
-}
-if (!split[2867].trim().isEmpty()) {
-PFCASH3_I = new Double(split[2867]);
-}
-if (!split[2868].trim().isEmpty()) {
-PFCASH3_IFLAG = new Double(split[2868]);
-}
-if (!split[2869].trim().isEmpty()) {
-PFCASH4_I = new Double(split[2869]);
-}
-if (!split[2870].trim().isEmpty()) {
-PFCASH4_IFLAG = new Double(split[2870]);
-}
-if (!split[2871].trim().isEmpty()) {
-PFCASH5_I = new Double(split[2871]);
-}
-if (!split[2872].trim().isEmpty()) {
-PFCASH5_IFLAG = new Double(split[2872]);
-}
-if (!split[2873].trim().isEmpty()) {
-PFCASH6_I = new Double(split[2873]);
-}
-if (!split[2874].trim().isEmpty()) {
-PFCASH6_IFLAG = new Double(split[2874]);
-}
-if (!split[2875].trim().isEmpty()) {
-PFREM1_I = new Double(split[2875]);
-}
-if (!split[2876].trim().isEmpty()) {
-PFREM1_IFLAG = new Double(split[2876]);
-}
-if (!split[2877].trim().isEmpty()) {
-PFREM2_I = new Double(split[2877]);
-}
-if (!split[2878].trim().isEmpty()) {
-PFREM2_IFLAG = new Double(split[2878]);
-}
-if (!split[2879].trim().isEmpty()) {
-PFREM3_I = new Double(split[2879]);
-}
-if (!split[2880].trim().isEmpty()) {
-PFREM3_IFLAG = new Double(split[2880]);
-}
-if (!split[2881].trim().isEmpty()) {
-PFREM4_I = new Double(split[2881]);
-}
-if (!split[2882].trim().isEmpty()) {
-PFREM4_IFLAG = new Double(split[2882]);
-}
-if (!split[2883].trim().isEmpty()) {
-PFREM5_I = new Double(split[2883]);
-}
-if (!split[2884].trim().isEmpty()) {
-PFREM5_IFLAG = new Double(split[2884]);
-}
-if (!split[2885].trim().isEmpty()) {
-PFREM6_I = new Double(split[2885]);
-}
-if (!split[2886].trim().isEmpty()) {
-PFREM6_IFLAG = new Double(split[2886]);
-}
-if (!split[2887].trim().isEmpty()) {
-PFREC1_I = new Double(split[2887]);
-}
-if (!split[2888].trim().isEmpty()) {
-PFREC1_IFLAG = new Double(split[2888]);
-}
-if (!split[2889].trim().isEmpty()) {
-PFREC2_I = new Double(split[2889]);
-}
-if (!split[2890].trim().isEmpty()) {
-PFREC2_IFLAG = new Double(split[2890]);
-}
-if (!split[2891].trim().isEmpty()) {
-PFREC3_I = new Double(split[2891]);
-}
-if (!split[2892].trim().isEmpty()) {
-PFREC3_IFLAG = new Double(split[2892]);
-}
-if (!split[2893].trim().isEmpty()) {
-PFREC4_I = new Double(split[2893]);
-}
-if (!split[2894].trim().isEmpty()) {
-PFREC4_IFLAG = new Double(split[2894]);
-}
-if (!split[2895].trim().isEmpty()) {
-PFREC5_I = new Double(split[2895]);
-}
-if (!split[2896].trim().isEmpty()) {
-PFREC5_IFLAG = new Double(split[2896]);
-}
-if (!split[2897].trim().isEmpty()) {
-PFREC6_I = new Double(split[2897]);
-}
-if (!split[2898].trim().isEmpty()) {
-PFREC6_IFLAG = new Double(split[2898]);
-}
-if (!split[2899].trim().isEmpty()) {
-PFDRAW1_I = new Double(split[2899]);
-}
-if (!split[2900].trim().isEmpty()) {
-PFDRAW1_IFLAG = new Double(split[2900]);
-}
-if (!split[2901].trim().isEmpty()) {
-PFDRAW2_I = new Double(split[2901]);
-}
-if (!split[2902].trim().isEmpty()) {
-PFDRAW2_IFLAG = new Double(split[2902]);
-}
-if (!split[2903].trim().isEmpty()) {
-PFDRAW3_I = new Double(split[2903]);
-}
-if (!split[2904].trim().isEmpty()) {
-PFDRAW3_IFLAG = new Double(split[2904]);
-}
-if (!split[2905].trim().isEmpty()) {
-PFDRAW4_I = new Double(split[2905]);
-}
-if (!split[2906].trim().isEmpty()) {
-PFDRAW4_IFLAG = new Double(split[2906]);
-}
-if (!split[2907].trim().isEmpty()) {
-PFDRAW5_I = new Double(split[2907]);
-}
-if (!split[2908].trim().isEmpty()) {
-PFDRAW5_IFLAG = new Double(split[2908]);
-}
-if (!split[2909].trim().isEmpty()) {
-PFDRAW6_I = new Double(split[2909]);
-}
-if (!split[2910].trim().isEmpty()) {
-PFDRAW6_IFLAG = new Double(split[2910]);
-}
-if (!split[2911].trim().isEmpty()) {
-PFLUMV1_IFLAG = new Double(split[2911]);
-}
-if (!split[2912].trim().isEmpty()) {
-PFLUMV2_IFLAG = new Double(split[2912]);
-}
-if (!split[2913].trim().isEmpty()) {
-PFLUMV3_IFLAG = new Double(split[2913]);
-}
-if (!split[2914].trim().isEmpty()) {
-PFLUMV4_IFLAG = new Double(split[2914]);
-}
-if (!split[2915].trim().isEmpty()) {
-PFLUMV5_IFLAG = new Double(split[2915]);
-}
-if (!split[2916].trim().isEmpty()) {
-PFLUMV6_IFLAG = new Double(split[2916]);
-}
-if (!split[2917].trim().isEmpty()) {
-PFINCP1_I = new Double(split[2917]);
-}
-if (!split[2918].trim().isEmpty()) {
-PFINCP1_IFLAG = new Double(split[2918]);
-}
-if (!split[2919].trim().isEmpty()) {
-PFINCP2_I = new Double(split[2919]);
-}
-if (!split[2920].trim().isEmpty()) {
-PFINCP2_IFLAG = new Double(split[2920]);
-}
-if (!split[2921].trim().isEmpty()) {
-PFINCP3_I = new Double(split[2921]);
-}
-if (!split[2922].trim().isEmpty()) {
-PFINCP3_IFLAG = new Double(split[2922]);
-}
-if (!split[2923].trim().isEmpty()) {
-PFINCP4_I = new Double(split[2923]);
-}
-if (!split[2924].trim().isEmpty()) {
-PFINCP4_IFLAG = new Double(split[2924]);
-}
-if (!split[2925].trim().isEmpty()) {
-PFINCP5_I = new Double(split[2925]);
-}
-if (!split[2926].trim().isEmpty()) {
-PFINCP5_IFLAG = new Double(split[2926]);
-}
-if (!split[2927].trim().isEmpty()) {
-PFINCP6_I = new Double(split[2927]);
-}
-if (!split[2928].trim().isEmpty()) {
-PFINCP6_IFLAG = new Double(split[2928]);
-}
-if (!split[2929].trim().isEmpty()) {
-PFINCA1_I = new Double(split[2929]);
-}
-if (!split[2930].trim().isEmpty()) {
-PFINCA1_IFLAG = new Double(split[2930]);
-}
-if (!split[2931].trim().isEmpty()) {
-PFINCA2_I = new Double(split[2931]);
-}
-if (!split[2932].trim().isEmpty()) {
-PFINCA2_IFLAG = new Double(split[2932]);
-}
-if (!split[2933].trim().isEmpty()) {
-PFINCA3_I = new Double(split[2933]);
-}
-if (!split[2934].trim().isEmpty()) {
-PFINCA3_IFLAG = new Double(split[2934]);
-}
-if (!split[2935].trim().isEmpty()) {
-PFINCA4_I = new Double(split[2935]);
-}
-if (!split[2936].trim().isEmpty()) {
-PFINCA4_IFLAG = new Double(split[2936]);
-}
-if (!split[2937].trim().isEmpty()) {
-PFINCA5_I = new Double(split[2937]);
-}
-if (!split[2938].trim().isEmpty()) {
-PFINCA5_IFLAG = new Double(split[2938]);
-}
-if (!split[2939].trim().isEmpty()) {
-PFINCA6_I = new Double(split[2939]);
-}
-if (!split[2940].trim().isEmpty()) {
-PFINCA6_IFLAG = new Double(split[2940]);
-}
-if (!split[2941].trim().isEmpty()) {
-OTHSRC1_I = new Double(split[2941]);
-}
-if (!split[2942].trim().isEmpty()) {
-OTHSRC1_IFLAG = new Double(split[2942]);
-}
-if (!split[2943].trim().isEmpty()) {
-OTHSRC2_I = new Double(split[2943]);
-}
-if (!split[2944].trim().isEmpty()) {
-OTHSRC2_IFLAG = new Double(split[2944]);
-}
-if (!split[2945].trim().isEmpty()) {
-OTHSRC3_I = new Double(split[2945]);
-}
-if (!split[2946].trim().isEmpty()) {
-OTHSRC3_IFLAG = new Double(split[2946]);
-}
-if (!split[2947].trim().isEmpty()) {
-OTHSRC4_I = new Double(split[2947]);
-}
-if (!split[2948].trim().isEmpty()) {
-OTHSRC4_IFLAG = new Double(split[2948]);
-}
-if (!split[2949].trim().isEmpty()) {
-OTHSRC5_I = new Double(split[2949]);
-}
-if (!split[2950].trim().isEmpty()) {
-OTHSRC5_IFLAG = new Double(split[2950]);
-}
-if (!split[2951].trim().isEmpty()) {
-PSPEXPH_I = new Double(split[2951]);
-}
-if (!split[2952].trim().isEmpty()) {
-PSPEXPH_IFLAG = new Double(split[2952]);
-}
-if (!split[2953].trim().isEmpty()) {
-PSPSE_I = new Double(split[2953]);
-}
-if (!split[2954].trim().isEmpty()) {
-PSPSE_IFLAG = new Double(split[2954]);
-}
-if (!split[2955].trim().isEmpty()) {
-PWEXPH_I = new Double(split[2955]);
-}
-if (!split[2956].trim().isEmpty()) {
-PWEXPH_IFLAG = new Double(split[2956]);
-}
-if (!split[2957].trim().isEmpty()) {
-PWIDFUT_I = new Double(split[2957]);
-}
-if (!split[2958].trim().isEmpty()) {
-PWIDFUT_IFLAG = new Double(split[2958]);
-}
-if (!split[2959].trim().isEmpty()) {
-XMARSTA_I = new Double(split[2959]);
-}
-if (!split[2960].trim().isEmpty()) {
-XMARSTA_IFLAG = new Double(split[2960]);
-}
-if (!split[2961].trim().isEmpty()) {
-MARBEF_I = new Double(split[2961]);
-}
-if (!split[2962].trim().isEmpty()) {
-MARBEF_IFLAG = new Double(split[2962]);
-}
-if (!split[2963].trim().isEmpty()) {
-PWEXPA_I = new Double(split[2963]);
-}
-if (!split[2964].trim().isEmpty()) {
-PWEXPA_IFLAG = new Double(split[2964]);
-}
-if (!split[2965].trim().isEmpty()) {
-PSPEXPA_I = new Double(split[2965]);
-}
-if (!split[2966].trim().isEmpty()) {
-PSPEXPA_IFLAG = new Double(split[2966]);
-}
-if (!split[2967].trim().isEmpty()) {
-AGEASAF1 = new Double(split[2967]);
-}
-if (!split[2968].trim().isEmpty()) {
-SPASAF_IORIG = new Double(split[2968]);
-}
-if (!split[2969].trim().isEmpty()) {
-PINCINP = new Double(split[2969]);
-}
-if (!split[2970].trim().isEmpty()) {
-PFCURV1_IFLAG = new Double(split[2970]);
-}
-if (!split[2971].trim().isEmpty()) {
-PFCURV2_IFLAG = new Double(split[2971]);
-}
-if (!split[2972].trim().isEmpty()) {
-PFCURV3_IFLAG = new Double(split[2972]);
-}
-if (!split[2973].trim().isEmpty()) {
-PFCURV4_IFLAG = new Double(split[2973]);
-}
-if (!split[2974].trim().isEmpty()) {
-PFCURV5_IFLAG = new Double(split[2974]);
-}
-if (!split[2975].trim().isEmpty()) {
-PFCURV6_IFLAG = new Double(split[2975]);
-}
-if (!split[2976].trim().isEmpty()) {
-PFDDV1_I = new Double(split[2976]);
-}
-if (!split[2977].trim().isEmpty()) {
-PFDDV1_IFLAG = new Double(split[2977]);
-}
-if (!split[2978].trim().isEmpty()) {
-PFDDV2_I = new Double(split[2978]);
-}
-if (!split[2979].trim().isEmpty()) {
-PFDDV2_IFLAG = new Double(split[2979]);
-}
-if (!split[2980].trim().isEmpty()) {
-PFDDV3_I = new Double(split[2980]);
-}
-if (!split[2981].trim().isEmpty()) {
-PFDDV3_IFLAG = new Double(split[2981]);
-}
-if (!split[2982].trim().isEmpty()) {
-PFDDV4_I = new Double(split[2982]);
-}
-if (!split[2983].trim().isEmpty()) {
-PFDDV4_IFLAG = new Double(split[2983]);
-}
-if (!split[2984].trim().isEmpty()) {
-PFDDV5_I = new Double(split[2984]);
-}
-if (!split[2985].trim().isEmpty()) {
-PFDDV5_IFLAG = new Double(split[2985]);
-}
-if (!split[2986].trim().isEmpty()) {
-PFDDV6_I = new Double(split[2986]);
-}
-if (!split[2987].trim().isEmpty()) {
-PFDDV6_IFLAG = new Double(split[2987]);
-}
-if (!split[2988].trim().isEmpty()) {
-DVHSIZE = new Double(split[2988]);
-}
-if (!split[2989].trim().isEmpty()) {
-PINC = new Double(split[2989]);
-}
-if (!split[2990].trim().isEmpty()) {
-HASSHAC = new Double(split[2990]);
-}
-if (!split[2991].trim().isEmpty()) {
-CACRNUM = new Double(split[2991]);
-}
-if (!split[2992].trim().isEmpty()) {
-DVSHCVAL = new Double(split[2992]);
-}
-if (!split[2993].trim().isEmpty()) {
-CAODNUM = new Double(split[2993]);
-}
-if (!split[2994].trim().isEmpty()) {
-DVSHODVAL = new Double(split[2994]);
-}
-if (!split[2995].trim().isEmpty()) {
-DVSHODVAL2 = new Double(split[2995]);
-}
-if (!split[2996].trim().isEmpty()) {
-DVSHODVAL3 = new Double(split[2996]);
-}
-if (!split[2997].trim().isEmpty()) {
-DVFCINVAL = new Double(split[2997]);
-}
-if (!split[2998].trim().isEmpty()) {
-DVCOINV = new Double(split[2998]);
-}
-if (!split[2999].trim().isEmpty()) {
-DVCOINV2 = new Double(split[2999]);
-}
-if (!split[3000].trim().isEmpty()) {
-DVCOINV3 = new Double(split[3000]);
-}
-if (!split[3001].trim().isEmpty()) {
-DVCOINV4 = new Double(split[3001]);
-}
-if (!split[3002].trim().isEmpty()) {
-DVCOINV5 = new Double(split[3002]);
-}
-if (!split[3003].trim().isEmpty()) {
-DVCACRVAL_SUM = new Double(split[3003]);
-}
-if (!split[3004].trim().isEmpty()) {
-DVCAODVAL_SUM = new Double(split[3004]);
-}
-if (!split[3005].trim().isEmpty()) {
-DVCAVAL_SUM = new Double(split[3005]);
-}
-if (!split[3006].trim().isEmpty()) {
-DLANY_I = new Double(split[3006]);
-}
-if (!split[3007].trim().isEmpty()) {
-DLNUM_I = new Double(split[3007]);
-}
-if (!split[3008].trim().isEmpty()) {
-DLTYPE1_I = new Double(split[3008]);
-}
-if (!split[3009].trim().isEmpty()) {
-DLTYPE2_I = new Double(split[3009]);
-}
-if (!split[3010].trim().isEmpty()) {
-DLTYPE3_I = new Double(split[3010]);
-}
-if (!split[3011].trim().isEmpty()) {
-DLTYPE4_I = new Double(split[3011]);
-}
-if (!split[3012].trim().isEmpty()) {
-DLTYPE5_I = new Double(split[3012]);
-}
-if (!split[3013].trim().isEmpty()) {
-DLINS1_I = new Double(split[3013]);
-}
-if (!split[3014].trim().isEmpty()) {
-DLINS2_I = new Double(split[3014]);
-}
-if (!split[3015].trim().isEmpty()) {
-DLINS3_I = new Double(split[3015]);
-}
-if (!split[3016].trim().isEmpty()) {
-DLINS4_I = new Double(split[3016]);
-}
-if (!split[3017].trim().isEmpty()) {
-DLINS5_I = new Double(split[3017]);
-}
-if (!split[3018].trim().isEmpty()) {
-DLOFT1_I = new Double(split[3018]);
-}
-if (!split[3019].trim().isEmpty()) {
-DLOFT2_I = new Double(split[3019]);
-}
-if (!split[3020].trim().isEmpty()) {
-DLOFT3_I = new Double(split[3020]);
-}
-if (!split[3021].trim().isEmpty()) {
-DLOFT4_I = new Double(split[3021]);
-}
-if (!split[3022].trim().isEmpty()) {
-DLOFT5_I = new Double(split[3022]);
-}
-if (!split[3023].trim().isEmpty()) {
-DLWHNY1_I = new Double(split[3023]);
-}
-if (!split[3024].trim().isEmpty()) {
-DLWHNY2_I = new Double(split[3024]);
-}
-if (!split[3025].trim().isEmpty()) {
-DLWHNY3_I = new Double(split[3025]);
-}
-if (!split[3026].trim().isEmpty()) {
-DLWHNY4_I = new Double(split[3026]);
-}
-if (!split[3027].trim().isEmpty()) {
-DLWHNY5_I = new Double(split[3027]);
-}
-if (!split[3028].trim().isEmpty()) {
-DLWHNM1_I = new Double(split[3028]);
-}
-if (!split[3029].trim().isEmpty()) {
-DLWHNM2_I = new Double(split[3029]);
-}
-if (!split[3030].trim().isEmpty()) {
-DLWHNM3_I = new Double(split[3030]);
-}
-if (!split[3031].trim().isEmpty()) {
-DLWHNM4_I = new Double(split[3031]);
-}
-if (!split[3032].trim().isEmpty()) {
-DLWHNM5_I = new Double(split[3032]);
-}
-if (!split[3033].trim().isEmpty()) {
-DSLAMT1_I = new Double(split[3033]);
-}
-if (!split[3034].trim().isEmpty()) {
-DSLAMT2_I = new Double(split[3034]);
-}
-if (!split[3035].trim().isEmpty()) {
-DSLAMT3_I = new Double(split[3035]);
-}
-if (!split[3036].trim().isEmpty()) {
-DSLAMT4_I = new Double(split[3036]);
-}
-if (!split[3037].trim().isEmpty()) {
-DSLAMT5_I = new Double(split[3037]);
-}
-if (!split[3038].trim().isEmpty()) {
-NWLN_I = new Double(split[3038]);
-}
-if (!split[3039].trim().isEmpty()) {
-NWLN_IFLAG = new Double(split[3039]);
-}
-if (!split[3040].trim().isEmpty()) {
-NWLNNO_I = new Double(split[3040]);
-}
-if (!split[3041].trim().isEmpty()) {
-DTLTYPE1_I = new Double(split[3041]);
-}
-if (!split[3042].trim().isEmpty()) {
-DTLTYPE2_I = new Double(split[3042]);
-}
-if (!split[3043].trim().isEmpty()) {
-DTLTYPE3_I = new Double(split[3043]);
-}
-if (!split[3044].trim().isEmpty()) {
-DTLTYPE4_I = new Double(split[3044]);
-}
-if (!split[3045].trim().isEmpty()) {
-DTLTYPE5_I = new Double(split[3045]);
-}
-if (!split[3046].trim().isEmpty()) {
-DTLOWE1_I = new Double(split[3046]);
-}
-if (!split[3047].trim().isEmpty()) {
-DTLOWE2_I = new Double(split[3047]);
-}
-if (!split[3048].trim().isEmpty()) {
-DTLOWE3_I = new Double(split[3048]);
-}
-if (!split[3049].trim().isEmpty()) {
-DTLOWE4_I = new Double(split[3049]);
-}
-if (!split[3050].trim().isEmpty()) {
-DTLOWE5_I = new Double(split[3050]);
-}
-if (!split[3051].trim().isEmpty()) {
-DLBEH1_I = new Double(split[3051]);
-}
-if (!split[3052].trim().isEmpty()) {
-DLBEH2_I = new Double(split[3052]);
-}
-if (!split[3053].trim().isEmpty()) {
-DLBEH3_I = new Double(split[3053]);
-}
-if (!split[3054].trim().isEmpty()) {
-DLBEH4_I = new Double(split[3054]);
-}
-if (!split[3055].trim().isEmpty()) {
-DLBEH5_I = new Double(split[3055]);
-}
-if (!split[3056].trim().isEmpty()) {
-DLOWE1_I = new Double(split[3056]);
-}
-if (!split[3057].trim().isEmpty()) {
-DLOWE2_I = new Double(split[3057]);
-}
-if (!split[3058].trim().isEmpty()) {
-DLOWE3_I = new Double(split[3058]);
-}
-if (!split[3059].trim().isEmpty()) {
-DLOWE4_I = new Double(split[3059]);
-}
-if (!split[3060].trim().isEmpty()) {
-DLOWE5_I = new Double(split[3060]);
-}
-if (!split[3061].trim().isEmpty()) {
-DLANY_IFLAG = new Double(split[3061]);
-}
-if (!split[3062].trim().isEmpty()) {
-DLNUM_IFLAG = new Double(split[3062]);
-}
-if (!split[3063].trim().isEmpty()) {
-DLTYPE1_IFLAG = new Double(split[3063]);
-}
-if (!split[3064].trim().isEmpty()) {
-DLTYPE2_IFLAG = new Double(split[3064]);
-}
-if (!split[3065].trim().isEmpty()) {
-DLTYPE3_IFLAG = new Double(split[3065]);
-}
-if (!split[3066].trim().isEmpty()) {
-DLTYPE4_IFLAG = new Double(split[3066]);
-}
-if (!split[3067].trim().isEmpty()) {
-DLTYPE5_IFLAG = new Double(split[3067]);
-}
-if (!split[3068].trim().isEmpty()) {
-DLINS1_IFLAG = new Double(split[3068]);
-}
-if (!split[3069].trim().isEmpty()) {
-DLINS2_IFLAG = new Double(split[3069]);
-}
-if (!split[3070].trim().isEmpty()) {
-DLINS3_IFLAG = new Double(split[3070]);
-}
-if (!split[3071].trim().isEmpty()) {
-DLINS4_IFLAG = new Double(split[3071]);
-}
-if (!split[3072].trim().isEmpty()) {
-DLINS5_IFLAG = new Double(split[3072]);
-}
-if (!split[3073].trim().isEmpty()) {
-DLOFT1_IFLAG = new Double(split[3073]);
-}
-if (!split[3074].trim().isEmpty()) {
-DLOFT2_IFLAG = new Double(split[3074]);
-}
-if (!split[3075].trim().isEmpty()) {
-DLOFT3_IFLAG = new Double(split[3075]);
-}
-if (!split[3076].trim().isEmpty()) {
-DLOFT4_IFLAG = new Double(split[3076]);
-}
-if (!split[3077].trim().isEmpty()) {
-DLOFT5_IFLAG = new Double(split[3077]);
-}
-if (!split[3078].trim().isEmpty()) {
-DLWHNY1_IFLAG = new Double(split[3078]);
-}
-if (!split[3079].trim().isEmpty()) {
-DLWHNY2_IFLAG = new Double(split[3079]);
-}
-if (!split[3080].trim().isEmpty()) {
-DLWHNY3_IFLAG = new Double(split[3080]);
-}
-if (!split[3081].trim().isEmpty()) {
-DLWHNY4_IFLAG = new Double(split[3081]);
-}
-if (!split[3082].trim().isEmpty()) {
-DLWHNY5_IFLAG = new Double(split[3082]);
-}
-if (!split[3083].trim().isEmpty()) {
-DLWHNM1_IFLAG = new Double(split[3083]);
-}
-if (!split[3084].trim().isEmpty()) {
-DLWHNM2_IFLAG = new Double(split[3084]);
-}
-if (!split[3085].trim().isEmpty()) {
-DLWHNM3_IFLAG = new Double(split[3085]);
-}
-if (!split[3086].trim().isEmpty()) {
-DLWHNM4_IFLAG = new Double(split[3086]);
-}
-if (!split[3087].trim().isEmpty()) {
-DLWHNM5_IFLAG = new Double(split[3087]);
-}
-if (!split[3088].trim().isEmpty()) {
-DSLAMT1_IFLAG = new Double(split[3088]);
-}
-if (!split[3089].trim().isEmpty()) {
-DSLAMT2_IFLAG = new Double(split[3089]);
-}
-if (!split[3090].trim().isEmpty()) {
-DSLAMT3_IFLAG = new Double(split[3090]);
-}
-if (!split[3091].trim().isEmpty()) {
-DSLAMT4_IFLAG = new Double(split[3091]);
-}
-if (!split[3092].trim().isEmpty()) {
-DSLAMT5_IFLAG = new Double(split[3092]);
-}
-if (!split[3093].trim().isEmpty()) {
-NWLNNO_IFLAG = new Double(split[3093]);
-}
-if (!split[3094].trim().isEmpty()) {
-DTLTYPE1_IFLAG = new Double(split[3094]);
-}
-if (!split[3095].trim().isEmpty()) {
-DTLTYPE2_IFLAG = new Double(split[3095]);
-}
-if (!split[3096].trim().isEmpty()) {
-DTLTYPE3_IFLAG = new Double(split[3096]);
-}
-if (!split[3097].trim().isEmpty()) {
-DTLTYPE4_IFLAG = new Double(split[3097]);
-}
-if (!split[3098].trim().isEmpty()) {
-DTLTYPE5_IFLAG = new Double(split[3098]);
-}
-if (!split[3099].trim().isEmpty()) {
-DTLOWE1_IFLAG = new Double(split[3099]);
-}
-if (!split[3100].trim().isEmpty()) {
-DTLOWE2_IFLAG = new Double(split[3100]);
-}
-if (!split[3101].trim().isEmpty()) {
-DTLOWE3_IFLAG = new Double(split[3101]);
-}
-if (!split[3102].trim().isEmpty()) {
-DTLOWE4_IFLAG = new Double(split[3102]);
-}
-if (!split[3103].trim().isEmpty()) {
-DTLOWE5_IFLAG = new Double(split[3103]);
-}
-if (!split[3104].trim().isEmpty()) {
-DLBEH1_IFLAG = new Double(split[3104]);
-}
-if (!split[3105].trim().isEmpty()) {
-DLBEH2_IFLAG = new Double(split[3105]);
-}
-if (!split[3106].trim().isEmpty()) {
-DLBEH3_IFLAG = new Double(split[3106]);
-}
-if (!split[3107].trim().isEmpty()) {
-DLBEH4_IFLAG = new Double(split[3107]);
-}
-if (!split[3108].trim().isEmpty()) {
-DLBEH5_IFLAG = new Double(split[3108]);
-}
-if (!split[3109].trim().isEmpty()) {
-DLOWE1_IFLAG = new Double(split[3109]);
-}
-if (!split[3110].trim().isEmpty()) {
-DLOWE2_IFLAG = new Double(split[3110]);
-}
-if (!split[3111].trim().isEmpty()) {
-DLOWE3_IFLAG = new Double(split[3111]);
-}
-if (!split[3112].trim().isEmpty()) {
-DLOWE4_IFLAG = new Double(split[3112]);
-}
-if (!split[3113].trim().isEmpty()) {
-DLOWE5_IFLAG = new Double(split[3113]);
-}
-if (!split[3114].trim().isEmpty()) {
-DHBANY01_I = new Double(split[3114]);
-}
-if (!split[3115].trim().isEmpty()) {
-DHBANY02_I = new Double(split[3115]);
-}
-if (!split[3116].trim().isEmpty()) {
-DHBANY03_I = new Double(split[3116]);
-}
-if (!split[3117].trim().isEmpty()) {
-DHBANY04_I = new Double(split[3117]);
-}
-if (!split[3118].trim().isEmpty()) {
-DHBANY05_I = new Double(split[3118]);
-}
-if (!split[3119].trim().isEmpty()) {
-DHBANY06_I = new Double(split[3119]);
-}
-if (!split[3120].trim().isEmpty()) {
-DHBANY07_I = new Double(split[3120]);
-}
-if (!split[3121].trim().isEmpty()) {
-DHBANY08_I = new Double(split[3121]);
-}
-if (!split[3122].trim().isEmpty()) {
-DHBANY09_I = new Double(split[3122]);
-}
-if (!split[3123].trim().isEmpty()) {
-DHBANY10_I = new Double(split[3123]);
-}
-if (!split[3124].trim().isEmpty()) {
-DHBANY11_I = new Double(split[3124]);
-}
-if (!split[3125].trim().isEmpty()) {
-DHBAMT01_I = new Double(split[3125]);
-}
-if (!split[3126].trim().isEmpty()) {
-DHBAMT02_I = new Double(split[3126]);
-}
-if (!split[3127].trim().isEmpty()) {
-DHBAMT03_I = new Double(split[3127]);
-}
-if (!split[3128].trim().isEmpty()) {
-DHBAMT04_I = new Double(split[3128]);
-}
-if (!split[3129].trim().isEmpty()) {
-DHBAMT05_I = new Double(split[3129]);
-}
-if (!split[3130].trim().isEmpty()) {
-DHBAMT06_I = new Double(split[3130]);
-}
-if (!split[3131].trim().isEmpty()) {
-DHBAMT07_I = new Double(split[3131]);
-}
-if (!split[3132].trim().isEmpty()) {
-DHBAMT08_I = new Double(split[3132]);
-}
-if (!split[3133].trim().isEmpty()) {
-DHBAMT09_I = new Double(split[3133]);
-}
-if (!split[3134].trim().isEmpty()) {
-DHBAMT10_I = new Double(split[3134]);
-}
-if (!split[3135].trim().isEmpty()) {
-DHBAMT11_I = new Double(split[3135]);
-}
-if (!split[3136].trim().isEmpty()) {
-CACTF_I = new Double(split[3136]);
-}
-if (!split[3137].trim().isEmpty()) {
-CASAV_I = new Double(split[3137]);
-}
-if (!split[3138].trim().isEmpty()) {
-CACTV_I = new Double(split[3138]);
-}
-if (!split[3139].trim().isEmpty()) {
-CASVV_I = new Double(split[3139]);
-}
-if (!split[3140].trim().isEmpty()) {
-FINFSAV1_I = new Double(split[3140]);
-}
-if (!split[3141].trim().isEmpty()) {
-FINFSAV2_I = new Double(split[3141]);
-}
-if (!split[3142].trim().isEmpty()) {
-FINFSAV3_I = new Double(split[3142]);
-}
-if (!split[3143].trim().isEmpty()) {
-FINFSAV4_I = new Double(split[3143]);
-}
-if (!split[3144].trim().isEmpty()) {
-FINFLV_I = new Double(split[3144]);
-}
-if (!split[3145].trim().isEmpty()) {
-FINFV_I = new Double(split[3145]);
-}
-if (!split[3146].trim().isEmpty()) {
-DHBANY01_IFLAG = new Double(split[3146]);
-}
-if (!split[3147].trim().isEmpty()) {
-DHBANY02_IFLAG = new Double(split[3147]);
-}
-if (!split[3148].trim().isEmpty()) {
-DHBANY03_IFLAG = new Double(split[3148]);
-}
-if (!split[3149].trim().isEmpty()) {
-DHBANY04_IFLAG = new Double(split[3149]);
-}
-if (!split[3150].trim().isEmpty()) {
-DHBANY05_IFLAG = new Double(split[3150]);
-}
-if (!split[3151].trim().isEmpty()) {
-DHBANY06_IFLAG = new Double(split[3151]);
-}
-if (!split[3152].trim().isEmpty()) {
-DHBANY07_IFLAG = new Double(split[3152]);
-}
-if (!split[3153].trim().isEmpty()) {
-DHBANY08_IFLAG = new Double(split[3153]);
-}
-if (!split[3154].trim().isEmpty()) {
-DHBANY09_IFLAG = new Double(split[3154]);
-}
-if (!split[3155].trim().isEmpty()) {
-DHBANY10_IFLAG = new Double(split[3155]);
-}
-if (!split[3156].trim().isEmpty()) {
-DHBANY11_IFLAG = new Double(split[3156]);
-}
-if (!split[3157].trim().isEmpty()) {
-DHBAMT01_IFLAG = new Double(split[3157]);
-}
-if (!split[3158].trim().isEmpty()) {
-DHBAMT02_IFLAG = new Double(split[3158]);
-}
-if (!split[3159].trim().isEmpty()) {
-DHBAMT03_IFLAG = new Double(split[3159]);
-}
-if (!split[3160].trim().isEmpty()) {
-DHBAMT04_IFLAG = new Double(split[3160]);
-}
-if (!split[3161].trim().isEmpty()) {
-DHBAMT05_IFLAG = new Double(split[3161]);
-}
-if (!split[3162].trim().isEmpty()) {
-DHBAMT06_IFLAG = new Double(split[3162]);
-}
-if (!split[3163].trim().isEmpty()) {
-DHBAMT07_IFLAG = new Double(split[3163]);
-}
-if (!split[3164].trim().isEmpty()) {
-DHBAMT08_IFLAG = new Double(split[3164]);
-}
-if (!split[3165].trim().isEmpty()) {
-DHBAMT09_IFLAG = new Double(split[3165]);
-}
-if (!split[3166].trim().isEmpty()) {
-DHBAMT10_IFLAG = new Double(split[3166]);
-}
-if (!split[3167].trim().isEmpty()) {
-DHBAMT11_IFLAG = new Double(split[3167]);
-}
-if (!split[3168].trim().isEmpty()) {
-CACTF_IFLAG = new Double(split[3168]);
-}
-if (!split[3169].trim().isEmpty()) {
-CASAV_IFLAG = new Double(split[3169]);
-}
-if (!split[3170].trim().isEmpty()) {
-CACTV_IFLAG = new Double(split[3170]);
-}
-if (!split[3171].trim().isEmpty()) {
-CASVV_IFLAG = new Double(split[3171]);
-}
-if (!split[3172].trim().isEmpty()) {
-FINFSAV1_IFLAG = new Double(split[3172]);
-}
-if (!split[3173].trim().isEmpty()) {
-FINFSAV2_IFLAG = new Double(split[3173]);
-}
-if (!split[3174].trim().isEmpty()) {
-FINFSAV3_IFLAG = new Double(split[3174]);
-}
-if (!split[3175].trim().isEmpty()) {
-FINFSAV4_IFLAG = new Double(split[3175]);
-}
-if (!split[3176].trim().isEmpty()) {
-FINFLV_IFLAG = new Double(split[3176]);
-}
-if (!split[3177].trim().isEmpty()) {
-FINFV_IFLAG = new Double(split[3177]);
-}
-if (!split[3178].trim().isEmpty()) {
-DVHASSAVDEP = new Double(split[3178]);
-}
-if (!split[3179].trim().isEmpty()) {
-DVHASSHSAC = new Double(split[3179]);
-}
-if (!split[3180].trim().isEmpty()) {
-SAVNUM = new Double(split[3180]);
-}
-if (!split[3181].trim().isEmpty()) {
-DVSHSVAL = new Double(split[3181]);
-}
-if (!split[3182].trim().isEmpty()) {
-DVFSINVAL = new Double(split[3182]);
-}
-if (!split[3183].trim().isEmpty()) {
-DVSAVAL_SUM = new Double(split[3183]);
-}
-if (!split[3184].trim().isEmpty()) {
-DVELARR = new Double(split[3184]);
-}
-if (!split[3185].trim().isEmpty()) {
-DVGASARR = new Double(split[3185]);
-}
-if (!split[3186].trim().isEmpty()) {
-DVCTARR = new Double(split[3186]);
-}
-if (!split[3187].trim().isEmpty()) {
-DVTELARR = new Double(split[3187]);
-}
-if (!split[3188].trim().isEmpty()) {
-DVWATARR = new Double(split[3188]);
-}
-if (!split[3189].trim().isEmpty()) {
-DVRNTARR = new Double(split[3189]);
-}
-if (!split[3190].trim().isEmpty()) {
-DVCHMARR = new Double(split[3190]);
-}
-if (!split[3191].trim().isEmpty()) {
-DVCRTARR = new Double(split[3191]);
-}
-if (!split[3192].trim().isEmpty()) {
-DVTAXARR = new Double(split[3192]);
-}
-if (!split[3193].trim().isEmpty()) {
-DVVATARR = new Double(split[3193]);
-}
-if (!split[3194].trim().isEmpty()) {
-DVOTHARR = new Double(split[3194]);
-}
-if (!split[3195].trim().isEmpty()) {
-DVANYARR = new Double(split[3195]);
-}
-if (!split[3196].trim().isEmpty()) {
-TOTBILLARR_SUM = new Double(split[3196]);
-}
-if (!split[3197].trim().isEmpty()) {
-DVHASISA = new Double(split[3197]);
-}
-if (!split[3198].trim().isEmpty()) {
-DVHASBOND = new Double(split[3198]);
-}
-if (!split[3199].trim().isEmpty()) {
-DVHASUTRUST = new Double(split[3199]);
-}
-if (!split[3200].trim().isEmpty()) {
-DVHASEMPSH = new Double(split[3200]);
-}
-if (!split[3201].trim().isEmpty()) {
-DVHASOTHSH = new Double(split[3201]);
-}
-if (!split[3202].trim().isEmpty()) {
-DVHASNSP = new Double(split[3202]);
-}
-if (!split[3203].trim().isEmpty()) {
-DVHASGILT = new Double(split[3203]);
-}
-if (!split[3204].trim().isEmpty()) {
-DVHASLINS = new Double(split[3204]);
-}
-if (!split[3205].trim().isEmpty()) {
-DVHASOINV = new Double(split[3205]);
-}
-if (!split[3206].trim().isEmpty()) {
-DVHASNOFA = new Double(split[3206]);
-}
-if (!split[3207].trim().isEmpty()) {
-DVCISAV = new Double(split[3207]);
-}
-if (!split[3208].trim().isEmpty()) {
-DVIISAV = new Double(split[3208]);
-}
-if (!split[3209].trim().isEmpty()) {
-DVKISAV = new Double(split[3209]);
-}
-if (!split[3210].trim().isEmpty()) {
-DVFNSVAL = new Double(split[3210]);
-}
-if (!split[3211].trim().isEmpty()) {
-DVFSHUKV = new Double(split[3211]);
-}
-if (!split[3212].trim().isEmpty()) {
-DVFLFENV = new Double(split[3212]);
-}
-if (!split[3213].trim().isEmpty()) {
-DVFLFSIV = new Double(split[3213]);
-}
-if (!split[3214].trim().isEmpty()) {
-DVFLFFSV = new Double(split[3214]);
-}
-if (!split[3215].trim().isEmpty()) {
-DVFLFTEV = new Double(split[3215]);
-}
-if (!split[3216].trim().isEmpty()) {
-DVFBONDV = new Double(split[3216]);
-}
-if (!split[3217].trim().isEmpty()) {
-DVFEOPTV = new Double(split[3217]);
-}
-if (!split[3218].trim().isEmpty()) {
-DVFESHAV = new Double(split[3218]);
-}
-if (!split[3219].trim().isEmpty()) {
-DVFCOLLV = new Double(split[3219]);
-}
-if (!split[3220].trim().isEmpty()) {
-DVFSHOSV = new Double(split[3220]);
-}
-if (!split[3221].trim().isEmpty()) {
-DVFGLTUKV = new Double(split[3221]);
-}
-if (!split[3222].trim().isEmpty()) {
-DVFGLTFOV = new Double(split[3222]);
-}
-if (!split[3223].trim().isEmpty()) {
-DVFINVOTV = new Double(split[3223]);
-}
-if (!split[3224].trim().isEmpty()) {
-DVFINFLV = new Double(split[3224]);
-}
-if (!split[3225].trim().isEmpty()) {
-DVFINFV = new Double(split[3225]);
-}
-if (!split[3226].trim().isEmpty()) {
-DVCACTV = new Double(split[3226]);
-}
-if (!split[3227].trim().isEmpty()) {
-DVCASVV = new Double(split[3227]);
-}
-if (!split[3228].trim().isEmpty()) {
-DVISAVAL_SUM = new Double(split[3228]);
-}
-if (!split[3229].trim().isEmpty()) {
-DVINSV_SUM = new Double(split[3229]);
-}
-if (!split[3230].trim().isEmpty()) {
-DVFESHARES_SUM = new Double(split[3230]);
-}
-if (!split[3231].trim().isEmpty()) {
-DVFINFVAL_SUM = new Double(split[3231]);
-}
-if (!split[3232].trim().isEmpty()) {
-NWFLNVAL1 = new Double(split[3232]);
-}
-if (!split[3233].trim().isEmpty()) {
-NWILNVAL1 = new Double(split[3233]);
-}
-if (!split[3234].trim().isEmpty()) {
-NWFLNVAL2 = new Double(split[3234]);
-}
-if (!split[3235].trim().isEmpty()) {
-NWILNVAL2 = new Double(split[3235]);
-}
-if (!split[3236].trim().isEmpty()) {
-NWFLNVAL3 = new Double(split[3236]);
-}
-if (!split[3237].trim().isEmpty()) {
-NWILNVAL3 = new Double(split[3237]);
-}
-if (!split[3238].trim().isEmpty()) {
-DVNWFLN_SUM = new Double(split[3238]);
-}
-if (!split[3239].trim().isEmpty()) {
-DVNWILN_SUM = new Double(split[3239]);
-}
-if (!split[3240].trim().isEmpty()) {
-LNYR1 = new Double(split[3240]);
-}
-if (!split[3241].trim().isEmpty()) {
-LNMN1 = new Double(split[3241]);
-}
-if (!split[3242].trim().isEmpty()) {
-LNLFT1 = new Double(split[3242]);
-}
-if (!split[3243].trim().isEmpty()) {
-LNYR2 = new Double(split[3243]);
-}
-if (!split[3244].trim().isEmpty()) {
-LNMN2 = new Double(split[3244]);
-}
-if (!split[3245].trim().isEmpty()) {
-LNLFT2 = new Double(split[3245]);
-}
-if (!split[3246].trim().isEmpty()) {
-LNYR3 = new Double(split[3246]);
-}
-if (!split[3247].trim().isEmpty()) {
-LNMN3 = new Double(split[3247]);
-}
-if (!split[3248].trim().isEmpty()) {
-LNLFT3 = new Double(split[3248]);
-}
-if (!split[3249].trim().isEmpty()) {
-LNYR4 = new Double(split[3249]);
-}
-if (!split[3250].trim().isEmpty()) {
-LNMN4 = new Double(split[3250]);
-}
-if (!split[3251].trim().isEmpty()) {
-LNLFT4 = new Double(split[3251]);
-}
-if (!split[3252].trim().isEmpty()) {
-LNYR5 = new Double(split[3252]);
-}
-if (!split[3253].trim().isEmpty()) {
-LNMN5 = new Double(split[3253]);
-}
-if (!split[3254].trim().isEmpty()) {
-LNLFT5 = new Double(split[3254]);
-}
-if (!split[3255].trim().isEmpty()) {
-LNOS1 = new Double(split[3255]);
-}
-if (!split[3256].trim().isEmpty()) {
-LNOS2 = new Double(split[3256]);
-}
-if (!split[3257].trim().isEmpty()) {
-LNOS3 = new Double(split[3257]);
-}
-if (!split[3258].trim().isEmpty()) {
-LNOS4 = new Double(split[3258]);
-}
-if (!split[3259].trim().isEmpty()) {
-LNOS5 = new Double(split[3259]);
-}
-if (!split[3260].trim().isEmpty()) {
-FLNOS1 = new Double(split[3260]);
-}
-if (!split[3261].trim().isEmpty()) {
-FLNOS2 = new Double(split[3261]);
-}
-if (!split[3262].trim().isEmpty()) {
-FLNOS3 = new Double(split[3262]);
-}
-if (!split[3263].trim().isEmpty()) {
-FLNOS4 = new Double(split[3263]);
-}
-if (!split[3264].trim().isEmpty()) {
-FLNOS5 = new Double(split[3264]);
-}
-if (!split[3265].trim().isEmpty()) {
-DVHASLF = new Double(split[3265]);
-}
-if (!split[3266].trim().isEmpty()) {
-DVHASPLINF = new Double(split[3266]);
-}
-if (!split[3267].trim().isEmpty()) {
-DVHASSL = new Double(split[3267]);
-}
-if (!split[3268].trim().isEmpty()) {
-DVDLOWE1 = new Double(split[3268]);
-}
-if (!split[3269].trim().isEmpty()) {
-DVDLOWE2 = new Double(split[3269]);
-}
-if (!split[3270].trim().isEmpty()) {
-DVDLOWE3 = new Double(split[3270]);
-}
-if (!split[3271].trim().isEmpty()) {
-DVDLOWE4 = new Double(split[3271]);
-}
-if (!split[3272].trim().isEmpty()) {
-DVDLOWE5 = new Double(split[3272]);
-}
-if (!split[3273].trim().isEmpty()) {
-LNARR_SUM = new Double(split[3273]);
-}
-if (!split[3274].trim().isEmpty()) {
-DVHASLNAR = new Double(split[3274]);
-}
-if (!split[3275].trim().isEmpty()) {
-DMOANY_I = new Double(split[3275]);
-}
-if (!split[3276].trim().isEmpty()) {
-DMONUM_I = new Double(split[3276]);
-}
-if (!split[3277].trim().isEmpty()) {
-DMOINS1_I = new Double(split[3277]);
-}
-if (!split[3278].trim().isEmpty()) {
-DMOINS2_I = new Double(split[3278]);
-}
-if (!split[3279].trim().isEmpty()) {
-DMOINS3_I = new Double(split[3279]);
-}
-if (!split[3280].trim().isEmpty()) {
-DMOINS4_I = new Double(split[3280]);
-}
-if (!split[3281].trim().isEmpty()) {
-DMOINS5_I = new Double(split[3281]);
-}
-if (!split[3282].trim().isEmpty()) {
-DMOOFT1_I = new Double(split[3282]);
-}
-if (!split[3283].trim().isEmpty()) {
-DMOOFT2_I = new Double(split[3283]);
-}
-if (!split[3284].trim().isEmpty()) {
-DMOOFT3_I = new Double(split[3284]);
-}
-if (!split[3285].trim().isEmpty()) {
-DMOOFT4_I = new Double(split[3285]);
-}
-if (!split[3286].trim().isEmpty()) {
-DMOOFT5_I = new Double(split[3286]);
-}
-if (!split[3287].trim().isEmpty()) {
-DMOWHNY1_I = new Double(split[3287]);
-}
-if (!split[3288].trim().isEmpty()) {
-DMOWHNY2_I = new Double(split[3288]);
-}
-if (!split[3289].trim().isEmpty()) {
-DMOWHNY3_I = new Double(split[3289]);
-}
-if (!split[3290].trim().isEmpty()) {
-DMOWHNY4_I = new Double(split[3290]);
-}
-if (!split[3291].trim().isEmpty()) {
-DMOWHNY5_I = new Double(split[3291]);
-}
-if (!split[3292].trim().isEmpty()) {
-DMOWHNM1_I = new Double(split[3292]);
-}
-if (!split[3293].trim().isEmpty()) {
-DMOWHNM2_I = new Double(split[3293]);
-}
-if (!split[3294].trim().isEmpty()) {
-DMOWHNM3_I = new Double(split[3294]);
-}
-if (!split[3295].trim().isEmpty()) {
-DMOWHNM4_I = new Double(split[3295]);
-}
-if (!split[3296].trim().isEmpty()) {
-DMOWHNM5_I = new Double(split[3296]);
-}
-if (!split[3297].trim().isEmpty()) {
-DMOBEH1_I = new Double(split[3297]);
-}
-if (!split[3298].trim().isEmpty()) {
-DMOBEH2_I = new Double(split[3298]);
-}
-if (!split[3299].trim().isEmpty()) {
-DMOBEH3_I = new Double(split[3299]);
-}
-if (!split[3300].trim().isEmpty()) {
-DMOBEH4_I = new Double(split[3300]);
-}
-if (!split[3301].trim().isEmpty()) {
-DMOBEH5_I = new Double(split[3301]);
-}
-if (!split[3302].trim().isEmpty()) {
-DMOOWE1_I = new Double(split[3302]);
-}
-if (!split[3303].trim().isEmpty()) {
-DMOOWE2_I = new Double(split[3303]);
-}
-if (!split[3304].trim().isEmpty()) {
-DMOOWE3_I = new Double(split[3304]);
-}
-if (!split[3305].trim().isEmpty()) {
-DMOOWE4_I = new Double(split[3305]);
-}
-if (!split[3306].trim().isEmpty()) {
-DMOOWE5_I = new Double(split[3306]);
-}
-if (!split[3307].trim().isEmpty()) {
-DMOANY_IFLAG = new Double(split[3307]);
-}
-if (!split[3308].trim().isEmpty()) {
-DMONUM_IFLAG = new Double(split[3308]);
-}
-if (!split[3309].trim().isEmpty()) {
-DMOINS1_IFLAG = new Double(split[3309]);
-}
-if (!split[3310].trim().isEmpty()) {
-DMOINS2_IFLAG = new Double(split[3310]);
-}
-if (!split[3311].trim().isEmpty()) {
-DMOINS3_IFLAG = new Double(split[3311]);
-}
-if (!split[3312].trim().isEmpty()) {
-DMOINS4_IFLAG = new Double(split[3312]);
-}
-if (!split[3313].trim().isEmpty()) {
-DMOINS5_IFLAG = new Double(split[3313]);
-}
-if (!split[3314].trim().isEmpty()) {
-DMOOFT1_IFLAG = new Double(split[3314]);
-}
-if (!split[3315].trim().isEmpty()) {
-DMOOFT2_IFLAG = new Double(split[3315]);
-}
-if (!split[3316].trim().isEmpty()) {
-DMOOFT3_IFLAG = new Double(split[3316]);
-}
-if (!split[3317].trim().isEmpty()) {
-DMOOFT4_IFLAG = new Double(split[3317]);
-}
-if (!split[3318].trim().isEmpty()) {
-DMOOFT5_IFLAG = new Double(split[3318]);
-}
-if (!split[3319].trim().isEmpty()) {
-DMOWHNY1_IFLAG = new Double(split[3319]);
-}
-if (!split[3320].trim().isEmpty()) {
-DMOWHNY2_IFLAG = new Double(split[3320]);
-}
-if (!split[3321].trim().isEmpty()) {
-DMOWHNY3_IFLAG = new Double(split[3321]);
-}
-if (!split[3322].trim().isEmpty()) {
-DMOWHNY4_IFLAG = new Double(split[3322]);
-}
-if (!split[3323].trim().isEmpty()) {
-DMOWHNY5_IFLAG = new Double(split[3323]);
-}
-if (!split[3324].trim().isEmpty()) {
-DMOWHNM1_IFLAG = new Double(split[3324]);
-}
-if (!split[3325].trim().isEmpty()) {
-DMOWHNM2_IFLAG = new Double(split[3325]);
-}
-if (!split[3326].trim().isEmpty()) {
-DMOWHNM3_IFLAG = new Double(split[3326]);
-}
-if (!split[3327].trim().isEmpty()) {
-DMOWHNM4_IFLAG = new Double(split[3327]);
-}
-if (!split[3328].trim().isEmpty()) {
-DMOWHNM5_IFLAG = new Double(split[3328]);
-}
-if (!split[3329].trim().isEmpty()) {
-DMOBEH1_IFLAG = new Double(split[3329]);
-}
-if (!split[3330].trim().isEmpty()) {
-DMOBEH2_IFLAG = new Double(split[3330]);
-}
-if (!split[3331].trim().isEmpty()) {
-DMOBEH3_IFLAG = new Double(split[3331]);
-}
-if (!split[3332].trim().isEmpty()) {
-DMOBEH4_IFLAG = new Double(split[3332]);
-}
-if (!split[3333].trim().isEmpty()) {
-DMOBEH5_IFLAG = new Double(split[3333]);
-}
-if (!split[3334].trim().isEmpty()) {
-DMOOWE1_IFLAG = new Double(split[3334]);
-}
-if (!split[3335].trim().isEmpty()) {
-DMOOWE2_IFLAG = new Double(split[3335]);
-}
-if (!split[3336].trim().isEmpty()) {
-DMOOWE3_IFLAG = new Double(split[3336]);
-}
-if (!split[3337].trim().isEmpty()) {
-DMOOWE4_IFLAG = new Double(split[3337]);
-}
-if (!split[3338].trim().isEmpty()) {
-DMOOWE5_IFLAG = new Double(split[3338]);
-}
-if (!split[3339].trim().isEmpty()) {
-MOLFT1 = new Double(split[3339]);
-}
-if (!split[3340].trim().isEmpty()) {
-NYR1 = new Double(split[3340]);
-}
-if (!split[3341].trim().isEmpty()) {
-NMN1 = new Double(split[3341]);
-}
-if (!split[3342].trim().isEmpty()) {
-MOLFT2 = new Double(split[3342]);
-}
-if (!split[3343].trim().isEmpty()) {
-NYR2 = new Double(split[3343]);
-}
-if (!split[3344].trim().isEmpty()) {
-NMN2 = new Double(split[3344]);
-}
-if (!split[3345].trim().isEmpty()) {
-MOLFT3 = new Double(split[3345]);
-}
-if (!split[3346].trim().isEmpty()) {
-NYR3 = new Double(split[3346]);
-}
-if (!split[3347].trim().isEmpty()) {
-NMN3 = new Double(split[3347]);
-}
-if (!split[3348].trim().isEmpty()) {
-MOLFT4 = new Double(split[3348]);
-}
-if (!split[3349].trim().isEmpty()) {
-NYR4 = new Double(split[3349]);
-}
-if (!split[3350].trim().isEmpty()) {
-NMN4 = new Double(split[3350]);
-}
-if (!split[3351].trim().isEmpty()) {
-MOLFT5 = new Double(split[3351]);
-}
-if (!split[3352].trim().isEmpty()) {
-NYR5 = new Double(split[3352]);
-}
-if (!split[3353].trim().isEmpty()) {
-NMN5 = new Double(split[3353]);
-}
-if (!split[3354].trim().isEmpty()) {
-MOOS1 = new Double(split[3354]);
-}
-if (!split[3355].trim().isEmpty()) {
-MOOS2 = new Double(split[3355]);
-}
-if (!split[3356].trim().isEmpty()) {
-MOOS3 = new Double(split[3356]);
-}
-if (!split[3357].trim().isEmpty()) {
-MOOS4 = new Double(split[3357]);
-}
-if (!split[3358].trim().isEmpty()) {
-MOOS5 = new Double(split[3358]);
-}
-if (!split[3359].trim().isEmpty()) {
-TOTMO_SUM = new Double(split[3359]);
-}
-if (!split[3360].trim().isEmpty()) {
-DVDMOOWE1 = new Double(split[3360]);
-}
-if (!split[3361].trim().isEmpty()) {
-DVDMOOWE2 = new Double(split[3361]);
-}
-if (!split[3362].trim().isEmpty()) {
-DVDMOOWE3 = new Double(split[3362]);
-}
-if (!split[3363].trim().isEmpty()) {
-DVDMOOWE4 = new Double(split[3363]);
-}
-if (!split[3364].trim().isEmpty()) {
-DVDMOOWE5 = new Double(split[3364]);
-}
-if (!split[3365].trim().isEmpty()) {
-MOARR_SUM = new Double(split[3365]);
-}
-if (!split[3366].trim().isEmpty()) {
-DVHASMOAR = new Double(split[3366]);
-}
-if (!split[3367].trim().isEmpty()) {
-PFLUMV1_I = new Double(split[3367]);
-}
-if (!split[3368].trim().isEmpty()) {
-PFLUMV2_I = new Double(split[3368]);
-}
-if (!split[3369].trim().isEmpty()) {
-PFLUMV3_I = new Double(split[3369]);
-}
-if (!split[3370].trim().isEmpty()) {
-PFLUMV4_I = new Double(split[3370]);
-}
-if (!split[3371].trim().isEmpty()) {
-PFLUMV5_I = new Double(split[3371]);
-}
-if (!split[3372].trim().isEmpty()) {
-PFLUMV6_I = new Double(split[3372]);
-}
-if (!split[3373].trim().isEmpty()) {
-PFCURV1_I = new Double(split[3373]);
-}
-if (!split[3374].trim().isEmpty()) {
-PFCURV2_I = new Double(split[3374]);
-}
-if (!split[3375].trim().isEmpty()) {
-PFCURV3_I = new Double(split[3375]);
-}
-if (!split[3376].trim().isEmpty()) {
-PFCURV4_I = new Double(split[3376]);
-}
-if (!split[3377].trim().isEmpty()) {
-PFCURV5_I = new Double(split[3377]);
-}
-if (!split[3378].trim().isEmpty()) {
-PFCURV6_I = new Double(split[3378]);
-}
-if (!split[3379].trim().isEmpty()) {
-CCAC1_I = new Double(split[3379]);
-}
-if (!split[3380].trim().isEmpty()) {
-DCAMOS1_I = new Double(split[3380]);
-}
-if (!split[3381].trim().isEmpty()) {
-CCAC2_I = new Double(split[3381]);
-}
-if (!split[3382].trim().isEmpty()) {
-DCAMOS2_I = new Double(split[3382]);
-}
-if (!split[3383].trim().isEmpty()) {
-CCAC3_I = new Double(split[3383]);
-}
-if (!split[3384].trim().isEmpty()) {
-DCAMOS3_I = new Double(split[3384]);
-}
-if (!split[3385].trim().isEmpty()) {
-CCAC4_I = new Double(split[3385]);
-}
-if (!split[3386].trim().isEmpty()) {
-DCAMOS4_I = new Double(split[3386]);
-}
-if (!split[3387].trim().isEmpty()) {
-CCAC5_I = new Double(split[3387]);
-}
-if (!split[3388].trim().isEmpty()) {
-DCAMOS5_I = new Double(split[3388]);
-}
-if (!split[3389].trim().isEmpty()) {
-SCAC1_I = new Double(split[3389]);
-}
-if (!split[3390].trim().isEmpty()) {
-DSAMOS1_I = new Double(split[3390]);
-}
-if (!split[3391].trim().isEmpty()) {
-SCAC2_I = new Double(split[3391]);
-}
-if (!split[3392].trim().isEmpty()) {
-DSAMOS2_I = new Double(split[3392]);
-}
-if (!split[3393].trim().isEmpty()) {
-SCAC3_I = new Double(split[3393]);
-}
-if (!split[3394].trim().isEmpty()) {
-DSAMOS3_I = new Double(split[3394]);
-}
-if (!split[3395].trim().isEmpty()) {
-SCAC4_I = new Double(split[3395]);
-}
-if (!split[3396].trim().isEmpty()) {
-DSAMOS4_I = new Double(split[3396]);
-}
-if (!split[3397].trim().isEmpty()) {
-SCAC5_I = new Double(split[3397]);
-}
-if (!split[3398].trim().isEmpty()) {
-DSAMOS5_I = new Double(split[3398]);
-}
-if (!split[3399].trim().isEmpty()) {
-TOTSC_SUM = new Double(split[3399]);
-}
-if (!split[3400].trim().isEmpty()) {
-DVHASSC = new Double(split[3400]);
-}
-if (!split[3401].trim().isEmpty()) {
-TOTCC_SUM = new Double(split[3401]);
-}
-if (!split[3402].trim().isEmpty()) {
-DVHASCC = new Double(split[3402]);
-}
-if (!split[3403].trim().isEmpty()) {
-OSLC1 = new Double(split[3403]);
-}
-if (!split[3404].trim().isEmpty()) {
-OSLC2 = new Double(split[3404]);
-}
-if (!split[3405].trim().isEmpty()) {
-OSLC3 = new Double(split[3405]);
-}
-if (!split[3406].trim().isEmpty()) {
-OSLC4 = new Double(split[3406]);
-}
-if (!split[3407].trim().isEmpty()) {
-NSLC1 = new Double(split[3407]);
-}
-if (!split[3408].trim().isEmpty()) {
-NSLC2 = new Double(split[3408]);
-}
-if (!split[3409].trim().isEmpty()) {
-NSLC3 = new Double(split[3409]);
-}
-if (!split[3410].trim().isEmpty()) {
-OSLBNK1 = new Double(split[3410]);
-}
-if (!split[3411].trim().isEmpty()) {
-OSLBNK2 = new Double(split[3411]);
-}
-if (!split[3412].trim().isEmpty()) {
-OSLBNK3 = new Double(split[3412]);
-}
-if (!split[3413].trim().isEmpty()) {
-NSLBNK1 = new Double(split[3413]);
-}
-if (!split[3414].trim().isEmpty()) {
-NSLBNK2 = new Double(split[3414]);
-}
-if (!split[3415].trim().isEmpty()) {
-NSLBNK3 = new Double(split[3415]);
-}
-if (!split[3416].trim().isEmpty()) {
-TOTSLC_SUM = new Double(split[3416]);
-}
-if (!split[3417].trim().isEmpty()) {
-TOTSLBNK_SUM = new Double(split[3417]);
-}
-if (!split[3418].trim().isEmpty()) {
-DVHASSLC = new Double(split[3418]);
-}
-if (!split[3419].trim().isEmpty()) {
-DVHASSLBNK = new Double(split[3419]);
-}
-if (!split[3420].trim().isEmpty()) {
-DHPBEH1_I = new Double(split[3420]);
-}
-if (!split[3421].trim().isEmpty()) {
-DHPBEH2_I = new Double(split[3421]);
-}
-if (!split[3422].trim().isEmpty()) {
-DHPBEH3_I = new Double(split[3422]);
-}
-if (!split[3423].trim().isEmpty()) {
-DHPBEH4_I = new Double(split[3423]);
-}
-if (!split[3424].trim().isEmpty()) {
-DHPBEH5_I = new Double(split[3424]);
-}
-if (!split[3425].trim().isEmpty()) {
-DHPOWE1_I = new Double(split[3425]);
-}
-if (!split[3426].trim().isEmpty()) {
-DHPOWE2_I = new Double(split[3426]);
-}
-if (!split[3427].trim().isEmpty()) {
-DHPOWE3_I = new Double(split[3427]);
-}
-if (!split[3428].trim().isEmpty()) {
-DHPOWE4_I = new Double(split[3428]);
-}
-if (!split[3429].trim().isEmpty()) {
-DHPOWE5_I = new Double(split[3429]);
-}
-if (!split[3430].trim().isEmpty()) {
-DHPANY1_I = new Double(split[3430]);
-}
-if (!split[3431].trim().isEmpty()) {
-DHPANY2_I = new Double(split[3431]);
-}
-if (!split[3432].trim().isEmpty()) {
-DHPANY3_I = new Double(split[3432]);
-}
-if (!split[3433].trim().isEmpty()) {
-DHPNUM_I = new Double(split[3433]);
-}
-if (!split[3434].trim().isEmpty()) {
-DHPOFT1_I = new Double(split[3434]);
-}
-if (!split[3435].trim().isEmpty()) {
-DHPOFT2_I = new Double(split[3435]);
-}
-if (!split[3436].trim().isEmpty()) {
-DHPOFT3_I = new Double(split[3436]);
-}
-if (!split[3437].trim().isEmpty()) {
-DHPOFT4_I = new Double(split[3437]);
-}
-if (!split[3438].trim().isEmpty()) {
-DHPOFT5_I = new Double(split[3438]);
-}
-if (!split[3439].trim().isEmpty()) {
-DHPINS1_I = new Double(split[3439]);
-}
-if (!split[3440].trim().isEmpty()) {
-DHPINS2_I = new Double(split[3440]);
-}
-if (!split[3441].trim().isEmpty()) {
-DHPINS3_I = new Double(split[3441]);
-}
-if (!split[3442].trim().isEmpty()) {
-DHPINS4_I = new Double(split[3442]);
-}
-if (!split[3443].trim().isEmpty()) {
-DHPINS5_I = new Double(split[3443]);
-}
-if (!split[3444].trim().isEmpty()) {
-DHPWHNY1_I = new Double(split[3444]);
-}
-if (!split[3445].trim().isEmpty()) {
-DHPWHNM1_I = new Double(split[3445]);
-}
-if (!split[3446].trim().isEmpty()) {
-DHPWHNY2_I = new Double(split[3446]);
-}
-if (!split[3447].trim().isEmpty()) {
-DHPWHNM2_I = new Double(split[3447]);
-}
-if (!split[3448].trim().isEmpty()) {
-DHPWHNY3_I = new Double(split[3448]);
-}
-if (!split[3449].trim().isEmpty()) {
-DHPWHNM3_I = new Double(split[3449]);
-}
-if (!split[3450].trim().isEmpty()) {
-DHPWHNY4_I = new Double(split[3450]);
-}
-if (!split[3451].trim().isEmpty()) {
-DHPWHNM4_I = new Double(split[3451]);
-}
-if (!split[3452].trim().isEmpty()) {
-DHPWHNY5_I = new Double(split[3452]);
-}
-if (!split[3453].trim().isEmpty()) {
-DHPWHNM5_I = new Double(split[3453]);
-}
-if (!split[3454].trim().isEmpty()) {
-DHPBEH1_IFLAG = new Double(split[3454]);
-}
-if (!split[3455].trim().isEmpty()) {
-DHPBEH2_IFLAG = new Double(split[3455]);
-}
-if (!split[3456].trim().isEmpty()) {
-DHPBEH3_IFLAG = new Double(split[3456]);
-}
-if (!split[3457].trim().isEmpty()) {
-DHPBEH4_IFLAG = new Double(split[3457]);
-}
-if (!split[3458].trim().isEmpty()) {
-DHPBEH5_IFLAG = new Double(split[3458]);
-}
-if (!split[3459].trim().isEmpty()) {
-DHPOWE1_IFLAG = new Double(split[3459]);
-}
-if (!split[3460].trim().isEmpty()) {
-DHPOWE2_IFLAG = new Double(split[3460]);
-}
-if (!split[3461].trim().isEmpty()) {
-DHPOWE3_IFLAG = new Double(split[3461]);
-}
-if (!split[3462].trim().isEmpty()) {
-DHPOWE4_IFLAG = new Double(split[3462]);
-}
-if (!split[3463].trim().isEmpty()) {
-DHPOWE5_IFLAG = new Double(split[3463]);
-}
-if (!split[3464].trim().isEmpty()) {
-DHPANY1_IFLAG = new Double(split[3464]);
-}
-if (!split[3465].trim().isEmpty()) {
-DHPANY2_IFLAG = new Double(split[3465]);
-}
-if (!split[3466].trim().isEmpty()) {
-DHPANY3_IFLAG = new Double(split[3466]);
-}
-if (!split[3467].trim().isEmpty()) {
-DHPNUM_IFLAG = new Double(split[3467]);
-}
-if (!split[3468].trim().isEmpty()) {
-DHPOFT1_IFLAG = new Double(split[3468]);
-}
-if (!split[3469].trim().isEmpty()) {
-DHPOFT2_IFLAG = new Double(split[3469]);
-}
-if (!split[3470].trim().isEmpty()) {
-DHPOFT3_IFLAG = new Double(split[3470]);
-}
-if (!split[3471].trim().isEmpty()) {
-DHPOFT4_IFLAG = new Double(split[3471]);
-}
-if (!split[3472].trim().isEmpty()) {
-DHPOFT5_IFLAG = new Double(split[3472]);
-}
-if (!split[3473].trim().isEmpty()) {
-DHPINS1_IFLAG = new Double(split[3473]);
-}
-if (!split[3474].trim().isEmpty()) {
-DHPINS2_IFLAG = new Double(split[3474]);
-}
-if (!split[3475].trim().isEmpty()) {
-DHPINS3_IFLAG = new Double(split[3475]);
-}
-if (!split[3476].trim().isEmpty()) {
-DHPINS4_IFLAG = new Double(split[3476]);
-}
-if (!split[3477].trim().isEmpty()) {
-DHPINS5_IFLAG = new Double(split[3477]);
-}
-if (!split[3478].trim().isEmpty()) {
-DHPWHNY1_IFLAG = new Double(split[3478]);
-}
-if (!split[3479].trim().isEmpty()) {
-DHPWHNM1_IFLAG = new Double(split[3479]);
-}
-if (!split[3480].trim().isEmpty()) {
-DHPWHNY2_IFLAG = new Double(split[3480]);
-}
-if (!split[3481].trim().isEmpty()) {
-DHPWHNM2_IFLAG = new Double(split[3481]);
-}
-if (!split[3482].trim().isEmpty()) {
-DHPWHNY3_IFLAG = new Double(split[3482]);
-}
-if (!split[3483].trim().isEmpty()) {
-DHPWHNM3_IFLAG = new Double(split[3483]);
-}
-if (!split[3484].trim().isEmpty()) {
-DHPWHNY4_IFLAG = new Double(split[3484]);
-}
-if (!split[3485].trim().isEmpty()) {
-DHPWHNM4_IFLAG = new Double(split[3485]);
-}
-if (!split[3486].trim().isEmpty()) {
-DHPWHNY5_IFLAG = new Double(split[3486]);
-}
-if (!split[3487].trim().isEmpty()) {
-DHPWHNM5_IFLAG = new Double(split[3487]);
-}
-if (!split[3488].trim().isEmpty()) {
-DVMRDF = new Double(split[3488]);
-}
-if (!split[3489].trim().isEmpty()) {
-DVDBLUMP1 = new Double(split[3489]);
-}
-if (!split[3490].trim().isEmpty()) {
-DVDBLUMP2 = new Double(split[3490]);
-}
-if (!split[3491].trim().isEmpty()) {
-DVDBLUMP3 = new Double(split[3491]);
-}
-if (!split[3492].trim().isEmpty()) {
-DVDBLUMP4 = new Double(split[3492]);
-}
-if (!split[3493].trim().isEmpty()) {
-DVDBLUMP5 = new Double(split[3493]);
-}
-if (!split[3494].trim().isEmpty()) {
-DVDBLUMP6 = new Double(split[3494]);
-}
-if (!split[3495].trim().isEmpty()) {
-DVDBINC1 = new Double(split[3495]);
-}
-if (!split[3496].trim().isEmpty()) {
-DVDBINC2 = new Double(split[3496]);
-}
-if (!split[3497].trim().isEmpty()) {
-DVDBINC3 = new Double(split[3497]);
-}
-if (!split[3498].trim().isEmpty()) {
-DVDBINC4 = new Double(split[3498]);
-}
-if (!split[3499].trim().isEmpty()) {
-DVDBINC5 = new Double(split[3499]);
-}
-if (!split[3500].trim().isEmpty()) {
-DVDBINC6 = new Double(split[3500]);
-}
-if (!split[3501].trim().isEmpty()) {
-DVHASPFD = new Double(split[3501]);
-}
-if (!split[3502].trim().isEmpty()) {
-DVPFDDV = new Double(split[3502]);
-}
-if (!split[3503].trim().isEmpty()) {
-HPNYR1 = new Double(split[3503]);
-}
-if (!split[3504].trim().isEmpty()) {
-HPNMN1 = new Double(split[3504]);
-}
-if (!split[3505].trim().isEmpty()) {
-HPLFT1 = new Double(split[3505]);
-}
-if (!split[3506].trim().isEmpty()) {
-HPNYR2 = new Double(split[3506]);
-}
-if (!split[3507].trim().isEmpty()) {
-HPNMN2 = new Double(split[3507]);
-}
-if (!split[3508].trim().isEmpty()) {
-HPLFT2 = new Double(split[3508]);
-}
-if (!split[3509].trim().isEmpty()) {
-HPNYR3 = new Double(split[3509]);
-}
-if (!split[3510].trim().isEmpty()) {
-HPNMN3 = new Double(split[3510]);
-}
-if (!split[3511].trim().isEmpty()) {
-HPLFT3 = new Double(split[3511]);
-}
-if (!split[3512].trim().isEmpty()) {
-HPNYR4 = new Double(split[3512]);
-}
-if (!split[3513].trim().isEmpty()) {
-HPNMN4 = new Double(split[3513]);
-}
-if (!split[3514].trim().isEmpty()) {
-HPLFT4 = new Double(split[3514]);
-}
-if (!split[3515].trim().isEmpty()) {
-HPNYR5 = new Double(split[3515]);
-}
-if (!split[3516].trim().isEmpty()) {
-HPNMN5 = new Double(split[3516]);
-}
-if (!split[3517].trim().isEmpty()) {
-HPLFT5 = new Double(split[3517]);
-}
-if (!split[3518].trim().isEmpty()) {
-HPOS1 = new Double(split[3518]);
-}
-if (!split[3519].trim().isEmpty()) {
-HPOS2 = new Double(split[3519]);
-}
-if (!split[3520].trim().isEmpty()) {
-HPOS3 = new Double(split[3520]);
-}
-if (!split[3521].trim().isEmpty()) {
-HPOS4 = new Double(split[3521]);
-}
-if (!split[3522].trim().isEmpty()) {
-HPOS5 = new Double(split[3522]);
-}
-if (!split[3523].trim().isEmpty()) {
-DVHASHP = new Double(split[3523]);
-}
-if (!split[3524].trim().isEmpty()) {
-DVDHPOWE1 = new Double(split[3524]);
-}
-if (!split[3525].trim().isEmpty()) {
-DVDHPOWE2 = new Double(split[3525]);
-}
-if (!split[3526].trim().isEmpty()) {
-DVDHPOWE3 = new Double(split[3526]);
-}
-if (!split[3527].trim().isEmpty()) {
-DVDHPOWE4 = new Double(split[3527]);
-}
-if (!split[3528].trim().isEmpty()) {
-DVDHPOWE5 = new Double(split[3528]);
-}
-if (!split[3529].trim().isEmpty()) {
-HPARR_SUM = new Double(split[3529]);
-}
-if (!split[3530].trim().isEmpty()) {
-DVHPAR = new Double(split[3530]);
-}
-if (!split[3531].trim().isEmpty()) {
-NWHPVAL1 = new Double(split[3531]);
-}
-if (!split[3532].trim().isEmpty()) {
-NWHPVAL2 = new Double(split[3532]);
-}
-if (!split[3533].trim().isEmpty()) {
-NWHPVAL3 = new Double(split[3533]);
-}
-if (!split[3534].trim().isEmpty()) {
-DVNWHP_SUM = new Double(split[3534]);
-}
-if (!split[3535].trim().isEmpty()) {
-DVHASNHP = new Double(split[3535]);
-}
-if (!split[3536].trim().isEmpty()) {
-TOTNSLC_SUM = new Double(split[3536]);
-}
-if (!split[3537].trim().isEmpty()) {
-TOTNSLBNK_SUM = new Double(split[3537]);
-}
-if (!split[3538].trim().isEmpty()) {
-TOTOSLC_SUM = new Double(split[3538]);
-}
-if (!split[3539].trim().isEmpty()) {
-TOTOSLBNK_SUM = new Double(split[3539]);
-}
-if (!split[3540].trim().isEmpty()) {
-EMPSTAT2 = new Double(split[3540]);
-}
-if (!split[3541].trim().isEmpty()) {
-TOTNLOS_SUM = new Double(split[3541]);
-}
-if (!split[3542].trim().isEmpty()) {
-TOTARR_EXCMORT_SUM = new Double(split[3542]);
-}
-if (!split[3543].trim().isEmpty()) {
-HFINW_EXCENDW_SUM = new Double(split[3543]);
-}
-if (!split[3544].trim().isEmpty()) {
-DVFFASSETS_SUM = new Double(split[3544]);
-}
-if (!split[3545].trim().isEmpty()) {
-DVGRSBONAMT = new Double(split[3545]);
-}
-if (!split[3546].trim().isEmpty()) {
-DVHASNLF = new Double(split[3546]);
-}
-if (!split[3547].trim().isEmpty()) {
-DVHASNLI = new Double(split[3547]);
-}
-if (!split[3548].trim().isEmpty()) {
-DVSEPANNUAL09 = new Double(split[3548]);
-}
-if (!split[3549].trim().isEmpty()) {
-DVSEPANNUAL10 = new Double(split[3549]);
-}
-if (!split[3550].trim().isEmpty()) {
-DVSEPANNUAL11 = new Double(split[3550]);
-}
-if (!split[3551].trim().isEmpty()) {
-DVSEPANNUAL12 = new Double(split[3551]);
-}
-if (!split[3552].trim().isEmpty()) {
-DVSEPANNUAL13 = new Double(split[3552]);
-}
-if (!split[3553].trim().isEmpty()) {
-DVSEPANNUAL14 = new Double(split[3553]);
-}
-if (!split[3554].trim().isEmpty()) {
-DVSEPANNUAL15 = new Double(split[3554]);
-}
-if (!split[3555].trim().isEmpty()) {
-DVSEPANNUAL16 = new Double(split[3555]);
-}
-if (!split[3556].trim().isEmpty()) {
-DVSEPANNUAL17 = new Double(split[3556]);
-}
-if (!split[3557].trim().isEmpty()) {
-DVSEPANNUAL18 = new Double(split[3557]);
-}
-if (!split[3558].trim().isEmpty()) {
-DVSEPANNUAL19 = new Double(split[3558]);
-}
-if (!split[3559].trim().isEmpty()) {
-DVSEPANNUAL20 = new Double(split[3559]);
-}
-if (!split[3560].trim().isEmpty()) {
-DVNETPAY_I = new Double(split[3560]);
-}
-if (!split[3561].trim().isEmpty()) {
-DVNETPAY_IFLAG = new Double(split[3561]);
-}
-if (!split[3562].trim().isEmpty()) {
-DVGRSPAY_I = new Double(split[3562]);
-}
-if (!split[3563].trim().isEmpty()) {
-DVGRSPAY_IFLAG = new Double(split[3563]);
-}
-if (!split[3564].trim().isEmpty()) {
-SJOB2_I = new Double(split[3564]);
-}
-if (!split[3565].trim().isEmpty()) {
-SJOB2_IFLAG = new Double(split[3565]);
-}
-if (!split[3566].trim().isEmpty()) {
-SJEMP1_I = new Double(split[3566]);
-}
-if (!split[3567].trim().isEmpty()) {
-SJEMP1_IFLAG = new Double(split[3567]);
-}
-if (!split[3568].trim().isEmpty()) {
-DVNETEMPSECJOB_IFLAG = new Double(split[3568]);
-}
-if (!split[3569].trim().isEmpty()) {
-DVGRSEMPSECJOB_IFLAG = new Double(split[3569]);
-}
-if (!split[3570].trim().isEmpty()) {
-PAYBON_I = new Double(split[3570]);
-}
-if (!split[3571].trim().isEmpty()) {
-PAYBON_IFLAG = new Double(split[3571]);
-}
-if (!split[3572].trim().isEmpty()) {
-DVNETBONAMT_IFLAG = new Double(split[3572]);
-}
-if (!split[3573].trim().isEmpty()) {
-DVGRSBONAMT_IFLAG = new Double(split[3573]);
-}
-if (!split[3574].trim().isEmpty()) {
-DVSENETPAY_IFLAG = new Double(split[3574]);
-}
-if (!split[3575].trim().isEmpty()) {
-DVSEGRSPAY_IFLAG = new Double(split[3575]);
-}
-if (!split[3576].trim().isEmpty()) {
-DVGRSSESECJOB_IFLAG = new Double(split[3576]);
-}
-if (!split[3577].trim().isEmpty()) {
-EDLEVEL = new Double(split[3577]);
-}
-if (!split[3578].trim().isEmpty()) {
-DVOIGGTANNUAL = new Double(split[3578]);
-}
-if (!split[3579].trim().isEmpty()) {
-FINCV_IFLAG = new Double(split[3579]);
-}
-if (!split[3580].trim().isEmpty()) {
-RENTPAY_I = new Double(split[3580]);
-}
-if (!split[3581].trim().isEmpty()) {
-RENTPAY_IFLAG = new Double(split[3581]);
-}
-if (!split[3582].trim().isEmpty()) {
-DVRENTAMTANNUAL_IFLAG = new Double(split[3582]);
-}
-if (!split[3583].trim().isEmpty()) {
-DVOINRRANNUAL_IFLAG = new Double(split[3583]);
-}
-if (!split[3584].trim().isEmpty()) {
-DVOINGTANNUAL_IFLAG = new Double(split[3584]);
-}
-if (!split[3585].trim().isEmpty()) {
-REGLRPY1_I = new Double(split[3585]);
-}
-if (!split[3586].trim().isEmpty()) {
-REGLRPY2_I = new Double(split[3586]);
-}
-if (!split[3587].trim().isEmpty()) {
-REGLRPY3_I = new Double(split[3587]);
-}
-if (!split[3588].trim().isEmpty()) {
-REGLRPY4_I = new Double(split[3588]);
-}
-if (!split[3589].trim().isEmpty()) {
-REGLRPY5_I = new Double(split[3589]);
-}
-if (!split[3590].trim().isEmpty()) {
-REGLRPY1_IFLAG = new Double(split[3590]);
-}
-if (!split[3591].trim().isEmpty()) {
-REGLRPY2_IFLAG = new Double(split[3591]);
-}
-if (!split[3592].trim().isEmpty()) {
-REGLRPY3_IFLAG = new Double(split[3592]);
-}
-if (!split[3593].trim().isEmpty()) {
-REGLRPY4_IFLAG = new Double(split[3593]);
-}
-if (!split[3594].trim().isEmpty()) {
-REGLRPY5_IFLAG = new Double(split[3594]);
-}
-if (!split[3595].trim().isEmpty()) {
-DVOINEGANNUAL_IFLAG = new Double(split[3595]);
-}
-if (!split[3596].trim().isEmpty()) {
-DVOINFRANNUAL_IFLAG = new Double(split[3596]);
-}
-if (!split[3597].trim().isEmpty()) {
-DVOINMAANNUAL_IFLAG = new Double(split[3597]);
-}
-if (!split[3598].trim().isEmpty()) {
-DVOINROANNUAL_IFLAG = new Double(split[3598]);
-}
-if (!split[3599].trim().isEmpty()) {
-DVOINOPANNUAL_IFLAG = new Double(split[3599]);
-}
-if (!split[3600].trim().isEmpty()) {
-TOTLNS_SUM = new Double(split[3600]);
-}
-if (!split[3601].trim().isEmpty()) {
-TOTFLNS_SUM = new Double(split[3601]);
-}
-if (!split[3602].trim().isEmpty()) {
-TOTHP_SUM = new Double(split[3602]);
-}
-if (!split[3603].trim().isEmpty()) {
-TOTLOS_SUM = new Double(split[3603]);
-}
-if (!split[3604].trim().isEmpty()) {
-HFINL_SUM = new Double(split[3604]);
-}
-if (!split[3605].trim().isEmpty()) {
-POLUM1_I = new Double(split[3605]);
-}
-if (!split[3606].trim().isEmpty()) {
-POLUM1_IFLAG = new Double(split[3606]);
-}
-if (!split[3607].trim().isEmpty()) {
-POLUM2_I = new Double(split[3607]);
-}
-if (!split[3608].trim().isEmpty()) {
-POLUM2_IFLAG = new Double(split[3608]);
-}
-if (!split[3609].trim().isEmpty()) {
-POLMV1_I = new Double(split[3609]);
-}
-if (!split[3610].trim().isEmpty()) {
-POLMV1_IFLAG = new Double(split[3610]);
-}
-if (!split[3611].trim().isEmpty()) {
-PPLUM1_I = new Double(split[3611]);
-}
-if (!split[3612].trim().isEmpty()) {
-PPLUM1_IFLAG = new Double(split[3612]);
-}
-if (!split[3613].trim().isEmpty()) {
-PPLUM2_I = new Double(split[3613]);
-}
-if (!split[3614].trim().isEmpty()) {
-PPLUM2_IFLAG = new Double(split[3614]);
-}
-if (!split[3615].trim().isEmpty()) {
-PPLUM3_I = new Double(split[3615]);
-}
-if (!split[3616].trim().isEmpty()) {
-PPLUM3_IFLAG = new Double(split[3616]);
-}
-if (!split[3617].trim().isEmpty()) {
-PPLMV1_I = new Double(split[3617]);
-}
-if (!split[3618].trim().isEmpty()) {
-PPLMV1_IFLAG = new Double(split[3618]);
-}
-if (!split[3619].trim().isEmpty()) {
-PPLMV2_I = new Double(split[3619]);
-}
-if (!split[3620].trim().isEmpty()) {
-PPLMV2_IFLAG = new Double(split[3620]);
-}
-if (!split[3621].trim().isEmpty()) {
-PPLMV3_I = new Double(split[3621]);
-}
-if (!split[3622].trim().isEmpty()) {
-PPLMV3_IFLAG = new Double(split[3622]);
-}
-if (!split[3623].trim().isEmpty()) {
-PFLMV1_I = new Double(split[3623]);
-}
-if (!split[3624].trim().isEmpty()) {
-PFLMV1_IFLAG = new Double(split[3624]);
-}
-if (!split[3625].trim().isEmpty()) {
-PFLMV2_I = new Double(split[3625]);
-}
-if (!split[3626].trim().isEmpty()) {
-PFLMV2_IFLAG = new Double(split[3626]);
-}
-if (!split[3627].trim().isEmpty()) {
-PFLMV3_I = new Double(split[3627]);
-}
-if (!split[3628].trim().isEmpty()) {
-PFLMV3_IFLAG = new Double(split[3628]);
-}
-if (!split[3629].trim().isEmpty()) {
-PFLMV4_I = new Double(split[3629]);
-}
-if (!split[3630].trim().isEmpty()) {
-PFLMV4_IFLAG = new Double(split[3630]);
-}
-if (!split[3631].trim().isEmpty()) {
-PFLMV5_I = new Double(split[3631]);
-}
-if (!split[3632].trim().isEmpty()) {
-PFLMV5_IFLAG = new Double(split[3632]);
-}
-if (!split[3633].trim().isEmpty()) {
-PFLMV6_I = new Double(split[3633]);
-}
-if (!split[3634].trim().isEmpty()) {
-PFLMV6_IFLAG = new Double(split[3634]);
-}
-if (!split[3635].trim().isEmpty()) {
-IHRECNT_I = new Double(split[3635]);
-}
-if (!split[3636].trim().isEmpty()) {
-IHRECNT_IFLAG = new Double(split[3636]);
-}
-if (!split[3637].trim().isEmpty()) {
-IHRCNUM_I = new Double(split[3637]);
-}
-if (!split[3638].trim().isEmpty()) {
-IHRCNUM_IFLAG = new Double(split[3638]);
-}
-if (!split[3639].trim().isEmpty()) {
-IVAL1_IFLAG = new Double(split[3639]);
-}
-if (!split[3640].trim().isEmpty()) {
-IVAL2_I = new Double(split[3640]);
-}
-if (!split[3641].trim().isEmpty()) {
-IVAL2_IFLAG = new Double(split[3641]);
-}
-if (!split[3642].trim().isEmpty()) {
-IVAL3_I = new Double(split[3642]);
-}
-if (!split[3643].trim().isEmpty()) {
-IVAL3_IFLAG = new Double(split[3643]);
-}
-if (!split[3644].trim().isEmpty()) {
-ILGIFT_I = new Double(split[3644]);
-}
-if (!split[3645].trim().isEmpty()) {
-ILGIFT_IFLAG = new Double(split[3645]);
-}
-if (!split[3646].trim().isEmpty()) {
-IGIFVAL_IFLAG = new Double(split[3646]);
-}
-if (!split[3647].trim().isEmpty()) {
-ILUMTY1_I = new Double(split[3647]);
-}
-if (!split[3648].trim().isEmpty()) {
-ILUMTY2_I = new Double(split[3648]);
-}
-if (!split[3649].trim().isEmpty()) {
-ILUMTY3_I = new Double(split[3649]);
-}
-if (!split[3650].trim().isEmpty()) {
-ILUMTY4_I = new Double(split[3650]);
-}
-if (!split[3651].trim().isEmpty()) {
-ILUMTY5_I = new Double(split[3651]);
-}
-if (!split[3652].trim().isEmpty()) {
-ILUMTY6_I = new Double(split[3652]);
-}
-if (!split[3653].trim().isEmpty()) {
-ILUMTY7_I = new Double(split[3653]);
-}
-if (!split[3654].trim().isEmpty()) {
-ILUMTY1_IFLAG = new Double(split[3654]);
-}
-if (!split[3655].trim().isEmpty()) {
-ILUMTY2_IFLAG = new Double(split[3655]);
-}
-if (!split[3656].trim().isEmpty()) {
-ILUMTY3_IFLAG = new Double(split[3656]);
-}
-if (!split[3657].trim().isEmpty()) {
-ILUMTY4_IFLAG = new Double(split[3657]);
-}
-if (!split[3658].trim().isEmpty()) {
-ILUMTY5_IFLAG = new Double(split[3658]);
-}
-if (!split[3659].trim().isEmpty()) {
-ILUMTY6_IFLAG = new Double(split[3659]);
-}
-if (!split[3660].trim().isEmpty()) {
-ILUMTY7_IFLAG = new Double(split[3660]);
-}
-if (!split[3661].trim().isEmpty()) {
-ILIFB_I = new Double(split[3661]);
-}
-if (!split[3662].trim().isEmpty()) {
-ILIFB_IFLAG = new Double(split[3662]);
-}
-if (!split[3663].trim().isEmpty()) {
-ILIFE_IFLAG = new Double(split[3663]);
-}
-if (!split[3664].trim().isEmpty()) {
-ILUPP_I = new Double(split[3664]);
-}
-if (!split[3665].trim().isEmpty()) {
-ILUPP_IFLAG = new Double(split[3665]);
-}
-if (!split[3666].trim().isEmpty()) {
-ILACC_IFLAG = new Double(split[3666]);
-}
-if (!split[3667].trim().isEmpty()) {
-ILINS_IFLAG = new Double(split[3667]);
-}
-if (!split[3668].trim().isEmpty()) {
-ILRED_IFLAG = new Double(split[3668]);
-}
-if (!split[3669].trim().isEmpty()) {
-ILWIN_IFLAG = new Double(split[3669]);
-}
-if (!split[3670].trim().isEmpty()) {
-ILOTH_IFLAG = new Double(split[3670]);
-}
-if (!split[3671].trim().isEmpty()) {
-NSSEC8 = new Double(split[3671]);
-}
-if (!split[3672].trim().isEmpty()) {
-AGMSAFT1 = new Double(split[3672]);
-}
-if (!split[3673].trim().isEmpty()) {
-AGMSAF2T = new Double(split[3673]);
-}
-if (!split[3674].trim().isEmpty()) {
-MNTHSCAPE = new Double(split[3674]);
-}
-if (!split[3675].trim().isEmpty()) {
-ACCFRAC = new Double(split[3675]);
-}
-if (!split[3676].trim().isEmpty()) {
-RETFRAC = new Double(split[3676]);
-}
-if (!split[3677].trim().isEmpty()) {
-DVPINPVAL = new Double(split[3677]);
-}
-if (!split[3678].trim().isEmpty()) {
-DVWID = new Double(split[3678]);
-}
-if (!split[3679].trim().isEmpty()) {
-DVSPS = new Double(split[3679]);
-}
-if (!split[3680].trim().isEmpty()) {
-DVSPEN = new Double(split[3680]);
-}
-if (!split[3681].trim().isEmpty()) {
-DVDBINCALL = new Double(split[3681]);
-}
-if (!split[3682].trim().isEmpty()) {
-DVVALPBLUM = new Double(split[3682]);
-}
-if (!split[3683].trim().isEmpty()) {
-DVPFCURVAL = new Double(split[3683]);
-}
-if (!split[3684].trim().isEmpty()) {
-DVDBRWEALTHVAL = new Double(split[3684]);
-}
-if (!split[3685].trim().isEmpty()) {
-TOTPEN = new Double(split[3685]);
-}
-if (!split[3686].trim().isEmpty()) {
-DVNIEMP = new Double(split[3686]);
-}
-if (!split[3687].trim().isEmpty()) {
-CURRAC = new Double(split[3687]);
-}
-if (!split[3688].trim().isEmpty()) {
-DVHASPFCUR = new Double(split[3688]);
-}
-if (!split[3689].trim().isEmpty()) {
-DVHASDBR_ORIG = new Double(split[3689]);
-}
-if (!split[3690].trim().isEmpty()) {
-DVHASPFOCC = new Double(split[3690]);
-}
-if (!split[3691].trim().isEmpty()) {
-DVHASPFGRP = new Double(split[3691]);
-}
-if (!split[3692].trim().isEmpty()) {
-DVHASPFPRIV = new Double(split[3692]);
-}
-if (!split[3693].trim().isEmpty()) {
-DVHASPFSIPP = new Double(split[3693]);
-}
-if (!split[3694].trim().isEmpty()) {
-DVHASPFRAC = new Double(split[3694]);
-}
-if (!split[3695].trim().isEmpty()) {
-POLMV2_IFLAG = new Double(split[3695]);
-}
-if (!split[3696].trim().isEmpty()) {
-POLMV2_I = new Double(split[3696]);
-}
-if (!split[3697].trim().isEmpty()) {
-SCNDSCH = new Double(split[3697]);
-}
-if (!split[3698].trim().isEmpty()) {
-RF = new Double(split[3698]);
-}
-if (!split[3699].trim().isEmpty()) {
-RS = new Double(split[3699]);
-}
-SOA2 = split[3700];
-SOA1 = split[3701];
-if (!split[3702].trim().isEmpty()) {
-WARDC91 = new Double(split[3702]);
-}
-if (!split[3703].trim().isEmpty()) {
-WARDO91 = new Double(split[3703]);
-}
-if (!split[3704].trim().isEmpty()) {
-WARD98 = new Double(split[3704]);
-}
-STATSWARD = split[3705];
-if (!split[3706].trim().isEmpty()) {
-SATIS = new Double(split[3706]);
-}
-if (!split[3707].trim().isEmpty()) {
-WORTH = new Double(split[3707]);
-}
-if (!split[3708].trim().isEmpty()) {
-HAPPY = new Double(split[3708]);
-}
-if (!split[3709].trim().isEmpty()) {
-ANXIOUS = new Double(split[3709]);
-}
-if (!split[3710].trim().isEmpty()) {
-ISHRP = new Double(split[3710]);
-}
-if (!split[3711].trim().isEmpty()) {
-ISHRPPART = new Double(split[3711]);
-}
-if (!split[3712].trim().isEmpty()) {
-HRPIOUT1 = new Double(split[3712]);
-}
-if (!split[3713].trim().isEmpty()) {
-HRPPARTIOUT1 = new Double(split[3713]);
-}
-if (!split[3714].trim().isEmpty()) {
-HRP_RESP = new Double(split[3714]);
-}
-if (!split[3715].trim().isEmpty()) {
-HRPDVAGE = new Double(split[3715]);
-}
-if (!split[3716].trim().isEmpty()) {
-HRPDVAGE9 = new Double(split[3716]);
-}
-if (!split[3717].trim().isEmpty()) {
-HRPSEX = new Double(split[3717]);
-}
-if (!split[3718].trim().isEmpty()) {
-HRPNSSEC3 = new Double(split[3718]);
-}
-if (!split[3719].trim().isEmpty()) {
-HRPDVILO3A = new Double(split[3719]);
-}
-if (!split[3720].trim().isEmpty()) {
-HRPDVMRDF = new Double(split[3720]);
-}
-if (!split[3721].trim().isEmpty()) {
-HRPEDATTN1 = new Double(split[3721]);
-}
-if (!split[3722].trim().isEmpty()) {
-HRPEDATTN2 = new Double(split[3722]);
-}
-if (!split[3723].trim().isEmpty()) {
-HRPEDATTN3 = new Double(split[3723]);
-}
-if (!split[3724].trim().isEmpty()) {
-HRPEMPSTAT2 = new Double(split[3724]);
-}
-if (!split[3725].trim().isEmpty()) {
-HRPETHNIC = new Double(split[3725]);
-}
-if (!split[3726].trim().isEmpty()) {
-BONTAX_I = new Double(split[3726]);
-}
-if (!split[3727].trim().isEmpty()) {
-BONTAX_IFLAG = new Double(split[3727]);
-}
-if (!split[3728].trim().isEmpty()) {
-PFEN_I = new Double(split[3728]);
-}
-if (!split[3729].trim().isEmpty()) {
-PFEN_IFLAG = new Double(split[3729]);
-}
-if (!split[3730].trim().isEmpty()) {
-PFENNUM_I = new Double(split[3730]);
-}
-if (!split[3731].trim().isEmpty()) {
-PFENNUM_IFLAG = new Double(split[3731]);
-}
-if (!split[3732].trim().isEmpty()) {
-ILUMP_I = new Double(split[3732]);
-}
-if (!split[3733].trim().isEmpty()) {
-ILUMP_IFLAG = new Double(split[3733]);
-}
-if (!split[3734].trim().isEmpty()) {
-CAJISA_I = new Double(split[3734]);
-}
-if (!split[3735].trim().isEmpty()) {
-CAJISA_IFLAG = new Double(split[3735]);
-}
-if (!split[3736].trim().isEmpty()) {
-DSLEST5_IFLAG = new Double(split[3736]);
-}
-if (!split[3737].trim().isEmpty()) {
-DVCCARDYN_I = new Double(split[3737]);
-}
-if (!split[3738].trim().isEmpty()) {
-DVCCARDYN_IFLAG = new Double(split[3738]);
-}
-if (!split[3739].trim().isEmpty()) {
-DVCCARDNUM_I = new Double(split[3739]);
-}
-if (!split[3740].trim().isEmpty()) {
-DVCCARDNUM_IFLAG = new Double(split[3740]);
-}
-if (!split[3741].trim().isEmpty()) {
-CCAC1_IFLAG = new Double(split[3741]);
-}
-if (!split[3742].trim().isEmpty()) {
-CCAC2_IFLAG = new Double(split[3742]);
-}
-if (!split[3743].trim().isEmpty()) {
-CCAC3_IFLAG = new Double(split[3743]);
-}
-if (!split[3744].trim().isEmpty()) {
-DCAMOS1_IFLAG = new Double(split[3744]);
-}
-if (!split[3745].trim().isEmpty()) {
-DCAMOS2_IFLAG = new Double(split[3745]);
-}
-if (!split[3746].trim().isEmpty()) {
-DCAMOS3_IFLAG = new Double(split[3746]);
-}
-if (!split[3747].trim().isEmpty()) {
-DVSCARDYN_I = new Double(split[3747]);
-}
-if (!split[3748].trim().isEmpty()) {
-DVSCARDYN_IFLAG = new Double(split[3748]);
-}
-if (!split[3749].trim().isEmpty()) {
-DVSCARDNUM_I = new Double(split[3749]);
-}
-if (!split[3750].trim().isEmpty()) {
-DVSCARDNUM_IFLAG = new Double(split[3750]);
-}
-if (!split[3751].trim().isEmpty()) {
-SCAC1_IFLAG = new Double(split[3751]);
-}
-if (!split[3752].trim().isEmpty()) {
-SCAC2_IFLAG = new Double(split[3752]);
-}
-if (!split[3753].trim().isEmpty()) {
-SCAC3_IFLAG = new Double(split[3753]);
-}
-if (!split[3754].trim().isEmpty()) {
-DSAMOS1_IFLAG = new Double(split[3754]);
-}
-if (!split[3755].trim().isEmpty()) {
-DSAMOS2_IFLAG = new Double(split[3755]);
-}
-if (!split[3756].trim().isEmpty()) {
-DSAMOS3_IFLAG = new Double(split[3756]);
-}
-if (!split[3757].trim().isEmpty()) {
-DVOIGOEANNUAL_I = new Double(split[3757]);
-}
-if (!split[3758].trim().isEmpty()) {
-DVOIGOEANNUAL_IFLAG = new Double(split[3758]);
-}
-if (!split[3759].trim().isEmpty()) {
-DVOIGOSANNUAL_I = new Double(split[3759]);
-}
-if (!split[3760].trim().isEmpty()) {
-DVOIGOSANNUAL_IFLAG = new Double(split[3760]);
-}
-if (!split[3761].trim().isEmpty()) {
-DVOIGPPANNUAL_I = new Double(split[3761]);
-}
-if (!split[3762].trim().isEmpty()) {
-DVOIGPPANNUAL_IFLAG = new Double(split[3762]);
-}
-if (!split[3763].trim().isEmpty()) {
-CASEW3 = new Double(split[3763]);
-}
-if (!split[3764].trim().isEmpty()) {
-CASEW2 = new Double(split[3764]);
-}
-if (!split[3765].trim().isEmpty()) {
-CASEW1 = new Double(split[3765]);
-}
-if (!split[3766].trim().isEmpty()) {
-SOC2010 = new Double(split[3766]);
-}
-if (!split[3767].trim().isEmpty()) {
-SICCODE = new Double(split[3767]);
-}
-if (!split[3768].trim().isEmpty()) {
-SOC2000 = new Double(split[3768]);
-}
-if (!split[3769].trim().isEmpty()) {
-DVSEPANNUAL01 = new Double(split[3769]);
-}
-if (!split[3770].trim().isEmpty()) {
-DVSEPANNUAL02 = new Double(split[3770]);
-}
-if (!split[3771].trim().isEmpty()) {
-DVSEPANNUAL03 = new Double(split[3771]);
-}
-if (!split[3772].trim().isEmpty()) {
-DVSEPANNUAL04 = new Double(split[3772]);
-}
-if (!split[3773].trim().isEmpty()) {
-DVSEPANNUAL05 = new Double(split[3773]);
-}
-if (!split[3774].trim().isEmpty()) {
-DVSEPANNUAL06 = new Double(split[3774]);
-}
-if (!split[3775].trim().isEmpty()) {
-DVSEPANNUAL07 = new Double(split[3775]);
-}
-if (!split[3776].trim().isEmpty()) {
-DVSEPANNUAL08 = new Double(split[3776]);
-}
-if (!split[3777].trim().isEmpty()) {
-DVSPECANNUAL01 = new Double(split[3777]);
-}
-if (!split[3778].trim().isEmpty()) {
-DVSPECANNUAL02 = new Double(split[3778]);
-}
-if (!split[3779].trim().isEmpty()) {
-DVSPECANNUAL03 = new Double(split[3779]);
-}
-if (!split[3780].trim().isEmpty()) {
-DVSPECANNUAL04 = new Double(split[3780]);
-}
-if (!split[3781].trim().isEmpty()) {
-DVSPECANNUAL05 = new Double(split[3781]);
-}
-if (!split[3782].trim().isEmpty()) {
-DVSPECANNUAL06 = new Double(split[3782]);
-}
-if (!split[3783].trim().isEmpty()) {
-DVSPECANNUAL07 = new Double(split[3783]);
-}
-if (!split[3784].trim().isEmpty()) {
-DVSPECANNUAL08 = new Double(split[3784]);
-}
-if (!split[3785].trim().isEmpty()) {
-DVSPECANNUAL09 = new Double(split[3785]);
-}
-if (!split[3786].trim().isEmpty()) {
-DVSPECANNUAL10 = new Double(split[3786]);
-}
-if (!split[3787].trim().isEmpty()) {
-DVTOTALLBENANNUAL = new Double(split[3787]);
-}
-if (!split[3788].trim().isEmpty()) {
-DVTOTTAXANNUAL = new Double(split[3788]);
-}
-if (!split[3789].trim().isEmpty()) {
-DVGIEMP = new Double(split[3789]);
-}
-if (!split[3790].trim().isEmpty()) {
-DVGIPPEN = new Double(split[3790]);
-}
-if (!split[3791].trim().isEmpty()) {
-DVGRSSESECJOB = new Double(split[3791]);
-}
-if (!split[3792].trim().isEmpty()) {
-DVGRSSESECJOB_I = new Double(split[3792]);
-}
-if (!split[3793].trim().isEmpty()) {
-DVNETRENTAMTANNUAL = new Double(split[3793]);
-}
-if (!split[3794].trim().isEmpty()) {
-DVOIGROANNUAL_I = new Double(split[3794]);
-}
-if (!split[3795].trim().isEmpty()) {
-DVBTOGANNUAL = new Double(split[3795]);
-}
-if (!split[3796].trim().isEmpty()) {
-DVCTCANNUAL = new Double(split[3796]);
-}
-if (!split[3797].trim().isEmpty()) {
-DVGIINV = new Double(split[3797]);
-}
-if (!split[3798].trim().isEmpty()) {
-DVGISE = new Double(split[3798]);
-}
-if (!split[3799].trim().isEmpty()) {
-DVGRSBONAMT_I = new Double(split[3799]);
-}
-if (!split[3800].trim().isEmpty()) {
-DVGRSEMPSECJOB = new Double(split[3800]);
-}
-if (!split[3801].trim().isEmpty()) {
-DVGRSEMPSECJOB_I = new Double(split[3801]);
-}
-if (!split[3802].trim().isEmpty()) {
-DVGRSPAY = new Double(split[3802]);
-}
-if (!split[3803].trim().isEmpty()) {
-DVRENTAMTANNUAL_I = new Double(split[3803]);
-}
-if (!split[3804].trim().isEmpty()) {
-DVGRSRENTAMTANNUAL = new Double(split[3804]);
-}
-if (!split[3805].trim().isEmpty()) {
-DVNETBONAMT = new Double(split[3805]);
-}
-if (!split[3806].trim().isEmpty()) {
-DVNETBONAMT_I = new Double(split[3806]);
-}
-if (!split[3807].trim().isEmpty()) {
-DVNETEMPSECJOB = new Double(split[3807]);
-}
-if (!split[3808].trim().isEmpty()) {
-DVNETEMPSECJOB_I = new Double(split[3808]);
-}
-if (!split[3809].trim().isEmpty()) {
-DVNETPAY = new Double(split[3809]);
-}
-if (!split[3810].trim().isEmpty()) {
-DVNETSESECJOB = new Double(split[3810]);
-}
-if (!split[3811].trim().isEmpty()) {
-DVNIINV = new Double(split[3811]);
-}
-if (!split[3812].trim().isEmpty()) {
-DVNIPPEN = new Double(split[3812]);
-}
-if (!split[3813].trim().isEmpty()) {
-DVNISE = new Double(split[3813]);
-}
-if (!split[3814].trim().isEmpty()) {
-PARTGRSPAY = new Double(split[3814]);
-}
-if (!split[3815].trim().isEmpty()) {
-TOTPARTGRSPAY = new Double(split[3815]);
-}
-if (!split[3816].trim().isEmpty()) {
-DVOIGEGANNUAL_I = new Double(split[3816]);
-}
-if (!split[3817].trim().isEmpty()) {
-DVOIGFRANNUAL_I = new Double(split[3817]);
-}
-if (!split[3818].trim().isEmpty()) {
-DVOIGGTANNUAL_I = new Double(split[3818]);
-}
-if (!split[3819].trim().isEmpty()) {
-DVOIGMAANNUAL_I = new Double(split[3819]);
-}
-if (!split[3820].trim().isEmpty()) {
-DVOIGOPANNUAL_I = new Double(split[3820]);
-}
-if (!split[3821].trim().isEmpty()) {
-DVOIGRRANNUAL = new Double(split[3821]);
-}
-if (!split[3822].trim().isEmpty()) {
-DVOIGRRANNUAL_I = new Double(split[3822]);
-}
-if (!split[3823].trim().isEmpty()) {
-DVOINEGANNUAL_I = new Double(split[3823]);
-}
-if (!split[3824].trim().isEmpty()) {
-DVOINFRANNUAL_I = new Double(split[3824]);
-}
-if (!split[3825].trim().isEmpty()) {
-DVOINGTANNUAL_I = new Double(split[3825]);
-}
-if (!split[3826].trim().isEmpty()) {
-DVOINMAANNUAL_I = new Double(split[3826]);
-}
-if (!split[3827].trim().isEmpty()) {
-DVOINOPANNUAL_I = new Double(split[3827]);
-}
-if (!split[3828].trim().isEmpty()) {
-DVOINROANNUAL_I = new Double(split[3828]);
-}
-if (!split[3829].trim().isEmpty()) {
-DVOINRRANNUAL_I = new Double(split[3829]);
-}
-if (!split[3830].trim().isEmpty()) {
-DVSEGRSPAY = new Double(split[3830]);
-}
-if (!split[3831].trim().isEmpty()) {
-DVSEGRSPAY_I = new Double(split[3831]);
-}
-if (!split[3832].trim().isEmpty()) {
-DVSENETPAY = new Double(split[3832]);
-}
-if (!split[3833].trim().isEmpty()) {
-DVSENETPAY_I = new Double(split[3833]);
-}
-if (!split[3834].trim().isEmpty()) {
-DVTOGTCANNUAL = new Double(split[3834]);
-}
-if (!split[3835].trim().isEmpty()) {
-DVTOTBENANNUAL = new Double(split[3835]);
-}
-if (!split[3836].trim().isEmpty()) {
-DVWTCANNUAL = new Double(split[3836]);
-}
-if (!split[3837].trim().isEmpty()) {
-DVNIOTHI = new Double(split[3837]);
-}
-if (!split[3838].trim().isEmpty()) {
-DVIRREGOTHANNUAL = new Double(split[3838]);
-}
-if (!split[3839].trim().isEmpty()) {
-DVWINANNUAL = new Double(split[3839]);
-}
-if (!split[3840].trim().isEmpty()) {
-DVACCINANNUAL = new Double(split[3840]);
-}
-if (!split[3841].trim().isEmpty()) {
-DVLUMPPENANNUAL = new Double(split[3841]);
-}
-if (!split[3842].trim().isEmpty()) {
-DVREDUNANNUAL = new Double(split[3842]);
-}
-if (!split[3843].trim().isEmpty()) {
-DVOTHINSANNUAL = new Double(split[3843]);
-}
-if (!split[3844].trim().isEmpty()) {
-DVLIFEANNUAL = new Double(split[3844]);
-}
-if (!split[3845].trim().isEmpty()) {
-DVINHERITANNUAL = new Double(split[3845]);
-}
-if (!split[3846].trim().isEmpty()) {
-DVGIFTANNUAL = new Double(split[3846]);
-}
-if (!split[3847].trim().isEmpty()) {
-GRSPAYEMPORSE = new Double(split[3847]);
-}
-if (!split[3848].trim().isEmpty()) {
-MARST = new Double(split[3848]);
-}
-if (!split[3849].trim().isEmpty()) {
-ECACT = new Double(split[3849]);
-}
-if (!split[3850].trim().isEmpty()) {
-YEAR = new Double(split[3850]);
-}
-if (!split[3851].trim().isEmpty()) {
-MONTH = new Double(split[3851]);
-}
-if (!split[3852].trim().isEmpty()) {
-GOR = new Double(split[3852]);
-}
+s = line.split("\t");
+initPERSONW1(s[0]);
+initPERSONW2(s[1]);
+initPERSONW3(s[2]);
+initDVWAVE(s[3]);
+initCURSTAT(s[4]);
+initRPDBCAL_F(s[5]);
+initSTATUS(s[6]);
+initDVAGEW3BAND(s[7]);
+initXMARSTA(s[8]);
+initMARBEF(s[9]);
+initLIVWTH(s[10]);
+initHHLDR(s[11]);
+initDVAGE4(s[12]);
+initDVAGE5(s[13]);
+initDVAGE6(s[14]);
+initDVAGE7(s[15]);
+initDVAGE9(s[16]);
+initDVAGE17(s[17]);
+initDVAGE18(s[18]);
+initWORKAGE(s[19]);
+initNUMADULT(s[20]);
+initNUMCHILD(s[21]);
+initNUMCIVPTR(s[22]);
+initNUMSSEX(s[23]);
+initNUMCPART(s[24]);
+initNUMCH18(s[25]);
+initPENFLAG(s[26]);
+initFTED(s[27]);
+initFTED19(s[28]);
+initTRAINEE(s[29]);
+initQUALCHK(s[30]);
+initHIHNUM(s[31]);
+initDVHRPNUM(s[32]);
+initHRPPART(s[33]);
+initR01(s[34]);
+initR02(s[35]);
+initR03(s[36]);
+initR04(s[37]);
+initR05(s[38]);
+initR06(s[39]);
+initR07(s[40]);
+initR08(s[41]);
+initR09(s[42]);
+initR10(s[43]);
+initR11(s[44]);
+initRESPDNT(s[45]);
+initPARTNER(s[46]);
+initPARTNO(s[47]);
+initISDEP(s[48]);
+initISNDEP(s[49]);
+initNUMDEPCH(s[50]);
+initHASCHD(s[51]);
+initHASDEP(s[52]);
+initHASNDEP(s[53]);
+initSINGPAR(s[54]);
+initPERSPROX(s[55]);
+initPROXYNUM(s[56]);
+initPRCRELIG(s[57]);
+initWRKING(s[58]);
+initSCHEMEET(s[59]);
+initJBAWAY(s[60]);
+initOWNBUS(s[61]);
+initRELBUS(s[62]);
+initLOOKED(s[63]);
+initSTARTJ(s[64]);
+initLKTIME(s[65]);
+initYINACT(s[66]);
+initDVILO3A(s[67]);
+initDVILO4A(s[68]);
+initWKBETW(s[69]);
+initMRECJB(s[70]);
+initSAMJOB(s[71]);
+initSAMEMP(s[72]);
+initPERNOWK(s[73]);
+initEMPSTAT1(s[74]);
+initNUMJOB(s[75]);
+initDTJBL(s[76]);
+initDVJB12ML(s[77]);
+initSAMEJOB1(s[78]);
+initSAMEJOB2(s[79]);
+initSAMEJOB3(s[80]);
+initSAMEJOB4(s[81]);
+initSAMEJOB5(s[82]);
+initSAMEJOB6(s[83]);
+initSECTOR(s[84]);
+initSECTR2(s[85]);
+initETYPE(s[86]);
+initSTAT(s[87]);
+initDVSTAT(s[88]);
+initSVISE(s[89]);
+initEMPNO(s[90]);
+initEMPN(s[91]);
+initONETEN(s[92]);
+initDVEMPNO(s[93]);
+initSOLO(s[94]);
+initDVSENO(s[95]);
+initSENO(s[96]);
+initSEMN(s[97]);
+initFTPTWK(s[98]);
+initWKHRS(s[99]);
+initWKHRSIR(s[100]);
+initEMPSTY(s[101]);
+initSEMPSTY(s[102]);
+initPERMJB(s[103]);
+initTEA(s[104]);
+initPNOWK(s[105]);
+initPNOWKLN(s[106]);
+initEDATTN1(s[107]);
+initEDATTN2(s[108]);
+initEDATTN3(s[109]);
+initENROLL(s[110]);
+initATTEND(s[111]);
+initCOURSE(s[112]);
+initCOURSE20(s[113]);
+initEDAGE(s[114]);
+initFTSTUD(s[115]);
+initJOBNO(s[116]);
+initBTYPE1(s[117]);
+initBDIRNI1(s[118]);
+initBOWN1(s[119]);
+initBPROPN1(s[120]);
+initBACCSA1(s[121]);
+initBACCSB1(s[122]);
+initBPART1(s[123]);
+initBACCBEG1(s[124]);
+initBACCEND1(s[125]);
+initBDOCS1(s[126]);
+initBPROFIT1(s[127]);
+initBPRFLOSS1(s[128]);
+initBTAX1(s[129]);
+initBNATINS1(s[130]);
+initBBEFORE1(s[131]);
+initBCARRY1(s[132]);
+initBSIZE1(s[133]);
+initBEMPN1(s[134]);
+initBYEAR1(s[135]);
+initBSTART1(s[136]);
+initBFUND1(s[137]);
+initBFUND2(s[138]);
+initBFUND3(s[139]);
+initBFUND4(s[140]);
+initBFUND5(s[141]);
+initBFUND6(s[142]);
+initBFUND7(s[143]);
+initBFUND8(s[144]);
+initBRETIRE1(s[145]);
+initBDEBTS1(s[146]);
+initBOWED1(s[147]);
+initBVAL1(s[148]);
+initBVALB1(s[149]);
+initBTYPE2(s[150]);
+initBDIRNI2(s[151]);
+initBOWN2(s[152]);
+initBPROPN2(s[153]);
+initBACCSA2(s[154]);
+initBACCSB2(s[155]);
+initBPART2(s[156]);
+initBACCBEG2(s[157]);
+initBACCEND2(s[158]);
+initBDOCS2(s[159]);
+initBPROFIT2(s[160]);
+initBPRFLOSS2(s[161]);
+initBTAX2(s[162]);
+initBNATINS2(s[163]);
+initBBEFORE2(s[164]);
+initBCARRY2(s[165]);
+initBSIZE2(s[166]);
+initBEMPN2(s[167]);
+initBYEAR2(s[168]);
+initBSTART2(s[169]);
+initBFUND9(s[170]);
+initBFUND10(s[171]);
+initBFUND11(s[172]);
+initBFUND12(s[173]);
+initBFUND13(s[174]);
+initBFUND14(s[175]);
+initBFUND15(s[176]);
+initBFUND16(s[177]);
+initBRETIRE2(s[178]);
+initBDEBTS2(s[179]);
+initBOWED2(s[180]);
+initBVAL2(s[181]);
+initBVALB2(s[182]);
+initBTYPE3(s[183]);
+initBDIRNI3(s[184]);
+initBOWN3(s[185]);
+initBPROPN3(s[186]);
+initBACCSA3(s[187]);
+initBACCSB3(s[188]);
+initBPART3(s[189]);
+initBACCBEG3(s[190]);
+initBACCEND3(s[191]);
+initBDOCS3(s[192]);
+initBPROFIT3(s[193]);
+initBPRFLOSS3(s[194]);
+initBTAX3(s[195]);
+initBNATINS3(s[196]);
+initBBEFORE3(s[197]);
+initBCARRY3(s[198]);
+initBSIZE3(s[199]);
+initBEMPN3(s[200]);
+initBYEAR3(s[201]);
+initBSTART3(s[202]);
+initBFUND17(s[203]);
+initBFUND18(s[204]);
+initBFUND19(s[205]);
+initBFUND20(s[206]);
+initBFUND21(s[207]);
+initBFUND22(s[208]);
+initBFUND23(s[209]);
+initBFUND24(s[210]);
+initBRETIRE3(s[211]);
+initBDEBTS3(s[212]);
+initBOWED3(s[213]);
+initBVAL3(s[214]);
+initBVALB3(s[215]);
+initBPAST(s[216]);
+initBSELLYR(s[217]);
+initBSELLAM(s[218]);
+initBSELLAB(s[219]);
+initBSELLTX(s[220]);
+initBMOREBUS(s[221]);
+initBWORTH(s[222]);
+initBWORTHB(s[223]);
+initPAYPER(s[224]);
+initPAYESP(s[225]);
+initPAYESM(s[226]);
+initGRSESP(s[227]);
+initGRSESM(s[228]);
+initPAYINC1(s[229]);
+initPAYINC2(s[230]);
+initPAYINC3(s[231]);
+initPAYINC4(s[232]);
+initPAYINC5(s[233]);
+initPAYINC6(s[234]);
+initPAYINC7(s[235]);
+initSMTPEN(s[236]);
+initPAYSLP(s[237]);
+initPAYBON(s[238]);
+initBONTAX(s[239]);
+initEMSHAR1(s[240]);
+initEMSHAR2(s[241]);
+initEMSHAR3(s[242]);
+initSEPER(s[243]);
+initSEAMK(s[244]);
+initSEESW(s[245]);
+initSEESM(s[246]);
+initGROSSPER(s[247]);
+initGRSAMK(s[248]);
+initGRSEESW(s[249]);
+initGRSEESM(s[250]);
+initSEPEL(s[251]);
+initSJOB2(s[252]);
+initSJEMP1(s[253]);
+initSJEMP2(s[254]);
+initINTRO(s[255]);
+initBENTYPE01(s[256]);
+initBENTYPE02(s[257]);
+initBENTYPE03(s[258]);
+initBENTYPE04(s[259]);
+initBENTYPE05(s[260]);
+initBENTYPE06(s[261]);
+initBENTYPE07(s[262]);
+initBENTYPE08(s[263]);
+initBENTYPE09(s[264]);
+initBENTYPE10(s[265]);
+initBENTYPE11(s[266]);
+initBENTYPE12(s[267]);
+initBTOGSEP(s[268]);
+initBPAYNUM(s[269]);
+initBTOGPD(s[270]);
+initBSEPPD01(s[271]);
+initBSEPPD02(s[272]);
+initBSEPPD03(s[273]);
+initBSEPPD04(s[274]);
+initBSEPPD05(s[275]);
+initBSEPPD06(s[276]);
+initBSEPPD07(s[277]);
+initBSEPPD08(s[278]);
+initBSEPPD09(s[279]);
+initBSEPPD10(s[280]);
+initBSEPPD11(s[281]);
+initBSEPPD12(s[282]);
+initBSEPPD13(s[283]);
+initBSEPPD14(s[284]);
+initBSEPPD15(s[285]);
+initBSEPPD16(s[286]);
+initBSEPPD17(s[287]);
+initBSEPPD18(s[288]);
+initBSEPPD19(s[289]);
+initBSEPPD20(s[290]);
+initCREDTYPE1(s[291]);
+initCREDTYPE2(s[292]);
+initCTOGSEP(s[293]);
+initWTCPD(s[294]);
+initCTCPD(s[295]);
+initCOMBPD(s[296]);
+initSPECIAL01(s[297]);
+initSPECIAL02(s[298]);
+initSPECIAL03(s[299]);
+initSPECIAL04(s[300]);
+initSPECIAL05(s[301]);
+initSPECIAL06(s[302]);
+initSPECIAL07(s[303]);
+initSPECIAL08(s[304]);
+initSPECIAL09(s[305]);
+initSPECIAL10(s[306]);
+initWHORECAR(s[307]);
+initWHOREMOB(s[308]);
+initWHOREATT(s[309]);
+initSPECPD1(s[310]);
+initSPECWHEN1(s[311]);
+initSPECINCL1(s[312]);
+initSPECPD2(s[313]);
+initSPECWHEN2(s[314]);
+initSPECINCL2(s[315]);
+initSPECPD3(s[316]);
+initSPECWHEN3(s[317]);
+initSPECINCL3(s[318]);
+initSPECPD4(s[319]);
+initSPECWHEN4(s[320]);
+initSPECINCL4(s[321]);
+initSPECPD5(s[322]);
+initSPECWHEN5(s[323]);
+initSPECINCL5(s[324]);
+initSPECPD6(s[325]);
+initSPECWHEN6(s[326]);
+initSPECINCL6(s[327]);
+initSPECPD7(s[328]);
+initSPECWHEN7(s[329]);
+initSPECINCL7(s[330]);
+initSPECPD8(s[331]);
+initSPECWHEN8(s[332]);
+initSPECINCL8(s[333]);
+initSPECPD9(s[334]);
+initSPECWHEN9(s[335]);
+initSPECINCL9(s[336]);
+initSPECAMT10(s[337]);
+initSPECPD10(s[338]);
+initSPECWHEN10(s[339]);
+initSPECINCL10(s[340]);
+initOSAVA(s[341]);
+initOSAVB(s[342]);
+initOSAVC(s[343]);
+initOWAIT(s[344]);
+initOLEFT(s[345]);
+initOLEFTDO(s[346]);
+initOSAV2Y(s[347]);
+initOWHYSAV01(s[348]);
+initOWHYSAV02(s[349]);
+initOWHYSAV03(s[350]);
+initOWHYSAV04(s[351]);
+initOWHYSAV05(s[352]);
+initOWHYSAV06(s[353]);
+initOWHYSAV07(s[354]);
+initOWHYSAV08(s[355]);
+initOWHYSAV09(s[356]);
+initOWHYSAV10(s[357]);
+initOWHYSAV11(s[358]);
+initONOSAVE1(s[359]);
+initONOSAVE2(s[360]);
+initONOSAVE3(s[361]);
+initONOSAVE4(s[362]);
+initONOSAVE5(s[363]);
+initONOSAVE6(s[364]);
+initONOSAVE7(s[365]);
+initONOSAVE8(s[366]);
+initONOSAVE9(s[367]);
+initOINTEND(s[368]);
+initOSAVEXT(s[369]);
+initPSIT(s[370]);
+initPSITF(s[371]);
+initPNOWKRS(s[372]);
+initPAGESTP(s[373]);
+initPEXPRET(s[374]);
+initPAGERET(s[375]);
+initPFULRET(s[376]);
+initPEARLRS(s[377]);
+initOLONG(s[378]);
+initOLONGYR(s[379]);
+initOSAFERET(s[380]);
+initOSAFERE2(s[381]);
+initOUNDER(s[382]);
+initPESAME(s[383]);
+initPEMOFF(s[384]);
+initPEMELG(s[385]);
+initPEMMEM(s[386]);
+initPNEWMEM(s[387]);
+initPEWYNO01(s[388]);
+initPEWYNO02(s[389]);
+initPEWYNO03(s[390]);
+initPEWYNO04(s[391]);
+initPEWYNO05(s[392]);
+initPEWYNO06(s[393]);
+initPEWYNO07(s[394]);
+initPEWYNO08(s[395]);
+initPEWYNO09(s[396]);
+initPEWYNO10(s[397]);
+initPEWYNO11(s[398]);
+initPEMFIN(s[399]);
+initPCONT(s[400]);
+initPANYO(s[401]);
+initPNUMOS(s[402]);
+initPOCNMSC(s[403]);
+initPPRNMSC(s[404]);
+initPSCHM_F(s[405]);
+initPSCHY_F(s[406]);
+initPSCHM_S(s[407]);
+initPSCHY_S(s[408]);
+initPSCHM_T(s[409]);
+initPSCHY_T(s[410]);
+initPOCTYP1(s[411]);
+initPOJOIN1(s[412]);
+initPORAGE1(s[413]);
+initPOMETH1(s[414]);
+initPOPYCH(s[415]);
+initPOCONH1(s[416]);
+initPOCNPR1(s[417]);
+initPOCNFR1(s[418]);
+initPOCNFG1(s[419]);
+initPOLSYR1(s[420]);
+initPOYRAM1(s[421]);
+initPOEMP1(s[422]);
+initPOEMPH1(s[423]);
+initPOEMAM1(s[424]);
+initPOEMPR1(s[425]);
+initPOEMFR1(s[426]);
+initPOEMFG1(s[427]);
+initPOADD1(s[428]);
+initPOADD2(s[429]);
+initPOADD3(s[430]);
+initPAVCH1(s[431]);
+initPAVCAM1(s[432]);
+initPAVCPR1(s[433]);
+initPAVCFR1(s[434]);
+initPAVCFG1(s[435]);
+initPAVCIN1(s[436]);
+initPIRREG(s[437]);
+initPADDFUT(s[438]);
+initPOCONCH1(s[439]);
+initPOCNHOW1(s[440]);
+initPOCNVOL1(s[441]);
+initPOCNLRS1(s[442]);
+initPOCNLRS2(s[443]);
+initPOCNLRS3(s[444]);
+initPOCNLRS4(s[445]);
+initPOCNDRS1(s[446]);
+initPOCNDRS2(s[447]);
+initPOCNDRS3(s[448]);
+initPOCNDRS4(s[449]);
+initPOCNDRS5(s[450]);
+initPOCNDRS6(s[451]);
+initPOCNPLN1(s[452]);
+initPDBCAL1(s[453]);
+initPBFRAC1(s[454]);
+initPBQUAL1(s[455]);
+initPBLUMV1(s[456]);
+initPBINCH1(s[457]);
+initPBINCF1(s[458]);
+initPBINCA1(s[459]);
+initPBDOCS1(s[460]);
+initPBSTYR1(s[461]);
+initPBSTMN1(s[462]);
+initPAVCUV1(s[463]);
+initPAVCVB1(s[464]);
+initPAVDOC1(s[465]);
+initPASTYR1(s[466]);
+initPASTMN1(s[467]);
+initPDCVAL1(s[468]);
+initPDCVB1(s[469]);
+initPCDOCS1(s[470]);
+initPCSTYR1(s[471]);
+initPCSTMN1(s[472]);
+initPOLUM1(s[473]);
+initPOLMV1(s[474]);
+initPOLMVB1(s[475]);
+initPOLMUS1(s[476]);
+initPOLMUS2(s[477]);
+initPOLMUS3(s[478]);
+initPOLMUS4(s[479]);
+initPOLMUS5(s[480]);
+initPOLMUS6(s[481]);
+initPOCASH1(s[482]);
+initPOANN1(s[483]);
+initPOANN2(s[484]);
+initPOANN3(s[485]);
+initPOANN4(s[486]);
+initPOANLM1(s[487]);
+initPOANEXY1(s[488]);
+initPOANEXM1(s[489]);
+initPOANJT1(s[490]);
+initPOANIF1(s[491]);
+initPOANEH1(s[492]);
+initPOANGA1(s[493]);
+initPOANVI1(s[494]);
+initPOANVB(s[495]);
+initPODRVI1(s[496]);
+initPODRVB1(s[497]);
+initPODRINC1(s[498]);
+initPODRINCB1(s[499]);
+initPOPENVI(s[500]);
+initPOPENVB(s[501]);
+initPOFAN1(s[502]);
+initPOFAN2(s[503]);
+initPOFAN3(s[504]);
+initPOFAN4(s[505]);
+initPOFAN5(s[506]);
+initPOFAN6(s[507]);
+initPOFAWH1(s[508]);
+initPOFAWH2(s[509]);
+initPOFAWH3(s[510]);
+initPOFAWH4(s[511]);
+initPOFAWH5(s[512]);
+initPOFAWH6(s[513]);
+initPOFAAG1(s[514]);
+initPOCTYP2(s[515]);
+initPOJOIN2(s[516]);
+initPORAGE2(s[517]);
+initPOMETH2(s[518]);
+initPOPYCH2(s[519]);
+initPOCONH2(s[520]);
+initPOCNPR2(s[521]);
+initPOCNFR2(s[522]);
+initPOCNFG2(s[523]);
+initPOLSYR2(s[524]);
+initPOYRAM2(s[525]);
+initPOEMP2(s[526]);
+initPOEMPH2(s[527]);
+initPOEMAM2(s[528]);
+initPOEMPR2(s[529]);
+initPOEMFR2(s[530]);
+initPOEMFG2(s[531]);
+initPOADD4(s[532]);
+initPOADD5(s[533]);
+initPOADD6(s[534]);
+initPAVCH2(s[535]);
+initPAVCAM2(s[536]);
+initPAVCPR2(s[537]);
+initPAVCFR2(s[538]);
+initPAVCFG2(s[539]);
+initPAVCIN2(s[540]);
+initPIRREG2(s[541]);
+initPADDFUT2(s[542]);
+initPOCONCH2(s[543]);
+initPOCNHOW2(s[544]);
+initPOCNVOL2(s[545]);
+initPOCNLRS5(s[546]);
+initPOCNLRS6(s[547]);
+initPOCNLRS7(s[548]);
+initPOCNLRS8(s[549]);
+initPOCNDRS7(s[550]);
+initPOCNDRS8(s[551]);
+initPOCNDRS9(s[552]);
+initPOCNDRS10(s[553]);
+initPOCNDRS11(s[554]);
+initPOCNDRS12(s[555]);
+initPOCNPLN2(s[556]);
+initPDBCAL2(s[557]);
+initPBFRAC2(s[558]);
+initPBQUAL2(s[559]);
+initPBLUMV2(s[560]);
+initPBLMVB2(s[561]);
+initPBINCH2(s[562]);
+initPBINCF2(s[563]);
+initPBINCA2(s[564]);
+initPBDOCS2(s[565]);
+initPBSTYR2(s[566]);
+initPBSTMN2(s[567]);
+initPAVCUV2(s[568]);
+initPAVCVB2(s[569]);
+initPAVDOC2(s[570]);
+initPASTYR2(s[571]);
+initPASTMN2(s[572]);
+initPDCVAL2(s[573]);
+initPDCVB2(s[574]);
+initPCDOCS2(s[575]);
+initPCSTYR2(s[576]);
+initPCSTMN2(s[577]);
+initPOLUM2(s[578]);
+initPOLMV2(s[579]);
+initPOLMVB2(s[580]);
+initPOLMUS7(s[581]);
+initPOLMUS8(s[582]);
+initPOLMUS9(s[583]);
+initPOLMUS10(s[584]);
+initPOLMUS11(s[585]);
+initPOLMUS12(s[586]);
+initPOCASH2(s[587]);
+initPOANN5(s[588]);
+initPOANN6(s[589]);
+initPOANN7(s[590]);
+initPOANN8(s[591]);
+initPOANLM2(s[592]);
+initPOANEXY2(s[593]);
+initPOANEXM2(s[594]);
+initPOANJT2(s[595]);
+initPOANIF2(s[596]);
+initPOANEH2(s[597]);
+initPOANGA2(s[598]);
+initPOANVI2(s[599]);
+initPOANVB2(s[600]);
+initPODRVI2(s[601]);
+initPODRVB2(s[602]);
+initPODRINC2(s[603]);
+initPODRINCB2(s[604]);
+initPOPENVI2(s[605]);
+initPOPENVB2(s[606]);
+initPOFAN7(s[607]);
+initPOFAN8(s[608]);
+initPOFAN9(s[609]);
+initPOFAN10(s[610]);
+initPOFAN11(s[611]);
+initPOFAN12(s[612]);
+initPOFAWH7(s[613]);
+initPOFAWH8(s[614]);
+initPOFAWH9(s[615]);
+initPOFAWH10(s[616]);
+initPOFAWH11(s[617]);
+initPOFAWH12(s[618]);
+initPOFAAG2(s[619]);
+initPPYRST1(s[620]);
+initPPORG1(s[621]);
+initPPTYP1(s[622]);
+initPPSIPP1(s[623]);
+initPPPAY1(s[624]);
+initPPRGH1(s[625]);
+initPPRGAM(s[626]);
+initPPRGPE1(s[627]);
+initPPRGFR1(s[628]);
+initPPRGFG1(s[629]);
+initPPIRRY1(s[630]);
+initPPIRRH1(s[631]);
+initPPIRRA1(s[632]);
+initPPIRRF1(s[633]);
+initPPIRNO1(s[634]);
+initPPLASY1(s[635]);
+initPPLSTA1(s[636]);
+initPPLSTP1(s[637]);
+initPPEVRG1(s[638]);
+initPPYSTP1(s[639]);
+initPPYSTP2(s[640]);
+initPPYSTP3(s[641]);
+initPPYSTP4(s[642]);
+initPPYSTP5(s[643]);
+initPPYSTP6(s[644]);
+initPPYSTP7(s[645]);
+initPPCONCH(s[646]);
+initPPCNHOW1(s[647]);
+initPPCNLRS1(s[648]);
+initPPCNLRS2(s[649]);
+initPPCNLRS3(s[650]);
+initPPCNLRS4(s[651]);
+initPPCNDRS1(s[652]);
+initPPCNDRS2(s[653]);
+initPPCNDRS3(s[654]);
+initPPCNDRS4(s[655]);
+initPPCNDRS5(s[656]);
+initPPCNDRS6(s[657]);
+initPPCNDRS7(s[658]);
+initPPCNDRS8(s[659]);
+initPPCNPLN1(s[660]);
+initPPEMP1(s[661]);
+initPPEMPH1(s[662]);
+initPPEMAM1(s[663]);
+initPPEMPR1(s[664]);
+initPPEMFR1(s[665]);
+initPPEIRH1(s[666]);
+initPPEIRA1(s[667]);
+initPPEIRF1(s[668]);
+initPPNINS1(s[669]);
+initPPVINT1(s[670]);
+initPSTYPE1(s[671]);
+initPSTYPE2(s[672]);
+initPSTYPE3(s[673]);
+initPSTYPE4(s[674]);
+initPSTYPE5(s[675]);
+initPSTYPE6(s[676]);
+initPSTYPE7(s[677]);
+initPPVAL1(s[678]);
+initPPVALB1(s[679]);
+initPPDOCS1(s[680]);
+initPPSTYR1(s[681]);
+initPPSTMN1(s[682]);
+initPMORTC(s[683]);
+initPPLUM1(s[684]);
+initPPLMV1(s[685]);
+initPPLMVB1(s[686]);
+initPPLMUS1(s[687]);
+initPPCASH1(s[688]);
+initPPANN1(s[689]);
+initPPANN2(s[690]);
+initPPANN3(s[691]);
+initPPANN4(s[692]);
+initPPANLM1(s[693]);
+initPPANEXY1(s[694]);
+initPPANEXM1(s[695]);
+initPPANJT1(s[696]);
+initPPANIF1(s[697]);
+initPPANEH1(s[698]);
+initPPANGA1(s[699]);
+initPPANVI1(s[700]);
+initPPANVB1(s[701]);
+initPPDRVI1(s[702]);
+initPPDRVB1(s[703]);
+initPPDRINC1(s[704]);
+initPPDRINCB(s[705]);
+initPPFAN1(s[706]);
+initPPFAN2(s[707]);
+initPPFAN3(s[708]);
+initPPFAN4(s[709]);
+initPPFAN5(s[710]);
+initPPFAWH1(s[711]);
+initPPFAWH2(s[712]);
+initPPFAWH3(s[713]);
+initPPFAWH4(s[714]);
+initPPFAWH5(s[715]);
+initPPFAWH6(s[716]);
+initPPFAWH7(s[717]);
+initPPFAAG1(s[718]);
+initPPACCU1(s[719]);
+initPPYRST2(s[720]);
+initPPORG2(s[721]);
+initPPTYP2(s[722]);
+initPPSIPP2(s[723]);
+initPPPAY2(s[724]);
+initPPRGH2(s[725]);
+initPPRGAM2(s[726]);
+initPPRGPE2(s[727]);
+initPPRGFR2(s[728]);
+initPPRGFG2(s[729]);
+initPPIRRY2(s[730]);
+initPPIRRH2(s[731]);
+initPPIRRA2(s[732]);
+initPPIRRF2(s[733]);
+initPPIRNO2(s[734]);
+initPPLASY2(s[735]);
+initPPLSTA2(s[736]);
+initPPLSTP2(s[737]);
+initPPEVRG2(s[738]);
+initPPYSTP8(s[739]);
+initPPYSTP9(s[740]);
+initPPYSTP10(s[741]);
+initPPYSTP11(s[742]);
+initPPYSTP12(s[743]);
+initPPYSTP13(s[744]);
+initPPYSTP14(s[745]);
+initPPCONCH2(s[746]);
+initPPCNHOW2(s[747]);
+initPPCNLRS5(s[748]);
+initPPCNLRS6(s[749]);
+initPPCNLRS7(s[750]);
+initPPCNLRS8(s[751]);
+initPPCNDRS9(s[752]);
+initPPCNDRS10(s[753]);
+initPPCNDRS11(s[754]);
+initPPCNDRS12(s[755]);
+initPPCNDRS13(s[756]);
+initPPCNDRS14(s[757]);
+initPPCNDRS15(s[758]);
+initPPCNDRS16(s[759]);
+initPPCNPLN2(s[760]);
+initPPEMP2(s[761]);
+initPPEMPH2(s[762]);
+initPPEMAM2(s[763]);
+initPPEMPR2(s[764]);
+initPPEMFR2(s[765]);
+initPPEIRH2(s[766]);
+initPPEIRA2(s[767]);
+initPPEIRF2(s[768]);
+initPPNINS2(s[769]);
+initPPVINT2(s[770]);
+initPSTYPE8(s[771]);
+initPSTYPE9(s[772]);
+initPSTYPE10(s[773]);
+initPSTYPE11(s[774]);
+initPSTYPE12(s[775]);
+initPSTYPE13(s[776]);
+initPSTYPE14(s[777]);
+initPPVAL2(s[778]);
+initPPVALB2(s[779]);
+initPPDOCS2(s[780]);
+initPPSTYR2(s[781]);
+initPPSTMN2(s[782]);
+initPMORTC2(s[783]);
+initPPLUM2(s[784]);
+initPPLMV2(s[785]);
+initPPLMVB2(s[786]);
+initPPLMUS2(s[787]);
+initPPCASH2(s[788]);
+initPPANN5(s[789]);
+initPPANN6(s[790]);
+initPPANN7(s[791]);
+initPPANN8(s[792]);
+initPPANLM2(s[793]);
+initPPANEXY2(s[794]);
+initPPANEXM2(s[795]);
+initPPANJT2(s[796]);
+initPPANIF2(s[797]);
+initPPANEH2(s[798]);
+initPPANGA2(s[799]);
+initPPANVI2(s[800]);
+initPPANVB2(s[801]);
+initPPDRVI2(s[802]);
+initPPDRVB2(s[803]);
+initPPDRINC2(s[804]);
+initPPDRINCB2(s[805]);
+initPPFAN6(s[806]);
+initPPFAN7(s[807]);
+initPPFAN8(s[808]);
+initPPFAN9(s[809]);
+initPPFAN10(s[810]);
+initPPFAWH8(s[811]);
+initPPFAWH9(s[812]);
+initPPFAWH10(s[813]);
+initPPFAWH11(s[814]);
+initPPFAWH12(s[815]);
+initPPFAWH13(s[816]);
+initPPFAWH14(s[817]);
+initPPFAAG2(s[818]);
+initPPACCU2(s[819]);
+initPPYRST3(s[820]);
+initPPORG3(s[821]);
+initPPTYP3(s[822]);
+initPPSIPP3(s[823]);
+initPPPAY3(s[824]);
+initPPRGH3(s[825]);
+initPPRGAM3(s[826]);
+initPPRGPE3(s[827]);
+initPPRGFR3(s[828]);
+initPPRGFG3(s[829]);
+initPPIRRY3(s[830]);
+initPPIRRH3(s[831]);
+initPPIRRA3(s[832]);
+initPPIRRF3(s[833]);
+initPPIRNO3(s[834]);
+initPPLASY3(s[835]);
+initPPLSTA3(s[836]);
+initPPLSTP3(s[837]);
+initPPEVRG3(s[838]);
+initPPYSTP15(s[839]);
+initPPYSTP16(s[840]);
+initPPYSTP17(s[841]);
+initPPYSTP18(s[842]);
+initPPYSTP19(s[843]);
+initPPYSTP20(s[844]);
+initPPYSTP21(s[845]);
+initPPCONCH3(s[846]);
+initPPCNHO___W3(s[847]);
+initPPCNLRS9(s[848]);
+initPPCNLRS10(s[849]);
+initPPCNLRS11(s[850]);
+initPPCNLRS12(s[851]);
+initPPCNDRS17(s[852]);
+initPPCNDRS18(s[853]);
+initPPCNDRS19(s[854]);
+initPPCNDRS20(s[855]);
+initPPCNDRS21(s[856]);
+initPPCNDRS22(s[857]);
+initPPCNDRS23(s[858]);
+initPPCNDRS24(s[859]);
+initPPCNPLN3(s[860]);
+initPPEMP3(s[861]);
+initPPEMPH3(s[862]);
+initPPEMAM3(s[863]);
+initPPEMPR3(s[864]);
+initPPEMFR3(s[865]);
+initPPEIRH3(s[866]);
+initPPEIRA3(s[867]);
+initPPEIRF3(s[868]);
+initPPNINS3(s[869]);
+initPPVINT3(s[870]);
+initPSTYPE15(s[871]);
+initPSTYPE16(s[872]);
+initPSTYPE17(s[873]);
+initPSTYPE18(s[874]);
+initPSTYPE19(s[875]);
+initPSTYPE20(s[876]);
+initPSTYPE21(s[877]);
+initPPVAL3(s[878]);
+initPPVALB3(s[879]);
+initPPDOCS3(s[880]);
+initPPSTYR3(s[881]);
+initPPSTMN3(s[882]);
+initPMORTC3(s[883]);
+initPPLUM3(s[884]);
+initPPLMV3(s[885]);
+initPPLMVB3(s[886]);
+initPPLMUS3(s[887]);
+initPPCASH3(s[888]);
+initPPANN9(s[889]);
+initPPANN10(s[890]);
+initPPANN11(s[891]);
+initPPANN12(s[892]);
+initPPANLM3(s[893]);
+initPPANEXY3(s[894]);
+initPPANEXM3(s[895]);
+initPPANJT3(s[896]);
+initPPANIF3(s[897]);
+initPPANEH3(s[898]);
+initPPANGA3(s[899]);
+initPPANVI3(s[900]);
+initPPANVB3(s[901]);
+initPPDRVI3(s[902]);
+initPPDRVB3(s[903]);
+initPPDRINC3(s[904]);
+initPPDRINCB3(s[905]);
+initPPFAN11(s[906]);
+initPPFAN12(s[907]);
+initPPFAN13(s[908]);
+initPPFAN14(s[909]);
+initPPFAN15(s[910]);
+initPPFAWH15(s[911]);
+initPPFAWH16(s[912]);
+initPPFAWH17(s[913]);
+initPPFAWH18(s[914]);
+initPPFAWH19(s[915]);
+initPPFAWH20(s[916]);
+initPPFAWH21(s[917]);
+initPPFAAG3(s[918]);
+initPPACCU3(s[919]);
+initPFNEW(s[920]);
+initPFNEWNO(s[921]);
+initPEVERC(s[922]);
+initPEVERNC(s[923]);
+initPRETAIN(s[924]);
+initPFNUM(s[925]);
+initPFEN(s[926]);
+initPFENNUM(s[927]);
+initRPFCRET1(s[928]);
+initRPFCRET2(s[929]);
+initRPFCRET3(s[930]);
+initRPFCRET4(s[931]);
+initRPFCRET5(s[932]);
+initRPFCRET6(s[933]);
+initRPCRET1(s[934]);
+initRPCRET2(s[935]);
+initRPCRET3(s[936]);
+initPFTYP1(s[937]);
+initPFOCTY1(s[938]);
+initPFLUM1(s[939]);
+initPFLMV1(s[940]);
+initPFLMVB1(s[941]);
+initPFLMUS1(s[942]);
+initPFLUMALL1(s[943]);
+initPFCASH1(s[944]);
+initPFANN1(s[945]);
+initPFANN2(s[946]);
+initPFANN3(s[947]);
+initPFANN4(s[948]);
+initPFANN5(s[949]);
+initPFREM1(s[950]);
+initPFANLM1(s[951]);
+initPFANEXY1(s[952]);
+initPFANEXM1(s[953]);
+initPFANJT1(s[954]);
+initPFANIF1(s[955]);
+initPFANEH1(s[956]);
+initPFANGA1(s[957]);
+initPFANVI1(s[958]);
+initPFANVB1(s[959]);
+initPFDRVI1(s[960]);
+initPFDRVB1(s[961]);
+initPFDRINC1(s[962]);
+initPFDRINCB1(s[963]);
+initPFPENVI1(s[964]);
+initPFPENVB1(s[965]);
+initPFFAN1(s[966]);
+initPFFAN2(s[967]);
+initPFFAN3(s[968]);
+initPFFAN4(s[969]);
+initPFFAN5(s[970]);
+initPFFAWH1(s[971]);
+initPFFAWH2(s[972]);
+initPFFAWH3(s[973]);
+initPFFAWH4(s[974]);
+initPFFAWH5(s[975]);
+initPFFAWH6(s[976]);
+initPFFAAG1(s[977]);
+initPFREC1(s[978]);
+initPFDRAW1(s[979]);
+initPFDDV1(s[980]);
+initPFDDVB1(s[981]);
+initPFBEG1(s[982]);
+initPFEND1(s[983]);
+initPFSIPTY1(s[984]);
+initPFSIPTY2(s[985]);
+initPFSIPTY3(s[986]);
+initPFSIPTY4(s[987]);
+initPFSIPTY5(s[988]);
+initPFSIPTY6(s[989]);
+initPFSIPTY7(s[990]);
+initPFCURV1(s[991]);
+initPFCUVB1(s[992]);
+initPFLUMV1(s[993]);
+initPFLUVB1(s[994]);
+initPFINCP1(s[995]);
+initPFINCA1(s[996]);
+initPFDOCS1(s[997]);
+initPFSTMY1(s[998]);
+initPFSTMM1(s[999]);
+initPFSTAT1(s[1000]);
+initPFTYP2(s[1001]);
+initPFOCTY2(s[1002]);
+initPFLUM2(s[1003]);
+initPFLMV2(s[1004]);
+initPFLMVB2(s[1005]);
+initPFLMUS2(s[1006]);
+initPFLUMALL2(s[1007]);
+initPFCASH2(s[1008]);
+initPFANN6(s[1009]);
+initPFANN7(s[1010]);
+initPFANN8(s[1011]);
+initPFANN9(s[1012]);
+initPFANN10(s[1013]);
+initPFREM2(s[1014]);
+initPFANLM2(s[1015]);
+initPFANEXY2(s[1016]);
+initPFANEXM2(s[1017]);
+initPFANJT2(s[1018]);
+initPFANIF2(s[1019]);
+initPFANEH2(s[1020]);
+initPFANGA2(s[1021]);
+initPFANVI2(s[1022]);
+initPFANVB2(s[1023]);
+initPFDRVI2(s[1024]);
+initPFDRVB2(s[1025]);
+initPFDRINC2(s[1026]);
+initPFDRINCB2(s[1027]);
+initPFPENVI2(s[1028]);
+initPFPENVB2(s[1029]);
+initPFFAN6(s[1030]);
+initPFFAN7(s[1031]);
+initPFFAN8(s[1032]);
+initPFFAN9(s[1033]);
+initPFFAN10(s[1034]);
+initPFFAWH7(s[1035]);
+initPFFAWH8(s[1036]);
+initPFFAWH9(s[1037]);
+initPFFAWH10(s[1038]);
+initPFFAWH11(s[1039]);
+initPFFAWH12(s[1040]);
+initPFFAAG2(s[1041]);
+initPFREC2(s[1042]);
+initPFDRAW2(s[1043]);
+initPFDDV2(s[1044]);
+initPFDDVB2(s[1045]);
+initPFBEG2(s[1046]);
+initPFEND2(s[1047]);
+initPFSIPTY8(s[1048]);
+initPFSIPTY9(s[1049]);
+initPFSIPTY10(s[1050]);
+initPFSIPTY11(s[1051]);
+initPFSIPTY12(s[1052]);
+initPFSIPTY13(s[1053]);
+initPFSIPTY14(s[1054]);
+initPFCURV2(s[1055]);
+initPFCUVB2(s[1056]);
+initPFLUMV2(s[1057]);
+initPFLUVB2(s[1058]);
+initPFINCP2(s[1059]);
+initPFINCA2(s[1060]);
+initPFDOCS2(s[1061]);
+initPFSTMY2(s[1062]);
+initPFSTMM2(s[1063]);
+initPFSTAT2(s[1064]);
+initPFTYP3(s[1065]);
+initPFOCTY3(s[1066]);
+initPFLUM3(s[1067]);
+initPFLMV3(s[1068]);
+initPFLMVB3(s[1069]);
+initPFLMUS3(s[1070]);
+initPFLUMALL3(s[1071]);
+initPFCASH3(s[1072]);
+initPFANN11(s[1073]);
+initPFANN12(s[1074]);
+initPFANN13(s[1075]);
+initPFANN14(s[1076]);
+initPFANN15(s[1077]);
+initPFREM3(s[1078]);
+initPFANLM3(s[1079]);
+initPFANEXY3(s[1080]);
+initPFANEXM3(s[1081]);
+initPFANJT3(s[1082]);
+initPFANIF3(s[1083]);
+initPFANEH3(s[1084]);
+initPFANGA3(s[1085]);
+initPFANVI3(s[1086]);
+initPFANVB3(s[1087]);
+initPFDRVI3(s[1088]);
+initPFDRVB3(s[1089]);
+initPFDRINC3(s[1090]);
+initPFDRINCB3(s[1091]);
+initPFPENVI3(s[1092]);
+initPFPENVB3(s[1093]);
+initPFFAN11(s[1094]);
+initPFFAN12(s[1095]);
+initPFFAN13(s[1096]);
+initPFFAN14(s[1097]);
+initPFFAN15(s[1098]);
+initPFFAWH13(s[1099]);
+initPFFAWH14(s[1100]);
+initPFFAWH15(s[1101]);
+initPFFAWH16(s[1102]);
+initPFFAWH17(s[1103]);
+initPFFAWH18(s[1104]);
+initPFFAAG3(s[1105]);
+initPFREC3(s[1106]);
+initPFDRA___W3(s[1107]);
+initPFDDV3(s[1108]);
+initPFDDVB3(s[1109]);
+initPFBEG3(s[1110]);
+initPFEND3(s[1111]);
+initPFSIPTY15(s[1112]);
+initPFSIPTY16(s[1113]);
+initPFSIPTY17(s[1114]);
+initPFSIPTY18(s[1115]);
+initPFSIPTY19(s[1116]);
+initPFSIPTY20(s[1117]);
+initPFSIPTY21(s[1118]);
+initPFCURV3(s[1119]);
+initPFCUVB3(s[1120]);
+initPFLUMV3(s[1121]);
+initPFLUVB3(s[1122]);
+initPFINCP3(s[1123]);
+initPFINCA3(s[1124]);
+initPFDOCS3(s[1125]);
+initPFSTMY3(s[1126]);
+initPFSTMM3(s[1127]);
+initPFSTAT3(s[1128]);
+initPFTYP4(s[1129]);
+initPFOCTY4(s[1130]);
+initPFLUM4(s[1131]);
+initPFLMV4(s[1132]);
+initPFLMVB4(s[1133]);
+initPFLMUS4(s[1134]);
+initPFLUMALL4(s[1135]);
+initPFCASH4(s[1136]);
+initPFANN16(s[1137]);
+initPFANN17(s[1138]);
+initPFANN18(s[1139]);
+initPFANN19(s[1140]);
+initPFANN20(s[1141]);
+initPFREM4(s[1142]);
+initPFANLM4(s[1143]);
+initPFANEXY4(s[1144]);
+initPFANEXM4(s[1145]);
+initPFANJT4(s[1146]);
+initPFANIF4(s[1147]);
+initPFANEH4(s[1148]);
+initPFANGA4(s[1149]);
+initPFANVI4(s[1150]);
+initPFANVB4(s[1151]);
+initPFDRVI4(s[1152]);
+initPFDRVB4(s[1153]);
+initPFDRINC4(s[1154]);
+initPFDRINCB4(s[1155]);
+initPFPENVI4(s[1156]);
+initPFPENVB4(s[1157]);
+initPFFAN16(s[1158]);
+initPFFAN17(s[1159]);
+initPFFAN18(s[1160]);
+initPFFAN19(s[1161]);
+initPFFAN20(s[1162]);
+initPFFAWH19(s[1163]);
+initPFFAWH20(s[1164]);
+initPFFAWH21(s[1165]);
+initPFFAWH22(s[1166]);
+initPFFAWH23(s[1167]);
+initPFFAWH24(s[1168]);
+initPFFAAG4(s[1169]);
+initPFREC4(s[1170]);
+initPFDRAW4(s[1171]);
+initPFDDV4(s[1172]);
+initPFDDVB4(s[1173]);
+initPFBEG4(s[1174]);
+initPFEND4(s[1175]);
+initPFSIPTY22(s[1176]);
+initPFSIPTY23(s[1177]);
+initPFSIPTY24(s[1178]);
+initPFSIPTY25(s[1179]);
+initPFSIPTY26(s[1180]);
+initPFSIPTY27(s[1181]);
+initPFSIPTY28(s[1182]);
+initPFCURV4(s[1183]);
+initPFCUVB4(s[1184]);
+initPFLUMV4(s[1185]);
+initPFLUVB4(s[1186]);
+initPFINCP4(s[1187]);
+initPFINCA4(s[1188]);
+initPFDOCS4(s[1189]);
+initPFSTMY4(s[1190]);
+initPFSTMM4(s[1191]);
+initPFSTAT4(s[1192]);
+initPFTYP5(s[1193]);
+initPFOCTY5(s[1194]);
+initPFLUM5(s[1195]);
+initPFLMV5(s[1196]);
+initPFLMVB5(s[1197]);
+initPFLMUS5(s[1198]);
+initPFLUMALL5(s[1199]);
+initPFCASH5(s[1200]);
+initPFANN21(s[1201]);
+initPFANN22(s[1202]);
+initPFANN23(s[1203]);
+initPFANN24(s[1204]);
+initPFANN25(s[1205]);
+initPFREM5(s[1206]);
+initPFANLM5(s[1207]);
+initPFANEXY5(s[1208]);
+initPFANEXM5(s[1209]);
+initPFANJT5(s[1210]);
+initPFANIF5(s[1211]);
+initPFANEH5(s[1212]);
+initPFANGA5(s[1213]);
+initPFANVI5(s[1214]);
+initPFANVB5(s[1215]);
+initPFDRVI5(s[1216]);
+initPFDRVB5(s[1217]);
+initPFDRINC5(s[1218]);
+initPFDRINCB5(s[1219]);
+initPFPENVI5(s[1220]);
+initPFPENVB5(s[1221]);
+initPFFAN21(s[1222]);
+initPFFAN22(s[1223]);
+initPFFAN23(s[1224]);
+initPFFAN24(s[1225]);
+initPFFAN25(s[1226]);
+initPFFAWH25(s[1227]);
+initPFFAWH26(s[1228]);
+initPFFAWH27(s[1229]);
+initPFFAWH28(s[1230]);
+initPFFAWH29(s[1231]);
+initPFFAWH30(s[1232]);
+initPFFAAG5(s[1233]);
+initPFREC5(s[1234]);
+initPFDRAW5(s[1235]);
+initPFDDV5(s[1236]);
+initPFDDVB5(s[1237]);
+initPFBEG5(s[1238]);
+initPFEND5(s[1239]);
+initPFSIPTY29(s[1240]);
+initPFSIPTY30(s[1241]);
+initPFSIPTY31(s[1242]);
+initPFSIPTY32(s[1243]);
+initPFSIPTY33(s[1244]);
+initPFSIPTY34(s[1245]);
+initPFSIPTY35(s[1246]);
+initPFCURV5(s[1247]);
+initPFCUVB5(s[1248]);
+initPFLUMV5(s[1249]);
+initPFLUVB5(s[1250]);
+initPFINCP5(s[1251]);
+initPFINCA5(s[1252]);
+initPFDOCS5(s[1253]);
+initPFSTMY5(s[1254]);
+initPFSTMM5(s[1255]);
+initPFSTAT5(s[1256]);
+initPFTYP6(s[1257]);
+initPFOCTY6(s[1258]);
+initPFLUM6(s[1259]);
+initPFLMV6(s[1260]);
+initPFLMVB6(s[1261]);
+initPFLMUS6(s[1262]);
+initPFLUMALL6(s[1263]);
+initPFCASH6(s[1264]);
+initPFANN26(s[1265]);
+initPFANN27(s[1266]);
+initPFANN28(s[1267]);
+initPFANN29(s[1268]);
+initPFANN30(s[1269]);
+initPFREM6(s[1270]);
+initPFANLM6(s[1271]);
+initPFANEXY6(s[1272]);
+initPFANEXM6(s[1273]);
+initPFANJT6(s[1274]);
+initPFANIF6(s[1275]);
+initPFANEH6(s[1276]);
+initPFANGA6(s[1277]);
+initPFANVI6(s[1278]);
+initPFANVB6(s[1279]);
+initPFDRVI6(s[1280]);
+initPFDRVB6(s[1281]);
+initPFDRINC6(s[1282]);
+initPFDRINCB6(s[1283]);
+initPFPENVI6(s[1284]);
+initPFPENVB6(s[1285]);
+initPFFAN26(s[1286]);
+initPFFAN27(s[1287]);
+initPFFAN28(s[1288]);
+initPFFAN29(s[1289]);
+initPFFAN30(s[1290]);
+initPFFAWH31(s[1291]);
+initPFFAWH32(s[1292]);
+initPFFAWH33(s[1293]);
+initPFFAWH34(s[1294]);
+initPFFAWH35(s[1295]);
+initPFFAWH36(s[1296]);
+initPFFAAG6(s[1297]);
+initPFREC6(s[1298]);
+initPFDRAW6(s[1299]);
+initPFDDV6(s[1300]);
+initPFDDVB6(s[1301]);
+initPFBEG6(s[1302]);
+initPFEND6(s[1303]);
+initPFSIPTY36(s[1304]);
+initPFSIPTY37(s[1305]);
+initPFSIPTY38(s[1306]);
+initPFSIPTY39(s[1307]);
+initPFSIPTY40(s[1308]);
+initPFSIPTY41(s[1309]);
+initPFSIPTY42(s[1310]);
+initPFCURV6(s[1311]);
+initPFCUVB6(s[1312]);
+initPFLUMV6(s[1313]);
+initPFLUVB6(s[1314]);
+initPFINCP6(s[1315]);
+initPFINCA6(s[1316]);
+initPFDOCS6(s[1317]);
+initPFSTMY6(s[1318]);
+initPFSTMM6(s[1319]);
+initPFSTAT6(s[1320]);
+initPWID(s[1321]);
+initPWIDFUT(s[1322]);
+initPWLUM(s[1323]);
+initPWLUVAL(s[1324]);
+initPWEXPH(s[1325]);
+initPWEXPA(s[1326]);
+initPSPSE(s[1327]);
+initPSPLUM(s[1328]);
+initPSPLUVAL(s[1329]);
+initPSPEXPH(s[1330]);
+initPSPEXPA(s[1331]);
+initPWACCU(s[1332]);
+initOPENS01(s[1333]);
+initOPENS02(s[1334]);
+initOPENS03(s[1335]);
+initOPENS04(s[1336]);
+initOPENS05(s[1337]);
+initOPENS06(s[1338]);
+initOPENS07(s[1339]);
+initOPENS08(s[1340]);
+initOPENS09(s[1341]);
+initOPENS10(s[1342]);
+initOPENS11(s[1343]);
+initOPENS12(s[1344]);
+initOPENS13(s[1345]);
+initOPENS14(s[1346]);
+initOPENS15(s[1347]);
+initOEXPINC01(s[1348]);
+initOEXPINC02(s[1349]);
+initOEXPINC03(s[1350]);
+initOEXPINC04(s[1351]);
+initOEXPINC05(s[1352]);
+initOEXPINC06(s[1353]);
+initOEXPINC07(s[1354]);
+initOEXPINC08(s[1355]);
+initOEXPINC09(s[1356]);
+initOEXPINC10(s[1357]);
+initOEXPINC11(s[1358]);
+initOEXPINC12(s[1359]);
+initOEXPINC13(s[1360]);
+initOEXPINC14(s[1361]);
+initOEXPINC15(s[1362]);
+initOLARGE(s[1363]);
+initOPENSAV(s[1364]);
+initOSTANDL(s[1365]);
+initFINVTY01(s[1366]);
+initFINVTY02(s[1367]);
+initFINVTY03(s[1368]);
+initFINVTY04(s[1369]);
+initFINVTY05(s[1370]);
+initFINVTY06(s[1371]);
+initFINVTY07(s[1372]);
+initFINVTY08(s[1373]);
+initFINVTY09(s[1374]);
+initFINVTY10(s[1375]);
+initFINVTY11(s[1376]);
+initDCOSHV1(s[1377]);
+initDCOSHVB1(s[1378]);
+initDCOSHV2(s[1379]);
+initDCOSHVB2(s[1380]);
+initDCOSHV3(s[1381]);
+initDCOSHVB3(s[1382]);
+initDCOSHV4(s[1383]);
+initDCOSHVB4(s[1384]);
+initDCOSHV5(s[1385]);
+initDCOSHVB5(s[1386]);
+initDCOINV1(s[1387]);
+initDCOINVB1(s[1388]);
+initDCOINV2(s[1389]);
+initDCOINVB2(s[1390]);
+initDCOINV3(s[1391]);
+initDCOINVB3(s[1392]);
+initDCOINV4(s[1393]);
+initDCOINVB4(s[1394]);
+initDCOINV5(s[1395]);
+initDCOINVB5(s[1396]);
+initFCACSH(s[1397]);
+initFCNUMSH(s[1398]);
+initFCNUMIN(s[1399]);
+initFCSUPPR(s[1400]);
+initFCOVDSH(s[1401]);
+initFCOVNSH(s[1402]);
+initFCSHVAL(s[1403]);
+initFCSHVLB(s[1404]);
+initFCOVDIN(s[1405]);
+initFCOVNIN(s[1406]);
+initFCOVDIF(s[1407]);
+initFCINVAL(s[1408]);
+initFCINVLB(s[1409]);
+initFSACSH(s[1410]);
+initFSNUMSH(s[1411]);
+initFSNUMIN(s[1412]);
+initFSSUPPR(s[1413]);
+initFSTYPSH1(s[1414]);
+initFSTYPSH2(s[1415]);
+initFSTYPSH3(s[1416]);
+initFSTYPSH4(s[1417]);
+initFSTYPSH5(s[1418]);
+initFSTYPIN1(s[1419]);
+initFSTYPIN2(s[1420]);
+initFSTYPIN3(s[1421]);
+initFSTYPIN4(s[1422]);
+initFSTYPIN5(s[1423]);
+initFSSHVAL(s[1424]);
+initFSSHVLB(s[1425]);
+initFSINVAL(s[1426]);
+initFSINVLB(s[1427]);
+initFSOSHAV(s[1428]);
+initFSOSVLB(s[1429]);
+initFISA1(s[1430]);
+initFISA2(s[1431]);
+initFCISAV(s[1432]);
+initFCISAB(s[1433]);
+initFIISAV(s[1434]);
+initFIISAB(s[1435]);
+initFKISAV(s[1436]);
+initFKISAB(s[1437]);
+initNEWFCMX(s[1438]);
+initFCISAWD(s[1439]);
+initFCIWNUM(s[1440]);
+initFCIWDAB(s[1441]);
+initFCISCE(s[1442]);
+initFBONDTY1(s[1443]);
+initFBONDTY2(s[1444]);
+initFBONDTY3(s[1445]);
+initFBONDV(s[1446]);
+initFBONDVB(s[1447]);
+initFCOLLV(s[1448]);
+initFCOLLVB(s[1449]);
+initFESHA(s[1450]);
+initFESHAV(s[1451]);
+initFESHVB(s[1452]);
+initFEOPTV(s[1453]);
+initFEOPVB(s[1454]);
+initFSHARE1(s[1455]);
+initFSHARE2(s[1456]);
+initFSHARE3(s[1457]);
+initFSHUKV(s[1458]);
+initFSHUKVB(s[1459]);
+initFSHOSV(s[1460]);
+initFSHOSVB(s[1461]);
+initFSHADD(s[1462]);
+initFSHADA(s[1463]);
+initFSHADAB(s[1464]);
+initFNSAV1(s[1465]);
+initFNSAV2(s[1466]);
+initFNSAV3(s[1467]);
+initFNSAV4(s[1468]);
+initFNSVAL1(s[1469]);
+initFNSVB(s[1470]);
+initFGILTS1(s[1471]);
+initFGILTS2(s[1472]);
+initFGILTS3(s[1473]);
+initFGILTS4(s[1474]);
+initFGLTUKV(s[1475]);
+initFGUKVB(s[1476]);
+initFGLTFOV(s[1477]);
+initFGFOVB(s[1478]);
+initFLFENV(s[1479]);
+initFLFENVB(s[1480]);
+initFLFSIV(s[1481]);
+initFLFSIVB(s[1482]);
+initFLFFSV(s[1483]);
+initFLFFSVB(s[1484]);
+initFLFTEV(s[1485]);
+initFLFTEVB(s[1486]);
+initFINS(s[1487]);
+initFINSV(s[1488]);
+initFLPROD1(s[1489]);
+initFLPROD2(s[1490]);
+initFLPROD3(s[1491]);
+initFLPROD4(s[1492]);
+initFINVOTV(s[1493]);
+initFINVOVB(s[1494]);
+initFINCVB(s[1495]);
+initFINFSAV1(s[1496]);
+initFINFSAV2(s[1497]);
+initFINFSAV3(s[1498]);
+initFINFSAV4(s[1499]);
+initFINFLV(s[1500]);
+initFLOANVB(s[1501]);
+initFINFV(s[1502]);
+initFINFVB(s[1503]);
+initFSAVED(s[1504]);
+initFWITHD(s[1505]);
+initFSAVAB(s[1506]);
+initUPROP1(s[1507]);
+initUPROP2(s[1508]);
+initUPROP3(s[1509]);
+initUPROP4(s[1510]);
+initUNMTYP(s[1511]);
+initUNUMHS(s[1512]);
+initUBUYLET(s[1513]);
+initUNUMBD(s[1514]);
+initUNUMLA(s[1515]);
+initUNUMOV(s[1516]);
+initUNUMRE(s[1517]);
+initUPRTYP(s[1518]);
+initUPRSH1(s[1519]);
+initUPRSH2(s[1520]);
+initUPRTYP2(s[1521]);
+initUPRSH3(s[1522]);
+initUPRSH4(s[1523]);
+initUPRTYP3(s[1524]);
+initUPRSH5(s[1525]);
+initUPRSH6(s[1526]);
+initUPRTYP4(s[1527]);
+initUPRTYP5(s[1528]);
+initUPRTYP6(s[1529]);
+initUPRTYP7(s[1530]);
+initUPRSH13(s[1531]);
+initUPRSH14(s[1532]);
+initUPRTYP8(s[1533]);
+initUPRSH15(s[1534]);
+initUPRSH16(s[1535]);
+initUPRTYP9(s[1536]);
+initUPRSH17(s[1537]);
+initUPRSH18(s[1538]);
+initUPRTYP10(s[1539]);
+initUPRSH19(s[1540]);
+initUPRSH20(s[1541]);
+initULAND10(s[1542]);
+initUPRTYP11(s[1543]);
+initUPRSH21(s[1544]);
+initUPRSH22(s[1545]);
+initULAND11(s[1546]);
+initUPRTYP12(s[1547]);
+initUPRSH23(s[1548]);
+initUPRSH24(s[1549]);
+initULAND12(s[1550]);
+initUPRTYP13(s[1551]);
+initUPRSH25(s[1552]);
+initUPRSH26(s[1553]);
+initUPRTYP14(s[1554]);
+initUPRSH27(s[1555]);
+initUPRSH28(s[1556]);
+initUPRTYP15(s[1557]);
+initUPRSH29(s[1558]);
+initUPRSH30(s[1559]);
+initUPRTYP16(s[1560]);
+initUPRSH31(s[1561]);
+initUPRSH32(s[1562]);
+initULAND16(s[1563]);
+initUPRTYP17(s[1564]);
+initUPRSH33(s[1565]);
+initUPRSH34(s[1566]);
+initULAND17(s[1567]);
+initUPRTYP18(s[1568]);
+initUPRSH35(s[1569]);
+initUPRSH36(s[1570]);
+initULAND18(s[1571]);
+initDCNUM2(s[1572]);
+initDCANY(s[1573]);
+initDCANU(s[1574]);
+initDCNUM1(s[1575]);
+initDCCOS1(s[1576]);
+initDCCSP1(s[1577]);
+initDCNAM1(s[1578]);
+initDCONM1(s[1579]);
+initDCONM2(s[1580]);
+initDCRSP1(s[1581]);
+initDCREC1(s[1582]);
+initDCPER1(s[1583]);
+initDCAMC1(s[1584]);
+initDCAMP1(s[1585]);
+initDCAMD1(s[1586]);
+initDCESB1(s[1587]);
+initDCINZ1(s[1588]);
+initDC12BEH1(s[1589]);
+initDC12OWE1(s[1590]);
+initDCCOS2(s[1591]);
+initDCCSP2(s[1592]);
+initDCNAM2(s[1593]);
+initDCONM3(s[1594]);
+initDCONM4(s[1595]);
+initDCRSP2(s[1596]);
+initDCREC2(s[1597]);
+initDCPER2(s[1598]);
+initDCAMC2(s[1599]);
+initDCAMP2(s[1600]);
+initDCAMD2(s[1601]);
+initDCESB2(s[1602]);
+initDCINZ2(s[1603]);
+initDC12BEH2(s[1604]);
+initDC12OWE2(s[1605]);
+initDCCOS3(s[1606]);
+initDCCSP3(s[1607]);
+initDCNAM3(s[1608]);
+initDCONM5(s[1609]);
+initDCONM6(s[1610]);
+initDCRSP3(s[1611]);
+initDCREC3(s[1612]);
+initDCPER3(s[1613]);
+initDCAMC3(s[1614]);
+initDCAMP3(s[1615]);
+initDCAMD3(s[1616]);
+initDCESB3(s[1617]);
+initDCINZ3(s[1618]);
+initDC12BEH3(s[1619]);
+initDC12OWE3(s[1620]);
+initDCCOS4(s[1621]);
+initDCCSP4(s[1622]);
+initDCNAM4(s[1623]);
+initDCONM7(s[1624]);
+initDCONM8(s[1625]);
+initDCRSP4(s[1626]);
+initDCREC4(s[1627]);
+initDCPER4(s[1628]);
+initDCAMC4(s[1629]);
+initDCAMP4(s[1630]);
+initDCAMD4(s[1631]);
+initDCESB4(s[1632]);
+initDCINZ4(s[1633]);
+initDC12BEH4(s[1634]);
+initDC12OWE4(s[1635]);
+initDCCOS5(s[1636]);
+initDCCSP5(s[1637]);
+initDCNAM5(s[1638]);
+initDCONM9(s[1639]);
+initDCONM10(s[1640]);
+initDCRSP5(s[1641]);
+initDCREC5(s[1642]);
+initDCPER5(s[1643]);
+initDCAMC5(s[1644]);
+initDCAMP5(s[1645]);
+initDCAMD5(s[1646]);
+initDCESB5(s[1647]);
+initDCINZ5(s[1648]);
+initDC12BEH5(s[1649]);
+initDC12OWE5(s[1650]);
+initDSNUM2(s[1651]);
+initDSANY1(s[1652]);
+initDSANY2(s[1653]);
+initDSANU1(s[1654]);
+initDSANU2(s[1655]);
+initDSNUM(s[1656]);
+initDSCOS1(s[1657]);
+initDSCSP1(s[1658]);
+initDSNAM1(s[1659]);
+initDSONM1(s[1660]);
+initDSONM2(s[1661]);
+initDSRSP1(s[1662]);
+initDSREC1(s[1663]);
+initDSPER1(s[1664]);
+initDSAMC1(s[1665]);
+initDSAMP1(s[1666]);
+initDSAMD1(s[1667]);
+initDSESB1(s[1668]);
+initDS12BEH1(s[1669]);
+initDS12OWE1(s[1670]);
+initDSCOS2(s[1671]);
+initDSCSP2(s[1672]);
+initDSNAM2(s[1673]);
+initDSONM3(s[1674]);
+initDSONM4(s[1675]);
+initDSRSP2(s[1676]);
+initDSREC2(s[1677]);
+initDSPER2(s[1678]);
+initDSAMC2(s[1679]);
+initDSAMP2(s[1680]);
+initDSAMD2(s[1681]);
+initDSESB2(s[1682]);
+initDS12BEH2(s[1683]);
+initDS12OWE2(s[1684]);
+initDSCOS3(s[1685]);
+initDSCSP3(s[1686]);
+initDSNAM3(s[1687]);
+initDSONM5(s[1688]);
+initDSONM6(s[1689]);
+initDSRSP3(s[1690]);
+initDSREC3(s[1691]);
+initDSPER3(s[1692]);
+initDSAMC3(s[1693]);
+initDSAMP3(s[1694]);
+initDSAMD3(s[1695]);
+initDSESB3(s[1696]);
+initDS12BEH3(s[1697]);
+initDS12OWE3(s[1698]);
+initDSCOS4(s[1699]);
+initDSCSP4(s[1700]);
+initDSNAM4(s[1701]);
+initDSONM7(s[1702]);
+initDSONM8(s[1703]);
+initDSRSP4(s[1704]);
+initDSREC4(s[1705]);
+initDSPER4(s[1706]);
+initDSAMC4(s[1707]);
+initDSAMP4(s[1708]);
+initDSAMD4(s[1709]);
+initDSESB4(s[1710]);
+initDS12BEH4(s[1711]);
+initDS12OWE4(s[1712]);
+initDSCOS5(s[1713]);
+initDSCSP5(s[1714]);
+initDSNAM5(s[1715]);
+initDSONM9(s[1716]);
+initDSONM10(s[1717]);
+initDSRSP5(s[1718]);
+initDSREC5(s[1719]);
+initDSPER5(s[1720]);
+initDSAMC5(s[1721]);
+initDSAMP5(s[1722]);
+initDSAMD5(s[1723]);
+initDSESB5(s[1724]);
+initDS12BEH5(s[1725]);
+initDS12OWE5(s[1726]);
+initPRESMON(s[1727]);
+initPRESYR(s[1728]);
+initDMOANY(s[1729]);
+initDMONUM(s[1730]);
+initDMOINS1(s[1731]);
+initDMOEST1(s[1732]);
+initDMOOFT1(s[1733]);
+initDMOWHNY1(s[1734]);
+initDMOWHNM1(s[1735]);
+initDMOWEST1(s[1736]);
+initDMOINT1(s[1737]);
+initDMOBEH1(s[1738]);
+initDMOOWE1(s[1739]);
+initDMOINS2(s[1740]);
+initDMOEST2(s[1741]);
+initDMOOFT2(s[1742]);
+initDMOWHNY2(s[1743]);
+initDMOWHNM2(s[1744]);
+initDMOWEST2(s[1745]);
+initDMOINT2(s[1746]);
+initDMOBEH2(s[1747]);
+initDMOOWE2(s[1748]);
+initDMOINS3(s[1749]);
+initDMOEST3(s[1750]);
+initDMOOFT3(s[1751]);
+initDMOWHNY3(s[1752]);
+initDMOWHNM3(s[1753]);
+initDMOWEST3(s[1754]);
+initDMOINT3(s[1755]);
+initDMOBEH3(s[1756]);
+initDMOOWE3(s[1757]);
+initDMOINS4(s[1758]);
+initDMOEST4(s[1759]);
+initDMOOFT4(s[1760]);
+initDMOWHNY4(s[1761]);
+initDMOWHNM4(s[1762]);
+initDMOWEST4(s[1763]);
+initDMOINT4(s[1764]);
+initDMOBEH4(s[1765]);
+initDMOOWE4(s[1766]);
+initDMOINS5(s[1767]);
+initDMOEST5(s[1768]);
+initDMOOFT5(s[1769]);
+initDMOWHNY5(s[1770]);
+initDMOWHNM5(s[1771]);
+initDMOWEST5(s[1772]);
+initDMOINT5(s[1773]);
+initDMOBEH5(s[1774]);
+initDMOOWE5(s[1775]);
+initDHPANY1(s[1776]);
+initDHPANY2(s[1777]);
+initDHPANY3(s[1778]);
+initDHPANY4(s[1779]);
+initDHPANY5(s[1780]);
+initDHPANY6(s[1781]);
+initDHPANY7(s[1782]);
+initDHPNUM(s[1783]);
+initDHPINS1(s[1784]);
+initDHPEST1(s[1785]);
+initDHPOFT1(s[1786]);
+initDHPWHNY1(s[1787]);
+initDHPWHNM1(s[1788]);
+initDHPWEST1(s[1789]);
+initDHPINT1(s[1790]);
+initDHPBEH1(s[1791]);
+initDHPOWE1(s[1792]);
+initDTTOWE1(s[1793]);
+initDTTOWEB1(s[1794]);
+initDTTOWE2(s[1795]);
+initDTTOWEB2(s[1796]);
+initDTTOWE3(s[1797]);
+initDTTOWEB3(s[1798]);
+initDHPINS2(s[1799]);
+initDHPEST2(s[1800]);
+initDHPOFT2(s[1801]);
+initDHPWHNY2(s[1802]);
+initDHPWHNM2(s[1803]);
+initDHPWEST2(s[1804]);
+initDHPINT2(s[1805]);
+initDHPBEH2(s[1806]);
+initDHPOWE2(s[1807]);
+initDTTOWEB4(s[1808]);
+initDTTOWEB5(s[1809]);
+initDTTOWEB6(s[1810]);
+initDHPINS3(s[1811]);
+initDHPEST3(s[1812]);
+initDHPOFT3(s[1813]);
+initDHPWHNY3(s[1814]);
+initDHPWHNM3(s[1815]);
+initDHPWEST3(s[1816]);
+initDHPINT3(s[1817]);
+initDHPBEH3(s[1818]);
+initDHPOWE3(s[1819]);
+initDTTOWEB7(s[1820]);
+initDTTOWEB8(s[1821]);
+initDTTOWEB9(s[1822]);
+initDHPINS4(s[1823]);
+initDHPEST4(s[1824]);
+initDHPOFT4(s[1825]);
+initDHPWHNY4(s[1826]);
+initDHPWHNM4(s[1827]);
+initDHPWEST4(s[1828]);
+initDHPINT4(s[1829]);
+initDHPBEH4(s[1830]);
+initDHPOWE4(s[1831]);
+initDTTOWEB10(s[1832]);
+initDTTOWEB11(s[1833]);
+initDTTOWEB12(s[1834]);
+initDHPINS5(s[1835]);
+initDHPEST5(s[1836]);
+initDHPOFT5(s[1837]);
+initDHPWHNY5(s[1838]);
+initDHPWHNM5(s[1839]);
+initDHPWEST5(s[1840]);
+initDHPINT5(s[1841]);
+initDHPBEH5(s[1842]);
+initDHPOWE5(s[1843]);
+initDTTOWEB13(s[1844]);
+initDTTOWEB14(s[1845]);
+initDTTOWEB15(s[1846]);
+initNWHP(s[1847]);
+initNWHPNO(s[1848]);
+initDLONM(s[1849]);
+initDLOLD1(s[1850]);
+initDLOLD2(s[1851]);
+initDLOLD3(s[1852]);
+initDLOLD4(s[1853]);
+initDLOLD5(s[1854]);
+initDLANY(s[1855]);
+initDLNNM(s[1856]);
+initDLNUM(s[1857]);
+initDLTYPE1(s[1858]);
+initDSLPAY1(s[1859]);
+initDSLAMT1(s[1860]);
+initDSLEST1(s[1861]);
+initDLWHY1(s[1862]);
+initDLWHY2(s[1863]);
+initDLWHY3(s[1864]);
+initDLWHY4(s[1865]);
+initDLWHY5(s[1866]);
+initDLWHY6(s[1867]);
+initDLWHY7(s[1868]);
+initDLSEC1(s[1869]);
+initDLINS1(s[1870]);
+initDLEST1(s[1871]);
+initDLOFT1(s[1872]);
+initDLWHNY1(s[1873]);
+initDLWHNM1(s[1874]);
+initDLWEST1(s[1875]);
+initDLINT1(s[1876]);
+initDLBEH1(s[1877]);
+initDLOWE1(s[1878]);
+initDLTYPE2(s[1879]);
+initDSLPAY2(s[1880]);
+initDSLAMT2(s[1881]);
+initDSLEST2(s[1882]);
+initDLWHY8(s[1883]);
+initDLWHY9(s[1884]);
+initDLWHY10(s[1885]);
+initDLWHY11(s[1886]);
+initDLWHY12(s[1887]);
+initDLWHY13(s[1888]);
+initDLWHY14(s[1889]);
+initDLSEC2(s[1890]);
+initDLINS2(s[1891]);
+initDLEST2(s[1892]);
+initDLOFT2(s[1893]);
+initDLWHNY2(s[1894]);
+initDLWHNM2(s[1895]);
+initDLWEST2(s[1896]);
+initDLINT2(s[1897]);
+initDLBEH2(s[1898]);
+initDLOWE2(s[1899]);
+initDLTYPE3(s[1900]);
+initDSLPAY3(s[1901]);
+initDSLAMT3(s[1902]);
+initDSLEST3(s[1903]);
+initDLWHY15(s[1904]);
+initDLWHY16(s[1905]);
+initDLWHY17(s[1906]);
+initDLWHY18(s[1907]);
+initDLWHY19(s[1908]);
+initDLWHY20(s[1909]);
+initDLWHY21(s[1910]);
+initDLSEC3(s[1911]);
+initDLINS3(s[1912]);
+initDLEST3(s[1913]);
+initDLOFT3(s[1914]);
+initDLWHNY3(s[1915]);
+initDLWHNM3(s[1916]);
+initDLWEST3(s[1917]);
+initDLINT3(s[1918]);
+initDLBEH3(s[1919]);
+initDLOWE3(s[1920]);
+initDLTYPE4(s[1921]);
+initDSLPAY4(s[1922]);
+initDSLAMT4(s[1923]);
+initDSLEST4(s[1924]);
+initDLWHY22(s[1925]);
+initDLWHY23(s[1926]);
+initDLWHY24(s[1927]);
+initDLWHY25(s[1928]);
+initDLWHY26(s[1929]);
+initDLWHY27(s[1930]);
+initDLWHY28(s[1931]);
+initDLSEC4(s[1932]);
+initDLINS4(s[1933]);
+initDLEST4(s[1934]);
+initDLOFT4(s[1935]);
+initDLWHNY4(s[1936]);
+initDLWHNM4(s[1937]);
+initDLWEST4(s[1938]);
+initDLINT4(s[1939]);
+initDLBEH4(s[1940]);
+initDLOWE4(s[1941]);
+initDLTYPE5(s[1942]);
+initDSLPAY5(s[1943]);
+initDSLAMT5(s[1944]);
+initDSLEST5(s[1945]);
+initDLWHY29(s[1946]);
+initDLWHY30(s[1947]);
+initDLWHY31(s[1948]);
+initDLWHY32(s[1949]);
+initDLWHY33(s[1950]);
+initDLWHY34(s[1951]);
+initDLWHY35(s[1952]);
+initDLSEC5(s[1953]);
+initDLINS5(s[1954]);
+initDLEST5(s[1955]);
+initDLOFT5(s[1956]);
+initDLWHNY5(s[1957]);
+initDLWHNM5(s[1958]);
+initDLWEST5(s[1959]);
+initDLINT5(s[1960]);
+initDLBEH5(s[1961]);
+initDLOWE5(s[1962]);
+initNWLN(s[1963]);
+initNWLNNO(s[1964]);
+initDTLTYPE1(s[1965]);
+initDTLOWE1(s[1966]);
+initDTLOWEB1(s[1967]);
+initDTLTYPE2(s[1968]);
+initDTLOWE2(s[1969]);
+initDTLOWEB2(s[1970]);
+initDTLTYPE3(s[1971]);
+initDTLOWE3(s[1972]);
+initDTLOWEB3(s[1973]);
+initDHBFIX(s[1974]);
+initDHBANY01(s[1975]);
+initDHBANY02(s[1976]);
+initDHBANY03(s[1977]);
+initDHBANY04(s[1978]);
+initDHBANY05(s[1979]);
+initDHBANY06(s[1980]);
+initDHBANY07(s[1981]);
+initDHBANY08(s[1982]);
+initDHBANY09(s[1983]);
+initDHBANY10(s[1984]);
+initDHBANY11(s[1985]);
+initDHBAMT01(s[1986]);
+initDHBAMT02(s[1987]);
+initDHBAMT03(s[1988]);
+initDHBAMT04(s[1989]);
+initDHBAMT05(s[1990]);
+initDHBAMT06(s[1991]);
+initDHBAMT07(s[1992]);
+initDHBAMT08(s[1993]);
+initDHBAMT09(s[1994]);
+initDHBAMT10(s[1995]);
+initDHBAMT11(s[1996]);
+initDHBEST01(s[1997]);
+initDHBEST02(s[1998]);
+initDHBEST03(s[1999]);
+initDHBEST04(s[2000]);
+initDHBEST05(s[2001]);
+initDHBEST06(s[2002]);
+initDHBEST07(s[2003]);
+initDHBEST08(s[2004]);
+initDHBEST09(s[2005]);
+initDHBEST10(s[2006]);
+initDHBEST11(s[2007]);
+initDBURD(s[2008]);
+initDBURDA(s[2009]);
+initDBURDW1(s[2010]);
+initDBURDW2(s[2011]);
+initDBURD___W3(s[2012]);
+initDBURDW4(s[2013]);
+initDBURDW5(s[2014]);
+initDBURDW6(s[2015]);
+initDBURDW7(s[2016]);
+initDADVMTH(s[2017]);
+initDADVACT1(s[2018]);
+initDADVACT2(s[2019]);
+initDADVACT3(s[2020]);
+initDBURDH(s[2021]);
+initINSPOL(s[2022]);
+initCOMMIT1(s[2023]);
+initCOMMIT2(s[2024]);
+initCOMMIT3(s[2025]);
+initCOMMIT4(s[2026]);
+initCOMMIT5(s[2027]);
+initXINSOL(s[2028]);
+initXINTYP(s[2029]);
+initXINCSE(s[2030]);
+initXBCONSC(s[2031]);
+initXBCON(s[2032]);
+initXBCONREM(s[2033]);
+initXBOK(s[2034]);
+initXBCRT(s[2035]);
+initXDCONSC(s[2036]);
+initXDCON(s[2037]);
+initXDCONREM(s[2038]);
+initXDOK(s[2039]);
+initXDREF(s[2040]);
+initXICONSC(s[2041]);
+initXICON(s[2042]);
+initXICONREM(s[2043]);
+initRENTPAY(s[2044]);
+initDVRENTAMTANNUAL(s[2045]);
+initOTHSRC1(s[2046]);
+initOTHSRC2(s[2047]);
+initOTHSRC3(s[2048]);
+initOIGRR(s[2049]);
+initOIGGT(s[2050]);
+initREGLRPY1(s[2051]);
+initREGLRPY2(s[2052]);
+initREGLRPY3(s[2053]);
+initREGLRPY4(s[2054]);
+initREGLRPY5(s[2055]);
+initOTRUST01(s[2056]);
+initOTRUST02(s[2057]);
+initOTRUST03(s[2058]);
+initOTRUST04(s[2059]);
+initOTRUST05(s[2060]);
+initOTRUST06(s[2061]);
+initOTRUST07(s[2062]);
+initOTRUST08(s[2063]);
+initOTRUST09(s[2064]);
+initOTRUST10(s[2065]);
+initOTRUST11(s[2066]);
+initOTRUST12(s[2067]);
+initOTRUST13(s[2068]);
+initOTRUST14(s[2069]);
+initOTRUST15(s[2070]);
+initOSITUAT(s[2071]);
+initOSITCH(s[2072]);
+initOIMPRS1(s[2073]);
+initOIMPRS2(s[2074]);
+initOIMPRS3(s[2075]);
+initOIMPRS4(s[2076]);
+initOIMPRS5(s[2077]);
+initOIMPRS6(s[2078]);
+initOIMPRS7(s[2079]);
+initOIMPRS8(s[2080]);
+initOIMPRS9(s[2081]);
+initOWRSRS01(s[2082]);
+initOWRSRS02(s[2083]);
+initOWRSRS03(s[2084]);
+initOWRSRS04(s[2085]);
+initOWRSRS05(s[2086]);
+initOWRSRS06(s[2087]);
+initOWRSRS07(s[2088]);
+initOWRSRS08(s[2089]);
+initOWRSRS09(s[2090]);
+initOWRSRS10(s[2091]);
+initORETINC(s[2092]);
+initSELECTAD(s[2093]);
+initCACTF(s[2094]);
+initCACTV(s[2095]);
+initCACTVB(s[2096]);
+initCATYPE(s[2097]);
+initCAOPEN(s[2098]);
+initCACONTR1(s[2099]);
+initCACONTR2(s[2100]);
+initCACONTR3(s[2101]);
+initCACONTR4(s[2102]);
+initCACONTR5(s[2103]);
+initCACONTR6(s[2104]);
+initCAEXTRA(s[2105]);
+initCASAV(s[2106]);
+initCASVV(s[2107]);
+initCASVB(s[2108]);
+initCACONTRAM1(s[2109]);
+initCACONTRAMB1(s[2110]);
+initCACONTRAM2(s[2111]);
+initCACONTRAMB2(s[2112]);
+initCACONTRAM3(s[2113]);
+initCACONTRAMB3(s[2114]);
+initCACONTRAM4(s[2115]);
+initCACONTRAMB4(s[2116]);
+initCACONTRAM5(s[2117]);
+initCACONTRAMB5(s[2118]);
+initCACONTRAM6(s[2119]);
+initCACONTRAMB6(s[2120]);
+initCAOLDER(s[2121]);
+initCAOTHER1(s[2122]);
+initCAOTHER2(s[2123]);
+initCAOTHER3(s[2124]);
+initCAOTHER4(s[2125]);
+initCAOTHER5(s[2126]);
+initNUMCHSAV(s[2127]);
+initOCSVR1(s[2128]);
+initOCSVR2(s[2129]);
+initOCSVR3(s[2130]);
+initOCSVR4(s[2131]);
+initOCSVR5(s[2132]);
+initOCSVR6(s[2133]);
+initOCSVR7(s[2134]);
+initOCSVR8(s[2135]);
+initIHRECNT(s[2136]);
+initIHRCNUM(s[2137]);
+initIWAT1(s[2138]);
+initIWAT2(s[2139]);
+initIWAT3(s[2140]);
+initIWAT4(s[2141]);
+initIWAT5(s[2142]);
+initIWAT6(s[2143]);
+initIWHO(s[2144]);
+initIVAL1(s[2145]);
+initIVALB1(s[2146]);
+initIHSE1(s[2147]);
+initIHSE2(s[2148]);
+initIHSE3(s[2149]);
+initIHSE4(s[2150]);
+initIHSE5(s[2151]);
+initIHSE6(s[2152]);
+initIGDS1(s[2153]);
+initIGDS2(s[2154]);
+initIGDS3(s[2155]);
+initIGDS4(s[2156]);
+initIGDS5(s[2157]);
+initIGDS6(s[2158]);
+initIGDS7(s[2159]);
+initIWAT7(s[2160]);
+initIWAT8(s[2161]);
+initIWAT9(s[2162]);
+initIWAT10(s[2163]);
+initIWAT11(s[2164]);
+initIWAT12(s[2165]);
+initIWHO2(s[2166]);
+initIVALB2(s[2167]);
+initIHSE7(s[2168]);
+initIHSE8(s[2169]);
+initIHSE9(s[2170]);
+initIHSE10(s[2171]);
+initIHSE11(s[2172]);
+initIHSE12(s[2173]);
+initIGDS8(s[2174]);
+initIGDS9(s[2175]);
+initIGDS10(s[2176]);
+initIGDS11(s[2177]);
+initIGDS12(s[2178]);
+initIGDS13(s[2179]);
+initIGDS14(s[2180]);
+initIWAT13(s[2181]);
+initIWAT14(s[2182]);
+initIWAT15(s[2183]);
+initIWAT16(s[2184]);
+initIWAT17(s[2185]);
+initIWAT18(s[2186]);
+initIWHO3(s[2187]);
+initIVALB3(s[2188]);
+initIHSE13(s[2189]);
+initIHSE14(s[2190]);
+initIHSE15(s[2191]);
+initIHSE16(s[2192]);
+initIHSE17(s[2193]);
+initIHSE18(s[2194]);
+initIGDS15(s[2195]);
+initIGDS16(s[2196]);
+initIGDS17(s[2197]);
+initIGDS18(s[2198]);
+initIGDS19(s[2199]);
+initIGDS20(s[2200]);
+initIGDS21(s[2201]);
+initILGIFT(s[2202]);
+initIGFVALB(s[2203]);
+initNEWGIFT(s[2204]);
+initILOAN(s[2205]);
+initILNUSE01(s[2206]);
+initILNUSE02(s[2207]);
+initILNUSE03(s[2208]);
+initILNUSE04(s[2209]);
+initILNUSE05(s[2210]);
+initILNUSE06(s[2211]);
+initILNUSE07(s[2212]);
+initILNUSE08(s[2213]);
+initILNUSE09(s[2214]);
+initILNUSE10(s[2215]);
+initILNVAL(s[2216]);
+initILNVALB(s[2217]);
+initILNPBK(s[2218]);
+initILNPBAM(s[2219]);
+initILUMP(s[2220]);
+initILUMTY1(s[2221]);
+initILUMTY2(s[2222]);
+initILUMTY3(s[2223]);
+initILUMTY4(s[2224]);
+initILUMTY5(s[2225]);
+initILUMTY6(s[2226]);
+initILUMTY7(s[2227]);
+initILIFB(s[2228]);
+initILUPP(s[2229]);
+initILUPB(s[2230]);
+initILACB(s[2231]);
+initILINB(s[2232]);
+initILRDB(s[2233]);
+initILWNB(s[2234]);
+initILOTB(s[2235]);
+initTINTRO(s[2236]);
+initTSETT(s[2237]);
+initTSNUM1(s[2238]);
+initTSNEW(s[2239]);
+initTSNUM2(s[2240]);
+initTJNT1(s[2241]);
+initTJNT2(s[2242]);
+initTACC1(s[2243]);
+initTBEN1(s[2244]);
+initTBEN2(s[2245]);
+initTBEN3(s[2246]);
+initTBEN4(s[2247]);
+initTBEN5(s[2248]);
+initTBEN6(s[2249]);
+initTBEN7(s[2250]);
+initTBEN8(s[2251]);
+initTVAL1(s[2252]);
+initTVALB1(s[2253]);
+initTDUP1(s[2254]);
+initTDUPA1(s[2255]);
+initTADDVL(s[2256]);
+initTADDVB1(s[2257]);
+initTJNT3(s[2258]);
+initTJNT4(s[2259]);
+initTACC2(s[2260]);
+initTBEN9(s[2261]);
+initTBEN10(s[2262]);
+initTBEN11(s[2263]);
+initTBEN12(s[2264]);
+initTBEN13(s[2265]);
+initTBEN14(s[2266]);
+initTBEN15(s[2267]);
+initTBEN16(s[2268]);
+initTVAL2(s[2269]);
+initTVALB2(s[2270]);
+initTDUP2(s[2271]);
+initTDUPA2(s[2272]);
+initTADDVL2(s[2273]);
+initTADDVB2(s[2274]);
+initTSNO3(s[2275]);
+initTJNT5(s[2276]);
+initTJNT6(s[2277]);
+initTACC3(s[2278]);
+initTBEN17(s[2279]);
+initTBEN18(s[2280]);
+initTBEN19(s[2281]);
+initTBEN20(s[2282]);
+initTBEN21(s[2283]);
+initTBEN22(s[2284]);
+initTBEN23(s[2285]);
+initTBEN24(s[2286]);
+initTVAL3(s[2287]);
+initTVALB3(s[2288]);
+initTDUP3(s[2289]);
+initTDUPA3(s[2290]);
+initTADDVL3(s[2291]);
+initTADDVB3(s[2292]);
+initTBENEF(s[2293]);
+initTBENNUM(s[2294]);
+initTWHO1(s[2295]);
+initTWHO2(s[2296]);
+initTWHO3(s[2297]);
+initTWHO4(s[2298]);
+initTWHO5(s[2299]);
+initTWHO6(s[2300]);
+initTBINC1(s[2301]);
+initTBREC1(s[2302]);
+initTBRECB1(s[2303]);
+initTBCAP1(s[2304]);
+initTBCKNO1(s[2305]);
+initTBCAPY1(s[2306]);
+initTBVALB1(s[2307]);
+initTWHO7(s[2308]);
+initTWHO8(s[2309]);
+initTWHO9(s[2310]);
+initTWHO10(s[2311]);
+initTWHO11(s[2312]);
+initTWHO12(s[2313]);
+initTBINC2(s[2314]);
+initTBREC2(s[2315]);
+initTBRECB2(s[2316]);
+initTBCAP2(s[2317]);
+initTBCKNO2(s[2318]);
+initTBCAPY2(s[2319]);
+initTBVALB2(s[2320]);
+initTWHO13(s[2321]);
+initTWHO14(s[2322]);
+initTWHO15(s[2323]);
+initTWHO16(s[2324]);
+initTWHO17(s[2325]);
+initTWHO18(s[2326]);
+initTBINC3(s[2327]);
+initTBREC3(s[2328]);
+initTBRECB3(s[2329]);
+initTBCAP3(s[2330]);
+initTBCKNO3(s[2331]);
+initTBCAPY3(s[2332]);
+initTBVALB3(s[2333]);
+initOTHASCH(s[2334]);
+initOTHASVL(s[2335]);
+initOTHASVB(s[2336]);
+initCOMMI(s[2337]);
+initORUNOUT(s[2338]);
+initORUNDO01(s[2339]);
+initORUNDO02(s[2340]);
+initORUNDO03(s[2341]);
+initORUNDO04(s[2342]);
+initORUNDO05(s[2343]);
+initORUNDO06(s[2344]);
+initORUNDO07(s[2345]);
+initORUNDO08(s[2346]);
+initORUNDO09(s[2347]);
+initORUNDO10(s[2348]);
+initORUNDO11(s[2349]);
+initIFBANKACC(s[2350]);
+initKNOWBALANCE(s[2351]);
+initOFTCHECKED(s[2352]);
+initKNOHOWMUCH(s[2353]);
+initINCDROP(s[2354]);
+initFNDCASH1(s[2355]);
+initFNDCASH2(s[2356]);
+initFNDCASH3(s[2357]);
+initFNDCASH4(s[2358]);
+initFNDCASH5(s[2359]);
+initORGNSED(s[2360]);
+initRNYDAY(s[2361]);
+initLVTDAY(s[2362]);
+initSPENDM(s[2363]);
+initGSTDNW(s[2364]);
+initPRODTS(s[2365]);
+initSOURC2P(s[2366]);
+initCHOICP(s[2367]);
+initEYE1(s[2368]);
+initEYE2(s[2369]);
+initEYE3(s[2370]);
+initEYE4(s[2371]);
+initEYE5(s[2372]);
+initEYE6(s[2373]);
+initEYE7(s[2374]);
+initEYE8(s[2375]);
+initINDFREQ(s[2376]);
+initORISKA(s[2377]);
+initORISKC(s[2378]);
+initOSAFESAV(s[2379]);
+initORISKS(s[2380]);
+initQHEALTH1(s[2381]);
+initCUTDOWN(s[2382]);
+initLSILL(s[2383]);
+initILLLIM(s[2384]);
+initDISTYPE1(s[2385]);
+initDISTYPE2(s[2386]);
+initDISTYPE3(s[2387]);
+initDISTYPE4(s[2388]);
+initDISTYPE5(s[2389]);
+initDISTYPE6(s[2390]);
+initDISTYPE7(s[2391]);
+initDISTYPE8(s[2392]);
+initDISTYPE9(s[2393]);
+initDISEVER(s[2394]);
+initFBSITU(s[2395]);
+initFBSIBS(s[2396]);
+initFBTEN(s[2397]);
+initFBFAED(s[2398]);
+initFBMOED(s[2399]);
+initFTHECST(s[2400]);
+initMTHECST(s[2401]);
+initDWELLTYP(s[2402]);
+initFLOORN(s[2403]);
+initIOUT1(s[2404]);
+initPROXPERS(s[2405]);
+initNOUNITS(s[2406]);
+initDVBENU1(s[2407]);
+initDVNUMBU(s[2408]);
+initES2000(s[2409]);
+initNSSEC(s[2410]);
+initNSSECB(s[2411]);
+initNSSEC5(s[2412]);
+initNSSEC3(s[2413]);
+initHOUT(s[2414]);
+initHPROX(s[2415]);
+initPENIND1(s[2416]);
+initPENIND2(s[2417]);
+initPENIND3(s[2418]);
+initPENIND4(s[2419]);
+initPENIND5(s[2420]);
+initPENIND6(s[2421]);
+initUVALS(s[2422]);
+initUVALBS(s[2423]);
+initUDEBTS(s[2424]);
+initUDEBTBS(s[2425]);
+initUGDVBS(s[2426]);
+initUVALL(s[2427]);
+initUVALBL(s[2428]);
+initUDEBTL(s[2429]);
+initUDEBTBL(s[2430]);
+initUGDVBL(s[2431]);
+initUVALO(s[2432]);
+initUVALBO(s[2433]);
+initUDEBTO(s[2434]);
+initUDEBTBO(s[2435]);
+initUVALLU(s[2436]);
+initUVALBLU(s[2437]);
+initUDEBTLU(s[2438]);
+initUDEBTBLU(s[2439]);
+initUVALOS(s[2440]);
+initUVALBOS(s[2441]);
+initUDEBTOS(s[2442]);
+initUDEBTBOS(s[2443]);
+initUGDVBOS(s[2444]);
+initUVALOR(s[2445]);
+initUVALBOR(s[2446]);
+initUDEBTOR(s[2447]);
+initUDEBTBOR(s[2448]);
+initRELIGE(s[2449]);
+initRELIGW(s[2450]);
+initRELIGS(s[2451]);
+initCTPAY(s[2452]);
+initCTPAYW(s[2453]);
+initCTPAYS(s[2454]);
+initEVERWK(s[2455]);
+initPDCVAL3(s[2456]);
+initDVPUBLPRIV(s[2457]);
+initUDEBTS_I(s[2458]);
+initUDEBTS_IFLAG(s[2459]);
+initUDEBTL_I(s[2460]);
+initUDEBTL_IFLAG(s[2461]);
+initUDEBTO_I(s[2462]);
+initUDEBTO_IFLAG(s[2463]);
+initUDEBTLU_I(s[2464]);
+initUDEBTLU_IFLAG(s[2465]);
+initUDEBTOS_I(s[2466]);
+initUDEBTOS_IFLAG(s[2467]);
+initUDEBTOR_I(s[2468]);
+initUDEBTOR_IFLAG(s[2469]);
+initUPROP1_I(s[2470]);
+initUPROP1_IFLAG(s[2471]);
+initUPROP2_I(s[2472]);
+initUPROP2_IFLAG(s[2473]);
+initUPROP3_I(s[2474]);
+initUPROP3_IFLAG(s[2475]);
+initUPROP4_I(s[2476]);
+initUPROP4_IFLAG(s[2477]);
+initUPROP5_I(s[2478]);
+initUPROP5_IFLAG(s[2479]);
+initUPROP6_I(s[2480]);
+initUPROP6_IFLAG(s[2481]);
+initUNUMHS_I(s[2482]);
+initUNUMHS_IFLAG(s[2483]);
+initUBUYLET_I(s[2484]);
+initUBUYLET_IFLAG(s[2485]);
+initUNUMBD_I(s[2486]);
+initUNUMBD_IFLAG(s[2487]);
+initUNUMLA_I(s[2488]);
+initUNUMLA_IFLAG(s[2489]);
+initUNUMOV_I(s[2490]);
+initUNUMOV_IFLAG(s[2491]);
+initUNUMRE_I(s[2492]);
+initUNUMRE_IFLAG(s[2493]);
+initUVALS_I(s[2494]);
+initUVALS_IFLAG(s[2495]);
+initUVALL_I(s[2496]);
+initUVALL_IFLAG(s[2497]);
+initUVALO_I(s[2498]);
+initUVALO_IFLAG(s[2499]);
+initUVALLU_I(s[2500]);
+initUVALLU_IFLAG(s[2501]);
+initUVALOS_I(s[2502]);
+initUVALOS_IFLAG(s[2503]);
+initUVALOR_I(s[2504]);
+initUVALOR_IFLAG(s[2505]);
+initUGDVBS_I(s[2506]);
+initUGDVBS_IFLAG(s[2507]);
+initUGDVBL_I(s[2508]);
+initUGDVBL_IFLAG(s[2509]);
+initUGDVBOS_I(s[2510]);
+initUGDVBOS_IFLAG(s[2511]);
+initDVHSEDEBT(s[2512]);
+initDVBLTDEBT(s[2513]);
+initDVBLDDEBT(s[2514]);
+initDVLUKDEBT(s[2515]);
+initDVLOSDEBT(s[2516]);
+initDVOPRDEBT(s[2517]);
+initDVHSEVAL(s[2518]);
+initDVBLTVAL(s[2519]);
+initDVBLDVAL(s[2520]);
+initDVLUKVAL(s[2521]);
+initDVLOSVAL(s[2522]);
+initDVOPRVAL(s[2523]);
+initOTHMORT(s[2524]);
+initHOUSGDST(s[2525]);
+initBUYLGDST(s[2526]);
+initHOUSGDSOST(s[2527]);
+initPHYSHOUSGDST(s[2528]);
+initPHYSBUYLGDST(s[2529]);
+initPHYSHOUSGDSOST(s[2530]);
+initTYPE(s[2531]);
+initP_FLAG1(s[2532]);
+initP_FLAG3(s[2533]);
+initP_FLAG4(s[2534]);
+initH_FLAG1(s[2535]);
+initDVSAME(s[2536]);
+initPBLMVB1(s[2537]);
+initALLRET(s[2538]);
+initNUMCOUPLES(s[2539]);
+initCOUPLENUM(s[2540]);
+initPARTNSSEC(s[2541]);
+initPARTNSSECB(s[2542]);
+initPARTNSSEC8(s[2543]);
+initPARTNSSEC5(s[2544]);
+initPARTNSSEC3(s[2545]);
+initHRPEDLEVEL(s[2546]);
+initWRKING_I(s[2547]);
+initWRKING_IFLAG(s[2548]);
+initSCHEMEET_I(s[2549]);
+initSCHEMEET_IFLAG(s[2550]);
+initJBAWAY_I(s[2551]);
+initJBAWAY_IFLAG(s[2552]);
+initOWNBUS_I(s[2553]);
+initOWNBUS_IFLAG(s[2554]);
+initRELBUS_I(s[2555]);
+initRELBUS_IFLAG(s[2556]);
+initLOOKED_I(s[2557]);
+initLOOKED_IFLAG(s[2558]);
+initSTARTJ_I(s[2559]);
+initSTARTJ_IFLAG(s[2560]);
+initDVILO3A_I(s[2561]);
+initDVILO3A_IFLAG(s[2562]);
+initEVERWK_I(s[2563]);
+initEVERWK_IFLAG(s[2564]);
+initSTAT_I(s[2565]);
+initSTAT_IFLAG(s[2566]);
+initBTYPE1_I(s[2567]);
+initBTYPE1_IFLAG(s[2568]);
+initBDIRNI1_I(s[2569]);
+initBDIRNI1_IFLAG(s[2570]);
+initSEX(s[2571]);
+initDVSAME_I(s[2572]);
+initDVSAME_IFLAG(s[2573]);
+initPESAME_I(s[2574]);
+initPESAME_IFLAG(s[2575]);
+initPEMOFF_I(s[2576]);
+initPEMOFF_IFLAG(s[2577]);
+initPEMELG_I(s[2578]);
+initPEMELG_IFLAG(s[2579]);
+initPEMMEM_I(s[2580]);
+initPEMMEM_IFLAG(s[2581]);
+initPCONT_I(s[2582]);
+initPCONT_IFLAG(s[2583]);
+initPANYO_I(s[2584]);
+initPANYO_IFLAG(s[2585]);
+initPNUMOS_I(s[2586]);
+initPNUMOS_IFLAG(s[2587]);
+initPSCHM_F_I(s[2588]);
+initPSCHM_F_IFLAG(s[2589]);
+initPSCHM_S_I(s[2590]);
+initPSCHM_S_IFLAG(s[2591]);
+initPSCHM_T_I(s[2592]);
+initPSCHM_T_IFLAG(s[2593]);
+initPOCNMSC_I(s[2594]);
+initPOCNMSC_IFLAG(s[2595]);
+initPOCTYP1_I(s[2596]);
+initPOCTYP1_IFLAG(s[2597]);
+initPOCTYP2_I(s[2598]);
+initPOCTYP2_IFLAG(s[2599]);
+initPBFRAC1_I(s[2600]);
+initPBFRAC1_IFLAG(s[2601]);
+initPBFRAC2_I(s[2602]);
+initPBFRAC2_IFLAG(s[2603]);
+initPBQUAL1_I(s[2604]);
+initPBQUAL1_IFLAG(s[2605]);
+initPBQUAL2_I(s[2606]);
+initPBQUAL2_IFLAG(s[2607]);
+initPBLUMV1_I(s[2608]);
+initPBLUMV1_IFLAG(s[2609]);
+initPBLUMV2_I(s[2610]);
+initPBLUMV2_IFLAG(s[2611]);
+initASAF2T(s[2612]);
+initPOWER1T(s[2613]);
+initPOWER2T(s[2614]);
+initPPRNMSC_I(s[2615]);
+initPPRNMSC_IFLAG(s[2616]);
+initPPVAL1_I(s[2617]);
+initPPVAL1_IFLAG(s[2618]);
+initPPVAL2_I(s[2619]);
+initPPVAL2_IFLAG(s[2620]);
+initPPVAL3_I(s[2621]);
+initPPVAL3_IFLAG(s[2622]);
+initW3XSWGT(s[2623]);
+initW1W3WGT(s[2624]);
+initW2W3WGT(s[2625]);
+initPDCVAL1_I(s[2626]);
+initPDCVAL1_IFLAG(s[2627]);
+initPDCVAL2_I(s[2628]);
+initPDCVAL2_IFLAG(s[2629]);
+initPOADD1_I(s[2630]);
+initPOADD1_IFLAG(s[2631]);
+initPOADD2_I(s[2632]);
+initPOADD2_IFLAG(s[2633]);
+initPOADD3_I(s[2634]);
+initPOADD3_IFLAG(s[2635]);
+initPOADD4_I(s[2636]);
+initPOADD4_IFLAG(s[2637]);
+initPOADD5_I(s[2638]);
+initPOADD5_IFLAG(s[2639]);
+initPOADD6_I(s[2640]);
+initPOADD6_IFLAG(s[2641]);
+initPAVCUV1_I(s[2642]);
+initPAVCUV1_IFLAG(s[2643]);
+initPAVCUV2_I(s[2644]);
+initPAVCUV2_IFLAG(s[2645]);
+initDVHASAVC(s[2646]);
+initDVPAVCUV(s[2647]);
+initDVHASDC(s[2648]);
+initDVVALDCOS(s[2649]);
+initDVPPVAL(s[2650]);
+initDVHASPP(s[2651]);
+initDVHASDB(s[2652]);
+initFRSTSCH(s[2653]);
+initACCFRAC1(s[2654]);
+initACCFRAC2(s[2655]);
+initVALPBLUM1(s[2656]);
+initVALPBLUM2(s[2657]);
+initDVVALDBLUM(s[2658]);
+initDVPENINC1(s[2659]);
+initDVPENINC2(s[2660]);
+initASAF1T(s[2661]);
+initTOPDVDBOPEN1T(s[2662]);
+initBOTDVDBOPEN1T(s[2663]);
+initDVDBOPEN1T(s[2664]);
+initTOPDVDBOPEN2T(s[2665]);
+initBOTDVDBOPEN2T(s[2666]);
+initDVDBOPEN2T(s[2667]);
+initDVVALDBT(s[2668]);
+initTRUST(s[2669]);
+initFSACSH_I(s[2670]);
+initFSNUMIN_I(s[2671]);
+initFSINVAL_I(s[2672]);
+initFSSHVAL_I(s[2673]);
+initFSNUMSH_I(s[2674]);
+initFINVTY01_I(s[2675]);
+initFINVTY02_I(s[2676]);
+initFINVTY03_I(s[2677]);
+initFINVTY04_I(s[2678]);
+initFINVTY05_I(s[2679]);
+initFINVTY06_I(s[2680]);
+initFINVTY07_I(s[2681]);
+initFINVTY08_I(s[2682]);
+initFINVTY09_I(s[2683]);
+initFINVTY10_I(s[2684]);
+initFINVTY11_I(s[2685]);
+initFCACSH_I(s[2686]);
+initFCNUMSH_I(s[2687]);
+initFCNUMIN_I(s[2688]);
+initFCOVDSH_I(s[2689]);
+initFCOVNSH_I(s[2690]);
+initDCOSHV1_I(s[2691]);
+initDCOSHV2_I(s[2692]);
+initDCOSHV3_I(s[2693]);
+initFCSHVAL_I(s[2694]);
+initFCOVDIN_I(s[2695]);
+initFCOVNIN_I(s[2696]);
+initDCOINV1_I(s[2697]);
+initDCOINV2_I(s[2698]);
+initDCOINV3_I(s[2699]);
+initDCOINV4_I(s[2700]);
+initDCOINV5_I(s[2701]);
+initFCINVAL_I(s[2702]);
+initFISA1_I(s[2703]);
+initFISA2_I(s[2704]);
+initFCISAV_I(s[2705]);
+initFIISAV_I(s[2706]);
+initFKISAV_I(s[2707]);
+initFBONDV_I(s[2708]);
+initFCOLLV_I(s[2709]);
+initFESHA_I(s[2710]);
+initFESHAV_I(s[2711]);
+initFEOPTV_I(s[2712]);
+initFSHARE1_I(s[2713]);
+initFSHARE2_I(s[2714]);
+initFSHARE3_I(s[2715]);
+initFSHUKV_I(s[2716]);
+initFSHOSV_I(s[2717]);
+initFNSVAL1_I(s[2718]);
+initFGILTS1_I(s[2719]);
+initFGILTS2_I(s[2720]);
+initFGILTS3_I(s[2721]);
+initFGILTS4_I(s[2722]);
+initFGLTUKV_I(s[2723]);
+initFGLTFOV_I(s[2724]);
+initFINS_I(s[2725]);
+initFINSV_I(s[2726]);
+initFLPROD1_I(s[2727]);
+initFLPROD2_I(s[2728]);
+initFLPROD3_I(s[2729]);
+initFLPROD4_I(s[2730]);
+initFLFENV_I(s[2731]);
+initFLFSIV_I(s[2732]);
+initFLFFSV_I(s[2733]);
+initFLFTEV_I(s[2734]);
+initFINVOTV_I(s[2735]);
+initFSACSH_IFLAG(s[2736]);
+initFSNUMIN_IFLAG(s[2737]);
+initFSSHVAL_IFLAG(s[2738]);
+initFSINVAL_IFLAG(s[2739]);
+initFSNUMSH_IFLAG(s[2740]);
+initFINVTY01_IFLAG(s[2741]);
+initFINVTY02_IFLAG(s[2742]);
+initFINVTY03_IFLAG(s[2743]);
+initFINVTY04_IFLAG(s[2744]);
+initFINVTY05_IFLAG(s[2745]);
+initFINVTY06_IFLAG(s[2746]);
+initFINVTY07_IFLAG(s[2747]);
+initFINVTY08_IFLAG(s[2748]);
+initFINVTY09_IFLAG(s[2749]);
+initFINVTY10_IFLAG(s[2750]);
+initFINVTY11_IFLAG(s[2751]);
+initFCACSH_IFLAG(s[2752]);
+initFCNUMSH_IFLAG(s[2753]);
+initFCNUMIN_IFLAG(s[2754]);
+initFCOVDSH_IFLAG(s[2755]);
+initFCOVNSH_IFLAG(s[2756]);
+initDCOSHV1_IFLAG(s[2757]);
+initDCOSHV2_IFLAG(s[2758]);
+initDCOSHV3_IFLAG(s[2759]);
+initFCSHVAL_IFLAG(s[2760]);
+initFCOVDIN_IFLAG(s[2761]);
+initFCOVNIN_IFLAG(s[2762]);
+initDCOINV1_IFLAG(s[2763]);
+initDCOINV2_IFLAG(s[2764]);
+initDCOINV3_IFLAG(s[2765]);
+initDCOINV4_IFLAG(s[2766]);
+initDCOINV5_IFLAG(s[2767]);
+initFCINVAL_IFLAG(s[2768]);
+initFISA1_IFLAG(s[2769]);
+initFISA2_IFLAG(s[2770]);
+initFCISAV_IFLAG(s[2771]);
+initFIISAV_IFLAG(s[2772]);
+initFKISAV_IFLAG(s[2773]);
+initFBONDV_IFLAG(s[2774]);
+initFCOLLV_IFLAG(s[2775]);
+initFESHA_IFLAG(s[2776]);
+initFESHAV_IFLAG(s[2777]);
+initFEOPTV_IFLAG(s[2778]);
+initFSHARE1_IFLAG(s[2779]);
+initFSHARE2_IFLAG(s[2780]);
+initFSHARE3_IFLAG(s[2781]);
+initFSHUKV_IFLAG(s[2782]);
+initFSHOSV_IFLAG(s[2783]);
+initFNSVAL_IFLAG(s[2784]);
+initFGILTS1_IFLAG(s[2785]);
+initFGILTS2_IFLAG(s[2786]);
+initFGILTS3_IFLAG(s[2787]);
+initFGILTS4_IFLAG(s[2788]);
+initFGLTUKV_IFLAG(s[2789]);
+initFGLTFOV_IFLAG(s[2790]);
+initFINS_IFLAG(s[2791]);
+initFINSV_IFLAG(s[2792]);
+initFLPROD1_IFLAG(s[2793]);
+initFLPROD2_IFLAG(s[2794]);
+initFLPROD3_IFLAG(s[2795]);
+initFLPROD4_IFLAG(s[2796]);
+initFLFENV_IFLAG(s[2797]);
+initFLFSIV_IFLAG(s[2798]);
+initFLFFSV_IFLAG(s[2799]);
+initFLFTEV_IFLAG(s[2800]);
+initFINVOTV_IFLAG(s[2801]);
+initPEVERC_I(s[2802]);
+initPEVERC_IFLAG(s[2803]);
+initPEVERNC_I(s[2804]);
+initPEVERNC_IFLAG(s[2805]);
+initPRETAIN_I(s[2806]);
+initPRETAIN_IFLAG(s[2807]);
+initPFNUM_I(s[2808]);
+initPFNUM_IFLAG(s[2809]);
+initPFNEW_I(s[2810]);
+initPFNEW_IFLAG(s[2811]);
+initPFNEWNO_I(s[2812]);
+initPFNEWNO_IFLAG(s[2813]);
+initALLRET_I(s[2814]);
+initPFTYP1_I(s[2815]);
+initPFTYP1_IFLAG(s[2816]);
+initPFTYP2_I(s[2817]);
+initPFTYP2_IFLAG(s[2818]);
+initPFTYP3_I(s[2819]);
+initPFTYP3_IFLAG(s[2820]);
+initPFTYP4_I(s[2821]);
+initPFTYP4_IFLAG(s[2822]);
+initPFTYP5_I(s[2823]);
+initPFTYP5_IFLAG(s[2824]);
+initPFTYP6_I(s[2825]);
+initPFTYP6_IFLAG(s[2826]);
+initPFOCTY1_I(s[2827]);
+initPFOCTY1_IFLAG(s[2828]);
+initPFOCTY2_I(s[2829]);
+initPFOCTY2_IFLAG(s[2830]);
+initPFOCTY3_I(s[2831]);
+initPFOCTY3_IFLAG(s[2832]);
+initPFOCTY4_I(s[2833]);
+initPFOCTY4_IFLAG(s[2834]);
+initPFOCTY5_I(s[2835]);
+initPFOCTY5_IFLAG(s[2836]);
+initPFOCTY6_I(s[2837]);
+initPFOCTY6_IFLAG(s[2838]);
+initPFLUM1_I(s[2839]);
+initPFLUM1_IFLAG(s[2840]);
+initPFLUM2_I(s[2841]);
+initPFLUM2_IFLAG(s[2842]);
+initPFLUM3_I(s[2843]);
+initPFLUM3_IFLAG(s[2844]);
+initPFLUM4_I(s[2845]);
+initPFLUM4_IFLAG(s[2846]);
+initPFLUM5_I(s[2847]);
+initPFLUM5_IFLAG(s[2848]);
+initPFLUM6_I(s[2849]);
+initPFLUM6_IFLAG(s[2850]);
+initPFLUMALL1_I(s[2851]);
+initPFLUMALL1_IFLAG(s[2852]);
+initPFLUMALL2_I(s[2853]);
+initPFLUMALL2_IFLAG(s[2854]);
+initPFLUMALL3_I(s[2855]);
+initPFLUMALL3_IFLAG(s[2856]);
+initPFLUMALL4_I(s[2857]);
+initPFLUMALL4_IFLAG(s[2858]);
+initPFLUMALL5_I(s[2859]);
+initPFLUMALL5_IFLAG(s[2860]);
+initPFLUMALL6_I(s[2861]);
+initPFLUMALL6_IFLAG(s[2862]);
+initPFCASH1_I(s[2863]);
+initPFCASH1_IFLAG(s[2864]);
+initPFCASH2_I(s[2865]);
+initPFCASH2_IFLAG(s[2866]);
+initPFCASH3_I(s[2867]);
+initPFCASH3_IFLAG(s[2868]);
+initPFCASH4_I(s[2869]);
+initPFCASH4_IFLAG(s[2870]);
+initPFCASH5_I(s[2871]);
+initPFCASH5_IFLAG(s[2872]);
+initPFCASH6_I(s[2873]);
+initPFCASH6_IFLAG(s[2874]);
+initPFREM1_I(s[2875]);
+initPFREM1_IFLAG(s[2876]);
+initPFREM2_I(s[2877]);
+initPFREM2_IFLAG(s[2878]);
+initPFREM3_I(s[2879]);
+initPFREM3_IFLAG(s[2880]);
+initPFREM4_I(s[2881]);
+initPFREM4_IFLAG(s[2882]);
+initPFREM5_I(s[2883]);
+initPFREM5_IFLAG(s[2884]);
+initPFREM6_I(s[2885]);
+initPFREM6_IFLAG(s[2886]);
+initPFREC1_I(s[2887]);
+initPFREC1_IFLAG(s[2888]);
+initPFREC2_I(s[2889]);
+initPFREC2_IFLAG(s[2890]);
+initPFREC3_I(s[2891]);
+initPFREC3_IFLAG(s[2892]);
+initPFREC4_I(s[2893]);
+initPFREC4_IFLAG(s[2894]);
+initPFREC5_I(s[2895]);
+initPFREC5_IFLAG(s[2896]);
+initPFREC6_I(s[2897]);
+initPFREC6_IFLAG(s[2898]);
+initPFDRAW1_I(s[2899]);
+initPFDRAW1_IFLAG(s[2900]);
+initPFDRAW2_I(s[2901]);
+initPFDRAW2_IFLAG(s[2902]);
+initPFDRAW3_I(s[2903]);
+initPFDRAW3_IFLAG(s[2904]);
+initPFDRAW4_I(s[2905]);
+initPFDRAW4_IFLAG(s[2906]);
+initPFDRAW5_I(s[2907]);
+initPFDRAW5_IFLAG(s[2908]);
+initPFDRAW6_I(s[2909]);
+initPFDRAW6_IFLAG(s[2910]);
+initPFLUMV1_IFLAG(s[2911]);
+initPFLUMV2_IFLAG(s[2912]);
+initPFLUMV3_IFLAG(s[2913]);
+initPFLUMV4_IFLAG(s[2914]);
+initPFLUMV5_IFLAG(s[2915]);
+initPFLUMV6_IFLAG(s[2916]);
+initPFINCP1_I(s[2917]);
+initPFINCP1_IFLAG(s[2918]);
+initPFINCP2_I(s[2919]);
+initPFINCP2_IFLAG(s[2920]);
+initPFINCP3_I(s[2921]);
+initPFINCP3_IFLAG(s[2922]);
+initPFINCP4_I(s[2923]);
+initPFINCP4_IFLAG(s[2924]);
+initPFINCP5_I(s[2925]);
+initPFINCP5_IFLAG(s[2926]);
+initPFINCP6_I(s[2927]);
+initPFINCP6_IFLAG(s[2928]);
+initPFINCA1_I(s[2929]);
+initPFINCA1_IFLAG(s[2930]);
+initPFINCA2_I(s[2931]);
+initPFINCA2_IFLAG(s[2932]);
+initPFINCA3_I(s[2933]);
+initPFINCA3_IFLAG(s[2934]);
+initPFINCA4_I(s[2935]);
+initPFINCA4_IFLAG(s[2936]);
+initPFINCA5_I(s[2937]);
+initPFINCA5_IFLAG(s[2938]);
+initPFINCA6_I(s[2939]);
+initPFINCA6_IFLAG(s[2940]);
+initOTHSRC1_I(s[2941]);
+initOTHSRC1_IFLAG(s[2942]);
+initOTHSRC2_I(s[2943]);
+initOTHSRC2_IFLAG(s[2944]);
+initOTHSRC3_I(s[2945]);
+initOTHSRC3_IFLAG(s[2946]);
+initOTHSRC4_I(s[2947]);
+initOTHSRC4_IFLAG(s[2948]);
+initOTHSRC5_I(s[2949]);
+initOTHSRC5_IFLAG(s[2950]);
+initPSPEXPH_I(s[2951]);
+initPSPEXPH_IFLAG(s[2952]);
+initPSPSE_I(s[2953]);
+initPSPSE_IFLAG(s[2954]);
+initPWEXPH_I(s[2955]);
+initPWEXPH_IFLAG(s[2956]);
+initPWIDFUT_I(s[2957]);
+initPWIDFUT_IFLAG(s[2958]);
+initXMARSTA_I(s[2959]);
+initXMARSTA_IFLAG(s[2960]);
+initMARBEF_I(s[2961]);
+initMARBEF_IFLAG(s[2962]);
+initPWEXPA_I(s[2963]);
+initPWEXPA_IFLAG(s[2964]);
+initPSPEXPA_I(s[2965]);
+initPSPEXPA_IFLAG(s[2966]);
+initAGEASAF1(s[2967]);
+initSPASAF_IORIG(s[2968]);
+initPINCINP(s[2969]);
+initPFCURV1_IFLAG(s[2970]);
+initPFCURV2_IFLAG(s[2971]);
+initPFCURV3_IFLAG(s[2972]);
+initPFCURV4_IFLAG(s[2973]);
+initPFCURV5_IFLAG(s[2974]);
+initPFCURV6_IFLAG(s[2975]);
+initPFDDV1_I(s[2976]);
+initPFDDV1_IFLAG(s[2977]);
+initPFDDV2_I(s[2978]);
+initPFDDV2_IFLAG(s[2979]);
+initPFDDV3_I(s[2980]);
+initPFDDV3_IFLAG(s[2981]);
+initPFDDV4_I(s[2982]);
+initPFDDV4_IFLAG(s[2983]);
+initPFDDV5_I(s[2984]);
+initPFDDV5_IFLAG(s[2985]);
+initPFDDV6_I(s[2986]);
+initPFDDV6_IFLAG(s[2987]);
+initDVHSIZE(s[2988]);
+initPINC(s[2989]);
+initHASSHAC(s[2990]);
+initCACRNUM(s[2991]);
+initDVSHCVAL(s[2992]);
+initCAODNUM(s[2993]);
+initDVSHODVAL(s[2994]);
+initDVSHODVAL2(s[2995]);
+initDVSHODVAL3(s[2996]);
+initDVFCINVAL(s[2997]);
+initDVCOINV(s[2998]);
+initDVCOINV2(s[2999]);
+initDVCOINV3(s[3000]);
+initDVCOINV4(s[3001]);
+initDVCOINV5(s[3002]);
+initDVCACRVAL_SUM(s[3003]);
+initDVCAODVAL_SUM(s[3004]);
+initDVCAVAL_SUM(s[3005]);
+initDLANY_I(s[3006]);
+initDLNUM_I(s[3007]);
+initDLTYPE1_I(s[3008]);
+initDLTYPE2_I(s[3009]);
+initDLTYPE3_I(s[3010]);
+initDLTYPE4_I(s[3011]);
+initDLTYPE5_I(s[3012]);
+initDLINS1_I(s[3013]);
+initDLINS2_I(s[3014]);
+initDLINS3_I(s[3015]);
+initDLINS4_I(s[3016]);
+initDLINS5_I(s[3017]);
+initDLOFT1_I(s[3018]);
+initDLOFT2_I(s[3019]);
+initDLOFT3_I(s[3020]);
+initDLOFT4_I(s[3021]);
+initDLOFT5_I(s[3022]);
+initDLWHNY1_I(s[3023]);
+initDLWHNY2_I(s[3024]);
+initDLWHNY3_I(s[3025]);
+initDLWHNY4_I(s[3026]);
+initDLWHNY5_I(s[3027]);
+initDLWHNM1_I(s[3028]);
+initDLWHNM2_I(s[3029]);
+initDLWHNM3_I(s[3030]);
+initDLWHNM4_I(s[3031]);
+initDLWHNM5_I(s[3032]);
+initDSLAMT1_I(s[3033]);
+initDSLAMT2_I(s[3034]);
+initDSLAMT3_I(s[3035]);
+initDSLAMT4_I(s[3036]);
+initDSLAMT5_I(s[3037]);
+initNWLN_I(s[3038]);
+initNWLN_IFLAG(s[3039]);
+initNWLNNO_I(s[3040]);
+initDTLTYPE1_I(s[3041]);
+initDTLTYPE2_I(s[3042]);
+initDTLTYPE3_I(s[3043]);
+initDTLTYPE4_I(s[3044]);
+initDTLTYPE5_I(s[3045]);
+initDTLOWE1_I(s[3046]);
+initDTLOWE2_I(s[3047]);
+initDTLOWE3_I(s[3048]);
+initDTLOWE4_I(s[3049]);
+initDTLOWE5_I(s[3050]);
+initDLBEH1_I(s[3051]);
+initDLBEH2_I(s[3052]);
+initDLBEH3_I(s[3053]);
+initDLBEH4_I(s[3054]);
+initDLBEH5_I(s[3055]);
+initDLOWE1_I(s[3056]);
+initDLOWE2_I(s[3057]);
+initDLOWE3_I(s[3058]);
+initDLOWE4_I(s[3059]);
+initDLOWE5_I(s[3060]);
+initDLANY_IFLAG(s[3061]);
+initDLNUM_IFLAG(s[3062]);
+initDLTYPE1_IFLAG(s[3063]);
+initDLTYPE2_IFLAG(s[3064]);
+initDLTYPE3_IFLAG(s[3065]);
+initDLTYPE4_IFLAG(s[3066]);
+initDLTYPE5_IFLAG(s[3067]);
+initDLINS1_IFLAG(s[3068]);
+initDLINS2_IFLAG(s[3069]);
+initDLINS3_IFLAG(s[3070]);
+initDLINS4_IFLAG(s[3071]);
+initDLINS5_IFLAG(s[3072]);
+initDLOFT1_IFLAG(s[3073]);
+initDLOFT2_IFLAG(s[3074]);
+initDLOFT3_IFLAG(s[3075]);
+initDLOFT4_IFLAG(s[3076]);
+initDLOFT5_IFLAG(s[3077]);
+initDLWHNY1_IFLAG(s[3078]);
+initDLWHNY2_IFLAG(s[3079]);
+initDLWHNY3_IFLAG(s[3080]);
+initDLWHNY4_IFLAG(s[3081]);
+initDLWHNY5_IFLAG(s[3082]);
+initDLWHNM1_IFLAG(s[3083]);
+initDLWHNM2_IFLAG(s[3084]);
+initDLWHNM3_IFLAG(s[3085]);
+initDLWHNM4_IFLAG(s[3086]);
+initDLWHNM5_IFLAG(s[3087]);
+initDSLAMT1_IFLAG(s[3088]);
+initDSLAMT2_IFLAG(s[3089]);
+initDSLAMT3_IFLAG(s[3090]);
+initDSLAMT4_IFLAG(s[3091]);
+initDSLAMT5_IFLAG(s[3092]);
+initNWLNNO_IFLAG(s[3093]);
+initDTLTYPE1_IFLAG(s[3094]);
+initDTLTYPE2_IFLAG(s[3095]);
+initDTLTYPE3_IFLAG(s[3096]);
+initDTLTYPE4_IFLAG(s[3097]);
+initDTLTYPE5_IFLAG(s[3098]);
+initDTLOWE1_IFLAG(s[3099]);
+initDTLOWE2_IFLAG(s[3100]);
+initDTLOWE3_IFLAG(s[3101]);
+initDTLOWE4_IFLAG(s[3102]);
+initDTLOWE5_IFLAG(s[3103]);
+initDLBEH1_IFLAG(s[3104]);
+initDLBEH2_IFLAG(s[3105]);
+initDLBEH3_IFLAG(s[3106]);
+initDLBEH4_IFLAG(s[3107]);
+initDLBEH5_IFLAG(s[3108]);
+initDLOWE1_IFLAG(s[3109]);
+initDLOWE2_IFLAG(s[3110]);
+initDLOWE3_IFLAG(s[3111]);
+initDLOWE4_IFLAG(s[3112]);
+initDLOWE5_IFLAG(s[3113]);
+initDHBANY01_I(s[3114]);
+initDHBANY02_I(s[3115]);
+initDHBANY03_I(s[3116]);
+initDHBANY04_I(s[3117]);
+initDHBANY05_I(s[3118]);
+initDHBANY06_I(s[3119]);
+initDHBANY07_I(s[3120]);
+initDHBANY08_I(s[3121]);
+initDHBANY09_I(s[3122]);
+initDHBANY10_I(s[3123]);
+initDHBANY11_I(s[3124]);
+initDHBAMT01_I(s[3125]);
+initDHBAMT02_I(s[3126]);
+initDHBAMT03_I(s[3127]);
+initDHBAMT04_I(s[3128]);
+initDHBAMT05_I(s[3129]);
+initDHBAMT06_I(s[3130]);
+initDHBAMT07_I(s[3131]);
+initDHBAMT08_I(s[3132]);
+initDHBAMT09_I(s[3133]);
+initDHBAMT10_I(s[3134]);
+initDHBAMT11_I(s[3135]);
+initCACTF_I(s[3136]);
+initCASAV_I(s[3137]);
+initCACTV_I(s[3138]);
+initCASVV_I(s[3139]);
+initFINFSAV1_I(s[3140]);
+initFINFSAV2_I(s[3141]);
+initFINFSAV3_I(s[3142]);
+initFINFSAV4_I(s[3143]);
+initFINFLV_I(s[3144]);
+initFINFV_I(s[3145]);
+initDHBANY01_IFLAG(s[3146]);
+initDHBANY02_IFLAG(s[3147]);
+initDHBANY03_IFLAG(s[3148]);
+initDHBANY04_IFLAG(s[3149]);
+initDHBANY05_IFLAG(s[3150]);
+initDHBANY06_IFLAG(s[3151]);
+initDHBANY07_IFLAG(s[3152]);
+initDHBANY08_IFLAG(s[3153]);
+initDHBANY09_IFLAG(s[3154]);
+initDHBANY10_IFLAG(s[3155]);
+initDHBANY11_IFLAG(s[3156]);
+initDHBAMT01_IFLAG(s[3157]);
+initDHBAMT02_IFLAG(s[3158]);
+initDHBAMT03_IFLAG(s[3159]);
+initDHBAMT04_IFLAG(s[3160]);
+initDHBAMT05_IFLAG(s[3161]);
+initDHBAMT06_IFLAG(s[3162]);
+initDHBAMT07_IFLAG(s[3163]);
+initDHBAMT08_IFLAG(s[3164]);
+initDHBAMT09_IFLAG(s[3165]);
+initDHBAMT10_IFLAG(s[3166]);
+initDHBAMT11_IFLAG(s[3167]);
+initCACTF_IFLAG(s[3168]);
+initCASAV_IFLAG(s[3169]);
+initCACTV_IFLAG(s[3170]);
+initCASVV_IFLAG(s[3171]);
+initFINFSAV1_IFLAG(s[3172]);
+initFINFSAV2_IFLAG(s[3173]);
+initFINFSAV3_IFLAG(s[3174]);
+initFINFSAV4_IFLAG(s[3175]);
+initFINFLV_IFLAG(s[3176]);
+initFINFV_IFLAG(s[3177]);
+initDVHASSAVDEP(s[3178]);
+initDVHASSHSAC(s[3179]);
+initSAVNUM(s[3180]);
+initDVSHSVAL(s[3181]);
+initDVFSINVAL(s[3182]);
+initDVSAVAL_SUM(s[3183]);
+initDVELARR(s[3184]);
+initDVGASARR(s[3185]);
+initDVCTARR(s[3186]);
+initDVTELARR(s[3187]);
+initDVWATARR(s[3188]);
+initDVRNTARR(s[3189]);
+initDVCHMARR(s[3190]);
+initDVCRTARR(s[3191]);
+initDVTAXARR(s[3192]);
+initDVVATARR(s[3193]);
+initDVOTHARR(s[3194]);
+initDVANYARR(s[3195]);
+initTOTBILLARR_SUM(s[3196]);
+initDVHASISA(s[3197]);
+initDVHASBOND(s[3198]);
+initDVHASUTRUST(s[3199]);
+initDVHASEMPSH(s[3200]);
+initDVHASOTHSH(s[3201]);
+initDVHASNSP(s[3202]);
+initDVHASGILT(s[3203]);
+initDVHASLINS(s[3204]);
+initDVHASOINV(s[3205]);
+initDVHASNOFA(s[3206]);
+initDVCISAV(s[3207]);
+initDVIISAV(s[3208]);
+initDVKISAV(s[3209]);
+initDVFNSVAL(s[3210]);
+initDVFSHUKV(s[3211]);
+initDVFLFENV(s[3212]);
+initDVFLFSIV(s[3213]);
+initDVFLFFSV(s[3214]);
+initDVFLFTEV(s[3215]);
+initDVFBONDV(s[3216]);
+initDVFEOPTV(s[3217]);
+initDVFESHAV(s[3218]);
+initDVFCOLLV(s[3219]);
+initDVFSHOSV(s[3220]);
+initDVFGLTUKV(s[3221]);
+initDVFGLTFOV(s[3222]);
+initDVFINVOTV(s[3223]);
+initDVFINFLV(s[3224]);
+initDVFINFV(s[3225]);
+initDVCACTV(s[3226]);
+initDVCASVV(s[3227]);
+initDVISAVAL_SUM(s[3228]);
+initDVINSV_SUM(s[3229]);
+initDVFESHARES_SUM(s[3230]);
+initDVFINFVAL_SUM(s[3231]);
+initNWFLNVAL1(s[3232]);
+initNWILNVAL1(s[3233]);
+initNWFLNVAL2(s[3234]);
+initNWILNVAL2(s[3235]);
+initNWFLNVAL3(s[3236]);
+initNWILNVAL3(s[3237]);
+initDVNWFLN_SUM(s[3238]);
+initDVNWILN_SUM(s[3239]);
+initLNYR1(s[3240]);
+initLNMN1(s[3241]);
+initLNLFT1(s[3242]);
+initLNYR2(s[3243]);
+initLNMN2(s[3244]);
+initLNLFT2(s[3245]);
+initLNYR3(s[3246]);
+initLNMN3(s[3247]);
+initLNLFT3(s[3248]);
+initLNYR4(s[3249]);
+initLNMN4(s[3250]);
+initLNLFT4(s[3251]);
+initLNYR5(s[3252]);
+initLNMN5(s[3253]);
+initLNLFT5(s[3254]);
+initLNOS1(s[3255]);
+initLNOS2(s[3256]);
+initLNOS3(s[3257]);
+initLNOS4(s[3258]);
+initLNOS5(s[3259]);
+initFLNOS1(s[3260]);
+initFLNOS2(s[3261]);
+initFLNOS3(s[3262]);
+initFLNOS4(s[3263]);
+initFLNOS5(s[3264]);
+initDVHASLF(s[3265]);
+initDVHASPLINF(s[3266]);
+initDVHASSL(s[3267]);
+initDVDLOWE1(s[3268]);
+initDVDLOWE2(s[3269]);
+initDVDLOWE3(s[3270]);
+initDVDLOWE4(s[3271]);
+initDVDLOWE5(s[3272]);
+initLNARR_SUM(s[3273]);
+initDVHASLNAR(s[3274]);
+initDMOANY_I(s[3275]);
+initDMONUM_I(s[3276]);
+initDMOINS1_I(s[3277]);
+initDMOINS2_I(s[3278]);
+initDMOINS3_I(s[3279]);
+initDMOINS4_I(s[3280]);
+initDMOINS5_I(s[3281]);
+initDMOOFT1_I(s[3282]);
+initDMOOFT2_I(s[3283]);
+initDMOOFT3_I(s[3284]);
+initDMOOFT4_I(s[3285]);
+initDMOOFT5_I(s[3286]);
+initDMOWHNY1_I(s[3287]);
+initDMOWHNY2_I(s[3288]);
+initDMOWHNY3_I(s[3289]);
+initDMOWHNY4_I(s[3290]);
+initDMOWHNY5_I(s[3291]);
+initDMOWHNM1_I(s[3292]);
+initDMOWHNM2_I(s[3293]);
+initDMOWHNM3_I(s[3294]);
+initDMOWHNM4_I(s[3295]);
+initDMOWHNM5_I(s[3296]);
+initDMOBEH1_I(s[3297]);
+initDMOBEH2_I(s[3298]);
+initDMOBEH3_I(s[3299]);
+initDMOBEH4_I(s[3300]);
+initDMOBEH5_I(s[3301]);
+initDMOOWE1_I(s[3302]);
+initDMOOWE2_I(s[3303]);
+initDMOOWE3_I(s[3304]);
+initDMOOWE4_I(s[3305]);
+initDMOOWE5_I(s[3306]);
+initDMOANY_IFLAG(s[3307]);
+initDMONUM_IFLAG(s[3308]);
+initDMOINS1_IFLAG(s[3309]);
+initDMOINS2_IFLAG(s[3310]);
+initDMOINS3_IFLAG(s[3311]);
+initDMOINS4_IFLAG(s[3312]);
+initDMOINS5_IFLAG(s[3313]);
+initDMOOFT1_IFLAG(s[3314]);
+initDMOOFT2_IFLAG(s[3315]);
+initDMOOFT3_IFLAG(s[3316]);
+initDMOOFT4_IFLAG(s[3317]);
+initDMOOFT5_IFLAG(s[3318]);
+initDMOWHNY1_IFLAG(s[3319]);
+initDMOWHNY2_IFLAG(s[3320]);
+initDMOWHNY3_IFLAG(s[3321]);
+initDMOWHNY4_IFLAG(s[3322]);
+initDMOWHNY5_IFLAG(s[3323]);
+initDMOWHNM1_IFLAG(s[3324]);
+initDMOWHNM2_IFLAG(s[3325]);
+initDMOWHNM3_IFLAG(s[3326]);
+initDMOWHNM4_IFLAG(s[3327]);
+initDMOWHNM5_IFLAG(s[3328]);
+initDMOBEH1_IFLAG(s[3329]);
+initDMOBEH2_IFLAG(s[3330]);
+initDMOBEH3_IFLAG(s[3331]);
+initDMOBEH4_IFLAG(s[3332]);
+initDMOBEH5_IFLAG(s[3333]);
+initDMOOWE1_IFLAG(s[3334]);
+initDMOOWE2_IFLAG(s[3335]);
+initDMOOWE3_IFLAG(s[3336]);
+initDMOOWE4_IFLAG(s[3337]);
+initDMOOWE5_IFLAG(s[3338]);
+initMOLFT1(s[3339]);
+initNYR1(s[3340]);
+initNMN1(s[3341]);
+initMOLFT2(s[3342]);
+initNYR2(s[3343]);
+initNMN2(s[3344]);
+initMOLFT3(s[3345]);
+initNYR3(s[3346]);
+initNMN3(s[3347]);
+initMOLFT4(s[3348]);
+initNYR4(s[3349]);
+initNMN4(s[3350]);
+initMOLFT5(s[3351]);
+initNYR5(s[3352]);
+initNMN5(s[3353]);
+initMOOS1(s[3354]);
+initMOOS2(s[3355]);
+initMOOS3(s[3356]);
+initMOOS4(s[3357]);
+initMOOS5(s[3358]);
+initTOTMO_SUM(s[3359]);
+initDVDMOOWE1(s[3360]);
+initDVDMOOWE2(s[3361]);
+initDVDMOOWE3(s[3362]);
+initDVDMOOWE4(s[3363]);
+initDVDMOOWE5(s[3364]);
+initMOARR_SUM(s[3365]);
+initDVHASMOAR(s[3366]);
+initPFLUMV1_I(s[3367]);
+initPFLUMV2_I(s[3368]);
+initPFLUMV3_I(s[3369]);
+initPFLUMV4_I(s[3370]);
+initPFLUMV5_I(s[3371]);
+initPFLUMV6_I(s[3372]);
+initPFCURV1_I(s[3373]);
+initPFCURV2_I(s[3374]);
+initPFCURV3_I(s[3375]);
+initPFCURV4_I(s[3376]);
+initPFCURV5_I(s[3377]);
+initPFCURV6_I(s[3378]);
+initCCAC1_I(s[3379]);
+initDCAMOS1_I(s[3380]);
+initCCAC2_I(s[3381]);
+initDCAMOS2_I(s[3382]);
+initCCAC3_I(s[3383]);
+initDCAMOS3_I(s[3384]);
+initCCAC4_I(s[3385]);
+initDCAMOS4_I(s[3386]);
+initCCAC5_I(s[3387]);
+initDCAMOS5_I(s[3388]);
+initSCAC1_I(s[3389]);
+initDSAMOS1_I(s[3390]);
+initSCAC2_I(s[3391]);
+initDSAMOS2_I(s[3392]);
+initSCAC3_I(s[3393]);
+initDSAMOS3_I(s[3394]);
+initSCAC4_I(s[3395]);
+initDSAMOS4_I(s[3396]);
+initSCAC5_I(s[3397]);
+initDSAMOS5_I(s[3398]);
+initTOTSC_SUM(s[3399]);
+initDVHASSC(s[3400]);
+initTOTCC_SUM(s[3401]);
+initDVHASCC(s[3402]);
+initOSLC1(s[3403]);
+initOSLC2(s[3404]);
+initOSLC3(s[3405]);
+initOSLC4(s[3406]);
+initNSLC1(s[3407]);
+initNSLC2(s[3408]);
+initNSLC3(s[3409]);
+initOSLBNK1(s[3410]);
+initOSLBNK2(s[3411]);
+initOSLBNK3(s[3412]);
+initNSLBNK1(s[3413]);
+initNSLBNK2(s[3414]);
+initNSLBNK3(s[3415]);
+initTOTSLC_SUM(s[3416]);
+initTOTSLBNK_SUM(s[3417]);
+initDVHASSLC(s[3418]);
+initDVHASSLBNK(s[3419]);
+initDHPBEH1_I(s[3420]);
+initDHPBEH2_I(s[3421]);
+initDHPBEH3_I(s[3422]);
+initDHPBEH4_I(s[3423]);
+initDHPBEH5_I(s[3424]);
+initDHPOWE1_I(s[3425]);
+initDHPOWE2_I(s[3426]);
+initDHPOWE3_I(s[3427]);
+initDHPOWE4_I(s[3428]);
+initDHPOWE5_I(s[3429]);
+initDHPANY1_I(s[3430]);
+initDHPANY2_I(s[3431]);
+initDHPANY3_I(s[3432]);
+initDHPNUM_I(s[3433]);
+initDHPOFT1_I(s[3434]);
+initDHPOFT2_I(s[3435]);
+initDHPOFT3_I(s[3436]);
+initDHPOFT4_I(s[3437]);
+initDHPOFT5_I(s[3438]);
+initDHPINS1_I(s[3439]);
+initDHPINS2_I(s[3440]);
+initDHPINS3_I(s[3441]);
+initDHPINS4_I(s[3442]);
+initDHPINS5_I(s[3443]);
+initDHPWHNY1_I(s[3444]);
+initDHPWHNM1_I(s[3445]);
+initDHPWHNY2_I(s[3446]);
+initDHPWHNM2_I(s[3447]);
+initDHPWHNY3_I(s[3448]);
+initDHPWHNM3_I(s[3449]);
+initDHPWHNY4_I(s[3450]);
+initDHPWHNM4_I(s[3451]);
+initDHPWHNY5_I(s[3452]);
+initDHPWHNM5_I(s[3453]);
+initDHPBEH1_IFLAG(s[3454]);
+initDHPBEH2_IFLAG(s[3455]);
+initDHPBEH3_IFLAG(s[3456]);
+initDHPBEH4_IFLAG(s[3457]);
+initDHPBEH5_IFLAG(s[3458]);
+initDHPOWE1_IFLAG(s[3459]);
+initDHPOWE2_IFLAG(s[3460]);
+initDHPOWE3_IFLAG(s[3461]);
+initDHPOWE4_IFLAG(s[3462]);
+initDHPOWE5_IFLAG(s[3463]);
+initDHPANY1_IFLAG(s[3464]);
+initDHPANY2_IFLAG(s[3465]);
+initDHPANY3_IFLAG(s[3466]);
+initDHPNUM_IFLAG(s[3467]);
+initDHPOFT1_IFLAG(s[3468]);
+initDHPOFT2_IFLAG(s[3469]);
+initDHPOFT3_IFLAG(s[3470]);
+initDHPOFT4_IFLAG(s[3471]);
+initDHPOFT5_IFLAG(s[3472]);
+initDHPINS1_IFLAG(s[3473]);
+initDHPINS2_IFLAG(s[3474]);
+initDHPINS3_IFLAG(s[3475]);
+initDHPINS4_IFLAG(s[3476]);
+initDHPINS5_IFLAG(s[3477]);
+initDHPWHNY1_IFLAG(s[3478]);
+initDHPWHNM1_IFLAG(s[3479]);
+initDHPWHNY2_IFLAG(s[3480]);
+initDHPWHNM2_IFLAG(s[3481]);
+initDHPWHNY3_IFLAG(s[3482]);
+initDHPWHNM3_IFLAG(s[3483]);
+initDHPWHNY4_IFLAG(s[3484]);
+initDHPWHNM4_IFLAG(s[3485]);
+initDHPWHNY5_IFLAG(s[3486]);
+initDHPWHNM5_IFLAG(s[3487]);
+initDVMRDF(s[3488]);
+initDVDBLUMP1(s[3489]);
+initDVDBLUMP2(s[3490]);
+initDVDBLUMP3(s[3491]);
+initDVDBLUMP4(s[3492]);
+initDVDBLUMP5(s[3493]);
+initDVDBLUMP6(s[3494]);
+initDVDBINC1(s[3495]);
+initDVDBINC2(s[3496]);
+initDVDBINC3(s[3497]);
+initDVDBINC4(s[3498]);
+initDVDBINC5(s[3499]);
+initDVDBINC6(s[3500]);
+initDVHASPFD(s[3501]);
+initDVPFDDV(s[3502]);
+initHPNYR1(s[3503]);
+initHPNMN1(s[3504]);
+initHPLFT1(s[3505]);
+initHPNYR2(s[3506]);
+initHPNMN2(s[3507]);
+initHPLFT2(s[3508]);
+initHPNYR3(s[3509]);
+initHPNMN3(s[3510]);
+initHPLFT3(s[3511]);
+initHPNYR4(s[3512]);
+initHPNMN4(s[3513]);
+initHPLFT4(s[3514]);
+initHPNYR5(s[3515]);
+initHPNMN5(s[3516]);
+initHPLFT5(s[3517]);
+initHPOS1(s[3518]);
+initHPOS2(s[3519]);
+initHPOS3(s[3520]);
+initHPOS4(s[3521]);
+initHPOS5(s[3522]);
+initDVHASHP(s[3523]);
+initDVDHPOWE1(s[3524]);
+initDVDHPOWE2(s[3525]);
+initDVDHPOWE3(s[3526]);
+initDVDHPOWE4(s[3527]);
+initDVDHPOWE5(s[3528]);
+initHPARR_SUM(s[3529]);
+initDVHPAR(s[3530]);
+initNWHPVAL1(s[3531]);
+initNWHPVAL2(s[3532]);
+initNWHPVAL3(s[3533]);
+initDVNWHP_SUM(s[3534]);
+initDVHASNHP(s[3535]);
+initTOTNSLC_SUM(s[3536]);
+initTOTNSLBNK_SUM(s[3537]);
+initTOTOSLC_SUM(s[3538]);
+initTOTOSLBNK_SUM(s[3539]);
+initEMPSTAT2(s[3540]);
+initTOTNLOS_SUM(s[3541]);
+initTOTARR_EXCMORT_SUM(s[3542]);
+initHFINW_EXCENDW_SUM(s[3543]);
+initDVFFASSETS_SUM(s[3544]);
+initDVGRSBONAMT(s[3545]);
+initDVHASNLF(s[3546]);
+initDVHASNLI(s[3547]);
+initDVSEPANNUAL09(s[3548]);
+initDVSEPANNUAL10(s[3549]);
+initDVSEPANNUAL11(s[3550]);
+initDVSEPANNUAL12(s[3551]);
+initDVSEPANNUAL13(s[3552]);
+initDVSEPANNUAL14(s[3553]);
+initDVSEPANNUAL15(s[3554]);
+initDVSEPANNUAL16(s[3555]);
+initDVSEPANNUAL17(s[3556]);
+initDVSEPANNUAL18(s[3557]);
+initDVSEPANNUAL19(s[3558]);
+initDVSEPANNUAL20(s[3559]);
+initDVNETPAY_I(s[3560]);
+initDVNETPAY_IFLAG(s[3561]);
+initDVGRSPAY_I(s[3562]);
+initDVGRSPAY_IFLAG(s[3563]);
+initSJOB2_I(s[3564]);
+initSJOB2_IFLAG(s[3565]);
+initSJEMP1_I(s[3566]);
+initSJEMP1_IFLAG(s[3567]);
+initDVNETEMPSECJOB_IFLAG(s[3568]);
+initDVGRSEMPSECJOB_IFLAG(s[3569]);
+initPAYBON_I(s[3570]);
+initPAYBON_IFLAG(s[3571]);
+initDVNETBONAMT_IFLAG(s[3572]);
+initDVGRSBONAMT_IFLAG(s[3573]);
+initDVSENETPAY_IFLAG(s[3574]);
+initDVSEGRSPAY_IFLAG(s[3575]);
+initDVGRSSESECJOB_IFLAG(s[3576]);
+initEDLEVEL(s[3577]);
+initDVOIGGTANNUAL(s[3578]);
+initFINCV_IFLAG(s[3579]);
+initRENTPAY_I(s[3580]);
+initRENTPAY_IFLAG(s[3581]);
+initDVRENTAMTANNUAL_IFLAG(s[3582]);
+initDVOINRRANNUAL_IFLAG(s[3583]);
+initDVOINGTANNUAL_IFLAG(s[3584]);
+initREGLRPY1_I(s[3585]);
+initREGLRPY2_I(s[3586]);
+initREGLRPY3_I(s[3587]);
+initREGLRPY4_I(s[3588]);
+initREGLRPY5_I(s[3589]);
+initREGLRPY1_IFLAG(s[3590]);
+initREGLRPY2_IFLAG(s[3591]);
+initREGLRPY3_IFLAG(s[3592]);
+initREGLRPY4_IFLAG(s[3593]);
+initREGLRPY5_IFLAG(s[3594]);
+initDVOINEGANNUAL_IFLAG(s[3595]);
+initDVOINFRANNUAL_IFLAG(s[3596]);
+initDVOINMAANNUAL_IFLAG(s[3597]);
+initDVOINROANNUAL_IFLAG(s[3598]);
+initDVOINOPANNUAL_IFLAG(s[3599]);
+initTOTLNS_SUM(s[3600]);
+initTOTFLNS_SUM(s[3601]);
+initTOTHP_SUM(s[3602]);
+initTOTLOS_SUM(s[3603]);
+initHFINL_SUM(s[3604]);
+initPOLUM1_I(s[3605]);
+initPOLUM1_IFLAG(s[3606]);
+initPOLUM2_I(s[3607]);
+initPOLUM2_IFLAG(s[3608]);
+initPOLMV1_I(s[3609]);
+initPOLMV1_IFLAG(s[3610]);
+initPPLUM1_I(s[3611]);
+initPPLUM1_IFLAG(s[3612]);
+initPPLUM2_I(s[3613]);
+initPPLUM2_IFLAG(s[3614]);
+initPPLUM3_I(s[3615]);
+initPPLUM3_IFLAG(s[3616]);
+initPPLMV1_I(s[3617]);
+initPPLMV1_IFLAG(s[3618]);
+initPPLMV2_I(s[3619]);
+initPPLMV2_IFLAG(s[3620]);
+initPPLMV3_I(s[3621]);
+initPPLMV3_IFLAG(s[3622]);
+initPFLMV1_I(s[3623]);
+initPFLMV1_IFLAG(s[3624]);
+initPFLMV2_I(s[3625]);
+initPFLMV2_IFLAG(s[3626]);
+initPFLMV3_I(s[3627]);
+initPFLMV3_IFLAG(s[3628]);
+initPFLMV4_I(s[3629]);
+initPFLMV4_IFLAG(s[3630]);
+initPFLMV5_I(s[3631]);
+initPFLMV5_IFLAG(s[3632]);
+initPFLMV6_I(s[3633]);
+initPFLMV6_IFLAG(s[3634]);
+initIHRECNT_I(s[3635]);
+initIHRECNT_IFLAG(s[3636]);
+initIHRCNUM_I(s[3637]);
+initIHRCNUM_IFLAG(s[3638]);
+initIVAL1_IFLAG(s[3639]);
+initIVAL2_I(s[3640]);
+initIVAL2_IFLAG(s[3641]);
+initIVAL3_I(s[3642]);
+initIVAL3_IFLAG(s[3643]);
+initILGIFT_I(s[3644]);
+initILGIFT_IFLAG(s[3645]);
+initIGIFVAL_IFLAG(s[3646]);
+initILUMTY1_I(s[3647]);
+initILUMTY2_I(s[3648]);
+initILUMTY3_I(s[3649]);
+initILUMTY4_I(s[3650]);
+initILUMTY5_I(s[3651]);
+initILUMTY6_I(s[3652]);
+initILUMTY7_I(s[3653]);
+initILUMTY1_IFLAG(s[3654]);
+initILUMTY2_IFLAG(s[3655]);
+initILUMTY3_IFLAG(s[3656]);
+initILUMTY4_IFLAG(s[3657]);
+initILUMTY5_IFLAG(s[3658]);
+initILUMTY6_IFLAG(s[3659]);
+initILUMTY7_IFLAG(s[3660]);
+initILIFB_I(s[3661]);
+initILIFB_IFLAG(s[3662]);
+initILIFE_IFLAG(s[3663]);
+initILUPP_I(s[3664]);
+initILUPP_IFLAG(s[3665]);
+initILACC_IFLAG(s[3666]);
+initILINS_IFLAG(s[3667]);
+initILRED_IFLAG(s[3668]);
+initILWIN_IFLAG(s[3669]);
+initILOTH_IFLAG(s[3670]);
+initNSSEC8(s[3671]);
+initAGMSAFT1(s[3672]);
+initAGMSAF2T(s[3673]);
+initMNTHSCAPE(s[3674]);
+initACCFRAC(s[3675]);
+initRETFRAC(s[3676]);
+initDVPINPVAL(s[3677]);
+initDVWID(s[3678]);
+initDVSPS(s[3679]);
+initDVSPEN(s[3680]);
+initDVDBINCALL(s[3681]);
+initDVVALPBLUM(s[3682]);
+initDVPFCURVAL(s[3683]);
+initDVDBRWEALTHVAL(s[3684]);
+initTOTPEN(s[3685]);
+initDVNIEMP(s[3686]);
+initCURRAC(s[3687]);
+initDVHASPFCUR(s[3688]);
+initDVHASDBR_ORIG(s[3689]);
+initDVHASPFOCC(s[3690]);
+initDVHASPFGRP(s[3691]);
+initDVHASPFPRIV(s[3692]);
+initDVHASPFSIPP(s[3693]);
+initDVHASPFRAC(s[3694]);
+initPOLMV2_IFLAG(s[3695]);
+initPOLMV2_I(s[3696]);
+initSCNDSCH(s[3697]);
+initRF(s[3698]);
+initRS(s[3699]);
+initSOA2(s[3700]);
+initSOA1(s[3701]);
+initWARDC91(s[3702]);
+initWARDO91(s[3703]);
+initWARD98(s[3704]);
+initSTATSWARD(s[3705]);
+initSATIS(s[3706]);
+initWORTH(s[3707]);
+initHAPPY(s[3708]);
+initANXIOUS(s[3709]);
+initISHRP(s[3710]);
+initISHRPPART(s[3711]);
+initHRPIOUT1(s[3712]);
+initHRPPARTIOUT1(s[3713]);
+initHRP_RESP(s[3714]);
+initHRPDVAGE(s[3715]);
+initHRPDVAGE9(s[3716]);
+initHRPSEX(s[3717]);
+initHRPNSSEC3(s[3718]);
+initHRPDVILO3A(s[3719]);
+initHRPDVMRDF(s[3720]);
+initHRPEDATTN1(s[3721]);
+initHRPEDATTN2(s[3722]);
+initHRPEDATTN3(s[3723]);
+initHRPEMPSTAT2(s[3724]);
+initHRPETHNIC(s[3725]);
+initBONTAX_I(s[3726]);
+initBONTAX_IFLAG(s[3727]);
+initPFEN_I(s[3728]);
+initPFEN_IFLAG(s[3729]);
+initPFENNUM_I(s[3730]);
+initPFENNUM_IFLAG(s[3731]);
+initILUMP_I(s[3732]);
+initILUMP_IFLAG(s[3733]);
+initCAJISA_I(s[3734]);
+initCAJISA_IFLAG(s[3735]);
+initDSLEST5_IFLAG(s[3736]);
+initDVCCARDYN_I(s[3737]);
+initDVCCARDYN_IFLAG(s[3738]);
+initDVCCARDNUM_I(s[3739]);
+initDVCCARDNUM_IFLAG(s[3740]);
+initCCAC1_IFLAG(s[3741]);
+initCCAC2_IFLAG(s[3742]);
+initCCAC3_IFLAG(s[3743]);
+initDCAMOS1_IFLAG(s[3744]);
+initDCAMOS2_IFLAG(s[3745]);
+initDCAMOS3_IFLAG(s[3746]);
+initDVSCARDYN_I(s[3747]);
+initDVSCARDYN_IFLAG(s[3748]);
+initDVSCARDNUM_I(s[3749]);
+initDVSCARDNUM_IFLAG(s[3750]);
+initSCAC1_IFLAG(s[3751]);
+initSCAC2_IFLAG(s[3752]);
+initSCAC3_IFLAG(s[3753]);
+initDSAMOS1_IFLAG(s[3754]);
+initDSAMOS2_IFLAG(s[3755]);
+initDSAMOS3_IFLAG(s[3756]);
+initDVOIGOEANNUAL_I(s[3757]);
+initDVOIGOEANNUAL_IFLAG(s[3758]);
+initDVOIGOSANNUAL_I(s[3759]);
+initDVOIGOSANNUAL_IFLAG(s[3760]);
+initDVOIGPPANNUAL_I(s[3761]);
+initDVOIGPPANNUAL_IFLAG(s[3762]);
+initCASEW3(s[3763]);
+initCASEW2(s[3764]);
+initCASEW1(s[3765]);
+initSOC2010(s[3766]);
+initSICCODE(s[3767]);
+initSOC2000(s[3768]);
+initDVSEPANNUAL01(s[3769]);
+initDVSEPANNUAL02(s[3770]);
+initDVSEPANNUAL03(s[3771]);
+initDVSEPANNUAL04(s[3772]);
+initDVSEPANNUAL05(s[3773]);
+initDVSEPANNUAL06(s[3774]);
+initDVSEPANNUAL07(s[3775]);
+initDVSEPANNUAL08(s[3776]);
+initDVSPECANNUAL01(s[3777]);
+initDVSPECANNUAL02(s[3778]);
+initDVSPECANNUAL03(s[3779]);
+initDVSPECANNUAL04(s[3780]);
+initDVSPECANNUAL05(s[3781]);
+initDVSPECANNUAL06(s[3782]);
+initDVSPECANNUAL07(s[3783]);
+initDVSPECANNUAL08(s[3784]);
+initDVSPECANNUAL09(s[3785]);
+initDVSPECANNUAL10(s[3786]);
+initDVTOTALLBENANNUAL(s[3787]);
+initDVTOTTAXANNUAL(s[3788]);
+initDVGIEMP(s[3789]);
+initDVGIPPEN(s[3790]);
+initDVGRSSESECJOB(s[3791]);
+initDVGRSSESECJOB_I(s[3792]);
+initDVNETRENTAMTANNUAL(s[3793]);
+initDVOIGROANNUAL_I(s[3794]);
+initDVBTOGANNUAL(s[3795]);
+initDVCTCANNUAL(s[3796]);
+initDVGIINV(s[3797]);
+initDVGISE(s[3798]);
+initDVGRSBONAMT_I(s[3799]);
+initDVGRSEMPSECJOB(s[3800]);
+initDVGRSEMPSECJOB_I(s[3801]);
+initDVGRSPAY(s[3802]);
+initDVRENTAMTANNUAL_I(s[3803]);
+initDVGRSRENTAMTANNUAL(s[3804]);
+initDVNETBONAMT(s[3805]);
+initDVNETBONAMT_I(s[3806]);
+initDVNETEMPSECJOB(s[3807]);
+initDVNETEMPSECJOB_I(s[3808]);
+initDVNETPAY(s[3809]);
+initDVNETSESECJOB(s[3810]);
+initDVNIINV(s[3811]);
+initDVNIPPEN(s[3812]);
+initDVNISE(s[3813]);
+initPARTGRSPAY(s[3814]);
+initTOTPARTGRSPAY(s[3815]);
+initDVOIGEGANNUAL_I(s[3816]);
+initDVOIGFRANNUAL_I(s[3817]);
+initDVOIGGTANNUAL_I(s[3818]);
+initDVOIGMAANNUAL_I(s[3819]);
+initDVOIGOPANNUAL_I(s[3820]);
+initDVOIGRRANNUAL(s[3821]);
+initDVOIGRRANNUAL_I(s[3822]);
+initDVOINEGANNUAL_I(s[3823]);
+initDVOINFRANNUAL_I(s[3824]);
+initDVOINGTANNUAL_I(s[3825]);
+initDVOINMAANNUAL_I(s[3826]);
+initDVOINOPANNUAL_I(s[3827]);
+initDVOINROANNUAL_I(s[3828]);
+initDVOINRRANNUAL_I(s[3829]);
+initDVSEGRSPAY(s[3830]);
+initDVSEGRSPAY_I(s[3831]);
+initDVSENETPAY(s[3832]);
+initDVSENETPAY_I(s[3833]);
+initDVTOGTCANNUAL(s[3834]);
+initDVTOTBENANNUAL(s[3835]);
+initDVWTCANNUAL(s[3836]);
+initDVNIOTHI(s[3837]);
+initDVIRREGOTHANNUAL(s[3838]);
+initDVWINANNUAL(s[3839]);
+initDVACCINANNUAL(s[3840]);
+initDVLUMPPENANNUAL(s[3841]);
+initDVREDUNANNUAL(s[3842]);
+initDVOTHINSANNUAL(s[3843]);
+initDVLIFEANNUAL(s[3844]);
+initDVINHERITANNUAL(s[3845]);
+initDVGIFTANNUAL(s[3846]);
+initGRSPAYEMPORSE(s[3847]);
+initMARST(s[3848]);
+initECACT(s[3849]);
+initYEAR(s[3850]);
+initMONTH(s[3851]);
+initGOR(s[3852]);
 }
 }

@@ -109,14 +109,24 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
         outdir = new File(outdir, "waas");
 
         // stringFields are to distinguish those fields that are not 
-        // represented by numbers. FRom the documentation we could also work 
-        // out which to store as Integer or Boolean too.
+        // represented by numbers. From the documentation it should be possible 
+        // to figure out which to store as Integer or Boolean too.
         HashSet<String> stringFields;
         stringFields = new HashSet<>();
         stringFields.add("SOA2");
         stringFields.add("SOA1");
         stringFields.add("STATSWARD");
         stringFields.add("VOTYO");
+        // The following are for Person files
+        stringFields.add("DTJBL");
+        stringFields.add("BACCBEG");
+        stringFields.add("BACCBEG1");
+        stringFields.add("BACCBEG2");
+        stringFields.add("BACCBEG3");
+        stringFields.add("BACCEND");
+        stringFields.add("BACCEND1");
+        stringFields.add("BACCEND2");
+        stringFields.add("BACCEND3");
 
         File fout;
         PrintWriter pw;
@@ -164,24 +174,16 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                     default:
                         break;
                 }
-                // Field declarations
-                printFieldDeclarations(stringFields, pw, fields);
-                // Field getters
-                printFieldGetters(stringFields, pw, fields);
+                // Print Field Declarations Inits And Getters
+                printFieldDeclarationsInitsAndGetters(stringFields, pw, fields);
                 // Constructor
                 pw.println("public " + name + "(String line) {");
-                pw.println("split = line.split(\"\\t\");");
+                pw.println("s = line.split(\"\\t\");");
                 ArrayList<String> fieldsList;
                 fieldsList = fieldsLists[i];
                 for (int j = 0; j < fieldsList.size(); j++) {
                     field = fieldsList.get(j);
-                    if (stringFields.contains(field)) {
-                        pw.println(field + " = split[" + j + "];");
-                    } else {
-                        pw.println("if (!split[" + j + "].trim().isEmpty()) {");
-                        pw.println(field + " = new Double(split[" + j + "]);");
-                        pw.println("}");
-                    }
+                    pw.println("init" + field + "(s[" + j + "]);");
                 }
                 pw.println("}");
                 pw.println("}");
@@ -195,7 +197,7 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                     pw = Generic_StaticIO.getPrintWriter(fout, false);
                     writeAutoGenerationHeader(pw);
                     pw.println("public abstract class " + name + " {");
-                    pw.println("protected String[] split;");
+                    pw.println("protected String[] s;");
                 } else if (i == (size + 1)) {
                     name = prepend + "Wave1Or2_" + type + "_Record";
                     fout = new File(outdir, name + ".java");
@@ -218,10 +220,8 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                     extendedClassName = prepend + "Wave3Or4Or5_" + type + "_Record";
                     pw.println("public abstract class " + name + " extends " + extendedClassName + " {");
                 }
-                // Field declarations
-                printFieldDeclarations(stringFields, pw, fields);
-                // Field getters
-                printFieldGetters(stringFields, pw, fields);
+                // Print Field Declarations Inits And Getters
+                printFieldDeclarationsInitsAndGetters(stringFields, pw, fields);
                 pw.println("}");
                 pw.close();
             }
@@ -236,6 +236,21 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
         pw.println("package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas;");
     }
 
+    /**
+     * @param stringFields
+     * @param pw
+     * @param fields
+     */
+    public void printFieldDeclarationsInitsAndGetters(HashSet<String> stringFields,
+            PrintWriter pw, TreeSet<String> fields) {
+                // Field declarations
+                printFieldDeclarations(stringFields, pw, fields);
+                // Field init
+                printFieldInits(stringFields, pw, fields);
+                // Field getters
+                printFieldGetters(stringFields, pw, fields);
+    }
+                
     /**
      * @param stringFields
      * @param pw
@@ -259,6 +274,7 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
 
     /**
      *
+     * @param stringFields
      * @param pw
      * @param fields
      */
@@ -281,6 +297,35 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
         }
     }
 
+    /**
+     *
+     * @param stringFields
+     * @param pw
+     * @param fields
+     */
+    public void printFieldInits(HashSet<String> stringFields, PrintWriter pw,
+            TreeSet<String> fields) {
+        String field;
+        Iterator<String> ite;
+        ite = fields.iterator();
+        while (ite.hasNext()) {
+            field = ite.next();
+            if (stringFields.contains(field)) {
+                pw.println("protected final void init" + field + "(String s) {");
+                pw.println("if (!s.trim().isEmpty()) {");
+                pw.println(field + " = s;");
+            } else {
+                pw.println("protected final void init" + field + "(String s) {");
+                pw.println("if (!s.trim().isEmpty()) {");
+                pw.println(field + " = new Double(s);");
+            }
+            pw.println("}");
+            pw.println("}");
+            pw.println();
+
+        }
+    }
+    
     /**
      * Thinking to returns a lists of IDs...
      *
@@ -340,9 +385,16 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
     }
 
     /**
-     * Finds and returns those fields that are in common and those fields .
-     * result[0] are the fields in common with all.
-     *
+     * Finds and returns r where.
+     * r[0] are the fields in common with all waves.
+     * r[1] are the fields in common with all waves.
+     * r[2] are the fields in common with all waves.
+     * r[3] are the fields in common with all waves.
+     * r[4] are the fields in common with all waves.
+     * r[5] fields common to waves 1, 2, 3, 4 and 5 (12345)
+     * r[6] fields other than 12345 that are common to waves 1 and 2 (12).
+     * r[7] fields other than 12345 that are in common to waves 3, 4 and 5 (345)
+     * r[8] fields other than 345 that are in common to waves 4 and 5 (45)
      * @param headers
      * @return
      */
@@ -367,11 +419,12 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
         r[6].removeAll(r[5]);
         System.out.println("Number of fields other than 12345 that are common to waves 1 and 2 (12) " + r[6].size());
         // Get fields other than 12345 that are in common to waves 3, 4 and 5 (345)
-        r[7] = getFieldsInCommon(r[0], r[3], r[4], r[5], null);
-        r[6].removeAll(r[5]);
+        r[7] = getFieldsInCommon(r[2], r[3], r[4], null, null);
+        r[7].removeAll(r[5]);
         System.out.println("Number of fields other than 12345 that are in common to waves 3, 4 and 5 (345) " + r[7].size());
         // Get fields other than 345 that are in common to waves 4 and 5 (45)
-        r[8] = getFieldsInCommon(r[4], r[5], null, null, null);
+        r[8] = getFieldsInCommon(r[3], r[4], null, null, null);
+        r[8].removeAll(r[5]);
         r[8].removeAll(r[7]);
         System.out.println("Number of fields other than 345 that are in common to waves 4 and 5 (45) " + r[8].size());
         r[0].removeAll(r[5]);
@@ -382,8 +435,10 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
         r[2].removeAll(r[7]);
         r[3].removeAll(r[5]);
         r[3].removeAll(r[7]);
+        r[3].removeAll(r[8]);
         r[4].removeAll(r[5]);
         r[4].removeAll(r[7]);
+        r[4].removeAll(r[8]);
         return r;
     }
 

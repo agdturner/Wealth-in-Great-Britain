@@ -3,4 +3,4696 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas;
 public abstract class WIGB_Wave4Or5_PERSON_Record extends WIGB_Wave3Or4Or5_PERSON_Record {
+protected static Double ADAMT1;
+
+protected static Double ADAMT2;
+
+protected static Double ADAMT3;
+
+protected static Double ADAVAIL1;
+
+protected static Double ADAVAIL2;
+
+protected static Double ADAVAIL3;
+
+protected static Double ADCONS1;
+
+protected static Double ADCONS2;
+
+protected static Double ADCONS3;
+
+protected static Double ADCOST1;
+
+protected static Double ADCOST2;
+
+protected static Double ADCOST3;
+
+protected static Double ADFUR1;
+
+protected static Double ADFUR2;
+
+protected static Double ADFUR3;
+
+protected static Double ADJOINT1;
+
+protected static Double ADJOINT2;
+
+protected static Double ADJOINT3;
+
+protected static Double ADPAY1;
+
+protected static Double ADPAY2;
+
+protected static Double ADPAY3;
+
+protected static Double ADPROD1;
+
+protected static Double ADPROD2;
+
+protected static Double ADPROD3;
+
+protected static Double ADPURCH1;
+
+protected static Double ADPURCH2;
+
+protected static Double ADPURCH3;
+
+protected static Double ADRECORD1;
+
+protected static Double ADRECORD2;
+
+protected static Double ADRECORD3;
+
+protected static Double ADSAT1;
+
+protected static Double ADSAT2;
+
+protected static Double ADSAT3;
+
+protected static Double ADSATREFLECT1;
+
+protected static Double ADSATREFLECT2;
+
+protected static Double ADSATREFLECT3;
+
+protected static Double ADSAVINV1;
+
+protected static Double ADSAVINV10;
+
+protected static Double ADSAVINV11;
+
+protected static Double ADSAVINV12;
+
+protected static Double ADSAVINV13;
+
+protected static Double ADSAVINV14;
+
+protected static Double ADSAVINV15;
+
+protected static Double ADSAVINV19;
+
+protected static Double ADSAVINV2;
+
+protected static Double ADSAVINV20;
+
+protected static Double ADSAVINV21;
+
+protected static Double ADSAVINV3;
+
+protected static Double ADSAVINV4;
+
+protected static Double ADSAVINV5;
+
+protected static Double ADSAVINV6;
+
+protected static Double ADSAVINV7;
+
+protected static Double ADSAVINV8;
+
+protected static Double ADSAVINV9;
+
+protected static Double ADTYP1;
+
+protected static Double ADTYP2;
+
+protected static Double ADTYP3;
+
+protected static Double ADVICE;
+
+protected static Double ADVNUMALL;
+
+protected static Double ADVREAS1;
+
+protected static Double ADVREAS2;
+
+protected static Double ADVREAS3;
+
+protected static Double ADWHO01;
+
+protected static Double ADWHO02;
+
+protected static Double ADWHO15;
+
+protected static Double ADWHO16;
+
+protected static Double ADWHO17;
+
+protected static Double ADWHO31;
+
+protected static Double ADWHO32;
+
+protected static Double AGEASAF;
+
+protected static Double ANNUITY1;
+
+protected static Double ANNUITY2;
+
+protected static Double ANYOTHERB_IFLAG;
+
+protected static Double BENINTRO;
+
+protected static Double CACTVB_I;
+
+protected static Double CACTVB_IFLAG;
+
+protected static Double CAJISA;
+
+protected static Double CASEW4;
+
+protected static Double CASVB_I;
+
+protected static Double CASVB_IFLAG;
+
+protected static Double CATYPE1;
+
+protected static Double CATYPE2;
+
+protected static Double DBURDW3;
+
+protected static Double DCARRCL01;
+
+protected static Double DCARRCL02;
+
+protected static Double DCARRCL03;
+
+protected static Double DCARRCL04;
+
+protected static Double DCBE2YR1;
+
+protected static Double DCBE2YR2;
+
+protected static Double DCBE2YR3;
+
+protected static Double DHBEST01_I;
+
+protected static Double DHBEST01_IFLAG;
+
+protected static Double DHBEST02_I;
+
+protected static Double DHBEST02_IFLAG;
+
+protected static Double DHBEST03_I;
+
+protected static Double DHBEST03_IFLAG;
+
+protected static Double DHBEST04_I;
+
+protected static Double DHBEST04_IFLAG;
+
+protected static Double DHBEST05_I;
+
+protected static Double DHBEST05_IFLAG;
+
+protected static Double DHBEST06_I;
+
+protected static Double DHBEST06_IFLAG;
+
+protected static Double DHBEST07_I;
+
+protected static Double DHBEST07_IFLAG;
+
+protected static Double DHBEST08_I;
+
+protected static Double DHBEST08_IFLAG;
+
+protected static Double DHBEST09_I;
+
+protected static Double DHBEST09_IFLAG;
+
+protected static Double DHBEST10_I;
+
+protected static Double DHBEST10_IFLAG;
+
+protected static Double DHBEST11_I;
+
+protected static Double DHBEST11_IFLAG;
+
+protected static Double DISBEN1;
+
+protected static Double DISBEN1_I;
+
+protected static Double DISBEN2;
+
+protected static Double DISBEN2_I;
+
+protected static Double DISBEN3;
+
+protected static Double DISBEN3_I;
+
+protected static Double DISBEN_IFLAG;
+
+protected static Double DLEST1_I;
+
+protected static Double DLEST1_IFLAG;
+
+protected static Double DLEST2_I;
+
+protected static Double DLEST2_IFLAG;
+
+protected static Double DLEST3_I;
+
+protected static Double DLEST3_IFLAG;
+
+protected static Double DLEST4_I;
+
+protected static Double DLEST4_IFLAG;
+
+protected static Double DLEST5_I;
+
+protected static Double DLEST5_IFLAG;
+
+protected static Double DSLEST1_I;
+
+protected static Double DSLEST1_IFLAG;
+
+protected static Double DSLEST2_I;
+
+protected static Double DSLEST2_IFLAG;
+
+protected static Double DSLEST3_I;
+
+protected static Double DSLEST3_IFLAG;
+
+protected static Double DSLEST4_I;
+
+protected static Double DSLEST4_IFLAG;
+
+protected static Double DSLEST5_I;
+
+protected static Double DSNUM1;
+
+protected static Double DVBENEFITANNUAL_I;
+
+protected static Double DVCOINV1;
+
+protected static Double DVECACT;
+
+protected static Double DVGRSBAND_I;
+
+protected static Double DVGRSBAND_IFLAG;
+
+protected static Double DVMRDF12;
+
+protected static Double DVNETBAND_I;
+
+protected static Double DVNETBAND_IFLAG;
+
+protected static Double DVSHODVAL1;
+
+protected static Double FINFVB_I;
+
+protected static Double FINFVB_IFLAG;
+
+protected static Double FLOANVB_I;
+
+protected static Double FLOANVB_IFLAG;
+
+protected static Double FNSVAL;
+
+protected static Double FNSVAL_I;
+
+protected static Double HASBOND;
+
+protected static Double HASCC;
+
+protected static Double HASEMPSH;
+
+protected static Double HASGILT;
+
+protected static Double HASISA;
+
+protected static Double HASLINS;
+
+protected static Double HASNOFA;
+
+protected static Double HASNSP;
+
+protected static Double HASOINV;
+
+protected static Double HASOTHSH;
+
+protected static Double HASSC;
+
+protected static Double HASSHSAC;
+
+protected static Double HASUTRUST;
+
+protected static Double HRPDVECACT;
+
+protected static Double IGFVALB_I;
+
+protected static Double IGFVALB_IFLAG;
+
+protected static Double ILACB_I;
+
+protected static Double ILACB_IFLAG;
+
+protected static Double ILINB_I;
+
+protected static Double ILINB_IFLAG;
+
+protected static Double ILOTB_I;
+
+protected static Double ILOTB_IFLAG;
+
+protected static Double ILRDB_I;
+
+protected static Double ILRDB_IFLAG;
+
+protected static Double ILUPB_I;
+
+protected static Double ILUPB_IFLAG;
+
+protected static Double ILWNB_I;
+
+protected static Double ILWNB_IFLAG;
+
+protected static Double IVALB1_I;
+
+protected static Double IVALB1_IFLAG;
+
+protected static Double IVALB2_I;
+
+protected static Double IVALB2_IFLAG;
+
+protected static Double IVALB3_I;
+
+protected static Double IVALB3_IFLAG;
+
+protected static Double IWHO1;
+
+protected static Double KIDBEN1;
+
+protected static Double KIDBEN1_I;
+
+protected static Double KIDBEN2;
+
+protected static Double KIDBEN2_I;
+
+protected static Double KIDBEN_IFLAG;
+
+protected static Double KNOWWPR;
+
+protected static Double LIVWTH12;
+
+protected static Double LNLFT6;
+
+protected static Double LNLFT7;
+
+protected static Double LNLFT8;
+
+protected static Double LNLFT9;
+
+protected static Double LNOS6;
+
+protected static Double LNOS7;
+
+protected static Double LNOS8;
+
+protected static Double LNOS9;
+
+protected static Double MONTHW1;
+
+protected static Double MONTHW2;
+
+protected static Double MONTHW3;
+
+protected static Double NWFLNVAL4;
+
+protected static Double OTHERBEN1;
+
+protected static Double OTHERBEN1_I;
+
+protected static Double OTHERBEN2;
+
+protected static Double OTHERBEN2_I;
+
+protected static Double OTHERBEN3;
+
+protected static Double OTHERBEN3_I;
+
+protected static Double OTHERBEN4;
+
+protected static Double OTHERBEN4_I;
+
+protected static Double OTHERBEN_IFLAG;
+
+protected static Double OWHYSAV1;
+
+protected static Double OWHYSAV2;
+
+protected static Double OWHYSAV3;
+
+protected static Double OWHYSAV4;
+
+protected static Double OWHYSAV5;
+
+protected static Double OWHYSAV6;
+
+protected static Double OWHYSAV7;
+
+protected static Double OWHYSAV8;
+
+protected static Double OWHYSAV9;
+
+protected static Double PAVCVB1_I;
+
+protected static Double PAVCVB1_IFLAG;
+
+protected static Double PAVCVB2_I;
+
+protected static Double PAVCVB2_IFLAG;
+
+protected static Double PBLMVB1_I;
+
+protected static Double PBLMVB1_IFLAG;
+
+protected static Double PBLMVB2_I;
+
+protected static Double PBLMVB2_IFLAG;
+
+protected static Double PDCVB1_I;
+
+protected static Double PDCVB1_IFLAG;
+
+protected static Double PDCVB2_I;
+
+protected static Double PDCVB2_IFLAG;
+
+protected static Double PENBEN1;
+
+protected static Double PENBEN1_I;
+
+protected static Double PENBEN2;
+
+protected static Double PENBEN2_I;
+
+protected static Double PENBEN3;
+
+protected static Double PENBEN3_I;
+
+protected static Double PENBEN_IFLAG;
+
+protected static Double PERSONW4;
+
+protected static Double PFCUVB1_I;
+
+protected static Double PFCUVB1_IFLAG;
+
+protected static Double PFCUVB2_I;
+
+protected static Double PFCUVB2_IFLAG;
+
+protected static Double PFCUVB3_I;
+
+protected static Double PFCUVB3_IFLAG;
+
+protected static Double PFCUVB4_I;
+
+protected static Double PFCUVB4_IFLAG;
+
+protected static Double PFCUVB5_I;
+
+protected static Double PFCUVB5_IFLAG;
+
+protected static Double PFCUVB6_I;
+
+protected static Double PFCUVB6_IFLAG;
+
+protected static Double PFDDVB1_I;
+
+protected static Double PFDDVB1_IFLAG;
+
+protected static Double PFDDVB2_I;
+
+protected static Double PFDDVB2_IFLAG;
+
+protected static Double PFDDVB3_I;
+
+protected static Double PFDDVB3_IFLAG;
+
+protected static Double PFDDVB4_I;
+
+protected static Double PFDDVB4_IFLAG;
+
+protected static Double PFDDVB5_I;
+
+protected static Double PFDDVB5_IFLAG;
+
+protected static Double PFDDVB6_I;
+
+protected static Double PFDDVB6_IFLAG;
+
+protected static Double PFDRAW3;
+
+protected static Double PFLMVB1_I;
+
+protected static Double PFLMVB1_IFLAG;
+
+protected static Double PFLMVB2_I;
+
+protected static Double PFLMVB2_IFLAG;
+
+protected static Double PFLMVB3_I;
+
+protected static Double PFLMVB3_IFLAG;
+
+protected static Double PFLMVB4_I;
+
+protected static Double PFLMVB4_IFLAG;
+
+protected static Double PFLUVB1_I;
+
+protected static Double PFLUVB1_IFLAG;
+
+protected static Double PFLUVB2_I;
+
+protected static Double PFLUVB2_IFLAG;
+
+protected static Double PFLUVB3_I;
+
+protected static Double PFLUVB3_IFLAG;
+
+protected static Double PFLUVB4_I;
+
+protected static Double PFLUVB4_IFLAG;
+
+protected static Double PFLUVB5_I;
+
+protected static Double PFLUVB5_IFLAG;
+
+protected static Double PFLUVB6_I;
+
+protected static Double PFLUVB6_IFLAG;
+
+protected static Double PMORTC1;
+
+protected static Double POCNAMT1;
+
+protected static Double POCNAMT2;
+
+protected static Double POLMVB1_I;
+
+protected static Double POLMVB1_IFLAG;
+
+protected static Double POLMVB2_I;
+
+protected static Double POLMVB2_IFLAG;
+
+protected static Double POPYCH1;
+
+protected static Double PORAGE1T;
+
+protected static Double PORAGE2T;
+
+protected static Double PPCNHOW3;
+
+protected static Double PPCONCH1;
+
+protected static Double PPDRINCB1;
+
+protected static Double PPLMVB1_I;
+
+protected static Double PPLMVB1_IFLAG;
+
+protected static Double PPLMVB2_I;
+
+protected static Double PPLMVB2_IFLAG;
+
+protected static Double PPLMVB3_I;
+
+protected static Double PPLMVB3_IFLAG;
+
+protected static Double PPRGAM1;
+
+protected static Double PPVALB1_I;
+
+protected static Double PPVALB1_IFLAG;
+
+protected static Double PPVALB2_I;
+
+protected static Double PPVALB2_IFLAG;
+
+protected static Double PPVALB3_I;
+
+protected static Double PPVALB3_IFLAG;
+
+protected static Double SAVDEP;
+
+protected static Double SIC2007;
+
+protected static Double SOCFUND1;
+
+protected static Double SOCFUND1_I;
+
+protected static Double SOCFUND2;
+
+protected static Double SOCFUND2_I;
+
+protected static Double SOCFUND3;
+
+protected static Double SOCFUND3_I;
+
+protected static Double SOCFUND4;
+
+protected static Double SOCFUND4_I;
+
+protected static Double SOCFUND_IFLAG;
+
+protected static Double TADDVL1;
+
+protected static Double UBUYTOL1;
+
+protected static Double UBUYTOL10;
+
+protected static Double UBUYTOL11;
+
+protected static Double UBUYTOL12;
+
+protected static Double UBUYTOL2;
+
+protected static Double UBUYTOL3;
+
+protected static Double UBUYTOL4;
+
+protected static Double UBUYTOL5;
+
+protected static Double UBUYTOL6;
+
+protected static Double UBUYTOL7;
+
+protected static Double UBUYTOL8;
+
+protected static Double UBUYTOL9;
+
+protected static Double UDEBTBLU_I;
+
+protected static Double UDEBTBLU_IFLAG;
+
+protected static Double UDEBTBL_I;
+
+protected static Double UDEBTBL_IFLAG;
+
+protected static Double UDEBTBOR_I;
+
+protected static Double UDEBTBOR_IFLAG;
+
+protected static Double UDEBTBOS_I;
+
+protected static Double UDEBTBOS_IFLAG;
+
+protected static Double UDEBTBO_I;
+
+protected static Double UDEBTBO_IFLAG;
+
+protected static Double UDEBTBS_I;
+
+protected static Double UDEBTBS_IFLAG;
+
+protected static Double UPROP5;
+
+protected static Double UPRTYP1;
+
+protected static Double UVALBLU_I;
+
+protected static Double UVALBLU_IFLAG;
+
+protected static Double UVALBL_I;
+
+protected static Double UVALBL_IFLAG;
+
+protected static Double UVALBOR_I;
+
+protected static Double UVALBOR_IFLAG;
+
+protected static Double UVALBOS_I;
+
+protected static Double UVALBOS_IFLAG;
+
+protected static Double UVALBO_I;
+
+protected static Double UVALBO_IFLAG;
+
+protected static Double UVALBS_I;
+
+protected static Double UVALBS_IFLAG;
+
+protected static Double WAGEBEN1;
+
+protected static Double WAGEBEN1_I;
+
+protected static Double WAGEBEN2;
+
+protected static Double WAGEBEN2_I;
+
+protected static Double WAGEBEN3;
+
+protected static Double WAGEBEN3_I;
+
+protected static Double WAGEBEN4;
+
+protected static Double WAGEBEN4_I;
+
+protected static Double WAGEBEN5;
+
+protected static Double WAGEBEN5_I;
+
+protected static Double WAGEBEN6;
+
+protected static Double WAGEBEN6_I;
+
+protected static Double WAGEBEN_IFLAG;
+
+protected static Double WPBTHA1;
+
+protected static Double WPBTHA2;
+
+protected static Double WPBTHP1;
+
+protected static Double WPBTHP2;
+
+protected static Double WPERA1;
+
+protected static Double WPERA2;
+
+protected static Double WPNRA1;
+
+protected static Double WPNRA2;
+
+protected static Double YEARW1;
+
+protected static Double YEARW2;
+
+protected static Double YEARW3;
+
+protected final void initADAMT1(String s) {
+if (!s.trim().isEmpty()) {
+ADAMT1 = new Double(s);
+}
+}
+
+protected final void initADAMT2(String s) {
+if (!s.trim().isEmpty()) {
+ADAMT2 = new Double(s);
+}
+}
+
+protected final void initADAMT3(String s) {
+if (!s.trim().isEmpty()) {
+ADAMT3 = new Double(s);
+}
+}
+
+protected final void initADAVAIL1(String s) {
+if (!s.trim().isEmpty()) {
+ADAVAIL1 = new Double(s);
+}
+}
+
+protected final void initADAVAIL2(String s) {
+if (!s.trim().isEmpty()) {
+ADAVAIL2 = new Double(s);
+}
+}
+
+protected final void initADAVAIL3(String s) {
+if (!s.trim().isEmpty()) {
+ADAVAIL3 = new Double(s);
+}
+}
+
+protected final void initADCONS1(String s) {
+if (!s.trim().isEmpty()) {
+ADCONS1 = new Double(s);
+}
+}
+
+protected final void initADCONS2(String s) {
+if (!s.trim().isEmpty()) {
+ADCONS2 = new Double(s);
+}
+}
+
+protected final void initADCONS3(String s) {
+if (!s.trim().isEmpty()) {
+ADCONS3 = new Double(s);
+}
+}
+
+protected final void initADCOST1(String s) {
+if (!s.trim().isEmpty()) {
+ADCOST1 = new Double(s);
+}
+}
+
+protected final void initADCOST2(String s) {
+if (!s.trim().isEmpty()) {
+ADCOST2 = new Double(s);
+}
+}
+
+protected final void initADCOST3(String s) {
+if (!s.trim().isEmpty()) {
+ADCOST3 = new Double(s);
+}
+}
+
+protected final void initADFUR1(String s) {
+if (!s.trim().isEmpty()) {
+ADFUR1 = new Double(s);
+}
+}
+
+protected final void initADFUR2(String s) {
+if (!s.trim().isEmpty()) {
+ADFUR2 = new Double(s);
+}
+}
+
+protected final void initADFUR3(String s) {
+if (!s.trim().isEmpty()) {
+ADFUR3 = new Double(s);
+}
+}
+
+protected final void initADJOINT1(String s) {
+if (!s.trim().isEmpty()) {
+ADJOINT1 = new Double(s);
+}
+}
+
+protected final void initADJOINT2(String s) {
+if (!s.trim().isEmpty()) {
+ADJOINT2 = new Double(s);
+}
+}
+
+protected final void initADJOINT3(String s) {
+if (!s.trim().isEmpty()) {
+ADJOINT3 = new Double(s);
+}
+}
+
+protected final void initADPAY1(String s) {
+if (!s.trim().isEmpty()) {
+ADPAY1 = new Double(s);
+}
+}
+
+protected final void initADPAY2(String s) {
+if (!s.trim().isEmpty()) {
+ADPAY2 = new Double(s);
+}
+}
+
+protected final void initADPAY3(String s) {
+if (!s.trim().isEmpty()) {
+ADPAY3 = new Double(s);
+}
+}
+
+protected final void initADPROD1(String s) {
+if (!s.trim().isEmpty()) {
+ADPROD1 = new Double(s);
+}
+}
+
+protected final void initADPROD2(String s) {
+if (!s.trim().isEmpty()) {
+ADPROD2 = new Double(s);
+}
+}
+
+protected final void initADPROD3(String s) {
+if (!s.trim().isEmpty()) {
+ADPROD3 = new Double(s);
+}
+}
+
+protected final void initADPURCH1(String s) {
+if (!s.trim().isEmpty()) {
+ADPURCH1 = new Double(s);
+}
+}
+
+protected final void initADPURCH2(String s) {
+if (!s.trim().isEmpty()) {
+ADPURCH2 = new Double(s);
+}
+}
+
+protected final void initADPURCH3(String s) {
+if (!s.trim().isEmpty()) {
+ADPURCH3 = new Double(s);
+}
+}
+
+protected final void initADRECORD1(String s) {
+if (!s.trim().isEmpty()) {
+ADRECORD1 = new Double(s);
+}
+}
+
+protected final void initADRECORD2(String s) {
+if (!s.trim().isEmpty()) {
+ADRECORD2 = new Double(s);
+}
+}
+
+protected final void initADRECORD3(String s) {
+if (!s.trim().isEmpty()) {
+ADRECORD3 = new Double(s);
+}
+}
+
+protected final void initADSAT1(String s) {
+if (!s.trim().isEmpty()) {
+ADSAT1 = new Double(s);
+}
+}
+
+protected final void initADSAT2(String s) {
+if (!s.trim().isEmpty()) {
+ADSAT2 = new Double(s);
+}
+}
+
+protected final void initADSAT3(String s) {
+if (!s.trim().isEmpty()) {
+ADSAT3 = new Double(s);
+}
+}
+
+protected final void initADSATREFLECT1(String s) {
+if (!s.trim().isEmpty()) {
+ADSATREFLECT1 = new Double(s);
+}
+}
+
+protected final void initADSATREFLECT2(String s) {
+if (!s.trim().isEmpty()) {
+ADSATREFLECT2 = new Double(s);
+}
+}
+
+protected final void initADSATREFLECT3(String s) {
+if (!s.trim().isEmpty()) {
+ADSATREFLECT3 = new Double(s);
+}
+}
+
+protected final void initADSAVINV1(String s) {
+if (!s.trim().isEmpty()) {
+ADSAVINV1 = new Double(s);
+}
+}
+
+protected final void initADSAVINV10(String s) {
+if (!s.trim().isEmpty()) {
+ADSAVINV10 = new Double(s);
+}
+}
+
+protected final void initADSAVINV11(String s) {
+if (!s.trim().isEmpty()) {
+ADSAVINV11 = new Double(s);
+}
+}
+
+protected final void initADSAVINV12(String s) {
+if (!s.trim().isEmpty()) {
+ADSAVINV12 = new Double(s);
+}
+}
+
+protected final void initADSAVINV13(String s) {
+if (!s.trim().isEmpty()) {
+ADSAVINV13 = new Double(s);
+}
+}
+
+protected final void initADSAVINV14(String s) {
+if (!s.trim().isEmpty()) {
+ADSAVINV14 = new Double(s);
+}
+}
+
+protected final void initADSAVINV15(String s) {
+if (!s.trim().isEmpty()) {
+ADSAVINV15 = new Double(s);
+}
+}
+
+protected final void initADSAVINV19(String s) {
+if (!s.trim().isEmpty()) {
+ADSAVINV19 = new Double(s);
+}
+}
+
+protected final void initADSAVINV2(String s) {
+if (!s.trim().isEmpty()) {
+ADSAVINV2 = new Double(s);
+}
+}
+
+protected final void initADSAVINV20(String s) {
+if (!s.trim().isEmpty()) {
+ADSAVINV20 = new Double(s);
+}
+}
+
+protected final void initADSAVINV21(String s) {
+if (!s.trim().isEmpty()) {
+ADSAVINV21 = new Double(s);
+}
+}
+
+protected final void initADSAVINV3(String s) {
+if (!s.trim().isEmpty()) {
+ADSAVINV3 = new Double(s);
+}
+}
+
+protected final void initADSAVINV4(String s) {
+if (!s.trim().isEmpty()) {
+ADSAVINV4 = new Double(s);
+}
+}
+
+protected final void initADSAVINV5(String s) {
+if (!s.trim().isEmpty()) {
+ADSAVINV5 = new Double(s);
+}
+}
+
+protected final void initADSAVINV6(String s) {
+if (!s.trim().isEmpty()) {
+ADSAVINV6 = new Double(s);
+}
+}
+
+protected final void initADSAVINV7(String s) {
+if (!s.trim().isEmpty()) {
+ADSAVINV7 = new Double(s);
+}
+}
+
+protected final void initADSAVINV8(String s) {
+if (!s.trim().isEmpty()) {
+ADSAVINV8 = new Double(s);
+}
+}
+
+protected final void initADSAVINV9(String s) {
+if (!s.trim().isEmpty()) {
+ADSAVINV9 = new Double(s);
+}
+}
+
+protected final void initADTYP1(String s) {
+if (!s.trim().isEmpty()) {
+ADTYP1 = new Double(s);
+}
+}
+
+protected final void initADTYP2(String s) {
+if (!s.trim().isEmpty()) {
+ADTYP2 = new Double(s);
+}
+}
+
+protected final void initADTYP3(String s) {
+if (!s.trim().isEmpty()) {
+ADTYP3 = new Double(s);
+}
+}
+
+protected final void initADVICE(String s) {
+if (!s.trim().isEmpty()) {
+ADVICE = new Double(s);
+}
+}
+
+protected final void initADVNUMALL(String s) {
+if (!s.trim().isEmpty()) {
+ADVNUMALL = new Double(s);
+}
+}
+
+protected final void initADVREAS1(String s) {
+if (!s.trim().isEmpty()) {
+ADVREAS1 = new Double(s);
+}
+}
+
+protected final void initADVREAS2(String s) {
+if (!s.trim().isEmpty()) {
+ADVREAS2 = new Double(s);
+}
+}
+
+protected final void initADVREAS3(String s) {
+if (!s.trim().isEmpty()) {
+ADVREAS3 = new Double(s);
+}
+}
+
+protected final void initADWHO01(String s) {
+if (!s.trim().isEmpty()) {
+ADWHO01 = new Double(s);
+}
+}
+
+protected final void initADWHO02(String s) {
+if (!s.trim().isEmpty()) {
+ADWHO02 = new Double(s);
+}
+}
+
+protected final void initADWHO15(String s) {
+if (!s.trim().isEmpty()) {
+ADWHO15 = new Double(s);
+}
+}
+
+protected final void initADWHO16(String s) {
+if (!s.trim().isEmpty()) {
+ADWHO16 = new Double(s);
+}
+}
+
+protected final void initADWHO17(String s) {
+if (!s.trim().isEmpty()) {
+ADWHO17 = new Double(s);
+}
+}
+
+protected final void initADWHO31(String s) {
+if (!s.trim().isEmpty()) {
+ADWHO31 = new Double(s);
+}
+}
+
+protected final void initADWHO32(String s) {
+if (!s.trim().isEmpty()) {
+ADWHO32 = new Double(s);
+}
+}
+
+protected final void initAGEASAF(String s) {
+if (!s.trim().isEmpty()) {
+AGEASAF = new Double(s);
+}
+}
+
+protected final void initANNUITY1(String s) {
+if (!s.trim().isEmpty()) {
+ANNUITY1 = new Double(s);
+}
+}
+
+protected final void initANNUITY2(String s) {
+if (!s.trim().isEmpty()) {
+ANNUITY2 = new Double(s);
+}
+}
+
+protected final void initANYOTHERB_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+ANYOTHERB_IFLAG = new Double(s);
+}
+}
+
+protected final void initBENINTRO(String s) {
+if (!s.trim().isEmpty()) {
+BENINTRO = new Double(s);
+}
+}
+
+protected final void initCACTVB_I(String s) {
+if (!s.trim().isEmpty()) {
+CACTVB_I = new Double(s);
+}
+}
+
+protected final void initCACTVB_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+CACTVB_IFLAG = new Double(s);
+}
+}
+
+protected final void initCAJISA(String s) {
+if (!s.trim().isEmpty()) {
+CAJISA = new Double(s);
+}
+}
+
+protected final void initCASEW4(String s) {
+if (!s.trim().isEmpty()) {
+CASEW4 = new Double(s);
+}
+}
+
+protected final void initCASVB_I(String s) {
+if (!s.trim().isEmpty()) {
+CASVB_I = new Double(s);
+}
+}
+
+protected final void initCASVB_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+CASVB_IFLAG = new Double(s);
+}
+}
+
+protected final void initCATYPE1(String s) {
+if (!s.trim().isEmpty()) {
+CATYPE1 = new Double(s);
+}
+}
+
+protected final void initCATYPE2(String s) {
+if (!s.trim().isEmpty()) {
+CATYPE2 = new Double(s);
+}
+}
+
+protected final void initDBURDW3(String s) {
+if (!s.trim().isEmpty()) {
+DBURDW3 = new Double(s);
+}
+}
+
+protected final void initDCARRCL01(String s) {
+if (!s.trim().isEmpty()) {
+DCARRCL01 = new Double(s);
+}
+}
+
+protected final void initDCARRCL02(String s) {
+if (!s.trim().isEmpty()) {
+DCARRCL02 = new Double(s);
+}
+}
+
+protected final void initDCARRCL03(String s) {
+if (!s.trim().isEmpty()) {
+DCARRCL03 = new Double(s);
+}
+}
+
+protected final void initDCARRCL04(String s) {
+if (!s.trim().isEmpty()) {
+DCARRCL04 = new Double(s);
+}
+}
+
+protected final void initDCBE2YR1(String s) {
+if (!s.trim().isEmpty()) {
+DCBE2YR1 = new Double(s);
+}
+}
+
+protected final void initDCBE2YR2(String s) {
+if (!s.trim().isEmpty()) {
+DCBE2YR2 = new Double(s);
+}
+}
+
+protected final void initDCBE2YR3(String s) {
+if (!s.trim().isEmpty()) {
+DCBE2YR3 = new Double(s);
+}
+}
+
+protected final void initDHBEST01_I(String s) {
+if (!s.trim().isEmpty()) {
+DHBEST01_I = new Double(s);
+}
+}
+
+protected final void initDHBEST01_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHBEST01_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHBEST02_I(String s) {
+if (!s.trim().isEmpty()) {
+DHBEST02_I = new Double(s);
+}
+}
+
+protected final void initDHBEST02_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHBEST02_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHBEST03_I(String s) {
+if (!s.trim().isEmpty()) {
+DHBEST03_I = new Double(s);
+}
+}
+
+protected final void initDHBEST03_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHBEST03_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHBEST04_I(String s) {
+if (!s.trim().isEmpty()) {
+DHBEST04_I = new Double(s);
+}
+}
+
+protected final void initDHBEST04_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHBEST04_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHBEST05_I(String s) {
+if (!s.trim().isEmpty()) {
+DHBEST05_I = new Double(s);
+}
+}
+
+protected final void initDHBEST05_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHBEST05_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHBEST06_I(String s) {
+if (!s.trim().isEmpty()) {
+DHBEST06_I = new Double(s);
+}
+}
+
+protected final void initDHBEST06_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHBEST06_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHBEST07_I(String s) {
+if (!s.trim().isEmpty()) {
+DHBEST07_I = new Double(s);
+}
+}
+
+protected final void initDHBEST07_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHBEST07_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHBEST08_I(String s) {
+if (!s.trim().isEmpty()) {
+DHBEST08_I = new Double(s);
+}
+}
+
+protected final void initDHBEST08_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHBEST08_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHBEST09_I(String s) {
+if (!s.trim().isEmpty()) {
+DHBEST09_I = new Double(s);
+}
+}
+
+protected final void initDHBEST09_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHBEST09_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHBEST10_I(String s) {
+if (!s.trim().isEmpty()) {
+DHBEST10_I = new Double(s);
+}
+}
+
+protected final void initDHBEST10_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHBEST10_IFLAG = new Double(s);
+}
+}
+
+protected final void initDHBEST11_I(String s) {
+if (!s.trim().isEmpty()) {
+DHBEST11_I = new Double(s);
+}
+}
+
+protected final void initDHBEST11_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DHBEST11_IFLAG = new Double(s);
+}
+}
+
+protected final void initDISBEN1(String s) {
+if (!s.trim().isEmpty()) {
+DISBEN1 = new Double(s);
+}
+}
+
+protected final void initDISBEN1_I(String s) {
+if (!s.trim().isEmpty()) {
+DISBEN1_I = new Double(s);
+}
+}
+
+protected final void initDISBEN2(String s) {
+if (!s.trim().isEmpty()) {
+DISBEN2 = new Double(s);
+}
+}
+
+protected final void initDISBEN2_I(String s) {
+if (!s.trim().isEmpty()) {
+DISBEN2_I = new Double(s);
+}
+}
+
+protected final void initDISBEN3(String s) {
+if (!s.trim().isEmpty()) {
+DISBEN3 = new Double(s);
+}
+}
+
+protected final void initDISBEN3_I(String s) {
+if (!s.trim().isEmpty()) {
+DISBEN3_I = new Double(s);
+}
+}
+
+protected final void initDISBEN_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DISBEN_IFLAG = new Double(s);
+}
+}
+
+protected final void initDLEST1_I(String s) {
+if (!s.trim().isEmpty()) {
+DLEST1_I = new Double(s);
+}
+}
+
+protected final void initDLEST1_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DLEST1_IFLAG = new Double(s);
+}
+}
+
+protected final void initDLEST2_I(String s) {
+if (!s.trim().isEmpty()) {
+DLEST2_I = new Double(s);
+}
+}
+
+protected final void initDLEST2_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DLEST2_IFLAG = new Double(s);
+}
+}
+
+protected final void initDLEST3_I(String s) {
+if (!s.trim().isEmpty()) {
+DLEST3_I = new Double(s);
+}
+}
+
+protected final void initDLEST3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DLEST3_IFLAG = new Double(s);
+}
+}
+
+protected final void initDLEST4_I(String s) {
+if (!s.trim().isEmpty()) {
+DLEST4_I = new Double(s);
+}
+}
+
+protected final void initDLEST4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DLEST4_IFLAG = new Double(s);
+}
+}
+
+protected final void initDLEST5_I(String s) {
+if (!s.trim().isEmpty()) {
+DLEST5_I = new Double(s);
+}
+}
+
+protected final void initDLEST5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DLEST5_IFLAG = new Double(s);
+}
+}
+
+protected final void initDSLEST1_I(String s) {
+if (!s.trim().isEmpty()) {
+DSLEST1_I = new Double(s);
+}
+}
+
+protected final void initDSLEST1_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DSLEST1_IFLAG = new Double(s);
+}
+}
+
+protected final void initDSLEST2_I(String s) {
+if (!s.trim().isEmpty()) {
+DSLEST2_I = new Double(s);
+}
+}
+
+protected final void initDSLEST2_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DSLEST2_IFLAG = new Double(s);
+}
+}
+
+protected final void initDSLEST3_I(String s) {
+if (!s.trim().isEmpty()) {
+DSLEST3_I = new Double(s);
+}
+}
+
+protected final void initDSLEST3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DSLEST3_IFLAG = new Double(s);
+}
+}
+
+protected final void initDSLEST4_I(String s) {
+if (!s.trim().isEmpty()) {
+DSLEST4_I = new Double(s);
+}
+}
+
+protected final void initDSLEST4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DSLEST4_IFLAG = new Double(s);
+}
+}
+
+protected final void initDSLEST5_I(String s) {
+if (!s.trim().isEmpty()) {
+DSLEST5_I = new Double(s);
+}
+}
+
+protected final void initDSNUM1(String s) {
+if (!s.trim().isEmpty()) {
+DSNUM1 = new Double(s);
+}
+}
+
+protected final void initDVBENEFITANNUAL_I(String s) {
+if (!s.trim().isEmpty()) {
+DVBENEFITANNUAL_I = new Double(s);
+}
+}
+
+protected final void initDVCOINV1(String s) {
+if (!s.trim().isEmpty()) {
+DVCOINV1 = new Double(s);
+}
+}
+
+protected final void initDVECACT(String s) {
+if (!s.trim().isEmpty()) {
+DVECACT = new Double(s);
+}
+}
+
+protected final void initDVGRSBAND_I(String s) {
+if (!s.trim().isEmpty()) {
+DVGRSBAND_I = new Double(s);
+}
+}
+
+protected final void initDVGRSBAND_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DVGRSBAND_IFLAG = new Double(s);
+}
+}
+
+protected final void initDVMRDF12(String s) {
+if (!s.trim().isEmpty()) {
+DVMRDF12 = new Double(s);
+}
+}
+
+protected final void initDVNETBAND_I(String s) {
+if (!s.trim().isEmpty()) {
+DVNETBAND_I = new Double(s);
+}
+}
+
+protected final void initDVNETBAND_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DVNETBAND_IFLAG = new Double(s);
+}
+}
+
+protected final void initDVSHODVAL1(String s) {
+if (!s.trim().isEmpty()) {
+DVSHODVAL1 = new Double(s);
+}
+}
+
+protected final void initFINFVB_I(String s) {
+if (!s.trim().isEmpty()) {
+FINFVB_I = new Double(s);
+}
+}
+
+protected final void initFINFVB_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+FINFVB_IFLAG = new Double(s);
+}
+}
+
+protected final void initFLOANVB_I(String s) {
+if (!s.trim().isEmpty()) {
+FLOANVB_I = new Double(s);
+}
+}
+
+protected final void initFLOANVB_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+FLOANVB_IFLAG = new Double(s);
+}
+}
+
+protected final void initFNSVAL(String s) {
+if (!s.trim().isEmpty()) {
+FNSVAL = new Double(s);
+}
+}
+
+protected final void initFNSVAL_I(String s) {
+if (!s.trim().isEmpty()) {
+FNSVAL_I = new Double(s);
+}
+}
+
+protected final void initHASBOND(String s) {
+if (!s.trim().isEmpty()) {
+HASBOND = new Double(s);
+}
+}
+
+protected final void initHASCC(String s) {
+if (!s.trim().isEmpty()) {
+HASCC = new Double(s);
+}
+}
+
+protected final void initHASEMPSH(String s) {
+if (!s.trim().isEmpty()) {
+HASEMPSH = new Double(s);
+}
+}
+
+protected final void initHASGILT(String s) {
+if (!s.trim().isEmpty()) {
+HASGILT = new Double(s);
+}
+}
+
+protected final void initHASISA(String s) {
+if (!s.trim().isEmpty()) {
+HASISA = new Double(s);
+}
+}
+
+protected final void initHASLINS(String s) {
+if (!s.trim().isEmpty()) {
+HASLINS = new Double(s);
+}
+}
+
+protected final void initHASNOFA(String s) {
+if (!s.trim().isEmpty()) {
+HASNOFA = new Double(s);
+}
+}
+
+protected final void initHASNSP(String s) {
+if (!s.trim().isEmpty()) {
+HASNSP = new Double(s);
+}
+}
+
+protected final void initHASOINV(String s) {
+if (!s.trim().isEmpty()) {
+HASOINV = new Double(s);
+}
+}
+
+protected final void initHASOTHSH(String s) {
+if (!s.trim().isEmpty()) {
+HASOTHSH = new Double(s);
+}
+}
+
+protected final void initHASSC(String s) {
+if (!s.trim().isEmpty()) {
+HASSC = new Double(s);
+}
+}
+
+protected final void initHASSHSAC(String s) {
+if (!s.trim().isEmpty()) {
+HASSHSAC = new Double(s);
+}
+}
+
+protected final void initHASUTRUST(String s) {
+if (!s.trim().isEmpty()) {
+HASUTRUST = new Double(s);
+}
+}
+
+protected final void initHRPDVECACT(String s) {
+if (!s.trim().isEmpty()) {
+HRPDVECACT = new Double(s);
+}
+}
+
+protected final void initIGFVALB_I(String s) {
+if (!s.trim().isEmpty()) {
+IGFVALB_I = new Double(s);
+}
+}
+
+protected final void initIGFVALB_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+IGFVALB_IFLAG = new Double(s);
+}
+}
+
+protected final void initILACB_I(String s) {
+if (!s.trim().isEmpty()) {
+ILACB_I = new Double(s);
+}
+}
+
+protected final void initILACB_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+ILACB_IFLAG = new Double(s);
+}
+}
+
+protected final void initILINB_I(String s) {
+if (!s.trim().isEmpty()) {
+ILINB_I = new Double(s);
+}
+}
+
+protected final void initILINB_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+ILINB_IFLAG = new Double(s);
+}
+}
+
+protected final void initILOTB_I(String s) {
+if (!s.trim().isEmpty()) {
+ILOTB_I = new Double(s);
+}
+}
+
+protected final void initILOTB_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+ILOTB_IFLAG = new Double(s);
+}
+}
+
+protected final void initILRDB_I(String s) {
+if (!s.trim().isEmpty()) {
+ILRDB_I = new Double(s);
+}
+}
+
+protected final void initILRDB_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+ILRDB_IFLAG = new Double(s);
+}
+}
+
+protected final void initILUPB_I(String s) {
+if (!s.trim().isEmpty()) {
+ILUPB_I = new Double(s);
+}
+}
+
+protected final void initILUPB_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+ILUPB_IFLAG = new Double(s);
+}
+}
+
+protected final void initILWNB_I(String s) {
+if (!s.trim().isEmpty()) {
+ILWNB_I = new Double(s);
+}
+}
+
+protected final void initILWNB_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+ILWNB_IFLAG = new Double(s);
+}
+}
+
+protected final void initIVALB1_I(String s) {
+if (!s.trim().isEmpty()) {
+IVALB1_I = new Double(s);
+}
+}
+
+protected final void initIVALB1_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+IVALB1_IFLAG = new Double(s);
+}
+}
+
+protected final void initIVALB2_I(String s) {
+if (!s.trim().isEmpty()) {
+IVALB2_I = new Double(s);
+}
+}
+
+protected final void initIVALB2_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+IVALB2_IFLAG = new Double(s);
+}
+}
+
+protected final void initIVALB3_I(String s) {
+if (!s.trim().isEmpty()) {
+IVALB3_I = new Double(s);
+}
+}
+
+protected final void initIVALB3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+IVALB3_IFLAG = new Double(s);
+}
+}
+
+protected final void initIWHO1(String s) {
+if (!s.trim().isEmpty()) {
+IWHO1 = new Double(s);
+}
+}
+
+protected final void initKIDBEN1(String s) {
+if (!s.trim().isEmpty()) {
+KIDBEN1 = new Double(s);
+}
+}
+
+protected final void initKIDBEN1_I(String s) {
+if (!s.trim().isEmpty()) {
+KIDBEN1_I = new Double(s);
+}
+}
+
+protected final void initKIDBEN2(String s) {
+if (!s.trim().isEmpty()) {
+KIDBEN2 = new Double(s);
+}
+}
+
+protected final void initKIDBEN2_I(String s) {
+if (!s.trim().isEmpty()) {
+KIDBEN2_I = new Double(s);
+}
+}
+
+protected final void initKIDBEN_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+KIDBEN_IFLAG = new Double(s);
+}
+}
+
+protected final void initKNOWWPR(String s) {
+if (!s.trim().isEmpty()) {
+KNOWWPR = new Double(s);
+}
+}
+
+protected final void initLIVWTH12(String s) {
+if (!s.trim().isEmpty()) {
+LIVWTH12 = new Double(s);
+}
+}
+
+protected final void initLNLFT6(String s) {
+if (!s.trim().isEmpty()) {
+LNLFT6 = new Double(s);
+}
+}
+
+protected final void initLNLFT7(String s) {
+if (!s.trim().isEmpty()) {
+LNLFT7 = new Double(s);
+}
+}
+
+protected final void initLNLFT8(String s) {
+if (!s.trim().isEmpty()) {
+LNLFT8 = new Double(s);
+}
+}
+
+protected final void initLNLFT9(String s) {
+if (!s.trim().isEmpty()) {
+LNLFT9 = new Double(s);
+}
+}
+
+protected final void initLNOS6(String s) {
+if (!s.trim().isEmpty()) {
+LNOS6 = new Double(s);
+}
+}
+
+protected final void initLNOS7(String s) {
+if (!s.trim().isEmpty()) {
+LNOS7 = new Double(s);
+}
+}
+
+protected final void initLNOS8(String s) {
+if (!s.trim().isEmpty()) {
+LNOS8 = new Double(s);
+}
+}
+
+protected final void initLNOS9(String s) {
+if (!s.trim().isEmpty()) {
+LNOS9 = new Double(s);
+}
+}
+
+protected final void initMONTHW1(String s) {
+if (!s.trim().isEmpty()) {
+MONTHW1 = new Double(s);
+}
+}
+
+protected final void initMONTHW2(String s) {
+if (!s.trim().isEmpty()) {
+MONTHW2 = new Double(s);
+}
+}
+
+protected final void initMONTHW3(String s) {
+if (!s.trim().isEmpty()) {
+MONTHW3 = new Double(s);
+}
+}
+
+protected final void initNWFLNVAL4(String s) {
+if (!s.trim().isEmpty()) {
+NWFLNVAL4 = new Double(s);
+}
+}
+
+protected final void initOTHERBEN1(String s) {
+if (!s.trim().isEmpty()) {
+OTHERBEN1 = new Double(s);
+}
+}
+
+protected final void initOTHERBEN1_I(String s) {
+if (!s.trim().isEmpty()) {
+OTHERBEN1_I = new Double(s);
+}
+}
+
+protected final void initOTHERBEN2(String s) {
+if (!s.trim().isEmpty()) {
+OTHERBEN2 = new Double(s);
+}
+}
+
+protected final void initOTHERBEN2_I(String s) {
+if (!s.trim().isEmpty()) {
+OTHERBEN2_I = new Double(s);
+}
+}
+
+protected final void initOTHERBEN3(String s) {
+if (!s.trim().isEmpty()) {
+OTHERBEN3 = new Double(s);
+}
+}
+
+protected final void initOTHERBEN3_I(String s) {
+if (!s.trim().isEmpty()) {
+OTHERBEN3_I = new Double(s);
+}
+}
+
+protected final void initOTHERBEN4(String s) {
+if (!s.trim().isEmpty()) {
+OTHERBEN4 = new Double(s);
+}
+}
+
+protected final void initOTHERBEN4_I(String s) {
+if (!s.trim().isEmpty()) {
+OTHERBEN4_I = new Double(s);
+}
+}
+
+protected final void initOTHERBEN_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+OTHERBEN_IFLAG = new Double(s);
+}
+}
+
+protected final void initOWHYSAV1(String s) {
+if (!s.trim().isEmpty()) {
+OWHYSAV1 = new Double(s);
+}
+}
+
+protected final void initOWHYSAV2(String s) {
+if (!s.trim().isEmpty()) {
+OWHYSAV2 = new Double(s);
+}
+}
+
+protected final void initOWHYSAV3(String s) {
+if (!s.trim().isEmpty()) {
+OWHYSAV3 = new Double(s);
+}
+}
+
+protected final void initOWHYSAV4(String s) {
+if (!s.trim().isEmpty()) {
+OWHYSAV4 = new Double(s);
+}
+}
+
+protected final void initOWHYSAV5(String s) {
+if (!s.trim().isEmpty()) {
+OWHYSAV5 = new Double(s);
+}
+}
+
+protected final void initOWHYSAV6(String s) {
+if (!s.trim().isEmpty()) {
+OWHYSAV6 = new Double(s);
+}
+}
+
+protected final void initOWHYSAV7(String s) {
+if (!s.trim().isEmpty()) {
+OWHYSAV7 = new Double(s);
+}
+}
+
+protected final void initOWHYSAV8(String s) {
+if (!s.trim().isEmpty()) {
+OWHYSAV8 = new Double(s);
+}
+}
+
+protected final void initOWHYSAV9(String s) {
+if (!s.trim().isEmpty()) {
+OWHYSAV9 = new Double(s);
+}
+}
+
+protected final void initPAVCVB1_I(String s) {
+if (!s.trim().isEmpty()) {
+PAVCVB1_I = new Double(s);
+}
+}
+
+protected final void initPAVCVB1_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PAVCVB1_IFLAG = new Double(s);
+}
+}
+
+protected final void initPAVCVB2_I(String s) {
+if (!s.trim().isEmpty()) {
+PAVCVB2_I = new Double(s);
+}
+}
+
+protected final void initPAVCVB2_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PAVCVB2_IFLAG = new Double(s);
+}
+}
+
+protected final void initPBLMVB1_I(String s) {
+if (!s.trim().isEmpty()) {
+PBLMVB1_I = new Double(s);
+}
+}
+
+protected final void initPBLMVB1_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PBLMVB1_IFLAG = new Double(s);
+}
+}
+
+protected final void initPBLMVB2_I(String s) {
+if (!s.trim().isEmpty()) {
+PBLMVB2_I = new Double(s);
+}
+}
+
+protected final void initPBLMVB2_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PBLMVB2_IFLAG = new Double(s);
+}
+}
+
+protected final void initPDCVB1_I(String s) {
+if (!s.trim().isEmpty()) {
+PDCVB1_I = new Double(s);
+}
+}
+
+protected final void initPDCVB1_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PDCVB1_IFLAG = new Double(s);
+}
+}
+
+protected final void initPDCVB2_I(String s) {
+if (!s.trim().isEmpty()) {
+PDCVB2_I = new Double(s);
+}
+}
+
+protected final void initPDCVB2_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PDCVB2_IFLAG = new Double(s);
+}
+}
+
+protected final void initPENBEN1(String s) {
+if (!s.trim().isEmpty()) {
+PENBEN1 = new Double(s);
+}
+}
+
+protected final void initPENBEN1_I(String s) {
+if (!s.trim().isEmpty()) {
+PENBEN1_I = new Double(s);
+}
+}
+
+protected final void initPENBEN2(String s) {
+if (!s.trim().isEmpty()) {
+PENBEN2 = new Double(s);
+}
+}
+
+protected final void initPENBEN2_I(String s) {
+if (!s.trim().isEmpty()) {
+PENBEN2_I = new Double(s);
+}
+}
+
+protected final void initPENBEN3(String s) {
+if (!s.trim().isEmpty()) {
+PENBEN3 = new Double(s);
+}
+}
+
+protected final void initPENBEN3_I(String s) {
+if (!s.trim().isEmpty()) {
+PENBEN3_I = new Double(s);
+}
+}
+
+protected final void initPENBEN_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PENBEN_IFLAG = new Double(s);
+}
+}
+
+protected final void initPERSONW4(String s) {
+if (!s.trim().isEmpty()) {
+PERSONW4 = new Double(s);
+}
+}
+
+protected final void initPFCUVB1_I(String s) {
+if (!s.trim().isEmpty()) {
+PFCUVB1_I = new Double(s);
+}
+}
+
+protected final void initPFCUVB1_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFCUVB1_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFCUVB2_I(String s) {
+if (!s.trim().isEmpty()) {
+PFCUVB2_I = new Double(s);
+}
+}
+
+protected final void initPFCUVB2_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFCUVB2_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFCUVB3_I(String s) {
+if (!s.trim().isEmpty()) {
+PFCUVB3_I = new Double(s);
+}
+}
+
+protected final void initPFCUVB3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFCUVB3_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFCUVB4_I(String s) {
+if (!s.trim().isEmpty()) {
+PFCUVB4_I = new Double(s);
+}
+}
+
+protected final void initPFCUVB4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFCUVB4_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFCUVB5_I(String s) {
+if (!s.trim().isEmpty()) {
+PFCUVB5_I = new Double(s);
+}
+}
+
+protected final void initPFCUVB5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFCUVB5_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFCUVB6_I(String s) {
+if (!s.trim().isEmpty()) {
+PFCUVB6_I = new Double(s);
+}
+}
+
+protected final void initPFCUVB6_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFCUVB6_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFDDVB1_I(String s) {
+if (!s.trim().isEmpty()) {
+PFDDVB1_I = new Double(s);
+}
+}
+
+protected final void initPFDDVB1_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFDDVB1_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFDDVB2_I(String s) {
+if (!s.trim().isEmpty()) {
+PFDDVB2_I = new Double(s);
+}
+}
+
+protected final void initPFDDVB2_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFDDVB2_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFDDVB3_I(String s) {
+if (!s.trim().isEmpty()) {
+PFDDVB3_I = new Double(s);
+}
+}
+
+protected final void initPFDDVB3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFDDVB3_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFDDVB4_I(String s) {
+if (!s.trim().isEmpty()) {
+PFDDVB4_I = new Double(s);
+}
+}
+
+protected final void initPFDDVB4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFDDVB4_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFDDVB5_I(String s) {
+if (!s.trim().isEmpty()) {
+PFDDVB5_I = new Double(s);
+}
+}
+
+protected final void initPFDDVB5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFDDVB5_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFDDVB6_I(String s) {
+if (!s.trim().isEmpty()) {
+PFDDVB6_I = new Double(s);
+}
+}
+
+protected final void initPFDDVB6_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFDDVB6_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFDRAW3(String s) {
+if (!s.trim().isEmpty()) {
+PFDRAW3 = new Double(s);
+}
+}
+
+protected final void initPFLMVB1_I(String s) {
+if (!s.trim().isEmpty()) {
+PFLMVB1_I = new Double(s);
+}
+}
+
+protected final void initPFLMVB1_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFLMVB1_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFLMVB2_I(String s) {
+if (!s.trim().isEmpty()) {
+PFLMVB2_I = new Double(s);
+}
+}
+
+protected final void initPFLMVB2_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFLMVB2_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFLMVB3_I(String s) {
+if (!s.trim().isEmpty()) {
+PFLMVB3_I = new Double(s);
+}
+}
+
+protected final void initPFLMVB3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFLMVB3_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFLMVB4_I(String s) {
+if (!s.trim().isEmpty()) {
+PFLMVB4_I = new Double(s);
+}
+}
+
+protected final void initPFLMVB4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFLMVB4_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFLUVB1_I(String s) {
+if (!s.trim().isEmpty()) {
+PFLUVB1_I = new Double(s);
+}
+}
+
+protected final void initPFLUVB1_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFLUVB1_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFLUVB2_I(String s) {
+if (!s.trim().isEmpty()) {
+PFLUVB2_I = new Double(s);
+}
+}
+
+protected final void initPFLUVB2_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFLUVB2_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFLUVB3_I(String s) {
+if (!s.trim().isEmpty()) {
+PFLUVB3_I = new Double(s);
+}
+}
+
+protected final void initPFLUVB3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFLUVB3_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFLUVB4_I(String s) {
+if (!s.trim().isEmpty()) {
+PFLUVB4_I = new Double(s);
+}
+}
+
+protected final void initPFLUVB4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFLUVB4_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFLUVB5_I(String s) {
+if (!s.trim().isEmpty()) {
+PFLUVB5_I = new Double(s);
+}
+}
+
+protected final void initPFLUVB5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFLUVB5_IFLAG = new Double(s);
+}
+}
+
+protected final void initPFLUVB6_I(String s) {
+if (!s.trim().isEmpty()) {
+PFLUVB6_I = new Double(s);
+}
+}
+
+protected final void initPFLUVB6_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PFLUVB6_IFLAG = new Double(s);
+}
+}
+
+protected final void initPMORTC1(String s) {
+if (!s.trim().isEmpty()) {
+PMORTC1 = new Double(s);
+}
+}
+
+protected final void initPOCNAMT1(String s) {
+if (!s.trim().isEmpty()) {
+POCNAMT1 = new Double(s);
+}
+}
+
+protected final void initPOCNAMT2(String s) {
+if (!s.trim().isEmpty()) {
+POCNAMT2 = new Double(s);
+}
+}
+
+protected final void initPOLMVB1_I(String s) {
+if (!s.trim().isEmpty()) {
+POLMVB1_I = new Double(s);
+}
+}
+
+protected final void initPOLMVB1_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+POLMVB1_IFLAG = new Double(s);
+}
+}
+
+protected final void initPOLMVB2_I(String s) {
+if (!s.trim().isEmpty()) {
+POLMVB2_I = new Double(s);
+}
+}
+
+protected final void initPOLMVB2_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+POLMVB2_IFLAG = new Double(s);
+}
+}
+
+protected final void initPOPYCH1(String s) {
+if (!s.trim().isEmpty()) {
+POPYCH1 = new Double(s);
+}
+}
+
+protected final void initPORAGE1T(String s) {
+if (!s.trim().isEmpty()) {
+PORAGE1T = new Double(s);
+}
+}
+
+protected final void initPORAGE2T(String s) {
+if (!s.trim().isEmpty()) {
+PORAGE2T = new Double(s);
+}
+}
+
+protected final void initPPCNHOW3(String s) {
+if (!s.trim().isEmpty()) {
+PPCNHOW3 = new Double(s);
+}
+}
+
+protected final void initPPCONCH1(String s) {
+if (!s.trim().isEmpty()) {
+PPCONCH1 = new Double(s);
+}
+}
+
+protected final void initPPDRINCB1(String s) {
+if (!s.trim().isEmpty()) {
+PPDRINCB1 = new Double(s);
+}
+}
+
+protected final void initPPLMVB1_I(String s) {
+if (!s.trim().isEmpty()) {
+PPLMVB1_I = new Double(s);
+}
+}
+
+protected final void initPPLMVB1_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PPLMVB1_IFLAG = new Double(s);
+}
+}
+
+protected final void initPPLMVB2_I(String s) {
+if (!s.trim().isEmpty()) {
+PPLMVB2_I = new Double(s);
+}
+}
+
+protected final void initPPLMVB2_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PPLMVB2_IFLAG = new Double(s);
+}
+}
+
+protected final void initPPLMVB3_I(String s) {
+if (!s.trim().isEmpty()) {
+PPLMVB3_I = new Double(s);
+}
+}
+
+protected final void initPPLMVB3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PPLMVB3_IFLAG = new Double(s);
+}
+}
+
+protected final void initPPRGAM1(String s) {
+if (!s.trim().isEmpty()) {
+PPRGAM1 = new Double(s);
+}
+}
+
+protected final void initPPVALB1_I(String s) {
+if (!s.trim().isEmpty()) {
+PPVALB1_I = new Double(s);
+}
+}
+
+protected final void initPPVALB1_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PPVALB1_IFLAG = new Double(s);
+}
+}
+
+protected final void initPPVALB2_I(String s) {
+if (!s.trim().isEmpty()) {
+PPVALB2_I = new Double(s);
+}
+}
+
+protected final void initPPVALB2_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PPVALB2_IFLAG = new Double(s);
+}
+}
+
+protected final void initPPVALB3_I(String s) {
+if (!s.trim().isEmpty()) {
+PPVALB3_I = new Double(s);
+}
+}
+
+protected final void initPPVALB3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+PPVALB3_IFLAG = new Double(s);
+}
+}
+
+protected final void initSAVDEP(String s) {
+if (!s.trim().isEmpty()) {
+SAVDEP = new Double(s);
+}
+}
+
+protected final void initSIC2007(String s) {
+if (!s.trim().isEmpty()) {
+SIC2007 = new Double(s);
+}
+}
+
+protected final void initSOCFUND1(String s) {
+if (!s.trim().isEmpty()) {
+SOCFUND1 = new Double(s);
+}
+}
+
+protected final void initSOCFUND1_I(String s) {
+if (!s.trim().isEmpty()) {
+SOCFUND1_I = new Double(s);
+}
+}
+
+protected final void initSOCFUND2(String s) {
+if (!s.trim().isEmpty()) {
+SOCFUND2 = new Double(s);
+}
+}
+
+protected final void initSOCFUND2_I(String s) {
+if (!s.trim().isEmpty()) {
+SOCFUND2_I = new Double(s);
+}
+}
+
+protected final void initSOCFUND3(String s) {
+if (!s.trim().isEmpty()) {
+SOCFUND3 = new Double(s);
+}
+}
+
+protected final void initSOCFUND3_I(String s) {
+if (!s.trim().isEmpty()) {
+SOCFUND3_I = new Double(s);
+}
+}
+
+protected final void initSOCFUND4(String s) {
+if (!s.trim().isEmpty()) {
+SOCFUND4 = new Double(s);
+}
+}
+
+protected final void initSOCFUND4_I(String s) {
+if (!s.trim().isEmpty()) {
+SOCFUND4_I = new Double(s);
+}
+}
+
+protected final void initSOCFUND_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+SOCFUND_IFLAG = new Double(s);
+}
+}
+
+protected final void initTADDVL1(String s) {
+if (!s.trim().isEmpty()) {
+TADDVL1 = new Double(s);
+}
+}
+
+protected final void initUBUYTOL1(String s) {
+if (!s.trim().isEmpty()) {
+UBUYTOL1 = new Double(s);
+}
+}
+
+protected final void initUBUYTOL10(String s) {
+if (!s.trim().isEmpty()) {
+UBUYTOL10 = new Double(s);
+}
+}
+
+protected final void initUBUYTOL11(String s) {
+if (!s.trim().isEmpty()) {
+UBUYTOL11 = new Double(s);
+}
+}
+
+protected final void initUBUYTOL12(String s) {
+if (!s.trim().isEmpty()) {
+UBUYTOL12 = new Double(s);
+}
+}
+
+protected final void initUBUYTOL2(String s) {
+if (!s.trim().isEmpty()) {
+UBUYTOL2 = new Double(s);
+}
+}
+
+protected final void initUBUYTOL3(String s) {
+if (!s.trim().isEmpty()) {
+UBUYTOL3 = new Double(s);
+}
+}
+
+protected final void initUBUYTOL4(String s) {
+if (!s.trim().isEmpty()) {
+UBUYTOL4 = new Double(s);
+}
+}
+
+protected final void initUBUYTOL5(String s) {
+if (!s.trim().isEmpty()) {
+UBUYTOL5 = new Double(s);
+}
+}
+
+protected final void initUBUYTOL6(String s) {
+if (!s.trim().isEmpty()) {
+UBUYTOL6 = new Double(s);
+}
+}
+
+protected final void initUBUYTOL7(String s) {
+if (!s.trim().isEmpty()) {
+UBUYTOL7 = new Double(s);
+}
+}
+
+protected final void initUBUYTOL8(String s) {
+if (!s.trim().isEmpty()) {
+UBUYTOL8 = new Double(s);
+}
+}
+
+protected final void initUBUYTOL9(String s) {
+if (!s.trim().isEmpty()) {
+UBUYTOL9 = new Double(s);
+}
+}
+
+protected final void initUDEBTBLU_I(String s) {
+if (!s.trim().isEmpty()) {
+UDEBTBLU_I = new Double(s);
+}
+}
+
+protected final void initUDEBTBLU_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+UDEBTBLU_IFLAG = new Double(s);
+}
+}
+
+protected final void initUDEBTBL_I(String s) {
+if (!s.trim().isEmpty()) {
+UDEBTBL_I = new Double(s);
+}
+}
+
+protected final void initUDEBTBL_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+UDEBTBL_IFLAG = new Double(s);
+}
+}
+
+protected final void initUDEBTBOR_I(String s) {
+if (!s.trim().isEmpty()) {
+UDEBTBOR_I = new Double(s);
+}
+}
+
+protected final void initUDEBTBOR_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+UDEBTBOR_IFLAG = new Double(s);
+}
+}
+
+protected final void initUDEBTBOS_I(String s) {
+if (!s.trim().isEmpty()) {
+UDEBTBOS_I = new Double(s);
+}
+}
+
+protected final void initUDEBTBOS_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+UDEBTBOS_IFLAG = new Double(s);
+}
+}
+
+protected final void initUDEBTBO_I(String s) {
+if (!s.trim().isEmpty()) {
+UDEBTBO_I = new Double(s);
+}
+}
+
+protected final void initUDEBTBO_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+UDEBTBO_IFLAG = new Double(s);
+}
+}
+
+protected final void initUDEBTBS_I(String s) {
+if (!s.trim().isEmpty()) {
+UDEBTBS_I = new Double(s);
+}
+}
+
+protected final void initUDEBTBS_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+UDEBTBS_IFLAG = new Double(s);
+}
+}
+
+protected final void initUPROP5(String s) {
+if (!s.trim().isEmpty()) {
+UPROP5 = new Double(s);
+}
+}
+
+protected final void initUPRTYP1(String s) {
+if (!s.trim().isEmpty()) {
+UPRTYP1 = new Double(s);
+}
+}
+
+protected final void initUVALBLU_I(String s) {
+if (!s.trim().isEmpty()) {
+UVALBLU_I = new Double(s);
+}
+}
+
+protected final void initUVALBLU_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+UVALBLU_IFLAG = new Double(s);
+}
+}
+
+protected final void initUVALBL_I(String s) {
+if (!s.trim().isEmpty()) {
+UVALBL_I = new Double(s);
+}
+}
+
+protected final void initUVALBL_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+UVALBL_IFLAG = new Double(s);
+}
+}
+
+protected final void initUVALBOR_I(String s) {
+if (!s.trim().isEmpty()) {
+UVALBOR_I = new Double(s);
+}
+}
+
+protected final void initUVALBOR_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+UVALBOR_IFLAG = new Double(s);
+}
+}
+
+protected final void initUVALBOS_I(String s) {
+if (!s.trim().isEmpty()) {
+UVALBOS_I = new Double(s);
+}
+}
+
+protected final void initUVALBOS_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+UVALBOS_IFLAG = new Double(s);
+}
+}
+
+protected final void initUVALBO_I(String s) {
+if (!s.trim().isEmpty()) {
+UVALBO_I = new Double(s);
+}
+}
+
+protected final void initUVALBO_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+UVALBO_IFLAG = new Double(s);
+}
+}
+
+protected final void initUVALBS_I(String s) {
+if (!s.trim().isEmpty()) {
+UVALBS_I = new Double(s);
+}
+}
+
+protected final void initUVALBS_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+UVALBS_IFLAG = new Double(s);
+}
+}
+
+protected final void initWAGEBEN1(String s) {
+if (!s.trim().isEmpty()) {
+WAGEBEN1 = new Double(s);
+}
+}
+
+protected final void initWAGEBEN1_I(String s) {
+if (!s.trim().isEmpty()) {
+WAGEBEN1_I = new Double(s);
+}
+}
+
+protected final void initWAGEBEN2(String s) {
+if (!s.trim().isEmpty()) {
+WAGEBEN2 = new Double(s);
+}
+}
+
+protected final void initWAGEBEN2_I(String s) {
+if (!s.trim().isEmpty()) {
+WAGEBEN2_I = new Double(s);
+}
+}
+
+protected final void initWAGEBEN3(String s) {
+if (!s.trim().isEmpty()) {
+WAGEBEN3 = new Double(s);
+}
+}
+
+protected final void initWAGEBEN3_I(String s) {
+if (!s.trim().isEmpty()) {
+WAGEBEN3_I = new Double(s);
+}
+}
+
+protected final void initWAGEBEN4(String s) {
+if (!s.trim().isEmpty()) {
+WAGEBEN4 = new Double(s);
+}
+}
+
+protected final void initWAGEBEN4_I(String s) {
+if (!s.trim().isEmpty()) {
+WAGEBEN4_I = new Double(s);
+}
+}
+
+protected final void initWAGEBEN5(String s) {
+if (!s.trim().isEmpty()) {
+WAGEBEN5 = new Double(s);
+}
+}
+
+protected final void initWAGEBEN5_I(String s) {
+if (!s.trim().isEmpty()) {
+WAGEBEN5_I = new Double(s);
+}
+}
+
+protected final void initWAGEBEN6(String s) {
+if (!s.trim().isEmpty()) {
+WAGEBEN6 = new Double(s);
+}
+}
+
+protected final void initWAGEBEN6_I(String s) {
+if (!s.trim().isEmpty()) {
+WAGEBEN6_I = new Double(s);
+}
+}
+
+protected final void initWAGEBEN_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+WAGEBEN_IFLAG = new Double(s);
+}
+}
+
+protected final void initWPBTHA1(String s) {
+if (!s.trim().isEmpty()) {
+WPBTHA1 = new Double(s);
+}
+}
+
+protected final void initWPBTHA2(String s) {
+if (!s.trim().isEmpty()) {
+WPBTHA2 = new Double(s);
+}
+}
+
+protected final void initWPBTHP1(String s) {
+if (!s.trim().isEmpty()) {
+WPBTHP1 = new Double(s);
+}
+}
+
+protected final void initWPBTHP2(String s) {
+if (!s.trim().isEmpty()) {
+WPBTHP2 = new Double(s);
+}
+}
+
+protected final void initWPERA1(String s) {
+if (!s.trim().isEmpty()) {
+WPERA1 = new Double(s);
+}
+}
+
+protected final void initWPERA2(String s) {
+if (!s.trim().isEmpty()) {
+WPERA2 = new Double(s);
+}
+}
+
+protected final void initWPNRA1(String s) {
+if (!s.trim().isEmpty()) {
+WPNRA1 = new Double(s);
+}
+}
+
+protected final void initWPNRA2(String s) {
+if (!s.trim().isEmpty()) {
+WPNRA2 = new Double(s);
+}
+}
+
+protected final void initYEARW1(String s) {
+if (!s.trim().isEmpty()) {
+YEARW1 = new Double(s);
+}
+}
+
+protected final void initYEARW2(String s) {
+if (!s.trim().isEmpty()) {
+YEARW2 = new Double(s);
+}
+}
+
+protected final void initYEARW3(String s) {
+if (!s.trim().isEmpty()) {
+YEARW3 = new Double(s);
+}
+}
+
+public Double getADAMT1() {
+return ADAMT1;
+}
+
+public Double getADAMT2() {
+return ADAMT2;
+}
+
+public Double getADAMT3() {
+return ADAMT3;
+}
+
+public Double getADAVAIL1() {
+return ADAVAIL1;
+}
+
+public Double getADAVAIL2() {
+return ADAVAIL2;
+}
+
+public Double getADAVAIL3() {
+return ADAVAIL3;
+}
+
+public Double getADCONS1() {
+return ADCONS1;
+}
+
+public Double getADCONS2() {
+return ADCONS2;
+}
+
+public Double getADCONS3() {
+return ADCONS3;
+}
+
+public Double getADCOST1() {
+return ADCOST1;
+}
+
+public Double getADCOST2() {
+return ADCOST2;
+}
+
+public Double getADCOST3() {
+return ADCOST3;
+}
+
+public Double getADFUR1() {
+return ADFUR1;
+}
+
+public Double getADFUR2() {
+return ADFUR2;
+}
+
+public Double getADFUR3() {
+return ADFUR3;
+}
+
+public Double getADJOINT1() {
+return ADJOINT1;
+}
+
+public Double getADJOINT2() {
+return ADJOINT2;
+}
+
+public Double getADJOINT3() {
+return ADJOINT3;
+}
+
+public Double getADPAY1() {
+return ADPAY1;
+}
+
+public Double getADPAY2() {
+return ADPAY2;
+}
+
+public Double getADPAY3() {
+return ADPAY3;
+}
+
+public Double getADPROD1() {
+return ADPROD1;
+}
+
+public Double getADPROD2() {
+return ADPROD2;
+}
+
+public Double getADPROD3() {
+return ADPROD3;
+}
+
+public Double getADPURCH1() {
+return ADPURCH1;
+}
+
+public Double getADPURCH2() {
+return ADPURCH2;
+}
+
+public Double getADPURCH3() {
+return ADPURCH3;
+}
+
+public Double getADRECORD1() {
+return ADRECORD1;
+}
+
+public Double getADRECORD2() {
+return ADRECORD2;
+}
+
+public Double getADRECORD3() {
+return ADRECORD3;
+}
+
+public Double getADSAT1() {
+return ADSAT1;
+}
+
+public Double getADSAT2() {
+return ADSAT2;
+}
+
+public Double getADSAT3() {
+return ADSAT3;
+}
+
+public Double getADSATREFLECT1() {
+return ADSATREFLECT1;
+}
+
+public Double getADSATREFLECT2() {
+return ADSATREFLECT2;
+}
+
+public Double getADSATREFLECT3() {
+return ADSATREFLECT3;
+}
+
+public Double getADSAVINV1() {
+return ADSAVINV1;
+}
+
+public Double getADSAVINV10() {
+return ADSAVINV10;
+}
+
+public Double getADSAVINV11() {
+return ADSAVINV11;
+}
+
+public Double getADSAVINV12() {
+return ADSAVINV12;
+}
+
+public Double getADSAVINV13() {
+return ADSAVINV13;
+}
+
+public Double getADSAVINV14() {
+return ADSAVINV14;
+}
+
+public Double getADSAVINV15() {
+return ADSAVINV15;
+}
+
+public Double getADSAVINV19() {
+return ADSAVINV19;
+}
+
+public Double getADSAVINV2() {
+return ADSAVINV2;
+}
+
+public Double getADSAVINV20() {
+return ADSAVINV20;
+}
+
+public Double getADSAVINV21() {
+return ADSAVINV21;
+}
+
+public Double getADSAVINV3() {
+return ADSAVINV3;
+}
+
+public Double getADSAVINV4() {
+return ADSAVINV4;
+}
+
+public Double getADSAVINV5() {
+return ADSAVINV5;
+}
+
+public Double getADSAVINV6() {
+return ADSAVINV6;
+}
+
+public Double getADSAVINV7() {
+return ADSAVINV7;
+}
+
+public Double getADSAVINV8() {
+return ADSAVINV8;
+}
+
+public Double getADSAVINV9() {
+return ADSAVINV9;
+}
+
+public Double getADTYP1() {
+return ADTYP1;
+}
+
+public Double getADTYP2() {
+return ADTYP2;
+}
+
+public Double getADTYP3() {
+return ADTYP3;
+}
+
+public Double getADVICE() {
+return ADVICE;
+}
+
+public Double getADVNUMALL() {
+return ADVNUMALL;
+}
+
+public Double getADVREAS1() {
+return ADVREAS1;
+}
+
+public Double getADVREAS2() {
+return ADVREAS2;
+}
+
+public Double getADVREAS3() {
+return ADVREAS3;
+}
+
+public Double getADWHO01() {
+return ADWHO01;
+}
+
+public Double getADWHO02() {
+return ADWHO02;
+}
+
+public Double getADWHO15() {
+return ADWHO15;
+}
+
+public Double getADWHO16() {
+return ADWHO16;
+}
+
+public Double getADWHO17() {
+return ADWHO17;
+}
+
+public Double getADWHO31() {
+return ADWHO31;
+}
+
+public Double getADWHO32() {
+return ADWHO32;
+}
+
+public Double getAGEASAF() {
+return AGEASAF;
+}
+
+public Double getANNUITY1() {
+return ANNUITY1;
+}
+
+public Double getANNUITY2() {
+return ANNUITY2;
+}
+
+public Double getANYOTHERB_IFLAG() {
+return ANYOTHERB_IFLAG;
+}
+
+public Double getBENINTRO() {
+return BENINTRO;
+}
+
+public Double getCACTVB_I() {
+return CACTVB_I;
+}
+
+public Double getCACTVB_IFLAG() {
+return CACTVB_IFLAG;
+}
+
+public Double getCAJISA() {
+return CAJISA;
+}
+
+public Double getCASEW4() {
+return CASEW4;
+}
+
+public Double getCASVB_I() {
+return CASVB_I;
+}
+
+public Double getCASVB_IFLAG() {
+return CASVB_IFLAG;
+}
+
+public Double getCATYPE1() {
+return CATYPE1;
+}
+
+public Double getCATYPE2() {
+return CATYPE2;
+}
+
+public Double getDBURDW3() {
+return DBURDW3;
+}
+
+public Double getDCARRCL01() {
+return DCARRCL01;
+}
+
+public Double getDCARRCL02() {
+return DCARRCL02;
+}
+
+public Double getDCARRCL03() {
+return DCARRCL03;
+}
+
+public Double getDCARRCL04() {
+return DCARRCL04;
+}
+
+public Double getDCBE2YR1() {
+return DCBE2YR1;
+}
+
+public Double getDCBE2YR2() {
+return DCBE2YR2;
+}
+
+public Double getDCBE2YR3() {
+return DCBE2YR3;
+}
+
+public Double getDHBEST01_I() {
+return DHBEST01_I;
+}
+
+public Double getDHBEST01_IFLAG() {
+return DHBEST01_IFLAG;
+}
+
+public Double getDHBEST02_I() {
+return DHBEST02_I;
+}
+
+public Double getDHBEST02_IFLAG() {
+return DHBEST02_IFLAG;
+}
+
+public Double getDHBEST03_I() {
+return DHBEST03_I;
+}
+
+public Double getDHBEST03_IFLAG() {
+return DHBEST03_IFLAG;
+}
+
+public Double getDHBEST04_I() {
+return DHBEST04_I;
+}
+
+public Double getDHBEST04_IFLAG() {
+return DHBEST04_IFLAG;
+}
+
+public Double getDHBEST05_I() {
+return DHBEST05_I;
+}
+
+public Double getDHBEST05_IFLAG() {
+return DHBEST05_IFLAG;
+}
+
+public Double getDHBEST06_I() {
+return DHBEST06_I;
+}
+
+public Double getDHBEST06_IFLAG() {
+return DHBEST06_IFLAG;
+}
+
+public Double getDHBEST07_I() {
+return DHBEST07_I;
+}
+
+public Double getDHBEST07_IFLAG() {
+return DHBEST07_IFLAG;
+}
+
+public Double getDHBEST08_I() {
+return DHBEST08_I;
+}
+
+public Double getDHBEST08_IFLAG() {
+return DHBEST08_IFLAG;
+}
+
+public Double getDHBEST09_I() {
+return DHBEST09_I;
+}
+
+public Double getDHBEST09_IFLAG() {
+return DHBEST09_IFLAG;
+}
+
+public Double getDHBEST10_I() {
+return DHBEST10_I;
+}
+
+public Double getDHBEST10_IFLAG() {
+return DHBEST10_IFLAG;
+}
+
+public Double getDHBEST11_I() {
+return DHBEST11_I;
+}
+
+public Double getDHBEST11_IFLAG() {
+return DHBEST11_IFLAG;
+}
+
+public Double getDISBEN1() {
+return DISBEN1;
+}
+
+public Double getDISBEN1_I() {
+return DISBEN1_I;
+}
+
+public Double getDISBEN2() {
+return DISBEN2;
+}
+
+public Double getDISBEN2_I() {
+return DISBEN2_I;
+}
+
+public Double getDISBEN3() {
+return DISBEN3;
+}
+
+public Double getDISBEN3_I() {
+return DISBEN3_I;
+}
+
+public Double getDISBEN_IFLAG() {
+return DISBEN_IFLAG;
+}
+
+public Double getDLEST1_I() {
+return DLEST1_I;
+}
+
+public Double getDLEST1_IFLAG() {
+return DLEST1_IFLAG;
+}
+
+public Double getDLEST2_I() {
+return DLEST2_I;
+}
+
+public Double getDLEST2_IFLAG() {
+return DLEST2_IFLAG;
+}
+
+public Double getDLEST3_I() {
+return DLEST3_I;
+}
+
+public Double getDLEST3_IFLAG() {
+return DLEST3_IFLAG;
+}
+
+public Double getDLEST4_I() {
+return DLEST4_I;
+}
+
+public Double getDLEST4_IFLAG() {
+return DLEST4_IFLAG;
+}
+
+public Double getDLEST5_I() {
+return DLEST5_I;
+}
+
+public Double getDLEST5_IFLAG() {
+return DLEST5_IFLAG;
+}
+
+public Double getDSLEST1_I() {
+return DSLEST1_I;
+}
+
+public Double getDSLEST1_IFLAG() {
+return DSLEST1_IFLAG;
+}
+
+public Double getDSLEST2_I() {
+return DSLEST2_I;
+}
+
+public Double getDSLEST2_IFLAG() {
+return DSLEST2_IFLAG;
+}
+
+public Double getDSLEST3_I() {
+return DSLEST3_I;
+}
+
+public Double getDSLEST3_IFLAG() {
+return DSLEST3_IFLAG;
+}
+
+public Double getDSLEST4_I() {
+return DSLEST4_I;
+}
+
+public Double getDSLEST4_IFLAG() {
+return DSLEST4_IFLAG;
+}
+
+public Double getDSLEST5_I() {
+return DSLEST5_I;
+}
+
+public Double getDSNUM1() {
+return DSNUM1;
+}
+
+public Double getDVBENEFITANNUAL_I() {
+return DVBENEFITANNUAL_I;
+}
+
+public Double getDVCOINV1() {
+return DVCOINV1;
+}
+
+public Double getDVECACT() {
+return DVECACT;
+}
+
+public Double getDVGRSBAND_I() {
+return DVGRSBAND_I;
+}
+
+public Double getDVGRSBAND_IFLAG() {
+return DVGRSBAND_IFLAG;
+}
+
+public Double getDVMRDF12() {
+return DVMRDF12;
+}
+
+public Double getDVNETBAND_I() {
+return DVNETBAND_I;
+}
+
+public Double getDVNETBAND_IFLAG() {
+return DVNETBAND_IFLAG;
+}
+
+public Double getDVSHODVAL1() {
+return DVSHODVAL1;
+}
+
+public Double getFINFVB_I() {
+return FINFVB_I;
+}
+
+public Double getFINFVB_IFLAG() {
+return FINFVB_IFLAG;
+}
+
+public Double getFLOANVB_I() {
+return FLOANVB_I;
+}
+
+public Double getFLOANVB_IFLAG() {
+return FLOANVB_IFLAG;
+}
+
+public Double getFNSVAL() {
+return FNSVAL;
+}
+
+public Double getFNSVAL_I() {
+return FNSVAL_I;
+}
+
+public Double getHASBOND() {
+return HASBOND;
+}
+
+public Double getHASCC() {
+return HASCC;
+}
+
+public Double getHASEMPSH() {
+return HASEMPSH;
+}
+
+public Double getHASGILT() {
+return HASGILT;
+}
+
+public Double getHASISA() {
+return HASISA;
+}
+
+public Double getHASLINS() {
+return HASLINS;
+}
+
+public Double getHASNOFA() {
+return HASNOFA;
+}
+
+public Double getHASNSP() {
+return HASNSP;
+}
+
+public Double getHASOINV() {
+return HASOINV;
+}
+
+public Double getHASOTHSH() {
+return HASOTHSH;
+}
+
+public Double getHASSC() {
+return HASSC;
+}
+
+public Double getHASSHSAC() {
+return HASSHSAC;
+}
+
+public Double getHASUTRUST() {
+return HASUTRUST;
+}
+
+public Double getHRPDVECACT() {
+return HRPDVECACT;
+}
+
+public Double getIGFVALB_I() {
+return IGFVALB_I;
+}
+
+public Double getIGFVALB_IFLAG() {
+return IGFVALB_IFLAG;
+}
+
+public Double getILACB_I() {
+return ILACB_I;
+}
+
+public Double getILACB_IFLAG() {
+return ILACB_IFLAG;
+}
+
+public Double getILINB_I() {
+return ILINB_I;
+}
+
+public Double getILINB_IFLAG() {
+return ILINB_IFLAG;
+}
+
+public Double getILOTB_I() {
+return ILOTB_I;
+}
+
+public Double getILOTB_IFLAG() {
+return ILOTB_IFLAG;
+}
+
+public Double getILRDB_I() {
+return ILRDB_I;
+}
+
+public Double getILRDB_IFLAG() {
+return ILRDB_IFLAG;
+}
+
+public Double getILUPB_I() {
+return ILUPB_I;
+}
+
+public Double getILUPB_IFLAG() {
+return ILUPB_IFLAG;
+}
+
+public Double getILWNB_I() {
+return ILWNB_I;
+}
+
+public Double getILWNB_IFLAG() {
+return ILWNB_IFLAG;
+}
+
+public Double getIVALB1_I() {
+return IVALB1_I;
+}
+
+public Double getIVALB1_IFLAG() {
+return IVALB1_IFLAG;
+}
+
+public Double getIVALB2_I() {
+return IVALB2_I;
+}
+
+public Double getIVALB2_IFLAG() {
+return IVALB2_IFLAG;
+}
+
+public Double getIVALB3_I() {
+return IVALB3_I;
+}
+
+public Double getIVALB3_IFLAG() {
+return IVALB3_IFLAG;
+}
+
+public Double getIWHO1() {
+return IWHO1;
+}
+
+public Double getKIDBEN1() {
+return KIDBEN1;
+}
+
+public Double getKIDBEN1_I() {
+return KIDBEN1_I;
+}
+
+public Double getKIDBEN2() {
+return KIDBEN2;
+}
+
+public Double getKIDBEN2_I() {
+return KIDBEN2_I;
+}
+
+public Double getKIDBEN_IFLAG() {
+return KIDBEN_IFLAG;
+}
+
+public Double getKNOWWPR() {
+return KNOWWPR;
+}
+
+public Double getLIVWTH12() {
+return LIVWTH12;
+}
+
+public Double getLNLFT6() {
+return LNLFT6;
+}
+
+public Double getLNLFT7() {
+return LNLFT7;
+}
+
+public Double getLNLFT8() {
+return LNLFT8;
+}
+
+public Double getLNLFT9() {
+return LNLFT9;
+}
+
+public Double getLNOS6() {
+return LNOS6;
+}
+
+public Double getLNOS7() {
+return LNOS7;
+}
+
+public Double getLNOS8() {
+return LNOS8;
+}
+
+public Double getLNOS9() {
+return LNOS9;
+}
+
+public Double getMONTHW1() {
+return MONTHW1;
+}
+
+public Double getMONTHW2() {
+return MONTHW2;
+}
+
+public Double getMONTHW3() {
+return MONTHW3;
+}
+
+public Double getNWFLNVAL4() {
+return NWFLNVAL4;
+}
+
+public Double getOTHERBEN1() {
+return OTHERBEN1;
+}
+
+public Double getOTHERBEN1_I() {
+return OTHERBEN1_I;
+}
+
+public Double getOTHERBEN2() {
+return OTHERBEN2;
+}
+
+public Double getOTHERBEN2_I() {
+return OTHERBEN2_I;
+}
+
+public Double getOTHERBEN3() {
+return OTHERBEN3;
+}
+
+public Double getOTHERBEN3_I() {
+return OTHERBEN3_I;
+}
+
+public Double getOTHERBEN4() {
+return OTHERBEN4;
+}
+
+public Double getOTHERBEN4_I() {
+return OTHERBEN4_I;
+}
+
+public Double getOTHERBEN_IFLAG() {
+return OTHERBEN_IFLAG;
+}
+
+public Double getOWHYSAV1() {
+return OWHYSAV1;
+}
+
+public Double getOWHYSAV2() {
+return OWHYSAV2;
+}
+
+public Double getOWHYSAV3() {
+return OWHYSAV3;
+}
+
+public Double getOWHYSAV4() {
+return OWHYSAV4;
+}
+
+public Double getOWHYSAV5() {
+return OWHYSAV5;
+}
+
+public Double getOWHYSAV6() {
+return OWHYSAV6;
+}
+
+public Double getOWHYSAV7() {
+return OWHYSAV7;
+}
+
+public Double getOWHYSAV8() {
+return OWHYSAV8;
+}
+
+public Double getOWHYSAV9() {
+return OWHYSAV9;
+}
+
+public Double getPAVCVB1_I() {
+return PAVCVB1_I;
+}
+
+public Double getPAVCVB1_IFLAG() {
+return PAVCVB1_IFLAG;
+}
+
+public Double getPAVCVB2_I() {
+return PAVCVB2_I;
+}
+
+public Double getPAVCVB2_IFLAG() {
+return PAVCVB2_IFLAG;
+}
+
+public Double getPBLMVB1_I() {
+return PBLMVB1_I;
+}
+
+public Double getPBLMVB1_IFLAG() {
+return PBLMVB1_IFLAG;
+}
+
+public Double getPBLMVB2_I() {
+return PBLMVB2_I;
+}
+
+public Double getPBLMVB2_IFLAG() {
+return PBLMVB2_IFLAG;
+}
+
+public Double getPDCVB1_I() {
+return PDCVB1_I;
+}
+
+public Double getPDCVB1_IFLAG() {
+return PDCVB1_IFLAG;
+}
+
+public Double getPDCVB2_I() {
+return PDCVB2_I;
+}
+
+public Double getPDCVB2_IFLAG() {
+return PDCVB2_IFLAG;
+}
+
+public Double getPENBEN1() {
+return PENBEN1;
+}
+
+public Double getPENBEN1_I() {
+return PENBEN1_I;
+}
+
+public Double getPENBEN2() {
+return PENBEN2;
+}
+
+public Double getPENBEN2_I() {
+return PENBEN2_I;
+}
+
+public Double getPENBEN3() {
+return PENBEN3;
+}
+
+public Double getPENBEN3_I() {
+return PENBEN3_I;
+}
+
+public Double getPENBEN_IFLAG() {
+return PENBEN_IFLAG;
+}
+
+public Double getPERSONW4() {
+return PERSONW4;
+}
+
+public Double getPFCUVB1_I() {
+return PFCUVB1_I;
+}
+
+public Double getPFCUVB1_IFLAG() {
+return PFCUVB1_IFLAG;
+}
+
+public Double getPFCUVB2_I() {
+return PFCUVB2_I;
+}
+
+public Double getPFCUVB2_IFLAG() {
+return PFCUVB2_IFLAG;
+}
+
+public Double getPFCUVB3_I() {
+return PFCUVB3_I;
+}
+
+public Double getPFCUVB3_IFLAG() {
+return PFCUVB3_IFLAG;
+}
+
+public Double getPFCUVB4_I() {
+return PFCUVB4_I;
+}
+
+public Double getPFCUVB4_IFLAG() {
+return PFCUVB4_IFLAG;
+}
+
+public Double getPFCUVB5_I() {
+return PFCUVB5_I;
+}
+
+public Double getPFCUVB5_IFLAG() {
+return PFCUVB5_IFLAG;
+}
+
+public Double getPFCUVB6_I() {
+return PFCUVB6_I;
+}
+
+public Double getPFCUVB6_IFLAG() {
+return PFCUVB6_IFLAG;
+}
+
+public Double getPFDDVB1_I() {
+return PFDDVB1_I;
+}
+
+public Double getPFDDVB1_IFLAG() {
+return PFDDVB1_IFLAG;
+}
+
+public Double getPFDDVB2_I() {
+return PFDDVB2_I;
+}
+
+public Double getPFDDVB2_IFLAG() {
+return PFDDVB2_IFLAG;
+}
+
+public Double getPFDDVB3_I() {
+return PFDDVB3_I;
+}
+
+public Double getPFDDVB3_IFLAG() {
+return PFDDVB3_IFLAG;
+}
+
+public Double getPFDDVB4_I() {
+return PFDDVB4_I;
+}
+
+public Double getPFDDVB4_IFLAG() {
+return PFDDVB4_IFLAG;
+}
+
+public Double getPFDDVB5_I() {
+return PFDDVB5_I;
+}
+
+public Double getPFDDVB5_IFLAG() {
+return PFDDVB5_IFLAG;
+}
+
+public Double getPFDDVB6_I() {
+return PFDDVB6_I;
+}
+
+public Double getPFDDVB6_IFLAG() {
+return PFDDVB6_IFLAG;
+}
+
+public Double getPFDRAW3() {
+return PFDRAW3;
+}
+
+public Double getPFLMVB1_I() {
+return PFLMVB1_I;
+}
+
+public Double getPFLMVB1_IFLAG() {
+return PFLMVB1_IFLAG;
+}
+
+public Double getPFLMVB2_I() {
+return PFLMVB2_I;
+}
+
+public Double getPFLMVB2_IFLAG() {
+return PFLMVB2_IFLAG;
+}
+
+public Double getPFLMVB3_I() {
+return PFLMVB3_I;
+}
+
+public Double getPFLMVB3_IFLAG() {
+return PFLMVB3_IFLAG;
+}
+
+public Double getPFLMVB4_I() {
+return PFLMVB4_I;
+}
+
+public Double getPFLMVB4_IFLAG() {
+return PFLMVB4_IFLAG;
+}
+
+public Double getPFLUVB1_I() {
+return PFLUVB1_I;
+}
+
+public Double getPFLUVB1_IFLAG() {
+return PFLUVB1_IFLAG;
+}
+
+public Double getPFLUVB2_I() {
+return PFLUVB2_I;
+}
+
+public Double getPFLUVB2_IFLAG() {
+return PFLUVB2_IFLAG;
+}
+
+public Double getPFLUVB3_I() {
+return PFLUVB3_I;
+}
+
+public Double getPFLUVB3_IFLAG() {
+return PFLUVB3_IFLAG;
+}
+
+public Double getPFLUVB4_I() {
+return PFLUVB4_I;
+}
+
+public Double getPFLUVB4_IFLAG() {
+return PFLUVB4_IFLAG;
+}
+
+public Double getPFLUVB5_I() {
+return PFLUVB5_I;
+}
+
+public Double getPFLUVB5_IFLAG() {
+return PFLUVB5_IFLAG;
+}
+
+public Double getPFLUVB6_I() {
+return PFLUVB6_I;
+}
+
+public Double getPFLUVB6_IFLAG() {
+return PFLUVB6_IFLAG;
+}
+
+public Double getPMORTC1() {
+return PMORTC1;
+}
+
+public Double getPOCNAMT1() {
+return POCNAMT1;
+}
+
+public Double getPOCNAMT2() {
+return POCNAMT2;
+}
+
+public Double getPOLMVB1_I() {
+return POLMVB1_I;
+}
+
+public Double getPOLMVB1_IFLAG() {
+return POLMVB1_IFLAG;
+}
+
+public Double getPOLMVB2_I() {
+return POLMVB2_I;
+}
+
+public Double getPOLMVB2_IFLAG() {
+return POLMVB2_IFLAG;
+}
+
+public Double getPOPYCH1() {
+return POPYCH1;
+}
+
+public Double getPORAGE1T() {
+return PORAGE1T;
+}
+
+public Double getPORAGE2T() {
+return PORAGE2T;
+}
+
+public Double getPPCNHOW3() {
+return PPCNHOW3;
+}
+
+public Double getPPCONCH1() {
+return PPCONCH1;
+}
+
+public Double getPPDRINCB1() {
+return PPDRINCB1;
+}
+
+public Double getPPLMVB1_I() {
+return PPLMVB1_I;
+}
+
+public Double getPPLMVB1_IFLAG() {
+return PPLMVB1_IFLAG;
+}
+
+public Double getPPLMVB2_I() {
+return PPLMVB2_I;
+}
+
+public Double getPPLMVB2_IFLAG() {
+return PPLMVB2_IFLAG;
+}
+
+public Double getPPLMVB3_I() {
+return PPLMVB3_I;
+}
+
+public Double getPPLMVB3_IFLAG() {
+return PPLMVB3_IFLAG;
+}
+
+public Double getPPRGAM1() {
+return PPRGAM1;
+}
+
+public Double getPPVALB1_I() {
+return PPVALB1_I;
+}
+
+public Double getPPVALB1_IFLAG() {
+return PPVALB1_IFLAG;
+}
+
+public Double getPPVALB2_I() {
+return PPVALB2_I;
+}
+
+public Double getPPVALB2_IFLAG() {
+return PPVALB2_IFLAG;
+}
+
+public Double getPPVALB3_I() {
+return PPVALB3_I;
+}
+
+public Double getPPVALB3_IFLAG() {
+return PPVALB3_IFLAG;
+}
+
+public Double getSAVDEP() {
+return SAVDEP;
+}
+
+public Double getSIC2007() {
+return SIC2007;
+}
+
+public Double getSOCFUND1() {
+return SOCFUND1;
+}
+
+public Double getSOCFUND1_I() {
+return SOCFUND1_I;
+}
+
+public Double getSOCFUND2() {
+return SOCFUND2;
+}
+
+public Double getSOCFUND2_I() {
+return SOCFUND2_I;
+}
+
+public Double getSOCFUND3() {
+return SOCFUND3;
+}
+
+public Double getSOCFUND3_I() {
+return SOCFUND3_I;
+}
+
+public Double getSOCFUND4() {
+return SOCFUND4;
+}
+
+public Double getSOCFUND4_I() {
+return SOCFUND4_I;
+}
+
+public Double getSOCFUND_IFLAG() {
+return SOCFUND_IFLAG;
+}
+
+public Double getTADDVL1() {
+return TADDVL1;
+}
+
+public Double getUBUYTOL1() {
+return UBUYTOL1;
+}
+
+public Double getUBUYTOL10() {
+return UBUYTOL10;
+}
+
+public Double getUBUYTOL11() {
+return UBUYTOL11;
+}
+
+public Double getUBUYTOL12() {
+return UBUYTOL12;
+}
+
+public Double getUBUYTOL2() {
+return UBUYTOL2;
+}
+
+public Double getUBUYTOL3() {
+return UBUYTOL3;
+}
+
+public Double getUBUYTOL4() {
+return UBUYTOL4;
+}
+
+public Double getUBUYTOL5() {
+return UBUYTOL5;
+}
+
+public Double getUBUYTOL6() {
+return UBUYTOL6;
+}
+
+public Double getUBUYTOL7() {
+return UBUYTOL7;
+}
+
+public Double getUBUYTOL8() {
+return UBUYTOL8;
+}
+
+public Double getUBUYTOL9() {
+return UBUYTOL9;
+}
+
+public Double getUDEBTBLU_I() {
+return UDEBTBLU_I;
+}
+
+public Double getUDEBTBLU_IFLAG() {
+return UDEBTBLU_IFLAG;
+}
+
+public Double getUDEBTBL_I() {
+return UDEBTBL_I;
+}
+
+public Double getUDEBTBL_IFLAG() {
+return UDEBTBL_IFLAG;
+}
+
+public Double getUDEBTBOR_I() {
+return UDEBTBOR_I;
+}
+
+public Double getUDEBTBOR_IFLAG() {
+return UDEBTBOR_IFLAG;
+}
+
+public Double getUDEBTBOS_I() {
+return UDEBTBOS_I;
+}
+
+public Double getUDEBTBOS_IFLAG() {
+return UDEBTBOS_IFLAG;
+}
+
+public Double getUDEBTBO_I() {
+return UDEBTBO_I;
+}
+
+public Double getUDEBTBO_IFLAG() {
+return UDEBTBO_IFLAG;
+}
+
+public Double getUDEBTBS_I() {
+return UDEBTBS_I;
+}
+
+public Double getUDEBTBS_IFLAG() {
+return UDEBTBS_IFLAG;
+}
+
+public Double getUPROP5() {
+return UPROP5;
+}
+
+public Double getUPRTYP1() {
+return UPRTYP1;
+}
+
+public Double getUVALBLU_I() {
+return UVALBLU_I;
+}
+
+public Double getUVALBLU_IFLAG() {
+return UVALBLU_IFLAG;
+}
+
+public Double getUVALBL_I() {
+return UVALBL_I;
+}
+
+public Double getUVALBL_IFLAG() {
+return UVALBL_IFLAG;
+}
+
+public Double getUVALBOR_I() {
+return UVALBOR_I;
+}
+
+public Double getUVALBOR_IFLAG() {
+return UVALBOR_IFLAG;
+}
+
+public Double getUVALBOS_I() {
+return UVALBOS_I;
+}
+
+public Double getUVALBOS_IFLAG() {
+return UVALBOS_IFLAG;
+}
+
+public Double getUVALBO_I() {
+return UVALBO_I;
+}
+
+public Double getUVALBO_IFLAG() {
+return UVALBO_IFLAG;
+}
+
+public Double getUVALBS_I() {
+return UVALBS_I;
+}
+
+public Double getUVALBS_IFLAG() {
+return UVALBS_IFLAG;
+}
+
+public Double getWAGEBEN1() {
+return WAGEBEN1;
+}
+
+public Double getWAGEBEN1_I() {
+return WAGEBEN1_I;
+}
+
+public Double getWAGEBEN2() {
+return WAGEBEN2;
+}
+
+public Double getWAGEBEN2_I() {
+return WAGEBEN2_I;
+}
+
+public Double getWAGEBEN3() {
+return WAGEBEN3;
+}
+
+public Double getWAGEBEN3_I() {
+return WAGEBEN3_I;
+}
+
+public Double getWAGEBEN4() {
+return WAGEBEN4;
+}
+
+public Double getWAGEBEN4_I() {
+return WAGEBEN4_I;
+}
+
+public Double getWAGEBEN5() {
+return WAGEBEN5;
+}
+
+public Double getWAGEBEN5_I() {
+return WAGEBEN5_I;
+}
+
+public Double getWAGEBEN6() {
+return WAGEBEN6;
+}
+
+public Double getWAGEBEN6_I() {
+return WAGEBEN6_I;
+}
+
+public Double getWAGEBEN_IFLAG() {
+return WAGEBEN_IFLAG;
+}
+
+public Double getWPBTHA1() {
+return WPBTHA1;
+}
+
+public Double getWPBTHA2() {
+return WPBTHA2;
+}
+
+public Double getWPBTHP1() {
+return WPBTHP1;
+}
+
+public Double getWPBTHP2() {
+return WPBTHP2;
+}
+
+public Double getWPERA1() {
+return WPERA1;
+}
+
+public Double getWPERA2() {
+return WPERA2;
+}
+
+public Double getWPNRA1() {
+return WPNRA1;
+}
+
+public Double getWPNRA2() {
+return WPNRA2;
+}
+
+public Double getYEARW1() {
+return YEARW1;
+}
+
+public Double getYEARW2() {
+return YEARW2;
+}
+
+public Double getYEARW3() {
+return YEARW3;
+}
+
 }

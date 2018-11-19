@@ -411,6 +411,1230 @@ protected static Double VTYPE2_IFLAG;
 
 protected static Double VTYPE_I;
 
+protected final void initDVBLDDEBT(String s) {
+if (!s.trim().isEmpty()) {
+DVBLDDEBT = new Double(s);
+}
+}
+
+protected final void initDVBLDVAL(String s) {
+if (!s.trim().isEmpty()) {
+DVBLDVAL = new Double(s);
+}
+}
+
+protected final void initDVCACRVAL_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVCACRVAL_SUM = new Double(s);
+}
+}
+
+protected final void initDVCACTV_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVCACTV_SUM = new Double(s);
+}
+}
+
+protected final void initDVCAODVAL_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVCAODVAL_SUM = new Double(s);
+}
+}
+
+protected final void initDVCASVV_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVCASVV_SUM = new Double(s);
+}
+}
+
+protected final void initDVCAVAL_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVCAVAL_SUM = new Double(s);
+}
+}
+
+protected final void initDVCISAV_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVCISAV_SUM = new Double(s);
+}
+}
+
+protected final void initDVDBRWEALTHVAL_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVDBRWEALTHVAL_SUM = new Double(s);
+}
+}
+
+protected final void initDVEQHIP(String s) {
+if (!s.trim().isEmpty()) {
+DVEQHIP = new Double(s);
+}
+}
+
+protected final void initDVEQRUPM(String s) {
+if (!s.trim().isEmpty()) {
+DVEQRUPM = new Double(s);
+}
+}
+
+protected final void initDVFBONDV_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVFBONDV_SUM = new Double(s);
+}
+}
+
+protected final void initDVFCOLLV_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVFCOLLV_SUM = new Double(s);
+}
+}
+
+protected final void initDVFESHARES_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVFESHARES_SUM = new Double(s);
+}
+}
+
+protected final void initDVFFASSETS_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVFFASSETS_SUM = new Double(s);
+}
+}
+
+protected final void initDVFGLTFOV_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVFGLTFOV_SUM = new Double(s);
+}
+}
+
+protected final void initDVFGLTUKV_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVFGLTUKV_SUM = new Double(s);
+}
+}
+
+protected final void initDVFINFLV_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVFINFLV_SUM = new Double(s);
+}
+}
+
+protected final void initDVFINFVAL_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVFINFVAL_SUM = new Double(s);
+}
+}
+
+protected final void initDVFINFV_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVFINFV_SUM = new Double(s);
+}
+}
+
+protected final void initDVFINVOTV_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVFINVOTV_SUM = new Double(s);
+}
+}
+
+protected final void initDVFNSVAL_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVFNSVAL_SUM = new Double(s);
+}
+}
+
+protected final void initDVFSHOSV_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVFSHOSV_SUM = new Double(s);
+}
+}
+
+protected final void initDVFSHUKV_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVFSHUKV_SUM = new Double(s);
+}
+}
+
+protected final void initDVHRPNUM(String s) {
+if (!s.trim().isEmpty()) {
+DVHRPNUM = new Double(s);
+}
+}
+
+protected final void initDVHSEDEBT(String s) {
+if (!s.trim().isEmpty()) {
+DVHSEDEBT = new Double(s);
+}
+}
+
+protected final void initDVHSEVAL(String s) {
+if (!s.trim().isEmpty()) {
+DVHSEVAL = new Double(s);
+}
+}
+
+protected final void initDVIISAV_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVIISAV_SUM = new Double(s);
+}
+}
+
+protected final void initDVINSV_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVINSV_SUM = new Double(s);
+}
+}
+
+protected final void initDVISAVAL_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVISAVAL_SUM = new Double(s);
+}
+}
+
+protected final void initDVKISAV_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVKISAV_SUM = new Double(s);
+}
+}
+
+protected final void initDVLOSDEBT(String s) {
+if (!s.trim().isEmpty()) {
+DVLOSDEBT = new Double(s);
+}
+}
+
+protected final void initDVLOSVAL(String s) {
+if (!s.trim().isEmpty()) {
+DVLOSVAL = new Double(s);
+}
+}
+
+protected final void initDVLUKDEBT(String s) {
+if (!s.trim().isEmpty()) {
+DVLUKDEBT = new Double(s);
+}
+}
+
+protected final void initDVLUKVAL(String s) {
+if (!s.trim().isEmpty()) {
+DVLUKVAL = new Double(s);
+}
+}
+
+protected final void initDVOPRDEBT(String s) {
+if (!s.trim().isEmpty()) {
+DVOPRDEBT = new Double(s);
+}
+}
+
+protected final void initDVOPRVAL(String s) {
+if (!s.trim().isEmpty()) {
+DVOPRVAL = new Double(s);
+}
+}
+
+protected final void initDVPAVCUV_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVPAVCUV_SUM = new Double(s);
+}
+}
+
+protected final void initDVPFCURVAL_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVPFCURVAL_SUM = new Double(s);
+}
+}
+
+protected final void initDVPFDDV_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVPFDDV_SUM = new Double(s);
+}
+}
+
+protected final void initDVPINPVAL_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVPINPVAL_SUM = new Double(s);
+}
+}
+
+protected final void initDVPPVAL_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVPPVAL_SUM = new Double(s);
+}
+}
+
+protected final void initDVSAVAL_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVSAVAL_SUM = new Double(s);
+}
+}
+
+protected final void initDVSPEN_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVSPEN_SUM = new Double(s);
+}
+}
+
+protected final void initDVTOTCARVAL(String s) {
+if (!s.trim().isEmpty()) {
+DVTOTCARVAL = new Double(s);
+}
+}
+
+protected final void initDVTOTMOTBVAL(String s) {
+if (!s.trim().isEmpty()) {
+DVTOTMOTBVAL = new Double(s);
+}
+}
+
+protected final void initDVTOTVANVAL(String s) {
+if (!s.trim().isEmpty()) {
+DVTOTVANVAL = new Double(s);
+}
+}
+
+protected final void initDVVALDBT_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVVALDBT_SUM = new Double(s);
+}
+}
+
+protected final void initDVVALDCOS_SUM(String s) {
+if (!s.trim().isEmpty()) {
+DVVALDCOS_SUM = new Double(s);
+}
+}
+
+protected final void initDVVESTV2_I(String s) {
+if (!s.trim().isEmpty()) {
+DVVESTV2_I = new Double(s);
+}
+}
+
+protected final void initDVVESTV2_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DVVESTV2_IFLAG = new Double(s);
+}
+}
+
+protected final void initDVVESTV3_I(String s) {
+if (!s.trim().isEmpty()) {
+DVVESTV3_I = new Double(s);
+}
+}
+
+protected final void initDVVESTV3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DVVESTV3_IFLAG = new Double(s);
+}
+}
+
+protected final void initDVVESTV_I(String s) {
+if (!s.trim().isEmpty()) {
+DVVESTV_I = new Double(s);
+}
+}
+
+protected final void initDVVESTV_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DVVESTV_IFLAG = new Double(s);
+}
+}
+
+protected final void initDVVOVAL_I(String s) {
+if (!s.trim().isEmpty()) {
+DVVOVAL_I = new Double(s);
+}
+}
+
+protected final void initDVVOVAL_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DVVOVAL_IFLAG = new Double(s);
+}
+}
+
+protected final void initDVVPERV_I(String s) {
+if (!s.trim().isEmpty()) {
+DVVPERV_I = new Double(s);
+}
+}
+
+protected final void initDVVPERV_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+DVVPERV_IFLAG = new Double(s);
+}
+}
+
+protected final void initEINTPAY(String s) {
+if (!s.trim().isEmpty()) {
+EINTPAY = new Double(s);
+}
+}
+
+protected final void initEOTHIRR(String s) {
+if (!s.trim().isEmpty()) {
+EOTHIRR = new Double(s);
+}
+}
+
+protected final void initEOTHIVA(String s) {
+if (!s.trim().isEmpty()) {
+EOTHIVA = new Double(s);
+}
+}
+
+protected final void initEOTHIVB(String s) {
+if (!s.trim().isEmpty()) {
+EOTHIVB = new Double(s);
+}
+}
+
+protected final void initEQFILTER(String s) {
+if (!s.trim().isEmpty()) {
+EQFILTER = new Double(s);
+}
+}
+
+protected final void initEQREAS1(String s) {
+if (!s.trim().isEmpty()) {
+EQREAS1 = new Double(s);
+}
+}
+
+protected final void initEQREAS2(String s) {
+if (!s.trim().isEmpty()) {
+EQREAS2 = new Double(s);
+}
+}
+
+protected final void initEQREAS3(String s) {
+if (!s.trim().isEmpty()) {
+EQREAS3 = new Double(s);
+}
+}
+
+protected final void initEQREAS4(String s) {
+if (!s.trim().isEmpty()) {
+EQREAS4 = new Double(s);
+}
+}
+
+protected final void initEQREL(String s) {
+if (!s.trim().isEmpty()) {
+EQREL = new Double(s);
+}
+}
+
+protected final void initEQREL_I(String s) {
+if (!s.trim().isEmpty()) {
+EQREL_I = new Double(s);
+}
+}
+
+protected final void initEQREL_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+EQREL_IFLAG = new Double(s);
+}
+}
+
+protected final void initEQTYPE(String s) {
+if (!s.trim().isEmpty()) {
+EQTYPE = new Double(s);
+}
+}
+
+protected final void initEQTYPE_I(String s) {
+if (!s.trim().isEmpty()) {
+EQTYPE_I = new Double(s);
+}
+}
+
+protected final void initEQTYPE_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+EQTYPE_IFLAG = new Double(s);
+}
+}
+
+protected final void initEQWHEN(String s) {
+if (!s.trim().isEmpty()) {
+EQWHEN = new Double(s);
+}
+}
+
+protected final void initEQYES_I(String s) {
+if (!s.trim().isEmpty()) {
+EQYES_I = new Double(s);
+}
+}
+
+protected final void initEQYES_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+EQYES_IFLAG = new Double(s);
+}
+}
+
+protected final void initERECM(String s) {
+if (!s.trim().isEmpty()) {
+ERECM = new Double(s);
+}
+}
+
+protected final void initERECMB(String s) {
+if (!s.trim().isEmpty()) {
+ERECMB = new Double(s);
+}
+}
+
+protected final void initERENTAM(String s) {
+if (!s.trim().isEmpty()) {
+ERENTAM = new Double(s);
+}
+}
+
+protected final void initERENTB(String s) {
+if (!s.trim().isEmpty()) {
+ERENTB = new Double(s);
+}
+}
+
+protected final void initERVREC(String s) {
+if (!s.trim().isEmpty()) {
+ERVREC = new Double(s);
+}
+}
+
+protected final void initERVRECB(String s) {
+if (!s.trim().isEmpty()) {
+ERVRECB = new Double(s);
+}
+}
+
+protected final void initERVREG(String s) {
+if (!s.trim().isEmpty()) {
+ERVREG = new Double(s);
+}
+}
+
+protected final void initGCONTVLS2(String s) {
+if (!s.trim().isEmpty()) {
+GCONTVLS2 = new Double(s);
+}
+}
+
+protected final void initGCPREAM(String s) {
+if (!s.trim().isEmpty()) {
+GCPREAM = new Double(s);
+}
+}
+
+protected final void initHFINL_SUM(String s) {
+if (!s.trim().isEmpty()) {
+HFINL_SUM = new Double(s);
+}
+}
+
+protected final void initHFINW_EXCENDW_SUM(String s) {
+if (!s.trim().isEmpty()) {
+HFINW_EXCENDW_SUM = new Double(s);
+}
+}
+
+protected final void initHPARR_SUM(String s) {
+if (!s.trim().isEmpty()) {
+HPARR_SUM = new Double(s);
+}
+}
+
+protected final void initHRPDVAGE15(String s) {
+if (!s.trim().isEmpty()) {
+HRPDVAGE15 = new Double(s);
+}
+}
+
+protected final void initHRPEMPSTAT2(String s) {
+if (!s.trim().isEmpty()) {
+HRPEMPSTAT2 = new Double(s);
+}
+}
+
+protected final void initHRPIOUT1(String s) {
+if (!s.trim().isEmpty()) {
+HRPIOUT1 = new Double(s);
+}
+}
+
+protected final void initHRPPART(String s) {
+if (!s.trim().isEmpty()) {
+HRPPART = new Double(s);
+}
+}
+
+protected final void initHRPPARTIOUT1(String s) {
+if (!s.trim().isEmpty()) {
+HRPPARTIOUT1 = new Double(s);
+}
+}
+
+protected final void initHVALRS1(String s) {
+if (!s.trim().isEmpty()) {
+HVALRS1 = new Double(s);
+}
+}
+
+protected final void initHVALRS2(String s) {
+if (!s.trim().isEmpty()) {
+HVALRS2 = new Double(s);
+}
+}
+
+protected final void initHVALRS3(String s) {
+if (!s.trim().isEmpty()) {
+HVALRS3 = new Double(s);
+}
+}
+
+protected final void initHVALRS4(String s) {
+if (!s.trim().isEmpty()) {
+HVALRS4 = new Double(s);
+}
+}
+
+protected final void initHVALRS5(String s) {
+if (!s.trim().isEmpty()) {
+HVALRS5 = new Double(s);
+}
+}
+
+protected final void initLNARR_SUM(String s) {
+if (!s.trim().isEmpty()) {
+LNARR_SUM = new Double(s);
+}
+}
+
+protected final void initMALL(String s) {
+if (!s.trim().isEmpty()) {
+MALL = new Double(s);
+}
+}
+
+protected final void initMALLTY(String s) {
+if (!s.trim().isEmpty()) {
+MALLTY = new Double(s);
+}
+}
+
+protected final void initMALLTY3_I(String s) {
+if (!s.trim().isEmpty()) {
+MALLTY3_I = new Double(s);
+}
+}
+
+protected final void initMALLTY3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+MALLTY3_IFLAG = new Double(s);
+}
+}
+
+protected final void initMALLTY_I(String s) {
+if (!s.trim().isEmpty()) {
+MALLTY_I = new Double(s);
+}
+}
+
+protected final void initMALLTY_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+MALLTY_IFLAG = new Double(s);
+}
+}
+
+protected final void initMALL_I(String s) {
+if (!s.trim().isEmpty()) {
+MALL_I = new Double(s);
+}
+}
+
+protected final void initMALL_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+MALL_IFLAG = new Double(s);
+}
+}
+
+protected final void initMARRS(String s) {
+if (!s.trim().isEmpty()) {
+MARRS = new Double(s);
+}
+}
+
+protected final void initMDIFFPY(String s) {
+if (!s.trim().isEmpty()) {
+MDIFFPY = new Double(s);
+}
+}
+
+protected final void initMENDNUM(String s) {
+if (!s.trim().isEmpty()) {
+MENDNUM = new Double(s);
+}
+}
+
+protected final void initMENDNUM_I(String s) {
+if (!s.trim().isEmpty()) {
+MENDNUM_I = new Double(s);
+}
+}
+
+protected final void initMENDNUM_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+MENDNUM_IFLAG = new Double(s);
+}
+}
+
+protected final void initMENDV(String s) {
+if (!s.trim().isEmpty()) {
+MENDV = new Double(s);
+}
+}
+
+protected final void initMENDVB(String s) {
+if (!s.trim().isEmpty()) {
+MENDVB = new Double(s);
+}
+}
+
+protected final void initMENDVB5(String s) {
+if (!s.trim().isEmpty()) {
+MENDVB5 = new Double(s);
+}
+}
+
+protected final void initMENDVB8(String s) {
+if (!s.trim().isEmpty()) {
+MENDVB8 = new Double(s);
+}
+}
+
+protected final void initMENDV_I(String s) {
+if (!s.trim().isEmpty()) {
+MENDV_I = new Double(s);
+}
+}
+
+protected final void initMENDV_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+MENDV_IFLAG = new Double(s);
+}
+}
+
+protected final void initMENDW(String s) {
+if (!s.trim().isEmpty()) {
+MENDW = new Double(s);
+}
+}
+
+protected final void initMENDW3(String s) {
+if (!s.trim().isEmpty()) {
+MENDW3 = new Double(s);
+}
+}
+
+protected final void initMENDW_I(String s) {
+if (!s.trim().isEmpty()) {
+MENDW_I = new Double(s);
+}
+}
+
+protected final void initMENDW_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+MENDW_IFLAG = new Double(s);
+}
+}
+
+protected final void initMENDX(String s) {
+if (!s.trim().isEmpty()) {
+MENDX = new Double(s);
+}
+}
+
+protected final void initMENDY(String s) {
+if (!s.trim().isEmpty()) {
+MENDY = new Double(s);
+}
+}
+
+protected final void initMENDY5(String s) {
+if (!s.trim().isEmpty()) {
+MENDY5 = new Double(s);
+}
+}
+
+protected final void initMENDY8(String s) {
+if (!s.trim().isEmpty()) {
+MENDY8 = new Double(s);
+}
+}
+
+protected final void initMHOWPY(String s) {
+if (!s.trim().isEmpty()) {
+MHOWPY = new Double(s);
+}
+}
+
+protected final void initMINC12(String s) {
+if (!s.trim().isEmpty()) {
+MINC12 = new Double(s);
+}
+}
+
+protected final void initMINC7(String s) {
+if (!s.trim().isEmpty()) {
+MINC7 = new Double(s);
+}
+}
+
+protected final void initMINC8(String s) {
+if (!s.trim().isEmpty()) {
+MINC8 = new Double(s);
+}
+}
+
+protected final void initMINC9(String s) {
+if (!s.trim().isEmpty()) {
+MINC9 = new Double(s);
+}
+}
+
+protected final void initMNAME(String s) {
+if (!s.trim().isEmpty()) {
+MNAME = new Double(s);
+}
+}
+
+protected final void initMNEG(String s) {
+if (!s.trim().isEmpty()) {
+MNEG = new Double(s);
+}
+}
+
+protected final void initMNEGB(String s) {
+if (!s.trim().isEmpty()) {
+MNEGB = new Double(s);
+}
+}
+
+protected final void initMNEG_I(String s) {
+if (!s.trim().isEmpty()) {
+MNEG_I = new Double(s);
+}
+}
+
+protected final void initMNEG_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+MNEG_IFLAG = new Double(s);
+}
+}
+
+protected final void initMOARR_SUM(String s) {
+if (!s.trim().isEmpty()) {
+MOARR_SUM = new Double(s);
+}
+}
+
+protected final void initMONAME(String s) {
+if (!s.trim().isEmpty()) {
+MONAME = new Double(s);
+}
+}
+
+protected final void initMPAYB(String s) {
+if (!s.trim().isEmpty()) {
+MPAYB = new Double(s);
+}
+}
+
+protected final void initMPAYM(String s) {
+if (!s.trim().isEmpty()) {
+MPAYM = new Double(s);
+}
+}
+
+protected final void initMPP(String s) {
+if (!s.trim().isEmpty()) {
+MPP = new Double(s);
+}
+}
+
+protected final void initMREAS08(String s) {
+if (!s.trim().isEmpty()) {
+MREAS08 = new Double(s);
+}
+}
+
+protected final void initMREAS09(String s) {
+if (!s.trim().isEmpty()) {
+MREAS09 = new Double(s);
+}
+}
+
+protected final void initMREAS11(String s) {
+if (!s.trim().isEmpty()) {
+MREAS11 = new Double(s);
+}
+}
+
+protected final void initMREAS21(String s) {
+if (!s.trim().isEmpty()) {
+MREAS21 = new Double(s);
+}
+}
+
+protected final void initMREAS22(String s) {
+if (!s.trim().isEmpty()) {
+MREAS22 = new Double(s);
+}
+}
+
+protected final void initMTYPE(String s) {
+if (!s.trim().isEmpty()) {
+MTYPE = new Double(s);
+}
+}
+
+protected final void initMTYPE_I(String s) {
+if (!s.trim().isEmpty()) {
+MTYPE_I = new Double(s);
+}
+}
+
+protected final void initMTYPE_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+MTYPE_IFLAG = new Double(s);
+}
+}
+
+protected final void initMVAL(String s) {
+if (!s.trim().isEmpty()) {
+MVAL = new Double(s);
+}
+}
+
+protected final void initMVALB(String s) {
+if (!s.trim().isEmpty()) {
+MVALB = new Double(s);
+}
+}
+
+protected final void initMVAL_I(String s) {
+if (!s.trim().isEmpty()) {
+MVAL_I = new Double(s);
+}
+}
+
+protected final void initMVAL_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+MVAL_IFLAG = new Double(s);
+}
+}
+
+protected final void initMYLFT(String s) {
+if (!s.trim().isEmpty()) {
+MYLFT = new Double(s);
+}
+}
+
+protected final void initNBABY(String s) {
+if (!s.trim().isEmpty()) {
+NBABY = new Double(s);
+}
+}
+
+protected final void initNC1015(String s) {
+if (!s.trim().isEmpty()) {
+NC1015 = new Double(s);
+}
+}
+
+protected final void initNC1618(String s) {
+if (!s.trim().isEmpty()) {
+NC1618 = new Double(s);
+}
+}
+
+protected final void initNC5TO9(String s) {
+if (!s.trim().isEmpty()) {
+NC5TO9 = new Double(s);
+}
+}
+
+protected final void initNCHILD(String s) {
+if (!s.trim().isEmpty()) {
+NCHILD = new Double(s);
+}
+}
+
+protected final void initNCU16(String s) {
+if (!s.trim().isEmpty()) {
+NCU16 = new Double(s);
+}
+}
+
+protected final void initNCUND5(String s) {
+if (!s.trim().isEmpty()) {
+NCUND5 = new Double(s);
+}
+}
+
+protected final void initNDEPC(String s) {
+if (!s.trim().isEmpty()) {
+NDEPC = new Double(s);
+}
+}
+
+protected final void initNNDEPC(String s) {
+if (!s.trim().isEmpty()) {
+NNDEPC = new Double(s);
+}
+}
+
+protected final void initNUMJOB(String s) {
+if (!s.trim().isEmpty()) {
+NUMJOB = new Double(s);
+}
+}
+
+protected final void initNUMSSEX(String s) {
+if (!s.trim().isEmpty()) {
+NUMSSEX = new Double(s);
+}
+}
+
+protected final void initNVESTV(String s) {
+if (!s.trim().isEmpty()) {
+NVESTV = new Double(s);
+}
+}
+
+protected final void initOTHMORT(String s) {
+if (!s.trim().isEmpty()) {
+OTHMORT = new Double(s);
+}
+}
+
+protected final void initTOTBILLARR_SUM(String s) {
+if (!s.trim().isEmpty()) {
+TOTBILLARR_SUM = new Double(s);
+}
+}
+
+protected final void initTOTCC_SUM(String s) {
+if (!s.trim().isEmpty()) {
+TOTCC_SUM = new Double(s);
+}
+}
+
+protected final void initTOTHP_SUM(String s) {
+if (!s.trim().isEmpty()) {
+TOTHP_SUM = new Double(s);
+}
+}
+
+protected final void initTOTLOS_SUM(String s) {
+if (!s.trim().isEmpty()) {
+TOTLOS_SUM = new Double(s);
+}
+}
+
+protected final void initTOTMO_SUM(String s) {
+if (!s.trim().isEmpty()) {
+TOTMO_SUM = new Double(s);
+}
+}
+
+protected final void initTOTPEN_SUM(String s) {
+if (!s.trim().isEmpty()) {
+TOTPEN_SUM = new Double(s);
+}
+}
+
+protected final void initTOTSC_SUM(String s) {
+if (!s.trim().isEmpty()) {
+TOTSC_SUM = new Double(s);
+}
+}
+
+protected final void initT_FLNS_SUM(String s) {
+if (!s.trim().isEmpty()) {
+T_FLNS_SUM = new Double(s);
+}
+}
+
+protected final void initT_LNS_SUM(String s) {
+if (!s.trim().isEmpty()) {
+T_LNS_SUM = new Double(s);
+}
+}
+
+protected final void initT_SLNS_SUM(String s) {
+if (!s.trim().isEmpty()) {
+T_SLNS_SUM = new Double(s);
+}
+}
+
+protected final void initVESTV(String s) {
+if (!s.trim().isEmpty()) {
+VESTV = new Double(s);
+}
+}
+
+protected final void initVESTV2(String s) {
+if (!s.trim().isEmpty()) {
+VESTV2 = new Double(s);
+}
+}
+
+protected final void initVESTV2_I(String s) {
+if (!s.trim().isEmpty()) {
+VESTV2_I = new Double(s);
+}
+}
+
+protected final void initVESTV2_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+VESTV2_IFLAG = new Double(s);
+}
+}
+
+protected final void initVESTV3(String s) {
+if (!s.trim().isEmpty()) {
+VESTV3 = new Double(s);
+}
+}
+
+protected final void initVESTV3_I(String s) {
+if (!s.trim().isEmpty()) {
+VESTV3_I = new Double(s);
+}
+}
+
+protected final void initVESTV3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+VESTV3_IFLAG = new Double(s);
+}
+}
+
+protected final void initVESTV_I(String s) {
+if (!s.trim().isEmpty()) {
+VESTV_I = new Double(s);
+}
+}
+
+protected final void initVESTV_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+VESTV_IFLAG = new Double(s);
+}
+}
+
+protected final void initVESVB(String s) {
+if (!s.trim().isEmpty()) {
+VESVB = new Double(s);
+}
+}
+
+protected final void initVESVB2(String s) {
+if (!s.trim().isEmpty()) {
+VESVB2 = new Double(s);
+}
+}
+
+protected final void initVESVB3(String s) {
+if (!s.trim().isEmpty()) {
+VESVB3 = new Double(s);
+}
+}
+
+protected final void initVOTHT(String s) {
+if (!s.trim().isEmpty()) {
+VOTHT = new Double(s);
+}
+}
+
+protected final void initVOTHT_I(String s) {
+if (!s.trim().isEmpty()) {
+VOTHT_I = new Double(s);
+}
+}
+
+protected final void initVOTHT_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+VOTHT_IFLAG = new Double(s);
+}
+}
+
+protected final void initVOTYP1_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+VOTYP1_IFLAG = new Double(s);
+}
+}
+
+protected final void initVOTYP2_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+VOTYP2_IFLAG = new Double(s);
+}
+}
+
+protected final void initVOTYP3_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+VOTYP3_IFLAG = new Double(s);
+}
+}
+
+protected final void initVOTYP4_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+VOTYP4_IFLAG = new Double(s);
+}
+}
+
+protected final void initVOTYP5(String s) {
+if (!s.trim().isEmpty()) {
+VOTYP5 = new Double(s);
+}
+}
+
+protected final void initVOTYP5_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+VOTYP5_IFLAG = new Double(s);
+}
+}
+
+protected final void initVOVLB_I(String s) {
+if (!s.trim().isEmpty()) {
+VOVLB_I = new Double(s);
+}
+}
+
+protected final void initVOVLB_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+VOVLB_IFLAG = new Double(s);
+}
+}
+
+protected final void initVTYPE(String s) {
+if (!s.trim().isEmpty()) {
+VTYPE = new Double(s);
+}
+}
+
+protected final void initVTYPE2_IFLAG(String s) {
+if (!s.trim().isEmpty()) {
+VTYPE2_IFLAG = new Double(s);
+}
+}
+
+protected final void initVTYPE_I(String s) {
+if (!s.trim().isEmpty()) {
+VTYPE_I = new Double(s);
+}
+}
+
 public Double getDVBLDDEBT() {
 return DVBLDDEBT;
 }

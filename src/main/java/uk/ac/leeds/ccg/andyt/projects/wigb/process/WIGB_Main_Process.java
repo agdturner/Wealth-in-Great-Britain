@@ -28,10 +28,15 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Strings;
 import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Object;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_Wave1_HHOLD_Record;
+import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_Wave1_PERSON_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_Wave2_HHOLD_Record;
+import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_Wave2_PERSON_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_Wave3_HHOLD_Record;
+import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_Wave3_PERSON_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_Wave4_HHOLD_Record;
+import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_Wave4_PERSON_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_Wave5_HHOLD_Record;
+import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_Wave5_PERSON_Record;
 
 /**
  *
@@ -42,6 +47,8 @@ public class WIGB_Main_Process extends WIGB_Object {
     // For convenience
     public WIGB_Strings Strings;
     public WIGB_Files Files;
+    
+    String type;
 
     protected WIGB_Main_Process() {
         super();
@@ -62,6 +69,7 @@ public class WIGB_Main_Process extends WIGB_Object {
 
         // Main switches
         p.doJavaCodeGeneration = false;
+        //p.doJavaCodeGeneration = true;
         p.run();
     }
 
@@ -74,58 +82,85 @@ public class WIGB_Main_Process extends WIGB_Object {
         File indir;
 //        indir = new File(Files.getGeneratedDataDir(Strings), "WaAS");
         indir = Files.getWaASInputDir();
-        testLoad(indir);
+//        type = "hhold";
+//        testLoadHHOLD(indir);
+        type = "person";
+        testLoadPERSON(indir);
         //runWaves5And4(indir);
-        
+
     }
 
     public void runJavaCodeGeneration() {
         WIGB_JavaCodeGenerator p;
         p = new WIGB_JavaCodeGenerator(new WIGB_Environment());
         p.Files.setDataDirectory(new File(System.getProperty("user.dir"), "data"));
-        String type;
         type = "hhold";
         p.run(type);
-//        type = "person";
-//        p.run(type);
+        type = "person";
+        p.run(type);
     }
 
-    public void testLoad(File indir) {
+    public void testLoadHHOLD(File indir) {
         File fin;
         // Load waves
         // Load Wave 1
-        fin = new File(indir, "was_wave_1_hhold_eul_final_v2.tab");
+        fin = new File(indir, "was_wave_1_" + type + "_eul_final_v2.tab");
         ArrayList<Double>[] iDLists1;
-        iDLists1 = load(fin, 1);
+        iDLists1 = loadHHOLD(fin, 1);
         // Load Wave 2
-        fin = new File(indir, "was_wave_2_hhold_eul_final_v2.tab");
+        fin = new File(indir, "was_wave_2_" + type + "_eul_final_v2.tab");
         ArrayList<Double>[] iDLists2;
-        iDLists2 = load(fin, 2);
+        iDLists2 = loadHHOLD(fin,  2);
         // Load Wave 3
-        fin = new File(indir, "was_wave_3_hhold_eul_final_v2.tab");
+        fin = new File(indir, "was_wave_3_" + type + "_eul_final_v2.tab");
         ArrayList<Double>[] iDLists3;
-        iDLists2 = load(fin, 3);
-         // Load Wave 4
-        fin = new File(indir, "was_wave_4_hhold_eul_final.tab");
+        iDLists2 = loadHHOLD(fin,  3);
+        // Load Wave 4
+        fin = new File(indir, "was_wave_4_" + type + "_eul_final.tab");
         ArrayList<Double>[] iDLists4;
-        iDLists4 = load(fin, 4);
+        iDLists4 = loadHHOLD(fin,  4);
         // Load Wave 5
-        fin = new File(indir, "was_wave_5_hhold_eul_final.tab");
+        fin = new File(indir, "was_wave_5_" + type + "_eul_final.tab");
         ArrayList<Double>[] iDLists5;
-        iDLists5 = load(fin, 5);
+        iDLists5 = loadHHOLD(fin, 5);
     }
 
-    public void runWaves5And4(File indir) {
+    public void testLoadPERSON(File indir) {
+        File fin;
+        // Load waves
+        // Load Wave 1
+        fin = new File(indir, "was_wave_1_" + type + "_eul_final_v2.tab");
+        ArrayList<Double>[] iDLists1;
+        iDLists1 = loadPERSON(fin, 1);
+        // Load Wave 2
+        fin = new File(indir, "was_wave_2_" + type + "_eul_final_v2.tab");
+        ArrayList<Double>[] iDLists2;
+        iDLists2 = loadPERSON(fin,  2);
+        // Load Wave 3
+        fin = new File(indir, "was_wave_3_" + type + "_eul_final_v2.tab");
+        ArrayList<Double>[] iDLists3;
+        iDLists2 = loadPERSON(fin,  3);
+        // Load Wave 4
+        fin = new File(indir, "was_wave_4_" + type + "_eul_final.tab");
+        ArrayList<Double>[] iDLists4;
+        iDLists4 = loadPERSON(fin,  4);
+        // Load Wave 5
+        fin = new File(indir, "was_wave_5_" + type + "_eul_final.tab");
+        ArrayList<Double>[] iDLists5;
+        iDLists5 = loadPERSON(fin, 5);
+    }
+    
+    public void runWaves5And4(File indir, String type) {
         File fin;
         // Load waves
         // Load Wave 5
-        fin = new File(indir, "was_wave_5_hhold_eul_final.tab");
+        fin = new File(indir, "was_wave_5_" + type + "_eul_final.tab");
         ArrayList<Double>[] iDLists5;
-        iDLists5 = load(fin, 5);
+        iDLists5 = loadHHOLD(fin, 5);
         // Load Wave 4
-        fin = new File(indir, "was_wave_4_hhold_eul_final.tab");
+        fin = new File(indir, "was_wave_4_" + type + "_eul_final.tab");
         ArrayList<Double>[] iDLists4;
-        iDLists4 = load(fin, 4);
+        iDLists4 = loadHHOLD(fin, 4);
 
         HashSet<Double> casew4IDsInWave5;
         casew4IDsInWave5 = new HashSet<>();
@@ -168,13 +203,20 @@ public class WIGB_Main_Process extends WIGB_Object {
     }
 
     /**
-     * Thinking to returns a lists of IDs...
+     * The result has the same length as the wave number.For Wave 5: result[0]
+     * is a list of CASEW5, result[1] is a list of CASEW4, result[2] is a list
+     * of CASEW3, result[3] is a list of CASEW2, result[4] is a list of CASEW1.
+     * For Wave 4: result[0] is a list of CASEW4, result[1] is a list of CASEW3,
+     * result[2] is a list of CASEW2, result[3] is a list of CASEW1. For Wave 3:
+     * result[0] is a list of CASEW3, result[1] is a list of CASEW2, result[2]
+     * is a list of CASEW1. For Wave 2: result[0] is a list of CASEW2, result[1]
+     * is a list of CASEW1. For Wave 1: result[0] is a list of CASEW1.
      *
      * @param f
      * @param wave
      * @return
      */
-    public ArrayList<Double>[] load(File f, int wave) {
+    public ArrayList<Double>[] loadHHOLD(File f, int wave) {
         ArrayList<Double>[] result;
         result = new ArrayList[wave];
         for (int i = 0; i < wave; i++) {
@@ -208,8 +250,6 @@ public class WIGB_Main_Process extends WIGB_Object {
         boolean read;
         read = false;
 
-        //WIGB_Wave4Or5Household_Record rec;
-        //WIGB_Wave5Household_Record rec;
         while (!read) {
             line = Generic_ReadCSV.readLine(st, null);
             lineNumber++;
@@ -256,8 +296,8 @@ public class WIGB_Main_Process extends WIGB_Object {
                         try {
                             rec = new WIGB_Wave3_HHOLD_Record(line);
                             result[0].add(rec.getCASEW3());
-                            result[0].add(rec.getCASEW2());
-                            result[1].add(rec.getCASEW1());
+                            result[1].add(rec.getCASEW2());
+                            result[2].add(rec.getCASEW1());
                         } catch (ArrayIndexOutOfBoundsException e) {
                             e.printStackTrace(System.err);
                             System.err.println(line);
@@ -271,15 +311,12 @@ public class WIGB_Main_Process extends WIGB_Object {
                             rec = new WIGB_Wave2_HHOLD_Record(line);
                             result[0].add(rec.getCASEW2());
                             result[1].add(rec.getCASEW1());
-                        } catch (ArrayIndexOutOfBoundsException e) {
-                            e.printStackTrace(System.err);
-                            System.err.println(line);
-                            rec = new WIGB_Wave2_HHOLD_Record(line); // For debugging
-                        } catch (NumberFormatException e) {
+                        } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
                             e.printStackTrace(System.err);
                             System.err.println(line);
                             rec = new WIGB_Wave2_HHOLD_Record(line); // For debugging
                         }
+                        // For debugging
                         break;
                     }
                     case 1: {
@@ -299,7 +336,143 @@ public class WIGB_Main_Process extends WIGB_Object {
                 }
             }
         }
-//        pw.close();
+        return result;
+    }
+    
+    /**
+     * The result has the same length as the wave number.For Wave 5: result[0]
+     * is a list of CASEW5, result[1] is a list of CASEW4, result[2] is a list
+     * of CASEW3, result[3] is a list of CASEW2, result[4] is a list of CASEW1.
+     * For Wave 4: result[0] is a list of CASEW4, result[1] is a list of CASEW3,
+     * result[2] is a list of CASEW2, result[3] is a list of CASEW1. For Wave 3:
+     * result[0] is a list of CASEW3, result[1] is a list of CASEW2, result[2]
+     * is a list of CASEW1. For Wave 2: result[0] is a list of CASEW2, result[1]
+     * is a list of CASEW1. For Wave 1: result[0] is a list of CASEW1.
+     *
+     * @param f
+     * @param wave
+     * @return
+     */
+    public ArrayList<Double>[] loadPERSON(File f, int wave) {
+        ArrayList<Double>[] result;
+        result = new ArrayList[wave];
+        for (int i = 0; i < wave; i++) {
+            result[i] = new ArrayList<>();
+        }
+        BufferedReader br;
+        br = Generic_StaticIO.getBufferedReader(f);
+        StreamTokenizer st;
+        st = new StreamTokenizer(br);
+        Generic_StaticIO.setStreamTokenizerSyntax7(st);
+
+//        File outdir;
+//        outdir = Files.getOutputDataDir(Strings);
+//        outdir.mkdirs();
+//        File outf;
+//        outf = new File(outdir, "test.csv");
+//
+//        PrintWriter pw = null;
+//        try {
+//            pw = new PrintWriter(outf);
+//        } catch (FileNotFoundException ex) {
+//            Logger.getLogger(WIGB_Main_Process.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+        int lineNumber;
+        lineNumber = 0;
+        String line;
+
+        // skip header
+        Generic_ReadCSV.readLine(st, null);
+
+        boolean read;
+        read = false;
+
+        while (!read) {
+            line = Generic_ReadCSV.readLine(st, null);
+            lineNumber++;
+            if (lineNumber % 1000 == 0) {
+                System.out.println("lineNumber " + lineNumber);
+            }
+            if (line == null) {
+                read = true;
+            } else {
+                switch (wave) {
+                    case 5: {
+                        WIGB_Wave5_PERSON_Record rec;
+                        try {
+                            rec = new WIGB_Wave5_PERSON_Record(line);
+                            result[0].add(rec.getCASEW5());
+                            result[1].add(rec.getCASEW4());
+                            result[2].add(rec.getCASEW3());
+                            result[3].add(rec.getCASEW2());
+                            result[4].add(rec.getCASEW1());
+                        } catch (ArrayIndexOutOfBoundsException e) {
+                            e.printStackTrace(System.err);
+                            System.err.println(line);
+                            rec = new WIGB_Wave5_PERSON_Record(line); // For debugging
+                        }
+                        break;
+                    }
+                    case 4: {
+                        WIGB_Wave4_PERSON_Record rec;
+                        try {
+                            rec = new WIGB_Wave4_PERSON_Record(line);
+                            result[0].add(rec.getCASEW4());
+                            result[1].add(rec.getCASEW3());
+                            result[2].add(rec.getCASEW2());
+                            result[3].add(rec.getCASEW1());
+                        } catch (ArrayIndexOutOfBoundsException e) {
+                            e.printStackTrace(System.err);
+                            System.err.println(line);
+                            rec = new WIGB_Wave4_PERSON_Record(line); // For debugging
+                        }
+                        break;
+                    }
+                    case 3: {
+                        WIGB_Wave3_PERSON_Record rec;
+                        try {
+                            rec = new WIGB_Wave3_PERSON_Record(line);
+                            result[0].add(rec.getCASEW3());
+                            result[1].add(rec.getCASEW2());
+                            result[2].add(rec.getCASEW1());
+                        } catch (ArrayIndexOutOfBoundsException e) {
+                            e.printStackTrace(System.err);
+                            System.err.println(line);
+                            rec = new WIGB_Wave3_PERSON_Record(line); // For debugging
+                        }
+                        break;
+                    }
+                    case 2: {
+                        WIGB_Wave2_PERSON_Record rec;
+                        try {
+                            rec = new WIGB_Wave2_PERSON_Record(line);
+                            result[0].add(rec.getCASEW2());
+                            result[1].add(rec.getCASEW1());
+                        } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
+                            e.printStackTrace(System.err);
+                            System.err.println(line);
+                            rec = new WIGB_Wave2_PERSON_Record(line); // For debugging
+                        }
+                        // For debugging
+                        break;
+                    }
+                    case 1: {
+                        WIGB_Wave1_PERSON_Record rec;
+                        try {
+                            rec = new WIGB_Wave1_PERSON_Record(line);
+                            result[0].add(rec.getCASEW1());
+                        } catch (ArrayIndexOutOfBoundsException e) {
+                            e.printStackTrace(System.err);
+                            System.err.println(line);
+                            rec = new WIGB_Wave1_PERSON_Record(line); // For debugging
+                        }
+                        break;
+                    }
+                    default:
+                        break;
+                }
+            }
+        }
         return result;
     }
 
