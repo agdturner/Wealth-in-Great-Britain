@@ -35,6 +35,27 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Object;
 
 /**
+ * This class produces source code for loading survey data. Source code classes
+ * written in order to load the Wealth and Assets Survey (WaAS) household data
+ * is written to uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold. Source
+ * code classes written in order to load the WaAS person data is written to
+ * uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person.
+ *
+ * As these survey data contained many variables, it was thought best to write
+ * some code that wrote some code to load these data and provide access to the
+ * variables. Most variables are loaded as Double types. Some such as dates have
+ * been loaded as String types. There are documents:
+ * data\input\WaAS\UKDA-7215-tab\mrdoc\pdf\7215_was_questionnaire_wave_1.pdf
+ * data\input\WaAS\UKDA-7215-tab\mrdoc\pdf\7215_was_questionnaire_wave_2.pdf
+ * data\input\WaAS\UKDA-7215-tab\mrdoc\pdf\7215_was_questionnaire_wave_3.pdf
+ * data\input\WaAS\UKDA-7215-tab\mrdoc\pdf\7215_was_questionnaire_wave_4.pdf
+ * data\input\WaAS\UKDA-7215-tab\mrdoc\pdf\7215_was_questionnaire_wave_5.pdf
+ * that detail what values are expected from what variables. Another way to
+ * create the data loading classes would be to parse this document. A thorough
+ * job of exploring these data would check the data values to make sure that
+ * they conformed to these schemas. This would also allow the variables to be
+ * stored in the most appropriate way (e.g. as an integer, double, String, date
+ * etc.).
  *
  * @author geoagdt
  */
@@ -107,6 +128,11 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
         outdir = new File(outdir, "wigb");
         outdir = new File(outdir, "data");
         outdir = new File(outdir, "waas");
+        outdir = new File(outdir, type);
+        outdir.mkdirs();
+        String packageName;
+        packageName = "uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.";
+        packageName += type;
 
         // stringFields are to distinguish those fields that are not 
         // represented by numbers. From the documentation it should be possible 
@@ -127,6 +153,17 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
         stringFields.add("BACCEND1");
         stringFields.add("BACCEND2");
         stringFields.add("BACCEND3");
+
+        // stringFields are to distinguish those fields that are not 
+        // represented by numbers. From the documentation it should be possible 
+        // to figure out which to store as Integer or Boolean too.
+        HashSet<String> intFields;
+        intFields = new HashSet<>();
+        intFields.add("CASEW5");
+        intFields.add("CASEW4");
+        intFields.add("CASEW3");
+        intFields.add("CASEW2");
+        intFields.add("CASEW1");
 
         File fout;
         PrintWriter pw;
@@ -149,33 +186,32 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                 name = prepend + "Wave" + wave + "_" + type + "_Record";
                 fout = new File(outdir, name + ".java");
                 pw = Generic_StaticIO.getPrintWriter(fout, false);
-                writeAutoGenerationHeader(pw);
+                writeHeaderPackageAndImports(pw, packageName);
                 switch (i) {
                     case 0:
                         extendedClassName = prepend + "Wave1Or2_" + type + "_Record";
-                        pw.println("public class " + name + " extends " + extendedClassName + " {");
                         break;
                     case 1:
                         extendedClassName = prepend + "Wave1Or2_" + type + "_Record";
-                        pw.println("public class " + name + " extends " + extendedClassName + " {");
                         break;
                     case 2:
                         extendedClassName = prepend + "Wave3Or4Or5_" + type + "_Record";
-                        pw.println("public class " + name + " extends " + extendedClassName + " {");
                         break;
                     case 3:
                         extendedClassName = prepend + "Wave4Or5_" + type + "_Record";
-                        pw.println("public class " + name + " extends " + extendedClassName + " {");
                         break;
                     case 4:
                         extendedClassName = prepend + "Wave4Or5_" + type + "_Record";
-                        pw.println("public class " + name + " extends " + extendedClassName + " {");
                         break;
                     default:
+                        extendedClassName = "";
                         break;
                 }
+                pw.println("public class " + name + " extends " 
+                        + extendedClassName + " implements Serializable {");
+                
                 // Print Field Declarations Inits And Getters
-                printFieldDeclarationsInitsAndGetters(stringFields, pw, fields);
+                printFieldDeclarationsInitsAndGetters(intFields, stringFields, pw, fields);
                 // Constructor
                 pw.println("public " + name + "(String line) {");
                 pw.println("s = line.split(\"\\t\");");
@@ -195,33 +231,36 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                     name = prepend + "Wave1Or2Or3Or4Or5_" + type + "_Record";
                     fout = new File(outdir, name + ".java");
                     pw = Generic_StaticIO.getPrintWriter(fout, false);
-                    writeAutoGenerationHeader(pw);
+                    writeHeaderPackageAndImports(pw, packageName);
                     pw.println("public abstract class " + name + " {");
                     pw.println("protected String[] s;");
                 } else if (i == (size + 1)) {
                     name = prepend + "Wave1Or2_" + type + "_Record";
                     fout = new File(outdir, name + ".java");
                     pw = Generic_StaticIO.getPrintWriter(fout, false);
-                    writeAutoGenerationHeader(pw);
+                    writeHeaderPackageAndImports(pw, packageName);
                     extendedClassName = prepend + "Wave1Or2Or3Or4Or5_" + type + "_Record";
-                    pw.println("public abstract class " + name + " extends " + extendedClassName + " {");
+                   pw.println("public class " + name + " extends " 
+                        + extendedClassName + " implements Serializable {");
                 } else if (i == (size + 2)) {
                     name = prepend + "Wave3Or4Or5_" + type + "_Record";
                     fout = new File(outdir, name + ".java");
                     pw = Generic_StaticIO.getPrintWriter(fout, false);
-                    writeAutoGenerationHeader(pw);
+                    writeHeaderPackageAndImports(pw, packageName);
                     extendedClassName = prepend + "Wave1Or2Or3Or4Or5_" + type + "_Record";
-                    pw.println("public abstract class " + name + " extends " + extendedClassName + " {");
+                   pw.println("public class " + name + " extends " 
+                        + extendedClassName + " implements Serializable {");
                 } else if (i == (size + 3)) {
                     name = prepend + "Wave4Or5_" + type + "_Record";
                     fout = new File(outdir, name + ".java");
                     pw = Generic_StaticIO.getPrintWriter(fout, false);
-                    writeAutoGenerationHeader(pw);
+                    writeHeaderPackageAndImports(pw, packageName);
                     extendedClassName = prepend + "Wave3Or4Or5_" + type + "_Record";
-                    pw.println("public abstract class " + name + " extends " + extendedClassName + " {");
+                    pw.println("public class " + name + " extends " 
+                        + extendedClassName + " implements Serializable {");
                 }
                 // Print Field Declarations Inits And Getters
-                printFieldDeclarationsInitsAndGetters(stringFields, pw, fields);
+                printFieldDeclarationsInitsAndGetters(intFields, stringFields, pw, fields);
                 pw.println("}");
                 pw.close();
             }
@@ -229,34 +268,43 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
 
     }
 
-    public void writeAutoGenerationHeader(PrintWriter pw) {
+    /**
+     * 
+     * @param pw
+     * @param packageName 
+     */
+    public void writeHeaderPackageAndImports(PrintWriter pw, String packageName) {
         pw.println("/**");
-        pw.println(" * This code has been generated by " + this.getClass().getName());
+        pw.println(" * Source code generated by " + this.getClass().getName());
         pw.println(" */");
-        pw.println("package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas;");
+        pw.println("package " + packageName + ";");
+        pw.println("import java.io.Serializable;");
     }
+                
 
     /**
      * @param stringFields
      * @param pw
      * @param fields
      */
-    public void printFieldDeclarationsInitsAndGetters(HashSet<String> stringFields,
+    public void printFieldDeclarationsInitsAndGetters(HashSet<String> intFields,
+            HashSet<String> stringFields,
             PrintWriter pw, TreeSet<String> fields) {
-                // Field declarations
-                printFieldDeclarations(stringFields, pw, fields);
-                // Field init
-                printFieldInits(stringFields, pw, fields);
-                // Field getters
-                printFieldGetters(stringFields, pw, fields);
+        // Field declarations
+        printFieldDeclarations(intFields, stringFields, pw, fields);
+        // Field init
+        printFieldInits(intFields, stringFields, pw, fields);
+        // Field getters
+        printFieldGetters(intFields, stringFields, pw, fields);
     }
-                
+
     /**
+     * @param intFields
      * @param stringFields
      * @param pw
      * @param fields
      */
-    public void printFieldDeclarations(HashSet<String> stringFields,
+    public void printFieldDeclarations(HashSet<String> intFields, HashSet<String> stringFields,
             PrintWriter pw, TreeSet<String> fields) {
         String field;
         Iterator<String> ite;
@@ -264,9 +312,13 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
         while (ite.hasNext()) {
             field = ite.next();
             if (stringFields.contains(field)) {
-                pw.println("protected static String " + field + ";");
+                pw.println("protected String " + field + ";");
             } else {
-                pw.println("protected static Double " + field + ";");
+                if (intFields.contains(field)) {
+                    pw.println("protected int " + field + ";");
+                } else {
+                    pw.println("protected Double " + field + ";");
+                }
                 pw.println();
             }
         }
@@ -274,11 +326,12 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
 
     /**
      *
+     * @param intFields
      * @param stringFields
      * @param pw
      * @param fields
      */
-    public void printFieldGetters(HashSet<String> stringFields, PrintWriter pw,
+    public void printFieldGetters(HashSet<String> intFields, HashSet<String> stringFields, PrintWriter pw,
             TreeSet<String> fields) {
         String field;
         Iterator<String> ite;
@@ -288,7 +341,11 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
             if (stringFields.contains(field)) {
                 pw.println("public String get" + field + "() {");
             } else {
-                pw.println("public Double get" + field + "() {");
+                if (intFields.contains(field)) {
+                    pw.println("public int get" + field + "() {");
+                } else {
+                    pw.println("public Double get" + field + "() {");
+                }
             }
             pw.println("return " + field + ";");
             pw.println("}");
@@ -299,11 +356,13 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
 
     /**
      *
+     * @param intFields
      * @param stringFields
      * @param pw
      * @param fields
      */
-    public void printFieldInits(HashSet<String> stringFields, PrintWriter pw,
+    public void printFieldInits(HashSet<String> intFields,
+            HashSet<String> stringFields, PrintWriter pw,
             TreeSet<String> fields) {
         String field;
         Iterator<String> ite;
@@ -315,9 +374,15 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                 pw.println("if (!s.trim().isEmpty()) {");
                 pw.println(field + " = s;");
             } else {
-                pw.println("protected final void init" + field + "(String s) {");
-                pw.println("if (!s.trim().isEmpty()) {");
-                pw.println(field + " = new Double(s);");
+                if (intFields.contains(field)) {
+                    pw.println("protected final void init" + field + "(String s) {");
+                    pw.println("if (!s.trim().isEmpty()) {");
+                    pw.println(field + " = new Integer(s);");
+                } else {
+                    pw.println("protected final void init" + field + "(String s) {");
+                    pw.println("if (!s.trim().isEmpty()) {");
+                    pw.println(field + " = new Double(s);");
+                }
             }
             pw.println("}");
             pw.println("}");
@@ -325,7 +390,7 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
 
         }
     }
-    
+
     /**
      * Thinking to returns a lists of IDs...
      *
@@ -385,16 +450,15 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
     }
 
     /**
-     * Finds and returns r where.
-     * r[0] are the fields in common with all waves.
-     * r[1] are the fields in common with all waves.
-     * r[2] are the fields in common with all waves.
-     * r[3] are the fields in common with all waves.
-     * r[4] are the fields in common with all waves.
-     * r[5] fields common to waves 1, 2, 3, 4 and 5 (12345)
-     * r[6] fields other than 12345 that are common to waves 1 and 2 (12).
-     * r[7] fields other than 12345 that are in common to waves 3, 4 and 5 (345)
-     * r[8] fields other than 345 that are in common to waves 4 and 5 (45)
+     * Finds and returns r where. r[0] are the fields in common with all waves.
+     * r[1] are the fields in common with all waves. r[2] are the fields in
+     * common with all waves. r[3] are the fields in common with all waves. r[4]
+     * are the fields in common with all waves. r[5] fields common to waves 1,
+     * 2, 3, 4 and 5 (12345) r[6] fields other than 12345 that are common to
+     * waves 1 and 2 (12). r[7] fields other than 12345 that are in common to
+     * waves 3, 4 and 5 (345) r[8] fields other than 345 that are in common to
+     * waves 4 and 5 (45)
+     *
      * @param headers
      * @return
      */

@@ -70,11 +70,12 @@ public class WIGB_Files extends Generic_Files {
         return r;
     }
 
-    public File getGeneratedDataFile(String name, String type) {
+    public File getGeneratedWaASDirectory() {
         File dir;
         dir = getGeneratedDataDir(Strings);
         File f;
-        f = new File(dir, name + "_" + type + "." + Strings.S_dat);
+        f = new File(dir, "WaAS");
+        f.mkdirs();
         return f;
     }
 
