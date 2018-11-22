@@ -72,7 +72,6 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
             int lineNumber;
             lineNumber = 0;
             String line;
-            String[] split;
             // skip header
             Generic_ReadCSV.readLine(st, null);
             boolean read;
@@ -89,12 +88,15 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
                 if (line == null) {
                     read = true;
                 } else {
-                    split = line.split("\t");
-                    ID = Integer.valueOf(split[0]);
+                    /**
+                     * Optimisation using the fact that CASEW1 is the first part
+                     * of the string.
+                     */
+                    ID = Integer.valueOf(line.substring(0, line.indexOf("\t")));
                     if (CASEW1IDs.contains(ID)) {
                         WIGB_Wave1_PERSON_Record rec;
                         rec = new WIGB_Wave1_PERSON_Record(line);
-                        PERSON_ID = new WIGB_PERSON_ID(ID,
+                        PERSON_ID = new WIGB_PERSON_ID(wave, ID,
                                 rec.getPERSONW1());
                         r.put(PERSON_ID, rec);
                     }
@@ -136,7 +138,6 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
             int lineNumber;
             lineNumber = 0;
             String line;
-            String[] split;
             // skip header
             Generic_ReadCSV.readLine(st, null);
             boolean read;
@@ -152,15 +153,18 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
                 if (line == null) {
                     read = true;
                 } else {
-                    split = line.split("\t");
-                    ID = Integer.valueOf(split[0]);
+                    /**
+                     * Optimisation using the fact that CASEW2 is the first part
+                     * of the string.
+                     */
+                    ID = Integer.valueOf(line.substring(0, line.indexOf("\t")));
                     if (CASEW2IDs.contains(ID)) {
-                            WIGB_Wave2_PERSON_Record rec;
+                        WIGB_Wave2_PERSON_Record rec;
                         rec = new WIGB_Wave2_PERSON_Record(line);
-                            PERSON_ID = new WIGB_PERSON_ID(ID,
-                                    rec.getPERSONW2());
-                            r.put(PERSON_ID, rec);
-                        }
+                        PERSON_ID = new WIGB_PERSON_ID(wave, ID,
+                                rec.getPERSONW2());
+                        r.put(PERSON_ID, rec);
+                    }
                 }
             }
             System.out.println("</Loading wave " + wave + " subset " + TYPE
@@ -199,7 +203,9 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
             int lineNumber;
             lineNumber = 0;
             String line;
-            String[] split;
+            String tab;
+            tab = "\t";
+            String l;
             // skip header
             Generic_ReadCSV.readLine(st, null);
             boolean read;
@@ -215,20 +221,36 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
                 if (line == null) {
                     read = true;
                 } else {
-                    split = line.split("\t");
-                    ID = Integer.valueOf(split[0]);
-                        if (CASEW3IDs.contains(ID)) {
-                    WIGB_Wave3_PERSON_Record rec;
+                    /**
+                     * Optimisation using the fact that CASEW3 is the 3763 part
+                     * of the string.
+                     */
+                    l = line.substring(0, getIndex(line, tab, 3763));
+                    ID = Integer.valueOf(l.substring(0, line.indexOf(tab)));
+                    
+//                    WIGB_Wave3_PERSON_Record rec;
+//                    rec = new WIGB_Wave3_PERSON_Record(line);
+                    
+                    if (CASEW3IDs.contains(ID)) {
+                        WIGB_Wave3_PERSON_Record rec;
                         rec = new WIGB_Wave3_PERSON_Record(line);
-                            PERSON_ID = new WIGB_PERSON_ID(ID,
-                                    rec.getPERSONW3());
-                            r.put(PERSON_ID, rec);
-                        }
+                        PERSON_ID = new WIGB_PERSON_ID(wave, ID,
+                                rec.getPERSONW3());
+                        r.put(PERSON_ID, rec);
+                    }
                 }
             }
             System.out.println("</Loading wave " + wave + " subset " + TYPE
                     + " WaAS data from " + f + ">");
             storeCacheSubset(wave, r);
+        }
+        return r;
+    }
+
+    public int getIndex(String line, String del, int n) {
+        int r = line.indexOf(del);
+        while (--n > 0 && r != -1) {
+            r = line.indexOf(line, r + 1);
         }
         return r;
     }
@@ -262,7 +284,9 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
             int lineNumber;
             lineNumber = 0;
             String line;
-            String[] split;
+            String tab;
+            tab = "\t";
+            String l;
             // skip header
             Generic_ReadCSV.readLine(st, null);
             boolean read;
@@ -278,15 +302,19 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
                 if (line == null) {
                     read = true;
                 } else {
-                    split = line.split("\t");
-                    ID = Integer.valueOf(split[0]);
-                        if (CASEW4IDs.contains(ID)) {
-                    WIGB_Wave4_PERSON_Record rec;
+                    /**
+                     * Optimisation using the fact that CASEW3 is the 3763 part
+                     * of the string.
+                     */
+                    l = line.substring(0, getIndex(line, tab, 3763));
+                    ID = Integer.valueOf(l.substring(0, line.indexOf(tab)));
+                    if (CASEW4IDs.contains(ID)) {
+                        WIGB_Wave4_PERSON_Record rec;
                         rec = new WIGB_Wave4_PERSON_Record(line);
-                            PERSON_ID = new WIGB_PERSON_ID(ID,
-                                    rec.getPERSONW4());
-                            r.put(PERSON_ID, rec);
-                        }
+                        PERSON_ID = new WIGB_PERSON_ID(wave, ID,
+                                rec.getPERSONW4());
+                        r.put(PERSON_ID, rec);
+                    }
                 }
             }
             System.out.println("</Loading wave " + wave + " subset " + TYPE
@@ -329,7 +357,9 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
             int lineNumber;
             lineNumber = 0;
             String line;
-            String[] split;
+            String tab;
+            tab = "\t";
+            String l;
             // skip header
             Generic_ReadCSV.readLine(st, null);
             boolean read;
@@ -345,15 +375,19 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
                 if (line == null) {
                     read = true;
                 } else {
-                    split = line.split("\t");
-                    ID = Integer.valueOf(split[0]);
-                        if (CASEW5IDs.contains(ID)) {
-                    WIGB_Wave5_PERSON_Record rec;
+                    /**
+                     * Optimisation using the fact that CASEW3 is the 2987 part
+                     * of the string.
+                     */
+                    l = line.substring(0, getIndex(line, tab, 2987));
+                    ID = Integer.valueOf(l.substring(0, line.indexOf(tab)));
+                    if (CASEW5IDs.contains(ID)) {
+                        WIGB_Wave5_PERSON_Record rec;
                         rec = new WIGB_Wave5_PERSON_Record(line);
-                            PERSON_ID = new WIGB_PERSON_ID(ID,
-                                    rec.getPERSONW5());
-                            r.put(PERSON_ID, rec);
-                        }
+                        PERSON_ID = new WIGB_PERSON_ID(wave, ID,
+                                rec.getPERSONW5());
+                        r.put(PERSON_ID, rec);
+                    }
                 }
             }
             System.out.println("</Loading wave " + wave + " subset " + TYPE

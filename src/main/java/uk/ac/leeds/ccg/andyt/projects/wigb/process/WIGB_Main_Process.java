@@ -20,6 +20,8 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_StaticIO;
 import uk.ac.leeds.ccg.andyt.generic.utilities.Generic_Collections;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
@@ -74,20 +76,31 @@ public class WIGB_Main_Process extends WIGB_Object {
         }
 
         File indir;
-        indir = Files.getWaASInputDir();
-
+        File outdir;
         File generateddir;
+        WIGB_HHOLD_Handler hholdHandler;
+
+        indir = Files.getWaASInputDir();
         generateddir = Files.getGeneratedWaASDirectory();
+        outdir = new File(generateddir, "Subsets");
+        outdir.mkdirs();
+        hholdHandler = new WIGB_HHOLD_Handler(Env, indir);
 
-        Object[] data;
+        doDataProcessingStep1(indir, outdir, hholdHandler);
 
-        File cf;
-        cf = new File(generateddir, "cache." + Env.Strings.S_dat);
-        if (cf.exists()) {
-            data = (Object[]) Generic_StaticIO.readObject(cf);
-        } else {
-            data = getHouseholdsThatHaveSameMembersThroughoutWaves(indir);
-            Generic_StaticIO.writeObject(data, cf);
+        HashMap<Integer, WIGB_Wave1_HHOLD_Record> hholdSubsetW1;
+        HashMap<Integer, WIGB_Wave2_HHOLD_Record> hholdSubsetW2;
+        HashMap<Integer, WIGB_Wave3_HHOLD_Record> hholdSubsetW3;
+        HashMap<Integer, WIGB_Wave4_HHOLD_Record> hholdSubsetW4;
+        HashMap<Integer, WIGB_Wave5_HHOLD_Record> hholdSubsetW5;
+        try {
+            hholdSubsetW1 = hholdHandler.loadCacheSubsetWave1();
+            hholdSubsetW2 = hholdHandler.loadCacheSubsetWave2();
+            hholdSubsetW3 = hholdHandler.loadCacheSubsetWave3();
+            hholdSubsetW4 = hholdHandler.loadCacheSubsetWave4();
+            hholdSubsetW5 = hholdHandler.loadCacheSubsetWave5();
+        } catch (Exception ex) {
+            Logger.getLogger(WIGB_Main_Process.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -106,17 +119,18 @@ public class WIGB_Main_Process extends WIGB_Object {
         p.run(type);
     }
 
-    public Object[] getHouseholdsThatHaveSameMembersThroughoutWaves(
-            File indir) {
-
-        Object[] result;
-        result = new Object[18]; // Change
+    /**
+     *
+     * @param indir
+     * @param outdir
+     * @param hholdHandler
+     */
+    public void doDataProcessingStep1(File indir, File outdir,
+            WIGB_HHOLD_Handler hholdHandler) {
 
         /**
          * Step 1: Load household data into cache and memory.
          */
-        WIGB_HHOLD_Handler hholdHandler;
-        hholdHandler = new WIGB_HHOLD_Handler(Env, indir);
         Object[] hholdData;
         hholdData = hholdHandler.load();
 
@@ -138,44 +152,44 @@ public class WIGB_Main_Process extends WIGB_Object {
         HashMap<Integer, HashSet<Integer>[]> iDLists;
         iDLists = new HashMap<>();
         // W1
-        Object[] hholdW1;
-        hholdW1 = (Object[]) hholdData[0];
-        HashMap<Integer, WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record> hholdW1recs;
-        hholdW1recs = (HashMap<Integer, WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record>) hholdW1[0];
+        Object[] hholdDataW1;
+        hholdDataW1 = (Object[]) hholdData[0];
+        HashMap<Integer, WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record> hholdW1;
+        hholdW1 = (HashMap<Integer, WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record>) hholdDataW1[0];
         HashSet<Integer>[] iDListsW1;
-        iDListsW1 = (HashSet<Integer>[]) hholdW1[1];
+        iDListsW1 = (HashSet<Integer>[]) hholdDataW1[1];
         iDLists.put(1, iDListsW1);
         // W2
-        Object[] hholdW2;
-        hholdW2 = (Object[]) hholdData[1];
-        HashMap<Integer, WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record> hholdW2recs;
-        hholdW2recs = (HashMap<Integer, WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record>) hholdW2[0];
+        Object[] hholdDataW2;
+        hholdDataW2 = (Object[]) hholdData[1];
+        HashMap<Integer, WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record> hholdW2;
+        hholdW2 = (HashMap<Integer, WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record>) hholdDataW2[0];
         HashSet<Integer>[] iDListsW2;
-        iDListsW2 = (HashSet<Integer>[]) hholdW2[1];
+        iDListsW2 = (HashSet<Integer>[]) hholdDataW2[1];
         iDLists.put(2, iDListsW2);
         // W3
-        Object[] hholdW3;
-        hholdW3 = (Object[]) hholdData[2];
-        HashMap<Integer, WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record> hholdW3recs;
-        hholdW3recs = (HashMap<Integer, WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record>) hholdW3[0];
+        Object[] hholdDataW3;
+        hholdDataW3 = (Object[]) hholdData[2];
+        HashMap<Integer, WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record> hholdW3;
+        hholdW3 = (HashMap<Integer, WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record>) hholdDataW3[0];
         HashSet<Integer>[] iDListsW3;
-        iDListsW3 = (HashSet<Integer>[]) hholdW3[1];
+        iDListsW3 = (HashSet<Integer>[]) hholdDataW3[1];
         iDLists.put(3, iDListsW3);
         // W4
-        Object[] hholdW4;
-        hholdW4 = (Object[]) hholdData[3];
-        HashMap<Integer, WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record> hholdW4recs;
-        hholdW4recs = (HashMap<Integer, WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record>) hholdW4[0];
+        Object[] hholdDataW4;
+        hholdDataW4 = (Object[]) hholdData[3];
+        HashMap<Integer, WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record> hholdW4;
+        hholdW4 = (HashMap<Integer, WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record>) hholdDataW4[0];
         HashSet<Integer>[] iDListsW4;
-        iDListsW4 = (HashSet<Integer>[]) hholdW4[1];
+        iDListsW4 = (HashSet<Integer>[]) hholdDataW4[1];
         iDLists.put(4, iDListsW4);
         // W5
-        Object[] hholdW5;
-        hholdW5 = (Object[]) hholdData[4];
-        HashMap<Integer, WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record> hholdW5recs;
-        hholdW5recs = (HashMap<Integer, WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record>) hholdW5[0];
+        Object[] hholdDataW5;
+        hholdDataW5 = (Object[]) hholdData[4];
+        HashMap<Integer, WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record> hholdW5;
+        hholdW5 = (HashMap<Integer, WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record>) hholdDataW5[0];
         HashSet<Integer>[] iDListsW5;
-        iDListsW5 = (HashSet<Integer>[]) hholdW5[1];
+        iDListsW5 = (HashSet<Integer>[]) hholdDataW5[1];
         iDLists.put(5, iDListsW5);
 
         /**
@@ -216,7 +230,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         while (ite.hasNext()) {
             CASEW4 = ite.next();
             WIGB_Wave4_HHOLD_Record r;
-            r = (WIGB_Wave4_HHOLD_Record) hholdW4recs.get(CASEW4);
+            r = (WIGB_Wave4_HHOLD_Record) hholdW4.get(CASEW4);
             if (r != null) {
                 CASEW3 = r.getCASEW3();
                 if (CASEW3 != null) {
@@ -243,7 +257,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         while (ite.hasNext()) {
             CASEW3 = ite.next();
             WIGB_Wave3_HHOLD_Record r;
-            r = (WIGB_Wave3_HHOLD_Record) hholdW3recs.get(CASEW3);
+            r = (WIGB_Wave3_HHOLD_Record) hholdW3.get(CASEW3);
             if (r != null) {
                 CASEW2 = r.getCASEW2();
                 if (CASEW2 != null) {
@@ -266,7 +280,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         while (ite.hasNext()) {
             CASEW2 = ite.next();
             WIGB_Wave2_HHOLD_Record r;
-            r = (WIGB_Wave2_HHOLD_Record) hholdW2recs.get(CASEW2);
+            r = (WIGB_Wave2_HHOLD_Record) hholdW2.get(CASEW2);
             if (r != null) {
                 CASEW1 = r.getCASEW1();
                 if (CASEW1 != null) {
@@ -287,174 +301,219 @@ public class WIGB_Main_Process extends WIGB_Object {
          * Step 5: Working forward from Wave 1, get the subset of households
          * that are in all 5 waves; create mappings from the wave ID to the Wave
          * 1 ID and vice versa as appropriate (a mapping from Wave 1 to itself
-         * is unnecessary); and, get the person records for each household
-         * stored in a cache. These will next be linked to each hhold record.
+         * is unnecessary).
          */
         int wave;
         /**
-         * Wave 1.
+         * Step 5: Wave 1.
          */
         wave = 1;
         WIGB_PERSON_Handler personHandler;
         personHandler = new WIGB_PERSON_Handler(Env, indir);
-        HashMap<WIGB_PERSON_ID, WIGB_Wave1_PERSON_Record> personWave1;
-        // Load or generate personWave1 subset.
-        personWave1 = personHandler.loadSubsetWave1(tCASEW1IDsInCASEW2);
-        // Load or generate hholdWave1 subset.
-        HashMap<Integer, WIGB_Wave1_HHOLD_Record> hholdWave1;
+        // Load test or generate hholdSubsetW1 subset.
         try {
-            hholdWave1 = hholdHandler.loadCacheSubsetWave1();
+            HashMap<Integer, WIGB_Wave1_HHOLD_Record> hholdSubsetW1;
+            hholdSubsetW1 = hholdHandler.loadCacheSubsetWave1();
         } catch (Exception ex) {
-            hholdWave1 = new HashMap<>();
-            ite = hholdW1recs.keySet().iterator();
+            HashMap<Integer, WIGB_Wave1_HHOLD_Record> hholdSubsetW1;
+            hholdSubsetW1 = new HashMap<>();
+            ite = hholdW1.keySet().iterator();
             while (ite.hasNext()) {
                 CASEW1 = ite.next();
                 if (tCASEW1IDsInCASEW2.contains(CASEW1)) {
-                    hholdWave1.put(CASEW1,
-                            (WIGB_Wave1_HHOLD_Record) hholdW1recs.get(CASEW1));
+                    hholdSubsetW1.put(CASEW1,
+                            (WIGB_Wave1_HHOLD_Record) hholdW1.get(CASEW1));
                 }
             }
-            hholdHandler.storeCacheSubset(1, hholdWave1);
+            hholdHandler.storeCacheSubset(1, hholdSubsetW1);
         }
+        hholdW1 = null;
+
         /**
-         * Wave 2.
+         * Step 5: Wave 2.
          */
         wave = 2;
         // tWave2ToWave1HHOLDIDLookup keys are CASEW2 and values are CASEW1.
         HashMap<Integer, Integer> tWave2ToWave1HHOLDIDLookup;
-        tWave2ToWave1HHOLDIDLookup = new HashMap<>();
-        // tWave1ToWave2HHOLDIDLookup keys are CASEW1 and values are sets of CASEW2.
-        HashMap<Integer, HashSet<Integer>> tWave1ToWave2HHOLDIDLookup;
-        tWave1ToWave2HHOLDIDLookup = new HashMap<>();
-        ite = tCASEW2IDsInCASEW3.iterator();
-        while (ite.hasNext()) {
-            CASEW2 = ite.next();
-            WIGB_Wave2_HHOLD_Record r;
-            r = (WIGB_Wave2_HHOLD_Record) hholdW2recs.get(CASEW2);
-            CASEW1 = r.getCASEW1();
-            if (CASEW1 != null) {
-                if (tCASEW1IDsInCASEW2.contains(CASEW1)) {
-                    if (tWave1ToWave2HHOLDIDLookup.containsKey(CASEW1)) {
-                        System.out.println("Warning the hhold from Wave 1 with ID "
-                                + CASEW1 + " has more than one hhold record in "
-                                + "wave " + wave);
+        File cf;
+        cf = new File(outdir, "Wave2ToFromWave1Lookups." + Env.Strings.S_dat);
+        if (cf.exists()) {
+            Object[] o;
+            o = (Object[]) Generic_StaticIO.readObject(cf);
+            tWave2ToWave1HHOLDIDLookup = (HashMap<Integer, Integer>) o[0];
+        } else {
+            tWave2ToWave1HHOLDIDLookup = new HashMap<>();
+            // tWave1ToWave2HHOLDIDLookup keys are CASEW1 and values are sets of CASEW2.
+            HashMap<Integer, HashSet<Integer>> tWave1ToWave2HHOLDIDLookup;
+            tWave1ToWave2HHOLDIDLookup = new HashMap<>();
+            ite = tCASEW2IDsInCASEW3.iterator();
+            while (ite.hasNext()) {
+                CASEW2 = ite.next();
+                WIGB_Wave2_HHOLD_Record r;
+                r = (WIGB_Wave2_HHOLD_Record) hholdW2.get(CASEW2);
+                CASEW1 = r.getCASEW1();
+                if (CASEW1 != null) {
+                    if (tCASEW1IDsInCASEW2.contains(CASEW1)) {
+                        if (tWave1ToWave2HHOLDIDLookup.containsKey(CASEW1)) {
+                            System.out.println("Warning the hhold from Wave 1 with ID "
+                                    + CASEW1 + " has more than one hhold record in "
+                                    + "wave " + wave);
+                        }
+                        Generic_Collections.addToMap(tWave1ToWave2HHOLDIDLookup,
+                                CASEW1, CASEW2);
+                        tWave2ToWave1HHOLDIDLookup.put(CASEW2, CASEW1);
                     }
-                    Generic_Collections.addToMap(tWave1ToWave2HHOLDIDLookup,
-                            CASEW1, CASEW2);
-                    tWave2ToWave1HHOLDIDLookup.put(CASEW2, CASEW1);
                 }
             }
+            Object[] o;
+            o = new Object[2];
+            o[0] = tWave2ToWave1HHOLDIDLookup;
+            o[1] = tWave1ToWave2HHOLDIDLookup;
+            Generic_StaticIO.writeObject(o, cf);
         }
-        HashMap<WIGB_PERSON_ID, WIGB_Wave2_PERSON_Record> personWave2;
-        personWave2 = personHandler.loadSubsetWave2(tWave2ToWave1HHOLDIDLookup.keySet());
-        HashMap<Integer, WIGB_Wave2_HHOLD_Record> hholdWave2;
+        // Load test or generate hholdSubsetW2 subset.
         try {
-            hholdWave2 = hholdHandler.loadCacheSubsetWave2();
+            HashMap<Integer, WIGB_Wave2_HHOLD_Record> hholdSubsetW2;
+            hholdSubsetW2 = hholdHandler.loadCacheSubsetWave2();
         } catch (Exception ex) {
-            hholdWave2 = new HashMap<>();
-            ite = hholdW2recs.keySet().iterator();
+            HashMap<Integer, WIGB_Wave2_HHOLD_Record> hholdSubsetW2;
+            hholdSubsetW2 = new HashMap<>();
+            ite = hholdW2.keySet().iterator();
             while (ite.hasNext()) {
                 CASEW2 = ite.next();
                 if (tWave2ToWave1HHOLDIDLookup.keySet().contains(CASEW2)) {
-                    hholdWave2.put(CASEW2,
-                            (WIGB_Wave2_HHOLD_Record) hholdW2recs.get(CASEW2));
+                    hholdSubsetW2.put(CASEW2,
+                            (WIGB_Wave2_HHOLD_Record) hholdW2.get(CASEW2));
                 }
             }
-            hholdHandler.storeCacheSubset(2, hholdWave2);
+            hholdHandler.storeCacheSubset(2, hholdSubsetW2);
         }
+        hholdW2 = null;
+
         /**
-         * Wave 3.
+         * Step 5: Wave 3.
          */
         wave = 3;
         // tWave3ToWave1HHOLDIDLookup keys are CASEW3 and values are CASEW1.
         HashMap<Integer, Integer> tWave3ToWave1HHOLDIDLookup;
-        tWave3ToWave1HHOLDIDLookup = new HashMap<>();
-        // tWave1ToWave3HHOLDIDLookup keys are CASEW1 and values are sets of CASEW3.
-        HashMap<Integer, HashSet<Integer>> tWave1ToWave3HHOLDIDLookup;
-        tWave1ToWave3HHOLDIDLookup = new HashMap<>();
-        ite = tCASEW3IDsInCASEW4.iterator();
-        while (ite.hasNext()) {
-            CASEW3 = ite.next();
-            WIGB_Wave3_HHOLD_Record r;
-            r = (WIGB_Wave3_HHOLD_Record) hholdW3recs.get(CASEW3);
-            CASEW1 = r.getCASEW1();
-            if (CASEW1 != null) {
-                if (tCASEW1IDsInCASEW2.contains(CASEW1)) {
-                    if (tWave3ToWave1HHOLDIDLookup.containsValue(CASEW1)) {
-                        System.out.println("Warning the hhold from Wave 1 with ID "
-                                + CASEW1 + " has more than one hhold record in "
-                                + "wave " + wave);
+        cf = new File(outdir, "Wave3ToFromWave1Lookups." + Env.Strings.S_dat);
+        if (cf.exists()) {
+            Object[] o;
+            o = (Object[]) Generic_StaticIO.readObject(cf);
+            tWave3ToWave1HHOLDIDLookup = (HashMap<Integer, Integer>) o[0];
+        } else {
+            tWave3ToWave1HHOLDIDLookup = new HashMap<>();
+            // tWave1ToWave3HHOLDIDLookup keys are CASEW1 and values are sets of CASEW3.
+            HashMap<Integer, HashSet<Integer>> tWave1ToWave3HHOLDIDLookup;
+            tWave1ToWave3HHOLDIDLookup = new HashMap<>();
+            ite = tCASEW3IDsInCASEW4.iterator();
+            while (ite.hasNext()) {
+                CASEW3 = ite.next();
+                WIGB_Wave3_HHOLD_Record r;
+                r = (WIGB_Wave3_HHOLD_Record) hholdW3.get(CASEW3);
+                CASEW1 = r.getCASEW1();
+                if (CASEW1 != null) {
+                    if (tCASEW1IDsInCASEW2.contains(CASEW1)) {
+                        if (tWave3ToWave1HHOLDIDLookup.containsValue(CASEW1)) {
+                            System.out.println("Warning the hhold from Wave 1 with ID "
+                                    + CASEW1 + " has more than one hhold record in "
+                                    + "wave " + wave);
+                        }
+                        Generic_Collections.addToMap(tWave1ToWave3HHOLDIDLookup,
+                                CASEW1, CASEW3);
+                        tWave3ToWave1HHOLDIDLookup.put(CASEW3, CASEW1);
                     }
-                    Generic_Collections.addToMap(tWave1ToWave3HHOLDIDLookup,
-                            CASEW1, CASEW3);
-                    tWave3ToWave1HHOLDIDLookup.put(CASEW3, CASEW1);
                 }
             }
+            Object[] o;
+            o = new Object[2];
+            o[0] = tWave3ToWave1HHOLDIDLookup;
+            o[1] = tWave1ToWave3HHOLDIDLookup;
+            Generic_StaticIO.writeObject(o, cf);
         }
-        HashMap<WIGB_PERSON_ID, WIGB_Wave3_PERSON_Record> personWave3;
-        personWave3 = personHandler.loadSubsetWave3(tWave3ToWave1HHOLDIDLookup.keySet());
-        HashMap<Integer, WIGB_Wave3_HHOLD_Record> hholdWave3;
+        // Load test or generate hholdSubsetW3 subset.
         try {
-            hholdWave3 = hholdHandler.loadCacheSubsetWave3();
+            HashMap<Integer, WIGB_Wave3_HHOLD_Record> hholdSubsetW3;
+            hholdSubsetW3 = hholdHandler.loadCacheSubsetWave3();
         } catch (Exception ex) {
-            hholdWave3 = new HashMap<>();
-            ite = hholdW3recs.keySet().iterator();
+            HashMap<Integer, WIGB_Wave3_HHOLD_Record> hholdSubsetW3;
+            hholdSubsetW3 = new HashMap<>();
+            ite = hholdW3.keySet().iterator();
             while (ite.hasNext()) {
                 CASEW3 = ite.next();
                 if (tWave3ToWave1HHOLDIDLookup.keySet().contains(CASEW3)) {
-                    hholdWave3.put(CASEW3,
-                            (WIGB_Wave3_HHOLD_Record) hholdW3recs.get(CASEW3));
+                    hholdSubsetW3.put(CASEW3,
+                            (WIGB_Wave3_HHOLD_Record) hholdW3.get(CASEW3));
                 }
             }
-            hholdHandler.storeCacheSubset(3, hholdWave3);
+            hholdHandler.storeCacheSubset(3, hholdSubsetW3);
         }
+        hholdW3 = null;
+
         /**
-         * Wave 4: The iterator is set up slightly differently to the one for
-         * waves 2 and 3.
+         * Step 5: Wave 4: The iterator is set up slightly differently to the
+         * one for waves 2 and 3.
          */
         wave = 4;
         // tWave4ToWave1HHOLDIDLookup keys are CASEW4 and values are CASEW1.
         HashMap<Integer, Integer> tWave4ToWave1HHOLDIDLookup;
-        tWave4ToWave1HHOLDIDLookup = new HashMap<>();
-        // tWave1ToWave4HHOLDIDLookup keys are CASEW1 and values are sets of CASEW4.
-        HashMap<Integer, HashSet<Integer>> tWave1ToWave4HHOLDIDLookup;
-        tWave1ToWave4HHOLDIDLookup = new HashMap<>();
-        ite = iDListsW5[1].iterator();
-        while (ite.hasNext()) {
-            CASEW4 = ite.next();
-            WIGB_Wave4_HHOLD_Record r;
-            r = (WIGB_Wave4_HHOLD_Record) hholdW4recs.get(CASEW4);
-            CASEW1 = r.getCASEW1();
-            if (CASEW1 != null) {
-                if (tCASEW1IDsInCASEW2.contains(CASEW1)) {
-                    if (tWave4ToWave1HHOLDIDLookup.containsValue(CASEW1)) {
-                        System.out.println("Warning the hhold from Wave 1 with ID "
-                                + CASEW1 + " has more than one hhold record in "
-                                + "wave " + wave);
+        cf = new File(outdir, "Wave4ToFromWave1Lookups." + Env.Strings.S_dat);
+        if (cf.exists()) {
+            Object[] o;
+            o = (Object[]) Generic_StaticIO.readObject(cf);
+            tWave4ToWave1HHOLDIDLookup = (HashMap<Integer, Integer>) o[0];
+        } else {
+            tWave4ToWave1HHOLDIDLookup = new HashMap<>();
+            // tWave1ToWave4HHOLDIDLookup keys are CASEW1 and values are sets of CASEW4.
+            HashMap<Integer, HashSet<Integer>> tWave1ToWave4HHOLDIDLookup;
+            tWave1ToWave4HHOLDIDLookup = new HashMap<>();
+            ite = iDListsW5[1].iterator();
+            while (ite.hasNext()) {
+                CASEW4 = ite.next();
+                WIGB_Wave4_HHOLD_Record r;
+                r = (WIGB_Wave4_HHOLD_Record) hholdW4.get(CASEW4);
+                // The following if statement is here to deal with the rogue case 
+                // where CASEW3 6564 is reported exist in wave 4, but doesn't!
+                if (r != null) {
+                    CASEW1 = r.getCASEW1();
+                    if (CASEW1 != null) {
+                        if (tCASEW1IDsInCASEW2.contains(CASEW1)) {
+                            if (tWave4ToWave1HHOLDIDLookup.containsValue(CASEW1)) {
+                                System.out.println("Warning the hhold from Wave 1 with ID "
+                                        + CASEW1 + " has more than one hhold record in "
+                                        + "wave " + wave);
+                            }
+                            Generic_Collections.addToMap(tWave1ToWave4HHOLDIDLookup,
+                                    CASEW1, CASEW4);
+                            tWave4ToWave1HHOLDIDLookup.put(CASEW4, CASEW1);
+                        }
                     }
-                    Generic_Collections.addToMap(tWave1ToWave4HHOLDIDLookup,
-                            CASEW1, CASEW4);
-                    tWave4ToWave1HHOLDIDLookup.put(CASEW4, CASEW1);
                 }
             }
+            Object[] o;
+            o = new Object[2];
+            o[0] = tWave4ToWave1HHOLDIDLookup;
+            o[1] = tWave1ToWave4HHOLDIDLookup;
+            Generic_StaticIO.writeObject(o, cf);
         }
-        HashMap<WIGB_PERSON_ID, WIGB_Wave4_PERSON_Record> personWave4;
-        personWave4 = personHandler.loadSubsetWave4(tWave4ToWave1HHOLDIDLookup.keySet());
-        HashMap<Integer, WIGB_Wave4_HHOLD_Record> hholdWave4;
+        // Load test or generate hholdSubsetW4 subset.
         try {
-            hholdWave4 = hholdHandler.loadCacheSubsetWave4();
+            HashMap<Integer, WIGB_Wave4_HHOLD_Record> hholdSubsetW4;
+            hholdSubsetW4 = hholdHandler.loadCacheSubsetWave4();
         } catch (Exception ex) {
-            hholdWave4 = new HashMap<>();
-            ite = hholdW4recs.keySet().iterator();
+            HashMap<Integer, WIGB_Wave4_HHOLD_Record> hholdSubsetW4;
+            hholdSubsetW4 = new HashMap<>();
+            ite = hholdW4.keySet().iterator();
             while (ite.hasNext()) {
                 CASEW4 = ite.next();
                 if (tWave4ToWave1HHOLDIDLookup.keySet().contains(CASEW4)) {
-                    hholdWave4.put(CASEW4,
-                            (WIGB_Wave4_HHOLD_Record) hholdW4recs.get(CASEW4));
+                    hholdSubsetW4.put(CASEW4,
+                            (WIGB_Wave4_HHOLD_Record) hholdW4.get(CASEW4));
                 }
             }
-            hholdHandler.storeCacheSubset(4, hholdWave4);
+            hholdHandler.storeCacheSubset(4, hholdSubsetW4);
         }
+        hholdW4 = null;
         /**
          * Wave 5. The iterator is set up slightly differently to the one for
          * waves 2 and 3.
@@ -462,65 +521,104 @@ public class WIGB_Main_Process extends WIGB_Object {
         wave = 5;
         // tWave4ToWave1HHOLDIDLookup keys are CASEW5 and values are CASEW1.
         HashMap<Integer, Integer> tWave5ToWave1HHOLDIDLookup;
-        tWave5ToWave1HHOLDIDLookup = new HashMap<>();
-        // tWave1ToWave5HHOLDIDLookup keys are CASEW1 and values are sets of CASEW5.
-        HashMap<Integer, HashSet<Integer>> tWave1ToWave5HHOLDIDLookup;
-        tWave1ToWave5HHOLDIDLookup = new HashMap<>();
-        ite = iDListsW5[0].iterator();
-        while (ite.hasNext()) {
-            CASEW5 = ite.next();
-            WIGB_Wave5_HHOLD_Record r;
-            r = (WIGB_Wave5_HHOLD_Record) hholdW5recs.get(CASEW5);
-            CASEW1 = r.getCASEW1();
-            if (CASEW1 != null) {
-                if (tCASEW1IDsInCASEW2.contains(CASEW1)) {
-                    if (tWave5ToWave1HHOLDIDLookup.containsValue(CASEW1)) {
-                        System.out.println("Warning the hhold from Wave 1 with ID "
-                                + CASEW1 + " has more than one hhold record in "
-                                + "wave " + wave);
+        cf = new File(outdir, "Wave5ToFromWave1Lookups." + Env.Strings.S_dat);
+        if (cf.exists()) {
+            Object[] o;
+            o = (Object[]) Generic_StaticIO.readObject(cf);
+            tWave5ToWave1HHOLDIDLookup = (HashMap<Integer, Integer>) o[0];
+        } else {
+            tWave5ToWave1HHOLDIDLookup = new HashMap<>();
+            // tWave1ToWave5HHOLDIDLookup keys are CASEW1 and values are sets of CASEW5.
+            HashMap<Integer, HashSet<Integer>> tWave1ToWave5HHOLDIDLookup;
+            tWave1ToWave5HHOLDIDLookup = new HashMap<>();
+            ite = iDListsW5[0].iterator();
+            while (ite.hasNext()) {
+                CASEW5 = ite.next();
+                WIGB_Wave5_HHOLD_Record r;
+                r = (WIGB_Wave5_HHOLD_Record) hholdW5.get(CASEW5);
+                CASEW1 = r.getCASEW1();
+                if (CASEW1 != null) {
+                    if (tCASEW1IDsInCASEW2.contains(CASEW1)) {
+                        if (tWave5ToWave1HHOLDIDLookup.containsValue(CASEW1)) {
+                            System.out.println("Warning the hhold from Wave 1 with ID "
+                                    + CASEW1 + " has more than one hhold record in "
+                                    + "wave " + wave);
+                        }
+                        Generic_Collections.addToMap(tWave1ToWave5HHOLDIDLookup,
+                                CASEW1, CASEW5);
+                        tWave5ToWave1HHOLDIDLookup.put(CASEW5, CASEW1);
                     }
-                    Generic_Collections.addToMap(tWave1ToWave5HHOLDIDLookup,
-                            CASEW1, CASEW5);
-                    tWave5ToWave1HHOLDIDLookup.put(CASEW5, CASEW1);
                 }
             }
+            Object[] o;
+            o = new Object[2];
+            o[0] = tWave5ToWave1HHOLDIDLookup;
+            o[1] = tWave1ToWave5HHOLDIDLookup;
+            Generic_StaticIO.writeObject(o, cf);
         }
-        HashMap<WIGB_PERSON_ID, WIGB_Wave5_PERSON_Record> personWave5;
-        personWave5 = personHandler.loadSubsetWave5(tWave5ToWave1HHOLDIDLookup.keySet());
-        HashMap<Integer, WIGB_Wave5_HHOLD_Record> hholdWave5;
+        // Load test or generate hholdSubsetW5 subset.
         try {
-            hholdWave5 = hholdHandler.loadCacheSubsetWave5();
+            HashMap<Integer, WIGB_Wave5_HHOLD_Record> hholdSubsetW5;
+            hholdSubsetW5 = hholdHandler.loadCacheSubsetWave5();
         } catch (Exception ex) {
-            hholdWave5 = new HashMap<>();
-            ite = hholdW5recs.keySet().iterator();
+            HashMap<Integer, WIGB_Wave5_HHOLD_Record> hholdSubsetW5;
+            hholdSubsetW5 = new HashMap<>();
+            ite = hholdW5.keySet().iterator();
             while (ite.hasNext()) {
                 CASEW5 = ite.next();
                 if (tWave5ToWave1HHOLDIDLookup.keySet().contains(CASEW5)) {
-                    hholdWave5.put(CASEW5,
-                            (WIGB_Wave5_HHOLD_Record) hholdW5recs.get(CASEW5));
+                    hholdSubsetW5.put(CASEW5,
+                            (WIGB_Wave5_HHOLD_Record) hholdW5.get(CASEW5));
                 }
             }
-            hholdHandler.storeCacheSubset(5, hholdWave5);
+            hholdHandler.storeCacheSubset(5, hholdSubsetW5);
         }
-        result[0] = hholdWave1;
-        result[1] = hholdWave2;
-        result[2] = hholdWave3;
-        result[3] = hholdWave4;
-        result[4] = hholdWave5;
-        result[5] = personWave1;
-        result[6] = personWave2;
-        result[7] = personWave3;
-        result[8] = personWave4;
-        result[9] = personWave5;
-        result[10] = tWave1ToWave5HHOLDIDLookup;
-        result[11] = tWave5ToWave1HHOLDIDLookup;
-        result[12] = tWave1ToWave4HHOLDIDLookup;
-        result[13] = tWave4ToWave1HHOLDIDLookup;
-        result[14] = tWave1ToWave3HHOLDIDLookup;
-        result[15] = tWave3ToWave1HHOLDIDLookup;
-        result[16] = tWave1ToWave2HHOLDIDLookup;
-        result[17] = tWave2ToWave1HHOLDIDLookup;
-        return result;
+        hholdW5 = null;
+
+        /**
+         * Step 6: Set some things to null to effectively clear some memory.
+         */
+        hholdData = null;
+        iDLists = null;
+        hholdDataW1 = null;
+        iDListsW1 = null;
+        hholdDataW2 = null;
+        hholdW2 = null;
+        iDListsW2 = null;
+        hholdDataW3 = null;
+        hholdW3 = null;
+        iDListsW3 = null;
+        hholdDataW4 = null;
+        hholdW4 = null;
+        iDListsW4 = null;
+        hholdDataW5 = null;
+        hholdW5 = null;
+        iDListsW5 = null;
+
+        /**
+         * Step 7: Get the person records for each household stored in a cache.
+         * These will next be linked to each hhold record.
+         */
+        // Load or generate personSubsetW1 subset.
+//        HashMap<WIGB_PERSON_ID, WIGB_Wave1_PERSON_Record> personSubsetW1;
+//        personSubsetW1 = personHandler.loadSubsetWave1(tCASEW1IDsInCASEW2);
+        personHandler.loadSubsetWave1(tCASEW1IDsInCASEW2);
+        // Load or generate personSubsetW2 subset.
+//        HashMap<WIGB_PERSON_ID, WIGB_Wave2_PERSON_Record> personSubsetW2;
+//        personSubsetW2 = personHandler.loadSubsetWave2(tWave2ToWave1HHOLDIDLookup.keySet());
+        personHandler.loadSubsetWave2(tWave2ToWave1HHOLDIDLookup.keySet());
+        // Load or generate personSubsetW3 subset.
+//        HashMap<WIGB_PERSON_ID, WIGB_Wave3_PERSON_Record> personSubsetW3;
+//        personSubsetW3 = personHandler.loadSubsetWave3(tWave3ToWave1HHOLDIDLookup.keySet());
+        personHandler.loadSubsetWave3(tWave3ToWave1HHOLDIDLookup.keySet());
+        // Load or generate personSubsetW4 subset.
+//        HashMap<WIGB_PERSON_ID, WIGB_Wave4_PERSON_Record> personSubsetW4;
+//        personSubsetW4 = personHandler.loadSubsetWave4(tWave4ToWave1HHOLDIDLookup.keySet());
+        personHandler.loadSubsetWave4(tWave4ToWave1HHOLDIDLookup.keySet());
+        // Load or generate personSubsetW5 subset.
+//        HashMap<WIGB_PERSON_ID, WIGB_Wave5_PERSON_Record> personSubsetW5;
+//        personSubsetW5 = personHandler.loadSubsetWave5(tWave5ToWave1HHOLDIDLookup.keySet());
+        personHandler.loadSubsetWave5(tWave5ToWave1HHOLDIDLookup.keySet());
     }
 
     boolean doJavaCodeGeneration = false;

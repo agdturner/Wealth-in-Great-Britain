@@ -16,7 +16,6 @@
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 /**
  *
@@ -24,22 +23,32 @@ import java.util.Objects;
  */
 public class WIGB_PERSON_ID implements Serializable {
 
-    private Integer CASEID;
-    private Integer PERSONID;
+    //private int wave;
+    private int CASEID;
+    private int PERSONID;
 
     public WIGB_PERSON_ID() {
     }
 
-    public WIGB_PERSON_ID(Integer CASEID, Integer PERSONID) {
+    public WIGB_PERSON_ID(int wave, Integer CASEID, Integer PERSONID) {
+        //this.wave = wave;
         this.CASEID = CASEID;
         this.PERSONID = PERSONID;
     }
+
+//    /**
+//     *
+//     * @return the CASEID
+//     */
+//    public int getWave() {
+//        return wave;
+//    }
 
     /**
      *
      * @return the CASEID
      */
-    public Integer getCASEID() {
+    public int getCASEID() {
         return CASEID;
     }
 
@@ -47,7 +56,7 @@ public class WIGB_PERSON_ID implements Serializable {
      *
      * @return the PERSONID
      */
-    public Integer getPERSONID() {
+    public int getPERSONID() {
         return PERSONID;
     }
 
@@ -67,20 +76,24 @@ public class WIGB_PERSON_ID implements Serializable {
         if (obj instanceof WIGB_PERSON_ID) {
             WIGB_PERSON_ID o;
             o = (WIGB_PERSON_ID) obj;
-            if (this.CASEID.equals(o.CASEID)) {
-                if (PERSONID.equals(o.PERSONID)) {
-                    return true;
+            //if (hashCode() == o.hashCode()) {
+            if (CASEID == o.CASEID) {
+                if (PERSONID == o.PERSONID) {
+                    //if (wave == o.wave) {
+                        return true;
+                    //}
                 }
             }
+            //}
         }
         return false;
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 97 * hash + Objects.hashCode(this.CASEID);
-        hash = 97 * hash + Objects.hashCode(this.PERSONID);
+        int hash = 3;
+        hash = 23 * hash + this.CASEID;
+        hash = 23 * hash + this.PERSONID;
         return hash;
     }
 }
