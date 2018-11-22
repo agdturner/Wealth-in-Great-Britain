@@ -217,5 +217,84 @@ public class WIGB_HHOLD_Handler extends WIGB_WAAS_Handler {
         }
         return r;
     }
+    
+    public HashMap<Integer, WIGB_Wave1_HHOLD_Record> loadSubsetWave1()
+            throws Exception {
+        HashMap<Integer, WIGB_Wave1_HHOLD_Record> r;
+        File dir;
+        dir = Env.Files.getGeneratedWaASDirectory();
+        dir = new File(dir, "Subsets");
+        File cf;
+        cf = new File(dir, TYPE + "Wave1." + Env.Strings.S_dat);
+        if (cf.exists()) {
+            r = (HashMap<Integer, WIGB_Wave1_HHOLD_Record>) Generic_StaticIO.readObject(cf);
+        } else {
+            throw new Exception("Subset for Wave 1 not found!");
+        }
+        return r;
+    }
+    
+    public HashMap<Integer, WIGB_Wave2_HHOLD_Record> loadSubsetWave2()
+            throws Exception {
+        HashMap<Integer, WIGB_Wave2_HHOLD_Record> r;
+        File dir;
+        dir = Env.Files.getGeneratedWaASDirectory();
+        dir = new File(dir, "Subsets");
+        File cf;
+        cf = new File(dir, TYPE + "Wave2." + Env.Strings.S_dat);
+        if (cf.exists()) {
+            r = (HashMap<Integer, WIGB_Wave2_HHOLD_Record>) Generic_StaticIO.readObject(cf);
+        } else {
+            throw new Exception("Subset for Wave 2 not found!");
+        }
+        return r;
+    }
 
+    public HashMap<Integer, WIGB_Wave3_HHOLD_Record> loadSubsetWave3()
+            throws Exception {
+        HashMap<Integer, WIGB_Wave3_HHOLD_Record> r;
+        File dir;
+        dir = Env.Files.getGeneratedWaASDirectory();
+        dir = new File(dir, "Subsets");
+        File cf;
+        cf = new File(dir, TYPE + "Wave3." + Env.Strings.S_dat);
+        if (cf.exists()) {
+            r = (HashMap<Integer, WIGB_Wave3_HHOLD_Record>) Generic_StaticIO.readObject(cf);
+        } else {
+            throw new Exception("Subset for Wave 3 not found!");
+        }
+        return r;
+    }
+
+    public HashMap<Integer, WIGB_Wave4_HHOLD_Record> loadSubsetWave4()
+            throws Exception {
+        HashMap<Integer, WIGB_Wave4_HHOLD_Record> r;
+        File dir;
+        dir = Env.Files.getGeneratedWaASDirectory();
+        dir = new File(dir, "Subsets");
+        File cf;
+        cf = new File(dir, TYPE + "Wave4." + Env.Strings.S_dat);
+        if (cf.exists()) {
+            r = (HashMap<Integer, WIGB_Wave4_HHOLD_Record>) Generic_StaticIO.readObject(cf);
+        } else {
+            throw new Exception("Subset for Wave 4 not found!");
+        }
+        return r;
+    }
+
+    public HashMap<Integer, WIGB_Wave5_HHOLD_Record> loadSubsetWave5()
+            throws Exception {
+        HashMap<Integer, WIGB_Wave5_HHOLD_Record> r;
+        File dir;
+        dir = Env.Files.getGeneratedWaASDirectory();
+        dir = new File(dir, "Subsets");
+        File cf;
+        cf = new File(dir, TYPE + "Wave5." + Env.Strings.S_dat);
+        if (cf.exists()) {
+            r = (HashMap<Integer, WIGB_Wave5_HHOLD_Record>) Generic_StaticIO.readObject(cf);
+        } else {
+            throw new Exception("Subset for Wave 5 not found!");
+        }
+        return r;
+    }
 }

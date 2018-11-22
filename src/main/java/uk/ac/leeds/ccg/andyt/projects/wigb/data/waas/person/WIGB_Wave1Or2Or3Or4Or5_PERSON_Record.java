@@ -3,7 +3,8 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person;
 import java.io.Serializable;
-public abstract class WIGB_Wave1Or2Or3Or4Or5_PERSON_Record {
+public class WIGB_Wave1Or2Or3Or4Or5_PERSON_Record implements Serializable {
+private static final long serialVersionUID = 1;
 protected String[] s;
 protected Double ATTEND;
 
@@ -137,7 +138,7 @@ protected Double CASAV_I;
 
 protected Double CASAV_IFLAG;
 
-protected int CASEW1;
+protected Integer CASEW1;
 
 protected Double CASVB;
 
@@ -1800,7 +1801,7 @@ protected Double PEMOFF_I;
 
 protected Double PEMOFF_IFLAG;
 
-protected Double PERSONW1;
+protected Integer PERSONW1;
 
 protected Double PERSPROX;
 
@@ -7426,7 +7427,7 @@ PEMOFF_IFLAG = new Double(s);
 
 protected final void initPERSONW1(String s) {
 if (!s.trim().isEmpty()) {
-PERSONW1 = new Double(s);
+PERSONW1 = new Integer(s);
 }
 }
 
@@ -8382,7 +8383,7 @@ public Double getCASAV_IFLAG() {
 return CASAV_IFLAG;
 }
 
-public int getCASEW1() {
+public Integer getCASEW1() {
 return CASEW1;
 }
 
@@ -11710,7 +11711,7 @@ public Double getPEMOFF_IFLAG() {
 return PEMOFF_IFLAG;
 }
 
-public Double getPERSONW1() {
+public Integer getPERSONW1() {
 return PERSONW1;
 }
 

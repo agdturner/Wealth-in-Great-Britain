@@ -3,7 +3,8 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold;
 import java.io.Serializable;
-public abstract class WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record {
+public class WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record implements Serializable {
+private static final long serialVersionUID = 1;
 protected String[] s;
 protected Double ACCOM;
 
@@ -13,7 +14,7 @@ protected Double ALLENDW;
 
 protected Double ALLGD;
 
-protected int CASEW1;
+protected Integer CASEW1;
 
 protected Double DVEQRELVAL;
 
@@ -1957,7 +1958,7 @@ public Double getALLGD() {
 return ALLGD;
 }
 
-public int getCASEW1() {
+public Integer getCASEW1() {
 return CASEW1;
 }
 
