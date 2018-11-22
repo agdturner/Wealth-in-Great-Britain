@@ -3,243 +3,124 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person;
 public class WIGB_Wave5_PERSON_Record extends WIGB_Wave4Or5_PERSON_Record {
-private static final long serialVersionUID = 1;
 protected Double ANYOTHERBAMT;
-
 protected Double ANYOTHERBPD;
-
 protected Double CAEXTRA;
-
 protected Double CAOLDER;
-
 protected Double CAOTHER1;
-
 protected Double CAOTHER2;
-
 protected Double CAOTHER3;
-
 protected Double CAOTHER4;
-
 protected Double CAOTHER5;
-
 protected Integer CASEW5;
-
 protected Double CTAMT;
-
 protected Double CTAXRED;
-
 protected Double CTAXREDAMT;
-
 protected Double CTBAND;
-
 protected Double CTINSTAL;
-
 protected Double CTTIME;
-
 protected Double DBURDH;
-
 protected Double DBURD___W5;
-
 protected Double DNEWLOWE1;
-
 protected Double DNEWLOWE1_I;
-
 protected Double DNEWLOWE1_IFLAG;
-
 protected Double DNEWLOWE2;
-
 protected Double DNEWLOWE2_I;
-
 protected Double DNEWLOWE2_IFLAG;
-
 protected Double DNEWLOWE3;
-
 protected Double DNEWLOWE3_I;
-
 protected Double DNEWLOWE3_IFLAG;
-
 protected Double DNEWLOWEB1;
-
 protected Double DNEWLOWEB1_I;
-
 protected Double DNEWLOWEB1_IFLAG;
-
 protected Double DNEWLOWEB2;
-
 protected Double DNEWLOWEB2_I;
-
 protected Double DNEWLOWEB2_IFLAG;
-
 protected Double DNEWLOWEB3;
-
 protected Double DNEWLOWEB3_I;
-
 protected Double DNEWLOWEB3_IFLAG;
-
 protected Double DNEWLTYPE1;
-
 protected Double DNEWLTYPE1_I;
-
 protected Double DNEWLTYPE1_IFLAG;
-
 protected Double DNEWLTYPE2;
-
 protected Double DNEWLTYPE2_I;
-
 protected Double DNEWLTYPE2_IFLAG;
-
 protected Double DNEWLTYPE3;
-
 protected Double DNEWLTYPE3_I;
-
 protected Double DNEWLTYPE3_IFLAG;
-
 protected Double DVAGEW5BAND;
-
 protected Double DVBENEFITANNUAL;
-
 protected Double DVBENEFITANNUAL_IFLAG;
-
 protected Double DVBENEFITANNUAL_MISS;
-
 protected Double FINVTY_IFLAG;
-
 protected Double HRPEDLEVEL;
-
 protected Double MONTHW4;
-
 protected Double MORSAVRE1;
-
 protected Double MORSAVRE2;
-
 protected Double MORSAVRE3;
-
 protected Double MORSAVRE4;
-
 protected Double MORSAVRE5;
-
 protected Double MORSAVRE6;
-
 protected Double OMAKEMOST;
-
 protected Double OSAFERET;
-
 protected Double OSVEXTO;
-
 protected Double PAYPER2;
-
 protected Integer PERSONW5;
-
 protected Double PFACC;
-
 protected Double PFANNUITYMVAL1;
-
 protected Double PFANNUITYMVAL2;
-
 protected Double PFANNUITYMVAL4;
-
 protected Double PFPENSIONMVAL1;
-
 protected Double PFPENSIONMVAL2;
-
 protected Double PFPENSIONMVAL3;
-
 protected Double PFPENSIONMVAL4;
-
 protected Double PFPENSIONMVB1;
-
 protected Double PFPENSIONMVB4;
-
 protected Double PFPENWISEFUTURE1;
-
 protected Double PFPENWISEHELP1;
-
 protected Double PFTAKELUMFLEX1;
-
 protected Double PFTAKELUMFLEX2;
-
 protected Double POANNUITYMVAL1;
-
 protected Double POPENSIONMVAL1;
-
 protected Double POPENSIONMVAL2;
-
 protected Double POPENSIONMVB1;
-
 protected Double POPENSIONMVB2;
-
 protected Double POPENWISEFUTURE1;
-
 protected Double POPENWISEFUTURE2;
-
 protected Double POPENWISEHELP1;
-
 protected Double POPENWISEHELP2;
-
 protected Double POPLANLUMFLEX1;
-
 protected Double POPLANLUMFLEX2;
-
 protected Double POTAKELUMFLEX1;
-
 protected Double POTAKELUMFLEX2;
-
 protected Double PPANNUITYMVAL1;
-
 protected Double PPANNUITYMVAL2;
-
 protected Double PPANNUITYMVAL3;
-
 protected Double PPANNUITYMVB1;
-
 protected Double PPANNUITYMVB2;
-
 protected Double PPANNUITYMVB3;
-
 protected Double RELEASEEQUITY1;
-
 protected Double RELEASEEQUITY2;
-
 protected Double RELEASEEQUITY3;
-
 protected Double RENTAMOUNT;
-
 protected Double RENTPERIOD;
-
 protected Double RENTSPECIFY;
-
 protected Double SOURC2PMULTI1;
-
 protected Double SOURC2PMULTI2;
-
 protected Double SOURC2PMULTI3;
-
 protected Double SOURC2PMULTI4;
-
 protected Double SOURC2PMULTI5;
-
 protected Double SOURC2PMULTI6;
-
 protected Double SOURC2PMULTI7;
-
 protected Double SOURC2PMULTI8;
-
 protected Double SOURC2PMULTI9;
-
 protected Double W1W5WGT;
-
 protected Double W4_LONGWGT;
-
 protected Double W5XSHHWGT;
-
 protected Double W5XSPERSWGT;
-
 protected Double WPRINF;
-
 protected Double XSOC2010;
-
 protected Double YEARW4;
-
 protected final void initANYOTHERBAMT(String s) {
 if (!s.trim().isEmpty()) {
 ANYOTHERBAMT = new Double(s);

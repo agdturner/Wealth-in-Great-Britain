@@ -4,492 +4,249 @@
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold;
 import java.io.Serializable;
 public class WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record implements Serializable {
-private static final long serialVersionUID = 1;
 protected String[] s;
 protected Double ACCOM;
-
 protected Double ACCOTH;
-
 protected Double ALLENDW;
-
 protected Double ALLGD;
-
 protected Integer CASEW1;
-
 protected Double DVEQRELVAL;
-
 protected Double DVGCOLLV;
-
 protected Double DVHORP;
-
 protected Double DVHSIZE;
-
 protected Double DVHVALUE;
-
 protected Double DVPRIRNT;
-
 protected Double DVPROPERTY;
-
 protected Double DVTOTOTHVEHVAL;
-
 protected Double DVTOTPERNPVAL;
-
 protected Double DVTOTVEHVAL;
-
 protected Double EINTRAT;
-
 protected Double EINTRAT_I;
-
 protected Double EINTRAT_IFLAG;
-
 protected Double EOTHREG;
-
 protected Double EOTHRVA;
-
 protected Double EOTHRVB;
-
 protected Double EPRPER;
-
 protected Double EPRVAL;
-
 protected Double EPRVPAY;
-
 protected Double EQVAL;
-
 protected Double EQVALB;
-
 protected Double EQVAL_I;
-
 protected Double EQVAL_IFLAG;
-
 protected Double EQYES;
-
 protected Double ERECTAX;
-
 protected Double ERVPRP;
-
 protected Double ERVPRP_I;
-
 protected Double ERVPRP_IFLAG;
-
 protected Double ERVRENT;
-
 protected Double ERVSUM;
-
 protected Double ERVSUMB;
-
 protected Double ERVTAX;
-
 protected Double FLTTYP;
-
 protected Double FURN;
-
 protected Double GCOLLEC;
-
 protected Double GCOLLEC_I;
-
 protected Double GCOLLEC_IFLAG;
-
 protected Double GCOLLV;
-
 protected Double GCOLLVB;
-
 protected Double GCOLLV_I;
-
 protected Double GCOLLV_IFLAG;
-
 protected Double GCONTVB;
-
 protected Double GCONTVB_I;
-
 protected Double GCONTVB_IFLAG;
-
 protected Double GOR;
-
 protected Double HAGEB;
-
 protected Double HAGEYR;
-
 protected Double HBEDRM;
-
 protected Double HBFROM;
-
 protected Double HBUYSE;
-
 protected Double HBUYYR;
-
 protected Double HFINWNT_SUM;
-
 protected Double HFINW_SUM;
-
 protected Double HHOLDTYPE;
-
 protected Double HHOSCH;
-
 protected Double HHOWN;
-
 protected Double HMORTG;
-
 protected Double HOUSGDST_SUM;
-
 protected Double HOUT;
-
 protected Double HPHYSW;
-
 protected Double HPRICE;
-
 protected Double HPRICEB;
-
 protected Double HPROPW;
-
 protected Double HRPDVAGE9;
-
 protected Double HRPDVILO3A;
-
 protected Double HRPDVMRDF;
-
 protected Double HRPEDATTN1;
-
 protected Double HRPEDATTN2;
-
 protected Double HRPEDATTN3;
-
 protected Double HRPEDLEVEL;
-
 protected Double HRPNSSEC3;
-
 protected Double HRPSEX;
-
 protected Double HRTBEV;
-
 protected Double HSETYPE;
-
 protected Double HSHARE;
-
 protected Double HSHAREP;
-
 protected Double HSHAREP_I;
-
 protected Double HSHAREP_IFLAG;
-
 protected Double HSHARE_I;
-
 protected Double HSHARE_IFLAG;
-
 protected Double HVALB;
-
 protected Double HVALUE;
-
 protected Double HVALUE_I;
-
 protected Double HVALUE_IFLAG;
-
 protected Double LLORD;
-
 protected Double MALL2;
-
 protected Double MALL2_I;
-
 protected Double MALL2_IFLAG;
-
 protected Double MALL3;
-
 protected Double MALL3_I;
-
 protected Double MALL3_IFLAG;
-
 protected Double MALLTY2;
-
 protected Double MALLTY2_I;
-
 protected Double MALLTY2_IFLAG;
-
 protected Double MALLTY3;
-
 protected Double MARRS2;
-
 protected Double MARRS3;
-
 protected Double MENDNUM2;
-
 protected Double MENDNUM2_I;
-
 protected Double MENDNUM2_IFLAG;
-
 protected Double MENDNUM3;
-
 protected Double MENDV11;
-
 protected Double MENDV2;
-
 protected Double MENDV2_I;
-
 protected Double MENDV2_IFLAG;
-
 protected Double MENDV3;
-
 protected Double MENDV3_I;
-
 protected Double MENDV3_IFLAG;
-
 protected Double MENDV4;
-
 protected Double MENDV4_I;
-
 protected Double MENDV4_IFLAG;
-
 protected Double MENDV5;
-
 protected Double MENDV6;
-
 protected Double MENDV6_I;
-
 protected Double MENDV6_IFLAG;
-
 protected Double MENDV7;
-
 protected Double MENDV8;
-
 protected Double MENDVB11;
-
 protected Double MENDVB2;
-
 protected Double MENDVB3;
-
 protected Double MENDVB4;
-
 protected Double MENDVB6;
-
 protected Double MENDVB7;
-
 protected Double MENDW2_I;
-
 protected Double MENDW2_IFLAG;
-
 protected Double MENDW3_I;
-
 protected Double MENDW3_IFLAG;
-
 protected Double MENDX2;
-
 protected Double MENDX3;
-
 protected Double MENDY11;
-
 protected Double MENDY2;
-
 protected Double MENDY3;
-
 protected Double MENDY4;
-
 protected Double MENDY6;
-
 protected Double MENDY7;
-
 protected Double MHOWPY2;
-
 protected Double MHOWPY3;
-
 protected Double MINC1;
-
 protected Double MINC11;
-
 protected Double MINC2;
-
 protected Double MINC3;
-
 protected Double MINC4;
-
 protected Double MINC5;
-
 protected Double MINC6;
-
 protected Double MJNAME01;
-
 protected Double MJNAME02;
-
 protected Double MJNAME03;
-
 protected Double MJNAME04;
-
 protected Double MJNAME18;
-
 protected Double MJNAME19;
-
 protected Double MJNAME20;
-
 protected Double MJNAME35;
-
 protected Double MJNAME36;
-
 protected Double MNAME2;
-
 protected Double MNAME3;
-
 protected Double MNEG2;
-
 protected Double MNEG2_I;
-
 protected Double MNEG2_IFLAG;
-
 protected Double MNEG3;
-
 protected Double MNEGB2;
-
 protected Double MNEGB3;
-
 protected Double MNUMB;
-
 protected Double MONAME2;
-
 protected Double MONAME3;
-
 protected Double MONTH;
-
 protected Double MPAYB2;
-
 protected Double MPAYB3;
-
 protected Double MPAYM2;
-
 protected Double MPAYM3;
-
 protected Double MPP2;
-
 protected Double MPP3;
-
 protected Double MREAS01;
-
 protected Double MREAS02;
-
 protected Double MREAS03;
-
 protected Double MREAS04;
-
 protected Double MREAS05;
-
 protected Double MREAS06;
-
 protected Double MREAS07;
-
 protected Double MREAS12;
-
 protected Double MREAS13;
-
 protected Double MREAS23;
-
 protected Double MTYPE2;
-
 protected Double MTYPE2_I;
-
 protected Double MTYPE2_IFLAG;
-
 protected Double MTYPE3;
-
 protected Double MTYPE3_I;
-
 protected Double MTYPE3_IFLAG;
-
 protected Double MVAL2;
-
 protected Double MVAL2_I;
-
 protected Double MVAL2_IFLAG;
-
 protected Double MVAL3;
-
 protected Double MVAL3_I;
-
 protected Double MVAL3_IFLAG;
-
 protected Double MVALB2;
-
 protected Double MVALB3;
-
 protected Double MYLFT2;
-
 protected Double MYLFT3;
-
 protected Double NUMADULT;
-
 protected Double NUMCH18;
-
 protected Double NUMCHILD;
-
 protected Double NUMCIVPTR;
-
 protected Double NUMCPART;
-
 protected Double NUMHHLDR;
-
 protected Double NUMMPART;
-
 protected Double OFINAL;
-
 protected Double TEN1;
-
 protected Double TEN1_I;
-
 protected Double TEN1_IFLAG;
-
 protected Double TIED;
-
 protected Double TOTMNEG;
-
 protected Double TOTMORT;
-
 protected Double TOTMVAL;
-
 protected Double TOTWLTH;
-
 protected Double VCARN;
-
 protected Double VCARN_I;
-
 protected Double VCARN_IFLAG;
-
 protected Double VOTYP1;
-
 protected Double VOTYP1_I;
-
 protected Double VOTYP2;
-
 protected Double VOTYP2_I;
-
 protected Double VOTYP3;
-
 protected Double VOTYP3_I;
-
 protected Double VOTYP4;
-
 protected Double VOTYP4_I;
-
 protected Double VOTYP5_I;
-
 protected Double VOVAL;
-
 protected Double VOVAL_I;
-
 protected Double VOVAL_IFLAG;
-
 protected Double VOVLB;
-
 protected Double VPERS;
-
 protected Double VPERV;
-
 protected Double VPERV_I;
-
 protected Double VPERV_IFLAG;
-
 protected Double VTYPE2;
-
 protected Double VTYPE2_I;
-
 protected Double VTYPE_IFLAG;
-
 protected Double YEAR;
-
 protected final void initACCOM(String s) {
 if (!s.trim().isEmpty()) {
 ACCOM = new Double(s);

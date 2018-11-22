@@ -19,14 +19,12 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.StreamTokenizer;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_ReadCSV;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_StaticIO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
-import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person.WIGB_Wave1Or2Or3Or4Or5_PERSON_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person.WIGB_Wave1_PERSON_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person.WIGB_Wave2_PERSON_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person.WIGB_Wave3_PERSON_Record;
@@ -57,14 +55,10 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
             Set<Integer> CASEW1IDs) {
         HashMap<WIGB_PERSON_ID, WIGB_Wave1_PERSON_Record> r;
         try {
-            r = loadSubsetWave1();
+            r = loadCacheSubsetWave1();
         } catch (Exception ex) {
             int wave;
             wave = 1;
-            File dir;
-            dir = Env.Files.getGeneratedWaASDirectory();
-            File cf;
-            cf = new File(dir, TYPE + wave + "." + Env.Strings.S_dat);
             File f;
             f = getInputFile(wave);
             r = new HashMap<>();
@@ -78,13 +72,11 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
             int lineNumber;
             lineNumber = 0;
             String line;
-
+            String[] split;
             // skip header
             Generic_ReadCSV.readLine(st, null);
-
             boolean read;
             read = false;
-
             Integer ID;
             WIGB_PERSON_ID PERSON_ID;
 
@@ -97,25 +89,20 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
                 if (line == null) {
                     read = true;
                 } else {
-                    WIGB_Wave1_PERSON_Record rec;
-                    try {
+                    split = line.split("\t");
+                    ID = Integer.valueOf(split[0]);
+                    if (CASEW1IDs.contains(ID)) {
+                        WIGB_Wave1_PERSON_Record rec;
                         rec = new WIGB_Wave1_PERSON_Record(line);
-                        ID = rec.getCASEW1();
-                        if (CASEW1IDs.contains(ID)) {
-                            PERSON_ID = new WIGB_PERSON_ID(ID,
-                                    rec.getPERSONW1());
-                            r.put(PERSON_ID, rec);
-                        }
-                    } catch (ArrayIndexOutOfBoundsException e) {
-                        e.printStackTrace(System.err);
-                        System.err.println(line);
-                        //rec = new WIGB_Wave1_PERSON_Record(line); // For debugging
+                        PERSON_ID = new WIGB_PERSON_ID(ID,
+                                rec.getPERSONW1());
+                        r.put(PERSON_ID, rec);
                     }
                 }
             }
             System.out.println("</Loading wave " + wave + " subset " + TYPE
                     + " WaAS data from " + f + ">");
-            storeSubset(wave, r);
+            storeCacheSubset(wave, r);
         }
         return r;
     }
@@ -132,14 +119,10 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
             Set<Integer> CASEW2IDs) {
         HashMap<WIGB_PERSON_ID, WIGB_Wave2_PERSON_Record> r;
         try {
-            r = loadSubsetWave2();
+            r = loadCacheSubsetWave2();
         } catch (Exception ex) {
             int wave;
             wave = 2;
-            File dir;
-            dir = Env.Files.getGeneratedWaASDirectory();
-            File cf;
-            cf = new File(dir, TYPE + wave + "." + Env.Strings.S_dat);
             File f;
             f = getInputFile(wave);
             r = new HashMap<>();
@@ -153,16 +136,13 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
             int lineNumber;
             lineNumber = 0;
             String line;
-
+            String[] split;
             // skip header
             Generic_ReadCSV.readLine(st, null);
-
             boolean read;
             read = false;
-
             Integer ID;
             WIGB_PERSON_ID PERSON_ID;
-
             while (!read) {
                 line = Generic_ReadCSV.readLine(st, null);
                 lineNumber++;
@@ -172,30 +152,25 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
                 if (line == null) {
                     read = true;
                 } else {
-                    WIGB_Wave2_PERSON_Record rec;
-                    try {
+                    split = line.split("\t");
+                    ID = Integer.valueOf(split[0]);
+                    if (CASEW2IDs.contains(ID)) {
+                            WIGB_Wave2_PERSON_Record rec;
                         rec = new WIGB_Wave2_PERSON_Record(line);
-                        ID = rec.getCASEW2();
-                        if (CASEW2IDs.contains(ID)) {
                             PERSON_ID = new WIGB_PERSON_ID(ID,
                                     rec.getPERSONW2());
                             r.put(PERSON_ID, rec);
                         }
-                    } catch (ArrayIndexOutOfBoundsException e) {
-                        e.printStackTrace(System.err);
-                        System.err.println(line);
-                        //rec = new WIGB_Wave1_PERSON_Record(line); // For debugging
-                    }
                 }
             }
             System.out.println("</Loading wave " + wave + " subset " + TYPE
                     + " WaAS data from " + f + ">");
-            storeSubset(wave, r);
+            storeCacheSubset(wave, r);
         }
         return r;
     }
-    
-        /**
+
+    /**
      * Loads Wave 3 of the person WaAS for those records with CASEW3 in
      * CASEW3IDs. If this data are in a cache then the cache is loaded otherwise
      * the data are selected and the cache is written for next time.
@@ -207,14 +182,10 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
             Set<Integer> CASEW3IDs) {
         HashMap<WIGB_PERSON_ID, WIGB_Wave3_PERSON_Record> r;
         try {
-            r = loadSubsetWave3();
+            r = loadCacheSubsetWave3();
         } catch (Exception ex) {
             int wave;
             wave = 3;
-            File dir;
-            dir = Env.Files.getGeneratedWaASDirectory();
-            File cf;
-            cf = new File(dir, TYPE + wave + "." + Env.Strings.S_dat);
             File f;
             f = getInputFile(wave);
             r = new HashMap<>();
@@ -228,16 +199,13 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
             int lineNumber;
             lineNumber = 0;
             String line;
-
+            String[] split;
             // skip header
             Generic_ReadCSV.readLine(st, null);
-
             boolean read;
             read = false;
-
             Integer ID;
             WIGB_PERSON_ID PERSON_ID;
-
             while (!read) {
                 line = Generic_ReadCSV.readLine(st, null);
                 lineNumber++;
@@ -247,30 +215,25 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
                 if (line == null) {
                     read = true;
                 } else {
-                    WIGB_Wave3_PERSON_Record rec;
-                    try {
-                        rec = new WIGB_Wave3_PERSON_Record(line);
-                        ID = rec.getCASEW3();
+                    split = line.split("\t");
+                    ID = Integer.valueOf(split[0]);
                         if (CASEW3IDs.contains(ID)) {
+                    WIGB_Wave3_PERSON_Record rec;
+                        rec = new WIGB_Wave3_PERSON_Record(line);
                             PERSON_ID = new WIGB_PERSON_ID(ID,
                                     rec.getPERSONW3());
                             r.put(PERSON_ID, rec);
                         }
-                    } catch (ArrayIndexOutOfBoundsException e) {
-                        e.printStackTrace(System.err);
-                        System.err.println(line);
-                        //rec = new WIGB_Wave1_PERSON_Record(line); // For debugging
-                    }
                 }
             }
             System.out.println("</Loading wave " + wave + " subset " + TYPE
                     + " WaAS data from " + f + ">");
-            storeSubset(wave, r);
+            storeCacheSubset(wave, r);
         }
         return r;
     }
-    
-        /**
+
+    /**
      * Loads Wave 4 of the person WaAS for those records with CASEW4 in
      * CASEW4IDs. If this data are in a cache then the cache is loaded otherwise
      * the data are selected and the cache is written for next time.
@@ -282,14 +245,10 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
             Set<Integer> CASEW4IDs) {
         HashMap<WIGB_PERSON_ID, WIGB_Wave4_PERSON_Record> r;
         try {
-            r = loadSubsetWave4();
+            r = loadCacheSubsetWave4();
         } catch (Exception ex) {
             int wave;
             wave = 4;
-            File dir;
-            dir = Env.Files.getGeneratedWaASDirectory();
-            File cf;
-            cf = new File(dir, TYPE + wave + "." + Env.Strings.S_dat);
             File f;
             f = getInputFile(wave);
             r = new HashMap<>();
@@ -303,16 +262,13 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
             int lineNumber;
             lineNumber = 0;
             String line;
-
+            String[] split;
             // skip header
             Generic_ReadCSV.readLine(st, null);
-
             boolean read;
             read = false;
-
             Integer ID;
             WIGB_PERSON_ID PERSON_ID;
-
             while (!read) {
                 line = Generic_ReadCSV.readLine(st, null);
                 lineNumber++;
@@ -322,30 +278,25 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
                 if (line == null) {
                     read = true;
                 } else {
-                    WIGB_Wave4_PERSON_Record rec;
-                    try {
-                        rec = new WIGB_Wave4_PERSON_Record(line);
-                        ID = rec.getCASEW4();
+                    split = line.split("\t");
+                    ID = Integer.valueOf(split[0]);
                         if (CASEW4IDs.contains(ID)) {
+                    WIGB_Wave4_PERSON_Record rec;
+                        rec = new WIGB_Wave4_PERSON_Record(line);
                             PERSON_ID = new WIGB_PERSON_ID(ID,
                                     rec.getPERSONW4());
                             r.put(PERSON_ID, rec);
                         }
-                    } catch (ArrayIndexOutOfBoundsException e) {
-                        e.printStackTrace(System.err);
-                        System.err.println(line);
-                        //rec = new WIGB_Wave1_PERSON_Record(line); // For debugging
-                    }
                 }
             }
             System.out.println("</Loading wave " + wave + " subset " + TYPE
                     + " WaAS data from " + f + ">");
-            storeSubset(wave, r);
+            storeCacheSubset(wave, r);
         }
         return r;
     }
-    
-        /**
+
+    /**
      * Loads Wave 5 of the person WaAS for those records with CASEW5 in
      * CASEW5IDs. If this data are in a cache then the cache is loaded otherwise
      * the data are selected and the cache is written for next time.
@@ -357,7 +308,7 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
             Set<Integer> CASEW5IDs) {
         HashMap<WIGB_PERSON_ID, WIGB_Wave5_PERSON_Record> r;
         try {
-            r = loadSubsetWave5();
+            r = loadCacheSubsetWave5();
         } catch (Exception ex) {
             int wave;
             wave = 5;
@@ -378,16 +329,13 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
             int lineNumber;
             lineNumber = 0;
             String line;
-
+            String[] split;
             // skip header
             Generic_ReadCSV.readLine(st, null);
-
             boolean read;
             read = false;
-
             Integer ID;
             WIGB_PERSON_ID PERSON_ID;
-
             while (!read) {
                 line = Generic_ReadCSV.readLine(st, null);
                 lineNumber++;
@@ -397,20 +345,15 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
                 if (line == null) {
                     read = true;
                 } else {
-                    WIGB_Wave5_PERSON_Record rec;
-                    try {
-                        rec = new WIGB_Wave5_PERSON_Record(line);
-                        ID = rec.getCASEW5();
+                    split = line.split("\t");
+                    ID = Integer.valueOf(split[0]);
                         if (CASEW5IDs.contains(ID)) {
+                    WIGB_Wave5_PERSON_Record rec;
+                        rec = new WIGB_Wave5_PERSON_Record(line);
                             PERSON_ID = new WIGB_PERSON_ID(ID,
                                     rec.getPERSONW5());
                             r.put(PERSON_ID, rec);
                         }
-                    } catch (ArrayIndexOutOfBoundsException e) {
-                        e.printStackTrace(System.err);
-                        System.err.println(line);
-                        //rec = new WIGB_Wave1_PERSON_Record(line); // For debugging
-                    }
                 }
             }
             System.out.println("</Loading wave " + wave + " subset " + TYPE
@@ -430,21 +373,20 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
         Object[] r;
         r = new Object[5];
         // Load waves
-        int wave;
         try {
             // Load Waves 1 to 5 inclusive.
-            r[0] = loadSubsetWave1();
-            r[1] = loadSubsetWave2();
-            r[2] = loadSubsetWave3();
-            r[3] = loadSubsetWave4();
-            r[4] = loadSubsetWave5();
+            r[0] = loadCacheSubsetWave1();
+            r[1] = loadCacheSubsetWave2();
+            r[2] = loadCacheSubsetWave3();
+            r[3] = loadCacheSubsetWave4();
+            r[4] = loadCacheSubsetWave5();
         } catch (Exception ex) {
             Logger.getLogger(WIGB_PERSON_Handler.class.getName()).log(Level.SEVERE, null, ex);
         }
         return r;
     }
 
-    public HashMap<WIGB_PERSON_ID, WIGB_Wave1_PERSON_Record> loadSubsetWave1()
+    public HashMap<WIGB_PERSON_ID, WIGB_Wave1_PERSON_Record> loadCacheSubsetWave1()
             throws Exception {
         HashMap<WIGB_PERSON_ID, WIGB_Wave1_PERSON_Record> r;
         File dir;
@@ -460,7 +402,7 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
         return r;
     }
 
-    public HashMap<WIGB_PERSON_ID, WIGB_Wave2_PERSON_Record> loadSubsetWave2()
+    public HashMap<WIGB_PERSON_ID, WIGB_Wave2_PERSON_Record> loadCacheSubsetWave2()
             throws Exception {
         HashMap<WIGB_PERSON_ID, WIGB_Wave2_PERSON_Record> r;
         File dir;
@@ -476,7 +418,7 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
         return r;
     }
 
-    public HashMap<WIGB_PERSON_ID, WIGB_Wave3_PERSON_Record> loadSubsetWave3()
+    public HashMap<WIGB_PERSON_ID, WIGB_Wave3_PERSON_Record> loadCacheSubsetWave3()
             throws Exception {
         HashMap<WIGB_PERSON_ID, WIGB_Wave3_PERSON_Record> r;
         File dir;
@@ -492,7 +434,7 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
         return r;
     }
 
-    public HashMap<WIGB_PERSON_ID, WIGB_Wave4_PERSON_Record> loadSubsetWave4()
+    public HashMap<WIGB_PERSON_ID, WIGB_Wave4_PERSON_Record> loadCacheSubsetWave4()
             throws Exception {
         HashMap<WIGB_PERSON_ID, WIGB_Wave4_PERSON_Record> r;
         File dir;
@@ -508,7 +450,7 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
         return r;
     }
 
-    public HashMap<WIGB_PERSON_ID, WIGB_Wave5_PERSON_Record> loadSubsetWave5()
+    public HashMap<WIGB_PERSON_ID, WIGB_Wave5_PERSON_Record> loadCacheSubsetWave5()
             throws Exception {
         HashMap<WIGB_PERSON_ID, WIGB_Wave5_PERSON_Record> r;
         File dir;

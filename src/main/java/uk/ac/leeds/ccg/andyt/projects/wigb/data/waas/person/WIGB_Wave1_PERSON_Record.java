@@ -3,975 +3,490 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person;
 public class WIGB_Wave1_PERSON_Record extends WIGB_Wave1Or2_PERSON_Record {
-private static final long serialVersionUID = 1;
 protected Double ACCFRAC_F;
-
 protected Double ACCFRAC_S;
-
 protected Double ASAFT_F;
-
 protected Double ASAFT_S;
-
 protected Double BPRFLOS2;
-
 protected Double BPRFLOS3;
-
 protected Double BSELLYB;
-
 protected Double BVAL2FLAG;
-
 protected Double BVAL2_I;
-
 protected Double BVALFLAG;
-
 protected Double BVAL_I;
-
 protected Double DBURDW2;
-
 protected Double DBURD___W1;
-
 protected Double DC12M;
-
 protected Double DCOINV3_I;
-
 protected Double DCOINV3_IFLAG;
-
 protected Double DS12M;
-
 protected Double DS12M_I;
-
 protected Double DS12M_IFLAG;
-
 protected Double DVAGEW1BAND;
-
 protected Double DVBDEBT;
-
 protected Double DVBVAL;
-
 protected Double DVDBOPENT_F;
-
 protected Double DVDBOPENT_S;
-
 protected Double DVGRSJOB2;
-
 protected Double DVGRSSEJOB;
-
 protected Double DVHDEBT;
-
 protected Double DVHVAL;
-
 protected Double DVLOSDEBT;
-
 protected Double DVLOSV;
-
 protected Double DVLUKDEBT;
-
 protected Double DVLUKV;
-
 protected Double DVNETJOB2;
-
 protected Double DVOPDEBT;
-
 protected Double DVOPVAL;
-
 protected Double DVPENINC_F;
-
 protected Double DVPENINC_S;
-
 protected Double DVPEPV;
-
 protected Double DVSEAMT;
-
 protected Double FCOSHAV;
-
 protected Double FCOSVLB;
-
 protected Double FCOSVLB_I;
-
 protected Double FCOSVLB_IFLAG;
-
 protected Double FINVTY11_I;
-
 protected Double FINVTY11_IFLAG;
-
 protected Double FPEPV;
-
 protected Double FPEPVB;
-
 protected Double FPEPV_I;
-
 protected Double FPEPV_IFLAG;
-
 protected Double FSHMUT;
-
 protected Double FSHPRI;
-
 protected Double FSOSVLB_I;
-
 protected Double FSOSVLB_IFLAG;
-
 protected Double HPYLFT2_I;
-
 protected Double HPYLFT3_I;
-
 protected Double HPYLFT4_I;
-
 protected Double HPYLFT5_I;
-
 protected Double HPYLFT_I;
-
 protected Double IEVAL;
-
 protected Double IEVAL2;
-
 protected Double IEVAL3;
-
 protected Double IEVALB;
-
 protected Double IEVALB2;
-
 protected Double IEVALB3;
-
 protected Double IEYR;
-
 protected Double IEYR2;
-
 protected Double IEYR3;
-
 protected Double IFUTVIB;
-
 protected Double IGFUSE1;
-
 protected Double IGFUSE2;
-
 protected Double IGFUSE3;
-
 protected Double IGFUSE4;
-
 protected Double IGFUSE5;
-
 protected Double IHATTI;
-
 protected Double IHEV;
-
 protected Double IHEVNO;
-
 protected Double IHFUT;
-
 protected Double IHINTRO;
-
 protected Double ISPART;
-
 protected Double ISWITCH;
-
 protected Double IWILL;
-
 protected Double LMATNUM;
-
 protected Double OBSPV;
-
 protected Double OBUY1;
-
 protected Double OCREDI1;
-
 protected Double OEXPIN01;
-
 protected Double OEXPIN02;
-
 protected Double OEXPIN03;
-
 protected Double OEXPIN04;
-
 protected Double OEXPIN05;
-
 protected Double OEXPIN06;
-
 protected Double OEXPIN07;
-
 protected Double OEXPIN08;
-
 protected Double OEXPIN09;
-
 protected Double OEXPIN10;
-
 protected Double OEXPIN11;
-
 protected Double OEXPIN12;
-
 protected Double OINCA;
-
 protected Double OLSAVE;
-
 protected Double OMATH;
-
 protected Double ONOSAV01;
-
 protected Double ONOSAV02;
-
 protected Double ONOSAV03;
-
 protected Double ONOSAV04;
-
 protected Double ONOSAV05;
-
 protected Double ONOSAV06;
-
 protected Double OPROFF;
-
 protected Double OPROFF0;
-
 protected Double OPROFF1;
-
 protected Double OPROFF2;
-
 protected Double OPROFF3;
-
 protected Double OPROFFW01;
-
 protected Double OPROFFW02;
-
 protected Double OPROFFW03;
-
 protected Double OPROFFW04;
-
 protected Double OPROFFW05;
-
 protected Double OPROFFW06;
-
 protected Double OPROFFW07;
-
 protected Double OPROFFW08;
-
 protected Double OPROFFW09;
-
 protected Double OPROPE;
-
 protected Double OSAVED;
-
 protected Double OSAVER1;
-
 protected Double OSAVG;
-
 protected Double OSECUR;
-
 protected Double OSHOP;
-
 protected Double OSOURCE1;
-
 protected Double OSOURCE2;
-
 protected Double OSOURCE3;
-
 protected Double OSOURCE4;
-
 protected Double OSOURCE5;
-
 protected Double OSOURCE6;
-
 protected Double OSTAND;
-
 protected Double OSTATE;
-
 protected Double OWHYSA01;
-
 protected Double OWHYSA02;
-
 protected Double OWHYSA03;
-
 protected Double OWHYSA04;
-
 protected Double OWHYSA05;
-
 protected Double OWHYSA06;
-
 protected Double OWHYSA07;
-
 protected Double OWHYSA08;
-
 protected Double OWHYSA09;
-
 protected Double OWHYSA10;
-
 protected Double PADDYR_F;
-
 protected Double PASTMM_F;
-
 protected Double PASTMY_F;
-
 protected Double PAVCAM_F;
-
 protected Double PAVCAM_S;
-
 protected Double PAVCFR_F;
-
 protected Double PAVCFR_S;
-
 protected Double PAVCH_F;
-
 protected Double PAVCH_S;
-
 protected Double PAVCIN_F;
-
 protected Double PAVCIN_S;
-
 protected Double PAVCPR_F;
-
 protected Double PAVCPR_S;
-
 protected Double PAVCUV_F;
-
 protected Double PAVCUV_F_I;
-
 protected Double PAVCUV_F_IFLAG;
-
 protected Double PAVCUV_S;
-
 protected Double PAVCUV_S_I;
-
 protected Double PAVCUV_S_IFLAG;
-
 protected Double PAVCVB_F;
-
 protected Double PAVCVB_S;
-
 protected Double PAVDOC_F;
-
 protected Double PAVDOC_S;
-
 protected Double PAYPER_I;
-
 protected Double PAYPER_IFLAG;
-
 protected Double PBDOCS_F;
-
 protected Double PBDOCS_S;
-
 protected Double PBFRAC_F;
-
 protected Double PBFRAC_F_I;
-
 protected Double PBFRAC_F_IFLAG;
-
 protected Double PBFRAC_S;
-
 protected Double PBFRAC_S_I;
-
 protected Double PBFRAC_S_IFLAG;
-
 protected Double PBINCA_F;
-
 protected Double PBINCA_S;
-
 protected Double PBINCF_F;
-
 protected Double PBINCF_S;
-
 protected Double PBINCH_F;
-
 protected Double PBINCH_S;
-
 protected Double PBLMVB_F;
-
 protected Double PBLMVB_S;
-
 protected Double PBLUMV_F;
-
 protected Double PBLUMV_F_I;
-
 protected Double PBLUMV_F_IFLAG;
-
 protected Double PBLUMV_S;
-
 protected Double PBLUMV_S_I;
-
 protected Double PBLUMV_S_IFLAG;
-
 protected Double PBQUAL_F;
-
 protected Double PBQUAL_F_I;
-
 protected Double PBQUAL_F_IFLAG;
-
 protected Double PBQUAL_S;
-
 protected Double PBQUAL_S_I;
-
 protected Double PBQUAL_S_IFLAG;
-
 protected Double PBSTMM_F;
-
 protected Double PBSTMM_S;
-
 protected Double PBSTMY_F;
-
 protected Double PBSTMY_S;
-
 protected Double PCDOCS_F;
-
 protected Double PCDOCS_S;
-
 protected Double PCSTMM_F;
-
 protected Double PCSTMM_S;
-
 protected Double PCSTMY_F;
-
 protected Double PCSTMY_S;
-
 protected Double PDBCAL_F;
-
 protected Double PDBCAL_S;
-
 protected Double PDCVAL_F;
-
 protected Double PDCVAL_F_I;
-
 protected Double PDCVAL_F_IFLAG;
-
 protected Double PDCVAL_S;
-
 protected Double PDCVAL_S_I;
-
 protected Double PDCVAL_S_IFLAG;
-
 protected Double PDCVB_F;
-
 protected Double PDCVB_S;
-
 protected Double PEANYO_I;
-
 protected Double PEANYO_IFLAG;
-
 protected Double PECONT_I;
-
 protected Double PECONT_IFLAG;
-
 protected Double PEP;
-
 protected Double PFBEG_F;
-
 protected Double PFBEG_S;
-
 protected Double PFBEG_T;
-
 protected Double PFCURV_F;
-
 protected Double PFCURV_F_I;
-
 protected Double PFCURV_F_IFLAG;
-
 protected Double PFCURV_S;
-
 protected Double PFCURV_S_I;
-
 protected Double PFCURV_S_IFLAG;
-
 protected Double PFCURV_T;
-
 protected Double PFCURV_T_I;
-
 protected Double PFCURV_T_IFLAG;
-
 protected Double PFCUVB_F;
-
 protected Double PFCUVB_S;
-
 protected Double PFCUVB_T;
-
 protected Double PFDDVB_F;
-
 protected Double PFDDVB_S;
-
 protected Double PFDDVB_T;
-
 protected Double PFDDV_F;
-
 protected Double PFDDV_F_I;
-
 protected Double PFDDV_F_IFLAG;
-
 protected Double PFDDV_S;
-
 protected Double PFDDV_S_I;
-
 protected Double PFDDV_S_IFLAG;
-
 protected Double PFDDV_T;
-
 protected Double PFDDV_T_I;
-
 protected Double PFDDV_T_IFLAG;
-
 protected Double PFDOCS_F;
-
 protected Double PFDOCS_S;
-
 protected Double PFDOCS_T;
-
 protected Double PFDRAW_F;
-
 protected Double PFDRAW_F_I;
-
 protected Double PFDRAW_F_IFLAG;
-
 protected Double PFDRAW_S;
-
 protected Double PFDRAW_S_I;
-
 protected Double PFDRAW_S_IFLAG;
-
 protected Double PFDRAW_T;
-
 protected Double PFDRAW_T_I;
-
 protected Double PFDRAW_T_IFLAG;
-
 protected Double PFEND_F;
-
 protected Double PFEND_S;
-
 protected Double PFEND_T;
-
 protected Double PFINCA_F;
-
 protected Double PFINCA_F_I;
-
 protected Double PFINCA_F_IFLAG;
-
 protected Double PFINCA_S;
-
 protected Double PFINCA_S_I;
-
 protected Double PFINCA_S_IFLAG;
-
 protected Double PFINCA_T;
-
 protected Double PFINCA_T_I;
-
 protected Double PFINCA_T_IFLAG;
-
 protected Double PFINCP_F;
-
 protected Double PFINCP_F_I;
-
 protected Double PFINCP_F_IFLAG;
-
 protected Double PFINCP_S;
-
 protected Double PFINCP_S_I;
-
 protected Double PFINCP_S_IFLAG;
-
 protected Double PFINCP_T;
-
 protected Double PFINCP_T_I;
-
 protected Double PFINCP_T_IFLAG;
-
 protected Double PFLUMV_F;
-
 protected Double PFLUMV_F_I;
-
 protected Double PFLUMV_F_IFLAG;
-
 protected Double PFLUMV_S;
-
 protected Double PFLUMV_S_I;
-
 protected Double PFLUMV_S_IFLAG;
-
 protected Double PFLUMV_T;
-
 protected Double PFLUMV_T_I;
-
 protected Double PFLUMV_T_IFLAG;
-
 protected Double PFLUVB_F;
-
 protected Double PFLUVB_S;
-
 protected Double PFLUVB_T;
-
 protected Double PFOCTY_F;
-
 protected Double PFOCTY_F_I;
-
 protected Double PFOCTY_F_IFLAG;
-
 protected Double PFOCTY_S;
-
 protected Double PFOCTY_S_I;
-
 protected Double PFOCTY_S_IFLAG;
-
 protected Double PFOCTY_T;
-
 protected Double PFOCTY_T_I;
-
 protected Double PFOCTY_T_IFLAG;
-
 protected Double PFREC_F;
-
 protected Double PFREC_F_I;
-
 protected Double PFREC_F_IFLAG;
-
 protected Double PFREC_S;
-
 protected Double PFREC_S_I;
-
 protected Double PFREC_S_IFLAG;
-
 protected Double PFREC_T;
-
 protected Double PFREC_T_I;
-
 protected Double PFREC_T_IFLAG;
-
 protected Double PFSTMM_F;
-
 protected Double PFSTMM_S;
-
 protected Double PFSTMM_T;
-
 protected Double PFSTMY_F;
-
 protected Double PFSTMY_S;
-
 protected Double PFSTMY_T;
-
 protected Double PFTYP_F;
-
 protected Double PFTYP_F_I;
-
 protected Double PFTYP_F_IFLAG;
-
 protected Double PFTYP_S;
-
 protected Double PFTYP_S_I;
-
 protected Double PFTYP_S_IFLAG;
-
 protected Double PFTYP_T;
-
 protected Double PFTYP_T_I;
-
 protected Double PFTYP_T_IFLAG;
-
 protected Double PINTRE_I;
-
 protected Double PINTRE_IFLAG;
-
 protected Double PINTRN_I;
-
 protected Double PINTRN_IFLAG;
-
 protected Double PIRREG_F;
-
 protected Double PMORTC_F;
-
 protected Double PMORTC_S;
-
 protected Double PNANYO_I;
-
 protected Double PNANYO_IFLAG;
-
 protected Double PNCONT_I;
-
 protected Double PNCONT_IFLAG;
-
 protected Double POADD_F1;
-
 protected Double POADD_F1_I;
-
 protected Double POADD_F1_IFLAG;
-
 protected Double POADD_F2;
-
 protected Double POADD_F2_I;
-
 protected Double POADD_F2_IFLAG;
-
 protected Double POADD_S1;
-
 protected Double POADD_S1_I;
-
 protected Double POADD_S1_IFLAG;
-
 protected Double POADD_S2;
-
 protected Double POADD_S2_I;
-
 protected Double POADD_S2_IFLAG;
-
 protected Double POCNAM_F;
-
 protected Double POCNAM_S;
-
 protected Double POCNFG_F;
-
 protected Double POCNFG_S;
-
 protected Double POCNFR_F;
-
 protected Double POCNFR_S;
-
 protected Double POCNPR_F;
-
 protected Double POCNPR_S;
-
 protected Double POCONH_F;
-
 protected Double POCONH_S;
-
 protected Double POCTYP_F;
-
 protected Double POCTYP_F_I;
-
 protected Double POCTYP_F_IFLAG;
-
 protected Double POCTYP_S;
-
 protected Double POCTYP_S_I;
-
 protected Double POCTYP_S_IFLAG;
-
 protected Double POEMAM_F;
-
 protected Double POEMAM_S;
-
 protected Double POEMFR_F;
-
 protected Double POEMFR_S;
-
 protected Double POEMPC_F;
-
 protected Double POEMPC_S;
-
 protected Double POEMPH_F;
-
 protected Double POEMPH_S;
-
 protected Double POEMPR_F;
-
 protected Double POEMPR_S;
-
 protected Double POJOIN_F;
-
 protected Double POJOIN_S;
-
 protected Double POLSYR_F;
-
 protected Double POLSYR_S;
-
 protected Double POMETH_F;
-
 protected Double POMETH_S;
-
 protected Double POPYCH_F;
-
 protected Double POPYCH_S;
-
 protected Double PORAGET_F;
-
 protected Double PORAGET_S;
-
 protected Double PORAGE_F;
-
 protected Double PORAGE_S;
-
 protected Double PORATE_F;
-
 protected Double PORATE_S;
-
 protected Double POYRAM_F;
-
 protected Double POYRAM_S;
-
 protected Double PPACCU_F;
-
 protected Double PPACCU_S;
-
 protected Double PPDOCS_F;
-
 protected Double PPDOCS_S;
-
 protected Double PPEIRA_F;
-
 protected Double PPEIRA_S;
-
 protected Double PPEIRF_F;
-
 protected Double PPEIRF_S;
-
 protected Double PPEIRH_F;
-
 protected Double PPEIRH_S;
-
 protected Double PPEMAM_F;
-
 protected Double PPEMAM_S;
-
 protected Double PPEMFR_F;
-
 protected Double PPEMFR_S;
-
 protected Double PPEMPH_F;
-
 protected Double PPEMPH_S;
-
 protected Double PPEMPR_F;
-
 protected Double PPEMPR_S;
-
 protected Double PPEMP_F;
-
 protected Double PPEMP_S;
-
 protected Double PPEVRG_F;
-
 protected Double PPEVRG_S;
-
 protected Double PPIRRA_F;
-
 protected Double PPIRRA_S;
-
 protected Double PPIRRH_F;
-
 protected Double PPIRRH_S;
-
 protected Double PPIRRN_F;
-
 protected Double PPIRRN_S;
-
 protected Double PPIRRY_F;
-
 protected Double PPIRRY_S;
-
 protected Double PPLASY_F;
-
 protected Double PPLASY_S;
-
 protected Double PPLSTA_F;
-
 protected Double PPLSTA_S;
-
 protected Double PPLSTP_F;
-
 protected Double PPLSTP_S;
-
 protected Double PPNINS_F;
-
 protected Double PPNINS_S;
-
 protected Double PPORG_F;
-
 protected Double PPORG_S;
-
 protected Double PPPAY_F;
-
 protected Double PPPAY_S;
-
 protected Double PPRGAM_F;
-
 protected Double PPRGAM_S;
-
 protected Double PPRGFG_F;
-
 protected Double PPRGFG_S;
-
 protected Double PPRGFR_F;
-
 protected Double PPRGFR_S;
-
 protected Double PPRGH_F;
-
 protected Double PPRGH_S;
-
 protected Double PPRGPE_F;
-
 protected Double PPRGPE_S;
-
 protected Double PPSTMM_F;
-
 protected Double PPSTMM_S;
-
 protected Double PPSTMY_F;
-
 protected Double PPSTMY_S;
-
 protected Double PPTYP_F;
-
 protected Double PPTYP_S;
-
 protected Double PPVALB_F;
-
 protected Double PPVALB_F_I;
-
 protected Double PPVALB_S;
-
 protected Double PPVALB_S_I;
-
 protected Double PPVAL_F;
-
 protected Double PPVAL_F_I;
-
 protected Double PPVAL_F_IFLAG;
-
 protected Double PPVAL_S;
-
 protected Double PPVAL_S_I;
-
 protected Double PPVAL_S_IFLAG;
-
 protected Double PPYRST_F;
-
 protected Double PPYRST_S;
-
 protected Double PPYSTP_1;
-
 protected Double PPYSTP_2;
-
 protected Double PPYSTP_3;
-
 protected Double PPYSTP_8;
-
 protected Double PPYSTP_9;
-
 protected Double REGLRPY3;
-
 protected Double SEAML_I;
-
 protected Double SEAML_IFLAG;
-
 protected Double SEINT;
-
 protected Double SEPEL_I;
-
 protected Double SEPEL_IFLAG;
-
 protected Double SEPER_I;
-
 protected Double SEPER_IFLAG;
-
 protected Double SJEMP1_I;
-
 protected Double SJEMP1_IFLAG;
-
 protected Double SJEMP2_I;
-
 protected Double SJEMP2_IFLAG;
-
 protected Double SJOB2_I;
-
 protected Double SJOB2_IFLAG;
-
 protected Double SLNOS4;
-
 protected Double SLNOS5;
-
 protected Double XS_WGT;
-
 protected final void initACCFRAC_F(String s) {
 if (!s.trim().isEmpty()) {
 ACCFRAC_F = new Double(s);

@@ -312,8 +312,10 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
             pw.print(" implements " + implementations + " {");
         }
         pw.println();
+        /** This is not included for performance reasons.
         pw.println("private static final long serialVersionUID = "
                 + serialVersionUID + ";");
+        */
     }
 
     /**
@@ -355,7 +357,6 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                 } else {
                     pw.println("protected Double " + field + ";");
                 }
-                pw.println();
             }
         }
     }

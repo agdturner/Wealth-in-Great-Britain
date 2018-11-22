@@ -3,85 +3,45 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold;
 public class WIGB_Wave5_HHOLD_Record extends WIGB_Wave4Or5_HHOLD_Record {
-private static final long serialVersionUID = 1;
 protected Integer CASEW5;
-
 protected Double DVTOTGIR_3SF;
-
 protected Double MENDV10_I;
-
 protected Double MENDV10_IFLAG;
-
 protected Double MENDV11_I;
-
 protected Double MENDV11_IFLAG;
-
 protected Double MENDVB8;
-
 protected Double MENDY8;
-
 protected Double MINTFIX1;
-
 protected Double MINTFIX2;
-
 protected Double MINTFIX3;
-
 protected Double MINTPAID1;
-
 protected Double MINTPAID2;
-
 protected Double MINTPAID3;
-
 protected Double MINTRATE1;
-
 protected Double MINTRATE2;
-
 protected Double MINTRATE3;
-
 protected Double MONTHW4;
-
 protected Double MPASTSPA1;
-
 protected Double MPASTSPA2;
-
 protected Double MPASTSPA3;
-
 protected Double MYPASTSPA1;
-
 protected Double MYPASTSPA2;
-
 protected Double MYPASTSPA3;
-
 protected Double NUMADISW;
-
 protected Double VESTVTOTAL;
-
 protected Double VESTVTOTALB;
-
 protected Double VESTVTOTALB_I;
-
 protected Double VESTVTOTALB_IFLAG;
-
 protected Double VESTVTOTAL_I;
-
 protected Double VESTVTOTAL_IFLAG;
-
 protected Double VOTYP_IFLAG;
-
 protected Double VOVLB_I;
-
 protected Double VOVLB_IFLAG;
-
 protected Double VTYPE1_I;
-
 protected Double VTYPE3;
-
 protected Double VTYPE3_I;
-
 protected Double W5XSHHWGT;
-
 protected Double YEARW4;
-
 protected final void initCASEW5(String s) {
 if (!s.trim().isEmpty()) {
 CASEW5 = new Integer(s);

@@ -3,47 +3,26 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold;
 public class WIGB_Wave4_HHOLD_Record extends WIGB_Wave4Or5_HHOLD_Record {
-private static final long serialVersionUID = 1;
 protected Double DVTOTCARVAL;
-
 protected Double DVTOTMOTBVAL;
-
 protected Double DVTOTVANVAL;
-
 protected Double EQREAS1;
-
 protected Double EQREAS2;
-
 protected Double EQREAS3;
-
 protected Double EQREAS4;
-
 protected Double HINTRO;
-
 protected Double VESTV1;
-
 protected Double VESTV2;
-
 protected Double VESTV2_I;
-
 protected Double VESTV2_IFLAG;
-
 protected Double VESTV_I;
-
 protected Double VESTV_IFLAG;
-
 protected Double VESVB1;
-
 protected Double VESVB2;
-
 protected Double VESVB3;
-
 protected Double VTYPE2_IFLAG;
-
 protected Double VTYPE_I;
-
 protected Double W4XSHHWGT;
-
 protected final void initDVTOTCARVAL(String s) {
 if (!s.trim().isEmpty()) {
 DVTOTCARVAL = new Double(s);

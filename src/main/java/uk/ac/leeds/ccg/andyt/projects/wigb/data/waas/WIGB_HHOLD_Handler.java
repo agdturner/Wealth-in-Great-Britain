@@ -218,7 +218,7 @@ public class WIGB_HHOLD_Handler extends WIGB_WAAS_Handler {
         return r;
     }
     
-    public HashMap<Integer, WIGB_Wave1_HHOLD_Record> loadSubsetWave1()
+    public HashMap<Integer, WIGB_Wave1_HHOLD_Record> loadCacheSubsetWave1()
             throws Exception {
         HashMap<Integer, WIGB_Wave1_HHOLD_Record> r;
         File dir;
@@ -234,7 +234,7 @@ public class WIGB_HHOLD_Handler extends WIGB_WAAS_Handler {
         return r;
     }
     
-    public HashMap<Integer, WIGB_Wave2_HHOLD_Record> loadSubsetWave2()
+    public HashMap<Integer, WIGB_Wave2_HHOLD_Record> loadCacheSubsetWave2()
             throws Exception {
         HashMap<Integer, WIGB_Wave2_HHOLD_Record> r;
         File dir;
@@ -250,7 +250,7 @@ public class WIGB_HHOLD_Handler extends WIGB_WAAS_Handler {
         return r;
     }
 
-    public HashMap<Integer, WIGB_Wave3_HHOLD_Record> loadSubsetWave3()
+    public HashMap<Integer, WIGB_Wave3_HHOLD_Record> loadCacheSubsetWave3()
             throws Exception {
         HashMap<Integer, WIGB_Wave3_HHOLD_Record> r;
         File dir;
@@ -266,7 +266,7 @@ public class WIGB_HHOLD_Handler extends WIGB_WAAS_Handler {
         return r;
     }
 
-    public HashMap<Integer, WIGB_Wave4_HHOLD_Record> loadSubsetWave4()
+    public HashMap<Integer, WIGB_Wave4_HHOLD_Record> loadCacheSubsetWave4()
             throws Exception {
         HashMap<Integer, WIGB_Wave4_HHOLD_Record> r;
         File dir;
@@ -282,7 +282,7 @@ public class WIGB_HHOLD_Handler extends WIGB_WAAS_Handler {
         return r;
     }
 
-    public HashMap<Integer, WIGB_Wave5_HHOLD_Record> loadSubsetWave5()
+    public HashMap<Integer, WIGB_Wave5_HHOLD_Record> loadCacheSubsetWave5()
             throws Exception {
         HashMap<Integer, WIGB_Wave5_HHOLD_Record> r;
         File dir;

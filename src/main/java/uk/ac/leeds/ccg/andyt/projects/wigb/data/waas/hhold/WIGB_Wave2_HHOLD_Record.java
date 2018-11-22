@@ -3,191 +3,98 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold;
 public class WIGB_Wave2_HHOLD_Record extends WIGB_Wave1Or2_HHOLD_Record {
-private static final long serialVersionUID = 1;
 protected Double BUYLGDST_SUM;
-
 protected Integer CASEW2;
-
 protected Double DVBLTDEBT;
-
 protected Double DVBLTVAL;
-
 protected Double DVNWFLN_SUM;
-
 protected Double DVNWILN_SUM;
-
 protected Double EQNEW;
-
 protected Double EQNEW_I;
-
 protected Double EQNEW_IFLAG;
-
 protected Double EQOLD;
-
 protected Double EQOLD_I;
-
 protected Double EQOLD_IFLAG;
-
 protected Double EQREAS5;
-
 protected Double EQREAS6;
-
 protected Double EQREAS7;
-
 protected Double EQREAS8;
-
 protected Double EQREAS9;
-
 protected Double HEXT1;
-
 protected Double HEXT2;
-
 protected Double HEXT3;
-
 protected Double HEXT4;
-
 protected Double HRPDVAGEW2BAND;
-
 protected Double H_FLAG1;
-
 protected Double H_FLAG2;
-
 protected Double H_FLAG4;
-
 protected Double H_FLAG5;
-
 protected Double MARRSV;
-
 protected Double MARRSV2;
-
 protected Double MARRSV3;
-
 protected Double MCHGE;
-
 protected Double MCHGENUM;
-
 protected Double MENDV10;
-
 protected Double MENDV12;
-
 protected Double MENDV13;
-
 protected Double MENDV14;
-
 protected Double MENDV15;
-
 protected Double MENDV9;
-
 protected Double MENDVB10;
-
 protected Double MENDVB12;
-
 protected Double MENDVB13;
-
 protected Double MENDVB14;
-
 protected Double MENDVB15;
-
 protected Double MENDVB9;
-
 protected Double MENDY10;
-
 protected Double MENDY12;
-
 protected Double MENDY13;
-
 protected Double MENDY14;
-
 protected Double MENDY15;
-
 protected Double MENDY9;
-
 protected Double MEND___W2;
-
 protected Double MEXTN;
-
 protected Double MEXTRS1;
-
 protected Double MEXTRS2;
-
 protected Double MEXTRS3;
-
 protected Double MEXTRS4;
-
 protected Double MEXTRS5;
-
 protected Double MEXTRS6;
-
 protected Double MEXTRS7;
-
 protected Double MEXTRS8;
-
 protected Double MEXTRS9;
-
 protected Double MINC10;
-
 protected Double MINC13;
-
 protected Double MINC14;
-
 protected Double MINC15;
-
 protected Double MNUMBN;
-
 protected Double MNUMBN_I;
-
 protected Double MNUMBN_IFLAG;
-
 protected Double MNUMBO;
-
 protected Double MNUMBO_I;
-
 protected Double MNUMBO_IFLAG;
-
 protected Double MORTID;
-
 protected Double MORTID2;
-
 protected Double MORTID3;
-
 protected Double MREAS14;
-
 protected Double MREAS15;
-
 protected Double MREAS24;
-
 protected Double MVALB2_I;
-
 protected Double MVALB2_IFLAG;
-
 protected Double MW1CHK1;
-
 protected Double MW1CHK2;
-
 protected Double MW1CHK3;
-
 protected Double MYIFCH;
-
 protected Double MYIFCH2;
-
 protected Double MYIFCH3;
-
 protected Double NOUNITS;
-
 protected Double NUMDEPCH_HH;
-
 protected Double NUMNDEP;
-
 protected Double VCADD;
-
 protected Double VCADDN;
-
 protected Double VPERS_I;
-
 protected Double VPERS_IFLAG;
-
 protected Double XS_CALWGT;
-
 protected final void initBUYLGDST_SUM(String s) {
 if (!s.trim().isEmpty()) {
 BUYLGDST_SUM = new Double(s);

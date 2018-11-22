@@ -16,8 +16,6 @@
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas;
 
 import java.io.File;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_StaticIO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Object;
@@ -65,7 +63,7 @@ public abstract class WIGB_WAAS_Handler extends WIGB_Object {
                 + "in cache file " + cf + ">");
     }
     
-    public void storeSubset(int wave, Object o) {
+    public void storeCacheSubset(int wave, Object o) {
         File dir;
         dir = Env.Files.getGeneratedWaASDirectory();
         dir = new File(dir, "Subsets");

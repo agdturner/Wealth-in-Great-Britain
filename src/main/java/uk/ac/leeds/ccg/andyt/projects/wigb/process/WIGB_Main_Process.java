@@ -303,7 +303,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         // Load or generate hholdWave1 subset.
         HashMap<Integer, WIGB_Wave1_HHOLD_Record> hholdWave1;
         try {
-            hholdWave1 = hholdHandler.loadSubsetWave1();
+            hholdWave1 = hholdHandler.loadCacheSubsetWave1();
         } catch (Exception ex) {
             hholdWave1 = new HashMap<>();
             ite = hholdW1recs.keySet().iterator();
@@ -314,7 +314,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                             (WIGB_Wave1_HHOLD_Record) hholdW1recs.get(CASEW1));
                 }
             }
-            hholdHandler.storeSubset(1, hholdWave1);
+            hholdHandler.storeCacheSubset(1, hholdWave1);
         }
         /**
          * Wave 2.
@@ -349,7 +349,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         personWave2 = personHandler.loadSubsetWave2(tWave2ToWave1HHOLDIDLookup.keySet());
         HashMap<Integer, WIGB_Wave2_HHOLD_Record> hholdWave2;
         try {
-            hholdWave2 = hholdHandler.loadSubsetWave2();
+            hholdWave2 = hholdHandler.loadCacheSubsetWave2();
         } catch (Exception ex) {
             hholdWave2 = new HashMap<>();
             ite = hholdW2recs.keySet().iterator();
@@ -360,7 +360,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                             (WIGB_Wave2_HHOLD_Record) hholdW2recs.get(CASEW2));
                 }
             }
-            hholdHandler.storeSubset(2, hholdWave2);
+            hholdHandler.storeCacheSubset(2, hholdWave2);
         }
         /**
          * Wave 3.
@@ -395,7 +395,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         personWave3 = personHandler.loadSubsetWave3(tWave3ToWave1HHOLDIDLookup.keySet());
         HashMap<Integer, WIGB_Wave3_HHOLD_Record> hholdWave3;
         try {
-            hholdWave3 = hholdHandler.loadSubsetWave3();
+            hholdWave3 = hholdHandler.loadCacheSubsetWave3();
         } catch (Exception ex) {
             hholdWave3 = new HashMap<>();
             ite = hholdW3recs.keySet().iterator();
@@ -406,7 +406,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                             (WIGB_Wave3_HHOLD_Record) hholdW3recs.get(CASEW3));
                 }
             }
-            hholdHandler.storeSubset(3, hholdWave3);
+            hholdHandler.storeCacheSubset(3, hholdWave3);
         }
         /**
          * Wave 4: The iterator is set up slightly differently to the one for
@@ -442,7 +442,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         personWave4 = personHandler.loadSubsetWave4(tWave4ToWave1HHOLDIDLookup.keySet());
         HashMap<Integer, WIGB_Wave4_HHOLD_Record> hholdWave4;
         try {
-            hholdWave4 = hholdHandler.loadSubsetWave4();
+            hholdWave4 = hholdHandler.loadCacheSubsetWave4();
         } catch (Exception ex) {
             hholdWave4 = new HashMap<>();
             ite = hholdW4recs.keySet().iterator();
@@ -453,7 +453,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                             (WIGB_Wave4_HHOLD_Record) hholdW4recs.get(CASEW4));
                 }
             }
-            hholdHandler.storeSubset(4, hholdWave4);
+            hholdHandler.storeCacheSubset(4, hholdWave4);
         }
         /**
          * Wave 5. The iterator is set up slightly differently to the one for
@@ -489,7 +489,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         personWave5 = personHandler.loadSubsetWave5(tWave5ToWave1HHOLDIDLookup.keySet());
         HashMap<Integer, WIGB_Wave5_HHOLD_Record> hholdWave5;
         try {
-            hholdWave5 = hholdHandler.loadSubsetWave5();
+            hholdWave5 = hholdHandler.loadCacheSubsetWave5();
         } catch (Exception ex) {
             hholdWave5 = new HashMap<>();
             ite = hholdW5recs.keySet().iterator();
@@ -500,7 +500,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                             (WIGB_Wave5_HHOLD_Record) hholdW5recs.get(CASEW5));
                 }
             }
-            hholdHandler.storeSubset(5, hholdWave5);
+            hholdHandler.storeCacheSubset(5, hholdWave5);
         }
         result[0] = hholdWave1;
         result[1] = hholdWave2;

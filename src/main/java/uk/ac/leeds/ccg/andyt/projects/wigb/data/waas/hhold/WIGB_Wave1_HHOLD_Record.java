@@ -3,115 +3,60 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold;
 public class WIGB_Wave1_HHOLD_Record extends WIGB_Wave1Or2_HHOLD_Record {
-private static final long serialVersionUID = 1;
 protected Double DVPEPV_SUM;
-
 protected Double GCONTMN;
-
 protected Double GCONTRC;
-
 protected Double GCONTVL;
-
 protected Double HHLDR;
-
 protected Double HRPDVAGEW1BAND;
-
 protected Double HRTBYR;
-
 protected Double LANDOVSEAT_SUM;
-
 protected Double MDBEH;
-
 protected Double MDBEH2;
-
 protected Double MDBEH3;
-
 protected Double MDCAP;
-
 protected Double MDCAP2;
-
 protected Double MDCAP3;
-
 protected Double MDRST;
-
 protected Double MDRST2;
-
 protected Double MDRST3;
-
 protected Double MDWPF;
-
 protected Double MDWPF2;
-
 protected Double MDWPF3;
-
 protected Double MENDNUM3_I;
-
 protected Double MENDNUM3_IFLAG;
-
 protected Double MENDV11_I;
-
 protected Double MENDV11_IFLAG;
-
 protected Double MENDV5_I;
-
 protected Double MENDV5_IFLAG;
-
 protected Double MENDV7_I;
-
 protected Double MENDV7_IFLAG;
-
 protected Double MENDW2;
-
 protected Double MEVER;
-
 protected Double MNEG3_I;
-
 protected Double MNEG3_IFLAG;
-
 protected Double NUMDEPCH;
-
 protected Double VCARO;
-
 protected Double VCARW;
-
 protected Double VMODU;
-
 protected Double VNUMV;
-
 protected Double VNUMV2;
-
 protected Double VNUMV3;
-
 protected Double VNUMV4;
-
 protected Double VNUMV5;
-
 protected Double VPERS2;
-
 protected Double VPERS3;
-
 protected Double VPERS4;
-
 protected Double VPERS5;
-
 protected Double VPERS6;
-
 protected Double VPERS6_I;
-
 protected Double VPERS6_IFLAG;
-
 protected Double VSHPCT;
-
 protected Double VSHPCT2;
-
 protected Double VSHPCT3;
-
 protected Double VSHPCT4;
-
 protected Double VSHPCT5;
-
 protected Double XS_WGT;
-
 protected final void initDVPEPV_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVPEPV_SUM = new Double(s);

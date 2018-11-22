@@ -3,185 +3,95 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold;
 public class WIGB_Wave4Or5_HHOLD_Record extends WIGB_Wave3Or4Or5_HHOLD_Record {
-private static final long serialVersionUID = 1;
 protected Double BRIDLN1;
-
 protected Double BRIDLN2;
-
 protected Double BRIDLN3;
-
 protected Integer CASEW4;
-
 protected Double DVBENEFITANNUAL_AGGR;
-
 protected Double EQVALB_I;
-
 protected Double EQVALB_IFLAG;
-
 protected Double HRPDVAGE;
-
 protected Double HRPDVECACT;
-
 protected Double HRPIOUT1;
-
 protected Double HRPPARTIOUT1;
-
 protected Double MALL1;
-
 protected Double MALL1_I;
-
 protected Double MALL1_IFLAG;
-
 protected Double MALLTY1;
-
 protected Double MALLTY1_I;
-
 protected Double MALLTY1_IFLAG;
-
 protected Double MARR2YR1;
-
 protected Double MARR2YR2;
-
 protected Double MARR2YR3;
-
 protected Double MARRCL01;
-
 protected Double MARRCL02;
-
 protected Double MARRCL12;
-
 protected Double MARRS1;
-
 protected Double MARRSV1;
-
 protected Double MENDNUM1;
-
 protected Double MENDNUM1_I;
-
 protected Double MENDNUM1_IFLAG;
-
 protected Double MENDV1;
-
 protected Double MENDV1_I;
-
 protected Double MENDV1_IFLAG;
-
 protected Double MENDVB1;
-
 protected Double MENDVB11_I;
-
 protected Double MENDVB11_IFLAG;
-
 protected Double MENDVB1_I;
-
 protected Double MENDVB1_IFLAG;
-
 protected Double MENDVB2_I;
-
 protected Double MENDVB2_IFLAG;
-
 protected Double MENDVB3_I;
-
 protected Double MENDVB3_IFLAG;
-
 protected Double MENDVB4_I;
-
 protected Double MENDVB4_IFLAG;
-
 protected Double MENDVB5_I;
-
 protected Double MENDVB5_IFLAG;
-
 protected Double MENDVB6_I;
-
 protected Double MENDVB6_IFLAG;
-
 protected Double MENDVB7_I;
-
 protected Double MENDVB7_IFLAG;
-
 protected Double MENDVB8_I;
-
 protected Double MENDVB8_IFLAG;
-
 protected Double MENDVB9_I;
-
 protected Double MENDVB9_IFLAG;
-
 protected Double MENDW1;
-
 protected Double MENDW1_I;
-
 protected Double MENDW1_IFLAG;
-
 protected Double MENDW3;
-
 protected Double MENDX1;
-
 protected Double MENDY1;
-
 protected Double MHOWPY1;
-
 protected Double MINVW1;
-
 protected Double MINVW2;
-
 protected Double MINVW3;
-
 protected Double MNAME1;
-
 protected Double MNEG1;
-
 protected Double MNEG1_I;
-
 protected Double MNEG1_IFLAG;
-
 protected Double MNEGB1;
-
 protected Double MONAME1;
-
 protected Double MONTHW1;
-
 protected Double MONTHW2;
-
 protected Double MONTHW3;
-
 protected Double MPAYB1;
-
 protected Double MPAYM1;
-
 protected Double MPOLICY1;
-
 protected Double MPOLICY2;
-
 protected Double MPP1;
-
 protected Double MTYPE1;
-
 protected Double MTYPE1_I;
-
 protected Double MTYPE1_IFLAG;
-
 protected Double MVAL1;
-
 protected Double MVAL1_I;
-
 protected Double MVAL1_IFLAG;
-
 protected Double MVALB1;
-
 protected Double MYIFCH1;
-
 protected Double MYLFT1;
-
 protected Double VTYPE1;
-
 protected Double YEARW1;
-
 protected Double YEARW2;
-
 protected Double YEARW3;
-
 protected final void initBRIDLN1(String s) {
 if (!s.trim().isEmpty()) {
 BRIDLN1 = new Double(s);

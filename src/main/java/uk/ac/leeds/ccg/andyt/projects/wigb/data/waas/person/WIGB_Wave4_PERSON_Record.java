@@ -3,399 +3,202 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person;
 public class WIGB_Wave4_PERSON_Record extends WIGB_Wave4Or5_PERSON_Record {
-private static final long serialVersionUID = 1;
 protected Double ANYOTHERB_I;
-
 protected Double BENTYPE01;
-
 protected Double BENTYPE02;
-
 protected Double BENTYPE03;
-
 protected Double BENTYPE04;
-
 protected Double BENTYPE05;
-
 protected Double BENTYPE06;
-
 protected Double BENTYPE07;
-
 protected Double BENTYPE08;
-
 protected Double BENTYPE09;
-
 protected Double BENTYPE10;
-
 protected Double BENTYPE11;
-
 protected Double BENTYPE12;
-
 protected Double COMBPD;
-
 protected Double CREDTYPE1;
-
 protected Double CREDTYPE2;
-
 protected Double CTCPD;
-
 protected Double CTOGSEP;
-
 protected Double DBURD___W4;
-
 protected Double DTLOWE1;
-
 protected Double DTLOWE1_I;
-
 protected Double DTLOWE1_IFLAG;
-
 protected Double DTLOWE2;
-
 protected Double DTLOWE2_I;
-
 protected Double DTLOWE2_IFLAG;
-
 protected Double DTLOWE3;
-
 protected Double DTLOWE3_I;
-
 protected Double DTLOWE3_IFLAG;
-
 protected Double DTLOWEB1;
-
 protected Double DTLOWEB1_I;
-
 protected Double DTLOWEB1_IFLAG;
-
 protected Double DTLOWEB2;
-
 protected Double DTLOWEB2_I;
-
 protected Double DTLOWEB2_IFLAG;
-
 protected Double DTLOWEB3;
-
 protected Double DTLOWEB3_I;
-
 protected Double DTLOWEB3_IFLAG;
-
 protected Double DTLTYPE1;
-
 protected Double DTLTYPE1_I;
-
 protected Double DTLTYPE1_IFLAG;
-
 protected Double DTLTYPE2;
-
 protected Double DTLTYPE2_I;
-
 protected Double DTLTYPE2_IFLAG;
-
 protected Double DTLTYPE3;
-
 protected Double DTLTYPE3_I;
-
 protected Double DTLTYPE3_IFLAG;
-
 protected Double DVAGEW4BAND;
-
 protected Double DVBENU1;
-
 protected Double DVCTCANNUAL;
-
 protected Double DVSAME_I;
-
 protected Double DVSAME_IFLAG;
-
 protected Double DVSPECANNUAL01;
-
 protected Double DVSPECANNUAL02;
-
 protected Double DVSPECANNUAL03;
-
 protected Double DVSPECANNUAL04;
-
 protected Double DVSPECANNUAL05;
-
 protected Double DVSPECANNUAL06;
-
 protected Double DVSPECANNUAL07;
-
 protected Double DVSPECANNUAL08;
-
 protected Double DVSPECANNUAL09;
-
 protected Double DVTOGTCANNUAL;
-
 protected Double DVTOTALLBENANNUAL;
-
 protected Double DVTOTBENANNUAL;
-
 protected Double DVTOTTAXANNUAL;
-
 protected Double DVUETIM;
-
 protected Double DVWTCANNUAL;
-
 protected Double ETYPE;
-
 protected Double FINVTY01_IFLAG;
-
 protected Double FINVTY02_IFLAG;
-
 protected Double FINVTY03_IFLAG;
-
 protected Double FINVTY04_IFLAG;
-
 protected Double FINVTY05_IFLAG;
-
 protected Double FINVTY06_IFLAG;
-
 protected Double FINVTY07_IFLAG;
-
 protected Double FINVTY08_IFLAG;
-
 protected Double FINVTY09_IFLAG;
-
 protected Double FINVTY10_IFLAG;
-
 protected Double FINVTY11_IFLAG;
-
 protected Double FSHADA;
-
 protected Double FSHADAB;
-
 protected Double FSHADD;
-
 protected Double LVTDAY;
-
 protected Double NSSEC;
-
 protected Double OPENSAV;
-
 protected Double OSAFERE2;
-
 protected Double OSAFERET1;
-
 protected Double PESAME_I;
-
 protected Double PESAME_IFLAG;
-
 protected Double PFANVB1;
-
 protected Double PFANVB2;
-
 protected Double PFANVB3;
-
 protected Double PFANVB4;
-
 protected Double PFANVB5;
-
 protected Double PFANVB6;
-
 protected Double PFANVI1;
-
 protected Double PFANVI2;
-
 protected Double PFANVI3;
-
 protected Double PFANVI4;
-
 protected Double PFANVI5;
-
 protected Double PFANVI6;
-
 protected Double PFPENVB1;
-
 protected Double PFPENVB2;
-
 protected Double PFPENVB3;
-
 protected Double PFPENVB4;
-
 protected Double PFPENVB5;
-
 protected Double PFPENVB6;
-
 protected Double PFPENVI1;
-
 protected Double PFPENVI2;
-
 protected Double PFPENVI3;
-
 protected Double PFPENVI4;
-
 protected Double PFPENVI5;
-
 protected Double PFPENVI6;
-
 protected Double POANVB1;
-
 protected Double POANVB2;
-
 protected Double POANVI1;
-
 protected Double POANVI2;
-
 protected Double POPENVB1;
-
 protected Double POPENVB2;
-
 protected Double POPENVI;
-
 protected Double POPENVI2;
-
 protected Double PPANVB1;
-
 protected Double PPANVB2;
-
 protected Double PPANVB3;
-
 protected Double PPANVI1;
-
 protected Double PPANVI2;
-
 protected Double PPANVI3;
-
 protected Double PPFAWH16;
-
 protected Double PPFAWH17;
-
 protected Double PPFAWH18;
-
 protected Double PSCHY_T;
-
 protected Double RF;
-
 protected Double RPCRET1;
-
 protected Double RPCRET2;
-
 protected Double RPCRET3;
-
 protected Double RPDBCAL_F;
-
 protected Double RS;
-
 protected Double SOURC2PMULT1;
-
 protected Double SOURC2PMULT2;
-
 protected Double SOURC2PMULT3;
-
 protected Double SOURC2PMULT4;
-
 protected Double SOURC2PMULT5;
-
 protected Double SOURC2PMULT6;
-
 protected Double SOURC2PMULT7;
-
 protected Double SOURC2PMULT8;
-
 protected Double SOURC2PMULT9;
-
 protected Double SPECIAL1;
-
 protected Double SPECIAL2;
-
 protected Double SPECIAL3;
-
 protected Double SPECIAL4;
-
 protected Double SPECIAL5;
-
 protected Double SPECIAL6;
-
 protected Double SPECIAL7;
-
 protected Double SPECIAL8;
-
 protected Double SPECIAL9;
-
 protected Double SPECINCL1;
-
 protected Double SPECINCL2;
-
 protected Double SPECINCL3;
-
 protected Double SPECINCL4;
-
 protected Double SPECINCL5;
-
 protected Double SPECINCL6;
-
 protected Double SPECINCL7;
-
 protected Double SPECINCL8;
-
 protected Double SPECINCL9;
-
 protected Double SPECPD1;
-
 protected Double SPECPD2;
-
 protected Double SPECPD3;
-
 protected Double SPECPD4;
-
 protected Double SPECPD5;
-
 protected Double SPECPD6;
-
 protected Double SPECPD7;
-
 protected Double SPECPD8;
-
 protected Double SPECPD9;
-
 protected Double SPECWHEN1;
-
 protected Double SPECWHEN2;
-
 protected Double SPECWHEN3;
-
 protected Double SPECWHEN4;
-
 protected Double SPECWHEN5;
-
 protected Double SPECWHEN6;
-
 protected Double SPECWHEN7;
-
 protected Double SPECWHEN8;
-
 protected Double SPECWHEN9;
-
 protected Double SPENDM;
-
 protected Double UPROP1_IFLAG;
-
 protected Double UPROP2_IFLAG;
-
 protected Double UPROP3_IFLAG;
-
 protected Double UPROP4_IFLAG;
-
 protected Double UPROP5_IFLAG;
-
 protected Double UPROP6_IFLAG;
-
 protected Double W1_LONGWGT;
-
 protected Double W3_LONGWGT;
-
 protected Double W4XSHHWGT;
-
 protected Double W4XSPERSWGT;
-
 protected Double WHOREATT;
-
 protected Double WHORECAR;
-
 protected Double WHOREMOB;
-
 protected Double WTCPD;
-
 protected final void initANYOTHERB_I(String s) {
 if (!s.trim().isEmpty()) {
 ANYOTHERB_I = new Double(s);

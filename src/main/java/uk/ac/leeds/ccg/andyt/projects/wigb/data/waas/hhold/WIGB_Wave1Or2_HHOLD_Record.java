@@ -3,415 +3,210 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold;
 public class WIGB_Wave1Or2_HHOLD_Record extends WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record {
-private static final long serialVersionUID = 1;
 protected Double DVBLDDEBT;
-
 protected Double DVBLDVAL;
-
 protected Double DVCACRVAL_SUM;
-
 protected Double DVCACTV_SUM;
-
 protected Double DVCAODVAL_SUM;
-
 protected Double DVCASVV_SUM;
-
 protected Double DVCAVAL_SUM;
-
 protected Double DVCISAV_SUM;
-
 protected Double DVDBRWEALTHVAL_SUM;
-
 protected Double DVEQHIP;
-
 protected Double DVEQRUPM;
-
 protected Double DVFBONDV_SUM;
-
 protected Double DVFCOLLV_SUM;
-
 protected Double DVFESHARES_SUM;
-
 protected Double DVFFASSETS_SUM;
-
 protected Double DVFGLTFOV_SUM;
-
 protected Double DVFGLTUKV_SUM;
-
 protected Double DVFINFLV_SUM;
-
 protected Double DVFINFVAL_SUM;
-
 protected Double DVFINFV_SUM;
-
 protected Double DVFINVOTV_SUM;
-
 protected Double DVFNSVAL_SUM;
-
 protected Double DVFSHOSV_SUM;
-
 protected Double DVFSHUKV_SUM;
-
 protected Double DVHRPNUM;
-
 protected Double DVHSEDEBT;
-
 protected Double DVHSEVAL;
-
 protected Double DVIISAV_SUM;
-
 protected Double DVINSV_SUM;
-
 protected Double DVISAVAL_SUM;
-
 protected Double DVKISAV_SUM;
-
 protected Double DVLOSDEBT;
-
 protected Double DVLOSVAL;
-
 protected Double DVLUKDEBT;
-
 protected Double DVLUKVAL;
-
 protected Double DVOPRDEBT;
-
 protected Double DVOPRVAL;
-
 protected Double DVPAVCUV_SUM;
-
 protected Double DVPFCURVAL_SUM;
-
 protected Double DVPFDDV_SUM;
-
 protected Double DVPINPVAL_SUM;
-
 protected Double DVPPVAL_SUM;
-
 protected Double DVSAVAL_SUM;
-
 protected Double DVSPEN_SUM;
-
 protected Double DVTOTCARVAL;
-
 protected Double DVTOTMOTBVAL;
-
 protected Double DVTOTVANVAL;
-
 protected Double DVVALDBT_SUM;
-
 protected Double DVVALDCOS_SUM;
-
 protected Double DVVESTV2_I;
-
 protected Double DVVESTV2_IFLAG;
-
 protected Double DVVESTV3_I;
-
 protected Double DVVESTV3_IFLAG;
-
 protected Double DVVESTV_I;
-
 protected Double DVVESTV_IFLAG;
-
 protected Double DVVOVAL_I;
-
 protected Double DVVOVAL_IFLAG;
-
 protected Double DVVPERV_I;
-
 protected Double DVVPERV_IFLAG;
-
 protected Double EINTPAY;
-
 protected Double EOTHIRR;
-
 protected Double EOTHIVA;
-
 protected Double EOTHIVB;
-
 protected Double EQFILTER;
-
 protected Double EQREAS1;
-
 protected Double EQREAS2;
-
 protected Double EQREAS3;
-
 protected Double EQREAS4;
-
 protected Double EQREL;
-
 protected Double EQREL_I;
-
 protected Double EQREL_IFLAG;
-
 protected Double EQTYPE;
-
 protected Double EQTYPE_I;
-
 protected Double EQTYPE_IFLAG;
-
 protected Double EQWHEN;
-
 protected Double EQYES_I;
-
 protected Double EQYES_IFLAG;
-
 protected Double ERECM;
-
 protected Double ERECMB;
-
 protected Double ERENTAM;
-
 protected Double ERENTB;
-
 protected Double ERVREC;
-
 protected Double ERVRECB;
-
 protected Double ERVREG;
-
 protected Double GCONTVLS2;
-
 protected Double GCPREAM;
-
 protected Double HFINL_SUM;
-
 protected Double HFINW_EXCENDW_SUM;
-
 protected Double HPARR_SUM;
-
 protected Double HRPDVAGE15;
-
 protected Double HRPEMPSTAT2;
-
 protected Double HRPIOUT1;
-
 protected Double HRPPART;
-
 protected Double HRPPARTIOUT1;
-
 protected Double HVALRS1;
-
 protected Double HVALRS2;
-
 protected Double HVALRS3;
-
 protected Double HVALRS4;
-
 protected Double HVALRS5;
-
 protected Double LNARR_SUM;
-
 protected Double MALL;
-
 protected Double MALLTY;
-
 protected Double MALLTY3_I;
-
 protected Double MALLTY3_IFLAG;
-
 protected Double MALLTY_I;
-
 protected Double MALLTY_IFLAG;
-
 protected Double MALL_I;
-
 protected Double MALL_IFLAG;
-
 protected Double MARRS;
-
 protected Double MDIFFPY;
-
 protected Double MENDNUM;
-
 protected Double MENDNUM_I;
-
 protected Double MENDNUM_IFLAG;
-
 protected Double MENDV;
-
 protected Double MENDVB;
-
 protected Double MENDVB5;
-
 protected Double MENDVB8;
-
 protected Double MENDV_I;
-
 protected Double MENDV_IFLAG;
-
 protected Double MENDW;
-
 protected Double MENDW3;
-
 protected Double MENDW_I;
-
 protected Double MENDW_IFLAG;
-
 protected Double MENDX;
-
 protected Double MENDY;
-
 protected Double MENDY5;
-
 protected Double MENDY8;
-
 protected Double MHOWPY;
-
 protected Double MINC12;
-
 protected Double MINC7;
-
 protected Double MINC8;
-
 protected Double MINC9;
-
 protected Double MNAME;
-
 protected Double MNEG;
-
 protected Double MNEGB;
-
 protected Double MNEG_I;
-
 protected Double MNEG_IFLAG;
-
 protected Double MOARR_SUM;
-
 protected Double MONAME;
-
 protected Double MPAYB;
-
 protected Double MPAYM;
-
 protected Double MPP;
-
 protected Double MREAS08;
-
 protected Double MREAS09;
-
 protected Double MREAS11;
-
 protected Double MREAS21;
-
 protected Double MREAS22;
-
 protected Double MTYPE;
-
 protected Double MTYPE_I;
-
 protected Double MTYPE_IFLAG;
-
 protected Double MVAL;
-
 protected Double MVALB;
-
 protected Double MVAL_I;
-
 protected Double MVAL_IFLAG;
-
 protected Double MYLFT;
-
 protected Double NBABY;
-
 protected Double NC1015;
-
 protected Double NC1618;
-
 protected Double NC5TO9;
-
 protected Double NCHILD;
-
 protected Double NCU16;
-
 protected Double NCUND5;
-
 protected Double NDEPC;
-
 protected Double NNDEPC;
-
 protected Double NUMJOB;
-
 protected Double NUMSSEX;
-
 protected Double NVESTV;
-
 protected Double OTHMORT;
-
 protected Double TOTBILLARR_SUM;
-
 protected Double TOTCC_SUM;
-
 protected Double TOTHP_SUM;
-
 protected Double TOTLOS_SUM;
-
 protected Double TOTMO_SUM;
-
 protected Double TOTPEN_SUM;
-
 protected Double TOTSC_SUM;
-
 protected Double T_FLNS_SUM;
-
 protected Double T_LNS_SUM;
-
 protected Double T_SLNS_SUM;
-
 protected Double VESTV;
-
 protected Double VESTV2;
-
 protected Double VESTV2_I;
-
 protected Double VESTV2_IFLAG;
-
 protected Double VESTV3;
-
 protected Double VESTV3_I;
-
 protected Double VESTV3_IFLAG;
-
 protected Double VESTV_I;
-
 protected Double VESTV_IFLAG;
-
 protected Double VESVB;
-
 protected Double VESVB2;
-
 protected Double VESVB3;
-
 protected Double VOTHT;
-
 protected Double VOTHT_I;
-
 protected Double VOTHT_IFLAG;
-
 protected Double VOTYP1_IFLAG;
-
 protected Double VOTYP2_IFLAG;
-
 protected Double VOTYP3_IFLAG;
-
 protected Double VOTYP4_IFLAG;
-
 protected Double VOTYP5;
-
 protected Double VOTYP5_IFLAG;
-
 protected Double VOVLB_I;
-
 protected Double VOVLB_IFLAG;
-
 protected Double VTYPE;
-
 protected Double VTYPE2_IFLAG;
-
 protected Double VTYPE_I;
-
 protected final void initDVBLDDEBT(String s) {
 if (!s.trim().isEmpty()) {
 DVBLDDEBT = new Double(s);

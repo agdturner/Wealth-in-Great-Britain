@@ -3,789 +3,397 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person;
 public class WIGB_Wave4Or5_PERSON_Record extends WIGB_Wave3Or4Or5_PERSON_Record {
-private static final long serialVersionUID = 1;
 protected Double ADAMT1;
-
 protected Double ADAMT2;
-
 protected Double ADAMT3;
-
 protected Double ADAVAIL1;
-
 protected Double ADAVAIL2;
-
 protected Double ADAVAIL3;
-
 protected Double ADCONS1;
-
 protected Double ADCONS2;
-
 protected Double ADCONS3;
-
 protected Double ADCOST1;
-
 protected Double ADCOST2;
-
 protected Double ADCOST3;
-
 protected Double ADFUR1;
-
 protected Double ADFUR2;
-
 protected Double ADFUR3;
-
 protected Double ADJOINT1;
-
 protected Double ADJOINT2;
-
 protected Double ADJOINT3;
-
 protected Double ADPAY1;
-
 protected Double ADPAY2;
-
 protected Double ADPAY3;
-
 protected Double ADPROD1;
-
 protected Double ADPROD2;
-
 protected Double ADPROD3;
-
 protected Double ADPURCH1;
-
 protected Double ADPURCH2;
-
 protected Double ADPURCH3;
-
 protected Double ADRECORD1;
-
 protected Double ADRECORD2;
-
 protected Double ADRECORD3;
-
 protected Double ADSAT1;
-
 protected Double ADSAT2;
-
 protected Double ADSAT3;
-
 protected Double ADSATREFLECT1;
-
 protected Double ADSATREFLECT2;
-
 protected Double ADSATREFLECT3;
-
 protected Double ADSAVINV1;
-
 protected Double ADSAVINV10;
-
 protected Double ADSAVINV11;
-
 protected Double ADSAVINV12;
-
 protected Double ADSAVINV13;
-
 protected Double ADSAVINV14;
-
 protected Double ADSAVINV15;
-
 protected Double ADSAVINV19;
-
 protected Double ADSAVINV2;
-
 protected Double ADSAVINV20;
-
 protected Double ADSAVINV21;
-
 protected Double ADSAVINV3;
-
 protected Double ADSAVINV4;
-
 protected Double ADSAVINV5;
-
 protected Double ADSAVINV6;
-
 protected Double ADSAVINV7;
-
 protected Double ADSAVINV8;
-
 protected Double ADSAVINV9;
-
 protected Double ADTYP1;
-
 protected Double ADTYP2;
-
 protected Double ADTYP3;
-
 protected Double ADVICE;
-
 protected Double ADVNUMALL;
-
 protected Double ADVREAS1;
-
 protected Double ADVREAS2;
-
 protected Double ADVREAS3;
-
 protected Double ADWHO01;
-
 protected Double ADWHO02;
-
 protected Double ADWHO15;
-
 protected Double ADWHO16;
-
 protected Double ADWHO17;
-
 protected Double ADWHO31;
-
 protected Double ADWHO32;
-
 protected Double AGEASAF;
-
 protected Double ANNUITY1;
-
 protected Double ANNUITY2;
-
 protected Double ANYOTHERB_IFLAG;
-
 protected Double BENINTRO;
-
 protected Double CACTVB_I;
-
 protected Double CACTVB_IFLAG;
-
 protected Double CAJISA;
-
 protected Integer CASEW4;
-
 protected Double CASVB_I;
-
 protected Double CASVB_IFLAG;
-
 protected Double CATYPE1;
-
 protected Double CATYPE2;
-
 protected Double DBURDW3;
-
 protected Double DCARRCL01;
-
 protected Double DCARRCL02;
-
 protected Double DCARRCL03;
-
 protected Double DCARRCL04;
-
 protected Double DCBE2YR1;
-
 protected Double DCBE2YR2;
-
 protected Double DCBE2YR3;
-
 protected Double DHBEST01_I;
-
 protected Double DHBEST01_IFLAG;
-
 protected Double DHBEST02_I;
-
 protected Double DHBEST02_IFLAG;
-
 protected Double DHBEST03_I;
-
 protected Double DHBEST03_IFLAG;
-
 protected Double DHBEST04_I;
-
 protected Double DHBEST04_IFLAG;
-
 protected Double DHBEST05_I;
-
 protected Double DHBEST05_IFLAG;
-
 protected Double DHBEST06_I;
-
 protected Double DHBEST06_IFLAG;
-
 protected Double DHBEST07_I;
-
 protected Double DHBEST07_IFLAG;
-
 protected Double DHBEST08_I;
-
 protected Double DHBEST08_IFLAG;
-
 protected Double DHBEST09_I;
-
 protected Double DHBEST09_IFLAG;
-
 protected Double DHBEST10_I;
-
 protected Double DHBEST10_IFLAG;
-
 protected Double DHBEST11_I;
-
 protected Double DHBEST11_IFLAG;
-
 protected Double DISBEN1;
-
 protected Double DISBEN1_I;
-
 protected Double DISBEN2;
-
 protected Double DISBEN2_I;
-
 protected Double DISBEN3;
-
 protected Double DISBEN3_I;
-
 protected Double DISBEN_IFLAG;
-
 protected Double DLEST1_I;
-
 protected Double DLEST1_IFLAG;
-
 protected Double DLEST2_I;
-
 protected Double DLEST2_IFLAG;
-
 protected Double DLEST3_I;
-
 protected Double DLEST3_IFLAG;
-
 protected Double DLEST4_I;
-
 protected Double DLEST4_IFLAG;
-
 protected Double DLEST5_I;
-
 protected Double DLEST5_IFLAG;
-
 protected Double DSLEST1_I;
-
 protected Double DSLEST1_IFLAG;
-
 protected Double DSLEST2_I;
-
 protected Double DSLEST2_IFLAG;
-
 protected Double DSLEST3_I;
-
 protected Double DSLEST3_IFLAG;
-
 protected Double DSLEST4_I;
-
 protected Double DSLEST4_IFLAG;
-
 protected Double DSLEST5_I;
-
 protected Double DSNUM1;
-
 protected Double DVBENEFITANNUAL_I;
-
 protected Double DVCOINV1;
-
 protected Double DVECACT;
-
 protected Double DVGRSBAND_I;
-
 protected Double DVGRSBAND_IFLAG;
-
 protected Double DVMRDF12;
-
 protected Double DVNETBAND_I;
-
 protected Double DVNETBAND_IFLAG;
-
 protected Double DVSHODVAL1;
-
 protected Double FINFVB_I;
-
 protected Double FINFVB_IFLAG;
-
 protected Double FLOANVB_I;
-
 protected Double FLOANVB_IFLAG;
-
 protected Double FNSVAL;
-
 protected Double FNSVAL_I;
-
 protected Double HASBOND;
-
 protected Double HASCC;
-
 protected Double HASEMPSH;
-
 protected Double HASGILT;
-
 protected Double HASISA;
-
 protected Double HASLINS;
-
 protected Double HASNOFA;
-
 protected Double HASNSP;
-
 protected Double HASOINV;
-
 protected Double HASOTHSH;
-
 protected Double HASSC;
-
 protected Double HASSHSAC;
-
 protected Double HASUTRUST;
-
 protected Double HRPDVECACT;
-
 protected Double IGFVALB_I;
-
 protected Double IGFVALB_IFLAG;
-
 protected Double ILACB_I;
-
 protected Double ILACB_IFLAG;
-
 protected Double ILINB_I;
-
 protected Double ILINB_IFLAG;
-
 protected Double ILOTB_I;
-
 protected Double ILOTB_IFLAG;
-
 protected Double ILRDB_I;
-
 protected Double ILRDB_IFLAG;
-
 protected Double ILUPB_I;
-
 protected Double ILUPB_IFLAG;
-
 protected Double ILWNB_I;
-
 protected Double ILWNB_IFLAG;
-
 protected Double IVALB1_I;
-
 protected Double IVALB1_IFLAG;
-
 protected Double IVALB2_I;
-
 protected Double IVALB2_IFLAG;
-
 protected Double IVALB3_I;
-
 protected Double IVALB3_IFLAG;
-
 protected Double IWHO1;
-
 protected Double KIDBEN1;
-
 protected Double KIDBEN1_I;
-
 protected Double KIDBEN2;
-
 protected Double KIDBEN2_I;
-
 protected Double KIDBEN_IFLAG;
-
 protected Double KNOWWPR;
-
 protected Double LIVWTH12;
-
 protected Double LNLFT6;
-
 protected Double LNLFT7;
-
 protected Double LNLFT8;
-
 protected Double LNLFT9;
-
 protected Double LNOS6;
-
 protected Double LNOS7;
-
 protected Double LNOS8;
-
 protected Double LNOS9;
-
 protected Double MONTHW1;
-
 protected Double MONTHW2;
-
 protected Double MONTHW3;
-
 protected Double NWFLNVAL4;
-
 protected Double OTHERBEN1;
-
 protected Double OTHERBEN1_I;
-
 protected Double OTHERBEN2;
-
 protected Double OTHERBEN2_I;
-
 protected Double OTHERBEN3;
-
 protected Double OTHERBEN3_I;
-
 protected Double OTHERBEN4;
-
 protected Double OTHERBEN4_I;
-
 protected Double OTHERBEN_IFLAG;
-
 protected Double OWHYSAV1;
-
 protected Double OWHYSAV2;
-
 protected Double OWHYSAV3;
-
 protected Double OWHYSAV4;
-
 protected Double OWHYSAV5;
-
 protected Double OWHYSAV6;
-
 protected Double OWHYSAV7;
-
 protected Double OWHYSAV8;
-
 protected Double OWHYSAV9;
-
 protected Double PAVCVB1_I;
-
 protected Double PAVCVB1_IFLAG;
-
 protected Double PAVCVB2_I;
-
 protected Double PAVCVB2_IFLAG;
-
 protected Double PBLMVB1_I;
-
 protected Double PBLMVB1_IFLAG;
-
 protected Double PBLMVB2_I;
-
 protected Double PBLMVB2_IFLAG;
-
 protected Double PDCVB1_I;
-
 protected Double PDCVB1_IFLAG;
-
 protected Double PDCVB2_I;
-
 protected Double PDCVB2_IFLAG;
-
 protected Double PENBEN1;
-
 protected Double PENBEN1_I;
-
 protected Double PENBEN2;
-
 protected Double PENBEN2_I;
-
 protected Double PENBEN3;
-
 protected Double PENBEN3_I;
-
 protected Double PENBEN_IFLAG;
-
 protected Integer PERSONW4;
-
 protected Double PFCUVB1_I;
-
 protected Double PFCUVB1_IFLAG;
-
 protected Double PFCUVB2_I;
-
 protected Double PFCUVB2_IFLAG;
-
 protected Double PFCUVB3_I;
-
 protected Double PFCUVB3_IFLAG;
-
 protected Double PFCUVB4_I;
-
 protected Double PFCUVB4_IFLAG;
-
 protected Double PFCUVB5_I;
-
 protected Double PFCUVB5_IFLAG;
-
 protected Double PFCUVB6_I;
-
 protected Double PFCUVB6_IFLAG;
-
 protected Double PFDDVB1_I;
-
 protected Double PFDDVB1_IFLAG;
-
 protected Double PFDDVB2_I;
-
 protected Double PFDDVB2_IFLAG;
-
 protected Double PFDDVB3_I;
-
 protected Double PFDDVB3_IFLAG;
-
 protected Double PFDDVB4_I;
-
 protected Double PFDDVB4_IFLAG;
-
 protected Double PFDDVB5_I;
-
 protected Double PFDDVB5_IFLAG;
-
 protected Double PFDDVB6_I;
-
 protected Double PFDDVB6_IFLAG;
-
 protected Double PFDRAW3;
-
 protected Double PFLMVB1_I;
-
 protected Double PFLMVB1_IFLAG;
-
 protected Double PFLMVB2_I;
-
 protected Double PFLMVB2_IFLAG;
-
 protected Double PFLMVB3_I;
-
 protected Double PFLMVB3_IFLAG;
-
 protected Double PFLMVB4_I;
-
 protected Double PFLMVB4_IFLAG;
-
 protected Double PFLUVB1_I;
-
 protected Double PFLUVB1_IFLAG;
-
 protected Double PFLUVB2_I;
-
 protected Double PFLUVB2_IFLAG;
-
 protected Double PFLUVB3_I;
-
 protected Double PFLUVB3_IFLAG;
-
 protected Double PFLUVB4_I;
-
 protected Double PFLUVB4_IFLAG;
-
 protected Double PFLUVB5_I;
-
 protected Double PFLUVB5_IFLAG;
-
 protected Double PFLUVB6_I;
-
 protected Double PFLUVB6_IFLAG;
-
 protected Double PMORTC1;
-
 protected Double POCNAMT1;
-
 protected Double POCNAMT2;
-
 protected Double POLMVB1_I;
-
 protected Double POLMVB1_IFLAG;
-
 protected Double POLMVB2_I;
-
 protected Double POLMVB2_IFLAG;
-
 protected Double POPYCH1;
-
 protected Double PORAGE1T;
-
 protected Double PORAGE2T;
-
 protected Double PPCNHOW3;
-
 protected Double PPCONCH1;
-
 protected Double PPDRINCB1;
-
 protected Double PPLMVB1_I;
-
 protected Double PPLMVB1_IFLAG;
-
 protected Double PPLMVB2_I;
-
 protected Double PPLMVB2_IFLAG;
-
 protected Double PPLMVB3_I;
-
 protected Double PPLMVB3_IFLAG;
-
 protected Double PPRGAM1;
-
 protected Double PPVALB1_I;
-
 protected Double PPVALB1_IFLAG;
-
 protected Double PPVALB2_I;
-
 protected Double PPVALB2_IFLAG;
-
 protected Double PPVALB3_I;
-
 protected Double PPVALB3_IFLAG;
-
 protected Double SAVDEP;
-
 protected Double SIC2007;
-
 protected Double SOCFUND1;
-
 protected Double SOCFUND1_I;
-
 protected Double SOCFUND2;
-
 protected Double SOCFUND2_I;
-
 protected Double SOCFUND3;
-
 protected Double SOCFUND3_I;
-
 protected Double SOCFUND4;
-
 protected Double SOCFUND4_I;
-
 protected Double SOCFUND_IFLAG;
-
 protected Double TADDVL1;
-
 protected Double UBUYTOL1;
-
 protected Double UBUYTOL10;
-
 protected Double UBUYTOL11;
-
 protected Double UBUYTOL12;
-
 protected Double UBUYTOL2;
-
 protected Double UBUYTOL3;
-
 protected Double UBUYTOL4;
-
 protected Double UBUYTOL5;
-
 protected Double UBUYTOL6;
-
 protected Double UBUYTOL7;
-
 protected Double UBUYTOL8;
-
 protected Double UBUYTOL9;
-
 protected Double UDEBTBLU_I;
-
 protected Double UDEBTBLU_IFLAG;
-
 protected Double UDEBTBL_I;
-
 protected Double UDEBTBL_IFLAG;
-
 protected Double UDEBTBOR_I;
-
 protected Double UDEBTBOR_IFLAG;
-
 protected Double UDEBTBOS_I;
-
 protected Double UDEBTBOS_IFLAG;
-
 protected Double UDEBTBO_I;
-
 protected Double UDEBTBO_IFLAG;
-
 protected Double UDEBTBS_I;
-
 protected Double UDEBTBS_IFLAG;
-
 protected Double UPROP5;
-
 protected Double UPRTYP1;
-
 protected Double UVALBLU_I;
-
 protected Double UVALBLU_IFLAG;
-
 protected Double UVALBL_I;
-
 protected Double UVALBL_IFLAG;
-
 protected Double UVALBOR_I;
-
 protected Double UVALBOR_IFLAG;
-
 protected Double UVALBOS_I;
-
 protected Double UVALBOS_IFLAG;
-
 protected Double UVALBO_I;
-
 protected Double UVALBO_IFLAG;
-
 protected Double UVALBS_I;
-
 protected Double UVALBS_IFLAG;
-
 protected Double WAGEBEN1;
-
 protected Double WAGEBEN1_I;
-
 protected Double WAGEBEN2;
-
 protected Double WAGEBEN2_I;
-
 protected Double WAGEBEN3;
-
 protected Double WAGEBEN3_I;
-
 protected Double WAGEBEN4;
-
 protected Double WAGEBEN4_I;
-
 protected Double WAGEBEN5;
-
 protected Double WAGEBEN5_I;
-
 protected Double WAGEBEN6;
-
 protected Double WAGEBEN6_I;
-
 protected Double WAGEBEN_IFLAG;
-
 protected Double WPBTHA1;
-
 protected Double WPBTHA2;
-
 protected Double WPBTHP1;
-
 protected Double WPBTHP2;
-
 protected Double WPERA1;
-
 protected Double WPERA2;
-
 protected Double WPNRA1;
-
 protected Double WPNRA2;
-
 protected Double YEARW1;
-
 protected Double YEARW2;
-
 protected Double YEARW3;
-
 protected final void initADAMT1(String s) {
 if (!s.trim().isEmpty()) {
 ADAMT1 = new Double(s);

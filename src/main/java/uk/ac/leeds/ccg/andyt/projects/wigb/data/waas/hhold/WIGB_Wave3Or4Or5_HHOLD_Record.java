@@ -3,401 +3,203 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold;
 public class WIGB_Wave3Or4Or5_HHOLD_Record extends WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record {
-private static final long serialVersionUID = 1;
 protected Double BUYLGDST_SUM;
-
 protected Integer CASEW2;
-
 protected Integer CASEW3;
-
 protected Double DVBLDDEBT_SUM;
-
 protected Double DVBLDVAL_SUM;
-
 protected Double DVBLTDEBT_SUM;
-
 protected Double DVBLTVAL_SUM;
-
 protected Double DVCACRVAL_AGGR;
-
 protected Double DVCACTV_AGGR;
-
 protected Double DVCAODVAL_AGGR;
-
 protected Double DVCASVV_AGGR;
-
 protected Double DVCAVAL_AGGR;
-
 protected Double DVCISAV_AGGR;
-
 protected Double DVDBRWEALTHVAL_AGGR;
-
 protected Double DVEQLTM;
-
 protected Double DVEQPRUN;
-
 protected Double DVEQSRB;
-
 protected Double DVERECGROSSANNUAL;
-
 protected Double DVERECNETANNUAL;
-
 protected Double DVERVRECGROSSANNUAL;
-
 protected Double DVERVRECNETANNUAL;
-
 protected Double DVFBONDV_AGGR;
-
 protected Double DVFCOLLV_AGGR;
-
 protected Double DVFEOPTV_AGGR;
-
 protected Double DVFESHARES_AGGR;
-
 protected Double DVFESHAV_AGGR;
-
 protected Double DVFFASSETS_AGGR;
-
 protected Double DVFGLTFOV_AGGR;
-
 protected Double DVFGLTUKV_AGGR;
-
 protected Double DVFINFLV_AGGR;
-
 protected Double DVFINFVAL_AGGR;
-
 protected Double DVFINFV_AGGR;
-
 protected Double DVFINVOTV_AGGR;
-
 protected Double DVFLFENV_AGGR;
-
 protected Double DVFLFFSV_AGGR;
-
 protected Double DVFLFSIV_AGGR;
-
 protected Double DVFLFTEV_AGGR;
-
 protected Double DVFNSVAL_AGGR;
-
 protected Double DVFSHOSV_AGGR;
-
 protected Double DVFSHUKV_AGGR;
-
 protected Double DVGIEMP_AGGR;
-
 protected Double DVGIINV_AGGR;
-
 protected Double DVGIOTHR_AGGR;
-
 protected Double DVGIPPEN_AGGR;
-
 protected Double DVGISE_AGGR;
-
 protected Double DVGRSRENTAMTANNUAL_AGGR;
-
 protected Double DVHSEDEBT_SUM;
-
 protected Double DVHSEVAL_SUM;
-
 protected Double DVIISAV_AGGR;
-
 protected Double DVINSV_AGGR;
-
 protected Double DVISAVAL_AGGR;
-
 protected Double DVKISAV_AGGR;
-
 protected Double DVLOSDEBT_SUM;
-
 protected Double DVLOSVAL_SUM;
-
 protected Double DVLUKDEBT_SUM;
-
 protected Double DVLUKVAL_SUM;
-
 protected Double DVNETRENTAMTANNUAL_AGGR;
-
 protected Double DVNIEMP_AGGR;
-
 protected Double DVNIINV_AGGR;
-
 protected Double DVNIOTHI_AGGR;
-
 protected Double DVNIOTHR_AGGR;
-
 protected Double DVNIPPEN_AGGR;
-
 protected Double DVNISE_AGGR;
-
 protected Double DVOIGEGANNUAL_AGGR;
-
 protected Double DVOIGFRANNUAL_AGGR;
-
 protected Double DVOIGGTANNUAL_AGGR;
-
 protected Double DVOIGMAANNUAL_AGGR;
-
 protected Double DVOIGOPANNUAL_AGGR;
-
 protected Double DVOIGROANNUAL_AGGR;
-
 protected Double DVOIGRRANNUAL_AGGR;
-
 protected Double DVOINEGANNUAL_AGGR;
-
 protected Double DVOINFRANNUAL_AGGR;
-
 protected Double DVOINGTANNUAL_AGGR;
-
 protected Double DVOINMAANNUAL_AGGR;
-
 protected Double DVOINOPANNUAL_AGGR;
-
 protected Double DVOINROANNUAL_AGGR;
-
 protected Double DVOINRRANNUAL_AGGR;
-
 protected Double DVOPRDEBT_SUM;
-
 protected Double DVOPRVAL_SUM;
-
 protected Double DVPAVCUV_AGGR;
-
 protected Double DVPFCURVAL_AGGR;
-
 protected Double DVPFDDV_AGGR;
-
 protected Double DVPINPVAL_AGGR;
-
 protected Double DVPPVAL_AGGR;
-
 protected Double DVSAVAL_AGGR;
-
 protected Double DVSPEN_AGGR;
-
 protected Double DVTOTGIR;
-
 protected Double DVTOTNIR;
-
 protected Double DVVALDBT_AGGR;
-
 protected Double DVVALDCOS_AGGR;
-
 protected Double EINT;
-
 protected Double EINTFIX;
-
 protected Double EINT_I;
-
 protected Double EINT_IFLAG;
-
 protected Double EMSARR;
-
 protected Double EMSPAY;
-
 protected Double EQDRAW;
-
 protected Double EQDRAW_I;
-
 protected Double EQDRAW_IFLAG;
-
 protected Double EQNEW;
-
 protected Double EQOLD;
-
 protected Double EQTYPE1;
-
 protected Double EQTYPE1_I;
-
 protected Double EQTYPE1_IFLAG;
-
 protected Double EQTYPE2;
-
 protected Double EQUITY_YN_I;
-
 protected Double EQUITY_YN_IFLAG;
-
 protected Double EQVALDR;
-
 protected Double EQVALDRB;
-
 protected Double EQWHENM;
-
 protected Double EQWHENY;
-
 protected Double EREC;
-
 protected Double ERECMBY;
-
 protected Double ERECMPD;
-
 protected Double ERVRECBY;
-
 protected Double ERVRECPD;
-
 protected Double ERVREG1;
-
 protected Double ERVREG2;
-
 protected Double ESHARAPP;
-
 protected Double FRREPFIX;
-
 protected Double GCONTVLS;
-
 protected Double HEXT1;
-
 protected Double HEXT2;
-
 protected Double HEXT3;
-
 protected Double HEXT4;
-
 protected Double HFINL_AGGR;
-
 protected Double HFINW_EXCENDW_AGGR;
-
 protected Double HOUSGDSOST_SUM;
-
 protected Double MARRSV2;
-
 protected Double MARRSV3;
-
 protected Double MCHGE;
-
 protected Double MCHGENUM;
-
 protected Double MENDNUM3_I;
-
 protected Double MENDNUM3_IFLAG;
-
 protected Double MENDV5_I;
-
 protected Double MENDV5_IFLAG;
-
 protected Double MENDV7_I;
-
 protected Double MENDV7_IFLAG;
-
 protected Double MENDW2;
-
 protected Double MEXTN;
-
 protected Double MEXTRS1;
-
 protected Double MEXTRS2;
-
 protected Double MEXTRS3;
-
 protected Double MNUMBN;
-
 protected Double MNUMBO;
-
 protected Double MNUMB_I;
-
 protected Double MNUMB_IFLAG;
-
 protected Double MREAS14;
-
 protected Double MREAS24;
-
 protected Double MW2CHK1;
-
 protected Double MW2CHK2;
-
 protected Double MW2CHK3;
-
 protected Double MYIFCH2;
-
 protected Double MYIFCH3;
-
 protected Double NOUNITS;
-
 protected Double NUMDEPCH;
-
 protected Double NUMELCH;
-
 protected Double NUMNOELCH;
-
 protected Double OTHMORT_SUM;
-
 protected Double PHYSBUYLGDST_AGGR;
-
 protected Double PHYSHOUSGDSOST_AGGR;
-
 protected Double PHYSHOUSGDST_AGGR;
-
 protected Double PRREPAY;
-
 protected Double PRREPAY_I;
-
 protected Double PRREPAY_IFLAG;
-
 protected Double PRREPFIX;
-
 protected Double PRREPFIX_I;
-
 protected Double PRREPFIX_IFLAG;
-
 protected Double PRREPPC;
-
 protected Double PRREPPC_I;
-
 protected Double PRREPPC_IFLAG;
-
 protected Double SHARAPP;
-
 protected Double TOTARR_EXCMORT_AGGR;
-
 protected Double TOTBILLARR_AGGR;
-
 protected Double TOTCC_AGGR;
-
 protected Double TOTDVNWFLN_AGGR;
-
 protected Double TOTDVNWILN_AGGR;
-
 protected Double TOTFLNS_AGGR;
-
 protected Double TOTHPARR_AGGR;
-
 protected Double TOTHP_AGGR;
-
 protected Double TOTLNARR_AGGR;
-
 protected Double TOTLNS_AGGR;
-
 protected Double TOTLOS_AGGR;
-
 protected Double TOTMOARR_AGGR;
-
 protected Double TOTMO_AGGR;
-
 protected Double TOTNLOS_AGGR;
-
 protected Double TOTNSLBNK_AGGR;
-
 protected Double TOTNSLC_AGGR;
-
 protected Double TOTOSLBNK_AGGR;
-
 protected Double TOTOSLC_AGGR;
-
 protected Double TOTPEN_AGGR;
-
 protected Double TOTSC_AGGR;
-
 protected Double TOTSLBNK_AGGR;
-
 protected Double TOTSLC_AGGR;
-
 protected Double VOTPN;
-
 protected Double VPERS_I;
-
 protected Double VPERS_IFLAG;
-
 protected final void initBUYLGDST_SUM(String s) {
 if (!s.trim().isEmpty()) {
 BUYLGDST_SUM = new Double(s);
