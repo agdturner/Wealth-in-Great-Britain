@@ -299,11 +299,11 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
                 if (line == null) {
                     read = true;
                 } else {
-                                        /**
-                     * Optimisation using the fact that CASEW3 is the 2987 part
+                    /**
+                     * Optimisation using the fact that CASEW4 is the 3055 part
                      * of the string.
                      */
-                    l = line.substring(getIndex(line, tab, 2987));
+                    l = line.substring(getIndex(line, tab, 3055));
                     ID = Integer.valueOf(l.substring(0, getIndex(l, tab, 2)).split(tab)[1]);
                     if (CASEW4IDs.contains(ID)) {
                         WIGB_Wave4_PERSON_Record rec;
@@ -378,8 +378,6 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
                      */
                     l = line.substring(getIndex(line, tab, 2987));
                     ID = Integer.valueOf(l.substring(0, getIndex(l, tab, 2)).split(tab)[1]);
-                    l = line.substring(0, getIndex(line, tab, 2987));
-                    ID = Integer.valueOf(l.substring(0, line.indexOf(tab)));
                     if (CASEW5IDs.contains(ID)) {
                         WIGB_Wave5_PERSON_Record rec;
                         rec = new WIGB_Wave5_PERSON_Record(line);
