@@ -3,2247 +3,2655 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold;
 public class WIGB_Wave1Or2_HHOLD_Record extends WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record {
-protected Double DVBLDDEBT;
-protected Double DVBLDVAL;
-protected Double DVCACRVAL_SUM;
-protected Double DVCACTV_SUM;
-protected Double DVCAODVAL_SUM;
-protected Double DVCASVV_SUM;
-protected Double DVCAVAL_SUM;
-protected Double DVCISAV_SUM;
-protected Double DVDBRWEALTHVAL_SUM;
-protected Double DVEQHIP;
-protected Double DVEQRUPM;
-protected Double DVFBONDV_SUM;
-protected Double DVFCOLLV_SUM;
-protected Double DVFESHARES_SUM;
-protected Double DVFFASSETS_SUM;
-protected Double DVFGLTFOV_SUM;
-protected Double DVFGLTUKV_SUM;
-protected Double DVFINFLV_SUM;
-protected Double DVFINFVAL_SUM;
-protected Double DVFINFV_SUM;
-protected Double DVFINVOTV_SUM;
-protected Double DVFNSVAL_SUM;
-protected Double DVFSHOSV_SUM;
-protected Double DVFSHUKV_SUM;
-protected Double DVHRPNUM;
-protected Double DVHSEDEBT;
-protected Double DVHSEVAL;
-protected Double DVIISAV_SUM;
-protected Double DVINSV_SUM;
-protected Double DVISAVAL_SUM;
-protected Double DVKISAV_SUM;
-protected Double DVLOSDEBT;
-protected Double DVLOSVAL;
-protected Double DVLUKDEBT;
-protected Double DVLUKVAL;
-protected Double DVOPRDEBT;
-protected Double DVOPRVAL;
-protected Double DVPAVCUV_SUM;
-protected Double DVPFCURVAL_SUM;
-protected Double DVPFDDV_SUM;
-protected Double DVPINPVAL_SUM;
-protected Double DVPPVAL_SUM;
-protected Double DVSAVAL_SUM;
-protected Double DVSPEN_SUM;
-protected Double DVTOTCARVAL;
-protected Double DVTOTMOTBVAL;
-protected Double DVTOTVANVAL;
-protected Double DVVALDBT_SUM;
-protected Double DVVALDCOS_SUM;
-protected Double DVVESTV2_I;
-protected Double DVVESTV2_IFLAG;
-protected Double DVVESTV3_I;
-protected Double DVVESTV3_IFLAG;
-protected Double DVVESTV_I;
-protected Double DVVESTV_IFLAG;
-protected Double DVVOVAL_I;
-protected Double DVVOVAL_IFLAG;
-protected Double DVVPERV_I;
-protected Double DVVPERV_IFLAG;
-protected Double EINTPAY;
-protected Double EOTHIRR;
-protected Double EOTHIVA;
-protected Double EOTHIVB;
-protected Double EQFILTER;
-protected Double EQREAS1;
-protected Double EQREAS2;
-protected Double EQREAS3;
-protected Double EQREAS4;
-protected Double EQREL;
-protected Double EQREL_I;
-protected Double EQREL_IFLAG;
-protected Double EQTYPE;
-protected Double EQTYPE_I;
-protected Double EQTYPE_IFLAG;
-protected Double EQWHEN;
-protected Double EQYES_I;
-protected Double EQYES_IFLAG;
-protected Double ERECM;
-protected Double ERECMB;
-protected Double ERENTAM;
-protected Double ERENTB;
-protected Double ERVREC;
-protected Double ERVRECB;
-protected Double ERVREG;
-protected Double GCONTVLS2;
-protected Double GCPREAM;
-protected Double HFINL_SUM;
-protected Double HFINW_EXCENDW_SUM;
-protected Double HPARR_SUM;
-protected Double HRPDVAGE15;
-protected Double HRPEMPSTAT2;
-protected Double HRPIOUT1;
-protected Double HRPPART;
-protected Double HRPPARTIOUT1;
-protected Double HVALRS1;
-protected Double HVALRS2;
-protected Double HVALRS3;
-protected Double HVALRS4;
-protected Double HVALRS5;
-protected Double LNARR_SUM;
-protected Double MALL;
-protected Double MALLTY;
-protected Double MALLTY3_I;
-protected Double MALLTY3_IFLAG;
-protected Double MALLTY_I;
-protected Double MALLTY_IFLAG;
-protected Double MALL_I;
-protected Double MALL_IFLAG;
-protected Double MARRS;
-protected Double MDIFFPY;
-protected Double MENDNUM;
-protected Double MENDNUM_I;
-protected Double MENDNUM_IFLAG;
-protected Double MENDV;
-protected Double MENDVB;
-protected Double MENDVB5;
-protected Double MENDVB8;
-protected Double MENDV_I;
-protected Double MENDV_IFLAG;
-protected Double MENDW;
-protected Double MENDW3;
-protected Double MENDW_I;
-protected Double MENDW_IFLAG;
-protected Double MENDX;
-protected Double MENDY;
-protected Double MENDY5;
-protected Double MENDY8;
-protected Double MHOWPY;
-protected Double MINC12;
-protected Double MINC7;
-protected Double MINC8;
-protected Double MINC9;
-protected Double MNAME;
-protected Double MNEG;
-protected Double MNEGB;
-protected Double MNEG_I;
-protected Double MNEG_IFLAG;
-protected Double MOARR_SUM;
-protected Double MONAME;
-protected Double MPAYB;
-protected Double MPAYM;
-protected Double MPP;
-protected Double MREAS08;
-protected Double MREAS09;
-protected Double MREAS11;
-protected Double MREAS21;
-protected Double MREAS22;
-protected Double MTYPE;
-protected Double MTYPE_I;
-protected Double MTYPE_IFLAG;
-protected Double MVAL;
-protected Double MVALB;
-protected Double MVAL_I;
-protected Double MVAL_IFLAG;
-protected Double MYLFT;
-protected Double NBABY;
-protected Double NC1015;
-protected Double NC1618;
-protected Double NC5TO9;
-protected Double NCHILD;
-protected Double NCU16;
-protected Double NCUND5;
-protected Double NDEPC;
-protected Double NNDEPC;
-protected Double NUMJOB;
-protected Double NUMSSEX;
-protected Double NVESTV;
-protected Double OTHMORT;
-protected Double TOTBILLARR_SUM;
-protected Double TOTCC_SUM;
-protected Double TOTHP_SUM;
-protected Double TOTLOS_SUM;
-protected Double TOTMO_SUM;
-protected Double TOTPEN_SUM;
-protected Double TOTSC_SUM;
-protected Double T_FLNS_SUM;
-protected Double T_LNS_SUM;
-protected Double T_SLNS_SUM;
-protected Double VESTV;
-protected Double VESTV2;
-protected Double VESTV2_I;
-protected Double VESTV2_IFLAG;
-protected Double VESTV3;
-protected Double VESTV3_I;
-protected Double VESTV3_IFLAG;
-protected Double VESTV_I;
-protected Double VESTV_IFLAG;
-protected Double VESVB;
-protected Double VESVB2;
-protected Double VESVB3;
-protected Double VOTHT;
-protected Double VOTHT_I;
-protected Double VOTHT_IFLAG;
-protected Double VOTYP1_IFLAG;
-protected Double VOTYP2_IFLAG;
-protected Double VOTYP3_IFLAG;
-protected Double VOTYP4_IFLAG;
-protected Double VOTYP5;
-protected Double VOTYP5_IFLAG;
-protected Double VOVLB_I;
-protected Double VOVLB_IFLAG;
-protected Double VTYPE;
-protected Double VTYPE2_IFLAG;
-protected Double VTYPE_I;
+protected double DVBLDDEBT;
+protected double DVBLDVAL;
+protected double DVCACRVAL_SUM;
+protected double DVCACTV_SUM;
+protected double DVCAODVAL_SUM;
+protected double DVCASVV_SUM;
+protected double DVCAVAL_SUM;
+protected double DVCISAV_SUM;
+protected double DVDBRWEALTHVAL_SUM;
+protected double DVEQHIP;
+protected double DVEQRUPM;
+protected double DVFBONDV_SUM;
+protected double DVFCOLLV_SUM;
+protected double DVFESHARES_SUM;
+protected double DVFFASSETS_SUM;
+protected double DVFGLTFOV_SUM;
+protected double DVFGLTUKV_SUM;
+protected double DVFINFLV_SUM;
+protected double DVFINFVAL_SUM;
+protected double DVFINFV_SUM;
+protected double DVFINVOTV_SUM;
+protected double DVFNSVAL_SUM;
+protected double DVFSHOSV_SUM;
+protected double DVFSHUKV_SUM;
+protected double DVHRPNUM;
+protected double DVHSEDEBT;
+protected double DVHSEVAL;
+protected double DVIISAV_SUM;
+protected double DVINSV_SUM;
+protected double DVISAVAL_SUM;
+protected double DVKISAV_SUM;
+protected double DVLOSDEBT;
+protected double DVLOSVAL;
+protected double DVLUKDEBT;
+protected double DVLUKVAL;
+protected double DVOPRDEBT;
+protected double DVOPRVAL;
+protected double DVPAVCUV_SUM;
+protected double DVPFCURVAL_SUM;
+protected double DVPFDDV_SUM;
+protected double DVPINPVAL_SUM;
+protected double DVPPVAL_SUM;
+protected double DVSAVAL_SUM;
+protected double DVSPEN_SUM;
+protected double DVTOTCARVAL;
+protected double DVTOTMOTBVAL;
+protected double DVTOTVANVAL;
+protected double DVVALDBT_SUM;
+protected double DVVALDCOS_SUM;
+protected double DVVESTV2_I;
+protected double DVVESTV2_IFLAG;
+protected double DVVESTV3_I;
+protected double DVVESTV3_IFLAG;
+protected double DVVESTV_I;
+protected double DVVESTV_IFLAG;
+protected double DVVOVAL_I;
+protected double DVVOVAL_IFLAG;
+protected double DVVPERV_I;
+protected double DVVPERV_IFLAG;
+protected double EINTPAY;
+protected double EOTHIRR;
+protected double EOTHIVA;
+protected double EOTHIVB;
+protected double EQFILTER;
+protected double EQREAS1;
+protected double EQREAS2;
+protected double EQREAS3;
+protected double EQREAS4;
+protected double EQREL;
+protected double EQREL_I;
+protected double EQREL_IFLAG;
+protected double EQTYPE;
+protected double EQTYPE_I;
+protected double EQTYPE_IFLAG;
+protected double EQWHEN;
+protected double EQYES_I;
+protected double EQYES_IFLAG;
+protected double ERECM;
+protected double ERECMB;
+protected double ERENTAM;
+protected double ERENTB;
+protected double ERVREC;
+protected double ERVRECB;
+protected double ERVREG;
+protected double GCONTVLS2;
+protected double GCPREAM;
+protected double HFINL_SUM;
+protected double HFINW_EXCENDW_SUM;
+protected double HPARR_SUM;
+protected double HRPDVAGE15;
+protected double HRPEMPSTAT2;
+protected double HRPIOUT1;
+protected double HRPPART;
+protected double HRPPARTIOUT1;
+protected double HVALRS1;
+protected double HVALRS2;
+protected double HVALRS3;
+protected double HVALRS4;
+protected double HVALRS5;
+protected double LNARR_SUM;
+protected double MALL;
+protected double MALLTY;
+protected double MALLTY3_I;
+protected double MALLTY3_IFLAG;
+protected double MALLTY_I;
+protected double MALLTY_IFLAG;
+protected double MALL_I;
+protected double MALL_IFLAG;
+protected double MARRS;
+protected double MDIFFPY;
+protected double MENDNUM;
+protected double MENDNUM_I;
+protected double MENDNUM_IFLAG;
+protected double MENDV;
+protected double MENDVB;
+protected double MENDVB5;
+protected double MENDVB8;
+protected double MENDV_I;
+protected double MENDV_IFLAG;
+protected double MENDW;
+protected double MENDW3;
+protected double MENDW_I;
+protected double MENDW_IFLAG;
+protected double MENDX;
+protected double MENDY;
+protected double MENDY5;
+protected double MENDY8;
+protected double MHOWPY;
+protected double MINC12;
+protected double MINC7;
+protected double MINC8;
+protected double MINC9;
+protected double MNAME;
+protected double MNEG;
+protected double MNEGB;
+protected double MNEG_I;
+protected double MNEG_IFLAG;
+protected double MOARR_SUM;
+protected double MONAME;
+protected double MPAYB;
+protected double MPAYM;
+protected double MPP;
+protected double MREAS08;
+protected double MREAS09;
+protected double MREAS11;
+protected double MREAS21;
+protected double MREAS22;
+protected double MTYPE;
+protected double MTYPE_I;
+protected double MTYPE_IFLAG;
+protected double MVAL;
+protected double MVALB;
+protected double MVAL_I;
+protected double MVAL_IFLAG;
+protected double MYLFT;
+protected double NBABY;
+protected double NC1015;
+protected double NC1618;
+protected double NC5TO9;
+protected double NCHILD;
+protected double NCU16;
+protected double NCUND5;
+protected double NDEPC;
+protected double NNDEPC;
+protected double NUMJOB;
+protected double NUMSSEX;
+protected double NVESTV;
+protected double OTHMORT;
+protected double TOTBILLARR_SUM;
+protected double TOTCC_SUM;
+protected double TOTHP_SUM;
+protected double TOTLOS_SUM;
+protected double TOTMO_SUM;
+protected double TOTPEN_SUM;
+protected double TOTSC_SUM;
+protected double T_FLNS_SUM;
+protected double T_LNS_SUM;
+protected double T_SLNS_SUM;
+protected double VESTV;
+protected double VESTV2;
+protected double VESTV2_I;
+protected double VESTV2_IFLAG;
+protected double VESTV3;
+protected double VESTV3_I;
+protected double VESTV3_IFLAG;
+protected double VESTV_I;
+protected double VESTV_IFLAG;
+protected double VESVB;
+protected double VESVB2;
+protected double VESVB3;
+protected double VOTHT;
+protected double VOTHT_I;
+protected double VOTHT_IFLAG;
+protected double VOTYP1_IFLAG;
+protected double VOTYP2_IFLAG;
+protected double VOTYP3_IFLAG;
+protected double VOTYP4_IFLAG;
+protected double VOTYP5;
+protected double VOTYP5_IFLAG;
+protected double VOVLB_I;
+protected double VOVLB_IFLAG;
+protected double VTYPE;
+protected double VTYPE2_IFLAG;
+protected double VTYPE_I;
 protected final void initDVBLDDEBT(String s) {
 if (!s.trim().isEmpty()) {
 DVBLDDEBT = new Double(s);
+} else {
+DVBLDDEBT = Double.NaN;
 }
 }
 
 protected final void initDVBLDVAL(String s) {
 if (!s.trim().isEmpty()) {
 DVBLDVAL = new Double(s);
+} else {
+DVBLDVAL = Double.NaN;
 }
 }
 
 protected final void initDVCACRVAL_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVCACRVAL_SUM = new Double(s);
+} else {
+DVCACRVAL_SUM = Double.NaN;
 }
 }
 
 protected final void initDVCACTV_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVCACTV_SUM = new Double(s);
+} else {
+DVCACTV_SUM = Double.NaN;
 }
 }
 
 protected final void initDVCAODVAL_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVCAODVAL_SUM = new Double(s);
+} else {
+DVCAODVAL_SUM = Double.NaN;
 }
 }
 
 protected final void initDVCASVV_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVCASVV_SUM = new Double(s);
+} else {
+DVCASVV_SUM = Double.NaN;
 }
 }
 
 protected final void initDVCAVAL_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVCAVAL_SUM = new Double(s);
+} else {
+DVCAVAL_SUM = Double.NaN;
 }
 }
 
 protected final void initDVCISAV_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVCISAV_SUM = new Double(s);
+} else {
+DVCISAV_SUM = Double.NaN;
 }
 }
 
 protected final void initDVDBRWEALTHVAL_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVDBRWEALTHVAL_SUM = new Double(s);
+} else {
+DVDBRWEALTHVAL_SUM = Double.NaN;
 }
 }
 
 protected final void initDVEQHIP(String s) {
 if (!s.trim().isEmpty()) {
 DVEQHIP = new Double(s);
+} else {
+DVEQHIP = Double.NaN;
 }
 }
 
 protected final void initDVEQRUPM(String s) {
 if (!s.trim().isEmpty()) {
 DVEQRUPM = new Double(s);
+} else {
+DVEQRUPM = Double.NaN;
 }
 }
 
 protected final void initDVFBONDV_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVFBONDV_SUM = new Double(s);
+} else {
+DVFBONDV_SUM = Double.NaN;
 }
 }
 
 protected final void initDVFCOLLV_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVFCOLLV_SUM = new Double(s);
+} else {
+DVFCOLLV_SUM = Double.NaN;
 }
 }
 
 protected final void initDVFESHARES_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVFESHARES_SUM = new Double(s);
+} else {
+DVFESHARES_SUM = Double.NaN;
 }
 }
 
 protected final void initDVFFASSETS_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVFFASSETS_SUM = new Double(s);
+} else {
+DVFFASSETS_SUM = Double.NaN;
 }
 }
 
 protected final void initDVFGLTFOV_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVFGLTFOV_SUM = new Double(s);
+} else {
+DVFGLTFOV_SUM = Double.NaN;
 }
 }
 
 protected final void initDVFGLTUKV_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVFGLTUKV_SUM = new Double(s);
+} else {
+DVFGLTUKV_SUM = Double.NaN;
 }
 }
 
 protected final void initDVFINFLV_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVFINFLV_SUM = new Double(s);
+} else {
+DVFINFLV_SUM = Double.NaN;
 }
 }
 
 protected final void initDVFINFVAL_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVFINFVAL_SUM = new Double(s);
+} else {
+DVFINFVAL_SUM = Double.NaN;
 }
 }
 
 protected final void initDVFINFV_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVFINFV_SUM = new Double(s);
+} else {
+DVFINFV_SUM = Double.NaN;
 }
 }
 
 protected final void initDVFINVOTV_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVFINVOTV_SUM = new Double(s);
+} else {
+DVFINVOTV_SUM = Double.NaN;
 }
 }
 
 protected final void initDVFNSVAL_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVFNSVAL_SUM = new Double(s);
+} else {
+DVFNSVAL_SUM = Double.NaN;
 }
 }
 
 protected final void initDVFSHOSV_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVFSHOSV_SUM = new Double(s);
+} else {
+DVFSHOSV_SUM = Double.NaN;
 }
 }
 
 protected final void initDVFSHUKV_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVFSHUKV_SUM = new Double(s);
+} else {
+DVFSHUKV_SUM = Double.NaN;
 }
 }
 
 protected final void initDVHRPNUM(String s) {
 if (!s.trim().isEmpty()) {
 DVHRPNUM = new Double(s);
+} else {
+DVHRPNUM = Double.NaN;
 }
 }
 
 protected final void initDVHSEDEBT(String s) {
 if (!s.trim().isEmpty()) {
 DVHSEDEBT = new Double(s);
+} else {
+DVHSEDEBT = Double.NaN;
 }
 }
 
 protected final void initDVHSEVAL(String s) {
 if (!s.trim().isEmpty()) {
 DVHSEVAL = new Double(s);
+} else {
+DVHSEVAL = Double.NaN;
 }
 }
 
 protected final void initDVIISAV_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVIISAV_SUM = new Double(s);
+} else {
+DVIISAV_SUM = Double.NaN;
 }
 }
 
 protected final void initDVINSV_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVINSV_SUM = new Double(s);
+} else {
+DVINSV_SUM = Double.NaN;
 }
 }
 
 protected final void initDVISAVAL_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVISAVAL_SUM = new Double(s);
+} else {
+DVISAVAL_SUM = Double.NaN;
 }
 }
 
 protected final void initDVKISAV_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVKISAV_SUM = new Double(s);
+} else {
+DVKISAV_SUM = Double.NaN;
 }
 }
 
 protected final void initDVLOSDEBT(String s) {
 if (!s.trim().isEmpty()) {
 DVLOSDEBT = new Double(s);
+} else {
+DVLOSDEBT = Double.NaN;
 }
 }
 
 protected final void initDVLOSVAL(String s) {
 if (!s.trim().isEmpty()) {
 DVLOSVAL = new Double(s);
+} else {
+DVLOSVAL = Double.NaN;
 }
 }
 
 protected final void initDVLUKDEBT(String s) {
 if (!s.trim().isEmpty()) {
 DVLUKDEBT = new Double(s);
+} else {
+DVLUKDEBT = Double.NaN;
 }
 }
 
 protected final void initDVLUKVAL(String s) {
 if (!s.trim().isEmpty()) {
 DVLUKVAL = new Double(s);
+} else {
+DVLUKVAL = Double.NaN;
 }
 }
 
 protected final void initDVOPRDEBT(String s) {
 if (!s.trim().isEmpty()) {
 DVOPRDEBT = new Double(s);
+} else {
+DVOPRDEBT = Double.NaN;
 }
 }
 
 protected final void initDVOPRVAL(String s) {
 if (!s.trim().isEmpty()) {
 DVOPRVAL = new Double(s);
+} else {
+DVOPRVAL = Double.NaN;
 }
 }
 
 protected final void initDVPAVCUV_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVPAVCUV_SUM = new Double(s);
+} else {
+DVPAVCUV_SUM = Double.NaN;
 }
 }
 
 protected final void initDVPFCURVAL_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVPFCURVAL_SUM = new Double(s);
+} else {
+DVPFCURVAL_SUM = Double.NaN;
 }
 }
 
 protected final void initDVPFDDV_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVPFDDV_SUM = new Double(s);
+} else {
+DVPFDDV_SUM = Double.NaN;
 }
 }
 
 protected final void initDVPINPVAL_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVPINPVAL_SUM = new Double(s);
+} else {
+DVPINPVAL_SUM = Double.NaN;
 }
 }
 
 protected final void initDVPPVAL_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVPPVAL_SUM = new Double(s);
+} else {
+DVPPVAL_SUM = Double.NaN;
 }
 }
 
 protected final void initDVSAVAL_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVSAVAL_SUM = new Double(s);
+} else {
+DVSAVAL_SUM = Double.NaN;
 }
 }
 
 protected final void initDVSPEN_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVSPEN_SUM = new Double(s);
+} else {
+DVSPEN_SUM = Double.NaN;
 }
 }
 
 protected final void initDVTOTCARVAL(String s) {
 if (!s.trim().isEmpty()) {
 DVTOTCARVAL = new Double(s);
+} else {
+DVTOTCARVAL = Double.NaN;
 }
 }
 
 protected final void initDVTOTMOTBVAL(String s) {
 if (!s.trim().isEmpty()) {
 DVTOTMOTBVAL = new Double(s);
+} else {
+DVTOTMOTBVAL = Double.NaN;
 }
 }
 
 protected final void initDVTOTVANVAL(String s) {
 if (!s.trim().isEmpty()) {
 DVTOTVANVAL = new Double(s);
+} else {
+DVTOTVANVAL = Double.NaN;
 }
 }
 
 protected final void initDVVALDBT_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVVALDBT_SUM = new Double(s);
+} else {
+DVVALDBT_SUM = Double.NaN;
 }
 }
 
 protected final void initDVVALDCOS_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVVALDCOS_SUM = new Double(s);
+} else {
+DVVALDCOS_SUM = Double.NaN;
 }
 }
 
 protected final void initDVVESTV2_I(String s) {
 if (!s.trim().isEmpty()) {
 DVVESTV2_I = new Double(s);
+} else {
+DVVESTV2_I = Double.NaN;
 }
 }
 
 protected final void initDVVESTV2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 DVVESTV2_IFLAG = new Double(s);
+} else {
+DVVESTV2_IFLAG = Double.NaN;
 }
 }
 
 protected final void initDVVESTV3_I(String s) {
 if (!s.trim().isEmpty()) {
 DVVESTV3_I = new Double(s);
+} else {
+DVVESTV3_I = Double.NaN;
 }
 }
 
 protected final void initDVVESTV3_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 DVVESTV3_IFLAG = new Double(s);
+} else {
+DVVESTV3_IFLAG = Double.NaN;
 }
 }
 
 protected final void initDVVESTV_I(String s) {
 if (!s.trim().isEmpty()) {
 DVVESTV_I = new Double(s);
+} else {
+DVVESTV_I = Double.NaN;
 }
 }
 
 protected final void initDVVESTV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 DVVESTV_IFLAG = new Double(s);
+} else {
+DVVESTV_IFLAG = Double.NaN;
 }
 }
 
 protected final void initDVVOVAL_I(String s) {
 if (!s.trim().isEmpty()) {
 DVVOVAL_I = new Double(s);
+} else {
+DVVOVAL_I = Double.NaN;
 }
 }
 
 protected final void initDVVOVAL_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 DVVOVAL_IFLAG = new Double(s);
+} else {
+DVVOVAL_IFLAG = Double.NaN;
 }
 }
 
 protected final void initDVVPERV_I(String s) {
 if (!s.trim().isEmpty()) {
 DVVPERV_I = new Double(s);
+} else {
+DVVPERV_I = Double.NaN;
 }
 }
 
 protected final void initDVVPERV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 DVVPERV_IFLAG = new Double(s);
+} else {
+DVVPERV_IFLAG = Double.NaN;
 }
 }
 
 protected final void initEINTPAY(String s) {
 if (!s.trim().isEmpty()) {
 EINTPAY = new Double(s);
+} else {
+EINTPAY = Double.NaN;
 }
 }
 
 protected final void initEOTHIRR(String s) {
 if (!s.trim().isEmpty()) {
 EOTHIRR = new Double(s);
+} else {
+EOTHIRR = Double.NaN;
 }
 }
 
 protected final void initEOTHIVA(String s) {
 if (!s.trim().isEmpty()) {
 EOTHIVA = new Double(s);
+} else {
+EOTHIVA = Double.NaN;
 }
 }
 
 protected final void initEOTHIVB(String s) {
 if (!s.trim().isEmpty()) {
 EOTHIVB = new Double(s);
+} else {
+EOTHIVB = Double.NaN;
 }
 }
 
 protected final void initEQFILTER(String s) {
 if (!s.trim().isEmpty()) {
 EQFILTER = new Double(s);
+} else {
+EQFILTER = Double.NaN;
 }
 }
 
 protected final void initEQREAS1(String s) {
 if (!s.trim().isEmpty()) {
 EQREAS1 = new Double(s);
+} else {
+EQREAS1 = Double.NaN;
 }
 }
 
 protected final void initEQREAS2(String s) {
 if (!s.trim().isEmpty()) {
 EQREAS2 = new Double(s);
+} else {
+EQREAS2 = Double.NaN;
 }
 }
 
 protected final void initEQREAS3(String s) {
 if (!s.trim().isEmpty()) {
 EQREAS3 = new Double(s);
+} else {
+EQREAS3 = Double.NaN;
 }
 }
 
 protected final void initEQREAS4(String s) {
 if (!s.trim().isEmpty()) {
 EQREAS4 = new Double(s);
+} else {
+EQREAS4 = Double.NaN;
 }
 }
 
 protected final void initEQREL(String s) {
 if (!s.trim().isEmpty()) {
 EQREL = new Double(s);
+} else {
+EQREL = Double.NaN;
 }
 }
 
 protected final void initEQREL_I(String s) {
 if (!s.trim().isEmpty()) {
 EQREL_I = new Double(s);
+} else {
+EQREL_I = Double.NaN;
 }
 }
 
 protected final void initEQREL_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 EQREL_IFLAG = new Double(s);
+} else {
+EQREL_IFLAG = Double.NaN;
 }
 }
 
 protected final void initEQTYPE(String s) {
 if (!s.trim().isEmpty()) {
 EQTYPE = new Double(s);
+} else {
+EQTYPE = Double.NaN;
 }
 }
 
 protected final void initEQTYPE_I(String s) {
 if (!s.trim().isEmpty()) {
 EQTYPE_I = new Double(s);
+} else {
+EQTYPE_I = Double.NaN;
 }
 }
 
 protected final void initEQTYPE_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 EQTYPE_IFLAG = new Double(s);
+} else {
+EQTYPE_IFLAG = Double.NaN;
 }
 }
 
 protected final void initEQWHEN(String s) {
 if (!s.trim().isEmpty()) {
 EQWHEN = new Double(s);
+} else {
+EQWHEN = Double.NaN;
 }
 }
 
 protected final void initEQYES_I(String s) {
 if (!s.trim().isEmpty()) {
 EQYES_I = new Double(s);
+} else {
+EQYES_I = Double.NaN;
 }
 }
 
 protected final void initEQYES_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 EQYES_IFLAG = new Double(s);
+} else {
+EQYES_IFLAG = Double.NaN;
 }
 }
 
 protected final void initERECM(String s) {
 if (!s.trim().isEmpty()) {
 ERECM = new Double(s);
+} else {
+ERECM = Double.NaN;
 }
 }
 
 protected final void initERECMB(String s) {
 if (!s.trim().isEmpty()) {
 ERECMB = new Double(s);
+} else {
+ERECMB = Double.NaN;
 }
 }
 
 protected final void initERENTAM(String s) {
 if (!s.trim().isEmpty()) {
 ERENTAM = new Double(s);
+} else {
+ERENTAM = Double.NaN;
 }
 }
 
 protected final void initERENTB(String s) {
 if (!s.trim().isEmpty()) {
 ERENTB = new Double(s);
+} else {
+ERENTB = Double.NaN;
 }
 }
 
 protected final void initERVREC(String s) {
 if (!s.trim().isEmpty()) {
 ERVREC = new Double(s);
+} else {
+ERVREC = Double.NaN;
 }
 }
 
 protected final void initERVRECB(String s) {
 if (!s.trim().isEmpty()) {
 ERVRECB = new Double(s);
+} else {
+ERVRECB = Double.NaN;
 }
 }
 
 protected final void initERVREG(String s) {
 if (!s.trim().isEmpty()) {
 ERVREG = new Double(s);
+} else {
+ERVREG = Double.NaN;
 }
 }
 
 protected final void initGCONTVLS2(String s) {
 if (!s.trim().isEmpty()) {
 GCONTVLS2 = new Double(s);
+} else {
+GCONTVLS2 = Double.NaN;
 }
 }
 
 protected final void initGCPREAM(String s) {
 if (!s.trim().isEmpty()) {
 GCPREAM = new Double(s);
+} else {
+GCPREAM = Double.NaN;
 }
 }
 
 protected final void initHFINL_SUM(String s) {
 if (!s.trim().isEmpty()) {
 HFINL_SUM = new Double(s);
+} else {
+HFINL_SUM = Double.NaN;
 }
 }
 
 protected final void initHFINW_EXCENDW_SUM(String s) {
 if (!s.trim().isEmpty()) {
 HFINW_EXCENDW_SUM = new Double(s);
+} else {
+HFINW_EXCENDW_SUM = Double.NaN;
 }
 }
 
 protected final void initHPARR_SUM(String s) {
 if (!s.trim().isEmpty()) {
 HPARR_SUM = new Double(s);
+} else {
+HPARR_SUM = Double.NaN;
 }
 }
 
 protected final void initHRPDVAGE15(String s) {
 if (!s.trim().isEmpty()) {
 HRPDVAGE15 = new Double(s);
+} else {
+HRPDVAGE15 = Double.NaN;
 }
 }
 
 protected final void initHRPEMPSTAT2(String s) {
 if (!s.trim().isEmpty()) {
 HRPEMPSTAT2 = new Double(s);
+} else {
+HRPEMPSTAT2 = Double.NaN;
 }
 }
 
 protected final void initHRPIOUT1(String s) {
 if (!s.trim().isEmpty()) {
 HRPIOUT1 = new Double(s);
+} else {
+HRPIOUT1 = Double.NaN;
 }
 }
 
 protected final void initHRPPART(String s) {
 if (!s.trim().isEmpty()) {
 HRPPART = new Double(s);
+} else {
+HRPPART = Double.NaN;
 }
 }
 
 protected final void initHRPPARTIOUT1(String s) {
 if (!s.trim().isEmpty()) {
 HRPPARTIOUT1 = new Double(s);
+} else {
+HRPPARTIOUT1 = Double.NaN;
 }
 }
 
 protected final void initHVALRS1(String s) {
 if (!s.trim().isEmpty()) {
 HVALRS1 = new Double(s);
+} else {
+HVALRS1 = Double.NaN;
 }
 }
 
 protected final void initHVALRS2(String s) {
 if (!s.trim().isEmpty()) {
 HVALRS2 = new Double(s);
+} else {
+HVALRS2 = Double.NaN;
 }
 }
 
 protected final void initHVALRS3(String s) {
 if (!s.trim().isEmpty()) {
 HVALRS3 = new Double(s);
+} else {
+HVALRS3 = Double.NaN;
 }
 }
 
 protected final void initHVALRS4(String s) {
 if (!s.trim().isEmpty()) {
 HVALRS4 = new Double(s);
+} else {
+HVALRS4 = Double.NaN;
 }
 }
 
 protected final void initHVALRS5(String s) {
 if (!s.trim().isEmpty()) {
 HVALRS5 = new Double(s);
+} else {
+HVALRS5 = Double.NaN;
 }
 }
 
 protected final void initLNARR_SUM(String s) {
 if (!s.trim().isEmpty()) {
 LNARR_SUM = new Double(s);
+} else {
+LNARR_SUM = Double.NaN;
 }
 }
 
 protected final void initMALL(String s) {
 if (!s.trim().isEmpty()) {
 MALL = new Double(s);
+} else {
+MALL = Double.NaN;
 }
 }
 
 protected final void initMALLTY(String s) {
 if (!s.trim().isEmpty()) {
 MALLTY = new Double(s);
+} else {
+MALLTY = Double.NaN;
 }
 }
 
 protected final void initMALLTY3_I(String s) {
 if (!s.trim().isEmpty()) {
 MALLTY3_I = new Double(s);
+} else {
+MALLTY3_I = Double.NaN;
 }
 }
 
 protected final void initMALLTY3_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 MALLTY3_IFLAG = new Double(s);
+} else {
+MALLTY3_IFLAG = Double.NaN;
 }
 }
 
 protected final void initMALLTY_I(String s) {
 if (!s.trim().isEmpty()) {
 MALLTY_I = new Double(s);
+} else {
+MALLTY_I = Double.NaN;
 }
 }
 
 protected final void initMALLTY_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 MALLTY_IFLAG = new Double(s);
+} else {
+MALLTY_IFLAG = Double.NaN;
 }
 }
 
 protected final void initMALL_I(String s) {
 if (!s.trim().isEmpty()) {
 MALL_I = new Double(s);
+} else {
+MALL_I = Double.NaN;
 }
 }
 
 protected final void initMALL_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 MALL_IFLAG = new Double(s);
+} else {
+MALL_IFLAG = Double.NaN;
 }
 }
 
 protected final void initMARRS(String s) {
 if (!s.trim().isEmpty()) {
 MARRS = new Double(s);
+} else {
+MARRS = Double.NaN;
 }
 }
 
 protected final void initMDIFFPY(String s) {
 if (!s.trim().isEmpty()) {
 MDIFFPY = new Double(s);
+} else {
+MDIFFPY = Double.NaN;
 }
 }
 
 protected final void initMENDNUM(String s) {
 if (!s.trim().isEmpty()) {
 MENDNUM = new Double(s);
+} else {
+MENDNUM = Double.NaN;
 }
 }
 
 protected final void initMENDNUM_I(String s) {
 if (!s.trim().isEmpty()) {
 MENDNUM_I = new Double(s);
+} else {
+MENDNUM_I = Double.NaN;
 }
 }
 
 protected final void initMENDNUM_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 MENDNUM_IFLAG = new Double(s);
+} else {
+MENDNUM_IFLAG = Double.NaN;
 }
 }
 
 protected final void initMENDV(String s) {
 if (!s.trim().isEmpty()) {
 MENDV = new Double(s);
+} else {
+MENDV = Double.NaN;
 }
 }
 
 protected final void initMENDVB(String s) {
 if (!s.trim().isEmpty()) {
 MENDVB = new Double(s);
+} else {
+MENDVB = Double.NaN;
 }
 }
 
 protected final void initMENDVB5(String s) {
 if (!s.trim().isEmpty()) {
 MENDVB5 = new Double(s);
+} else {
+MENDVB5 = Double.NaN;
 }
 }
 
 protected final void initMENDVB8(String s) {
 if (!s.trim().isEmpty()) {
 MENDVB8 = new Double(s);
+} else {
+MENDVB8 = Double.NaN;
 }
 }
 
 protected final void initMENDV_I(String s) {
 if (!s.trim().isEmpty()) {
 MENDV_I = new Double(s);
+} else {
+MENDV_I = Double.NaN;
 }
 }
 
 protected final void initMENDV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 MENDV_IFLAG = new Double(s);
+} else {
+MENDV_IFLAG = Double.NaN;
 }
 }
 
 protected final void initMENDW(String s) {
 if (!s.trim().isEmpty()) {
 MENDW = new Double(s);
+} else {
+MENDW = Double.NaN;
 }
 }
 
 protected final void initMENDW3(String s) {
 if (!s.trim().isEmpty()) {
 MENDW3 = new Double(s);
+} else {
+MENDW3 = Double.NaN;
 }
 }
 
 protected final void initMENDW_I(String s) {
 if (!s.trim().isEmpty()) {
 MENDW_I = new Double(s);
+} else {
+MENDW_I = Double.NaN;
 }
 }
 
 protected final void initMENDW_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 MENDW_IFLAG = new Double(s);
+} else {
+MENDW_IFLAG = Double.NaN;
 }
 }
 
 protected final void initMENDX(String s) {
 if (!s.trim().isEmpty()) {
 MENDX = new Double(s);
+} else {
+MENDX = Double.NaN;
 }
 }
 
 protected final void initMENDY(String s) {
 if (!s.trim().isEmpty()) {
 MENDY = new Double(s);
+} else {
+MENDY = Double.NaN;
 }
 }
 
 protected final void initMENDY5(String s) {
 if (!s.trim().isEmpty()) {
 MENDY5 = new Double(s);
+} else {
+MENDY5 = Double.NaN;
 }
 }
 
 protected final void initMENDY8(String s) {
 if (!s.trim().isEmpty()) {
 MENDY8 = new Double(s);
+} else {
+MENDY8 = Double.NaN;
 }
 }
 
 protected final void initMHOWPY(String s) {
 if (!s.trim().isEmpty()) {
 MHOWPY = new Double(s);
+} else {
+MHOWPY = Double.NaN;
 }
 }
 
 protected final void initMINC12(String s) {
 if (!s.trim().isEmpty()) {
 MINC12 = new Double(s);
+} else {
+MINC12 = Double.NaN;
 }
 }
 
 protected final void initMINC7(String s) {
 if (!s.trim().isEmpty()) {
 MINC7 = new Double(s);
+} else {
+MINC7 = Double.NaN;
 }
 }
 
 protected final void initMINC8(String s) {
 if (!s.trim().isEmpty()) {
 MINC8 = new Double(s);
+} else {
+MINC8 = Double.NaN;
 }
 }
 
 protected final void initMINC9(String s) {
 if (!s.trim().isEmpty()) {
 MINC9 = new Double(s);
+} else {
+MINC9 = Double.NaN;
 }
 }
 
 protected final void initMNAME(String s) {
 if (!s.trim().isEmpty()) {
 MNAME = new Double(s);
+} else {
+MNAME = Double.NaN;
 }
 }
 
 protected final void initMNEG(String s) {
 if (!s.trim().isEmpty()) {
 MNEG = new Double(s);
+} else {
+MNEG = Double.NaN;
 }
 }
 
 protected final void initMNEGB(String s) {
 if (!s.trim().isEmpty()) {
 MNEGB = new Double(s);
+} else {
+MNEGB = Double.NaN;
 }
 }
 
 protected final void initMNEG_I(String s) {
 if (!s.trim().isEmpty()) {
 MNEG_I = new Double(s);
+} else {
+MNEG_I = Double.NaN;
 }
 }
 
 protected final void initMNEG_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 MNEG_IFLAG = new Double(s);
+} else {
+MNEG_IFLAG = Double.NaN;
 }
 }
 
 protected final void initMOARR_SUM(String s) {
 if (!s.trim().isEmpty()) {
 MOARR_SUM = new Double(s);
+} else {
+MOARR_SUM = Double.NaN;
 }
 }
 
 protected final void initMONAME(String s) {
 if (!s.trim().isEmpty()) {
 MONAME = new Double(s);
+} else {
+MONAME = Double.NaN;
 }
 }
 
 protected final void initMPAYB(String s) {
 if (!s.trim().isEmpty()) {
 MPAYB = new Double(s);
+} else {
+MPAYB = Double.NaN;
 }
 }
 
 protected final void initMPAYM(String s) {
 if (!s.trim().isEmpty()) {
 MPAYM = new Double(s);
+} else {
+MPAYM = Double.NaN;
 }
 }
 
 protected final void initMPP(String s) {
 if (!s.trim().isEmpty()) {
 MPP = new Double(s);
+} else {
+MPP = Double.NaN;
 }
 }
 
 protected final void initMREAS08(String s) {
 if (!s.trim().isEmpty()) {
 MREAS08 = new Double(s);
+} else {
+MREAS08 = Double.NaN;
 }
 }
 
 protected final void initMREAS09(String s) {
 if (!s.trim().isEmpty()) {
 MREAS09 = new Double(s);
+} else {
+MREAS09 = Double.NaN;
 }
 }
 
 protected final void initMREAS11(String s) {
 if (!s.trim().isEmpty()) {
 MREAS11 = new Double(s);
+} else {
+MREAS11 = Double.NaN;
 }
 }
 
 protected final void initMREAS21(String s) {
 if (!s.trim().isEmpty()) {
 MREAS21 = new Double(s);
+} else {
+MREAS21 = Double.NaN;
 }
 }
 
 protected final void initMREAS22(String s) {
 if (!s.trim().isEmpty()) {
 MREAS22 = new Double(s);
+} else {
+MREAS22 = Double.NaN;
 }
 }
 
 protected final void initMTYPE(String s) {
 if (!s.trim().isEmpty()) {
 MTYPE = new Double(s);
+} else {
+MTYPE = Double.NaN;
 }
 }
 
 protected final void initMTYPE_I(String s) {
 if (!s.trim().isEmpty()) {
 MTYPE_I = new Double(s);
+} else {
+MTYPE_I = Double.NaN;
 }
 }
 
 protected final void initMTYPE_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 MTYPE_IFLAG = new Double(s);
+} else {
+MTYPE_IFLAG = Double.NaN;
 }
 }
 
 protected final void initMVAL(String s) {
 if (!s.trim().isEmpty()) {
 MVAL = new Double(s);
+} else {
+MVAL = Double.NaN;
 }
 }
 
 protected final void initMVALB(String s) {
 if (!s.trim().isEmpty()) {
 MVALB = new Double(s);
+} else {
+MVALB = Double.NaN;
 }
 }
 
 protected final void initMVAL_I(String s) {
 if (!s.trim().isEmpty()) {
 MVAL_I = new Double(s);
+} else {
+MVAL_I = Double.NaN;
 }
 }
 
 protected final void initMVAL_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 MVAL_IFLAG = new Double(s);
+} else {
+MVAL_IFLAG = Double.NaN;
 }
 }
 
 protected final void initMYLFT(String s) {
 if (!s.trim().isEmpty()) {
 MYLFT = new Double(s);
+} else {
+MYLFT = Double.NaN;
 }
 }
 
 protected final void initNBABY(String s) {
 if (!s.trim().isEmpty()) {
 NBABY = new Double(s);
+} else {
+NBABY = Double.NaN;
 }
 }
 
 protected final void initNC1015(String s) {
 if (!s.trim().isEmpty()) {
 NC1015 = new Double(s);
+} else {
+NC1015 = Double.NaN;
 }
 }
 
 protected final void initNC1618(String s) {
 if (!s.trim().isEmpty()) {
 NC1618 = new Double(s);
+} else {
+NC1618 = Double.NaN;
 }
 }
 
 protected final void initNC5TO9(String s) {
 if (!s.trim().isEmpty()) {
 NC5TO9 = new Double(s);
+} else {
+NC5TO9 = Double.NaN;
 }
 }
 
 protected final void initNCHILD(String s) {
 if (!s.trim().isEmpty()) {
 NCHILD = new Double(s);
+} else {
+NCHILD = Double.NaN;
 }
 }
 
 protected final void initNCU16(String s) {
 if (!s.trim().isEmpty()) {
 NCU16 = new Double(s);
+} else {
+NCU16 = Double.NaN;
 }
 }
 
 protected final void initNCUND5(String s) {
 if (!s.trim().isEmpty()) {
 NCUND5 = new Double(s);
+} else {
+NCUND5 = Double.NaN;
 }
 }
 
 protected final void initNDEPC(String s) {
 if (!s.trim().isEmpty()) {
 NDEPC = new Double(s);
+} else {
+NDEPC = Double.NaN;
 }
 }
 
 protected final void initNNDEPC(String s) {
 if (!s.trim().isEmpty()) {
 NNDEPC = new Double(s);
+} else {
+NNDEPC = Double.NaN;
 }
 }
 
 protected final void initNUMJOB(String s) {
 if (!s.trim().isEmpty()) {
 NUMJOB = new Double(s);
+} else {
+NUMJOB = Double.NaN;
 }
 }
 
 protected final void initNUMSSEX(String s) {
 if (!s.trim().isEmpty()) {
 NUMSSEX = new Double(s);
+} else {
+NUMSSEX = Double.NaN;
 }
 }
 
 protected final void initNVESTV(String s) {
 if (!s.trim().isEmpty()) {
 NVESTV = new Double(s);
+} else {
+NVESTV = Double.NaN;
 }
 }
 
 protected final void initOTHMORT(String s) {
 if (!s.trim().isEmpty()) {
 OTHMORT = new Double(s);
+} else {
+OTHMORT = Double.NaN;
 }
 }
 
 protected final void initTOTBILLARR_SUM(String s) {
 if (!s.trim().isEmpty()) {
 TOTBILLARR_SUM = new Double(s);
+} else {
+TOTBILLARR_SUM = Double.NaN;
 }
 }
 
 protected final void initTOTCC_SUM(String s) {
 if (!s.trim().isEmpty()) {
 TOTCC_SUM = new Double(s);
+} else {
+TOTCC_SUM = Double.NaN;
 }
 }
 
 protected final void initTOTHP_SUM(String s) {
 if (!s.trim().isEmpty()) {
 TOTHP_SUM = new Double(s);
+} else {
+TOTHP_SUM = Double.NaN;
 }
 }
 
 protected final void initTOTLOS_SUM(String s) {
 if (!s.trim().isEmpty()) {
 TOTLOS_SUM = new Double(s);
+} else {
+TOTLOS_SUM = Double.NaN;
 }
 }
 
 protected final void initTOTMO_SUM(String s) {
 if (!s.trim().isEmpty()) {
 TOTMO_SUM = new Double(s);
+} else {
+TOTMO_SUM = Double.NaN;
 }
 }
 
 protected final void initTOTPEN_SUM(String s) {
 if (!s.trim().isEmpty()) {
 TOTPEN_SUM = new Double(s);
+} else {
+TOTPEN_SUM = Double.NaN;
 }
 }
 
 protected final void initTOTSC_SUM(String s) {
 if (!s.trim().isEmpty()) {
 TOTSC_SUM = new Double(s);
+} else {
+TOTSC_SUM = Double.NaN;
 }
 }
 
 protected final void initT_FLNS_SUM(String s) {
 if (!s.trim().isEmpty()) {
 T_FLNS_SUM = new Double(s);
+} else {
+T_FLNS_SUM = Double.NaN;
 }
 }
 
 protected final void initT_LNS_SUM(String s) {
 if (!s.trim().isEmpty()) {
 T_LNS_SUM = new Double(s);
+} else {
+T_LNS_SUM = Double.NaN;
 }
 }
 
 protected final void initT_SLNS_SUM(String s) {
 if (!s.trim().isEmpty()) {
 T_SLNS_SUM = new Double(s);
+} else {
+T_SLNS_SUM = Double.NaN;
 }
 }
 
 protected final void initVESTV(String s) {
 if (!s.trim().isEmpty()) {
 VESTV = new Double(s);
+} else {
+VESTV = Double.NaN;
 }
 }
 
 protected final void initVESTV2(String s) {
 if (!s.trim().isEmpty()) {
 VESTV2 = new Double(s);
+} else {
+VESTV2 = Double.NaN;
 }
 }
 
 protected final void initVESTV2_I(String s) {
 if (!s.trim().isEmpty()) {
 VESTV2_I = new Double(s);
+} else {
+VESTV2_I = Double.NaN;
 }
 }
 
 protected final void initVESTV2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 VESTV2_IFLAG = new Double(s);
+} else {
+VESTV2_IFLAG = Double.NaN;
 }
 }
 
 protected final void initVESTV3(String s) {
 if (!s.trim().isEmpty()) {
 VESTV3 = new Double(s);
+} else {
+VESTV3 = Double.NaN;
 }
 }
 
 protected final void initVESTV3_I(String s) {
 if (!s.trim().isEmpty()) {
 VESTV3_I = new Double(s);
+} else {
+VESTV3_I = Double.NaN;
 }
 }
 
 protected final void initVESTV3_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 VESTV3_IFLAG = new Double(s);
+} else {
+VESTV3_IFLAG = Double.NaN;
 }
 }
 
 protected final void initVESTV_I(String s) {
 if (!s.trim().isEmpty()) {
 VESTV_I = new Double(s);
+} else {
+VESTV_I = Double.NaN;
 }
 }
 
 protected final void initVESTV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 VESTV_IFLAG = new Double(s);
+} else {
+VESTV_IFLAG = Double.NaN;
 }
 }
 
 protected final void initVESVB(String s) {
 if (!s.trim().isEmpty()) {
 VESVB = new Double(s);
+} else {
+VESVB = Double.NaN;
 }
 }
 
 protected final void initVESVB2(String s) {
 if (!s.trim().isEmpty()) {
 VESVB2 = new Double(s);
+} else {
+VESVB2 = Double.NaN;
 }
 }
 
 protected final void initVESVB3(String s) {
 if (!s.trim().isEmpty()) {
 VESVB3 = new Double(s);
+} else {
+VESVB3 = Double.NaN;
 }
 }
 
 protected final void initVOTHT(String s) {
 if (!s.trim().isEmpty()) {
 VOTHT = new Double(s);
+} else {
+VOTHT = Double.NaN;
 }
 }
 
 protected final void initVOTHT_I(String s) {
 if (!s.trim().isEmpty()) {
 VOTHT_I = new Double(s);
+} else {
+VOTHT_I = Double.NaN;
 }
 }
 
 protected final void initVOTHT_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 VOTHT_IFLAG = new Double(s);
+} else {
+VOTHT_IFLAG = Double.NaN;
 }
 }
 
 protected final void initVOTYP1_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 VOTYP1_IFLAG = new Double(s);
+} else {
+VOTYP1_IFLAG = Double.NaN;
 }
 }
 
 protected final void initVOTYP2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 VOTYP2_IFLAG = new Double(s);
+} else {
+VOTYP2_IFLAG = Double.NaN;
 }
 }
 
 protected final void initVOTYP3_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 VOTYP3_IFLAG = new Double(s);
+} else {
+VOTYP3_IFLAG = Double.NaN;
 }
 }
 
 protected final void initVOTYP4_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 VOTYP4_IFLAG = new Double(s);
+} else {
+VOTYP4_IFLAG = Double.NaN;
 }
 }
 
 protected final void initVOTYP5(String s) {
 if (!s.trim().isEmpty()) {
 VOTYP5 = new Double(s);
+} else {
+VOTYP5 = Double.NaN;
 }
 }
 
 protected final void initVOTYP5_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 VOTYP5_IFLAG = new Double(s);
+} else {
+VOTYP5_IFLAG = Double.NaN;
 }
 }
 
 protected final void initVOVLB_I(String s) {
 if (!s.trim().isEmpty()) {
 VOVLB_I = new Double(s);
+} else {
+VOVLB_I = Double.NaN;
 }
 }
 
 protected final void initVOVLB_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 VOVLB_IFLAG = new Double(s);
+} else {
+VOVLB_IFLAG = Double.NaN;
 }
 }
 
 protected final void initVTYPE(String s) {
 if (!s.trim().isEmpty()) {
 VTYPE = new Double(s);
+} else {
+VTYPE = Double.NaN;
 }
 }
 
 protected final void initVTYPE2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 VTYPE2_IFLAG = new Double(s);
+} else {
+VTYPE2_IFLAG = Double.NaN;
 }
 }
 
 protected final void initVTYPE_I(String s) {
 if (!s.trim().isEmpty()) {
 VTYPE_I = new Double(s);
+} else {
+VTYPE_I = Double.NaN;
 }
 }
 
-public Double getDVBLDDEBT() {
+public double getDVBLDDEBT() {
 return DVBLDDEBT;
 }
 
-public Double getDVBLDVAL() {
+public double getDVBLDVAL() {
 return DVBLDVAL;
 }
 
-public Double getDVCACRVAL_SUM() {
+public double getDVCACRVAL_SUM() {
 return DVCACRVAL_SUM;
 }
 
-public Double getDVCACTV_SUM() {
+public double getDVCACTV_SUM() {
 return DVCACTV_SUM;
 }
 
-public Double getDVCAODVAL_SUM() {
+public double getDVCAODVAL_SUM() {
 return DVCAODVAL_SUM;
 }
 
-public Double getDVCASVV_SUM() {
+public double getDVCASVV_SUM() {
 return DVCASVV_SUM;
 }
 
-public Double getDVCAVAL_SUM() {
+public double getDVCAVAL_SUM() {
 return DVCAVAL_SUM;
 }
 
-public Double getDVCISAV_SUM() {
+public double getDVCISAV_SUM() {
 return DVCISAV_SUM;
 }
 
-public Double getDVDBRWEALTHVAL_SUM() {
+public double getDVDBRWEALTHVAL_SUM() {
 return DVDBRWEALTHVAL_SUM;
 }
 
-public Double getDVEQHIP() {
+public double getDVEQHIP() {
 return DVEQHIP;
 }
 
-public Double getDVEQRUPM() {
+public double getDVEQRUPM() {
 return DVEQRUPM;
 }
 
-public Double getDVFBONDV_SUM() {
+public double getDVFBONDV_SUM() {
 return DVFBONDV_SUM;
 }
 
-public Double getDVFCOLLV_SUM() {
+public double getDVFCOLLV_SUM() {
 return DVFCOLLV_SUM;
 }
 
-public Double getDVFESHARES_SUM() {
+public double getDVFESHARES_SUM() {
 return DVFESHARES_SUM;
 }
 
-public Double getDVFFASSETS_SUM() {
+public double getDVFFASSETS_SUM() {
 return DVFFASSETS_SUM;
 }
 
-public Double getDVFGLTFOV_SUM() {
+public double getDVFGLTFOV_SUM() {
 return DVFGLTFOV_SUM;
 }
 
-public Double getDVFGLTUKV_SUM() {
+public double getDVFGLTUKV_SUM() {
 return DVFGLTUKV_SUM;
 }
 
-public Double getDVFINFLV_SUM() {
+public double getDVFINFLV_SUM() {
 return DVFINFLV_SUM;
 }
 
-public Double getDVFINFVAL_SUM() {
+public double getDVFINFVAL_SUM() {
 return DVFINFVAL_SUM;
 }
 
-public Double getDVFINFV_SUM() {
+public double getDVFINFV_SUM() {
 return DVFINFV_SUM;
 }
 
-public Double getDVFINVOTV_SUM() {
+public double getDVFINVOTV_SUM() {
 return DVFINVOTV_SUM;
 }
 
-public Double getDVFNSVAL_SUM() {
+public double getDVFNSVAL_SUM() {
 return DVFNSVAL_SUM;
 }
 
-public Double getDVFSHOSV_SUM() {
+public double getDVFSHOSV_SUM() {
 return DVFSHOSV_SUM;
 }
 
-public Double getDVFSHUKV_SUM() {
+public double getDVFSHUKV_SUM() {
 return DVFSHUKV_SUM;
 }
 
-public Double getDVHRPNUM() {
+public double getDVHRPNUM() {
 return DVHRPNUM;
 }
 
-public Double getDVHSEDEBT() {
+public double getDVHSEDEBT() {
 return DVHSEDEBT;
 }
 
-public Double getDVHSEVAL() {
+public double getDVHSEVAL() {
 return DVHSEVAL;
 }
 
-public Double getDVIISAV_SUM() {
+public double getDVIISAV_SUM() {
 return DVIISAV_SUM;
 }
 
-public Double getDVINSV_SUM() {
+public double getDVINSV_SUM() {
 return DVINSV_SUM;
 }
 
-public Double getDVISAVAL_SUM() {
+public double getDVISAVAL_SUM() {
 return DVISAVAL_SUM;
 }
 
-public Double getDVKISAV_SUM() {
+public double getDVKISAV_SUM() {
 return DVKISAV_SUM;
 }
 
-public Double getDVLOSDEBT() {
+public double getDVLOSDEBT() {
 return DVLOSDEBT;
 }
 
-public Double getDVLOSVAL() {
+public double getDVLOSVAL() {
 return DVLOSVAL;
 }
 
-public Double getDVLUKDEBT() {
+public double getDVLUKDEBT() {
 return DVLUKDEBT;
 }
 
-public Double getDVLUKVAL() {
+public double getDVLUKVAL() {
 return DVLUKVAL;
 }
 
-public Double getDVOPRDEBT() {
+public double getDVOPRDEBT() {
 return DVOPRDEBT;
 }
 
-public Double getDVOPRVAL() {
+public double getDVOPRVAL() {
 return DVOPRVAL;
 }
 
-public Double getDVPAVCUV_SUM() {
+public double getDVPAVCUV_SUM() {
 return DVPAVCUV_SUM;
 }
 
-public Double getDVPFCURVAL_SUM() {
+public double getDVPFCURVAL_SUM() {
 return DVPFCURVAL_SUM;
 }
 
-public Double getDVPFDDV_SUM() {
+public double getDVPFDDV_SUM() {
 return DVPFDDV_SUM;
 }
 
-public Double getDVPINPVAL_SUM() {
+public double getDVPINPVAL_SUM() {
 return DVPINPVAL_SUM;
 }
 
-public Double getDVPPVAL_SUM() {
+public double getDVPPVAL_SUM() {
 return DVPPVAL_SUM;
 }
 
-public Double getDVSAVAL_SUM() {
+public double getDVSAVAL_SUM() {
 return DVSAVAL_SUM;
 }
 
-public Double getDVSPEN_SUM() {
+public double getDVSPEN_SUM() {
 return DVSPEN_SUM;
 }
 
-public Double getDVTOTCARVAL() {
+public double getDVTOTCARVAL() {
 return DVTOTCARVAL;
 }
 
-public Double getDVTOTMOTBVAL() {
+public double getDVTOTMOTBVAL() {
 return DVTOTMOTBVAL;
 }
 
-public Double getDVTOTVANVAL() {
+public double getDVTOTVANVAL() {
 return DVTOTVANVAL;
 }
 
-public Double getDVVALDBT_SUM() {
+public double getDVVALDBT_SUM() {
 return DVVALDBT_SUM;
 }
 
-public Double getDVVALDCOS_SUM() {
+public double getDVVALDCOS_SUM() {
 return DVVALDCOS_SUM;
 }
 
-public Double getDVVESTV2_I() {
+public double getDVVESTV2_I() {
 return DVVESTV2_I;
 }
 
-public Double getDVVESTV2_IFLAG() {
+public double getDVVESTV2_IFLAG() {
 return DVVESTV2_IFLAG;
 }
 
-public Double getDVVESTV3_I() {
+public double getDVVESTV3_I() {
 return DVVESTV3_I;
 }
 
-public Double getDVVESTV3_IFLAG() {
+public double getDVVESTV3_IFLAG() {
 return DVVESTV3_IFLAG;
 }
 
-public Double getDVVESTV_I() {
+public double getDVVESTV_I() {
 return DVVESTV_I;
 }
 
-public Double getDVVESTV_IFLAG() {
+public double getDVVESTV_IFLAG() {
 return DVVESTV_IFLAG;
 }
 
-public Double getDVVOVAL_I() {
+public double getDVVOVAL_I() {
 return DVVOVAL_I;
 }
 
-public Double getDVVOVAL_IFLAG() {
+public double getDVVOVAL_IFLAG() {
 return DVVOVAL_IFLAG;
 }
 
-public Double getDVVPERV_I() {
+public double getDVVPERV_I() {
 return DVVPERV_I;
 }
 
-public Double getDVVPERV_IFLAG() {
+public double getDVVPERV_IFLAG() {
 return DVVPERV_IFLAG;
 }
 
-public Double getEINTPAY() {
+public double getEINTPAY() {
 return EINTPAY;
 }
 
-public Double getEOTHIRR() {
+public double getEOTHIRR() {
 return EOTHIRR;
 }
 
-public Double getEOTHIVA() {
+public double getEOTHIVA() {
 return EOTHIVA;
 }
 
-public Double getEOTHIVB() {
+public double getEOTHIVB() {
 return EOTHIVB;
 }
 
-public Double getEQFILTER() {
+public double getEQFILTER() {
 return EQFILTER;
 }
 
-public Double getEQREAS1() {
+public double getEQREAS1() {
 return EQREAS1;
 }
 
-public Double getEQREAS2() {
+public double getEQREAS2() {
 return EQREAS2;
 }
 
-public Double getEQREAS3() {
+public double getEQREAS3() {
 return EQREAS3;
 }
 
-public Double getEQREAS4() {
+public double getEQREAS4() {
 return EQREAS4;
 }
 
-public Double getEQREL() {
+public double getEQREL() {
 return EQREL;
 }
 
-public Double getEQREL_I() {
+public double getEQREL_I() {
 return EQREL_I;
 }
 
-public Double getEQREL_IFLAG() {
+public double getEQREL_IFLAG() {
 return EQREL_IFLAG;
 }
 
-public Double getEQTYPE() {
+public double getEQTYPE() {
 return EQTYPE;
 }
 
-public Double getEQTYPE_I() {
+public double getEQTYPE_I() {
 return EQTYPE_I;
 }
 
-public Double getEQTYPE_IFLAG() {
+public double getEQTYPE_IFLAG() {
 return EQTYPE_IFLAG;
 }
 
-public Double getEQWHEN() {
+public double getEQWHEN() {
 return EQWHEN;
 }
 
-public Double getEQYES_I() {
+public double getEQYES_I() {
 return EQYES_I;
 }
 
-public Double getEQYES_IFLAG() {
+public double getEQYES_IFLAG() {
 return EQYES_IFLAG;
 }
 
-public Double getERECM() {
+public double getERECM() {
 return ERECM;
 }
 
-public Double getERECMB() {
+public double getERECMB() {
 return ERECMB;
 }
 
-public Double getERENTAM() {
+public double getERENTAM() {
 return ERENTAM;
 }
 
-public Double getERENTB() {
+public double getERENTB() {
 return ERENTB;
 }
 
-public Double getERVREC() {
+public double getERVREC() {
 return ERVREC;
 }
 
-public Double getERVRECB() {
+public double getERVRECB() {
 return ERVRECB;
 }
 
-public Double getERVREG() {
+public double getERVREG() {
 return ERVREG;
 }
 
-public Double getGCONTVLS2() {
+public double getGCONTVLS2() {
 return GCONTVLS2;
 }
 
-public Double getGCPREAM() {
+public double getGCPREAM() {
 return GCPREAM;
 }
 
-public Double getHFINL_SUM() {
+public double getHFINL_SUM() {
 return HFINL_SUM;
 }
 
-public Double getHFINW_EXCENDW_SUM() {
+public double getHFINW_EXCENDW_SUM() {
 return HFINW_EXCENDW_SUM;
 }
 
-public Double getHPARR_SUM() {
+public double getHPARR_SUM() {
 return HPARR_SUM;
 }
 
-public Double getHRPDVAGE15() {
+public double getHRPDVAGE15() {
 return HRPDVAGE15;
 }
 
-public Double getHRPEMPSTAT2() {
+public double getHRPEMPSTAT2() {
 return HRPEMPSTAT2;
 }
 
-public Double getHRPIOUT1() {
+public double getHRPIOUT1() {
 return HRPIOUT1;
 }
 
-public Double getHRPPART() {
+public double getHRPPART() {
 return HRPPART;
 }
 
-public Double getHRPPARTIOUT1() {
+public double getHRPPARTIOUT1() {
 return HRPPARTIOUT1;
 }
 
-public Double getHVALRS1() {
+public double getHVALRS1() {
 return HVALRS1;
 }
 
-public Double getHVALRS2() {
+public double getHVALRS2() {
 return HVALRS2;
 }
 
-public Double getHVALRS3() {
+public double getHVALRS3() {
 return HVALRS3;
 }
 
-public Double getHVALRS4() {
+public double getHVALRS4() {
 return HVALRS4;
 }
 
-public Double getHVALRS5() {
+public double getHVALRS5() {
 return HVALRS5;
 }
 
-public Double getLNARR_SUM() {
+public double getLNARR_SUM() {
 return LNARR_SUM;
 }
 
-public Double getMALL() {
+public double getMALL() {
 return MALL;
 }
 
-public Double getMALLTY() {
+public double getMALLTY() {
 return MALLTY;
 }
 
-public Double getMALLTY3_I() {
+public double getMALLTY3_I() {
 return MALLTY3_I;
 }
 
-public Double getMALLTY3_IFLAG() {
+public double getMALLTY3_IFLAG() {
 return MALLTY3_IFLAG;
 }
 
-public Double getMALLTY_I() {
+public double getMALLTY_I() {
 return MALLTY_I;
 }
 
-public Double getMALLTY_IFLAG() {
+public double getMALLTY_IFLAG() {
 return MALLTY_IFLAG;
 }
 
-public Double getMALL_I() {
+public double getMALL_I() {
 return MALL_I;
 }
 
-public Double getMALL_IFLAG() {
+public double getMALL_IFLAG() {
 return MALL_IFLAG;
 }
 
-public Double getMARRS() {
+public double getMARRS() {
 return MARRS;
 }
 
-public Double getMDIFFPY() {
+public double getMDIFFPY() {
 return MDIFFPY;
 }
 
-public Double getMENDNUM() {
+public double getMENDNUM() {
 return MENDNUM;
 }
 
-public Double getMENDNUM_I() {
+public double getMENDNUM_I() {
 return MENDNUM_I;
 }
 
-public Double getMENDNUM_IFLAG() {
+public double getMENDNUM_IFLAG() {
 return MENDNUM_IFLAG;
 }
 
-public Double getMENDV() {
+public double getMENDV() {
 return MENDV;
 }
 
-public Double getMENDVB() {
+public double getMENDVB() {
 return MENDVB;
 }
 
-public Double getMENDVB5() {
+public double getMENDVB5() {
 return MENDVB5;
 }
 
-public Double getMENDVB8() {
+public double getMENDVB8() {
 return MENDVB8;
 }
 
-public Double getMENDV_I() {
+public double getMENDV_I() {
 return MENDV_I;
 }
 
-public Double getMENDV_IFLAG() {
+public double getMENDV_IFLAG() {
 return MENDV_IFLAG;
 }
 
-public Double getMENDW() {
+public double getMENDW() {
 return MENDW;
 }
 
-public Double getMENDW3() {
+public double getMENDW3() {
 return MENDW3;
 }
 
-public Double getMENDW_I() {
+public double getMENDW_I() {
 return MENDW_I;
 }
 
-public Double getMENDW_IFLAG() {
+public double getMENDW_IFLAG() {
 return MENDW_IFLAG;
 }
 
-public Double getMENDX() {
+public double getMENDX() {
 return MENDX;
 }
 
-public Double getMENDY() {
+public double getMENDY() {
 return MENDY;
 }
 
-public Double getMENDY5() {
+public double getMENDY5() {
 return MENDY5;
 }
 
-public Double getMENDY8() {
+public double getMENDY8() {
 return MENDY8;
 }
 
-public Double getMHOWPY() {
+public double getMHOWPY() {
 return MHOWPY;
 }
 
-public Double getMINC12() {
+public double getMINC12() {
 return MINC12;
 }
 
-public Double getMINC7() {
+public double getMINC7() {
 return MINC7;
 }
 
-public Double getMINC8() {
+public double getMINC8() {
 return MINC8;
 }
 
-public Double getMINC9() {
+public double getMINC9() {
 return MINC9;
 }
 
-public Double getMNAME() {
+public double getMNAME() {
 return MNAME;
 }
 
-public Double getMNEG() {
+public double getMNEG() {
 return MNEG;
 }
 
-public Double getMNEGB() {
+public double getMNEGB() {
 return MNEGB;
 }
 
-public Double getMNEG_I() {
+public double getMNEG_I() {
 return MNEG_I;
 }
 
-public Double getMNEG_IFLAG() {
+public double getMNEG_IFLAG() {
 return MNEG_IFLAG;
 }
 
-public Double getMOARR_SUM() {
+public double getMOARR_SUM() {
 return MOARR_SUM;
 }
 
-public Double getMONAME() {
+public double getMONAME() {
 return MONAME;
 }
 
-public Double getMPAYB() {
+public double getMPAYB() {
 return MPAYB;
 }
 
-public Double getMPAYM() {
+public double getMPAYM() {
 return MPAYM;
 }
 
-public Double getMPP() {
+public double getMPP() {
 return MPP;
 }
 
-public Double getMREAS08() {
+public double getMREAS08() {
 return MREAS08;
 }
 
-public Double getMREAS09() {
+public double getMREAS09() {
 return MREAS09;
 }
 
-public Double getMREAS11() {
+public double getMREAS11() {
 return MREAS11;
 }
 
-public Double getMREAS21() {
+public double getMREAS21() {
 return MREAS21;
 }
 
-public Double getMREAS22() {
+public double getMREAS22() {
 return MREAS22;
 }
 
-public Double getMTYPE() {
+public double getMTYPE() {
 return MTYPE;
 }
 
-public Double getMTYPE_I() {
+public double getMTYPE_I() {
 return MTYPE_I;
 }
 
-public Double getMTYPE_IFLAG() {
+public double getMTYPE_IFLAG() {
 return MTYPE_IFLAG;
 }
 
-public Double getMVAL() {
+public double getMVAL() {
 return MVAL;
 }
 
-public Double getMVALB() {
+public double getMVALB() {
 return MVALB;
 }
 
-public Double getMVAL_I() {
+public double getMVAL_I() {
 return MVAL_I;
 }
 
-public Double getMVAL_IFLAG() {
+public double getMVAL_IFLAG() {
 return MVAL_IFLAG;
 }
 
-public Double getMYLFT() {
+public double getMYLFT() {
 return MYLFT;
 }
 
-public Double getNBABY() {
+public double getNBABY() {
 return NBABY;
 }
 
-public Double getNC1015() {
+public double getNC1015() {
 return NC1015;
 }
 
-public Double getNC1618() {
+public double getNC1618() {
 return NC1618;
 }
 
-public Double getNC5TO9() {
+public double getNC5TO9() {
 return NC5TO9;
 }
 
-public Double getNCHILD() {
+public double getNCHILD() {
 return NCHILD;
 }
 
-public Double getNCU16() {
+public double getNCU16() {
 return NCU16;
 }
 
-public Double getNCUND5() {
+public double getNCUND5() {
 return NCUND5;
 }
 
-public Double getNDEPC() {
+public double getNDEPC() {
 return NDEPC;
 }
 
-public Double getNNDEPC() {
+public double getNNDEPC() {
 return NNDEPC;
 }
 
-public Double getNUMJOB() {
+public double getNUMJOB() {
 return NUMJOB;
 }
 
-public Double getNUMSSEX() {
+public double getNUMSSEX() {
 return NUMSSEX;
 }
 
-public Double getNVESTV() {
+public double getNVESTV() {
 return NVESTV;
 }
 
-public Double getOTHMORT() {
+public double getOTHMORT() {
 return OTHMORT;
 }
 
-public Double getTOTBILLARR_SUM() {
+public double getTOTBILLARR_SUM() {
 return TOTBILLARR_SUM;
 }
 
-public Double getTOTCC_SUM() {
+public double getTOTCC_SUM() {
 return TOTCC_SUM;
 }
 
-public Double getTOTHP_SUM() {
+public double getTOTHP_SUM() {
 return TOTHP_SUM;
 }
 
-public Double getTOTLOS_SUM() {
+public double getTOTLOS_SUM() {
 return TOTLOS_SUM;
 }
 
-public Double getTOTMO_SUM() {
+public double getTOTMO_SUM() {
 return TOTMO_SUM;
 }
 
-public Double getTOTPEN_SUM() {
+public double getTOTPEN_SUM() {
 return TOTPEN_SUM;
 }
 
-public Double getTOTSC_SUM() {
+public double getTOTSC_SUM() {
 return TOTSC_SUM;
 }
 
-public Double getT_FLNS_SUM() {
+public double getT_FLNS_SUM() {
 return T_FLNS_SUM;
 }
 
-public Double getT_LNS_SUM() {
+public double getT_LNS_SUM() {
 return T_LNS_SUM;
 }
 
-public Double getT_SLNS_SUM() {
+public double getT_SLNS_SUM() {
 return T_SLNS_SUM;
 }
 
-public Double getVESTV() {
+public double getVESTV() {
 return VESTV;
 }
 
-public Double getVESTV2() {
+public double getVESTV2() {
 return VESTV2;
 }
 
-public Double getVESTV2_I() {
+public double getVESTV2_I() {
 return VESTV2_I;
 }
 
-public Double getVESTV2_IFLAG() {
+public double getVESTV2_IFLAG() {
 return VESTV2_IFLAG;
 }
 
-public Double getVESTV3() {
+public double getVESTV3() {
 return VESTV3;
 }
 
-public Double getVESTV3_I() {
+public double getVESTV3_I() {
 return VESTV3_I;
 }
 
-public Double getVESTV3_IFLAG() {
+public double getVESTV3_IFLAG() {
 return VESTV3_IFLAG;
 }
 
-public Double getVESTV_I() {
+public double getVESTV_I() {
 return VESTV_I;
 }
 
-public Double getVESTV_IFLAG() {
+public double getVESTV_IFLAG() {
 return VESTV_IFLAG;
 }
 
-public Double getVESVB() {
+public double getVESVB() {
 return VESVB;
 }
 
-public Double getVESVB2() {
+public double getVESVB2() {
 return VESVB2;
 }
 
-public Double getVESVB3() {
+public double getVESVB3() {
 return VESVB3;
 }
 
-public Double getVOTHT() {
+public double getVOTHT() {
 return VOTHT;
 }
 
-public Double getVOTHT_I() {
+public double getVOTHT_I() {
 return VOTHT_I;
 }
 
-public Double getVOTHT_IFLAG() {
+public double getVOTHT_IFLAG() {
 return VOTHT_IFLAG;
 }
 
-public Double getVOTYP1_IFLAG() {
+public double getVOTYP1_IFLAG() {
 return VOTYP1_IFLAG;
 }
 
-public Double getVOTYP2_IFLAG() {
+public double getVOTYP2_IFLAG() {
 return VOTYP2_IFLAG;
 }
 
-public Double getVOTYP3_IFLAG() {
+public double getVOTYP3_IFLAG() {
 return VOTYP3_IFLAG;
 }
 
-public Double getVOTYP4_IFLAG() {
+public double getVOTYP4_IFLAG() {
 return VOTYP4_IFLAG;
 }
 
-public Double getVOTYP5() {
+public double getVOTYP5() {
 return VOTYP5;
 }
 
-public Double getVOTYP5_IFLAG() {
+public double getVOTYP5_IFLAG() {
 return VOTYP5_IFLAG;
 }
 
-public Double getVOVLB_I() {
+public double getVOVLB_I() {
 return VOVLB_I;
 }
 
-public Double getVOVLB_IFLAG() {
+public double getVOVLB_IFLAG() {
 return VOVLB_IFLAG;
 }
 
-public Double getVTYPE() {
+public double getVTYPE() {
 return VTYPE;
 }
 
-public Double getVTYPE2_IFLAG() {
+public double getVTYPE2_IFLAG() {
 return VTYPE2_IFLAG;
 }
 
-public Double getVTYPE_I() {
+public double getVTYPE_I() {
 return VTYPE_I;
 }
 

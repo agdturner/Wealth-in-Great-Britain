@@ -3,597 +3,705 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold;
 public class WIGB_Wave1_HHOLD_Record extends WIGB_Wave1Or2_HHOLD_Record {
-protected Double DVPEPV_SUM;
-protected Double GCONTMN;
-protected Double GCONTRC;
-protected Double GCONTVL;
-protected Double HHLDR;
-protected Double HRPDVAGEW1BAND;
-protected Double HRTBYR;
-protected Double LANDOVSEAT_SUM;
-protected Double MDBEH;
-protected Double MDBEH2;
-protected Double MDBEH3;
-protected Double MDCAP;
-protected Double MDCAP2;
-protected Double MDCAP3;
-protected Double MDRST;
-protected Double MDRST2;
-protected Double MDRST3;
-protected Double MDWPF;
-protected Double MDWPF2;
-protected Double MDWPF3;
-protected Double MENDNUM3_I;
-protected Double MENDNUM3_IFLAG;
-protected Double MENDV11_I;
-protected Double MENDV11_IFLAG;
-protected Double MENDV5_I;
-protected Double MENDV5_IFLAG;
-protected Double MENDV7_I;
-protected Double MENDV7_IFLAG;
-protected Double MENDW2;
-protected Double MEVER;
-protected Double MNEG3_I;
-protected Double MNEG3_IFLAG;
-protected Double NUMDEPCH;
-protected Double VCARO;
-protected Double VCARW;
-protected Double VMODU;
-protected Double VNUMV;
-protected Double VNUMV2;
-protected Double VNUMV3;
-protected Double VNUMV4;
-protected Double VNUMV5;
-protected Double VPERS2;
-protected Double VPERS3;
-protected Double VPERS4;
-protected Double VPERS5;
-protected Double VPERS6;
-protected Double VPERS6_I;
-protected Double VPERS6_IFLAG;
-protected Double VSHPCT;
-protected Double VSHPCT2;
-protected Double VSHPCT3;
-protected Double VSHPCT4;
-protected Double VSHPCT5;
-protected Double XS_WGT;
+protected double DVPEPV_SUM;
+protected double GCONTMN;
+protected double GCONTRC;
+protected double GCONTVL;
+protected double HHLDR;
+protected double HRPDVAGEW1BAND;
+protected double HRTBYR;
+protected double LANDOVSEAT_SUM;
+protected double MDBEH;
+protected double MDBEH2;
+protected double MDBEH3;
+protected double MDCAP;
+protected double MDCAP2;
+protected double MDCAP3;
+protected double MDRST;
+protected double MDRST2;
+protected double MDRST3;
+protected double MDWPF;
+protected double MDWPF2;
+protected double MDWPF3;
+protected double MENDNUM3_I;
+protected double MENDNUM3_IFLAG;
+protected double MENDV11_I;
+protected double MENDV11_IFLAG;
+protected double MENDV5_I;
+protected double MENDV5_IFLAG;
+protected double MENDV7_I;
+protected double MENDV7_IFLAG;
+protected double MENDW2;
+protected double MEVER;
+protected double MNEG3_I;
+protected double MNEG3_IFLAG;
+protected double NUMDEPCH;
+protected double VCARO;
+protected double VCARW;
+protected double VMODU;
+protected double VNUMV;
+protected double VNUMV2;
+protected double VNUMV3;
+protected double VNUMV4;
+protected double VNUMV5;
+protected double VPERS2;
+protected double VPERS3;
+protected double VPERS4;
+protected double VPERS5;
+protected double VPERS6;
+protected double VPERS6_I;
+protected double VPERS6_IFLAG;
+protected double VSHPCT;
+protected double VSHPCT2;
+protected double VSHPCT3;
+protected double VSHPCT4;
+protected double VSHPCT5;
+protected double XS_WGT;
 protected final void initDVPEPV_SUM(String s) {
 if (!s.trim().isEmpty()) {
 DVPEPV_SUM = new Double(s);
+} else {
+DVPEPV_SUM = Double.NaN;
 }
 }
 
 protected final void initGCONTMN(String s) {
 if (!s.trim().isEmpty()) {
 GCONTMN = new Double(s);
+} else {
+GCONTMN = Double.NaN;
 }
 }
 
 protected final void initGCONTRC(String s) {
 if (!s.trim().isEmpty()) {
 GCONTRC = new Double(s);
+} else {
+GCONTRC = Double.NaN;
 }
 }
 
 protected final void initGCONTVL(String s) {
 if (!s.trim().isEmpty()) {
 GCONTVL = new Double(s);
+} else {
+GCONTVL = Double.NaN;
 }
 }
 
 protected final void initHHLDR(String s) {
 if (!s.trim().isEmpty()) {
 HHLDR = new Double(s);
+} else {
+HHLDR = Double.NaN;
 }
 }
 
 protected final void initHRPDVAGEW1BAND(String s) {
 if (!s.trim().isEmpty()) {
 HRPDVAGEW1BAND = new Double(s);
+} else {
+HRPDVAGEW1BAND = Double.NaN;
 }
 }
 
 protected final void initHRTBYR(String s) {
 if (!s.trim().isEmpty()) {
 HRTBYR = new Double(s);
+} else {
+HRTBYR = Double.NaN;
 }
 }
 
 protected final void initLANDOVSEAT_SUM(String s) {
 if (!s.trim().isEmpty()) {
 LANDOVSEAT_SUM = new Double(s);
+} else {
+LANDOVSEAT_SUM = Double.NaN;
 }
 }
 
 protected final void initMDBEH(String s) {
 if (!s.trim().isEmpty()) {
 MDBEH = new Double(s);
+} else {
+MDBEH = Double.NaN;
 }
 }
 
 protected final void initMDBEH2(String s) {
 if (!s.trim().isEmpty()) {
 MDBEH2 = new Double(s);
+} else {
+MDBEH2 = Double.NaN;
 }
 }
 
 protected final void initMDBEH3(String s) {
 if (!s.trim().isEmpty()) {
 MDBEH3 = new Double(s);
+} else {
+MDBEH3 = Double.NaN;
 }
 }
 
 protected final void initMDCAP(String s) {
 if (!s.trim().isEmpty()) {
 MDCAP = new Double(s);
+} else {
+MDCAP = Double.NaN;
 }
 }
 
 protected final void initMDCAP2(String s) {
 if (!s.trim().isEmpty()) {
 MDCAP2 = new Double(s);
+} else {
+MDCAP2 = Double.NaN;
 }
 }
 
 protected final void initMDCAP3(String s) {
 if (!s.trim().isEmpty()) {
 MDCAP3 = new Double(s);
+} else {
+MDCAP3 = Double.NaN;
 }
 }
 
 protected final void initMDRST(String s) {
 if (!s.trim().isEmpty()) {
 MDRST = new Double(s);
+} else {
+MDRST = Double.NaN;
 }
 }
 
 protected final void initMDRST2(String s) {
 if (!s.trim().isEmpty()) {
 MDRST2 = new Double(s);
+} else {
+MDRST2 = Double.NaN;
 }
 }
 
 protected final void initMDRST3(String s) {
 if (!s.trim().isEmpty()) {
 MDRST3 = new Double(s);
+} else {
+MDRST3 = Double.NaN;
 }
 }
 
 protected final void initMDWPF(String s) {
 if (!s.trim().isEmpty()) {
 MDWPF = new Double(s);
+} else {
+MDWPF = Double.NaN;
 }
 }
 
 protected final void initMDWPF2(String s) {
 if (!s.trim().isEmpty()) {
 MDWPF2 = new Double(s);
+} else {
+MDWPF2 = Double.NaN;
 }
 }
 
 protected final void initMDWPF3(String s) {
 if (!s.trim().isEmpty()) {
 MDWPF3 = new Double(s);
+} else {
+MDWPF3 = Double.NaN;
 }
 }
 
 protected final void initMENDNUM3_I(String s) {
 if (!s.trim().isEmpty()) {
 MENDNUM3_I = new Double(s);
+} else {
+MENDNUM3_I = Double.NaN;
 }
 }
 
 protected final void initMENDNUM3_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 MENDNUM3_IFLAG = new Double(s);
+} else {
+MENDNUM3_IFLAG = Double.NaN;
 }
 }
 
 protected final void initMENDV11_I(String s) {
 if (!s.trim().isEmpty()) {
 MENDV11_I = new Double(s);
+} else {
+MENDV11_I = Double.NaN;
 }
 }
 
 protected final void initMENDV11_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 MENDV11_IFLAG = new Double(s);
+} else {
+MENDV11_IFLAG = Double.NaN;
 }
 }
 
 protected final void initMENDV5_I(String s) {
 if (!s.trim().isEmpty()) {
 MENDV5_I = new Double(s);
+} else {
+MENDV5_I = Double.NaN;
 }
 }
 
 protected final void initMENDV5_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 MENDV5_IFLAG = new Double(s);
+} else {
+MENDV5_IFLAG = Double.NaN;
 }
 }
 
 protected final void initMENDV7_I(String s) {
 if (!s.trim().isEmpty()) {
 MENDV7_I = new Double(s);
+} else {
+MENDV7_I = Double.NaN;
 }
 }
 
 protected final void initMENDV7_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 MENDV7_IFLAG = new Double(s);
+} else {
+MENDV7_IFLAG = Double.NaN;
 }
 }
 
 protected final void initMENDW2(String s) {
 if (!s.trim().isEmpty()) {
 MENDW2 = new Double(s);
+} else {
+MENDW2 = Double.NaN;
 }
 }
 
 protected final void initMEVER(String s) {
 if (!s.trim().isEmpty()) {
 MEVER = new Double(s);
+} else {
+MEVER = Double.NaN;
 }
 }
 
 protected final void initMNEG3_I(String s) {
 if (!s.trim().isEmpty()) {
 MNEG3_I = new Double(s);
+} else {
+MNEG3_I = Double.NaN;
 }
 }
 
 protected final void initMNEG3_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 MNEG3_IFLAG = new Double(s);
+} else {
+MNEG3_IFLAG = Double.NaN;
 }
 }
 
 protected final void initNUMDEPCH(String s) {
 if (!s.trim().isEmpty()) {
 NUMDEPCH = new Double(s);
+} else {
+NUMDEPCH = Double.NaN;
 }
 }
 
 protected final void initVCARO(String s) {
 if (!s.trim().isEmpty()) {
 VCARO = new Double(s);
+} else {
+VCARO = Double.NaN;
 }
 }
 
 protected final void initVCARW(String s) {
 if (!s.trim().isEmpty()) {
 VCARW = new Double(s);
+} else {
+VCARW = Double.NaN;
 }
 }
 
 protected final void initVMODU(String s) {
 if (!s.trim().isEmpty()) {
 VMODU = new Double(s);
+} else {
+VMODU = Double.NaN;
 }
 }
 
 protected final void initVNUMV(String s) {
 if (!s.trim().isEmpty()) {
 VNUMV = new Double(s);
+} else {
+VNUMV = Double.NaN;
 }
 }
 
 protected final void initVNUMV2(String s) {
 if (!s.trim().isEmpty()) {
 VNUMV2 = new Double(s);
+} else {
+VNUMV2 = Double.NaN;
 }
 }
 
 protected final void initVNUMV3(String s) {
 if (!s.trim().isEmpty()) {
 VNUMV3 = new Double(s);
+} else {
+VNUMV3 = Double.NaN;
 }
 }
 
 protected final void initVNUMV4(String s) {
 if (!s.trim().isEmpty()) {
 VNUMV4 = new Double(s);
+} else {
+VNUMV4 = Double.NaN;
 }
 }
 
 protected final void initVNUMV5(String s) {
 if (!s.trim().isEmpty()) {
 VNUMV5 = new Double(s);
+} else {
+VNUMV5 = Double.NaN;
 }
 }
 
 protected final void initVPERS2(String s) {
 if (!s.trim().isEmpty()) {
 VPERS2 = new Double(s);
+} else {
+VPERS2 = Double.NaN;
 }
 }
 
 protected final void initVPERS3(String s) {
 if (!s.trim().isEmpty()) {
 VPERS3 = new Double(s);
+} else {
+VPERS3 = Double.NaN;
 }
 }
 
 protected final void initVPERS4(String s) {
 if (!s.trim().isEmpty()) {
 VPERS4 = new Double(s);
+} else {
+VPERS4 = Double.NaN;
 }
 }
 
 protected final void initVPERS5(String s) {
 if (!s.trim().isEmpty()) {
 VPERS5 = new Double(s);
+} else {
+VPERS5 = Double.NaN;
 }
 }
 
 protected final void initVPERS6(String s) {
 if (!s.trim().isEmpty()) {
 VPERS6 = new Double(s);
+} else {
+VPERS6 = Double.NaN;
 }
 }
 
 protected final void initVPERS6_I(String s) {
 if (!s.trim().isEmpty()) {
 VPERS6_I = new Double(s);
+} else {
+VPERS6_I = Double.NaN;
 }
 }
 
 protected final void initVPERS6_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 VPERS6_IFLAG = new Double(s);
+} else {
+VPERS6_IFLAG = Double.NaN;
 }
 }
 
 protected final void initVSHPCT(String s) {
 if (!s.trim().isEmpty()) {
 VSHPCT = new Double(s);
+} else {
+VSHPCT = Double.NaN;
 }
 }
 
 protected final void initVSHPCT2(String s) {
 if (!s.trim().isEmpty()) {
 VSHPCT2 = new Double(s);
+} else {
+VSHPCT2 = Double.NaN;
 }
 }
 
 protected final void initVSHPCT3(String s) {
 if (!s.trim().isEmpty()) {
 VSHPCT3 = new Double(s);
+} else {
+VSHPCT3 = Double.NaN;
 }
 }
 
 protected final void initVSHPCT4(String s) {
 if (!s.trim().isEmpty()) {
 VSHPCT4 = new Double(s);
+} else {
+VSHPCT4 = Double.NaN;
 }
 }
 
 protected final void initVSHPCT5(String s) {
 if (!s.trim().isEmpty()) {
 VSHPCT5 = new Double(s);
+} else {
+VSHPCT5 = Double.NaN;
 }
 }
 
 protected final void initXS_WGT(String s) {
 if (!s.trim().isEmpty()) {
 XS_WGT = new Double(s);
+} else {
+XS_WGT = Double.NaN;
 }
 }
 
-public Double getDVPEPV_SUM() {
+public double getDVPEPV_SUM() {
 return DVPEPV_SUM;
 }
 
-public Double getGCONTMN() {
+public double getGCONTMN() {
 return GCONTMN;
 }
 
-public Double getGCONTRC() {
+public double getGCONTRC() {
 return GCONTRC;
 }
 
-public Double getGCONTVL() {
+public double getGCONTVL() {
 return GCONTVL;
 }
 
-public Double getHHLDR() {
+public double getHHLDR() {
 return HHLDR;
 }
 
-public Double getHRPDVAGEW1BAND() {
+public double getHRPDVAGEW1BAND() {
 return HRPDVAGEW1BAND;
 }
 
-public Double getHRTBYR() {
+public double getHRTBYR() {
 return HRTBYR;
 }
 
-public Double getLANDOVSEAT_SUM() {
+public double getLANDOVSEAT_SUM() {
 return LANDOVSEAT_SUM;
 }
 
-public Double getMDBEH() {
+public double getMDBEH() {
 return MDBEH;
 }
 
-public Double getMDBEH2() {
+public double getMDBEH2() {
 return MDBEH2;
 }
 
-public Double getMDBEH3() {
+public double getMDBEH3() {
 return MDBEH3;
 }
 
-public Double getMDCAP() {
+public double getMDCAP() {
 return MDCAP;
 }
 
-public Double getMDCAP2() {
+public double getMDCAP2() {
 return MDCAP2;
 }
 
-public Double getMDCAP3() {
+public double getMDCAP3() {
 return MDCAP3;
 }
 
-public Double getMDRST() {
+public double getMDRST() {
 return MDRST;
 }
 
-public Double getMDRST2() {
+public double getMDRST2() {
 return MDRST2;
 }
 
-public Double getMDRST3() {
+public double getMDRST3() {
 return MDRST3;
 }
 
-public Double getMDWPF() {
+public double getMDWPF() {
 return MDWPF;
 }
 
-public Double getMDWPF2() {
+public double getMDWPF2() {
 return MDWPF2;
 }
 
-public Double getMDWPF3() {
+public double getMDWPF3() {
 return MDWPF3;
 }
 
-public Double getMENDNUM3_I() {
+public double getMENDNUM3_I() {
 return MENDNUM3_I;
 }
 
-public Double getMENDNUM3_IFLAG() {
+public double getMENDNUM3_IFLAG() {
 return MENDNUM3_IFLAG;
 }
 
-public Double getMENDV11_I() {
+public double getMENDV11_I() {
 return MENDV11_I;
 }
 
-public Double getMENDV11_IFLAG() {
+public double getMENDV11_IFLAG() {
 return MENDV11_IFLAG;
 }
 
-public Double getMENDV5_I() {
+public double getMENDV5_I() {
 return MENDV5_I;
 }
 
-public Double getMENDV5_IFLAG() {
+public double getMENDV5_IFLAG() {
 return MENDV5_IFLAG;
 }
 
-public Double getMENDV7_I() {
+public double getMENDV7_I() {
 return MENDV7_I;
 }
 
-public Double getMENDV7_IFLAG() {
+public double getMENDV7_IFLAG() {
 return MENDV7_IFLAG;
 }
 
-public Double getMENDW2() {
+public double getMENDW2() {
 return MENDW2;
 }
 
-public Double getMEVER() {
+public double getMEVER() {
 return MEVER;
 }
 
-public Double getMNEG3_I() {
+public double getMNEG3_I() {
 return MNEG3_I;
 }
 
-public Double getMNEG3_IFLAG() {
+public double getMNEG3_IFLAG() {
 return MNEG3_IFLAG;
 }
 
-public Double getNUMDEPCH() {
+public double getNUMDEPCH() {
 return NUMDEPCH;
 }
 
-public Double getVCARO() {
+public double getVCARO() {
 return VCARO;
 }
 
-public Double getVCARW() {
+public double getVCARW() {
 return VCARW;
 }
 
-public Double getVMODU() {
+public double getVMODU() {
 return VMODU;
 }
 
-public Double getVNUMV() {
+public double getVNUMV() {
 return VNUMV;
 }
 
-public Double getVNUMV2() {
+public double getVNUMV2() {
 return VNUMV2;
 }
 
-public Double getVNUMV3() {
+public double getVNUMV3() {
 return VNUMV3;
 }
 
-public Double getVNUMV4() {
+public double getVNUMV4() {
 return VNUMV4;
 }
 
-public Double getVNUMV5() {
+public double getVNUMV5() {
 return VNUMV5;
 }
 
-public Double getVPERS2() {
+public double getVPERS2() {
 return VPERS2;
 }
 
-public Double getVPERS3() {
+public double getVPERS3() {
 return VPERS3;
 }
 
-public Double getVPERS4() {
+public double getVPERS4() {
 return VPERS4;
 }
 
-public Double getVPERS5() {
+public double getVPERS5() {
 return VPERS5;
 }
 
-public Double getVPERS6() {
+public double getVPERS6() {
 return VPERS6;
 }
 
-public Double getVPERS6_I() {
+public double getVPERS6_I() {
 return VPERS6_I;
 }
 
-public Double getVPERS6_IFLAG() {
+public double getVPERS6_IFLAG() {
 return VPERS6_IFLAG;
 }
 
-public Double getVSHPCT() {
+public double getVSHPCT() {
 return VSHPCT;
 }
 
-public Double getVSHPCT2() {
+public double getVSHPCT2() {
 return VSHPCT2;
 }
 
-public Double getVSHPCT3() {
+public double getVSHPCT3() {
 return VSHPCT3;
 }
 
-public Double getVSHPCT4() {
+public double getVSHPCT4() {
 return VSHPCT4;
 }
 
-public Double getVSHPCT5() {
+public double getVSHPCT5() {
 return VSHPCT5;
 }
 
-public Double getXS_WGT() {
+public double getXS_WGT() {
 return XS_WGT;
 }
 

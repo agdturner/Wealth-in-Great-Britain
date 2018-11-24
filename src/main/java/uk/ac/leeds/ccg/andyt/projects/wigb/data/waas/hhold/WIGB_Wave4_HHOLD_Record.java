@@ -3,223 +3,263 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold;
 public class WIGB_Wave4_HHOLD_Record extends WIGB_Wave4Or5_HHOLD_Record {
-protected Double DVTOTCARVAL;
-protected Double DVTOTMOTBVAL;
-protected Double DVTOTVANVAL;
-protected Double EQREAS1;
-protected Double EQREAS2;
-protected Double EQREAS3;
-protected Double EQREAS4;
-protected Double HINTRO;
-protected Double VESTV1;
-protected Double VESTV2;
-protected Double VESTV2_I;
-protected Double VESTV2_IFLAG;
-protected Double VESTV_I;
-protected Double VESTV_IFLAG;
-protected Double VESVB1;
-protected Double VESVB2;
-protected Double VESVB3;
-protected Double VTYPE2_IFLAG;
-protected Double VTYPE_I;
-protected Double W4XSHHWGT;
+protected double DVTOTCARVAL;
+protected double DVTOTMOTBVAL;
+protected double DVTOTVANVAL;
+protected double EQREAS1;
+protected double EQREAS2;
+protected double EQREAS3;
+protected double EQREAS4;
+protected double HINTRO;
+protected double VESTV1;
+protected double VESTV2;
+protected double VESTV2_I;
+protected double VESTV2_IFLAG;
+protected double VESTV_I;
+protected double VESTV_IFLAG;
+protected double VESVB1;
+protected double VESVB2;
+protected double VESVB3;
+protected double VTYPE2_IFLAG;
+protected double VTYPE_I;
+protected double W4XSHHWGT;
 protected final void initDVTOTCARVAL(String s) {
 if (!s.trim().isEmpty()) {
 DVTOTCARVAL = new Double(s);
+} else {
+DVTOTCARVAL = Double.NaN;
 }
 }
 
 protected final void initDVTOTMOTBVAL(String s) {
 if (!s.trim().isEmpty()) {
 DVTOTMOTBVAL = new Double(s);
+} else {
+DVTOTMOTBVAL = Double.NaN;
 }
 }
 
 protected final void initDVTOTVANVAL(String s) {
 if (!s.trim().isEmpty()) {
 DVTOTVANVAL = new Double(s);
+} else {
+DVTOTVANVAL = Double.NaN;
 }
 }
 
 protected final void initEQREAS1(String s) {
 if (!s.trim().isEmpty()) {
 EQREAS1 = new Double(s);
+} else {
+EQREAS1 = Double.NaN;
 }
 }
 
 protected final void initEQREAS2(String s) {
 if (!s.trim().isEmpty()) {
 EQREAS2 = new Double(s);
+} else {
+EQREAS2 = Double.NaN;
 }
 }
 
 protected final void initEQREAS3(String s) {
 if (!s.trim().isEmpty()) {
 EQREAS3 = new Double(s);
+} else {
+EQREAS3 = Double.NaN;
 }
 }
 
 protected final void initEQREAS4(String s) {
 if (!s.trim().isEmpty()) {
 EQREAS4 = new Double(s);
+} else {
+EQREAS4 = Double.NaN;
 }
 }
 
 protected final void initHINTRO(String s) {
 if (!s.trim().isEmpty()) {
 HINTRO = new Double(s);
+} else {
+HINTRO = Double.NaN;
 }
 }
 
 protected final void initVESTV1(String s) {
 if (!s.trim().isEmpty()) {
 VESTV1 = new Double(s);
+} else {
+VESTV1 = Double.NaN;
 }
 }
 
 protected final void initVESTV2(String s) {
 if (!s.trim().isEmpty()) {
 VESTV2 = new Double(s);
+} else {
+VESTV2 = Double.NaN;
 }
 }
 
 protected final void initVESTV2_I(String s) {
 if (!s.trim().isEmpty()) {
 VESTV2_I = new Double(s);
+} else {
+VESTV2_I = Double.NaN;
 }
 }
 
 protected final void initVESTV2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 VESTV2_IFLAG = new Double(s);
+} else {
+VESTV2_IFLAG = Double.NaN;
 }
 }
 
 protected final void initVESTV_I(String s) {
 if (!s.trim().isEmpty()) {
 VESTV_I = new Double(s);
+} else {
+VESTV_I = Double.NaN;
 }
 }
 
 protected final void initVESTV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 VESTV_IFLAG = new Double(s);
+} else {
+VESTV_IFLAG = Double.NaN;
 }
 }
 
 protected final void initVESVB1(String s) {
 if (!s.trim().isEmpty()) {
 VESVB1 = new Double(s);
+} else {
+VESVB1 = Double.NaN;
 }
 }
 
 protected final void initVESVB2(String s) {
 if (!s.trim().isEmpty()) {
 VESVB2 = new Double(s);
+} else {
+VESVB2 = Double.NaN;
 }
 }
 
 protected final void initVESVB3(String s) {
 if (!s.trim().isEmpty()) {
 VESVB3 = new Double(s);
+} else {
+VESVB3 = Double.NaN;
 }
 }
 
 protected final void initVTYPE2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
 VTYPE2_IFLAG = new Double(s);
+} else {
+VTYPE2_IFLAG = Double.NaN;
 }
 }
 
 protected final void initVTYPE_I(String s) {
 if (!s.trim().isEmpty()) {
 VTYPE_I = new Double(s);
+} else {
+VTYPE_I = Double.NaN;
 }
 }
 
 protected final void initW4XSHHWGT(String s) {
 if (!s.trim().isEmpty()) {
 W4XSHHWGT = new Double(s);
+} else {
+W4XSHHWGT = Double.NaN;
 }
 }
 
-public Double getDVTOTCARVAL() {
+public double getDVTOTCARVAL() {
 return DVTOTCARVAL;
 }
 
-public Double getDVTOTMOTBVAL() {
+public double getDVTOTMOTBVAL() {
 return DVTOTMOTBVAL;
 }
 
-public Double getDVTOTVANVAL() {
+public double getDVTOTVANVAL() {
 return DVTOTVANVAL;
 }
 
-public Double getEQREAS1() {
+public double getEQREAS1() {
 return EQREAS1;
 }
 
-public Double getEQREAS2() {
+public double getEQREAS2() {
 return EQREAS2;
 }
 
-public Double getEQREAS3() {
+public double getEQREAS3() {
 return EQREAS3;
 }
 
-public Double getEQREAS4() {
+public double getEQREAS4() {
 return EQREAS4;
 }
 
-public Double getHINTRO() {
+public double getHINTRO() {
 return HINTRO;
 }
 
-public Double getVESTV1() {
+public double getVESTV1() {
 return VESTV1;
 }
 
-public Double getVESTV2() {
+public double getVESTV2() {
 return VESTV2;
 }
 
-public Double getVESTV2_I() {
+public double getVESTV2_I() {
 return VESTV2_I;
 }
 
-public Double getVESTV2_IFLAG() {
+public double getVESTV2_IFLAG() {
 return VESTV2_IFLAG;
 }
 
-public Double getVESTV_I() {
+public double getVESTV_I() {
 return VESTV_I;
 }
 
-public Double getVESTV_IFLAG() {
+public double getVESTV_IFLAG() {
 return VESTV_IFLAG;
 }
 
-public Double getVESVB1() {
+public double getVESVB1() {
 return VESVB1;
 }
 
-public Double getVESVB2() {
+public double getVESVB2() {
 return VESVB2;
 }
 
-public Double getVESVB3() {
+public double getVESVB3() {
 return VESVB3;
 }
 
-public Double getVTYPE2_IFLAG() {
+public double getVTYPE2_IFLAG() {
 return VTYPE2_IFLAG;
 }
 
-public Double getVTYPE_I() {
+public double getVTYPE_I() {
 return VTYPE_I;
 }
 
-public Double getW4XSHHWGT() {
+public double getW4XSHHWGT() {
 return W4XSHHWGT;
 }
 

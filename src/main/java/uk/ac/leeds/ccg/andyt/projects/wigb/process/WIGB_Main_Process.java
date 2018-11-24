@@ -86,7 +86,52 @@ public class WIGB_Main_Process extends WIGB_Object {
         outdir.mkdirs();
         hholdHandler = new WIGB_HHOLD_Handler(Env, indir);
 
-        doDataProcessingStep1(indir, outdir, hholdHandler);
+        //doDataProcessingStep1(indir, outdir, hholdHandler);
+        HashMap<WIGB_PERSON_ID, WIGB_Wave1_PERSON_Record> personSubsetW1;
+        HashMap<WIGB_PERSON_ID, WIGB_Wave2_PERSON_Record> personSubsetW2;
+        HashMap<WIGB_PERSON_ID, WIGB_Wave3_PERSON_Record> personSubsetW3;
+        HashMap<WIGB_PERSON_ID, WIGB_Wave4_PERSON_Record> personSubsetW4;
+        HashMap<WIGB_PERSON_ID, WIGB_Wave5_PERSON_Record> personSubsetW5;
+        WIGB_PERSON_Handler personHandler;
+        personHandler = new WIGB_PERSON_Handler(Env, indir);
+        Object[] o;
+        int wave;
+        // Get lookups and select person data for Waves 1 and Wave 2.
+        wave = 2;
+        o = getLookups(wave, 1, outdir);
+        HashMap<Integer, Integer> tWave2ToWave1HHOLDIDLookup;
+        HashMap<Integer, HashSet<Integer>> tWave1ToWave2HHOLDIDLookup;
+        tWave2ToWave1HHOLDIDLookup = (HashMap<Integer, Integer>) o[0];
+        tWave1ToWave2HHOLDIDLookup = ( HashMap<Integer, HashSet<Integer>>) o[1];
+        //personSubsetW1 = personHandler.loadSubsetWave1(tWave1ToWave2HHOLDIDLookup.keySet());
+        //personSubsetW2 = personHandler.loadSubsetWave2(tWave2ToWave1HHOLDIDLookup.keySet());
+        // Get lookups and select person data for Wave 3.
+        wave = 3;
+        o = getLookups(wave, 1, outdir);
+        HashMap<Integer, Integer> tWave3ToWave1HHOLDIDLookup;
+        HashMap<Integer, HashSet<Integer>> tWave1ToWave3HHOLDIDLookup;
+        tWave3ToWave1HHOLDIDLookup = (HashMap<Integer, Integer>) o[0];
+        tWave1ToWave3HHOLDIDLookup = ( HashMap<Integer, HashSet<Integer>>) o[1];
+        //personSubsetW3 = personHandler.loadSubsetWave3(tWave3ToWave1HHOLDIDLookup.keySet());
+        personHandler.loadSubsetWave3(tWave3ToWave1HHOLDIDLookup.keySet());
+        // Get lookups and select person data for wave 4.
+        wave = 4;
+        o = getLookups(wave, 1, outdir);
+        HashMap<Integer, Integer> tWave4ToWave1HHOLDIDLookup;
+        HashMap<Integer, HashSet<Integer>> tWave1ToWave4HHOLDIDLookup;
+        tWave4ToWave1HHOLDIDLookup = (HashMap<Integer, Integer>) o[0];
+        tWave1ToWave4HHOLDIDLookup = ( HashMap<Integer, HashSet<Integer>>) o[1];
+        //personSubsetW4 = personHandler.loadSubsetWave4(tWave4ToWave1HHOLDIDLookup.keySet());
+        personHandler.loadSubsetWave4(tWave4ToWave1HHOLDIDLookup.keySet());
+        // Get lookups and select person data for wave 5.
+        wave = 5;
+        o = getLookups(wave, 1, outdir);
+        HashMap<Integer, Integer> tWave5ToWave1HHOLDIDLookup;
+        HashMap<Integer, HashSet<Integer>> tWave1ToWave5HHOLDIDLookup;
+        tWave5ToWave1HHOLDIDLookup = (HashMap<Integer, Integer>) o[0];
+        tWave1ToWave5HHOLDIDLookup = ( HashMap<Integer, HashSet<Integer>>) o[1];
+        //personSubsetW5 = personHandler.loadSubsetWave5(tWave5ToWave1HHOLDIDLookup.keySet());
+        personHandler.loadSubsetWave5(tWave5ToWave1HHOLDIDLookup.keySet());
 
         HashMap<Integer, WIGB_Wave1_HHOLD_Record> hholdSubsetW1;
         HashMap<Integer, WIGB_Wave2_HHOLD_Record> hholdSubsetW2;
@@ -102,7 +147,38 @@ public class WIGB_Main_Process extends WIGB_Object {
         } catch (Exception ex) {
             Logger.getLogger(WIGB_Main_Process.class.getName()).log(Level.SEVERE, null, ex);
         }
+        System.out.println("Hurray, can hold all the data to process!");
 
+    }
+
+    public void run2() {
+//        personHandler.loadSubsetWave5(tWave5ToWave1HHOLDIDLookup.keySet());
+//        tWave5ToWave1HHOLDIDLookup = null;
+//        System.gc();
+//        // Load or generate personSubsetW4 subset.
+////        HashMap<WIGB_PERSON_ID, WIGB_Wave4_PERSON_Record> personSubsetW4;
+////        personSubsetW4 = personHandler.loadSubsetWave4(tWave4ToWave1HHOLDIDLookup.keySet());
+//        personHandler.loadSubsetWave4(tWave4ToWave1HHOLDIDLookup.keySet());
+//        tWave4ToWave1HHOLDIDLookup = null;
+//        System.gc();
+//        // Load or generate personSubsetW3 subset.
+////        HashMap<WIGB_PERSON_ID, WIGB_Wave3_PERSON_Record> personSubsetW3;
+////        personSubsetW3 = personHandler.loadSubsetWave3(tWave3ToWave1HHOLDIDLookup.keySet());
+//        personHandler.loadSubsetWave3(tWave3ToWave1HHOLDIDLookup.keySet());
+//        tWave3ToWave1HHOLDIDLookup = null;
+//        System.gc();
+//        // Load or generate personSubsetW2 subset.
+////        HashMap<WIGB_PERSON_ID, WIGB_Wave2_PERSON_Record> personSubsetW2;
+////        personSubsetW2 = personHandler.loadSubsetWave2(tWave2ToWave1HHOLDIDLookup.keySet());
+//        
+//        tWave2ToWave1HHOLDIDLookup = null;
+//        System.gc();
+//        // Load or generate personSubsetW1 subset.
+////        HashMap<WIGB_PERSON_ID, WIGB_Wave1_PERSON_Record> personSubsetW1;
+////        personSubsetW1 = personHandler.loadSubsetWave1(tCASEW1IDsInCASEW2);
+//        personHandler.loadSubsetWave1(tCASEW1IDsInCASEW2);
+//        tCASEW1IDsInCASEW2 = null;
+//        System.gc();
     }
 
     /**
@@ -308,8 +384,7 @@ public class WIGB_Main_Process extends WIGB_Object {
          * Step 5: Wave 1.
          */
         wave = 1;
-        WIGB_PERSON_Handler personHandler;
-        personHandler = new WIGB_PERSON_Handler(Env, indir);
+        
         // Load test or generate hholdSubsetW1 subset.
         try {
             HashMap<Integer, WIGB_Wave1_HHOLD_Record> hholdSubsetW1;
@@ -575,52 +650,22 @@ public class WIGB_Main_Process extends WIGB_Object {
         }
         hholdW5 = null;
 
-        /**
-         * Step 6: Set some things to null to effectively clear some memory.
-         */
-        hholdData = null;
-        iDLists = null;
-        hholdDataW1 = null;
-        iDListsW1 = null;
-        hholdDataW2 = null;
-        hholdW2 = null;
-        iDListsW2 = null;
-        hholdDataW3 = null;
-        hholdW3 = null;
-        iDListsW3 = null;
-        hholdDataW4 = null;
-        hholdW4 = null;
-        iDListsW4 = null;
-        hholdDataW5 = null;
-        hholdW5 = null;
-        iDListsW5 = null;
-
-        /**
-         * Step 7: Get the person records for each household stored in a cache.
-         * These will next be linked to each hhold record.
-         */
-        // Load or generate personSubsetW1 subset.
-//        HashMap<WIGB_PERSON_ID, WIGB_Wave1_PERSON_Record> personSubsetW1;
-//        personSubsetW1 = personHandler.loadSubsetWave1(tCASEW1IDsInCASEW2);
-        personHandler.loadSubsetWave1(tCASEW1IDsInCASEW2);
-        // Load or generate personSubsetW2 subset.
-//        HashMap<WIGB_PERSON_ID, WIGB_Wave2_PERSON_Record> personSubsetW2;
-//        personSubsetW2 = personHandler.loadSubsetWave2(tWave2ToWave1HHOLDIDLookup.keySet());
-        personHandler.loadSubsetWave2(tWave2ToWave1HHOLDIDLookup.keySet());
-        // Load or generate personSubsetW3 subset.
-//        HashMap<WIGB_PERSON_ID, WIGB_Wave3_PERSON_Record> personSubsetW3;
-//        personSubsetW3 = personHandler.loadSubsetWave3(tWave3ToWave1HHOLDIDLookup.keySet());
-        personHandler.loadSubsetWave3(tWave3ToWave1HHOLDIDLookup.keySet());
-        // Load or generate personSubsetW4 subset.
-//        HashMap<WIGB_PERSON_ID, WIGB_Wave4_PERSON_Record> personSubsetW4;
-//        personSubsetW4 = personHandler.loadSubsetWave4(tWave4ToWave1HHOLDIDLookup.keySet());
-        personHandler.loadSubsetWave4(tWave4ToWave1HHOLDIDLookup.keySet());
-        // Load or generate personSubsetW5 subset.
-//        HashMap<WIGB_PERSON_ID, WIGB_Wave5_PERSON_Record> personSubsetW5;
-//        personSubsetW5 = personHandler.loadSubsetWave5(tWave5ToWave1HHOLDIDLookup.keySet());
-        personHandler.loadSubsetWave5(tWave5ToWave1HHOLDIDLookup.keySet());
     }
 
+    protected Object[] getLookups(int wavel, int waveh, File dir) {
+        Object[] r = null;
+        String filename;
+        filename = "Wave" + wavel + "ToFromWave" + waveh + "Lookups." 
+                + Env.Strings.S_dat;
+        File cf;
+        cf = new File(dir, filename);
+        if (cf.exists()) {
+            r = (Object[]) Generic_StaticIO.readObject(cf);
+        }
+            return r;
+    }
+
+    
     boolean doJavaCodeGeneration = false;
     boolean doLoadDataIntoCaches = false;
 }

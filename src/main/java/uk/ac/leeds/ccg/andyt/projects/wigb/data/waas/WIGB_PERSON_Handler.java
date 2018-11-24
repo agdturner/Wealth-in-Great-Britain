@@ -24,6 +24,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_ReadCSV;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_StaticIO;
+import uk.ac.leeds.ccg.andyt.generic.io.Generic_StaticIO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person.WIGB_Wave1_PERSON_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person.WIGB_Wave2_PERSON_Record;
@@ -225,12 +226,8 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
                      * Optimisation using the fact that CASEW3 is the 3763 part
                      * of the string.
                      */
-                    l = line.substring(0, getIndex(line, tab, 3763));
-                    ID = Integer.valueOf(l.substring(0, line.indexOf(tab)));
-                    
-//                    WIGB_Wave3_PERSON_Record rec;
-//                    rec = new WIGB_Wave3_PERSON_Record(line);
-                    
+                    l = line.substring(getIndex(line, tab, 3763));
+                    ID = Integer.valueOf(l.substring(0, getIndex(l, tab, 2)).split(tab)[1]);
                     if (CASEW3IDs.contains(ID)) {
                         WIGB_Wave3_PERSON_Record rec;
                         rec = new WIGB_Wave3_PERSON_Record(line);
@@ -250,7 +247,7 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
     public int getIndex(String line, String del, int n) {
         int r = line.indexOf(del);
         while (--n > 0 && r != -1) {
-            r = line.indexOf(line, r + 1);
+            r = line.indexOf(del, r + 1);
         }
         return r;
     }
@@ -302,12 +299,12 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
                 if (line == null) {
                     read = true;
                 } else {
-                    /**
-                     * Optimisation using the fact that CASEW3 is the 3763 part
+                                        /**
+                     * Optimisation using the fact that CASEW3 is the 2987 part
                      * of the string.
                      */
-                    l = line.substring(0, getIndex(line, tab, 3763));
-                    ID = Integer.valueOf(l.substring(0, line.indexOf(tab)));
+                    l = line.substring(getIndex(line, tab, 2987));
+                    ID = Integer.valueOf(l.substring(0, getIndex(l, tab, 2)).split(tab)[1]);
                     if (CASEW4IDs.contains(ID)) {
                         WIGB_Wave4_PERSON_Record rec;
                         rec = new WIGB_Wave4_PERSON_Record(line);
@@ -376,9 +373,11 @@ public class WIGB_PERSON_Handler extends WIGB_WAAS_Handler {
                     read = true;
                 } else {
                     /**
-                     * Optimisation using the fact that CASEW3 is the 2987 part
+                     * Optimisation using the fact that CASEW5 is the 2987 part
                      * of the string.
                      */
+                    l = line.substring(getIndex(line, tab, 2987));
+                    ID = Integer.valueOf(l.substring(0, getIndex(l, tab, 2)).split(tab)[1]);
                     l = line.substring(0, getIndex(line, tab, 2987));
                     ID = Integer.valueOf(l.substring(0, line.indexOf(tab)));
                     if (CASEW5IDs.contains(ID)) {

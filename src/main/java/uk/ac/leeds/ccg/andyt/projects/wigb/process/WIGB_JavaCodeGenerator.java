@@ -355,7 +355,7 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                 if (integerFields.contains(field)) {
                     pw.println("protected Integer " + field + ";");
                 } else {
-                    pw.println("protected Double " + field + ";");
+                    pw.println("protected double " + field + ";");
                 }
             }
         }
@@ -382,7 +382,7 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                 if (integerFields.contains(field)) {
                     pw.println("public Integer get" + field + "() {");
                 } else {
-                    pw.println("public Double get" + field + "() {");
+                    pw.println("public double get" + field + "() {");
                 }
             }
             pw.println("return " + field + ";");
@@ -420,6 +420,8 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                     pw.println("protected final void init" + field + "(String s) {");
                     pw.println("if (!s.trim().isEmpty()) {");
                     pw.println(field + " = new Double(s);");
+                    pw.println("} else {");
+                    pw.println(field + " = Double.NaN;");
                 }
             }
             pw.println("}");
