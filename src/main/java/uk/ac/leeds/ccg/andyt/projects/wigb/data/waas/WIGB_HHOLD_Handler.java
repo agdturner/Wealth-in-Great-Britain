@@ -69,16 +69,16 @@ public class WIGB_HHOLD_Handler extends WIGB_WAAS_Handler {
      * Loads a specific wave of the hhold WaAS from f. The result r is an
      * Object[] of length 2. r[0] is a HashMap with Integer keys which are the
      * CASE id for the wave and the values are
-     * WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record>. r[1] is an array of HashSets
-     * where: For Wave 5; r[1][0] is a list of CASEW5 values, r[1][1] is a list
-     * of CASEW4 values, r[1][2] is a list of CASEW3 values, r[1][3] is a list
-     * of CASEW2 values, r[1][4] is a list of CASEW1 values. For Wave 4; r[1][0]
-     * is a list of CASEW4 values, r[1][1] is a list of CASEW3 values, r[1][2]
-     * is a list of CASEW2 values, r[1][3] is a list of CASEW1 values. For Wave
-     * 3; r[1][0] is a list of CASEW3 values, r[1][1] is a list of CASEW2
-     * values, r[1][2] is a list of CASEW1 values. For Wave 2; r[1][0] is a list
-     * of CASEW2 values, r[1][1] is a list of CASEW1 values. For Wave 1: r[1][0]
-     * is a list of CASEW1 values.
+     * WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record>. r[1] is an array of HashSets where:
+     * For Wave 5; r[1][0] is a list of CASEW5 values, r[1][1] is a list of
+     * CASEW4 values, r[1][2] is a list of CASEW3 values, r[1][3] is a list of
+     * CASEW2 values, r[1][4] is a list of CASEW1 values. For Wave 4; r[1][0] is
+     * a list of CASEW4 values, r[1][1] is a list of CASEW3 values, r[1][2] is a
+     * list of CASEW2 values, r[1][3] is a list of CASEW1 values. For Wave 3;
+     * r[1][0] is a list of CASEW3 values, r[1][1] is a list of CASEW2 values,
+     * r[1][2] is a list of CASEW1 values. For Wave 2; r[1][0] is a list of
+     * CASEW2 values, r[1][1] is a list of CASEW1 values. For Wave 1: r[1][0] is
+     * a list of CASEW1 values.
      *
      * @param wave
      * @return
@@ -218,7 +218,7 @@ public class WIGB_HHOLD_Handler extends WIGB_WAAS_Handler {
         }
         return r;
     }
-    
+
     public HashMap<Integer, WIGB_Wave1_HHOLD_Record> loadCacheSubsetWave1()
             throws Exception {
         HashMap<Integer, WIGB_Wave1_HHOLD_Record> r;
@@ -234,7 +234,7 @@ public class WIGB_HHOLD_Handler extends WIGB_WAAS_Handler {
         }
         return r;
     }
-    
+
     public HashMap<Integer, WIGB_Wave2_HHOLD_Record> loadCacheSubsetWave2()
             throws Exception {
         HashMap<Integer, WIGB_Wave2_HHOLD_Record> r;

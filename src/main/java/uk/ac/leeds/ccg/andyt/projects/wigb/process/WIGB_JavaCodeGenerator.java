@@ -33,6 +33,8 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Strings;
 import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Object;
+import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_HHOLD_Handler;
+import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WAAS_Handler;
 
 /**
  * This class produces source code for loading survey data. Source code classes
@@ -88,6 +90,259 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
         p.run(type);
         type = "person";
         p.run(type);
+    }
+
+    void run2() {
+        File indir;
+        File outdir;
+        File generateddir;
+        WIGB_HHOLD_Handler hholdHandler;
+
+        indir = Files.getWaASInputDir();
+        generateddir = Files.getGeneratedWaASDirectory();
+        outdir = new File(generateddir, "Subsets");
+        outdir.mkdirs();
+
+        Object[] t;
+        t = loadTest(1, "hhold", indir);
+        boolean[] strings;
+        boolean[] doubles;
+        boolean[] ints;
+        boolean[] shorts;
+        boolean[] bytes;
+        strings = (boolean[]) t[0];
+        doubles = (boolean[]) t[1];
+        ints = (boolean[]) t[2];
+        shorts = (boolean[]) t[3];
+        bytes = (boolean[]) t[4];
+        for (int i = 0; i < strings.length; i++) {
+            if (strings[i]) {
+                System.out.println("" + i + " " + "String");
+            } else {
+                if (doubles[i]) {
+                    System.out.println("" + i + " " + "double");
+                } else {
+                    if (ints[i]) {
+                        System.out.println("" + i + " " + "int");
+                    } else {
+                        if (shorts[i]) {
+                            System.out.println("" + i + " " + "short");
+                        } else {
+                            if (bytes[i]) {
+                                System.out.println("" + i + " " + "byte");
+                            } else {
+                                try {
+                                    throw new Exception("unrecognised type");
+                                } catch (Exception ex) {
+                                    ex.printStackTrace(System.err);
+                                    Logger.getLogger(WIGB_JavaCodeGenerator.class.getName()).log(Level.SEVERE, null, ex);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public Object[] loadTest(int wave, String TYPE, File indir) {
+        Object[] r;
+        r = new Object[5];
+        boolean[] strings;
+        boolean[] doubles;
+        boolean[] ints;
+        boolean[] shorts;
+        boolean[] bytes;
+        File dir;
+        dir = Env.Files.getGeneratedWaASDirectory();
+        File f;
+        f = getInputFile(wave, TYPE, indir);
+        r = new Object[2];
+        System.out.println("<Test load wave " + wave + " " + TYPE + " WaAS "
+                + "data from " + f + ">");
+        BufferedReader br;
+        br = Generic_StaticIO.getBufferedReader(f);
+        StreamTokenizer st;
+        st = new StreamTokenizer(br);
+        Generic_StaticIO.setStreamTokenizerSyntax7(st);
+        int lineNumber;
+        lineNumber = 0;
+        String line;
+        // skip header
+        line = Generic_ReadCSV.readLine(st, null);
+        int n;
+        n = line.split("\t").length;
+        strings = new boolean[n];
+        doubles = new boolean[n];
+        ints = new boolean[n];
+        shorts = new boolean[n];
+        bytes = new boolean[n];
+        for (int i = 0; i < n; i++) {
+            strings[n] = false;
+            doubles[n] = false;
+            ints[n] = false;
+            shorts[n] = false;
+            bytes[n] = true;
+        }
+        String[] split;
+        boolean read;
+        read = false;
+        while (!read) {
+            line = Generic_ReadCSV.readLine(st, null);
+            lineNumber++;
+            if (lineNumber % 1000 == 0) {
+                System.out.println("Test load " + lineNumber + " lines...");
+            }
+            if (line == null) {
+                read = true;
+            } else {
+                line = Generic_ReadCSV.readLine(st, null);
+                split = line.split("\t");
+                for (int i = 0; i < n; i++) {
+                    parse(split[i],i, strings, doubles, ints, shorts, bytes);
+                }
+            }
+        }
+        System.out.println("</Loading wave " + wave + " " + TYPE + " WaAS "
+                + "data from " + f + ">");
+        r[0] = strings;
+        r[1] = doubles;
+        r[2] = ints;
+        r[3] = shorts;
+        r[4] = bytes;
+        return r;
+    }
+
+    public File getInputFile(int wave, String TYPE, File INDIR) {
+        File f;
+        String filename;
+        filename = "was_wave_" + wave + "_" + TYPE + "_eul_final";
+        if (wave < 4) {
+            filename += "_v2";
+        }
+        filename += ".tab";
+        f = new File(INDIR, filename);
+        return f;
+    }
+
+    public boolean canBeStoredAsByte(int i) {
+        if (i > Byte.MIN_VALUE) {
+            if (i < Byte.MAX_VALUE) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void parse(String s, int index, boolean[] strings, boolean[] doubles,
+            boolean[] ints, boolean[] shorts, boolean[] bytes) {
+        if (!strings[index]) {
+            if (doubles[index]) {
+                if (!isDouble(s)) {
+                    doubles[index] = false;
+                    strings[index] = true;
+                } else {
+                    if (ints[index]) {
+                        if (!isInt(s)) {
+                            ints[index] = false;
+                            if (isDouble(s)) {
+                                doubles[index] = true;
+                            } else {
+                                doubles[index] = false;
+                                strings[index] = true;
+                            }
+                        }
+                    }
+                }
+            } else {
+                if (ints[index]) {
+                    if (!isInt(s)) {
+                        ints[index] = false;
+                        if (isDouble(s)) {
+                            doubles[index] = true;
+                        } else {
+                            doubles[index] = false;
+                            strings[index] = true;
+                        }
+                    }
+                } else {
+                    if (shorts[index]) {
+                        if (!isShort(s)) {
+                            shorts[index] = false;
+                            if (ints[index]) {
+                                if (!isInt(s)) {
+                                    ints[index] = false;
+                                    if (isDouble(s)) {
+                                        doubles[index] = true;
+                                    } else {
+                                        doubles[index] = false;
+                                        strings[index] = true;
+                                    }
+                                }
+                            }
+                        }
+                    } else {
+                        if (bytes[index]) {
+                            if (!isByte(s)) {
+                                bytes[index] = false;
+                                if (shorts[index]) {
+                                    if (!isShort(s)) {
+                                        shorts[index] = false;
+                                        if (ints[index]) {
+                                            if (!isInt(s)) {
+                                                ints[index] = false;
+                                                if (isDouble(s)) {
+                                                    doubles[index] = true;
+                                                } else {
+                                                    doubles[index] = false;
+                                                    strings[index] = true;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public boolean isByte(String s) {
+        try {
+            Byte.parseByte(s);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
+
+    public boolean isShort(String s) {
+        try {
+            Short.parseShort(s);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
+
+    public boolean isInt(String s) {
+        try {
+            Integer.parseInt(s);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
+
+    public boolean isDouble(String s) {
+        try {
+            Double.parseDouble(s);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
 
     public void run(String type) {
@@ -214,7 +469,7 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                         extendedClassName = "";
                         break;
                 }
-                printClassDeclarationSerialVersionUID(pw, packageName, 
+                printClassDeclarationSerialVersionUID(pw, packageName,
                         className, "", extendedClassName);
                 // Print Field Declarations Inits And Getters
                 printFieldDeclarationsInitsAndGetters(integerFields,
@@ -238,10 +493,10 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                     className = prepend + "Wave1Or2Or3Or4Or5_" + type + "_Record";
                     fout = new File(outdir, className + ".java");
                     pw = Generic_StaticIO.getPrintWriter(fout, false);
-                    writeHeaderPackageAndImports(pw, packageName, 
+                    writeHeaderPackageAndImports(pw, packageName,
                             "java.io.Serializable");
-                    printClassDeclarationSerialVersionUID(pw, packageName, 
-                        className, "Serializable", "");
+                    printClassDeclarationSerialVersionUID(pw, packageName,
+                            className, "Serializable", "");
                     pw.println("protected String[] s;");
                 } else if (i == (size + 1)) {
                     className = prepend + "Wave1Or2_" + type + "_Record";
@@ -249,7 +504,7 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                     pw = Generic_StaticIO.getPrintWriter(fout, false);
                     writeHeaderPackageAndImports(pw, packageName, "");
                     extendedClassName = prepend + "Wave1Or2Or3Or4Or5_" + type + "_Record";
-                    printClassDeclarationSerialVersionUID(pw, packageName, 
+                    printClassDeclarationSerialVersionUID(pw, packageName,
                             className, "", extendedClassName);
                 } else if (i == (size + 2)) {
                     className = prepend + "Wave3Or4Or5_" + type + "_Record";
@@ -257,7 +512,7 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                     pw = Generic_StaticIO.getPrintWriter(fout, false);
                     writeHeaderPackageAndImports(pw, packageName, "");
                     extendedClassName = prepend + "Wave1Or2Or3Or4Or5_" + type + "_Record";
-                   printClassDeclarationSerialVersionUID(pw, packageName, 
+                    printClassDeclarationSerialVersionUID(pw, packageName,
                             className, "", extendedClassName);
                 } else if (i == (size + 3)) {
                     className = prepend + "Wave4Or5_" + type + "_Record";
@@ -265,7 +520,7 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                     pw = Generic_StaticIO.getPrintWriter(fout, false);
                     writeHeaderPackageAndImports(pw, packageName, "");
                     extendedClassName = prepend + "Wave3Or4Or5_" + type + "_Record";
-                    printClassDeclarationSerialVersionUID(pw, packageName, 
+                    printClassDeclarationSerialVersionUID(pw, packageName,
                             className, "", extendedClassName);
                 }
                 // Print Field Declarations Inits And Getters
@@ -282,7 +537,7 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
      * @param pw
      * @param packageName
      */
-    public void writeHeaderPackageAndImports(PrintWriter pw, 
+    public void writeHeaderPackageAndImports(PrintWriter pw,
             String packageName, String imports) {
         pw.println("/**");
         pw.println(" * Source code generated by " + this.getClass().getName());
@@ -294,12 +549,12 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
     }
 
     /**
-     * 
+     *
      * @param pw
      * @param packageName
      * @param className
      * @param implementations
-     * @param extendedClassName 
+     * @param extendedClassName
      */
     public void printClassDeclarationSerialVersionUID(PrintWriter pw,
             String packageName, String className, String implementations,
@@ -312,10 +567,10 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
             pw.print(" implements " + implementations + " {");
         }
         pw.println();
-        /** This is not included for performance reasons.
-        pw.println("private static final long serialVersionUID = "
-                + serialVersionUID + ";");
-        */
+        /**
+         * This is not included for performance reasons. pw.println("private
+         * static final long serialVersionUID = " + serialVersionUID + ";");
+         */
     }
 
     /**
