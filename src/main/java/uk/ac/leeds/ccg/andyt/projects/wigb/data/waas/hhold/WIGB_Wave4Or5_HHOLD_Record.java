@@ -3,1158 +3,1134 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold;
 public class WIGB_Wave4Or5_HHOLD_Record extends WIGB_Wave3Or4Or5_HHOLD_Record {
-protected double BRIDLN1;
-protected double BRIDLN2;
-protected double BRIDLN3;
-protected Integer CASEW4;
-protected double DVBENEFITANNUAL_AGGR;
-protected double EQVALB_I;
-protected double EQVALB_IFLAG;
-protected double HRPDVAGE;
-protected double HRPDVECACT;
-protected double HRPIOUT1;
-protected double HRPPARTIOUT1;
-protected double MALL1;
-protected double MALL1_I;
-protected double MALL1_IFLAG;
-protected double MALLTY1;
-protected double MALLTY1_I;
-protected double MALLTY1_IFLAG;
-protected double MARR2YR1;
-protected double MARR2YR2;
-protected double MARR2YR3;
-protected double MARRCL01;
-protected double MARRCL02;
-protected double MARRCL12;
-protected double MARRS1;
-protected double MARRSV1;
-protected double MENDNUM1;
-protected double MENDNUM1_I;
-protected double MENDNUM1_IFLAG;
-protected double MENDV1;
-protected double MENDV1_I;
-protected double MENDV1_IFLAG;
-protected double MENDVB1;
-protected double MENDVB11_I;
-protected double MENDVB11_IFLAG;
-protected double MENDVB1_I;
-protected double MENDVB1_IFLAG;
-protected double MENDVB2_I;
-protected double MENDVB2_IFLAG;
-protected double MENDVB3_I;
-protected double MENDVB3_IFLAG;
-protected double MENDVB4_I;
-protected double MENDVB4_IFLAG;
-protected double MENDVB5_I;
-protected double MENDVB5_IFLAG;
-protected double MENDVB6_I;
-protected double MENDVB6_IFLAG;
-protected double MENDVB7_I;
-protected double MENDVB7_IFLAG;
-protected double MENDVB8_I;
-protected double MENDVB8_IFLAG;
-protected double MENDVB9_I;
-protected double MENDVB9_IFLAG;
-protected double MENDW1;
-protected double MENDW1_I;
-protected double MENDW1_IFLAG;
-protected double MENDW3;
-protected double MENDX1;
-protected double MENDY1;
-protected double MHOWPY1;
-protected double MINVW1;
-protected double MINVW2;
-protected double MINVW3;
-protected double MNAME1;
-protected double MNEG1;
-protected double MNEG1_I;
-protected double MNEG1_IFLAG;
-protected double MNEGB1;
-protected double MONAME1;
-protected double MONTHW1;
-protected double MONTHW2;
-protected double MONTHW3;
-protected double MPAYB1;
-protected double MPAYM1;
-protected double MPOLICY1;
-protected double MPOLICY2;
-protected double MPP1;
-protected double MTYPE1;
-protected double MTYPE1_I;
-protected double MTYPE1_IFLAG;
-protected double MVAL1;
-protected double MVAL1_I;
-protected double MVAL1_IFLAG;
-protected double MVALB1;
-protected double MYIFCH1;
-protected double MYLFT1;
-protected double VTYPE1;
-protected double YEARW1;
-protected double YEARW2;
-protected double YEARW3;
+protected boolean BRIDLN1;
+protected boolean BRIDLN2;
+protected boolean BRIDLN3;
+protected short CASEW4;
+protected int DVBENEFITANNUAL_AGGR;
+protected byte EQVALB_I;
+protected boolean EQVALB_IFLAG;
+protected byte HRPDVAGE;
+protected byte HRPDVECACT;
+protected byte HRPIOUT1;
+protected byte HRPPARTIOUT1;
+protected byte MALL1;
+protected byte MALL1_I;
+protected boolean MALL1_IFLAG;
+protected byte MALLTY1;
+protected byte MALLTY1_I;
+protected boolean MALLTY1_IFLAG;
+protected byte MARR2YR1;
+protected byte MARR2YR2;
+protected byte MARR2YR3;
+protected byte MARRCL01;
+protected byte MARRCL02;
+protected byte MARRCL12;
+protected byte MARRS1;
+protected short MARRSV1;
+protected byte MENDNUM1;
+protected byte MENDNUM1_I;
+protected boolean MENDNUM1_IFLAG;
+protected int MENDV1;
+protected int MENDV1_I;
+protected boolean MENDV1_IFLAG;
+protected byte MENDVB1;
+protected boolean MENDVB11_I;
+protected boolean MENDVB11_IFLAG;
+protected byte MENDVB1_I;
+protected boolean MENDVB1_IFLAG;
+protected byte MENDVB2_I;
+protected boolean MENDVB2_IFLAG;
+protected byte MENDVB3_I;
+protected boolean MENDVB3_IFLAG;
+protected byte MENDVB4_I;
+protected boolean MENDVB4_IFLAG;
+protected boolean MENDVB5_I;
+protected boolean MENDVB5_IFLAG;
+protected byte MENDVB6_I;
+protected boolean MENDVB6_IFLAG;
+protected byte MENDVB7_I;
+protected boolean MENDVB7_IFLAG;
+protected boolean MENDVB8_I;
+protected boolean MENDVB8_IFLAG;
+protected boolean MENDVB9_I;
+protected boolean MENDVB9_IFLAG;
+protected byte MENDW1;
+protected byte MENDW1_I;
+protected boolean MENDW1_IFLAG;
+protected byte MENDW3;
+protected byte MENDX1;
+protected byte MENDY1;
+protected byte MHOWPY1;
+protected byte MINVW1;
+protected byte MINVW2;
+protected byte MINVW3;
+protected byte MNAME1;
+protected int MNEG1;
+protected int MNEG1_I;
+protected boolean MNEG1_IFLAG;
+protected byte MNEGB1;
+protected byte MONAME1;
+protected byte MONTHW1;
+protected byte MONTHW2;
+protected byte MONTHW3;
+protected byte MPAYB1;
+protected int MPAYM1;
+protected byte MPOLICY1;
+protected byte MPOLICY2;
+protected byte MPP1;
+protected byte MTYPE1;
+protected byte MTYPE1_I;
+protected boolean MTYPE1_IFLAG;
+protected int MVAL1;
+protected int MVAL1_I;
+protected boolean MVAL1_IFLAG;
+protected byte MVALB1;
+protected byte MYIFCH1;
+protected byte MYLFT1;
+protected byte VTYPE1;
+protected short YEARW1;
+protected short YEARW2;
+protected short YEARW3;
 protected final void initBRIDLN1(String s) {
 if (!s.trim().isEmpty()) {
-BRIDLN1 = new Double(s);
-} else {
-BRIDLN1 = Double.NaN;
+byte b = Byte.parseByte(s);
+BRIDLN1 = false;
 }
 }
 
 protected final void initBRIDLN2(String s) {
 if (!s.trim().isEmpty()) {
-BRIDLN2 = new Double(s);
-} else {
-BRIDLN2 = Double.NaN;
+byte b = Byte.parseByte(s);
+BRIDLN2 = false;
 }
 }
 
 protected final void initBRIDLN3(String s) {
 if (!s.trim().isEmpty()) {
-BRIDLN3 = new Double(s);
-} else {
-BRIDLN3 = Double.NaN;
+byte b = Byte.parseByte(s);
+BRIDLN3 = false;
 }
 }
 
 protected final void initCASEW4(String s) {
 if (!s.trim().isEmpty()) {
-CASEW4 = new Integer(s);
+CASEW4 = Short.parseShort(s);
+} else {
+CASEW4 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDVBENEFITANNUAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVBENEFITANNUAL_AGGR = new Double(s);
+DVBENEFITANNUAL_AGGR = Integer.parseInt(s);
 } else {
-DVBENEFITANNUAL_AGGR = Double.NaN;
+DVBENEFITANNUAL_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initEQVALB_I(String s) {
 if (!s.trim().isEmpty()) {
-EQVALB_I = new Double(s);
+EQVALB_I = Byte.parseByte(s);
 } else {
-EQVALB_I = Double.NaN;
+EQVALB_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEQVALB_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-EQVALB_IFLAG = new Double(s);
-} else {
-EQVALB_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+EQVALB_IFLAG = false;
 }
 }
 
 protected final void initHRPDVAGE(String s) {
 if (!s.trim().isEmpty()) {
-HRPDVAGE = new Double(s);
+HRPDVAGE = Byte.parseByte(s);
 } else {
-HRPDVAGE = Double.NaN;
+HRPDVAGE = Byte.MIN_VALUE;
 }
 }
 
 protected final void initHRPDVECACT(String s) {
 if (!s.trim().isEmpty()) {
-HRPDVECACT = new Double(s);
+HRPDVECACT = Byte.parseByte(s);
 } else {
-HRPDVECACT = Double.NaN;
+HRPDVECACT = Byte.MIN_VALUE;
 }
 }
 
 protected final void initHRPIOUT1(String s) {
 if (!s.trim().isEmpty()) {
-HRPIOUT1 = new Double(s);
+HRPIOUT1 = Byte.parseByte(s);
 } else {
-HRPIOUT1 = Double.NaN;
+HRPIOUT1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initHRPPARTIOUT1(String s) {
 if (!s.trim().isEmpty()) {
-HRPPARTIOUT1 = new Double(s);
+HRPPARTIOUT1 = Byte.parseByte(s);
 } else {
-HRPPARTIOUT1 = Double.NaN;
+HRPPARTIOUT1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMALL1(String s) {
 if (!s.trim().isEmpty()) {
-MALL1 = new Double(s);
+MALL1 = Byte.parseByte(s);
 } else {
-MALL1 = Double.NaN;
+MALL1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMALL1_I(String s) {
 if (!s.trim().isEmpty()) {
-MALL1_I = new Double(s);
+MALL1_I = Byte.parseByte(s);
 } else {
-MALL1_I = Double.NaN;
+MALL1_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMALL1_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-MALL1_IFLAG = new Double(s);
-} else {
-MALL1_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+MALL1_IFLAG = false;
 }
 }
 
 protected final void initMALLTY1(String s) {
 if (!s.trim().isEmpty()) {
-MALLTY1 = new Double(s);
+MALLTY1 = Byte.parseByte(s);
 } else {
-MALLTY1 = Double.NaN;
+MALLTY1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMALLTY1_I(String s) {
 if (!s.trim().isEmpty()) {
-MALLTY1_I = new Double(s);
+MALLTY1_I = Byte.parseByte(s);
 } else {
-MALLTY1_I = Double.NaN;
+MALLTY1_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMALLTY1_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-MALLTY1_IFLAG = new Double(s);
-} else {
-MALLTY1_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+MALLTY1_IFLAG = false;
 }
 }
 
 protected final void initMARR2YR1(String s) {
 if (!s.trim().isEmpty()) {
-MARR2YR1 = new Double(s);
+MARR2YR1 = Byte.parseByte(s);
 } else {
-MARR2YR1 = Double.NaN;
+MARR2YR1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMARR2YR2(String s) {
 if (!s.trim().isEmpty()) {
-MARR2YR2 = new Double(s);
+MARR2YR2 = Byte.parseByte(s);
 } else {
-MARR2YR2 = Double.NaN;
+MARR2YR2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMARR2YR3(String s) {
 if (!s.trim().isEmpty()) {
-MARR2YR3 = new Double(s);
+MARR2YR3 = Byte.parseByte(s);
 } else {
-MARR2YR3 = Double.NaN;
+MARR2YR3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMARRCL01(String s) {
 if (!s.trim().isEmpty()) {
-MARRCL01 = new Double(s);
+MARRCL01 = Byte.parseByte(s);
 } else {
-MARRCL01 = Double.NaN;
+MARRCL01 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMARRCL02(String s) {
 if (!s.trim().isEmpty()) {
-MARRCL02 = new Double(s);
+MARRCL02 = Byte.parseByte(s);
 } else {
-MARRCL02 = Double.NaN;
+MARRCL02 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMARRCL12(String s) {
 if (!s.trim().isEmpty()) {
-MARRCL12 = new Double(s);
+MARRCL12 = Byte.parseByte(s);
 } else {
-MARRCL12 = Double.NaN;
+MARRCL12 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMARRS1(String s) {
 if (!s.trim().isEmpty()) {
-MARRS1 = new Double(s);
+MARRS1 = Byte.parseByte(s);
 } else {
-MARRS1 = Double.NaN;
+MARRS1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMARRSV1(String s) {
 if (!s.trim().isEmpty()) {
-MARRSV1 = new Double(s);
+MARRSV1 = Short.parseShort(s);
 } else {
-MARRSV1 = Double.NaN;
+MARRSV1 = Short.MIN_VALUE;
 }
 }
 
 protected final void initMENDNUM1(String s) {
 if (!s.trim().isEmpty()) {
-MENDNUM1 = new Double(s);
+MENDNUM1 = Byte.parseByte(s);
 } else {
-MENDNUM1 = Double.NaN;
+MENDNUM1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMENDNUM1_I(String s) {
 if (!s.trim().isEmpty()) {
-MENDNUM1_I = new Double(s);
+MENDNUM1_I = Byte.parseByte(s);
 } else {
-MENDNUM1_I = Double.NaN;
+MENDNUM1_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMENDNUM1_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-MENDNUM1_IFLAG = new Double(s);
-} else {
-MENDNUM1_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+MENDNUM1_IFLAG = false;
 }
 }
 
 protected final void initMENDV1(String s) {
 if (!s.trim().isEmpty()) {
-MENDV1 = new Double(s);
+MENDV1 = Integer.parseInt(s);
 } else {
-MENDV1 = Double.NaN;
+MENDV1 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initMENDV1_I(String s) {
 if (!s.trim().isEmpty()) {
-MENDV1_I = new Double(s);
+MENDV1_I = Integer.parseInt(s);
 } else {
-MENDV1_I = Double.NaN;
+MENDV1_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initMENDV1_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-MENDV1_IFLAG = new Double(s);
-} else {
-MENDV1_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+MENDV1_IFLAG = false;
 }
 }
 
 protected final void initMENDVB1(String s) {
 if (!s.trim().isEmpty()) {
-MENDVB1 = new Double(s);
+MENDVB1 = Byte.parseByte(s);
 } else {
-MENDVB1 = Double.NaN;
+MENDVB1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMENDVB11_I(String s) {
 if (!s.trim().isEmpty()) {
-MENDVB11_I = new Double(s);
-} else {
-MENDVB11_I = Double.NaN;
+byte b = Byte.parseByte(s);
+MENDVB11_I = false;
 }
 }
 
 protected final void initMENDVB11_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-MENDVB11_IFLAG = new Double(s);
-} else {
-MENDVB11_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+MENDVB11_IFLAG = false;
 }
 }
 
 protected final void initMENDVB1_I(String s) {
 if (!s.trim().isEmpty()) {
-MENDVB1_I = new Double(s);
+MENDVB1_I = Byte.parseByte(s);
 } else {
-MENDVB1_I = Double.NaN;
+MENDVB1_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMENDVB1_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-MENDVB1_IFLAG = new Double(s);
-} else {
-MENDVB1_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+MENDVB1_IFLAG = false;
 }
 }
 
 protected final void initMENDVB2_I(String s) {
 if (!s.trim().isEmpty()) {
-MENDVB2_I = new Double(s);
+MENDVB2_I = Byte.parseByte(s);
 } else {
-MENDVB2_I = Double.NaN;
+MENDVB2_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMENDVB2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-MENDVB2_IFLAG = new Double(s);
-} else {
-MENDVB2_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+MENDVB2_IFLAG = false;
 }
 }
 
 protected final void initMENDVB3_I(String s) {
 if (!s.trim().isEmpty()) {
-MENDVB3_I = new Double(s);
+MENDVB3_I = Byte.parseByte(s);
 } else {
-MENDVB3_I = Double.NaN;
+MENDVB3_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMENDVB3_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-MENDVB3_IFLAG = new Double(s);
-} else {
-MENDVB3_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+MENDVB3_IFLAG = false;
 }
 }
 
 protected final void initMENDVB4_I(String s) {
 if (!s.trim().isEmpty()) {
-MENDVB4_I = new Double(s);
+MENDVB4_I = Byte.parseByte(s);
 } else {
-MENDVB4_I = Double.NaN;
+MENDVB4_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMENDVB4_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-MENDVB4_IFLAG = new Double(s);
-} else {
-MENDVB4_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+MENDVB4_IFLAG = false;
 }
 }
 
 protected final void initMENDVB5_I(String s) {
 if (!s.trim().isEmpty()) {
-MENDVB5_I = new Double(s);
-} else {
-MENDVB5_I = Double.NaN;
+byte b = Byte.parseByte(s);
+MENDVB5_I = false;
 }
 }
 
 protected final void initMENDVB5_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-MENDVB5_IFLAG = new Double(s);
-} else {
-MENDVB5_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+MENDVB5_IFLAG = false;
 }
 }
 
 protected final void initMENDVB6_I(String s) {
 if (!s.trim().isEmpty()) {
-MENDVB6_I = new Double(s);
+MENDVB6_I = Byte.parseByte(s);
 } else {
-MENDVB6_I = Double.NaN;
+MENDVB6_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMENDVB6_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-MENDVB6_IFLAG = new Double(s);
-} else {
-MENDVB6_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+MENDVB6_IFLAG = false;
 }
 }
 
 protected final void initMENDVB7_I(String s) {
 if (!s.trim().isEmpty()) {
-MENDVB7_I = new Double(s);
+MENDVB7_I = Byte.parseByte(s);
 } else {
-MENDVB7_I = Double.NaN;
+MENDVB7_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMENDVB7_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-MENDVB7_IFLAG = new Double(s);
-} else {
-MENDVB7_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+MENDVB7_IFLAG = false;
 }
 }
 
 protected final void initMENDVB8_I(String s) {
 if (!s.trim().isEmpty()) {
-MENDVB8_I = new Double(s);
-} else {
-MENDVB8_I = Double.NaN;
+byte b = Byte.parseByte(s);
+MENDVB8_I = false;
 }
 }
 
 protected final void initMENDVB8_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-MENDVB8_IFLAG = new Double(s);
-} else {
-MENDVB8_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+MENDVB8_IFLAG = false;
 }
 }
 
 protected final void initMENDVB9_I(String s) {
 if (!s.trim().isEmpty()) {
-MENDVB9_I = new Double(s);
-} else {
-MENDVB9_I = Double.NaN;
+byte b = Byte.parseByte(s);
+MENDVB9_I = false;
 }
 }
 
 protected final void initMENDVB9_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-MENDVB9_IFLAG = new Double(s);
-} else {
-MENDVB9_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+MENDVB9_IFLAG = false;
 }
 }
 
 protected final void initMENDW1(String s) {
 if (!s.trim().isEmpty()) {
-MENDW1 = new Double(s);
+MENDW1 = Byte.parseByte(s);
 } else {
-MENDW1 = Double.NaN;
+MENDW1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMENDW1_I(String s) {
 if (!s.trim().isEmpty()) {
-MENDW1_I = new Double(s);
+MENDW1_I = Byte.parseByte(s);
 } else {
-MENDW1_I = Double.NaN;
+MENDW1_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMENDW1_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-MENDW1_IFLAG = new Double(s);
-} else {
-MENDW1_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+MENDW1_IFLAG = false;
 }
 }
 
 protected final void initMENDW3(String s) {
 if (!s.trim().isEmpty()) {
-MENDW3 = new Double(s);
+MENDW3 = Byte.parseByte(s);
 } else {
-MENDW3 = Double.NaN;
+MENDW3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMENDX1(String s) {
 if (!s.trim().isEmpty()) {
-MENDX1 = new Double(s);
+MENDX1 = Byte.parseByte(s);
 } else {
-MENDX1 = Double.NaN;
+MENDX1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMENDY1(String s) {
 if (!s.trim().isEmpty()) {
-MENDY1 = new Double(s);
+MENDY1 = Byte.parseByte(s);
 } else {
-MENDY1 = Double.NaN;
+MENDY1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMHOWPY1(String s) {
 if (!s.trim().isEmpty()) {
-MHOWPY1 = new Double(s);
+MHOWPY1 = Byte.parseByte(s);
 } else {
-MHOWPY1 = Double.NaN;
+MHOWPY1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMINVW1(String s) {
 if (!s.trim().isEmpty()) {
-MINVW1 = new Double(s);
+MINVW1 = Byte.parseByte(s);
 } else {
-MINVW1 = Double.NaN;
+MINVW1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMINVW2(String s) {
 if (!s.trim().isEmpty()) {
-MINVW2 = new Double(s);
+MINVW2 = Byte.parseByte(s);
 } else {
-MINVW2 = Double.NaN;
+MINVW2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMINVW3(String s) {
 if (!s.trim().isEmpty()) {
-MINVW3 = new Double(s);
+MINVW3 = Byte.parseByte(s);
 } else {
-MINVW3 = Double.NaN;
+MINVW3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMNAME1(String s) {
 if (!s.trim().isEmpty()) {
-MNAME1 = new Double(s);
+MNAME1 = Byte.parseByte(s);
 } else {
-MNAME1 = Double.NaN;
+MNAME1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMNEG1(String s) {
 if (!s.trim().isEmpty()) {
-MNEG1 = new Double(s);
+MNEG1 = Integer.parseInt(s);
 } else {
-MNEG1 = Double.NaN;
+MNEG1 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initMNEG1_I(String s) {
 if (!s.trim().isEmpty()) {
-MNEG1_I = new Double(s);
+MNEG1_I = Integer.parseInt(s);
 } else {
-MNEG1_I = Double.NaN;
+MNEG1_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initMNEG1_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-MNEG1_IFLAG = new Double(s);
-} else {
-MNEG1_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+MNEG1_IFLAG = false;
 }
 }
 
 protected final void initMNEGB1(String s) {
 if (!s.trim().isEmpty()) {
-MNEGB1 = new Double(s);
+MNEGB1 = Byte.parseByte(s);
 } else {
-MNEGB1 = Double.NaN;
+MNEGB1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMONAME1(String s) {
 if (!s.trim().isEmpty()) {
-MONAME1 = new Double(s);
+MONAME1 = Byte.parseByte(s);
 } else {
-MONAME1 = Double.NaN;
+MONAME1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMONTHW1(String s) {
 if (!s.trim().isEmpty()) {
-MONTHW1 = new Double(s);
+MONTHW1 = Byte.parseByte(s);
 } else {
-MONTHW1 = Double.NaN;
+MONTHW1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMONTHW2(String s) {
 if (!s.trim().isEmpty()) {
-MONTHW2 = new Double(s);
+MONTHW2 = Byte.parseByte(s);
 } else {
-MONTHW2 = Double.NaN;
+MONTHW2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMONTHW3(String s) {
 if (!s.trim().isEmpty()) {
-MONTHW3 = new Double(s);
+MONTHW3 = Byte.parseByte(s);
 } else {
-MONTHW3 = Double.NaN;
+MONTHW3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMPAYB1(String s) {
 if (!s.trim().isEmpty()) {
-MPAYB1 = new Double(s);
+MPAYB1 = Byte.parseByte(s);
 } else {
-MPAYB1 = Double.NaN;
+MPAYB1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMPAYM1(String s) {
 if (!s.trim().isEmpty()) {
-MPAYM1 = new Double(s);
+MPAYM1 = Integer.parseInt(s);
 } else {
-MPAYM1 = Double.NaN;
+MPAYM1 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initMPOLICY1(String s) {
 if (!s.trim().isEmpty()) {
-MPOLICY1 = new Double(s);
+MPOLICY1 = Byte.parseByte(s);
 } else {
-MPOLICY1 = Double.NaN;
+MPOLICY1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMPOLICY2(String s) {
 if (!s.trim().isEmpty()) {
-MPOLICY2 = new Double(s);
+MPOLICY2 = Byte.parseByte(s);
 } else {
-MPOLICY2 = Double.NaN;
+MPOLICY2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMPP1(String s) {
 if (!s.trim().isEmpty()) {
-MPP1 = new Double(s);
+MPP1 = Byte.parseByte(s);
 } else {
-MPP1 = Double.NaN;
+MPP1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMTYPE1(String s) {
 if (!s.trim().isEmpty()) {
-MTYPE1 = new Double(s);
+MTYPE1 = Byte.parseByte(s);
 } else {
-MTYPE1 = Double.NaN;
+MTYPE1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMTYPE1_I(String s) {
 if (!s.trim().isEmpty()) {
-MTYPE1_I = new Double(s);
+MTYPE1_I = Byte.parseByte(s);
 } else {
-MTYPE1_I = Double.NaN;
+MTYPE1_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMTYPE1_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-MTYPE1_IFLAG = new Double(s);
-} else {
-MTYPE1_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+MTYPE1_IFLAG = false;
 }
 }
 
 protected final void initMVAL1(String s) {
 if (!s.trim().isEmpty()) {
-MVAL1 = new Double(s);
+MVAL1 = Integer.parseInt(s);
 } else {
-MVAL1 = Double.NaN;
+MVAL1 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initMVAL1_I(String s) {
 if (!s.trim().isEmpty()) {
-MVAL1_I = new Double(s);
+MVAL1_I = Integer.parseInt(s);
 } else {
-MVAL1_I = Double.NaN;
+MVAL1_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initMVAL1_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-MVAL1_IFLAG = new Double(s);
-} else {
-MVAL1_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+MVAL1_IFLAG = false;
 }
 }
 
 protected final void initMVALB1(String s) {
 if (!s.trim().isEmpty()) {
-MVALB1 = new Double(s);
+MVALB1 = Byte.parseByte(s);
 } else {
-MVALB1 = Double.NaN;
+MVALB1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMYIFCH1(String s) {
 if (!s.trim().isEmpty()) {
-MYIFCH1 = new Double(s);
+MYIFCH1 = Byte.parseByte(s);
 } else {
-MYIFCH1 = Double.NaN;
+MYIFCH1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMYLFT1(String s) {
 if (!s.trim().isEmpty()) {
-MYLFT1 = new Double(s);
+MYLFT1 = Byte.parseByte(s);
 } else {
-MYLFT1 = Double.NaN;
+MYLFT1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initVTYPE1(String s) {
 if (!s.trim().isEmpty()) {
-VTYPE1 = new Double(s);
+VTYPE1 = Byte.parseByte(s);
 } else {
-VTYPE1 = Double.NaN;
+VTYPE1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initYEARW1(String s) {
 if (!s.trim().isEmpty()) {
-YEARW1 = new Double(s);
+YEARW1 = Short.parseShort(s);
 } else {
-YEARW1 = Double.NaN;
+YEARW1 = Short.MIN_VALUE;
 }
 }
 
 protected final void initYEARW2(String s) {
 if (!s.trim().isEmpty()) {
-YEARW2 = new Double(s);
+YEARW2 = Short.parseShort(s);
 } else {
-YEARW2 = Double.NaN;
+YEARW2 = Short.MIN_VALUE;
 }
 }
 
 protected final void initYEARW3(String s) {
 if (!s.trim().isEmpty()) {
-YEARW3 = new Double(s);
+YEARW3 = Short.parseShort(s);
 } else {
-YEARW3 = Double.NaN;
+YEARW3 = Short.MIN_VALUE;
 }
 }
 
-public double getBRIDLN1() {
+public boolean getBRIDLN1() {
 return BRIDLN1;
 }
 
-public double getBRIDLN2() {
+public boolean getBRIDLN2() {
 return BRIDLN2;
 }
 
-public double getBRIDLN3() {
+public boolean getBRIDLN3() {
 return BRIDLN3;
 }
 
-public Integer getCASEW4() {
+public short getCASEW4() {
 return CASEW4;
 }
 
-public double getDVBENEFITANNUAL_AGGR() {
+public int getDVBENEFITANNUAL_AGGR() {
 return DVBENEFITANNUAL_AGGR;
 }
 
-public double getEQVALB_I() {
+public byte getEQVALB_I() {
 return EQVALB_I;
 }
 
-public double getEQVALB_IFLAG() {
+public boolean getEQVALB_IFLAG() {
 return EQVALB_IFLAG;
 }
 
-public double getHRPDVAGE() {
+public byte getHRPDVAGE() {
 return HRPDVAGE;
 }
 
-public double getHRPDVECACT() {
+public byte getHRPDVECACT() {
 return HRPDVECACT;
 }
 
-public double getHRPIOUT1() {
+public byte getHRPIOUT1() {
 return HRPIOUT1;
 }
 
-public double getHRPPARTIOUT1() {
+public byte getHRPPARTIOUT1() {
 return HRPPARTIOUT1;
 }
 
-public double getMALL1() {
+public byte getMALL1() {
 return MALL1;
 }
 
-public double getMALL1_I() {
+public byte getMALL1_I() {
 return MALL1_I;
 }
 
-public double getMALL1_IFLAG() {
+public boolean getMALL1_IFLAG() {
 return MALL1_IFLAG;
 }
 
-public double getMALLTY1() {
+public byte getMALLTY1() {
 return MALLTY1;
 }
 
-public double getMALLTY1_I() {
+public byte getMALLTY1_I() {
 return MALLTY1_I;
 }
 
-public double getMALLTY1_IFLAG() {
+public boolean getMALLTY1_IFLAG() {
 return MALLTY1_IFLAG;
 }
 
-public double getMARR2YR1() {
+public byte getMARR2YR1() {
 return MARR2YR1;
 }
 
-public double getMARR2YR2() {
+public byte getMARR2YR2() {
 return MARR2YR2;
 }
 
-public double getMARR2YR3() {
+public byte getMARR2YR3() {
 return MARR2YR3;
 }
 
-public double getMARRCL01() {
+public byte getMARRCL01() {
 return MARRCL01;
 }
 
-public double getMARRCL02() {
+public byte getMARRCL02() {
 return MARRCL02;
 }
 
-public double getMARRCL12() {
+public byte getMARRCL12() {
 return MARRCL12;
 }
 
-public double getMARRS1() {
+public byte getMARRS1() {
 return MARRS1;
 }
 
-public double getMARRSV1() {
+public short getMARRSV1() {
 return MARRSV1;
 }
 
-public double getMENDNUM1() {
+public byte getMENDNUM1() {
 return MENDNUM1;
 }
 
-public double getMENDNUM1_I() {
+public byte getMENDNUM1_I() {
 return MENDNUM1_I;
 }
 
-public double getMENDNUM1_IFLAG() {
+public boolean getMENDNUM1_IFLAG() {
 return MENDNUM1_IFLAG;
 }
 
-public double getMENDV1() {
+public int getMENDV1() {
 return MENDV1;
 }
 
-public double getMENDV1_I() {
+public int getMENDV1_I() {
 return MENDV1_I;
 }
 
-public double getMENDV1_IFLAG() {
+public boolean getMENDV1_IFLAG() {
 return MENDV1_IFLAG;
 }
 
-public double getMENDVB1() {
+public byte getMENDVB1() {
 return MENDVB1;
 }
 
-public double getMENDVB11_I() {
+public boolean getMENDVB11_I() {
 return MENDVB11_I;
 }
 
-public double getMENDVB11_IFLAG() {
+public boolean getMENDVB11_IFLAG() {
 return MENDVB11_IFLAG;
 }
 
-public double getMENDVB1_I() {
+public byte getMENDVB1_I() {
 return MENDVB1_I;
 }
 
-public double getMENDVB1_IFLAG() {
+public boolean getMENDVB1_IFLAG() {
 return MENDVB1_IFLAG;
 }
 
-public double getMENDVB2_I() {
+public byte getMENDVB2_I() {
 return MENDVB2_I;
 }
 
-public double getMENDVB2_IFLAG() {
+public boolean getMENDVB2_IFLAG() {
 return MENDVB2_IFLAG;
 }
 
-public double getMENDVB3_I() {
+public byte getMENDVB3_I() {
 return MENDVB3_I;
 }
 
-public double getMENDVB3_IFLAG() {
+public boolean getMENDVB3_IFLAG() {
 return MENDVB3_IFLAG;
 }
 
-public double getMENDVB4_I() {
+public byte getMENDVB4_I() {
 return MENDVB4_I;
 }
 
-public double getMENDVB4_IFLAG() {
+public boolean getMENDVB4_IFLAG() {
 return MENDVB4_IFLAG;
 }
 
-public double getMENDVB5_I() {
+public boolean getMENDVB5_I() {
 return MENDVB5_I;
 }
 
-public double getMENDVB5_IFLAG() {
+public boolean getMENDVB5_IFLAG() {
 return MENDVB5_IFLAG;
 }
 
-public double getMENDVB6_I() {
+public byte getMENDVB6_I() {
 return MENDVB6_I;
 }
 
-public double getMENDVB6_IFLAG() {
+public boolean getMENDVB6_IFLAG() {
 return MENDVB6_IFLAG;
 }
 
-public double getMENDVB7_I() {
+public byte getMENDVB7_I() {
 return MENDVB7_I;
 }
 
-public double getMENDVB7_IFLAG() {
+public boolean getMENDVB7_IFLAG() {
 return MENDVB7_IFLAG;
 }
 
-public double getMENDVB8_I() {
+public boolean getMENDVB8_I() {
 return MENDVB8_I;
 }
 
-public double getMENDVB8_IFLAG() {
+public boolean getMENDVB8_IFLAG() {
 return MENDVB8_IFLAG;
 }
 
-public double getMENDVB9_I() {
+public boolean getMENDVB9_I() {
 return MENDVB9_I;
 }
 
-public double getMENDVB9_IFLAG() {
+public boolean getMENDVB9_IFLAG() {
 return MENDVB9_IFLAG;
 }
 
-public double getMENDW1() {
+public byte getMENDW1() {
 return MENDW1;
 }
 
-public double getMENDW1_I() {
+public byte getMENDW1_I() {
 return MENDW1_I;
 }
 
-public double getMENDW1_IFLAG() {
+public boolean getMENDW1_IFLAG() {
 return MENDW1_IFLAG;
 }
 
-public double getMENDW3() {
+public byte getMENDW3() {
 return MENDW3;
 }
 
-public double getMENDX1() {
+public byte getMENDX1() {
 return MENDX1;
 }
 
-public double getMENDY1() {
+public byte getMENDY1() {
 return MENDY1;
 }
 
-public double getMHOWPY1() {
+public byte getMHOWPY1() {
 return MHOWPY1;
 }
 
-public double getMINVW1() {
+public byte getMINVW1() {
 return MINVW1;
 }
 
-public double getMINVW2() {
+public byte getMINVW2() {
 return MINVW2;
 }
 
-public double getMINVW3() {
+public byte getMINVW3() {
 return MINVW3;
 }
 
-public double getMNAME1() {
+public byte getMNAME1() {
 return MNAME1;
 }
 
-public double getMNEG1() {
+public int getMNEG1() {
 return MNEG1;
 }
 
-public double getMNEG1_I() {
+public int getMNEG1_I() {
 return MNEG1_I;
 }
 
-public double getMNEG1_IFLAG() {
+public boolean getMNEG1_IFLAG() {
 return MNEG1_IFLAG;
 }
 
-public double getMNEGB1() {
+public byte getMNEGB1() {
 return MNEGB1;
 }
 
-public double getMONAME1() {
+public byte getMONAME1() {
 return MONAME1;
 }
 
-public double getMONTHW1() {
+public byte getMONTHW1() {
 return MONTHW1;
 }
 
-public double getMONTHW2() {
+public byte getMONTHW2() {
 return MONTHW2;
 }
 
-public double getMONTHW3() {
+public byte getMONTHW3() {
 return MONTHW3;
 }
 
-public double getMPAYB1() {
+public byte getMPAYB1() {
 return MPAYB1;
 }
 
-public double getMPAYM1() {
+public int getMPAYM1() {
 return MPAYM1;
 }
 
-public double getMPOLICY1() {
+public byte getMPOLICY1() {
 return MPOLICY1;
 }
 
-public double getMPOLICY2() {
+public byte getMPOLICY2() {
 return MPOLICY2;
 }
 
-public double getMPP1() {
+public byte getMPP1() {
 return MPP1;
 }
 
-public double getMTYPE1() {
+public byte getMTYPE1() {
 return MTYPE1;
 }
 
-public double getMTYPE1_I() {
+public byte getMTYPE1_I() {
 return MTYPE1_I;
 }
 
-public double getMTYPE1_IFLAG() {
+public boolean getMTYPE1_IFLAG() {
 return MTYPE1_IFLAG;
 }
 
-public double getMVAL1() {
+public int getMVAL1() {
 return MVAL1;
 }
 
-public double getMVAL1_I() {
+public int getMVAL1_I() {
 return MVAL1_I;
 }
 
-public double getMVAL1_IFLAG() {
+public boolean getMVAL1_IFLAG() {
 return MVAL1_IFLAG;
 }
 
-public double getMVALB1() {
+public byte getMVALB1() {
 return MVALB1;
 }
 
-public double getMYIFCH1() {
+public byte getMYIFCH1() {
 return MYIFCH1;
 }
 
-public double getMYLFT1() {
+public byte getMYLFT1() {
 return MYLFT1;
 }
 
-public double getVTYPE1() {
+public byte getVTYPE1() {
 return VTYPE1;
 }
 
-public double getYEARW1() {
+public short getYEARW1() {
 return YEARW1;
 }
 
-public double getYEARW2() {
+public short getYEARW2() {
 return YEARW2;
 }
 
-public double getYEARW3() {
+public short getYEARW3() {
 return YEARW3;
 }
 

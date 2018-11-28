@@ -3,258 +3,262 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold;
 public class WIGB_Wave3Or4Or5_HHOLD_Record extends WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record {
-protected double BUYLGDST_SUM;
-protected Integer CASEW2;
-protected Integer CASEW3;
-protected double DVBLDDEBT_SUM;
-protected double DVBLDVAL_SUM;
-protected double DVBLTDEBT_SUM;
-protected double DVBLTVAL_SUM;
+protected int BUYLGDST_SUM;
+protected short CASEW2;
+protected short CASEW3;
+protected int DVBLDDEBT_SUM;
+protected int DVBLDVAL_SUM;
+protected int DVBLTDEBT_SUM;
+protected int DVBLTVAL_SUM;
 protected double DVCACRVAL_AGGR;
-protected double DVCACTV_AGGR;
-protected double DVCAODVAL_AGGR;
-protected double DVCASVV_AGGR;
+protected int DVCACTV_AGGR;
+protected int DVCAODVAL_AGGR;
+protected int DVCASVV_AGGR;
 protected double DVCAVAL_AGGR;
-protected double DVCISAV_AGGR;
+protected int DVCISAV_AGGR;
 protected double DVDBRWEALTHVAL_AGGR;
-protected double DVEQLTM;
-protected double DVEQPRUN;
-protected double DVEQSRB;
-protected double DVERECGROSSANNUAL;
-protected double DVERECNETANNUAL;
-protected double DVERVRECGROSSANNUAL;
-protected double DVERVRECNETANNUAL;
-protected double DVFBONDV_AGGR;
-protected double DVFCOLLV_AGGR;
-protected double DVFEOPTV_AGGR;
-protected double DVFESHARES_AGGR;
-protected double DVFESHAV_AGGR;
+protected int DVEQLTM;
+protected int DVEQPRUN;
+protected int DVEQSRB;
+protected int DVERECGROSSANNUAL;
+protected short DVERECNETANNUAL;
+protected short DVERVRECGROSSANNUAL;
+protected short DVERVRECNETANNUAL;
+protected int DVFBONDV_AGGR;
+protected int DVFCOLLV_AGGR;
+protected int DVFEOPTV_AGGR;
+protected int DVFESHARES_AGGR;
+protected int DVFESHAV_AGGR;
 protected double DVFFASSETS_AGGR;
-protected double DVFGLTFOV_AGGR;
-protected double DVFGLTUKV_AGGR;
-protected double DVFINFLV_AGGR;
-protected double DVFINFVAL_AGGR;
-protected double DVFINFV_AGGR;
-protected double DVFINVOTV_AGGR;
-protected double DVFLFENV_AGGR;
-protected double DVFLFFSV_AGGR;
-protected double DVFLFSIV_AGGR;
-protected double DVFLFTEV_AGGR;
-protected double DVFNSVAL_AGGR;
-protected double DVFSHOSV_AGGR;
-protected double DVFSHUKV_AGGR;
-protected double DVGIEMP_AGGR;
-protected double DVGIINV_AGGR;
-protected double DVGIOTHR_AGGR;
-protected double DVGIPPEN_AGGR;
-protected double DVGISE_AGGR;
-protected double DVGRSRENTAMTANNUAL_AGGR;
-protected double DVHSEDEBT_SUM;
-protected double DVHSEVAL_SUM;
-protected double DVIISAV_AGGR;
-protected double DVINSV_AGGR;
-protected double DVISAVAL_AGGR;
-protected double DVKISAV_AGGR;
-protected double DVLOSDEBT_SUM;
-protected double DVLOSVAL_SUM;
-protected double DVLUKDEBT_SUM;
-protected double DVLUKVAL_SUM;
-protected double DVNETRENTAMTANNUAL_AGGR;
-protected double DVNIEMP_AGGR;
-protected double DVNIINV_AGGR;
-protected double DVNIOTHI_AGGR;
-protected double DVNIOTHR_AGGR;
-protected double DVNIPPEN_AGGR;
+protected int DVFGLTFOV_AGGR;
+protected int DVFGLTUKV_AGGR;
+protected int DVFINFLV_AGGR;
+protected int DVFINFVAL_AGGR;
+protected int DVFINFV_AGGR;
+protected int DVFINVOTV_AGGR;
+protected int DVFLFENV_AGGR;
+protected int DVFLFFSV_AGGR;
+protected int DVFLFSIV_AGGR;
+protected int DVFLFTEV_AGGR;
+protected int DVFNSVAL_AGGR;
+protected int DVFSHOSV_AGGR;
+protected int DVFSHUKV_AGGR;
+protected int DVGIEMP_AGGR;
+protected int DVGIINV_AGGR;
+protected int DVGIOTHR_AGGR;
+protected int DVGIPPEN_AGGR;
+protected int DVGISE_AGGR;
+protected int DVGRSRENTAMTANNUAL_AGGR;
+protected int DVHSEDEBT_SUM;
+protected int DVHSEVAL_SUM;
+protected int DVIISAV_AGGR;
+protected int DVINSV_AGGR;
+protected int DVISAVAL_AGGR;
+protected int DVKISAV_AGGR;
+protected int DVLOSDEBT_SUM;
+protected int DVLOSVAL_SUM;
+protected int DVLUKDEBT_SUM;
+protected int DVLUKVAL_SUM;
+protected int DVNETRENTAMTANNUAL_AGGR;
+protected int DVNIEMP_AGGR;
+protected int DVNIINV_AGGR;
+protected int DVNIOTHI_AGGR;
+protected int DVNIOTHR_AGGR;
+protected int DVNIPPEN_AGGR;
 protected double DVNISE_AGGR;
-protected double DVOIGEGANNUAL_AGGR;
-protected double DVOIGFRANNUAL_AGGR;
-protected double DVOIGGTANNUAL_AGGR;
-protected double DVOIGMAANNUAL_AGGR;
-protected double DVOIGOPANNUAL_AGGR;
-protected double DVOIGROANNUAL_AGGR;
-protected double DVOIGRRANNUAL_AGGR;
-protected double DVOINEGANNUAL_AGGR;
-protected double DVOINFRANNUAL_AGGR;
-protected double DVOINGTANNUAL_AGGR;
-protected double DVOINMAANNUAL_AGGR;
-protected double DVOINOPANNUAL_AGGR;
-protected double DVOINROANNUAL_AGGR;
-protected double DVOINRRANNUAL_AGGR;
-protected double DVOPRDEBT_SUM;
-protected double DVOPRVAL_SUM;
-protected double DVPAVCUV_AGGR;
-protected double DVPFCURVAL_AGGR;
-protected double DVPFDDV_AGGR;
+protected int DVOIGEGANNUAL_AGGR;
+protected int DVOIGFRANNUAL_AGGR;
+protected short DVOIGGTANNUAL_AGGR;
+protected int DVOIGMAANNUAL_AGGR;
+protected int DVOIGOPANNUAL_AGGR;
+protected int DVOIGROANNUAL_AGGR;
+protected int DVOIGRRANNUAL_AGGR;
+protected int DVOINEGANNUAL_AGGR;
+protected int DVOINFRANNUAL_AGGR;
+protected short DVOINGTANNUAL_AGGR;
+protected int DVOINMAANNUAL_AGGR;
+protected int DVOINOPANNUAL_AGGR;
+protected int DVOINROANNUAL_AGGR;
+protected int DVOINRRANNUAL_AGGR;
+protected int DVOPRDEBT_SUM;
+protected int DVOPRVAL_SUM;
+protected int DVPAVCUV_AGGR;
+protected int DVPFCURVAL_AGGR;
+protected int DVPFDDV_AGGR;
 protected double DVPINPVAL_AGGR;
-protected double DVPPVAL_AGGR;
-protected double DVSAVAL_AGGR;
+protected int DVPPVAL_AGGR;
+protected int DVSAVAL_AGGR;
 protected double DVSPEN_AGGR;
 protected double DVTOTGIR;
-protected double DVTOTNIR;
+protected int DVTOTNIR;
 protected double DVVALDBT_AGGR;
 protected double DVVALDCOS_AGGR;
-protected double EINT;
-protected double EINTFIX;
-protected double EINT_I;
-protected double EINT_IFLAG;
-protected double EMSARR;
-protected double EMSPAY;
-protected double EQDRAW;
-protected double EQDRAW_I;
-protected double EQDRAW_IFLAG;
-protected double EQNEW;
-protected double EQOLD;
-protected double EQTYPE1;
-protected double EQTYPE1_I;
-protected double EQTYPE1_IFLAG;
-protected double EQTYPE2;
-protected double EQUITY_YN_I;
-protected double EQUITY_YN_IFLAG;
-protected double EQVALDR;
-protected double EQVALDRB;
-protected double EQWHENM;
-protected double EQWHENY;
-protected double EREC;
-protected double ERECMBY;
-protected double ERECMPD;
-protected double ERVRECBY;
-protected double ERVRECPD;
-protected double ERVREG1;
-protected double ERVREG2;
-protected double ESHARAPP;
-protected double FRREPFIX;
-protected double GCONTVLS;
-protected double HEXT1;
-protected double HEXT2;
-protected double HEXT3;
-protected double HEXT4;
+protected byte EINT;
+protected byte EINTFIX;
+protected byte EINT_I;
+protected boolean EINT_IFLAG;
+protected boolean EMSARR;
+protected boolean EMSPAY;
+protected byte EQDRAW;
+protected byte EQDRAW_I;
+protected boolean EQDRAW_IFLAG;
+protected byte EQNEW;
+protected byte EQOLD;
+protected byte EQTYPE1;
+protected byte EQTYPE1_I;
+protected boolean EQTYPE1_IFLAG;
+protected boolean EQTYPE2;
+protected byte EQUITY_YN_I;
+protected boolean EQUITY_YN_IFLAG;
+protected int EQVALDR;
+protected byte EQVALDRB;
+protected byte EQWHENM;
+protected short EQWHENY;
+protected byte EREC;
+protected boolean ERECMBY;
+protected byte ERECMPD;
+protected boolean ERVRECBY;
+protected byte ERVRECPD;
+protected byte ERVREG1;
+protected boolean ERVREG2;
+protected int ESHARAPP;
+protected int FRREPFIX;
+protected int GCONTVLS;
+protected byte HEXT1;
+protected byte HEXT2;
+protected byte HEXT3;
+protected byte HEXT4;
 protected double HFINL_AGGR;
 protected double HFINW_EXCENDW_AGGR;
-protected double HOUSGDSOST_SUM;
-protected double MARRSV2;
-protected double MARRSV3;
-protected double MCHGE;
-protected double MCHGENUM;
-protected double MENDNUM3_I;
-protected double MENDNUM3_IFLAG;
-protected double MENDV5_I;
-protected double MENDV5_IFLAG;
-protected double MENDV7_I;
-protected double MENDV7_IFLAG;
-protected double MENDW2;
-protected double MEXTN;
-protected double MEXTRS1;
-protected double MEXTRS2;
-protected double MEXTRS3;
-protected double MNUMBN;
-protected double MNUMBO;
-protected double MNUMB_I;
-protected double MNUMB_IFLAG;
-protected double MREAS14;
-protected double MREAS24;
-protected double MW2CHK1;
-protected double MW2CHK2;
-protected double MW2CHK3;
-protected double MYIFCH2;
-protected double MYIFCH3;
-protected double NOUNITS;
-protected double NUMDEPCH;
-protected double NUMELCH;
-protected double NUMNOELCH;
-protected double OTHMORT_SUM;
-protected double PHYSBUYLGDST_AGGR;
-protected double PHYSHOUSGDSOST_AGGR;
-protected double PHYSHOUSGDST_AGGR;
-protected double PRREPAY;
-protected double PRREPAY_I;
-protected double PRREPAY_IFLAG;
-protected double PRREPFIX;
-protected double PRREPFIX_I;
-protected double PRREPFIX_IFLAG;
+protected int HOUSGDSOST_SUM;
+protected int MARRSV2;
+protected short MARRSV3;
+protected byte MCHGE;
+protected byte MCHGENUM;
+protected boolean MENDNUM3_I;
+protected boolean MENDNUM3_IFLAG;
+protected int MENDV5_I;
+protected boolean MENDV5_IFLAG;
+protected int MENDV7_I;
+protected boolean MENDV7_IFLAG;
+protected byte MENDW2;
+protected byte MEXTN;
+protected byte MEXTRS1;
+protected byte MEXTRS2;
+protected byte MEXTRS3;
+protected byte MNUMBN;
+protected byte MNUMBO;
+protected byte MNUMB_I;
+protected boolean MNUMB_IFLAG;
+protected byte MREAS14;
+protected byte MREAS24;
+protected byte MW2CHK1;
+protected byte MW2CHK2;
+protected byte MW2CHK3;
+protected byte MYIFCH2;
+protected byte MYIFCH3;
+protected byte NOUNITS;
+protected byte NUMDEPCH;
+protected byte NUMELCH;
+protected byte NUMNOELCH;
+protected int OTHMORT_SUM;
+protected boolean PHYSBUYLGDST_AGGR;
+protected boolean PHYSHOUSGDSOST_AGGR;
+protected boolean PHYSHOUSGDST_AGGR;
+protected byte PRREPAY;
+protected byte PRREPAY_I;
+protected boolean PRREPAY_IFLAG;
+protected int PRREPFIX;
+protected int PRREPFIX_I;
+protected boolean PRREPFIX_IFLAG;
 protected double PRREPPC;
 protected double PRREPPC_I;
-protected double PRREPPC_IFLAG;
+protected boolean PRREPPC_IFLAG;
 protected double SHARAPP;
-protected double TOTARR_EXCMORT_AGGR;
-protected double TOTBILLARR_AGGR;
-protected double TOTCC_AGGR;
-protected double TOTDVNWFLN_AGGR;
-protected double TOTDVNWILN_AGGR;
+protected short TOTARR_EXCMORT_AGGR;
+protected short TOTBILLARR_AGGR;
+protected int TOTCC_AGGR;
+protected int TOTDVNWFLN_AGGR;
+protected int TOTDVNWILN_AGGR;
 protected double TOTFLNS_AGGR;
-protected double TOTHPARR_AGGR;
+protected short TOTHPARR_AGGR;
 protected double TOTHP_AGGR;
-protected double TOTLNARR_AGGR;
+protected short TOTLNARR_AGGR;
 protected double TOTLNS_AGGR;
 protected double TOTLOS_AGGR;
-protected double TOTMOARR_AGGR;
+protected short TOTMOARR_AGGR;
 protected double TOTMO_AGGR;
-protected double TOTNLOS_AGGR;
-protected double TOTNSLBNK_AGGR;
-protected double TOTNSLC_AGGR;
-protected double TOTOSLBNK_AGGR;
-protected double TOTOSLC_AGGR;
+protected int TOTNLOS_AGGR;
+protected int TOTNSLBNK_AGGR;
+protected int TOTNSLC_AGGR;
+protected int TOTOSLBNK_AGGR;
+protected int TOTOSLC_AGGR;
 protected double TOTPEN_AGGR;
-protected double TOTSC_AGGR;
-protected double TOTSLBNK_AGGR;
-protected double TOTSLC_AGGR;
-protected double VOTPN;
-protected double VPERS_I;
-protected double VPERS_IFLAG;
+protected short TOTSC_AGGR;
+protected int TOTSLBNK_AGGR;
+protected int TOTSLC_AGGR;
+protected byte VOTPN;
+protected byte VPERS_I;
+protected boolean VPERS_IFLAG;
 protected final void initBUYLGDST_SUM(String s) {
 if (!s.trim().isEmpty()) {
-BUYLGDST_SUM = new Double(s);
+BUYLGDST_SUM = Integer.parseInt(s);
 } else {
-BUYLGDST_SUM = Double.NaN;
+BUYLGDST_SUM = Integer.MIN_VALUE;
 }
 }
 
 protected final void initCASEW2(String s) {
 if (!s.trim().isEmpty()) {
-CASEW2 = new Integer(s);
+CASEW2 = Short.parseShort(s);
+} else {
+CASEW2 = Short.MIN_VALUE;
 }
 }
 
 protected final void initCASEW3(String s) {
 if (!s.trim().isEmpty()) {
-CASEW3 = new Integer(s);
+CASEW3 = Short.parseShort(s);
+} else {
+CASEW3 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDVBLDDEBT_SUM(String s) {
 if (!s.trim().isEmpty()) {
-DVBLDDEBT_SUM = new Double(s);
+DVBLDDEBT_SUM = Integer.parseInt(s);
 } else {
-DVBLDDEBT_SUM = Double.NaN;
+DVBLDDEBT_SUM = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVBLDVAL_SUM(String s) {
 if (!s.trim().isEmpty()) {
-DVBLDVAL_SUM = new Double(s);
+DVBLDVAL_SUM = Integer.parseInt(s);
 } else {
-DVBLDVAL_SUM = Double.NaN;
+DVBLDVAL_SUM = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVBLTDEBT_SUM(String s) {
 if (!s.trim().isEmpty()) {
-DVBLTDEBT_SUM = new Double(s);
+DVBLTDEBT_SUM = Integer.parseInt(s);
 } else {
-DVBLTDEBT_SUM = Double.NaN;
+DVBLTDEBT_SUM = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVBLTVAL_SUM(String s) {
 if (!s.trim().isEmpty()) {
-DVBLTVAL_SUM = new Double(s);
+DVBLTVAL_SUM = Integer.parseInt(s);
 } else {
-DVBLTVAL_SUM = Double.NaN;
+DVBLTVAL_SUM = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVCACRVAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVCACRVAL_AGGR = new Double(s);
+DVCACRVAL_AGGR = Double.parseDouble(s);
 } else {
 DVCACRVAL_AGGR = Double.NaN;
 }
@@ -262,31 +266,31 @@ DVCACRVAL_AGGR = Double.NaN;
 
 protected final void initDVCACTV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVCACTV_AGGR = new Double(s);
+DVCACTV_AGGR = Integer.parseInt(s);
 } else {
-DVCACTV_AGGR = Double.NaN;
+DVCACTV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVCAODVAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVCAODVAL_AGGR = new Double(s);
+DVCAODVAL_AGGR = Integer.parseInt(s);
 } else {
-DVCAODVAL_AGGR = Double.NaN;
+DVCAODVAL_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVCASVV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVCASVV_AGGR = new Double(s);
+DVCASVV_AGGR = Integer.parseInt(s);
 } else {
-DVCASVV_AGGR = Double.NaN;
+DVCASVV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVCAVAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVCAVAL_AGGR = new Double(s);
+DVCAVAL_AGGR = Double.parseDouble(s);
 } else {
 DVCAVAL_AGGR = Double.NaN;
 }
@@ -294,15 +298,15 @@ DVCAVAL_AGGR = Double.NaN;
 
 protected final void initDVCISAV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVCISAV_AGGR = new Double(s);
+DVCISAV_AGGR = Integer.parseInt(s);
 } else {
-DVCISAV_AGGR = Double.NaN;
+DVCISAV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVDBRWEALTHVAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVDBRWEALTHVAL_AGGR = new Double(s);
+DVDBRWEALTHVAL_AGGR = Double.parseDouble(s);
 } else {
 DVDBRWEALTHVAL_AGGR = Double.NaN;
 }
@@ -310,103 +314,103 @@ DVDBRWEALTHVAL_AGGR = Double.NaN;
 
 protected final void initDVEQLTM(String s) {
 if (!s.trim().isEmpty()) {
-DVEQLTM = new Double(s);
+DVEQLTM = Integer.parseInt(s);
 } else {
-DVEQLTM = Double.NaN;
+DVEQLTM = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVEQPRUN(String s) {
 if (!s.trim().isEmpty()) {
-DVEQPRUN = new Double(s);
+DVEQPRUN = Integer.parseInt(s);
 } else {
-DVEQPRUN = Double.NaN;
+DVEQPRUN = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVEQSRB(String s) {
 if (!s.trim().isEmpty()) {
-DVEQSRB = new Double(s);
+DVEQSRB = Integer.parseInt(s);
 } else {
-DVEQSRB = Double.NaN;
+DVEQSRB = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVERECGROSSANNUAL(String s) {
 if (!s.trim().isEmpty()) {
-DVERECGROSSANNUAL = new Double(s);
+DVERECGROSSANNUAL = Integer.parseInt(s);
 } else {
-DVERECGROSSANNUAL = Double.NaN;
+DVERECGROSSANNUAL = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVERECNETANNUAL(String s) {
 if (!s.trim().isEmpty()) {
-DVERECNETANNUAL = new Double(s);
+DVERECNETANNUAL = Short.parseShort(s);
 } else {
-DVERECNETANNUAL = Double.NaN;
+DVERECNETANNUAL = Short.MIN_VALUE;
 }
 }
 
 protected final void initDVERVRECGROSSANNUAL(String s) {
 if (!s.trim().isEmpty()) {
-DVERVRECGROSSANNUAL = new Double(s);
+DVERVRECGROSSANNUAL = Short.parseShort(s);
 } else {
-DVERVRECGROSSANNUAL = Double.NaN;
+DVERVRECGROSSANNUAL = Short.MIN_VALUE;
 }
 }
 
 protected final void initDVERVRECNETANNUAL(String s) {
 if (!s.trim().isEmpty()) {
-DVERVRECNETANNUAL = new Double(s);
+DVERVRECNETANNUAL = Short.parseShort(s);
 } else {
-DVERVRECNETANNUAL = Double.NaN;
+DVERVRECNETANNUAL = Short.MIN_VALUE;
 }
 }
 
 protected final void initDVFBONDV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVFBONDV_AGGR = new Double(s);
+DVFBONDV_AGGR = Integer.parseInt(s);
 } else {
-DVFBONDV_AGGR = Double.NaN;
+DVFBONDV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFCOLLV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVFCOLLV_AGGR = new Double(s);
+DVFCOLLV_AGGR = Integer.parseInt(s);
 } else {
-DVFCOLLV_AGGR = Double.NaN;
+DVFCOLLV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFEOPTV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVFEOPTV_AGGR = new Double(s);
+DVFEOPTV_AGGR = Integer.parseInt(s);
 } else {
-DVFEOPTV_AGGR = Double.NaN;
+DVFEOPTV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFESHARES_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVFESHARES_AGGR = new Double(s);
+DVFESHARES_AGGR = Integer.parseInt(s);
 } else {
-DVFESHARES_AGGR = Double.NaN;
+DVFESHARES_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFESHAV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVFESHAV_AGGR = new Double(s);
+DVFESHAV_AGGR = Integer.parseInt(s);
 } else {
-DVFESHAV_AGGR = Double.NaN;
+DVFESHAV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFFASSETS_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVFFASSETS_AGGR = new Double(s);
+DVFFASSETS_AGGR = Double.parseDouble(s);
 } else {
 DVFFASSETS_AGGR = Double.NaN;
 }
@@ -414,287 +418,287 @@ DVFFASSETS_AGGR = Double.NaN;
 
 protected final void initDVFGLTFOV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVFGLTFOV_AGGR = new Double(s);
+DVFGLTFOV_AGGR = Integer.parseInt(s);
 } else {
-DVFGLTFOV_AGGR = Double.NaN;
+DVFGLTFOV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFGLTUKV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVFGLTUKV_AGGR = new Double(s);
+DVFGLTUKV_AGGR = Integer.parseInt(s);
 } else {
-DVFGLTUKV_AGGR = Double.NaN;
+DVFGLTUKV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFINFLV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVFINFLV_AGGR = new Double(s);
+DVFINFLV_AGGR = Integer.parseInt(s);
 } else {
-DVFINFLV_AGGR = Double.NaN;
+DVFINFLV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFINFVAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVFINFVAL_AGGR = new Double(s);
+DVFINFVAL_AGGR = Integer.parseInt(s);
 } else {
-DVFINFVAL_AGGR = Double.NaN;
+DVFINFVAL_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFINFV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVFINFV_AGGR = new Double(s);
+DVFINFV_AGGR = Integer.parseInt(s);
 } else {
-DVFINFV_AGGR = Double.NaN;
+DVFINFV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFINVOTV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVFINVOTV_AGGR = new Double(s);
+DVFINVOTV_AGGR = Integer.parseInt(s);
 } else {
-DVFINVOTV_AGGR = Double.NaN;
+DVFINVOTV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFLFENV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVFLFENV_AGGR = new Double(s);
+DVFLFENV_AGGR = Integer.parseInt(s);
 } else {
-DVFLFENV_AGGR = Double.NaN;
+DVFLFENV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFLFFSV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVFLFFSV_AGGR = new Double(s);
+DVFLFFSV_AGGR = Integer.parseInt(s);
 } else {
-DVFLFFSV_AGGR = Double.NaN;
+DVFLFFSV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFLFSIV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVFLFSIV_AGGR = new Double(s);
+DVFLFSIV_AGGR = Integer.parseInt(s);
 } else {
-DVFLFSIV_AGGR = Double.NaN;
+DVFLFSIV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFLFTEV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVFLFTEV_AGGR = new Double(s);
+DVFLFTEV_AGGR = Integer.parseInt(s);
 } else {
-DVFLFTEV_AGGR = Double.NaN;
+DVFLFTEV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFNSVAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVFNSVAL_AGGR = new Double(s);
+DVFNSVAL_AGGR = Integer.parseInt(s);
 } else {
-DVFNSVAL_AGGR = Double.NaN;
+DVFNSVAL_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFSHOSV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVFSHOSV_AGGR = new Double(s);
+DVFSHOSV_AGGR = Integer.parseInt(s);
 } else {
-DVFSHOSV_AGGR = Double.NaN;
+DVFSHOSV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFSHUKV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVFSHUKV_AGGR = new Double(s);
+DVFSHUKV_AGGR = Integer.parseInt(s);
 } else {
-DVFSHUKV_AGGR = Double.NaN;
+DVFSHUKV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVGIEMP_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVGIEMP_AGGR = new Double(s);
+DVGIEMP_AGGR = Integer.parseInt(s);
 } else {
-DVGIEMP_AGGR = Double.NaN;
+DVGIEMP_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVGIINV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVGIINV_AGGR = new Double(s);
+DVGIINV_AGGR = Integer.parseInt(s);
 } else {
-DVGIINV_AGGR = Double.NaN;
+DVGIINV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVGIOTHR_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVGIOTHR_AGGR = new Double(s);
+DVGIOTHR_AGGR = Integer.parseInt(s);
 } else {
-DVGIOTHR_AGGR = Double.NaN;
+DVGIOTHR_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVGIPPEN_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVGIPPEN_AGGR = new Double(s);
+DVGIPPEN_AGGR = Integer.parseInt(s);
 } else {
-DVGIPPEN_AGGR = Double.NaN;
+DVGIPPEN_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVGISE_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVGISE_AGGR = new Double(s);
+DVGISE_AGGR = Integer.parseInt(s);
 } else {
-DVGISE_AGGR = Double.NaN;
+DVGISE_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVGRSRENTAMTANNUAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVGRSRENTAMTANNUAL_AGGR = new Double(s);
+DVGRSRENTAMTANNUAL_AGGR = Integer.parseInt(s);
 } else {
-DVGRSRENTAMTANNUAL_AGGR = Double.NaN;
+DVGRSRENTAMTANNUAL_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVHSEDEBT_SUM(String s) {
 if (!s.trim().isEmpty()) {
-DVHSEDEBT_SUM = new Double(s);
+DVHSEDEBT_SUM = Integer.parseInt(s);
 } else {
-DVHSEDEBT_SUM = Double.NaN;
+DVHSEDEBT_SUM = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVHSEVAL_SUM(String s) {
 if (!s.trim().isEmpty()) {
-DVHSEVAL_SUM = new Double(s);
+DVHSEVAL_SUM = Integer.parseInt(s);
 } else {
-DVHSEVAL_SUM = Double.NaN;
+DVHSEVAL_SUM = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVIISAV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVIISAV_AGGR = new Double(s);
+DVIISAV_AGGR = Integer.parseInt(s);
 } else {
-DVIISAV_AGGR = Double.NaN;
+DVIISAV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVINSV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVINSV_AGGR = new Double(s);
+DVINSV_AGGR = Integer.parseInt(s);
 } else {
-DVINSV_AGGR = Double.NaN;
+DVINSV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVISAVAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVISAVAL_AGGR = new Double(s);
+DVISAVAL_AGGR = Integer.parseInt(s);
 } else {
-DVISAVAL_AGGR = Double.NaN;
+DVISAVAL_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVKISAV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVKISAV_AGGR = new Double(s);
+DVKISAV_AGGR = Integer.parseInt(s);
 } else {
-DVKISAV_AGGR = Double.NaN;
+DVKISAV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVLOSDEBT_SUM(String s) {
 if (!s.trim().isEmpty()) {
-DVLOSDEBT_SUM = new Double(s);
+DVLOSDEBT_SUM = Integer.parseInt(s);
 } else {
-DVLOSDEBT_SUM = Double.NaN;
+DVLOSDEBT_SUM = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVLOSVAL_SUM(String s) {
 if (!s.trim().isEmpty()) {
-DVLOSVAL_SUM = new Double(s);
+DVLOSVAL_SUM = Integer.parseInt(s);
 } else {
-DVLOSVAL_SUM = Double.NaN;
+DVLOSVAL_SUM = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVLUKDEBT_SUM(String s) {
 if (!s.trim().isEmpty()) {
-DVLUKDEBT_SUM = new Double(s);
+DVLUKDEBT_SUM = Integer.parseInt(s);
 } else {
-DVLUKDEBT_SUM = Double.NaN;
+DVLUKDEBT_SUM = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVLUKVAL_SUM(String s) {
 if (!s.trim().isEmpty()) {
-DVLUKVAL_SUM = new Double(s);
+DVLUKVAL_SUM = Integer.parseInt(s);
 } else {
-DVLUKVAL_SUM = Double.NaN;
+DVLUKVAL_SUM = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVNETRENTAMTANNUAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVNETRENTAMTANNUAL_AGGR = new Double(s);
+DVNETRENTAMTANNUAL_AGGR = Integer.parseInt(s);
 } else {
-DVNETRENTAMTANNUAL_AGGR = Double.NaN;
+DVNETRENTAMTANNUAL_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVNIEMP_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVNIEMP_AGGR = new Double(s);
+DVNIEMP_AGGR = Integer.parseInt(s);
 } else {
-DVNIEMP_AGGR = Double.NaN;
+DVNIEMP_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVNIINV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVNIINV_AGGR = new Double(s);
+DVNIINV_AGGR = Integer.parseInt(s);
 } else {
-DVNIINV_AGGR = Double.NaN;
+DVNIINV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVNIOTHI_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVNIOTHI_AGGR = new Double(s);
+DVNIOTHI_AGGR = Integer.parseInt(s);
 } else {
-DVNIOTHI_AGGR = Double.NaN;
+DVNIOTHI_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVNIOTHR_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVNIOTHR_AGGR = new Double(s);
+DVNIOTHR_AGGR = Integer.parseInt(s);
 } else {
-DVNIOTHR_AGGR = Double.NaN;
+DVNIOTHR_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVNIPPEN_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVNIPPEN_AGGR = new Double(s);
+DVNIPPEN_AGGR = Integer.parseInt(s);
 } else {
-DVNIPPEN_AGGR = Double.NaN;
+DVNIPPEN_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVNISE_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVNISE_AGGR = new Double(s);
+DVNISE_AGGR = Double.parseDouble(s);
 } else {
 DVNISE_AGGR = Double.NaN;
 }
@@ -702,159 +706,159 @@ DVNISE_AGGR = Double.NaN;
 
 protected final void initDVOIGEGANNUAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVOIGEGANNUAL_AGGR = new Double(s);
+DVOIGEGANNUAL_AGGR = Integer.parseInt(s);
 } else {
-DVOIGEGANNUAL_AGGR = Double.NaN;
+DVOIGEGANNUAL_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVOIGFRANNUAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVOIGFRANNUAL_AGGR = new Double(s);
+DVOIGFRANNUAL_AGGR = Integer.parseInt(s);
 } else {
-DVOIGFRANNUAL_AGGR = Double.NaN;
+DVOIGFRANNUAL_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVOIGGTANNUAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVOIGGTANNUAL_AGGR = new Double(s);
+DVOIGGTANNUAL_AGGR = Short.parseShort(s);
 } else {
-DVOIGGTANNUAL_AGGR = Double.NaN;
+DVOIGGTANNUAL_AGGR = Short.MIN_VALUE;
 }
 }
 
 protected final void initDVOIGMAANNUAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVOIGMAANNUAL_AGGR = new Double(s);
+DVOIGMAANNUAL_AGGR = Integer.parseInt(s);
 } else {
-DVOIGMAANNUAL_AGGR = Double.NaN;
+DVOIGMAANNUAL_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVOIGOPANNUAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVOIGOPANNUAL_AGGR = new Double(s);
+DVOIGOPANNUAL_AGGR = Integer.parseInt(s);
 } else {
-DVOIGOPANNUAL_AGGR = Double.NaN;
+DVOIGOPANNUAL_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVOIGROANNUAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVOIGROANNUAL_AGGR = new Double(s);
+DVOIGROANNUAL_AGGR = Integer.parseInt(s);
 } else {
-DVOIGROANNUAL_AGGR = Double.NaN;
+DVOIGROANNUAL_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVOIGRRANNUAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVOIGRRANNUAL_AGGR = new Double(s);
+DVOIGRRANNUAL_AGGR = Integer.parseInt(s);
 } else {
-DVOIGRRANNUAL_AGGR = Double.NaN;
+DVOIGRRANNUAL_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVOINEGANNUAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVOINEGANNUAL_AGGR = new Double(s);
+DVOINEGANNUAL_AGGR = Integer.parseInt(s);
 } else {
-DVOINEGANNUAL_AGGR = Double.NaN;
+DVOINEGANNUAL_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVOINFRANNUAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVOINFRANNUAL_AGGR = new Double(s);
+DVOINFRANNUAL_AGGR = Integer.parseInt(s);
 } else {
-DVOINFRANNUAL_AGGR = Double.NaN;
+DVOINFRANNUAL_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVOINGTANNUAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVOINGTANNUAL_AGGR = new Double(s);
+DVOINGTANNUAL_AGGR = Short.parseShort(s);
 } else {
-DVOINGTANNUAL_AGGR = Double.NaN;
+DVOINGTANNUAL_AGGR = Short.MIN_VALUE;
 }
 }
 
 protected final void initDVOINMAANNUAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVOINMAANNUAL_AGGR = new Double(s);
+DVOINMAANNUAL_AGGR = Integer.parseInt(s);
 } else {
-DVOINMAANNUAL_AGGR = Double.NaN;
+DVOINMAANNUAL_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVOINOPANNUAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVOINOPANNUAL_AGGR = new Double(s);
+DVOINOPANNUAL_AGGR = Integer.parseInt(s);
 } else {
-DVOINOPANNUAL_AGGR = Double.NaN;
+DVOINOPANNUAL_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVOINROANNUAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVOINROANNUAL_AGGR = new Double(s);
+DVOINROANNUAL_AGGR = Integer.parseInt(s);
 } else {
-DVOINROANNUAL_AGGR = Double.NaN;
+DVOINROANNUAL_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVOINRRANNUAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVOINRRANNUAL_AGGR = new Double(s);
+DVOINRRANNUAL_AGGR = Integer.parseInt(s);
 } else {
-DVOINRRANNUAL_AGGR = Double.NaN;
+DVOINRRANNUAL_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVOPRDEBT_SUM(String s) {
 if (!s.trim().isEmpty()) {
-DVOPRDEBT_SUM = new Double(s);
+DVOPRDEBT_SUM = Integer.parseInt(s);
 } else {
-DVOPRDEBT_SUM = Double.NaN;
+DVOPRDEBT_SUM = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVOPRVAL_SUM(String s) {
 if (!s.trim().isEmpty()) {
-DVOPRVAL_SUM = new Double(s);
+DVOPRVAL_SUM = Integer.parseInt(s);
 } else {
-DVOPRVAL_SUM = Double.NaN;
+DVOPRVAL_SUM = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVPAVCUV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVPAVCUV_AGGR = new Double(s);
+DVPAVCUV_AGGR = Integer.parseInt(s);
 } else {
-DVPAVCUV_AGGR = Double.NaN;
+DVPAVCUV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVPFCURVAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVPFCURVAL_AGGR = new Double(s);
+DVPFCURVAL_AGGR = Integer.parseInt(s);
 } else {
-DVPFCURVAL_AGGR = Double.NaN;
+DVPFCURVAL_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVPFDDV_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVPFDDV_AGGR = new Double(s);
+DVPFDDV_AGGR = Integer.parseInt(s);
 } else {
-DVPFDDV_AGGR = Double.NaN;
+DVPFDDV_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVPINPVAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVPINPVAL_AGGR = new Double(s);
+DVPINPVAL_AGGR = Double.parseDouble(s);
 } else {
 DVPINPVAL_AGGR = Double.NaN;
 }
@@ -862,23 +866,23 @@ DVPINPVAL_AGGR = Double.NaN;
 
 protected final void initDVPPVAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVPPVAL_AGGR = new Double(s);
+DVPPVAL_AGGR = Integer.parseInt(s);
 } else {
-DVPPVAL_AGGR = Double.NaN;
+DVPPVAL_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVSAVAL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVSAVAL_AGGR = new Double(s);
+DVSAVAL_AGGR = Integer.parseInt(s);
 } else {
-DVSAVAL_AGGR = Double.NaN;
+DVSAVAL_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVSPEN_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVSPEN_AGGR = new Double(s);
+DVSPEN_AGGR = Double.parseDouble(s);
 } else {
 DVSPEN_AGGR = Double.NaN;
 }
@@ -886,7 +890,7 @@ DVSPEN_AGGR = Double.NaN;
 
 protected final void initDVTOTGIR(String s) {
 if (!s.trim().isEmpty()) {
-DVTOTGIR = new Double(s);
+DVTOTGIR = Double.parseDouble(s);
 } else {
 DVTOTGIR = Double.NaN;
 }
@@ -894,15 +898,15 @@ DVTOTGIR = Double.NaN;
 
 protected final void initDVTOTNIR(String s) {
 if (!s.trim().isEmpty()) {
-DVTOTNIR = new Double(s);
+DVTOTNIR = Integer.parseInt(s);
 } else {
-DVTOTNIR = Double.NaN;
+DVTOTNIR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVVALDBT_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVVALDBT_AGGR = new Double(s);
+DVVALDBT_AGGR = Double.parseDouble(s);
 } else {
 DVVALDBT_AGGR = Double.NaN;
 }
@@ -910,7 +914,7 @@ DVVALDBT_AGGR = Double.NaN;
 
 protected final void initDVVALDCOS_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-DVVALDCOS_AGGR = new Double(s);
+DVVALDCOS_AGGR = Double.parseDouble(s);
 } else {
 DVVALDCOS_AGGR = Double.NaN;
 }
@@ -918,287 +922,277 @@ DVVALDCOS_AGGR = Double.NaN;
 
 protected final void initEINT(String s) {
 if (!s.trim().isEmpty()) {
-EINT = new Double(s);
+EINT = Byte.parseByte(s);
 } else {
-EINT = Double.NaN;
+EINT = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEINTFIX(String s) {
 if (!s.trim().isEmpty()) {
-EINTFIX = new Double(s);
+EINTFIX = Byte.parseByte(s);
 } else {
-EINTFIX = Double.NaN;
+EINTFIX = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEINT_I(String s) {
 if (!s.trim().isEmpty()) {
-EINT_I = new Double(s);
+EINT_I = Byte.parseByte(s);
 } else {
-EINT_I = Double.NaN;
+EINT_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEINT_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-EINT_IFLAG = new Double(s);
-} else {
-EINT_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+EINT_IFLAG = false;
 }
 }
 
 protected final void initEMSARR(String s) {
 if (!s.trim().isEmpty()) {
-EMSARR = new Double(s);
-} else {
-EMSARR = Double.NaN;
+byte b = Byte.parseByte(s);
+EMSARR = false;
 }
 }
 
 protected final void initEMSPAY(String s) {
 if (!s.trim().isEmpty()) {
-EMSPAY = new Double(s);
-} else {
-EMSPAY = Double.NaN;
+byte b = Byte.parseByte(s);
+EMSPAY = false;
 }
 }
 
 protected final void initEQDRAW(String s) {
 if (!s.trim().isEmpty()) {
-EQDRAW = new Double(s);
+EQDRAW = Byte.parseByte(s);
 } else {
-EQDRAW = Double.NaN;
+EQDRAW = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEQDRAW_I(String s) {
 if (!s.trim().isEmpty()) {
-EQDRAW_I = new Double(s);
+EQDRAW_I = Byte.parseByte(s);
 } else {
-EQDRAW_I = Double.NaN;
+EQDRAW_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEQDRAW_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-EQDRAW_IFLAG = new Double(s);
-} else {
-EQDRAW_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+EQDRAW_IFLAG = false;
 }
 }
 
 protected final void initEQNEW(String s) {
 if (!s.trim().isEmpty()) {
-EQNEW = new Double(s);
+EQNEW = Byte.parseByte(s);
 } else {
-EQNEW = Double.NaN;
+EQNEW = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEQOLD(String s) {
 if (!s.trim().isEmpty()) {
-EQOLD = new Double(s);
+EQOLD = Byte.parseByte(s);
 } else {
-EQOLD = Double.NaN;
+EQOLD = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEQTYPE1(String s) {
 if (!s.trim().isEmpty()) {
-EQTYPE1 = new Double(s);
+EQTYPE1 = Byte.parseByte(s);
 } else {
-EQTYPE1 = Double.NaN;
+EQTYPE1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEQTYPE1_I(String s) {
 if (!s.trim().isEmpty()) {
-EQTYPE1_I = new Double(s);
+EQTYPE1_I = Byte.parseByte(s);
 } else {
-EQTYPE1_I = Double.NaN;
+EQTYPE1_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEQTYPE1_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-EQTYPE1_IFLAG = new Double(s);
-} else {
-EQTYPE1_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+EQTYPE1_IFLAG = false;
 }
 }
 
 protected final void initEQTYPE2(String s) {
 if (!s.trim().isEmpty()) {
-EQTYPE2 = new Double(s);
-} else {
-EQTYPE2 = Double.NaN;
+byte b = Byte.parseByte(s);
+EQTYPE2 = false;
 }
 }
 
 protected final void initEQUITY_YN_I(String s) {
 if (!s.trim().isEmpty()) {
-EQUITY_YN_I = new Double(s);
+EQUITY_YN_I = Byte.parseByte(s);
 } else {
-EQUITY_YN_I = Double.NaN;
+EQUITY_YN_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEQUITY_YN_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-EQUITY_YN_IFLAG = new Double(s);
-} else {
-EQUITY_YN_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+EQUITY_YN_IFLAG = false;
 }
 }
 
 protected final void initEQVALDR(String s) {
 if (!s.trim().isEmpty()) {
-EQVALDR = new Double(s);
+EQVALDR = Integer.parseInt(s);
 } else {
-EQVALDR = Double.NaN;
+EQVALDR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initEQVALDRB(String s) {
 if (!s.trim().isEmpty()) {
-EQVALDRB = new Double(s);
+EQVALDRB = Byte.parseByte(s);
 } else {
-EQVALDRB = Double.NaN;
+EQVALDRB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEQWHENM(String s) {
 if (!s.trim().isEmpty()) {
-EQWHENM = new Double(s);
+EQWHENM = Byte.parseByte(s);
 } else {
-EQWHENM = Double.NaN;
+EQWHENM = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEQWHENY(String s) {
 if (!s.trim().isEmpty()) {
-EQWHENY = new Double(s);
+EQWHENY = Short.parseShort(s);
 } else {
-EQWHENY = Double.NaN;
+EQWHENY = Short.MIN_VALUE;
 }
 }
 
 protected final void initEREC(String s) {
 if (!s.trim().isEmpty()) {
-EREC = new Double(s);
+EREC = Byte.parseByte(s);
 } else {
-EREC = Double.NaN;
+EREC = Byte.MIN_VALUE;
 }
 }
 
 protected final void initERECMBY(String s) {
 if (!s.trim().isEmpty()) {
-ERECMBY = new Double(s);
-} else {
-ERECMBY = Double.NaN;
+byte b = Byte.parseByte(s);
+ERECMBY = false;
 }
 }
 
 protected final void initERECMPD(String s) {
 if (!s.trim().isEmpty()) {
-ERECMPD = new Double(s);
+ERECMPD = Byte.parseByte(s);
 } else {
-ERECMPD = Double.NaN;
+ERECMPD = Byte.MIN_VALUE;
 }
 }
 
 protected final void initERVRECBY(String s) {
 if (!s.trim().isEmpty()) {
-ERVRECBY = new Double(s);
-} else {
-ERVRECBY = Double.NaN;
+byte b = Byte.parseByte(s);
+ERVRECBY = false;
 }
 }
 
 protected final void initERVRECPD(String s) {
 if (!s.trim().isEmpty()) {
-ERVRECPD = new Double(s);
+ERVRECPD = Byte.parseByte(s);
 } else {
-ERVRECPD = Double.NaN;
+ERVRECPD = Byte.MIN_VALUE;
 }
 }
 
 protected final void initERVREG1(String s) {
 if (!s.trim().isEmpty()) {
-ERVREG1 = new Double(s);
+ERVREG1 = Byte.parseByte(s);
 } else {
-ERVREG1 = Double.NaN;
+ERVREG1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initERVREG2(String s) {
 if (!s.trim().isEmpty()) {
-ERVREG2 = new Double(s);
-} else {
-ERVREG2 = Double.NaN;
+byte b = Byte.parseByte(s);
+ERVREG2 = false;
 }
 }
 
 protected final void initESHARAPP(String s) {
 if (!s.trim().isEmpty()) {
-ESHARAPP = new Double(s);
+ESHARAPP = Integer.parseInt(s);
 } else {
-ESHARAPP = Double.NaN;
+ESHARAPP = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFRREPFIX(String s) {
 if (!s.trim().isEmpty()) {
-FRREPFIX = new Double(s);
+FRREPFIX = Integer.parseInt(s);
 } else {
-FRREPFIX = Double.NaN;
+FRREPFIX = Integer.MIN_VALUE;
 }
 }
 
 protected final void initGCONTVLS(String s) {
 if (!s.trim().isEmpty()) {
-GCONTVLS = new Double(s);
+GCONTVLS = Integer.parseInt(s);
 } else {
-GCONTVLS = Double.NaN;
+GCONTVLS = Integer.MIN_VALUE;
 }
 }
 
 protected final void initHEXT1(String s) {
 if (!s.trim().isEmpty()) {
-HEXT1 = new Double(s);
+HEXT1 = Byte.parseByte(s);
 } else {
-HEXT1 = Double.NaN;
+HEXT1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initHEXT2(String s) {
 if (!s.trim().isEmpty()) {
-HEXT2 = new Double(s);
+HEXT2 = Byte.parseByte(s);
 } else {
-HEXT2 = Double.NaN;
+HEXT2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initHEXT3(String s) {
 if (!s.trim().isEmpty()) {
-HEXT3 = new Double(s);
+HEXT3 = Byte.parseByte(s);
 } else {
-HEXT3 = Double.NaN;
+HEXT3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initHEXT4(String s) {
 if (!s.trim().isEmpty()) {
-HEXT4 = new Double(s);
+HEXT4 = Byte.parseByte(s);
 } else {
-HEXT4 = Double.NaN;
+HEXT4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initHFINL_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-HFINL_AGGR = new Double(s);
+HFINL_AGGR = Double.parseDouble(s);
 } else {
 HFINL_AGGR = Double.NaN;
 }
@@ -1206,7 +1200,7 @@ HFINL_AGGR = Double.NaN;
 
 protected final void initHFINW_EXCENDW_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-HFINW_EXCENDW_AGGR = new Double(s);
+HFINW_EXCENDW_AGGR = Double.parseDouble(s);
 } else {
 HFINW_EXCENDW_AGGR = Double.NaN;
 }
@@ -1214,335 +1208,325 @@ HFINW_EXCENDW_AGGR = Double.NaN;
 
 protected final void initHOUSGDSOST_SUM(String s) {
 if (!s.trim().isEmpty()) {
-HOUSGDSOST_SUM = new Double(s);
+HOUSGDSOST_SUM = Integer.parseInt(s);
 } else {
-HOUSGDSOST_SUM = Double.NaN;
+HOUSGDSOST_SUM = Integer.MIN_VALUE;
 }
 }
 
 protected final void initMARRSV2(String s) {
 if (!s.trim().isEmpty()) {
-MARRSV2 = new Double(s);
+MARRSV2 = Integer.parseInt(s);
 } else {
-MARRSV2 = Double.NaN;
+MARRSV2 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initMARRSV3(String s) {
 if (!s.trim().isEmpty()) {
-MARRSV3 = new Double(s);
+MARRSV3 = Short.parseShort(s);
 } else {
-MARRSV3 = Double.NaN;
+MARRSV3 = Short.MIN_VALUE;
 }
 }
 
 protected final void initMCHGE(String s) {
 if (!s.trim().isEmpty()) {
-MCHGE = new Double(s);
+MCHGE = Byte.parseByte(s);
 } else {
-MCHGE = Double.NaN;
+MCHGE = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMCHGENUM(String s) {
 if (!s.trim().isEmpty()) {
-MCHGENUM = new Double(s);
+MCHGENUM = Byte.parseByte(s);
 } else {
-MCHGENUM = Double.NaN;
+MCHGENUM = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMENDNUM3_I(String s) {
 if (!s.trim().isEmpty()) {
-MENDNUM3_I = new Double(s);
-} else {
-MENDNUM3_I = Double.NaN;
+byte b = Byte.parseByte(s);
+MENDNUM3_I = false;
 }
 }
 
 protected final void initMENDNUM3_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-MENDNUM3_IFLAG = new Double(s);
-} else {
-MENDNUM3_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+MENDNUM3_IFLAG = false;
 }
 }
 
 protected final void initMENDV5_I(String s) {
 if (!s.trim().isEmpty()) {
-MENDV5_I = new Double(s);
+MENDV5_I = Integer.parseInt(s);
 } else {
-MENDV5_I = Double.NaN;
+MENDV5_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initMENDV5_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-MENDV5_IFLAG = new Double(s);
-} else {
-MENDV5_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+MENDV5_IFLAG = false;
 }
 }
 
 protected final void initMENDV7_I(String s) {
 if (!s.trim().isEmpty()) {
-MENDV7_I = new Double(s);
+MENDV7_I = Integer.parseInt(s);
 } else {
-MENDV7_I = Double.NaN;
+MENDV7_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initMENDV7_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-MENDV7_IFLAG = new Double(s);
-} else {
-MENDV7_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+MENDV7_IFLAG = false;
 }
 }
 
 protected final void initMENDW2(String s) {
 if (!s.trim().isEmpty()) {
-MENDW2 = new Double(s);
+MENDW2 = Byte.parseByte(s);
 } else {
-MENDW2 = Double.NaN;
+MENDW2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMEXTN(String s) {
 if (!s.trim().isEmpty()) {
-MEXTN = new Double(s);
+MEXTN = Byte.parseByte(s);
 } else {
-MEXTN = Double.NaN;
+MEXTN = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMEXTRS1(String s) {
 if (!s.trim().isEmpty()) {
-MEXTRS1 = new Double(s);
+MEXTRS1 = Byte.parseByte(s);
 } else {
-MEXTRS1 = Double.NaN;
+MEXTRS1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMEXTRS2(String s) {
 if (!s.trim().isEmpty()) {
-MEXTRS2 = new Double(s);
+MEXTRS2 = Byte.parseByte(s);
 } else {
-MEXTRS2 = Double.NaN;
+MEXTRS2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMEXTRS3(String s) {
 if (!s.trim().isEmpty()) {
-MEXTRS3 = new Double(s);
+MEXTRS3 = Byte.parseByte(s);
 } else {
-MEXTRS3 = Double.NaN;
+MEXTRS3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMNUMBN(String s) {
 if (!s.trim().isEmpty()) {
-MNUMBN = new Double(s);
+MNUMBN = Byte.parseByte(s);
 } else {
-MNUMBN = Double.NaN;
+MNUMBN = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMNUMBO(String s) {
 if (!s.trim().isEmpty()) {
-MNUMBO = new Double(s);
+MNUMBO = Byte.parseByte(s);
 } else {
-MNUMBO = Double.NaN;
+MNUMBO = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMNUMB_I(String s) {
 if (!s.trim().isEmpty()) {
-MNUMB_I = new Double(s);
+MNUMB_I = Byte.parseByte(s);
 } else {
-MNUMB_I = Double.NaN;
+MNUMB_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMNUMB_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-MNUMB_IFLAG = new Double(s);
-} else {
-MNUMB_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+MNUMB_IFLAG = false;
 }
 }
 
 protected final void initMREAS14(String s) {
 if (!s.trim().isEmpty()) {
-MREAS14 = new Double(s);
+MREAS14 = Byte.parseByte(s);
 } else {
-MREAS14 = Double.NaN;
+MREAS14 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMREAS24(String s) {
 if (!s.trim().isEmpty()) {
-MREAS24 = new Double(s);
+MREAS24 = Byte.parseByte(s);
 } else {
-MREAS24 = Double.NaN;
+MREAS24 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMW2CHK1(String s) {
 if (!s.trim().isEmpty()) {
-MW2CHK1 = new Double(s);
+MW2CHK1 = Byte.parseByte(s);
 } else {
-MW2CHK1 = Double.NaN;
+MW2CHK1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMW2CHK2(String s) {
 if (!s.trim().isEmpty()) {
-MW2CHK2 = new Double(s);
+MW2CHK2 = Byte.parseByte(s);
 } else {
-MW2CHK2 = Double.NaN;
+MW2CHK2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMW2CHK3(String s) {
 if (!s.trim().isEmpty()) {
-MW2CHK3 = new Double(s);
+MW2CHK3 = Byte.parseByte(s);
 } else {
-MW2CHK3 = Double.NaN;
+MW2CHK3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMYIFCH2(String s) {
 if (!s.trim().isEmpty()) {
-MYIFCH2 = new Double(s);
+MYIFCH2 = Byte.parseByte(s);
 } else {
-MYIFCH2 = Double.NaN;
+MYIFCH2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMYIFCH3(String s) {
 if (!s.trim().isEmpty()) {
-MYIFCH3 = new Double(s);
+MYIFCH3 = Byte.parseByte(s);
 } else {
-MYIFCH3 = Double.NaN;
+MYIFCH3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initNOUNITS(String s) {
 if (!s.trim().isEmpty()) {
-NOUNITS = new Double(s);
+NOUNITS = Byte.parseByte(s);
 } else {
-NOUNITS = Double.NaN;
+NOUNITS = Byte.MIN_VALUE;
 }
 }
 
 protected final void initNUMDEPCH(String s) {
 if (!s.trim().isEmpty()) {
-NUMDEPCH = new Double(s);
+NUMDEPCH = Byte.parseByte(s);
 } else {
-NUMDEPCH = Double.NaN;
+NUMDEPCH = Byte.MIN_VALUE;
 }
 }
 
 protected final void initNUMELCH(String s) {
 if (!s.trim().isEmpty()) {
-NUMELCH = new Double(s);
+NUMELCH = Byte.parseByte(s);
 } else {
-NUMELCH = Double.NaN;
+NUMELCH = Byte.MIN_VALUE;
 }
 }
 
 protected final void initNUMNOELCH(String s) {
 if (!s.trim().isEmpty()) {
-NUMNOELCH = new Double(s);
+NUMNOELCH = Byte.parseByte(s);
 } else {
-NUMNOELCH = Double.NaN;
+NUMNOELCH = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOTHMORT_SUM(String s) {
 if (!s.trim().isEmpty()) {
-OTHMORT_SUM = new Double(s);
+OTHMORT_SUM = Integer.parseInt(s);
 } else {
-OTHMORT_SUM = Double.NaN;
+OTHMORT_SUM = Integer.MIN_VALUE;
 }
 }
 
 protected final void initPHYSBUYLGDST_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-PHYSBUYLGDST_AGGR = new Double(s);
-} else {
-PHYSBUYLGDST_AGGR = Double.NaN;
+byte b = Byte.parseByte(s);
+PHYSBUYLGDST_AGGR = false;
 }
 }
 
 protected final void initPHYSHOUSGDSOST_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-PHYSHOUSGDSOST_AGGR = new Double(s);
-} else {
-PHYSHOUSGDSOST_AGGR = Double.NaN;
+byte b = Byte.parseByte(s);
+PHYSHOUSGDSOST_AGGR = false;
 }
 }
 
 protected final void initPHYSHOUSGDST_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-PHYSHOUSGDST_AGGR = new Double(s);
-} else {
-PHYSHOUSGDST_AGGR = Double.NaN;
+byte b = Byte.parseByte(s);
+PHYSHOUSGDST_AGGR = false;
 }
 }
 
 protected final void initPRREPAY(String s) {
 if (!s.trim().isEmpty()) {
-PRREPAY = new Double(s);
+PRREPAY = Byte.parseByte(s);
 } else {
-PRREPAY = Double.NaN;
+PRREPAY = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPRREPAY_I(String s) {
 if (!s.trim().isEmpty()) {
-PRREPAY_I = new Double(s);
+PRREPAY_I = Byte.parseByte(s);
 } else {
-PRREPAY_I = Double.NaN;
+PRREPAY_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPRREPAY_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-PRREPAY_IFLAG = new Double(s);
-} else {
-PRREPAY_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+PRREPAY_IFLAG = false;
 }
 }
 
 protected final void initPRREPFIX(String s) {
 if (!s.trim().isEmpty()) {
-PRREPFIX = new Double(s);
+PRREPFIX = Integer.parseInt(s);
 } else {
-PRREPFIX = Double.NaN;
+PRREPFIX = Integer.MIN_VALUE;
 }
 }
 
 protected final void initPRREPFIX_I(String s) {
 if (!s.trim().isEmpty()) {
-PRREPFIX_I = new Double(s);
+PRREPFIX_I = Integer.parseInt(s);
 } else {
-PRREPFIX_I = Double.NaN;
+PRREPFIX_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initPRREPFIX_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-PRREPFIX_IFLAG = new Double(s);
-} else {
-PRREPFIX_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+PRREPFIX_IFLAG = false;
 }
 }
 
 protected final void initPRREPPC(String s) {
 if (!s.trim().isEmpty()) {
-PRREPPC = new Double(s);
+PRREPPC = Double.parseDouble(s);
 } else {
 PRREPPC = Double.NaN;
 }
@@ -1550,7 +1534,7 @@ PRREPPC = Double.NaN;
 
 protected final void initPRREPPC_I(String s) {
 if (!s.trim().isEmpty()) {
-PRREPPC_I = new Double(s);
+PRREPPC_I = Double.parseDouble(s);
 } else {
 PRREPPC_I = Double.NaN;
 }
@@ -1558,15 +1542,14 @@ PRREPPC_I = Double.NaN;
 
 protected final void initPRREPPC_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-PRREPPC_IFLAG = new Double(s);
-} else {
-PRREPPC_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+PRREPPC_IFLAG = false;
 }
 }
 
 protected final void initSHARAPP(String s) {
 if (!s.trim().isEmpty()) {
-SHARAPP = new Double(s);
+SHARAPP = Double.parseDouble(s);
 } else {
 SHARAPP = Double.NaN;
 }
@@ -1574,47 +1557,47 @@ SHARAPP = Double.NaN;
 
 protected final void initTOTARR_EXCMORT_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-TOTARR_EXCMORT_AGGR = new Double(s);
+TOTARR_EXCMORT_AGGR = Short.parseShort(s);
 } else {
-TOTARR_EXCMORT_AGGR = Double.NaN;
+TOTARR_EXCMORT_AGGR = Short.MIN_VALUE;
 }
 }
 
 protected final void initTOTBILLARR_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-TOTBILLARR_AGGR = new Double(s);
+TOTBILLARR_AGGR = Short.parseShort(s);
 } else {
-TOTBILLARR_AGGR = Double.NaN;
+TOTBILLARR_AGGR = Short.MIN_VALUE;
 }
 }
 
 protected final void initTOTCC_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-TOTCC_AGGR = new Double(s);
+TOTCC_AGGR = Integer.parseInt(s);
 } else {
-TOTCC_AGGR = Double.NaN;
+TOTCC_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initTOTDVNWFLN_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-TOTDVNWFLN_AGGR = new Double(s);
+TOTDVNWFLN_AGGR = Integer.parseInt(s);
 } else {
-TOTDVNWFLN_AGGR = Double.NaN;
+TOTDVNWFLN_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initTOTDVNWILN_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-TOTDVNWILN_AGGR = new Double(s);
+TOTDVNWILN_AGGR = Integer.parseInt(s);
 } else {
-TOTDVNWILN_AGGR = Double.NaN;
+TOTDVNWILN_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initTOTFLNS_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-TOTFLNS_AGGR = new Double(s);
+TOTFLNS_AGGR = Double.parseDouble(s);
 } else {
 TOTFLNS_AGGR = Double.NaN;
 }
@@ -1622,15 +1605,15 @@ TOTFLNS_AGGR = Double.NaN;
 
 protected final void initTOTHPARR_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-TOTHPARR_AGGR = new Double(s);
+TOTHPARR_AGGR = Short.parseShort(s);
 } else {
-TOTHPARR_AGGR = Double.NaN;
+TOTHPARR_AGGR = Short.MIN_VALUE;
 }
 }
 
 protected final void initTOTHP_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-TOTHP_AGGR = new Double(s);
+TOTHP_AGGR = Double.parseDouble(s);
 } else {
 TOTHP_AGGR = Double.NaN;
 }
@@ -1638,15 +1621,15 @@ TOTHP_AGGR = Double.NaN;
 
 protected final void initTOTLNARR_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-TOTLNARR_AGGR = new Double(s);
+TOTLNARR_AGGR = Short.parseShort(s);
 } else {
-TOTLNARR_AGGR = Double.NaN;
+TOTLNARR_AGGR = Short.MIN_VALUE;
 }
 }
 
 protected final void initTOTLNS_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-TOTLNS_AGGR = new Double(s);
+TOTLNS_AGGR = Double.parseDouble(s);
 } else {
 TOTLNS_AGGR = Double.NaN;
 }
@@ -1654,7 +1637,7 @@ TOTLNS_AGGR = Double.NaN;
 
 protected final void initTOTLOS_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-TOTLOS_AGGR = new Double(s);
+TOTLOS_AGGR = Double.parseDouble(s);
 } else {
 TOTLOS_AGGR = Double.NaN;
 }
@@ -1662,15 +1645,15 @@ TOTLOS_AGGR = Double.NaN;
 
 protected final void initTOTMOARR_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-TOTMOARR_AGGR = new Double(s);
+TOTMOARR_AGGR = Short.parseShort(s);
 } else {
-TOTMOARR_AGGR = Double.NaN;
+TOTMOARR_AGGR = Short.MIN_VALUE;
 }
 }
 
 protected final void initTOTMO_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-TOTMO_AGGR = new Double(s);
+TOTMO_AGGR = Double.parseDouble(s);
 } else {
 TOTMO_AGGR = Double.NaN;
 }
@@ -1678,47 +1661,47 @@ TOTMO_AGGR = Double.NaN;
 
 protected final void initTOTNLOS_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-TOTNLOS_AGGR = new Double(s);
+TOTNLOS_AGGR = Integer.parseInt(s);
 } else {
-TOTNLOS_AGGR = Double.NaN;
+TOTNLOS_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initTOTNSLBNK_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-TOTNSLBNK_AGGR = new Double(s);
+TOTNSLBNK_AGGR = Integer.parseInt(s);
 } else {
-TOTNSLBNK_AGGR = Double.NaN;
+TOTNSLBNK_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initTOTNSLC_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-TOTNSLC_AGGR = new Double(s);
+TOTNSLC_AGGR = Integer.parseInt(s);
 } else {
-TOTNSLC_AGGR = Double.NaN;
+TOTNSLC_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initTOTOSLBNK_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-TOTOSLBNK_AGGR = new Double(s);
+TOTOSLBNK_AGGR = Integer.parseInt(s);
 } else {
-TOTOSLBNK_AGGR = Double.NaN;
+TOTOSLBNK_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initTOTOSLC_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-TOTOSLC_AGGR = new Double(s);
+TOTOSLC_AGGR = Integer.parseInt(s);
 } else {
-TOTOSLC_AGGR = Double.NaN;
+TOTOSLC_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initTOTPEN_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-TOTPEN_AGGR = new Double(s);
+TOTPEN_AGGR = Double.parseDouble(s);
 } else {
 TOTPEN_AGGR = Double.NaN;
 }
@@ -1726,837 +1709,836 @@ TOTPEN_AGGR = Double.NaN;
 
 protected final void initTOTSC_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-TOTSC_AGGR = new Double(s);
+TOTSC_AGGR = Short.parseShort(s);
 } else {
-TOTSC_AGGR = Double.NaN;
+TOTSC_AGGR = Short.MIN_VALUE;
 }
 }
 
 protected final void initTOTSLBNK_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-TOTSLBNK_AGGR = new Double(s);
+TOTSLBNK_AGGR = Integer.parseInt(s);
 } else {
-TOTSLBNK_AGGR = Double.NaN;
+TOTSLBNK_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initTOTSLC_AGGR(String s) {
 if (!s.trim().isEmpty()) {
-TOTSLC_AGGR = new Double(s);
+TOTSLC_AGGR = Integer.parseInt(s);
 } else {
-TOTSLC_AGGR = Double.NaN;
+TOTSLC_AGGR = Integer.MIN_VALUE;
 }
 }
 
 protected final void initVOTPN(String s) {
 if (!s.trim().isEmpty()) {
-VOTPN = new Double(s);
+VOTPN = Byte.parseByte(s);
 } else {
-VOTPN = Double.NaN;
+VOTPN = Byte.MIN_VALUE;
 }
 }
 
 protected final void initVPERS_I(String s) {
 if (!s.trim().isEmpty()) {
-VPERS_I = new Double(s);
+VPERS_I = Byte.parseByte(s);
 } else {
-VPERS_I = Double.NaN;
+VPERS_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initVPERS_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-VPERS_IFLAG = new Double(s);
-} else {
-VPERS_IFLAG = Double.NaN;
+byte b = Byte.parseByte(s);
+VPERS_IFLAG = false;
 }
 }
 
-public double getBUYLGDST_SUM() {
+public int getBUYLGDST_SUM() {
 return BUYLGDST_SUM;
 }
 
-public Integer getCASEW2() {
+public short getCASEW2() {
 return CASEW2;
 }
 
-public Integer getCASEW3() {
+public short getCASEW3() {
 return CASEW3;
 }
 
-public double getDVBLDDEBT_SUM() {
+public int getDVBLDDEBT_SUM() {
 return DVBLDDEBT_SUM;
 }
 
-public double getDVBLDVAL_SUM() {
+public int getDVBLDVAL_SUM() {
 return DVBLDVAL_SUM;
 }
 
-public double getDVBLTDEBT_SUM() {
+public int getDVBLTDEBT_SUM() {
 return DVBLTDEBT_SUM;
 }
 
-public double getDVBLTVAL_SUM() {
+public int getDVBLTVAL_SUM() {
 return DVBLTVAL_SUM;
 }
 
-public double getDVCACRVAL_AGGR() {
+protected double DVCACRVAL_AGGR() {
 return DVCACRVAL_AGGR;
 }
 
-public double getDVCACTV_AGGR() {
+public int getDVCACTV_AGGR() {
 return DVCACTV_AGGR;
 }
 
-public double getDVCAODVAL_AGGR() {
+public int getDVCAODVAL_AGGR() {
 return DVCAODVAL_AGGR;
 }
 
-public double getDVCASVV_AGGR() {
+public int getDVCASVV_AGGR() {
 return DVCASVV_AGGR;
 }
 
-public double getDVCAVAL_AGGR() {
+protected double DVCAVAL_AGGR() {
 return DVCAVAL_AGGR;
 }
 
-public double getDVCISAV_AGGR() {
+public int getDVCISAV_AGGR() {
 return DVCISAV_AGGR;
 }
 
-public double getDVDBRWEALTHVAL_AGGR() {
+protected double DVDBRWEALTHVAL_AGGR() {
 return DVDBRWEALTHVAL_AGGR;
 }
 
-public double getDVEQLTM() {
+public int getDVEQLTM() {
 return DVEQLTM;
 }
 
-public double getDVEQPRUN() {
+public int getDVEQPRUN() {
 return DVEQPRUN;
 }
 
-public double getDVEQSRB() {
+public int getDVEQSRB() {
 return DVEQSRB;
 }
 
-public double getDVERECGROSSANNUAL() {
+public int getDVERECGROSSANNUAL() {
 return DVERECGROSSANNUAL;
 }
 
-public double getDVERECNETANNUAL() {
+public short getDVERECNETANNUAL() {
 return DVERECNETANNUAL;
 }
 
-public double getDVERVRECGROSSANNUAL() {
+public short getDVERVRECGROSSANNUAL() {
 return DVERVRECGROSSANNUAL;
 }
 
-public double getDVERVRECNETANNUAL() {
+public short getDVERVRECNETANNUAL() {
 return DVERVRECNETANNUAL;
 }
 
-public double getDVFBONDV_AGGR() {
+public int getDVFBONDV_AGGR() {
 return DVFBONDV_AGGR;
 }
 
-public double getDVFCOLLV_AGGR() {
+public int getDVFCOLLV_AGGR() {
 return DVFCOLLV_AGGR;
 }
 
-public double getDVFEOPTV_AGGR() {
+public int getDVFEOPTV_AGGR() {
 return DVFEOPTV_AGGR;
 }
 
-public double getDVFESHARES_AGGR() {
+public int getDVFESHARES_AGGR() {
 return DVFESHARES_AGGR;
 }
 
-public double getDVFESHAV_AGGR() {
+public int getDVFESHAV_AGGR() {
 return DVFESHAV_AGGR;
 }
 
-public double getDVFFASSETS_AGGR() {
+protected double DVFFASSETS_AGGR() {
 return DVFFASSETS_AGGR;
 }
 
-public double getDVFGLTFOV_AGGR() {
+public int getDVFGLTFOV_AGGR() {
 return DVFGLTFOV_AGGR;
 }
 
-public double getDVFGLTUKV_AGGR() {
+public int getDVFGLTUKV_AGGR() {
 return DVFGLTUKV_AGGR;
 }
 
-public double getDVFINFLV_AGGR() {
+public int getDVFINFLV_AGGR() {
 return DVFINFLV_AGGR;
 }
 
-public double getDVFINFVAL_AGGR() {
+public int getDVFINFVAL_AGGR() {
 return DVFINFVAL_AGGR;
 }
 
-public double getDVFINFV_AGGR() {
+public int getDVFINFV_AGGR() {
 return DVFINFV_AGGR;
 }
 
-public double getDVFINVOTV_AGGR() {
+public int getDVFINVOTV_AGGR() {
 return DVFINVOTV_AGGR;
 }
 
-public double getDVFLFENV_AGGR() {
+public int getDVFLFENV_AGGR() {
 return DVFLFENV_AGGR;
 }
 
-public double getDVFLFFSV_AGGR() {
+public int getDVFLFFSV_AGGR() {
 return DVFLFFSV_AGGR;
 }
 
-public double getDVFLFSIV_AGGR() {
+public int getDVFLFSIV_AGGR() {
 return DVFLFSIV_AGGR;
 }
 
-public double getDVFLFTEV_AGGR() {
+public int getDVFLFTEV_AGGR() {
 return DVFLFTEV_AGGR;
 }
 
-public double getDVFNSVAL_AGGR() {
+public int getDVFNSVAL_AGGR() {
 return DVFNSVAL_AGGR;
 }
 
-public double getDVFSHOSV_AGGR() {
+public int getDVFSHOSV_AGGR() {
 return DVFSHOSV_AGGR;
 }
 
-public double getDVFSHUKV_AGGR() {
+public int getDVFSHUKV_AGGR() {
 return DVFSHUKV_AGGR;
 }
 
-public double getDVGIEMP_AGGR() {
+public int getDVGIEMP_AGGR() {
 return DVGIEMP_AGGR;
 }
 
-public double getDVGIINV_AGGR() {
+public int getDVGIINV_AGGR() {
 return DVGIINV_AGGR;
 }
 
-public double getDVGIOTHR_AGGR() {
+public int getDVGIOTHR_AGGR() {
 return DVGIOTHR_AGGR;
 }
 
-public double getDVGIPPEN_AGGR() {
+public int getDVGIPPEN_AGGR() {
 return DVGIPPEN_AGGR;
 }
 
-public double getDVGISE_AGGR() {
+public int getDVGISE_AGGR() {
 return DVGISE_AGGR;
 }
 
-public double getDVGRSRENTAMTANNUAL_AGGR() {
+public int getDVGRSRENTAMTANNUAL_AGGR() {
 return DVGRSRENTAMTANNUAL_AGGR;
 }
 
-public double getDVHSEDEBT_SUM() {
+public int getDVHSEDEBT_SUM() {
 return DVHSEDEBT_SUM;
 }
 
-public double getDVHSEVAL_SUM() {
+public int getDVHSEVAL_SUM() {
 return DVHSEVAL_SUM;
 }
 
-public double getDVIISAV_AGGR() {
+public int getDVIISAV_AGGR() {
 return DVIISAV_AGGR;
 }
 
-public double getDVINSV_AGGR() {
+public int getDVINSV_AGGR() {
 return DVINSV_AGGR;
 }
 
-public double getDVISAVAL_AGGR() {
+public int getDVISAVAL_AGGR() {
 return DVISAVAL_AGGR;
 }
 
-public double getDVKISAV_AGGR() {
+public int getDVKISAV_AGGR() {
 return DVKISAV_AGGR;
 }
 
-public double getDVLOSDEBT_SUM() {
+public int getDVLOSDEBT_SUM() {
 return DVLOSDEBT_SUM;
 }
 
-public double getDVLOSVAL_SUM() {
+public int getDVLOSVAL_SUM() {
 return DVLOSVAL_SUM;
 }
 
-public double getDVLUKDEBT_SUM() {
+public int getDVLUKDEBT_SUM() {
 return DVLUKDEBT_SUM;
 }
 
-public double getDVLUKVAL_SUM() {
+public int getDVLUKVAL_SUM() {
 return DVLUKVAL_SUM;
 }
 
-public double getDVNETRENTAMTANNUAL_AGGR() {
+public int getDVNETRENTAMTANNUAL_AGGR() {
 return DVNETRENTAMTANNUAL_AGGR;
 }
 
-public double getDVNIEMP_AGGR() {
+public int getDVNIEMP_AGGR() {
 return DVNIEMP_AGGR;
 }
 
-public double getDVNIINV_AGGR() {
+public int getDVNIINV_AGGR() {
 return DVNIINV_AGGR;
 }
 
-public double getDVNIOTHI_AGGR() {
+public int getDVNIOTHI_AGGR() {
 return DVNIOTHI_AGGR;
 }
 
-public double getDVNIOTHR_AGGR() {
+public int getDVNIOTHR_AGGR() {
 return DVNIOTHR_AGGR;
 }
 
-public double getDVNIPPEN_AGGR() {
+public int getDVNIPPEN_AGGR() {
 return DVNIPPEN_AGGR;
 }
 
-public double getDVNISE_AGGR() {
+protected double DVNISE_AGGR() {
 return DVNISE_AGGR;
 }
 
-public double getDVOIGEGANNUAL_AGGR() {
+public int getDVOIGEGANNUAL_AGGR() {
 return DVOIGEGANNUAL_AGGR;
 }
 
-public double getDVOIGFRANNUAL_AGGR() {
+public int getDVOIGFRANNUAL_AGGR() {
 return DVOIGFRANNUAL_AGGR;
 }
 
-public double getDVOIGGTANNUAL_AGGR() {
+public short getDVOIGGTANNUAL_AGGR() {
 return DVOIGGTANNUAL_AGGR;
 }
 
-public double getDVOIGMAANNUAL_AGGR() {
+public int getDVOIGMAANNUAL_AGGR() {
 return DVOIGMAANNUAL_AGGR;
 }
 
-public double getDVOIGOPANNUAL_AGGR() {
+public int getDVOIGOPANNUAL_AGGR() {
 return DVOIGOPANNUAL_AGGR;
 }
 
-public double getDVOIGROANNUAL_AGGR() {
+public int getDVOIGROANNUAL_AGGR() {
 return DVOIGROANNUAL_AGGR;
 }
 
-public double getDVOIGRRANNUAL_AGGR() {
+public int getDVOIGRRANNUAL_AGGR() {
 return DVOIGRRANNUAL_AGGR;
 }
 
-public double getDVOINEGANNUAL_AGGR() {
+public int getDVOINEGANNUAL_AGGR() {
 return DVOINEGANNUAL_AGGR;
 }
 
-public double getDVOINFRANNUAL_AGGR() {
+public int getDVOINFRANNUAL_AGGR() {
 return DVOINFRANNUAL_AGGR;
 }
 
-public double getDVOINGTANNUAL_AGGR() {
+public short getDVOINGTANNUAL_AGGR() {
 return DVOINGTANNUAL_AGGR;
 }
 
-public double getDVOINMAANNUAL_AGGR() {
+public int getDVOINMAANNUAL_AGGR() {
 return DVOINMAANNUAL_AGGR;
 }
 
-public double getDVOINOPANNUAL_AGGR() {
+public int getDVOINOPANNUAL_AGGR() {
 return DVOINOPANNUAL_AGGR;
 }
 
-public double getDVOINROANNUAL_AGGR() {
+public int getDVOINROANNUAL_AGGR() {
 return DVOINROANNUAL_AGGR;
 }
 
-public double getDVOINRRANNUAL_AGGR() {
+public int getDVOINRRANNUAL_AGGR() {
 return DVOINRRANNUAL_AGGR;
 }
 
-public double getDVOPRDEBT_SUM() {
+public int getDVOPRDEBT_SUM() {
 return DVOPRDEBT_SUM;
 }
 
-public double getDVOPRVAL_SUM() {
+public int getDVOPRVAL_SUM() {
 return DVOPRVAL_SUM;
 }
 
-public double getDVPAVCUV_AGGR() {
+public int getDVPAVCUV_AGGR() {
 return DVPAVCUV_AGGR;
 }
 
-public double getDVPFCURVAL_AGGR() {
+public int getDVPFCURVAL_AGGR() {
 return DVPFCURVAL_AGGR;
 }
 
-public double getDVPFDDV_AGGR() {
+public int getDVPFDDV_AGGR() {
 return DVPFDDV_AGGR;
 }
 
-public double getDVPINPVAL_AGGR() {
+protected double DVPINPVAL_AGGR() {
 return DVPINPVAL_AGGR;
 }
 
-public double getDVPPVAL_AGGR() {
+public int getDVPPVAL_AGGR() {
 return DVPPVAL_AGGR;
 }
 
-public double getDVSAVAL_AGGR() {
+public int getDVSAVAL_AGGR() {
 return DVSAVAL_AGGR;
 }
 
-public double getDVSPEN_AGGR() {
+protected double DVSPEN_AGGR() {
 return DVSPEN_AGGR;
 }
 
-public double getDVTOTGIR() {
+protected double DVTOTGIR() {
 return DVTOTGIR;
 }
 
-public double getDVTOTNIR() {
+public int getDVTOTNIR() {
 return DVTOTNIR;
 }
 
-public double getDVVALDBT_AGGR() {
+protected double DVVALDBT_AGGR() {
 return DVVALDBT_AGGR;
 }
 
-public double getDVVALDCOS_AGGR() {
+protected double DVVALDCOS_AGGR() {
 return DVVALDCOS_AGGR;
 }
 
-public double getEINT() {
+public byte getEINT() {
 return EINT;
 }
 
-public double getEINTFIX() {
+public byte getEINTFIX() {
 return EINTFIX;
 }
 
-public double getEINT_I() {
+public byte getEINT_I() {
 return EINT_I;
 }
 
-public double getEINT_IFLAG() {
+public boolean getEINT_IFLAG() {
 return EINT_IFLAG;
 }
 
-public double getEMSARR() {
+public boolean getEMSARR() {
 return EMSARR;
 }
 
-public double getEMSPAY() {
+public boolean getEMSPAY() {
 return EMSPAY;
 }
 
-public double getEQDRAW() {
+public byte getEQDRAW() {
 return EQDRAW;
 }
 
-public double getEQDRAW_I() {
+public byte getEQDRAW_I() {
 return EQDRAW_I;
 }
 
-public double getEQDRAW_IFLAG() {
+public boolean getEQDRAW_IFLAG() {
 return EQDRAW_IFLAG;
 }
 
-public double getEQNEW() {
+public byte getEQNEW() {
 return EQNEW;
 }
 
-public double getEQOLD() {
+public byte getEQOLD() {
 return EQOLD;
 }
 
-public double getEQTYPE1() {
+public byte getEQTYPE1() {
 return EQTYPE1;
 }
 
-public double getEQTYPE1_I() {
+public byte getEQTYPE1_I() {
 return EQTYPE1_I;
 }
 
-public double getEQTYPE1_IFLAG() {
+public boolean getEQTYPE1_IFLAG() {
 return EQTYPE1_IFLAG;
 }
 
-public double getEQTYPE2() {
+public boolean getEQTYPE2() {
 return EQTYPE2;
 }
 
-public double getEQUITY_YN_I() {
+public byte getEQUITY_YN_I() {
 return EQUITY_YN_I;
 }
 
-public double getEQUITY_YN_IFLAG() {
+public boolean getEQUITY_YN_IFLAG() {
 return EQUITY_YN_IFLAG;
 }
 
-public double getEQVALDR() {
+public int getEQVALDR() {
 return EQVALDR;
 }
 
-public double getEQVALDRB() {
+public byte getEQVALDRB() {
 return EQVALDRB;
 }
 
-public double getEQWHENM() {
+public byte getEQWHENM() {
 return EQWHENM;
 }
 
-public double getEQWHENY() {
+public short getEQWHENY() {
 return EQWHENY;
 }
 
-public double getEREC() {
+public byte getEREC() {
 return EREC;
 }
 
-public double getERECMBY() {
+public boolean getERECMBY() {
 return ERECMBY;
 }
 
-public double getERECMPD() {
+public byte getERECMPD() {
 return ERECMPD;
 }
 
-public double getERVRECBY() {
+public boolean getERVRECBY() {
 return ERVRECBY;
 }
 
-public double getERVRECPD() {
+public byte getERVRECPD() {
 return ERVRECPD;
 }
 
-public double getERVREG1() {
+public byte getERVREG1() {
 return ERVREG1;
 }
 
-public double getERVREG2() {
+public boolean getERVREG2() {
 return ERVREG2;
 }
 
-public double getESHARAPP() {
+public int getESHARAPP() {
 return ESHARAPP;
 }
 
-public double getFRREPFIX() {
+public int getFRREPFIX() {
 return FRREPFIX;
 }
 
-public double getGCONTVLS() {
+public int getGCONTVLS() {
 return GCONTVLS;
 }
 
-public double getHEXT1() {
+public byte getHEXT1() {
 return HEXT1;
 }
 
-public double getHEXT2() {
+public byte getHEXT2() {
 return HEXT2;
 }
 
-public double getHEXT3() {
+public byte getHEXT3() {
 return HEXT3;
 }
 
-public double getHEXT4() {
+public byte getHEXT4() {
 return HEXT4;
 }
 
-public double getHFINL_AGGR() {
+protected double HFINL_AGGR() {
 return HFINL_AGGR;
 }
 
-public double getHFINW_EXCENDW_AGGR() {
+protected double HFINW_EXCENDW_AGGR() {
 return HFINW_EXCENDW_AGGR;
 }
 
-public double getHOUSGDSOST_SUM() {
+public int getHOUSGDSOST_SUM() {
 return HOUSGDSOST_SUM;
 }
 
-public double getMARRSV2() {
+public int getMARRSV2() {
 return MARRSV2;
 }
 
-public double getMARRSV3() {
+public short getMARRSV3() {
 return MARRSV3;
 }
 
-public double getMCHGE() {
+public byte getMCHGE() {
 return MCHGE;
 }
 
-public double getMCHGENUM() {
+public byte getMCHGENUM() {
 return MCHGENUM;
 }
 
-public double getMENDNUM3_I() {
+public boolean getMENDNUM3_I() {
 return MENDNUM3_I;
 }
 
-public double getMENDNUM3_IFLAG() {
+public boolean getMENDNUM3_IFLAG() {
 return MENDNUM3_IFLAG;
 }
 
-public double getMENDV5_I() {
+public int getMENDV5_I() {
 return MENDV5_I;
 }
 
-public double getMENDV5_IFLAG() {
+public boolean getMENDV5_IFLAG() {
 return MENDV5_IFLAG;
 }
 
-public double getMENDV7_I() {
+public int getMENDV7_I() {
 return MENDV7_I;
 }
 
-public double getMENDV7_IFLAG() {
+public boolean getMENDV7_IFLAG() {
 return MENDV7_IFLAG;
 }
 
-public double getMENDW2() {
+public byte getMENDW2() {
 return MENDW2;
 }
 
-public double getMEXTN() {
+public byte getMEXTN() {
 return MEXTN;
 }
 
-public double getMEXTRS1() {
+public byte getMEXTRS1() {
 return MEXTRS1;
 }
 
-public double getMEXTRS2() {
+public byte getMEXTRS2() {
 return MEXTRS2;
 }
 
-public double getMEXTRS3() {
+public byte getMEXTRS3() {
 return MEXTRS3;
 }
 
-public double getMNUMBN() {
+public byte getMNUMBN() {
 return MNUMBN;
 }
 
-public double getMNUMBO() {
+public byte getMNUMBO() {
 return MNUMBO;
 }
 
-public double getMNUMB_I() {
+public byte getMNUMB_I() {
 return MNUMB_I;
 }
 
-public double getMNUMB_IFLAG() {
+public boolean getMNUMB_IFLAG() {
 return MNUMB_IFLAG;
 }
 
-public double getMREAS14() {
+public byte getMREAS14() {
 return MREAS14;
 }
 
-public double getMREAS24() {
+public byte getMREAS24() {
 return MREAS24;
 }
 
-public double getMW2CHK1() {
+public byte getMW2CHK1() {
 return MW2CHK1;
 }
 
-public double getMW2CHK2() {
+public byte getMW2CHK2() {
 return MW2CHK2;
 }
 
-public double getMW2CHK3() {
+public byte getMW2CHK3() {
 return MW2CHK3;
 }
 
-public double getMYIFCH2() {
+public byte getMYIFCH2() {
 return MYIFCH2;
 }
 
-public double getMYIFCH3() {
+public byte getMYIFCH3() {
 return MYIFCH3;
 }
 
-public double getNOUNITS() {
+public byte getNOUNITS() {
 return NOUNITS;
 }
 
-public double getNUMDEPCH() {
+public byte getNUMDEPCH() {
 return NUMDEPCH;
 }
 
-public double getNUMELCH() {
+public byte getNUMELCH() {
 return NUMELCH;
 }
 
-public double getNUMNOELCH() {
+public byte getNUMNOELCH() {
 return NUMNOELCH;
 }
 
-public double getOTHMORT_SUM() {
+public int getOTHMORT_SUM() {
 return OTHMORT_SUM;
 }
 
-public double getPHYSBUYLGDST_AGGR() {
+public boolean getPHYSBUYLGDST_AGGR() {
 return PHYSBUYLGDST_AGGR;
 }
 
-public double getPHYSHOUSGDSOST_AGGR() {
+public boolean getPHYSHOUSGDSOST_AGGR() {
 return PHYSHOUSGDSOST_AGGR;
 }
 
-public double getPHYSHOUSGDST_AGGR() {
+public boolean getPHYSHOUSGDST_AGGR() {
 return PHYSHOUSGDST_AGGR;
 }
 
-public double getPRREPAY() {
+public byte getPRREPAY() {
 return PRREPAY;
 }
 
-public double getPRREPAY_I() {
+public byte getPRREPAY_I() {
 return PRREPAY_I;
 }
 
-public double getPRREPAY_IFLAG() {
+public boolean getPRREPAY_IFLAG() {
 return PRREPAY_IFLAG;
 }
 
-public double getPRREPFIX() {
+public int getPRREPFIX() {
 return PRREPFIX;
 }
 
-public double getPRREPFIX_I() {
+public int getPRREPFIX_I() {
 return PRREPFIX_I;
 }
 
-public double getPRREPFIX_IFLAG() {
+public boolean getPRREPFIX_IFLAG() {
 return PRREPFIX_IFLAG;
 }
 
-public double getPRREPPC() {
+protected double PRREPPC() {
 return PRREPPC;
 }
 
-public double getPRREPPC_I() {
+protected double PRREPPC_I() {
 return PRREPPC_I;
 }
 
-public double getPRREPPC_IFLAG() {
+public boolean getPRREPPC_IFLAG() {
 return PRREPPC_IFLAG;
 }
 
-public double getSHARAPP() {
+protected double SHARAPP() {
 return SHARAPP;
 }
 
-public double getTOTARR_EXCMORT_AGGR() {
+public short getTOTARR_EXCMORT_AGGR() {
 return TOTARR_EXCMORT_AGGR;
 }
 
-public double getTOTBILLARR_AGGR() {
+public short getTOTBILLARR_AGGR() {
 return TOTBILLARR_AGGR;
 }
 
-public double getTOTCC_AGGR() {
+public int getTOTCC_AGGR() {
 return TOTCC_AGGR;
 }
 
-public double getTOTDVNWFLN_AGGR() {
+public int getTOTDVNWFLN_AGGR() {
 return TOTDVNWFLN_AGGR;
 }
 
-public double getTOTDVNWILN_AGGR() {
+public int getTOTDVNWILN_AGGR() {
 return TOTDVNWILN_AGGR;
 }
 
-public double getTOTFLNS_AGGR() {
+protected double TOTFLNS_AGGR() {
 return TOTFLNS_AGGR;
 }
 
-public double getTOTHPARR_AGGR() {
+public short getTOTHPARR_AGGR() {
 return TOTHPARR_AGGR;
 }
 
-public double getTOTHP_AGGR() {
+protected double TOTHP_AGGR() {
 return TOTHP_AGGR;
 }
 
-public double getTOTLNARR_AGGR() {
+public short getTOTLNARR_AGGR() {
 return TOTLNARR_AGGR;
 }
 
-public double getTOTLNS_AGGR() {
+protected double TOTLNS_AGGR() {
 return TOTLNS_AGGR;
 }
 
-public double getTOTLOS_AGGR() {
+protected double TOTLOS_AGGR() {
 return TOTLOS_AGGR;
 }
 
-public double getTOTMOARR_AGGR() {
+public short getTOTMOARR_AGGR() {
 return TOTMOARR_AGGR;
 }
 
-public double getTOTMO_AGGR() {
+protected double TOTMO_AGGR() {
 return TOTMO_AGGR;
 }
 
-public double getTOTNLOS_AGGR() {
+public int getTOTNLOS_AGGR() {
 return TOTNLOS_AGGR;
 }
 
-public double getTOTNSLBNK_AGGR() {
+public int getTOTNSLBNK_AGGR() {
 return TOTNSLBNK_AGGR;
 }
 
-public double getTOTNSLC_AGGR() {
+public int getTOTNSLC_AGGR() {
 return TOTNSLC_AGGR;
 }
 
-public double getTOTOSLBNK_AGGR() {
+public int getTOTOSLBNK_AGGR() {
 return TOTOSLBNK_AGGR;
 }
 
-public double getTOTOSLC_AGGR() {
+public int getTOTOSLC_AGGR() {
 return TOTOSLC_AGGR;
 }
 
-public double getTOTPEN_AGGR() {
+protected double TOTPEN_AGGR() {
 return TOTPEN_AGGR;
 }
 
-public double getTOTSC_AGGR() {
+public short getTOTSC_AGGR() {
 return TOTSC_AGGR;
 }
 
-public double getTOTSLBNK_AGGR() {
+public int getTOTSLBNK_AGGR() {
 return TOTSLBNK_AGGR;
 }
 
-public double getTOTSLC_AGGR() {
+public int getTOTSLC_AGGR() {
 return TOTSLC_AGGR;
 }
 
-public double getVOTPN() {
+public byte getVOTPN() {
 return VOTPN;
 }
 
-public double getVPERS_I() {
+public byte getVPERS_I() {
 return VPERS_I;
 }
 
-public double getVPERS_IFLAG() {
+public boolean getVPERS_IFLAG() {
 return VPERS_IFLAG;
 }
 

@@ -17,12 +17,11 @@ package uk.ac.leeds.ccg.andyt.projects.wigb.process;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StreamTokenizer;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.TreeSet;
 import java.util.logging.Level;
@@ -33,8 +32,6 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Strings;
 import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Object;
-import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_HHOLD_Handler;
-import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WAAS_Handler;
 
 /**
  * This class produces source code for loading survey data. Source code classes
@@ -85,57 +82,109 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
         WIGB_JavaCodeGenerator p;
         p = new WIGB_JavaCodeGenerator(new WIGB_Environment());
         p.Files.setDataDirectory(new File(System.getProperty("user.dir"), "data"));
+        int nwaves;
+        nwaves = 5;
         String type;
         type = "hhold";
-        p.run(type);
+        Object[] hholdTypes;
+        hholdTypes = p.getFieldTypes(type, nwaves);
+        p.run(type, hholdTypes, nwaves);
         type = "person";
-        p.run(type);
+        Object[] personTypes;
+        personTypes = p.getFieldTypes(type, nwaves);
+        p.run(type, personTypes, nwaves);
     }
 
-    void run2() {
+    /**
+     * Pass through the data and works out what numeric type is best to store
+     * each field in the data.
+     *
+     * @param type
+     * @return keys are standardised field names, value is: 0 if field is to be
+     * represented by a String; 1 if field is to be represented by a double; 2
+     * if field is to be represented by a int; 3 if field is to be represented
+     * by a short; 4 if field is to be represented by a byte; 5 if field is to
+     * be represented by a boolean.
+     */
+    protected Object[] getFieldTypes(String type, int nwaves) {
+        Object[] r;
+        r = new Object[4];
         File indir;
         File outdir;
         File generateddir;
-        WIGB_HHOLD_Handler hholdHandler;
-
         indir = Files.getWaASInputDir();
         generateddir = Files.getGeneratedWaASDirectory();
         outdir = new File(generateddir, "Subsets");
         outdir.mkdirs();
-
-        Object[] t;
-        t = loadTest(1, "hhold", indir);
-        boolean[] strings;
-        boolean[] doubles;
-        boolean[] ints;
-        boolean[] shorts;
-        boolean[] bytes;
-        strings = (boolean[]) t[0];
-        doubles = (boolean[]) t[1];
-        ints = (boolean[]) t[2];
-        shorts = (boolean[]) t[3];
-        bytes = (boolean[]) t[4];
-        for (int i = 0; i < strings.length; i++) {
-            if (strings[i]) {
-                System.out.println("" + i + " " + "String");
-            } else {
-                if (doubles[i]) {
-                    System.out.println("" + i + " " + "double");
+        HashMap<String, Integer>[] allFieldTypes;
+        allFieldTypes = new HashMap[nwaves];
+        String[][] headers;
+        headers = new String[nwaves][];
+        HashMap<String, Byte>[] v0ms;
+        v0ms = new HashMap[nwaves];
+        HashMap<String, Byte>[] v1ms;
+        v1ms = new HashMap[nwaves];
+        for (int w = 0; w < nwaves; w++) {
+            Object[] t;
+            t = loadTest(w + 1, type, indir);
+            HashMap<String, Integer> fieldTypes;
+            fieldTypes = new HashMap<>();
+            allFieldTypes[w] = fieldTypes;
+            String[] fields;
+            boolean[] strings;
+            boolean[] doubles;
+            boolean[] ints;
+            boolean[] shorts;
+            boolean[] bytes;
+            boolean[] booleans;
+            HashMap<String, Byte> v0m;
+            HashMap<String, Byte> v1m;
+            fields = (String[]) t[0];
+            headers[w] = fields;
+            strings = (boolean[]) t[1];
+            doubles = (boolean[]) t[2];
+            ints = (boolean[]) t[3];
+            shorts = (boolean[]) t[4];
+            bytes = (boolean[]) t[5];
+            booleans = (boolean[]) t[6];
+            v0m = (HashMap<String, Byte>) t[7];
+            v1m = (HashMap<String, Byte>) t[8];
+            v0ms[w] = v0m;
+            v1ms[w] = v1m;
+            String field;
+            for (int i = 0; i < strings.length; i++) {
+                field = fields[i];
+                if (strings[i]) {
+                    System.out.println("" + i + " " + "String");
+                    fieldTypes.put(field, 0);
                 } else {
-                    if (ints[i]) {
-                        System.out.println("" + i + " " + "int");
+                    if (doubles[i]) {
+                        System.out.println("" + i + " " + "double");
+                        fieldTypes.put(field, 1);
                     } else {
-                        if (shorts[i]) {
-                            System.out.println("" + i + " " + "short");
+                        if (ints[i]) {
+                            System.out.println("" + i + " " + "int");
+                            fieldTypes.put(field, 2);
                         } else {
-                            if (bytes[i]) {
-                                System.out.println("" + i + " " + "byte");
+                            if (shorts[i]) {
+                                System.out.println("" + i + " " + "short");
+                                fieldTypes.put(field, 3);
                             } else {
-                                try {
-                                    throw new Exception("unrecognised type");
-                                } catch (Exception ex) {
-                                    ex.printStackTrace(System.err);
-                                    Logger.getLogger(WIGB_JavaCodeGenerator.class.getName()).log(Level.SEVERE, null, ex);
+                                if (bytes[i]) {
+                                    System.out.println("" + i + " " + "byte");
+                                    fieldTypes.put(field, 4);
+                                } else {
+                                    if (booleans[i]) {
+                                        System.out.println("" + i + " " + "boolean");
+                                        fieldTypes.put(field, 5);
+                                    } else {
+                                        try {
+                                            throw new Exception("unrecognised type");
+                                        } catch (Exception ex) {
+                                            ex.printStackTrace(System.err);
+                                            Logger.getLogger(WIGB_JavaCodeGenerator.class.getName()).log(Level.SEVERE, null, ex);
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -143,21 +192,64 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                 }
             }
         }
+        Iterator<String> ite;
+        String field;
+        int fieldType;
+        int consolidatedFieldType;
+        HashMap<String, Integer> consolidatedFieldTypes;
+        consolidatedFieldTypes = new HashMap<>();
+        consolidatedFieldTypes.putAll(allFieldTypes[0]);
+        for (int w = 1; w < nwaves; w++) {
+            HashMap<String, Integer> fieldTypes;
+            fieldTypes = allFieldTypes[w];
+            ite = fieldTypes.keySet().iterator();
+            while (ite.hasNext()) {
+                field = ite.next();
+                fieldType = fieldTypes.get(field);
+                if (consolidatedFieldTypes.containsKey(field)) {
+                    consolidatedFieldType = consolidatedFieldTypes.get(field);
+                    if (fieldType != consolidatedFieldType) {
+                        consolidatedFieldTypes.put(field,
+                                Math.min(fieldType, consolidatedFieldType));
+                    }
+                } else {
+                    consolidatedFieldTypes.put(field, fieldType);
+                }
+            }
+        }
+        r[0] = consolidatedFieldTypes;
+        r[1] = headers;
+        r[2] = v0ms;
+        r[3] = v1ms;
+        return r;
     }
 
+    /**
+     *
+     * @param wave
+     * @param TYPE
+     * @param indir
+     * @return
+     */
     public Object[] loadTest(int wave, String TYPE, File indir) {
         Object[] r;
-        r = new Object[5];
+        r = new Object[9];
+        String[] fields;
         boolean[] strings;
         boolean[] doubles;
         boolean[] ints;
         boolean[] shorts;
         boolean[] bytes;
-        File dir;
-        dir = Env.Files.getGeneratedWaASDirectory();
+        boolean[] booleans;
+        HashMap<String, Byte> v0m;
+        HashMap<String, Byte> v1m;
+        v0m = new HashMap<>();
+        v1m = new HashMap<>();
+        byte[] v0;
+        byte[] v1;
+
         File f;
         f = getInputFile(wave, TYPE, indir);
-        r = new Object[2];
         System.out.println("<Test load wave " + wave + " " + TYPE + " WaAS "
                 + "data from " + f + ">");
         BufferedReader br;
@@ -170,19 +262,28 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
         String line;
         // skip header
         line = Generic_ReadCSV.readLine(st, null);
+        fields = parseHeader(line, wave);
         int n;
-        n = line.split("\t").length;
+        n = fields.length;
         strings = new boolean[n];
         doubles = new boolean[n];
         ints = new boolean[n];
         shorts = new boolean[n];
         bytes = new boolean[n];
+        booleans = new boolean[n];
+        v0 = new byte[n];
+        v1 = new byte[n];
+
         for (int i = 0; i < n; i++) {
-            strings[n] = false;
-            doubles[n] = false;
-            ints[n] = false;
-            shorts[n] = false;
-            bytes[n] = true;
+            strings[i] = false;
+            doubles[i] = false;
+            ints[i] = false;
+            shorts[i] = false;
+            //bytes[i] = true;
+            bytes[i] = false;
+            booleans[i] = true;
+            v0[i] = Byte.MIN_VALUE;
+            v1[i] = Byte.MIN_VALUE;
         }
         String[] split;
         boolean read;
@@ -196,109 +297,120 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
             if (line == null) {
                 read = true;
             } else {
-                line = Generic_ReadCSV.readLine(st, null);
                 split = line.split("\t");
                 for (int i = 0; i < n; i++) {
-                    parse(split[i],i, strings, doubles, ints, shorts, bytes);
+                    parse(split[i], fields[i], i, strings, doubles, ints,
+                            shorts, bytes, booleans, v0, v1, v0m, v1m);
+                }
+            }
+        }
+        /**
+         * Order v0m and v1m so that v0m always has the smaller value and v1m
+         * the larger.
+         */
+        Iterator<String> ite;
+        ite = v0m.keySet().iterator();
+        String s;
+        byte v00;
+        byte v11;
+        while (ite.hasNext()) {
+            s = ite.next();
+            v00 = v0m.get(s);
+            if (v1m.containsKey(s)) {
+                v11 = v1m.get(s);
+                if (v00 > v11) {
+                    v0m.put(s, v11);
+                    v1m.put(s, v00);
                 }
             }
         }
         System.out.println("</Loading wave " + wave + " " + TYPE + " WaAS "
                 + "data from " + f + ">");
-        r[0] = strings;
-        r[1] = doubles;
-        r[2] = ints;
-        r[3] = shorts;
-        r[4] = bytes;
+        r[0] = fields;
+        r[1] = strings;
+        r[2] = doubles;
+        r[3] = ints;
+        r[4] = shorts;
+        r[5] = bytes;
+        r[6] = booleans;
+        r[7] = v0m;
+        r[8] = v1m;
         return r;
     }
 
-    public File getInputFile(int wave, String TYPE, File INDIR) {
+    public File getInputFile(int wave, String type, File indir) {
         File f;
         String filename;
-        filename = "was_wave_" + wave + "_" + TYPE + "_eul_final";
+        filename = "was_wave_" + wave + "_" + type + "_eul_final";
         if (wave < 4) {
             filename += "_v2";
         }
         filename += ".tab";
-        f = new File(INDIR, filename);
+        f = new File(indir, filename);
         return f;
     }
 
-    public boolean canBeStoredAsByte(int i) {
-        if (i > Byte.MIN_VALUE) {
-            if (i < Byte.MAX_VALUE) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public void parse(String s, int index, boolean[] strings, boolean[] doubles,
-            boolean[] ints, boolean[] shorts, boolean[] bytes) {
-        if (!strings[index]) {
-            if (doubles[index]) {
-                if (!isDouble(s)) {
-                    doubles[index] = false;
-                    strings[index] = true;
+    /**
+     * If s can be represented as a byte reserving Byte.Min_Value for a
+     * noDataValue,
+     *
+     * @param s
+     * @param field
+     * @param index
+     * @param strings
+     * @param doubles
+     * @param ints
+     * @param shorts
+     * @param bytes
+     * @param booleans
+     * @param v0
+     * @param v1
+     * @param v0m
+     * @param v1m
+     */
+    public void parse(String s, String field, int index, boolean[] strings,
+            boolean[] doubles, boolean[] ints, boolean[] shorts,
+            boolean[] bytes, boolean[] booleans, byte[] v0, byte[] v1,
+            HashMap<String, Byte> v0m, HashMap<String, Byte> v1m) {
+        if (!s.trim().isEmpty()) {
+            if (!strings[index]) {
+                if (doubles[index]) {
+                    doDouble(s, index, strings, doubles);
                 } else {
                     if (ints[index]) {
-                        if (!isInt(s)) {
-                            ints[index] = false;
-                            if (isDouble(s)) {
-                                doubles[index] = true;
-                            } else {
-                                doubles[index] = false;
-                                strings[index] = true;
-                            }
-                        }
-                    }
-                }
-            } else {
-                if (ints[index]) {
-                    if (!isInt(s)) {
-                        ints[index] = false;
-                        if (isDouble(s)) {
-                            doubles[index] = true;
-                        } else {
-                            doubles[index] = false;
-                            strings[index] = true;
-                        }
-                    }
-                } else {
-                    if (shorts[index]) {
-                        if (!isShort(s)) {
-                            shorts[index] = false;
-                            if (ints[index]) {
-                                if (!isInt(s)) {
-                                    ints[index] = false;
-                                    if (isDouble(s)) {
-                                        doubles[index] = true;
-                                    } else {
-                                        doubles[index] = false;
-                                        strings[index] = true;
-                                    }
-                                }
-                            }
-                        }
+                        doInt(s, index, strings, doubles, ints);
                     } else {
-                        if (bytes[index]) {
-                            if (!isByte(s)) {
-                                bytes[index] = false;
-                                if (shorts[index]) {
-                                    if (!isShort(s)) {
-                                        shorts[index] = false;
-                                        if (ints[index]) {
-                                            if (!isInt(s)) {
-                                                ints[index] = false;
-                                                if (isDouble(s)) {
-                                                    doubles[index] = true;
+                        if (shorts[index]) {
+                            doShort(s, index, strings, doubles, ints, shorts);
+                        } else {
+                            if (bytes[index]) {
+                                doByte(s, index, strings, doubles, ints,
+                                        shorts, bytes);
+                            } else {
+                                if (booleans[index]) {
+                                    if (isByte(s)) {
+                                        byte b = Byte.valueOf(s);
+                                        if (v0[index] > Byte.MIN_VALUE) {
+                                            if (!(b == v0[index])) {
+                                                if (v1[index] > Byte.MIN_VALUE) {
+                                                    if (!(b == v1[index])) {
+                                                        booleans[index] = false;
+                                                        bytes[index] = true;
+                                                    }
                                                 } else {
-                                                    doubles[index] = false;
-                                                    strings[index] = true;
+                                                    v1[index] = b;
+                                                    v1m.put(field, b);
                                                 }
                                             }
+                                        } else {
+                                            v0[index] = b;
+                                            v0m.put(field, b);
                                         }
+                                    } else {
+                                        booleans[index] = false;
+                                        shorts[index] = true;
+                                        doShort(s, index, strings, doubles, ints,
+                                                shorts);
                                     }
                                 }
                             }
@@ -306,13 +418,50 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                     }
                 }
             }
+        }
+    }
+
+    protected void doByte(String s, int index, boolean[] strings,
+            boolean[] doubles, boolean[] ints, boolean[] shorts,
+            boolean[] bytes) {
+        if (!isByte(s)) {
+            bytes[index] = false;
+            shorts[index] = true;
+            doShort(s, index, strings, doubles, ints, shorts);
+        }
+    }
+
+    protected void doShort(String s, int index, boolean[] strings,
+            boolean[] doubles, boolean[] ints, boolean[] shorts) {
+        if (!isShort(s)) {
+            shorts[index] = false;
+            ints[index] = true;
+            doInt(s, index, strings, doubles, ints);
+        }
+
+    }
+
+    protected void doInt(String s, int index, boolean[] strings,
+            boolean[] doubles, boolean[] ints) {
+        if (!isInt(s)) {
+            ints[index] = false;
+            doubles[index] = true;
+            doDouble(s, index, strings, doubles);
+        }
+    }
+
+    protected void doDouble(String s, int index, boolean[] strings,
+            boolean[] doubles) {
+        if (!isDouble(s)) {
+            doubles[index] = false;
+            strings[index] = true;
         }
     }
 
     public boolean isByte(String s) {
         try {
-            Byte.parseByte(s);
-            return true;
+            byte b = Byte.parseByte(s);
+            return b > Byte.MIN_VALUE;
         } catch (NumberFormatException e) {
             return false;
         }
@@ -320,8 +469,8 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
 
     public boolean isShort(String s) {
         try {
-            Short.parseShort(s);
-            return true;
+            short sh = Short.parseShort(s);
+            return sh > Short.MIN_VALUE;
         } catch (NumberFormatException e) {
             return false;
         }
@@ -329,8 +478,8 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
 
     public boolean isInt(String s) {
         try {
-            Integer.parseInt(s);
-            return true;
+            int i = Integer.parseInt(s);
+            return i > Integer.MIN_VALUE;
         } catch (NumberFormatException e) {
             return false;
         }
@@ -345,31 +494,21 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
         }
     }
 
-    public void run(String type) {
-        File indir;
-        indir = Files.getWaASInputDir();
-        File fin;
+    public void run(String type, Object[] types, int nwaves) {
+        HashMap<String, Integer> fieldTypes;
+        fieldTypes = (HashMap<String, Integer>) types[0];
+        String[][] headers;
+        headers = (String[][]) types[1];
+        HashMap<String, Byte>[] v0ms;
+        v0ms = (HashMap<String, Byte>[]) types[2];
+        HashMap<String, Byte>[] v1ms;
+        v1ms = (HashMap<String, Byte>[]) types[3];
 
-        ArrayList<String> headers;
-        headers = new ArrayList<>();
-        // Load wave headers for hhold
-        // Load Waves 1 to 3
-        for (int wave = 1; wave <= 3; wave++) {
-            fin = new File(indir, "was_wave_" + wave + "_" + type + "_eul_final_v2.tab");
-            headers.add(load(fin, wave));
-        }
-        // Load Waves 4 and 5
-        for (int wave = 4; wave <= 5; wave++) {
-            fin = new File(indir, "was_wave_" + wave + "_" + type + "_eul_final.tab");
-            headers.add(load(fin, wave));
-        }
+        TreeSet<String>[] fields;
+        fields = getFields(headers);
 
-        //
-        TreeSet<String>[] allFields;
-        allFields = getFields(headers);
-
-        ArrayList<String>[] fieldsLists;
-        fieldsLists = getFieldsList(headers);
+        HashMap<String, Byte> v0m0;
+        v0m0 = setCommonBooleanMaps(v0ms, v1ms, fields, fieldTypes);
 
         File outdir;
         outdir = new File(Files.getDataDir(), "..");
@@ -391,65 +530,26 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
         packageName = "uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.";
         packageName += type;
 
-        // stringFields are to distinguish those fields that are not 
-        // represented by numbers. From the documentation it should be possible 
-        // to figure out which to store as Integer or Boolean too.
-        HashSet<String> stringFields;
-        stringFields = new HashSet<>();
-        stringFields.add("SOA2");
-        stringFields.add("SOA1");
-        stringFields.add("STATSWARD");
-        stringFields.add("VOTYO");
-        // The following are for Person files
-        stringFields.add("DTJBL");
-        stringFields.add("BACCBEG");
-        stringFields.add("BACCBEG1");
-        stringFields.add("BACCBEG2");
-        stringFields.add("BACCBEG3");
-        stringFields.add("BACCEND");
-        stringFields.add("BACCEND1");
-        stringFields.add("BACCEND2");
-        stringFields.add("BACCEND3");
-
-        // stringFields are to distinguish those fields that are not 
-        // represented by numbers. From the documentation it should be possible 
-        // to figure out which to store as Integer or Boolean too.
-        HashSet<String> integerFields;
-        integerFields = new HashSet<>();
-        integerFields.add("CASEW5");
-        integerFields.add("CASEW4");
-        integerFields.add("CASEW3");
-        integerFields.add("CASEW2");
-        integerFields.add("CASEW1");
-        integerFields.add("PERSONW5");
-        integerFields.add("PERSONW4");
-        integerFields.add("PERSONW3");
-        integerFields.add("PERSONW2");
-        integerFields.add("PERSONW1");
-
         File fout;
         PrintWriter pw;
-        TreeSet<String> fields;
-        String field;
         int wave;
         String className;
         String extendedClassName;
-        int size;
-        size = 5;
         String prepend;
         prepend = "WIGB_";
         type = type.toUpperCase();
 
-        for (int i = 0; i < allFields.length; i++) {
-            fields = allFields[i];
-            if (i < size) {
+        for (int w = 0; w < fields.length; w++) {
+            if (w < nwaves) {
                 // Non-abstract classes
-                wave = i + 1;
+                wave = w + 1;
+                HashMap<String, Byte> v0m;
+                v0m = v0ms[w];
                 className = prepend + "Wave" + wave + "_" + type + "_Record";
                 fout = new File(outdir, className + ".java");
                 pw = Generic_StaticIO.getPrintWriter(fout, false);
                 writeHeaderPackageAndImports(pw, packageName, "");
-                switch (i) {
+                switch (w) {
                     case 0:
                         extendedClassName = prepend + "Wave1Or2_" + type + "_Record";
                         break;
@@ -472,16 +572,13 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                 printClassDeclarationSerialVersionUID(pw, packageName,
                         className, "", extendedClassName);
                 // Print Field Declarations Inits And Getters
-                printFieldDeclarationsInitsAndGetters(integerFields,
-                        stringFields, pw, fields);
+                printFieldDeclarationsInitsAndGetters(pw, fields[w], fieldTypes,
+                        v0m);
                 // Constructor
                 pw.println("public " + className + "(String line) {");
                 pw.println("s = line.split(\"\\t\");");
-                ArrayList<String> fieldsList;
-                fieldsList = fieldsLists[i];
-                for (int j = 0; j < fieldsList.size(); j++) {
-                    field = fieldsList.get(j);
-                    pw.println("init" + field + "(s[" + j + "]);");
+                for (int j = 0; j < headers[w].length; j++) {
+                    pw.println("init" + headers[w][j] + "(s[" + j + "]);");
                 }
                 pw.println("}");
                 pw.println("}");
@@ -489,7 +586,7 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
             } else {
                 // Abstract classes
                 pw = null;
-                if (i == size) {
+                if (w == nwaves) {
                     className = prepend + "Wave1Or2Or3Or4Or5_" + type + "_Record";
                     fout = new File(outdir, className + ".java");
                     pw = Generic_StaticIO.getPrintWriter(fout, false);
@@ -498,7 +595,7 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                     printClassDeclarationSerialVersionUID(pw, packageName,
                             className, "Serializable", "");
                     pw.println("protected String[] s;");
-                } else if (i == (size + 1)) {
+                } else if (w == (nwaves + 1)) {
                     className = prepend + "Wave1Or2_" + type + "_Record";
                     fout = new File(outdir, className + ".java");
                     pw = Generic_StaticIO.getPrintWriter(fout, false);
@@ -506,7 +603,7 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                     extendedClassName = prepend + "Wave1Or2Or3Or4Or5_" + type + "_Record";
                     printClassDeclarationSerialVersionUID(pw, packageName,
                             className, "", extendedClassName);
-                } else if (i == (size + 2)) {
+                } else if (w == (nwaves + 2)) {
                     className = prepend + "Wave3Or4Or5_" + type + "_Record";
                     fout = new File(outdir, className + ".java");
                     pw = Generic_StaticIO.getPrintWriter(fout, false);
@@ -514,7 +611,7 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                     extendedClassName = prepend + "Wave1Or2Or3Or4Or5_" + type + "_Record";
                     printClassDeclarationSerialVersionUID(pw, packageName,
                             className, "", extendedClassName);
-                } else if (i == (size + 3)) {
+                } else if (w == (nwaves + 3)) {
                     className = prepend + "Wave4Or5_" + type + "_Record";
                     fout = new File(outdir, className + ".java");
                     pw = Generic_StaticIO.getPrintWriter(fout, false);
@@ -524,7 +621,7 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                             className, "", extendedClassName);
                 }
                 // Print Field Declarations Inits And Getters
-                printFieldDeclarationsInitsAndGetters(integerFields, stringFields, pw, fields);
+                printFieldDeclarationsInitsAndGetters(pw, fields[w], fieldTypes, v0m0);
                 pw.println("}");
                 pw.close();
             }
@@ -574,138 +671,180 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
     }
 
     /**
-     * @param integerFields
-     * @param stringFields
      * @param pw
      * @param fields
+     * @param fieldTypes
+     * @param v0
      */
-    public void printFieldDeclarationsInitsAndGetters(
-            HashSet<String> integerFields, HashSet<String> stringFields,
-            PrintWriter pw, TreeSet<String> fields) {
+    public void printFieldDeclarationsInitsAndGetters(PrintWriter pw,
+            TreeSet<String> fields, HashMap<String, Integer> fieldTypes,
+            HashMap<String, Byte> v0) {
         // Field declarations
-        printFieldDeclarations(integerFields, stringFields, pw, fields);
+        printFieldDeclarations(pw, fields, fieldTypes);
         // Field init
-        printFieldInits(integerFields, stringFields, pw, fields);
+        printFieldInits(pw, fields, fieldTypes, v0);
         // Field getters
-        printFieldGetters(integerFields, stringFields, pw, fields);
+        printFieldGetters(pw, fields, fieldTypes);
     }
 
     /**
-     * @param integerFields
-     * @param stringFields
      * @param pw
      * @param fields
+     * @param fieldTypes
      */
-    public void printFieldDeclarations(HashSet<String> integerFields,
-            HashSet<String> stringFields, PrintWriter pw,
-            TreeSet<String> fields) {
+    public void printFieldDeclarations(PrintWriter pw, TreeSet<String> fields,
+            HashMap<String, Integer> fieldTypes) {
         String field;
+        int fieldType;
         Iterator<String> ite;
         ite = fields.iterator();
         while (ite.hasNext()) {
             field = ite.next();
-            if (stringFields.contains(field)) {
-                pw.println("protected String " + field + ";");
-            } else {
-                if (integerFields.contains(field)) {
-                    pw.println("protected Integer " + field + ";");
-                } else {
+            fieldType = fieldTypes.get(field);
+            switch (fieldType) {
+                case 0:
+                    pw.println("protected String " + field + ";");
+                    break;
+                case 1:
                     pw.println("protected double " + field + ";");
-                }
+                    break;
+                case 2:
+                    pw.println("protected int " + field + ";");
+                    break;
+                case 3:
+                    pw.println("protected short " + field + ";");
+                    break;
+                case 4:
+                    pw.println("protected byte " + field + ";");
+                    break;
+                default:
+                    pw.println("protected boolean " + field + ";");
+                    break;
             }
         }
     }
 
     /**
      *
-     * @param integerFields
-     * @param stringFields
      * @param pw
      * @param fields
+     * @param fieldTypes
      */
-    public void printFieldGetters(HashSet<String> integerFields,
-            HashSet<String> stringFields, PrintWriter pw,
-            TreeSet<String> fields) {
+    public void printFieldGetters(PrintWriter pw, TreeSet<String> fields,
+            HashMap<String, Integer> fieldTypes) {
         String field;
+        int fieldType;
         Iterator<String> ite;
         ite = fields.iterator();
         while (ite.hasNext()) {
             field = ite.next();
-            if (stringFields.contains(field)) {
-                pw.println("public String get" + field + "() {");
-            } else {
-                if (integerFields.contains(field)) {
-                    pw.println("public Integer get" + field + "() {");
-                } else {
-                    pw.println("public double get" + field + "() {");
-                }
+            fieldType = fieldTypes.get(field);
+            switch (fieldType) {
+                case 0:
+                    pw.println("public String get" + field + "() {");
+                    break;
+                case 1:
+                    pw.println("protected double " + field + "() {");
+                    break;
+                case 2:
+                    pw.println("public int get" + field + "() {");
+                    break;
+                case 3:
+                    pw.println("public short get" + field + "() {");
+                    break;
+                case 4:
+                    pw.println("public byte get" + field + "() {");
+                    break;
+                default:
+                    pw.println("public boolean get" + field + "() {");
+                    break;
             }
             pw.println("return " + field + ";");
             pw.println("}");
             pw.println();
-
         }
     }
 
     /**
      *
-     * @param integerFields
-     * @param stringFields
      * @param pw
      * @param fields
+     * @param fieldTypes
+     * @param v0
      */
-    public void printFieldInits(HashSet<String> integerFields,
-            HashSet<String> stringFields, PrintWriter pw,
-            TreeSet<String> fields) {
+    public void printFieldInits(PrintWriter pw, TreeSet<String> fields,
+            HashMap<String, Integer> fieldTypes, HashMap<String, Byte> v0) {
         String field;
+        int fieldType;
         Iterator<String> ite;
         ite = fields.iterator();
         while (ite.hasNext()) {
             field = ite.next();
-            if (stringFields.contains(field)) {
-                pw.println("protected final void init" + field + "(String s) {");
-                pw.println("if (!s.trim().isEmpty()) {");
-                pw.println(field + " = s;");
-            } else {
-                if (integerFields.contains(field)) {
+            fieldType = fieldTypes.get(field);
+            switch (fieldType) {
+                case 0:
                     pw.println("protected final void init" + field + "(String s) {");
                     pw.println("if (!s.trim().isEmpty()) {");
-                    pw.println(field + " = new Integer(s);");
-                } else {
+                    pw.println(field + " = s;");
+                    break;
+                case 1:
                     pw.println("protected final void init" + field + "(String s) {");
                     pw.println("if (!s.trim().isEmpty()) {");
-                    pw.println(field + " = new Double(s);");
+                    pw.println(field + " = Double.parseDouble(s);");
                     pw.println("} else {");
                     pw.println(field + " = Double.NaN;");
-                }
+                    break;
+                case 2:
+                    pw.println("protected final void init" + field + "(String s) {");
+                    pw.println("if (!s.trim().isEmpty()) {");
+                    pw.println(field + " = Integer.parseInt(s);");
+                    pw.println("} else {");
+                    pw.println(field + " = Integer.MIN_VALUE;");
+                    break;
+                case 3:
+                    pw.println("protected final void init" + field + "(String s) {");
+                    pw.println("if (!s.trim().isEmpty()) {");
+                    pw.println(field + " = Short.parseShort(s);");
+                    pw.println("} else {");
+                    pw.println(field + " = Short.MIN_VALUE;");
+                    break;
+                case 4:
+                    pw.println("protected final void init" + field + "(String s) {");
+                    pw.println("if (!s.trim().isEmpty()) {");
+                    pw.println(field + " = Byte.parseByte(s);");
+                    pw.println("} else {");
+                    pw.println(field + " = Byte.MIN_VALUE;");
+                    break;
+                default:
+                    pw.println("protected final void init" + field + "(String s) {");
+                    pw.println("if (!s.trim().isEmpty()) {");
+                    pw.println("byte b = Byte.parseByte(s);");
+                    if (v0.get(field) == null) {
+                        pw.println(field + " = false;");
+                    } else {
+                        pw.println("if (b == " + v0.get(field) + ") {");
+                        pw.println(field + " = false;");
+                        pw.println("} else {");
+                        pw.println(field + " = true;");
+                        pw.println("}");
+                    }
+                    break;
             }
             pw.println("}");
             pw.println("}");
             pw.println();
-
         }
     }
 
     /**
      * Thinking to returns a lists of IDs...
      *
-     * @param f
+     * @param header
      * @param wave
      * @return
      */
-    public String load(File f, int wave) {
-        BufferedReader br;
-        br = Generic_StaticIO.getBufferedReader(f);
-        StreamTokenizer st;
-        st = new StreamTokenizer(br);
-        Generic_StaticIO.setStreamTokenizerSyntax7(st);
-        String header;
-        header = Generic_ReadCSV.readLine(st, null);
-        try {
-            br.close();
-        } catch (IOException ex) {
-            Logger.getLogger(WIGB_JavaCodeGenerator.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    public String[] parseHeader(String header, int wave) {
+        String[] r;
         String ws;
         ws = "W" + wave;
         String keyIdentifier1;
@@ -741,7 +880,77 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
         h1 = h1.replaceAll(" ,", "\t");
         h1 = h1.replaceAll(uniqueString1, keyIdentifier1);
         h1 = h1.replaceAll(uniqueString2, keyIdentifier2);
-        return h1;
+        r = h1.split("\t");
+        return r;
+    }
+
+    protected HashMap<String, Byte> setCommonBooleanMaps(
+            HashMap<String, Byte>[] v0ms,
+            HashMap<String, Byte>[] v1ms,
+            TreeSet<String>[] allFields,
+            HashMap<String, Integer> fieldTypes) {
+        HashMap<String, Byte> v0m;
+        HashMap<String, Byte> v1m;
+        Iterator<String> ites0;
+        Iterator<String> ites1;
+        String field0;
+        String field1;
+        TreeSet<String> fields;
+        fields = allFields[5];
+        HashMap<String, Byte> v0m1;
+        HashMap<String, Byte> v1m1;
+        v0m1 = new HashMap<>();
+        v1m1 = new HashMap<>();
+        ites0 = fields.iterator();
+        byte v0;
+        Byte v1;
+        Byte v01;
+        Byte v11;
+        while (ites0.hasNext()) {
+            field0 = ites0.next();
+            if (fieldTypes.get(field0) == 5) {
+                for (int w = 0; w < v0ms.length; w++) {
+                    v0m = v0ms[w];
+                    v1m = v1ms[w];
+                    ites1 = v0m.keySet().iterator();
+                    while (ites1.hasNext()) {
+                        field1 = ites1.next();
+                        if (field0.equalsIgnoreCase(field1)) {
+                            v0 = v0m.get(field1);
+                            if (v1m == null) {
+                                v1 = Byte.MIN_VALUE;
+                            } else {
+                                //System.out.println("field1 " + field1);
+                                //System.out.println("field1 " + field1);
+                                v1 = v1m.get(field1);
+                                if (v1 == null) {
+                                    v1 = Byte.MIN_VALUE;
+                                }
+                            }
+                            v01 = v0m1.get(field1);
+                            v11 = v1m1.get(field1);
+                            if (v01 == null) {
+                                v0m1.put(field1, v0);
+                            } else {
+                                if (v01 != v0) {
+                                    // Field better stored as a byte than boolean.
+                                    fieldTypes.put(field1, 4);
+                                }
+                                if (v11 == null) {
+                                    v1m1.put(field1, v1);
+                                } else {
+                                    if (v1 != v11.byteValue()) {
+                                        // Field better stored as a byte than boolean.
+                                        fieldTypes.put(field1, 4);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return v0m1;
     }
 
     /**
@@ -757,18 +966,13 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
      * @param headers
      * @return
      */
-    public TreeSet<String>[] getFields(ArrayList<String> headers) {
+    public TreeSet<String>[] getFields(String[][] headers) {
         TreeSet<String>[] r;
         int size;
-        size = headers.size();
+        size = headers.length;
         r = new TreeSet[(size * 2) - 1];
-        Iterator<String> ite;
-        ite = headers.iterator();
-        int i;
-        i = 0;
-        while (ite.hasNext()) {
-            r[i] = getFields(ite.next());
-            i++;
+        for (int i = 0; i < 5; i++) {
+            r[i] = getFields(headers[i]);
         }
         // Get fields common to waves 1, 2, 3, 4 and 5 (12345)
         r[5] = getFieldsInCommon(r[0], r[1], r[2], r[3], r[4]);
@@ -826,15 +1030,13 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
 
     /**
      *
-     * @param s
+     * @param fields
      * @return
      */
-    public TreeSet<String> getFields(String s) {
+    public TreeSet<String> getFields(String[] fields) {
         TreeSet<String> r;
         r = new TreeSet<>();
-        String[] split;
-        split = s.split("\t");
-        r.addAll(Arrays.asList(split));
+        r.addAll(Arrays.asList(fields));
         return r;
     }
 

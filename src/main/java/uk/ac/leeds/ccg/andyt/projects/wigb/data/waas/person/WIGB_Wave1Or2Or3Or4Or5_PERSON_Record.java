@@ -5,435 +5,435 @@ package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person;
 import java.io.Serializable;
 public class WIGB_Wave1Or2Or3Or4Or5_PERSON_Record implements Serializable {
 protected String[] s;
-protected double ATTEND;
+protected byte ATTEND;
 protected String BACCBEG2;
 protected String BACCBEG3;
-protected double BACCSA2;
-protected double BACCSA3;
-protected double BACCSB2;
-protected double BACCSB3;
-protected double BBEFORE2;
-protected double BBEFORE3;
-protected double BDEBTS2;
-protected double BDEBTS3;
-protected double BDIRNI2;
-protected double BDIRNI3;
-protected double BDOCS2;
-protected double BDOCS3;
-protected double BEMPN2;
-protected double BEMPN3;
-protected double BFUND1;
-protected double BFUND10;
-protected double BFUND17;
-protected double BFUND2;
-protected double BFUND9;
-protected double BMOREBUS;
-protected double BNATINS2;
-protected double BNATINS3;
-protected double BONTAX;
-protected double BOWED2;
-protected double BOWED3;
-protected double BOWN2;
-protected double BOWN3;
-protected double BPART2;
-protected double BPART3;
-protected double BPAST;
-protected double BPROFIT2;
-protected double BPROFIT3;
-protected double BPROPN2;
-protected double BPROPN3;
-protected double BRETIRE2;
-protected double BRETIRE3;
-protected double BSELLAB;
-protected double BSELLAM;
-protected double BSELLTX;
-protected double BSELLYR;
-protected double BSIZE2;
-protected double BSIZE3;
-protected double BSTART2;
-protected double BSTART3;
-protected double BTAX2;
-protected double BTAX3;
-protected double BTYPE2;
-protected double BTYPE3;
-protected double BVAL2;
-protected double BVAL3;
-protected double BVALB2;
-protected double BWORTH;
-protected double BWORTHB;
-protected double BYEAR2;
-protected double BYEAR3;
-protected double CACTF;
-protected double CACTF_I;
-protected double CACTF_IFLAG;
-protected double CACTV;
-protected double CACTV_I;
-protected double CACTV_IFLAG;
-protected double CASAV;
-protected double CASAV_I;
-protected double CASAV_IFLAG;
-protected Integer CASEW1;
-protected double CASVB;
-protected double CASVV;
-protected double CASVV_I;
-protected double CASVV_IFLAG;
-protected double COURSE;
-protected double CURRAC;
-protected double DBURD;
-protected double DBURDA;
-protected double DCAMC2;
-protected double DCAMC3;
-protected double DCAMD2;
-protected double DCAMD3;
-protected double DCAMP2;
-protected double DCAMP3;
-protected double DCANU;
-protected double DCANY;
-protected double DCCOS2;
-protected double DCCOS3;
-protected double DCCSP2;
-protected double DCCSP3;
-protected double DCESB2;
-protected double DCESB3;
-protected double DCINZ2;
-protected double DCINZ3;
-protected double DCNAM2;
-protected double DCNAM3;
-protected double DCOINV2;
-protected double DCOINV2_I;
-protected double DCOINV2_IFLAG;
-protected double DCOINV3;
-protected double DCOINVB2;
-protected double DCOINVB3;
-protected double DCONM1;
-protected double DCONM2;
-protected double DCONM3;
-protected double DCONM4;
-protected double DCONM5;
-protected double DCONM6;
-protected double DCOSHV2;
-protected double DCOSHV2_I;
-protected double DCOSHV2_IFLAG;
-protected double DCOSHV3;
-protected double DCOSHVB2;
-protected double DCPER2;
-protected double DCPER3;
-protected double DCREC2;
-protected double DCREC3;
-protected double DCRSP2;
-protected double DCRSP3;
-protected double DHBAMT01;
-protected double DHBAMT01_I;
-protected double DHBAMT01_IFLAG;
-protected double DHBAMT02;
-protected double DHBAMT02_I;
-protected double DHBAMT02_IFLAG;
-protected double DHBAMT03;
-protected double DHBAMT03_I;
-protected double DHBAMT03_IFLAG;
-protected double DHBAMT04;
-protected double DHBAMT04_I;
-protected double DHBAMT04_IFLAG;
-protected double DHBAMT05;
-protected double DHBAMT05_I;
-protected double DHBAMT05_IFLAG;
-protected double DHBAMT06;
-protected double DHBAMT06_I;
-protected double DHBAMT06_IFLAG;
-protected double DHBAMT07;
-protected double DHBAMT07_I;
-protected double DHBAMT07_IFLAG;
-protected double DHBAMT08;
-protected double DHBAMT08_I;
-protected double DHBAMT08_IFLAG;
-protected double DHBAMT09;
-protected double DHBAMT09_I;
-protected double DHBAMT09_IFLAG;
-protected double DHBAMT10;
-protected double DHBAMT10_I;
-protected double DHBAMT10_IFLAG;
-protected double DHBAMT11;
-protected double DHBAMT11_I;
-protected double DHBAMT11_IFLAG;
-protected double DHBANY01;
-protected double DHBANY01_I;
-protected double DHBANY01_IFLAG;
-protected double DHBANY02;
-protected double DHBANY02_I;
-protected double DHBANY02_IFLAG;
-protected double DHBANY03;
-protected double DHBANY03_I;
-protected double DHBANY03_IFLAG;
-protected double DHBANY04;
-protected double DHBANY04_I;
-protected double DHBANY04_IFLAG;
-protected double DHBANY05;
-protected double DHBANY05_I;
-protected double DHBANY05_IFLAG;
-protected double DHBANY06;
-protected double DHBANY06_I;
-protected double DHBANY06_IFLAG;
-protected double DHBANY07;
-protected double DHBANY07_I;
-protected double DHBANY07_IFLAG;
-protected double DHBEST01;
-protected double DHBEST02;
-protected double DHBEST03;
-protected double DHBEST04;
-protected double DHBEST05;
-protected double DHBEST06;
-protected double DHBEST07;
-protected double DHBEST08;
-protected double DHBEST09;
-protected double DHBEST10;
-protected double DHBEST11;
-protected double DHBFIX;
-protected double DHPANY1;
-protected double DHPANY1_I;
-protected double DHPANY1_IFLAG;
-protected double DHPANY2;
-protected double DHPANY2_I;
-protected double DHPANY2_IFLAG;
-protected double DHPANY3;
-protected double DHPANY3_I;
-protected double DHPANY3_IFLAG;
-protected double DHPBEH2;
-protected double DHPBEH2_I;
-protected double DHPBEH2_IFLAG;
-protected double DHPEST2;
-protected double DHPINS2;
-protected double DHPINS2_I;
-protected double DHPINS2_IFLAG;
-protected double DHPINT2;
-protected double DHPNUM;
-protected double DHPNUM_I;
-protected double DHPNUM_IFLAG;
-protected double DHPOFT2;
-protected double DHPOFT2_I;
-protected double DHPOFT2_IFLAG;
-protected double DHPOWE2;
-protected double DHPOWE2_I;
-protected double DHPOWE2_IFLAG;
-protected double DHPWEST2;
-protected double DHPWHNM2;
-protected double DHPWHNM2_I;
-protected double DHPWHNM2_IFLAG;
-protected double DHPWHNY2;
-protected double DHPWHNY2_I;
-protected double DHPWHNY2_IFLAG;
-protected double DISEVER;
-protected double DISTYPE1;
-protected double DISTYPE2;
-protected double DISTYPE3;
-protected double DISTYPE4;
-protected double DISTYPE5;
-protected double DISTYPE6;
-protected double DISTYPE7;
-protected double DISTYPE8;
-protected double DISTYPE9;
-protected double DLANY;
-protected double DLANY_I;
-protected double DLANY_IFLAG;
-protected double DLBEH2;
-protected double DLBEH2_I;
-protected double DLBEH2_IFLAG;
-protected double DLBEH3;
-protected double DLBEH3_I;
-protected double DLBEH3_IFLAG;
-protected double DLBEH4;
-protected double DLBEH4_I;
-protected double DLBEH4_IFLAG;
-protected double DLBEH5;
-protected double DLBEH5_I;
-protected double DLBEH5_IFLAG;
-protected double DLEST2;
-protected double DLEST3;
-protected double DLEST4;
-protected double DLINS2;
+protected byte BACCSA2;
+protected byte BACCSA3;
+protected byte BACCSB2;
+protected byte BACCSB3;
+protected int BBEFORE2;
+protected int BBEFORE3;
+protected int BDEBTS2;
+protected int BDEBTS3;
+protected byte BDIRNI2;
+protected byte BDIRNI3;
+protected byte BDOCS2;
+protected byte BDOCS3;
+protected byte BEMPN2;
+protected byte BEMPN3;
+protected byte BFUND1;
+protected byte BFUND10;
+protected byte BFUND17;
+protected byte BFUND2;
+protected byte BFUND9;
+protected byte BMOREBUS;
+protected byte BNATINS2;
+protected byte BNATINS3;
+protected byte BONTAX;
+protected int BOWED2;
+protected int BOWED3;
+protected byte BOWN2;
+protected byte BOWN3;
+protected byte BPART2;
+protected byte BPART3;
+protected byte BPAST;
+protected int BPROFIT2;
+protected int BPROFIT3;
+protected byte BPROPN2;
+protected byte BPROPN3;
+protected byte BRETIRE2;
+protected byte BRETIRE3;
+protected byte BSELLAB;
+protected int BSELLAM;
+protected byte BSELLTX;
+protected short BSELLYR;
+protected byte BSIZE2;
+protected byte BSIZE3;
+protected byte BSTART2;
+protected byte BSTART3;
+protected byte BTAX2;
+protected byte BTAX3;
+protected byte BTYPE2;
+protected byte BTYPE3;
+protected int BVAL2;
+protected int BVAL3;
+protected byte BVALB2;
+protected int BWORTH;
+protected byte BWORTHB;
+protected short BYEAR2;
+protected short BYEAR3;
+protected byte CACTF;
+protected byte CACTF_I;
+protected byte CACTF_IFLAG;
+protected short CACTV;
+protected short CACTV_I;
+protected byte CACTV_IFLAG;
+protected byte CASAV;
+protected byte CASAV_I;
+protected byte CASAV_IFLAG;
+protected short CASEW1;
+protected byte CASVB;
+protected int CASVV;
+protected int CASVV_I;
+protected byte CASVV_IFLAG;
+protected byte COURSE;
+protected boolean CURRAC;
+protected byte DBURD;
+protected byte DBURDA;
+protected int DCAMC2;
+protected int DCAMC3;
+protected short DCAMD2;
+protected short DCAMD3;
+protected short DCAMP2;
+protected short DCAMP3;
+protected byte DCANU;
+protected byte DCANY;
+protected byte DCCOS2;
+protected byte DCCOS3;
+protected byte DCCSP2;
+protected byte DCCSP3;
+protected byte DCESB2;
+protected byte DCESB3;
+protected byte DCINZ2;
+protected byte DCINZ3;
+protected byte DCNAM2;
+protected byte DCNAM3;
+protected int DCOINV2;
+protected int DCOINV2_I;
+protected byte DCOINV2_IFLAG;
+protected short DCOINV3;
+protected byte DCOINVB2;
+protected byte DCOINVB3;
+protected byte DCONM1;
+protected byte DCONM2;
+protected byte DCONM3;
+protected byte DCONM4;
+protected byte DCONM5;
+protected byte DCONM6;
+protected int DCOSHV2;
+protected int DCOSHV2_I;
+protected byte DCOSHV2_IFLAG;
+protected short DCOSHV3;
+protected byte DCOSHVB2;
+protected byte DCPER2;
+protected byte DCPER3;
+protected byte DCREC2;
+protected byte DCREC3;
+protected byte DCRSP2;
+protected byte DCRSP3;
+protected short DHBAMT01;
+protected short DHBAMT01_I;
+protected byte DHBAMT01_IFLAG;
+protected short DHBAMT02;
+protected short DHBAMT02_I;
+protected byte DHBAMT02_IFLAG;
+protected short DHBAMT03;
+protected short DHBAMT03_I;
+protected byte DHBAMT03_IFLAG;
+protected short DHBAMT04;
+protected short DHBAMT04_I;
+protected byte DHBAMT04_IFLAG;
+protected short DHBAMT05;
+protected short DHBAMT05_I;
+protected byte DHBAMT05_IFLAG;
+protected short DHBAMT06;
+protected short DHBAMT06_I;
+protected byte DHBAMT06_IFLAG;
+protected short DHBAMT07;
+protected short DHBAMT07_I;
+protected byte DHBAMT07_IFLAG;
+protected short DHBAMT08;
+protected short DHBAMT08_I;
+protected byte DHBAMT08_IFLAG;
+protected int DHBAMT09;
+protected int DHBAMT09_I;
+protected byte DHBAMT09_IFLAG;
+protected short DHBAMT10;
+protected short DHBAMT10_I;
+protected byte DHBAMT10_IFLAG;
+protected int DHBAMT11;
+protected int DHBAMT11_I;
+protected byte DHBAMT11_IFLAG;
+protected byte DHBANY01;
+protected byte DHBANY01_I;
+protected byte DHBANY01_IFLAG;
+protected byte DHBANY02;
+protected byte DHBANY02_I;
+protected byte DHBANY02_IFLAG;
+protected byte DHBANY03;
+protected byte DHBANY03_I;
+protected byte DHBANY03_IFLAG;
+protected byte DHBANY04;
+protected byte DHBANY04_I;
+protected byte DHBANY04_IFLAG;
+protected byte DHBANY05;
+protected byte DHBANY05_I;
+protected byte DHBANY05_IFLAG;
+protected byte DHBANY06;
+protected byte DHBANY06_I;
+protected byte DHBANY06_IFLAG;
+protected byte DHBANY07;
+protected byte DHBANY07_I;
+protected byte DHBANY07_IFLAG;
+protected byte DHBEST01;
+protected byte DHBEST02;
+protected byte DHBEST03;
+protected byte DHBEST04;
+protected byte DHBEST05;
+protected byte DHBEST06;
+protected byte DHBEST07;
+protected byte DHBEST08;
+protected byte DHBEST09;
+protected byte DHBEST10;
+protected byte DHBEST11;
+protected byte DHBFIX;
+protected byte DHPANY1;
+protected byte DHPANY1_I;
+protected byte DHPANY1_IFLAG;
+protected byte DHPANY2;
+protected byte DHPANY2_I;
+protected byte DHPANY2_IFLAG;
+protected byte DHPANY3;
+protected byte DHPANY3_I;
+protected byte DHPANY3_IFLAG;
+protected byte DHPBEH2;
+protected byte DHPBEH2_I;
+protected byte DHPBEH2_IFLAG;
+protected byte DHPEST2;
+protected short DHPINS2;
+protected short DHPINS2_I;
+protected byte DHPINS2_IFLAG;
+protected byte DHPINT2;
+protected byte DHPNUM;
+protected byte DHPNUM_I;
+protected byte DHPNUM_IFLAG;
+protected byte DHPOFT2;
+protected byte DHPOFT2_I;
+protected byte DHPOFT2_IFLAG;
+protected short DHPOWE2;
+protected short DHPOWE2_I;
+protected byte DHPOWE2_IFLAG;
+protected byte DHPWEST2;
+protected byte DHPWHNM2;
+protected byte DHPWHNM2_I;
+protected byte DHPWHNM2_IFLAG;
+protected short DHPWHNY2;
+protected short DHPWHNY2_I;
+protected byte DHPWHNY2_IFLAG;
+protected byte DISEVER;
+protected byte DISTYPE1;
+protected byte DISTYPE2;
+protected byte DISTYPE3;
+protected byte DISTYPE4;
+protected byte DISTYPE5;
+protected byte DISTYPE6;
+protected byte DISTYPE7;
+protected byte DISTYPE8;
+protected byte DISTYPE9;
+protected byte DLANY;
+protected byte DLANY_I;
+protected byte DLANY_IFLAG;
+protected byte DLBEH2;
+protected byte DLBEH2_I;
+protected byte DLBEH2_IFLAG;
+protected byte DLBEH3;
+protected byte DLBEH3_I;
+protected byte DLBEH3_IFLAG;
+protected byte DLBEH4;
+protected byte DLBEH4_I;
+protected byte DLBEH4_IFLAG;
+protected byte DLBEH5;
+protected byte DLBEH5_I;
+protected byte DLBEH5_IFLAG;
+protected byte DLEST2;
+protected byte DLEST3;
+protected byte DLEST4;
+protected short DLINS2;
 protected double DLINS2_I;
-protected double DLINS2_IFLAG;
-protected double DLINS3;
-protected double DLINS3_I;
-protected double DLINS3_IFLAG;
-protected double DLINS4;
+protected byte DLINS2_IFLAG;
+protected short DLINS3;
+protected short DLINS3_I;
+protected byte DLINS3_IFLAG;
+protected short DLINS4;
 protected double DLINS4_I;
-protected double DLINS4_IFLAG;
-protected double DLINS5;
-protected double DLINS5_I;
-protected double DLINS5_IFLAG;
-protected double DLINT2;
-protected double DLINT3;
-protected double DLINT4;
-protected double DLINT5;
-protected double DLNUM;
-protected double DLNUM_I;
-protected double DLNUM_IFLAG;
-protected double DLOFT2;
-protected double DLOFT2_I;
-protected double DLOFT2_IFLAG;
-protected double DLOFT3;
-protected double DLOFT3_I;
-protected double DLOFT3_IFLAG;
-protected double DLOFT4;
-protected double DLOFT4_I;
-protected double DLOFT4_IFLAG;
-protected double DLOFT5;
-protected double DLOFT5_I;
-protected double DLOFT5_IFLAG;
-protected double DLOWE2;
-protected double DLOWE2_I;
-protected double DLOWE2_IFLAG;
-protected double DLOWE3;
-protected double DLOWE3_I;
-protected double DLOWE3_IFLAG;
-protected double DLOWE4;
-protected double DLOWE4_I;
-protected double DLOWE4_IFLAG;
-protected double DLOWE5;
-protected double DLOWE5_I;
-protected double DLOWE5_IFLAG;
-protected double DLSEC2;
-protected double DLSEC3;
-protected double DLSEC4;
-protected double DLSEC5;
-protected double DLTYPE2;
-protected double DLTYPE2_I;
-protected double DLTYPE2_IFLAG;
-protected double DLTYPE3;
-protected double DLTYPE3_I;
-protected double DLTYPE3_IFLAG;
-protected double DLTYPE4;
-protected double DLTYPE4_I;
-protected double DLTYPE4_IFLAG;
-protected double DLTYPE5;
-protected double DLTYPE5_I;
-protected double DLTYPE5_IFLAG;
-protected double DLWEST2;
-protected double DLWEST3;
-protected double DLWEST4;
-protected double DLWEST5;
-protected double DLWHNM2;
-protected double DLWHNM2_I;
-protected double DLWHNM2_IFLAG;
-protected double DLWHNM3;
-protected double DLWHNM3_I;
-protected double DLWHNM3_IFLAG;
-protected double DLWHNM4;
-protected double DLWHNM4_I;
-protected double DLWHNM4_IFLAG;
-protected double DLWHNM5;
-protected double DLWHNM5_I;
-protected double DLWHNM5_IFLAG;
-protected double DLWHNY2;
-protected double DLWHNY2_I;
-protected double DLWHNY2_IFLAG;
-protected double DLWHNY3;
-protected double DLWHNY3_I;
-protected double DLWHNY3_IFLAG;
-protected double DLWHNY4;
-protected double DLWHNY4_I;
-protected double DLWHNY4_IFLAG;
-protected double DLWHNY5;
-protected double DLWHNY5_I;
-protected double DLWHNY5_IFLAG;
-protected double DLWHY1;
-protected double DLWHY10;
-protected double DLWHY15;
-protected double DLWHY16;
-protected double DLWHY2;
-protected double DLWHY22;
-protected double DLWHY23;
-protected double DLWHY29;
-protected double DLWHY3;
-protected double DLWHY4;
-protected double DLWHY5;
-protected double DLWHY8;
-protected double DLWHY9;
-protected double DMOANY;
-protected double DMOANY_I;
-protected double DMOANY_IFLAG;
-protected double DMOBEH2;
-protected double DMOBEH2_I;
-protected double DMOBEH2_IFLAG;
-protected double DMOEST2;
-protected double DMOINS2;
-protected double DMOINS2_I;
-protected double DMOINS2_IFLAG;
-protected double DMOINT2;
-protected double DMONUM;
-protected double DMONUM_I;
-protected double DMONUM_IFLAG;
-protected double DMOOFT2;
-protected double DMOOFT2_I;
-protected double DMOOFT2_IFLAG;
-protected double DMOOWE2;
-protected double DMOOWE2_I;
-protected double DMOOWE2_IFLAG;
-protected double DMOWEST2;
-protected double DMOWHNM2;
-protected double DMOWHNM2_I;
-protected double DMOWHNM2_IFLAG;
-protected double DMOWHNY2;
-protected double DMOWHNY2_I;
-protected double DMOWHNY2_IFLAG;
-protected double DSAMC2;
-protected double DSAMC3;
-protected double DSAMD2;
-protected double DSAMD3;
-protected double DSAMP2;
-protected double DSAMP3;
-protected double DSANU1;
-protected double DSANU2;
-protected double DSANY1;
-protected double DSANY2;
-protected double DSCOS2;
-protected double DSCOS3;
-protected double DSCSP2;
-protected double DSCSP3;
-protected double DSESB2;
-protected double DSESB3;
-protected double DSLAMT2;
+protected byte DLINS4_IFLAG;
+protected short DLINS5;
+protected short DLINS5_I;
+protected byte DLINS5_IFLAG;
+protected byte DLINT2;
+protected byte DLINT3;
+protected byte DLINT4;
+protected byte DLINT5;
+protected byte DLNUM;
+protected byte DLNUM_I;
+protected byte DLNUM_IFLAG;
+protected byte DLOFT2;
+protected byte DLOFT2_I;
+protected byte DLOFT2_IFLAG;
+protected byte DLOFT3;
+protected byte DLOFT3_I;
+protected byte DLOFT3_IFLAG;
+protected byte DLOFT4;
+protected byte DLOFT4_I;
+protected byte DLOFT4_IFLAG;
+protected byte DLOFT5;
+protected byte DLOFT5_I;
+protected byte DLOFT5_IFLAG;
+protected int DLOWE2;
+protected int DLOWE2_I;
+protected byte DLOWE2_IFLAG;
+protected short DLOWE3;
+protected short DLOWE3_I;
+protected byte DLOWE3_IFLAG;
+protected short DLOWE4;
+protected short DLOWE4_I;
+protected byte DLOWE4_IFLAG;
+protected short DLOWE5;
+protected short DLOWE5_I;
+protected byte DLOWE5_IFLAG;
+protected byte DLSEC2;
+protected byte DLSEC3;
+protected byte DLSEC4;
+protected byte DLSEC5;
+protected byte DLTYPE2;
+protected byte DLTYPE2_I;
+protected byte DLTYPE2_IFLAG;
+protected byte DLTYPE3;
+protected byte DLTYPE3_I;
+protected byte DLTYPE3_IFLAG;
+protected byte DLTYPE4;
+protected byte DLTYPE4_I;
+protected byte DLTYPE4_IFLAG;
+protected byte DLTYPE5;
+protected byte DLTYPE5_I;
+protected byte DLTYPE5_IFLAG;
+protected byte DLWEST2;
+protected byte DLWEST3;
+protected byte DLWEST4;
+protected byte DLWEST5;
+protected short DLWHNM2;
+protected short DLWHNM2_I;
+protected byte DLWHNM2_IFLAG;
+protected short DLWHNM3;
+protected short DLWHNM3_I;
+protected byte DLWHNM3_IFLAG;
+protected byte DLWHNM4;
+protected byte DLWHNM4_I;
+protected byte DLWHNM4_IFLAG;
+protected byte DLWHNM5;
+protected byte DLWHNM5_I;
+protected byte DLWHNM5_IFLAG;
+protected short DLWHNY2;
+protected short DLWHNY2_I;
+protected byte DLWHNY2_IFLAG;
+protected short DLWHNY3;
+protected short DLWHNY3_I;
+protected byte DLWHNY3_IFLAG;
+protected short DLWHNY4;
+protected short DLWHNY4_I;
+protected byte DLWHNY4_IFLAG;
+protected short DLWHNY5;
+protected short DLWHNY5_I;
+protected byte DLWHNY5_IFLAG;
+protected byte DLWHY1;
+protected byte DLWHY10;
+protected byte DLWHY15;
+protected byte DLWHY16;
+protected byte DLWHY2;
+protected byte DLWHY22;
+protected byte DLWHY23;
+protected byte DLWHY29;
+protected byte DLWHY3;
+protected byte DLWHY4;
+protected byte DLWHY5;
+protected byte DLWHY8;
+protected byte DLWHY9;
+protected byte DMOANY;
+protected byte DMOANY_I;
+protected byte DMOANY_IFLAG;
+protected byte DMOBEH2;
+protected byte DMOBEH2_I;
+protected byte DMOBEH2_IFLAG;
+protected byte DMOEST2;
+protected short DMOINS2;
+protected short DMOINS2_I;
+protected byte DMOINS2_IFLAG;
+protected byte DMOINT2;
+protected byte DMONUM;
+protected byte DMONUM_I;
+protected byte DMONUM_IFLAG;
+protected byte DMOOFT2;
+protected byte DMOOFT2_I;
+protected byte DMOOFT2_IFLAG;
+protected short DMOOWE2;
+protected short DMOOWE2_I;
+protected byte DMOOWE2_IFLAG;
+protected byte DMOWEST2;
+protected byte DMOWHNM2;
+protected byte DMOWHNM2_I;
+protected byte DMOWHNM2_IFLAG;
+protected short DMOWHNY2;
+protected short DMOWHNY2_I;
+protected byte DMOWHNY2_IFLAG;
+protected short DSAMC2;
+protected short DSAMC3;
+protected short DSAMD2;
+protected short DSAMD3;
+protected short DSAMP2;
+protected short DSAMP3;
+protected byte DSANU1;
+protected byte DSANU2;
+protected byte DSANY1;
+protected byte DSANY2;
+protected byte DSCOS2;
+protected byte DSCOS3;
+protected byte DSCSP2;
+protected byte DSCSP3;
+protected byte DSESB2;
+protected byte DSESB3;
+protected int DSLAMT2;
 protected double DSLAMT2_I;
-protected double DSLAMT2_IFLAG;
-protected double DSLAMT3;
-protected double DSLAMT3_I;
-protected double DSLAMT3_IFLAG;
-protected double DSLAMT4;
-protected double DSLAMT4_I;
-protected double DSLAMT4_IFLAG;
-protected double DSLAMT5;
-protected double DSLAMT5_I;
-protected double DSLAMT5_IFLAG;
-protected double DSLEST2;
-protected double DSLEST3;
-protected double DSLEST4;
-protected double DSLEST5;
-protected double DSLPAY2;
-protected double DSLPAY3;
-protected double DSLPAY4;
-protected double DSLPAY5;
-protected double DSNAM2;
-protected double DSNAM3;
-protected double DSONM1;
-protected double DSONM2;
-protected double DSONM3;
-protected double DSONM4;
-protected double DSONM5;
-protected double DSONM6;
-protected double DSPER2;
-protected double DSREC2;
-protected double DSREC3;
+protected byte DSLAMT2_IFLAG;
+protected short DSLAMT3;
+protected short DSLAMT3_I;
+protected byte DSLAMT3_IFLAG;
+protected short DSLAMT4;
+protected short DSLAMT4_I;
+protected byte DSLAMT4_IFLAG;
+protected short DSLAMT5;
+protected short DSLAMT5_I;
+protected byte DSLAMT5_IFLAG;
+protected byte DSLEST2;
+protected byte DSLEST3;
+protected byte DSLEST4;
+protected boolean DSLEST5;
+protected byte DSLPAY2;
+protected byte DSLPAY3;
+protected byte DSLPAY4;
+protected boolean DSLPAY5;
+protected byte DSNAM2;
+protected byte DSNAM3;
+protected byte DSONM1;
+protected byte DSONM2;
+protected byte DSONM3;
+protected byte DSONM4;
+protected byte DSONM5;
+protected byte DSONM6;
+protected byte DSPER2;
+protected byte DSREC2;
+protected byte DSREC3;
 protected String DTJBL;
-protected double DVAGE17;
-protected double DVANYARR;
-protected double DVCACTV;
-protected double DVCASVV;
-protected double DVCHMARR;
-protected double DVCISAV;
-protected double DVCOINV2;
-protected double DVCOINV3;
-protected double DVCRTARR;
-protected double DVCTARR;
+protected byte DVAGE17;
+protected byte DVANYARR;
+protected short DVCACTV;
+protected int DVCASVV;
+protected byte DVCHMARR;
+protected int DVCISAV;
+protected int DVCOINV2;
+protected short DVCOINV3;
+protected byte DVCRTARR;
+protected byte DVCTARR;
 protected double DVDBINC1;
 protected double DVDBINC2;
 protected double DVDBINC3;
@@ -442,362 +442,362 @@ protected double DVDBLUMP1;
 protected double DVDBLUMP2;
 protected double DVDBLUMP3;
 protected double DVDBRWEALTHVAL;
-protected double DVDHPOWE2;
-protected double DVDLOWE2;
-protected double DVDLOWE3;
-protected double DVDLOWE4;
-protected double DVDMOOWE2;
-protected double DVELARR;
-protected double DVFBONDV;
-protected double DVFCINVAL;
-protected double DVFCOLLV;
-protected double DVFEOPTV;
-protected double DVFESHAV;
-protected double DVFGLTFOV;
-protected double DVFGLTUKV;
-protected double DVFINFLV;
-protected double DVFINFV;
-protected double DVFINVOTV;
-protected double DVFLFENV;
-protected double DVFLFFSV;
-protected double DVFLFSIV;
-protected double DVFLFTEV;
-protected double DVFNSVAL;
-protected double DVFSHOSV;
-protected double DVFSHUKV;
-protected double DVFSINVAL;
-protected double DVGASARR;
+protected short DVDHPOWE2;
+protected int DVDLOWE2;
+protected short DVDLOWE3;
+protected short DVDLOWE4;
+protected short DVDMOOWE2;
+protected byte DVELARR;
+protected int DVFBONDV;
+protected int DVFCINVAL;
+protected int DVFCOLLV;
+protected int DVFEOPTV;
+protected int DVFESHAV;
+protected int DVFGLTFOV;
+protected int DVFGLTUKV;
+protected int DVFINFLV;
+protected int DVFINFV;
+protected int DVFINVOTV;
+protected int DVFLFENV;
+protected int DVFLFFSV;
+protected int DVFLFSIV;
+protected int DVFLFTEV;
+protected int DVFNSVAL;
+protected int DVFSHOSV;
+protected int DVFSHUKV;
+protected int DVFSINVAL;
+protected byte DVGASARR;
 protected double DVGRSPAY;
-protected double DVHASAVC;
-protected double DVHASDB;
-protected double DVHASDC;
-protected double DVHASPFCUR;
-protected double DVHASPFD;
-protected double DVHASPP;
-protected double DVHPAR;
-protected double DVIISAV;
-protected double DVILO3A;
-protected double DVILO4A;
-protected double DVJB12ML;
-protected double DVKISAV;
-protected double DVMRDF;
+protected boolean DVHASAVC;
+protected byte DVHASDB;
+protected boolean DVHASDC;
+protected boolean DVHASPFCUR;
+protected boolean DVHASPFD;
+protected boolean DVHASPP;
+protected byte DVHPAR;
+protected int DVIISAV;
+protected byte DVILO3A;
+protected byte DVILO4A;
+protected byte DVJB12ML;
+protected int DVKISAV;
+protected byte DVMRDF;
 protected double DVNETPAY;
-protected double DVOTHARR;
+protected byte DVOTHARR;
 protected double DVPAVCUV;
 protected double DVPFCURVAL;
-protected double DVPFDDV;
+protected int DVPFDDV;
 protected double DVPINPVAL;
 protected double DVPPVAL;
-protected double DVRNTARR;
+protected byte DVRNTARR;
 protected double DVSHCVAL;
 protected double DVSHODVAL2;
-protected double DVSHODVAL3;
+protected short DVSHODVAL3;
 protected double DVSHSVAL;
 protected double DVSPEN;
-protected double DVTAXARR;
-protected double DVTELARR;
+protected byte DVTAXARR;
+protected byte DVTELARR;
 protected double DVVALDBLUM;
 protected double DVVALDBT;
 protected double DVVALDCOS;
 protected double DVVALPBLUM;
-protected double DVVATARR;
-protected double DVWATARR;
-protected double EDATTN1;
-protected double EDATTN2;
-protected double EDATTN3;
-protected double EDLEVEL;
-protected double EMPN;
-protected double EMPSTY;
-protected double EMSHAR1;
-protected double EMSHAR2;
-protected double EMSHAR3;
-protected double ENROLL;
-protected double EVERWK;
-protected double FBONDTY1;
-protected double FBONDTY2;
-protected double FBONDTY3;
-protected double FBONDV;
-protected double FBONDVB;
-protected double FBONDV_I;
-protected double FBONDV_IFLAG;
-protected double FCACSH;
-protected double FCACSH_I;
-protected double FCACSH_IFLAG;
-protected double FCINVAL;
-protected double FCINVAL_I;
-protected double FCINVAL_IFLAG;
-protected double FCINVLB;
-protected double FCISAB;
-protected double FCISAV;
-protected double FCISAV_I;
-protected double FCISAV_IFLAG;
-protected double FCNUMIN;
-protected double FCNUMIN_I;
-protected double FCNUMIN_IFLAG;
-protected double FCNUMSH;
-protected double FCNUMSH_I;
-protected double FCNUMSH_IFLAG;
-protected double FCOLLV;
-protected double FCOLLVB;
-protected double FCOLLV_I;
-protected double FCOLLV_IFLAG;
-protected double FCOVDIF;
-protected double FCOVDIN;
-protected double FCOVDIN_I;
-protected double FCOVDIN_IFLAG;
-protected double FCOVDSH;
-protected double FCOVDSH_I;
-protected double FCOVDSH_IFLAG;
-protected double FCOVNIN;
-protected double FCOVNIN_I;
-protected double FCOVNIN_IFLAG;
-protected double FCOVNSH;
-protected double FCOVNSH_I;
-protected double FCOVNSH_IFLAG;
-protected double FCSHVAL;
-protected double FCSHVAL_I;
-protected double FCSHVAL_IFLAG;
-protected double FCSHVLB;
-protected double FCSUPPR;
-protected double FEOPTV;
-protected double FEOPTV_I;
-protected double FEOPTV_IFLAG;
-protected double FEOPVB;
-protected double FESHA;
-protected double FESHAV;
-protected double FESHAV_I;
-protected double FESHAV_IFLAG;
-protected double FESHA_I;
-protected double FESHA_IFLAG;
-protected double FESHVB;
-protected double FGFOVB;
-protected double FGILTS1;
-protected double FGILTS1_I;
-protected double FGILTS1_IFLAG;
-protected double FGILTS2;
-protected double FGILTS2_I;
-protected double FGILTS2_IFLAG;
-protected double FGILTS3;
-protected double FGILTS3_I;
-protected double FGILTS3_IFLAG;
-protected double FGILTS4;
-protected double FGILTS4_I;
-protected double FGILTS4_IFLAG;
-protected double FGLTFOV;
-protected double FGLTFOV_I;
-protected double FGLTFOV_IFLAG;
-protected double FGLTUKV;
-protected double FGLTUKV_I;
-protected double FGLTUKV_IFLAG;
-protected double FGUKVB;
-protected double FIISAB;
-protected double FIISAV;
-protected double FIISAV_I;
-protected double FIISAV_IFLAG;
-protected double FINCVB;
-protected double FINFLV;
-protected double FINFLV_I;
-protected double FINFLV_IFLAG;
-protected double FINFSAV1;
-protected double FINFSAV1_I;
-protected double FINFSAV1_IFLAG;
-protected double FINFSAV2;
-protected double FINFSAV2_I;
-protected double FINFSAV2_IFLAG;
-protected double FINFSAV3;
-protected double FINFSAV3_I;
-protected double FINFSAV3_IFLAG;
-protected double FINFSAV4;
-protected double FINFSAV4_I;
-protected double FINFSAV4_IFLAG;
-protected double FINFV;
-protected double FINFVB;
-protected double FINFV_I;
-protected double FINFV_IFLAG;
-protected double FINS;
-protected double FINSV;
-protected double FINSV_I;
-protected double FINSV_IFLAG;
-protected double FINS_I;
-protected double FINS_IFLAG;
-protected double FINVOTV;
-protected double FINVOTV_I;
-protected double FINVOTV_IFLAG;
-protected double FINVOVB;
-protected double FINVTY01;
-protected double FINVTY01_I;
-protected double FINVTY02;
-protected double FINVTY02_I;
-protected double FINVTY03;
-protected double FINVTY03_I;
-protected double FINVTY04;
-protected double FINVTY04_I;
-protected double FINVTY05;
-protected double FINVTY05_I;
-protected double FINVTY06;
-protected double FINVTY06_I;
-protected double FINVTY07;
-protected double FINVTY07_I;
-protected double FINVTY08;
-protected double FINVTY08_I;
-protected double FINVTY09;
-protected double FINVTY09_I;
-protected double FINVTY10;
-protected double FINVTY10_I;
-protected double FINVTY11;
-protected double FISA1;
-protected double FISA1_I;
-protected double FISA1_IFLAG;
-protected double FISA2;
-protected double FISA2_I;
-protected double FISA2_IFLAG;
-protected double FKISAB;
-protected double FKISAV;
-protected double FKISAV_I;
-protected double FKISAV_IFLAG;
-protected double FLFENV;
-protected double FLFENVB;
-protected double FLFENV_I;
-protected double FLFENV_IFLAG;
-protected double FLFFSV;
-protected double FLFFSVB;
-protected double FLFFSV_I;
-protected double FLFFSV_IFLAG;
-protected double FLFSIV;
-protected double FLFSIVB;
-protected double FLFSIV_I;
-protected double FLFSIV_IFLAG;
-protected double FLFTEV;
-protected double FLFTEVB;
-protected double FLFTEV_I;
-protected double FLFTEV_IFLAG;
+protected byte DVVATARR;
+protected byte DVWATARR;
+protected byte EDATTN1;
+protected byte EDATTN2;
+protected byte EDATTN3;
+protected byte EDLEVEL;
+protected byte EMPN;
+protected short EMPSTY;
+protected byte EMSHAR1;
+protected byte EMSHAR2;
+protected byte EMSHAR3;
+protected byte ENROLL;
+protected byte EVERWK;
+protected byte FBONDTY1;
+protected byte FBONDTY2;
+protected byte FBONDTY3;
+protected int FBONDV;
+protected byte FBONDVB;
+protected int FBONDV_I;
+protected byte FBONDV_IFLAG;
+protected byte FCACSH;
+protected byte FCACSH_I;
+protected byte FCACSH_IFLAG;
+protected int FCINVAL;
+protected int FCINVAL_I;
+protected byte FCINVAL_IFLAG;
+protected byte FCINVLB;
+protected byte FCISAB;
+protected int FCISAV;
+protected int FCISAV_I;
+protected byte FCISAV_IFLAG;
+protected byte FCNUMIN;
+protected byte FCNUMIN_I;
+protected byte FCNUMIN_IFLAG;
+protected byte FCNUMSH;
+protected byte FCNUMSH_I;
+protected byte FCNUMSH_IFLAG;
+protected int FCOLLV;
+protected byte FCOLLVB;
+protected int FCOLLV_I;
+protected byte FCOLLV_IFLAG;
+protected byte FCOVDIF;
+protected byte FCOVDIN;
+protected byte FCOVDIN_I;
+protected byte FCOVDIN_IFLAG;
+protected byte FCOVDSH;
+protected byte FCOVDSH_I;
+protected byte FCOVDSH_IFLAG;
+protected byte FCOVNIN;
+protected byte FCOVNIN_I;
+protected byte FCOVNIN_IFLAG;
+protected byte FCOVNSH;
+protected byte FCOVNSH_I;
+protected byte FCOVNSH_IFLAG;
+protected int FCSHVAL;
+protected int FCSHVAL_I;
+protected byte FCSHVAL_IFLAG;
+protected byte FCSHVLB;
+protected byte FCSUPPR;
+protected int FEOPTV;
+protected int FEOPTV_I;
+protected byte FEOPTV_IFLAG;
+protected byte FEOPVB;
+protected byte FESHA;
+protected int FESHAV;
+protected int FESHAV_I;
+protected byte FESHAV_IFLAG;
+protected byte FESHA_I;
+protected byte FESHA_IFLAG;
+protected byte FESHVB;
+protected byte FGFOVB;
+protected byte FGILTS1;
+protected byte FGILTS1_I;
+protected byte FGILTS1_IFLAG;
+protected byte FGILTS2;
+protected byte FGILTS2_I;
+protected byte FGILTS2_IFLAG;
+protected byte FGILTS3;
+protected byte FGILTS3_I;
+protected byte FGILTS3_IFLAG;
+protected byte FGILTS4;
+protected byte FGILTS4_I;
+protected byte FGILTS4_IFLAG;
+protected int FGLTFOV;
+protected int FGLTFOV_I;
+protected byte FGLTFOV_IFLAG;
+protected int FGLTUKV;
+protected int FGLTUKV_I;
+protected byte FGLTUKV_IFLAG;
+protected byte FGUKVB;
+protected byte FIISAB;
+protected int FIISAV;
+protected int FIISAV_I;
+protected byte FIISAV_IFLAG;
+protected byte FINCVB;
+protected int FINFLV;
+protected int FINFLV_I;
+protected byte FINFLV_IFLAG;
+protected byte FINFSAV1;
+protected byte FINFSAV1_I;
+protected byte FINFSAV1_IFLAG;
+protected byte FINFSAV2;
+protected byte FINFSAV2_I;
+protected byte FINFSAV2_IFLAG;
+protected byte FINFSAV3;
+protected byte FINFSAV3_I;
+protected byte FINFSAV3_IFLAG;
+protected byte FINFSAV4;
+protected byte FINFSAV4_I;
+protected byte FINFSAV4_IFLAG;
+protected int FINFV;
+protected byte FINFVB;
+protected int FINFV_I;
+protected byte FINFV_IFLAG;
+protected byte FINS;
+protected int FINSV;
+protected int FINSV_I;
+protected byte FINSV_IFLAG;
+protected byte FINS_I;
+protected byte FINS_IFLAG;
+protected int FINVOTV;
+protected int FINVOTV_I;
+protected byte FINVOTV_IFLAG;
+protected byte FINVOVB;
+protected byte FINVTY01;
+protected byte FINVTY01_I;
+protected byte FINVTY02;
+protected byte FINVTY02_I;
+protected byte FINVTY03;
+protected byte FINVTY03_I;
+protected byte FINVTY04;
+protected byte FINVTY04_I;
+protected byte FINVTY05;
+protected byte FINVTY05_I;
+protected byte FINVTY06;
+protected byte FINVTY06_I;
+protected byte FINVTY07;
+protected byte FINVTY07_I;
+protected byte FINVTY08;
+protected byte FINVTY08_I;
+protected byte FINVTY09;
+protected byte FINVTY09_I;
+protected byte FINVTY10;
+protected byte FINVTY10_I;
+protected byte FINVTY11;
+protected byte FISA1;
+protected byte FISA1_I;
+protected byte FISA1_IFLAG;
+protected byte FISA2;
+protected byte FISA2_I;
+protected byte FISA2_IFLAG;
+protected byte FKISAB;
+protected int FKISAV;
+protected int FKISAV_I;
+protected byte FKISAV_IFLAG;
+protected int FLFENV;
+protected byte FLFENVB;
+protected int FLFENV_I;
+protected byte FLFENV_IFLAG;
+protected int FLFFSV;
+protected byte FLFFSVB;
+protected int FLFFSV_I;
+protected byte FLFFSV_IFLAG;
+protected int FLFSIV;
+protected byte FLFSIVB;
+protected int FLFSIV_I;
+protected byte FLFSIV_IFLAG;
+protected int FLFTEV;
+protected byte FLFTEVB;
+protected int FLFTEV_I;
+protected byte FLFTEV_IFLAG;
 protected double FLNOS1;
 protected double FLNOS2;
 protected double FLNOS3;
 protected double FLNOS4;
-protected double FLOANVB;
-protected double FLPROD1;
-protected double FLPROD1_I;
-protected double FLPROD1_IFLAG;
-protected double FLPROD2;
-protected double FLPROD2_I;
-protected double FLPROD2_IFLAG;
-protected double FLPROD3;
-protected double FLPROD3_I;
-protected double FLPROD3_IFLAG;
-protected double FLPROD4;
-protected double FLPROD4_I;
-protected double FLPROD4_IFLAG;
-protected double FNSAV1;
-protected double FNSAV2;
-protected double FNSAV3;
-protected double FNSAV4;
-protected double FNSVAL_IFLAG;
-protected double FNSVB;
-protected double FSACSH;
-protected double FSACSH_I;
-protected double FSACSH_IFLAG;
-protected double FSHARE1;
-protected double FSHARE1_I;
-protected double FSHARE1_IFLAG;
-protected double FSHARE2;
-protected double FSHARE2_I;
-protected double FSHARE2_IFLAG;
-protected double FSHARE3;
-protected double FSHARE3_I;
-protected double FSHARE3_IFLAG;
-protected double FSHOSV;
-protected double FSHOSVB;
-protected double FSHOSV_I;
-protected double FSHOSV_IFLAG;
-protected double FSHUKV;
-protected double FSHUKVB;
-protected double FSHUKV_I;
-protected double FSHUKV_IFLAG;
-protected double FSINVAL;
-protected double FSINVAL_I;
-protected double FSINVAL_IFLAG;
-protected double FSINVLB;
-protected double FSNUMIN;
-protected double FSNUMIN_I;
-protected double FSNUMIN_IFLAG;
-protected double FSNUMSH;
-protected double FSNUMSH_I;
-protected double FSNUMSH_IFLAG;
-protected double FSOSHAV;
-protected double FSOSVLB;
-protected double FSSHVAL;
+protected byte FLOANVB;
+protected byte FLPROD1;
+protected byte FLPROD1_I;
+protected byte FLPROD1_IFLAG;
+protected byte FLPROD2;
+protected byte FLPROD2_I;
+protected byte FLPROD2_IFLAG;
+protected byte FLPROD3;
+protected byte FLPROD3_I;
+protected byte FLPROD3_IFLAG;
+protected boolean FLPROD4;
+protected boolean FLPROD4_I;
+protected byte FLPROD4_IFLAG;
+protected byte FNSAV1;
+protected byte FNSAV2;
+protected byte FNSAV3;
+protected byte FNSAV4;
+protected byte FNSVAL_IFLAG;
+protected byte FNSVB;
+protected byte FSACSH;
+protected byte FSACSH_I;
+protected byte FSACSH_IFLAG;
+protected byte FSHARE1;
+protected byte FSHARE1_I;
+protected byte FSHARE1_IFLAG;
+protected byte FSHARE2;
+protected byte FSHARE2_I;
+protected byte FSHARE2_IFLAG;
+protected byte FSHARE3;
+protected byte FSHARE3_I;
+protected byte FSHARE3_IFLAG;
+protected int FSHOSV;
+protected byte FSHOSVB;
+protected int FSHOSV_I;
+protected byte FSHOSV_IFLAG;
+protected int FSHUKV;
+protected byte FSHUKVB;
+protected int FSHUKV_I;
+protected byte FSHUKV_IFLAG;
+protected int FSINVAL;
+protected int FSINVAL_I;
+protected byte FSINVAL_IFLAG;
+protected byte FSINVLB;
+protected byte FSNUMIN;
+protected byte FSNUMIN_I;
+protected byte FSNUMIN_IFLAG;
+protected byte FSNUMSH;
+protected byte FSNUMSH_I;
+protected byte FSNUMSH_IFLAG;
+protected byte FSOSHAV;
+protected byte FSOSVLB;
+protected int FSSHVAL;
 protected double FSSHVAL_I;
-protected double FSSHVAL_IFLAG;
-protected double FSSHVLB;
-protected double FSSUPPR;
-protected double FSTYPIN1;
-protected double FSTYPIN2;
-protected double FSTYPIN3;
-protected double FSTYPSH1;
-protected double FSTYPSH2;
-protected double FSTYPSH3;
-protected double FSTYPSH4;
-protected double FTED;
-protected double FTED19;
-protected double FTPTWK;
-protected double GOR;
-protected double GRSESM;
-protected double GRSESP;
-protected double HASCHD;
-protected double HASDEP;
-protected double HASNDEP;
-protected double HOUSGDST;
+protected byte FSSHVAL_IFLAG;
+protected byte FSSHVLB;
+protected byte FSSUPPR;
+protected byte FSTYPIN1;
+protected byte FSTYPIN2;
+protected byte FSTYPIN3;
+protected byte FSTYPSH1;
+protected byte FSTYPSH2;
+protected byte FSTYPSH3;
+protected boolean FSTYPSH4;
+protected byte FTED;
+protected byte FTED19;
+protected byte FTPTWK;
+protected byte GOR;
+protected byte GRSESM;
+protected byte GRSESP;
+protected boolean HASCHD;
+protected boolean HASDEP;
+protected boolean HASNDEP;
+protected int HOUSGDST;
 protected double HPLFT2;
 protected double HPOS1;
 protected double HPOS2;
-protected double IGDS1;
-protected double IGDS10;
-protected double IGDS11;
-protected double IGDS15;
-protected double IGDS2;
-protected double IGDS3;
-protected double IGDS4;
-protected double IGDS5;
-protected double IGDS8;
-protected double IGDS9;
-protected double IGFVALB;
-protected double IHRCNUM;
-protected double IHRECNT;
-protected double IHSE1;
-protected double IHSE2;
-protected double IHSE7;
-protected double ILACB;
-protected double ILGIFT;
-protected double ILIFB;
-protected double ILINB;
-protected double ILLLIM;
-protected double ILOTB;
-protected double ILRDB;
-protected double ILUMP;
-protected double ILUMTY1;
-protected double ILUMTY2;
-protected double ILUMTY3;
-protected double ILUPB;
-protected double ILUPP;
-protected double ILWNB;
-protected double IOUT1;
-protected double ISDEP;
-protected double ISNDEP;
-protected double IVALB2;
-protected double IVALB3;
-protected double IWAT1;
-protected double IWAT13;
-protected double IWAT2;
-protected double IWAT3;
-protected double IWAT4;
-protected double IWAT5;
-protected double IWAT7;
-protected double IWHO2;
-protected double IWHO3;
-protected double JBAWAY;
-protected double JOBNO;
-protected double LKTIME;
+protected byte IGDS1;
+protected byte IGDS10;
+protected byte IGDS11;
+protected byte IGDS15;
+protected byte IGDS2;
+protected byte IGDS3;
+protected byte IGDS4;
+protected byte IGDS5;
+protected byte IGDS8;
+protected byte IGDS9;
+protected byte IGFVALB;
+protected byte IHRCNUM;
+protected byte IHRECNT;
+protected byte IHSE1;
+protected byte IHSE2;
+protected byte IHSE7;
+protected byte ILACB;
+protected byte ILGIFT;
+protected byte ILIFB;
+protected byte ILINB;
+protected byte ILLLIM;
+protected byte ILOTB;
+protected byte ILRDB;
+protected byte ILUMP;
+protected byte ILUMTY1;
+protected byte ILUMTY2;
+protected byte ILUMTY3;
+protected byte ILUPB;
+protected int ILUPP;
+protected byte ILWNB;
+protected byte IOUT1;
+protected boolean ISDEP;
+protected boolean ISNDEP;
+protected byte IVALB2;
+protected byte IVALB3;
+protected byte IWAT1;
+protected byte IWAT13;
+protected byte IWAT2;
+protected byte IWAT3;
+protected byte IWAT4;
+protected byte IWAT5;
+protected byte IWAT7;
+protected byte IWHO2;
+protected byte IWHO3;
+protected byte JBAWAY;
+protected byte JOBNO;
+protected byte LKTIME;
 protected double LNLFT2;
 protected double LNLFT3;
 protected double LNLFT4;
@@ -807,223 +807,223 @@ protected double LNOS2;
 protected double LNOS3;
 protected double LNOS4;
 protected double LNOS5;
-protected double LOOKED;
-protected double LSILL;
-protected double MARBEF;
+protected byte LOOKED;
+protected byte LSILL;
+protected byte MARBEF;
 protected double MOLFT2;
-protected double MONTH;
+protected byte MONTH;
 protected double MOOS1;
 protected double MOOS2;
-protected double NSSEC3;
-protected double NSSEC5;
+protected byte NSSEC3;
+protected byte NSSEC5;
 protected double NSSEC8;
 protected double NSSECB;
-protected double OCSVR1;
-protected double OCSVR2;
-protected double OCSVR3;
-protected double OCSVR4;
-protected double OCSVR5;
-protected double OCSVR6;
-protected double OCSVR7;
-protected double OCSVR8;
-protected double OINTEND;
-protected double OLARGE;
-protected double OLEFT;
-protected double OLEFTDO;
-protected double OLONG;
-protected double OLONGYR;
-protected double ONETEN;
-protected double OPENS01;
-protected double OPENS02;
-protected double OPENS03;
-protected double OPENS04;
-protected double OPENS05;
-protected double OPENS06;
-protected double OPENS07;
-protected double OPENS08;
-protected double ORETINC;
-protected double ORISKA;
-protected double ORISKC;
-protected double ORUNDO01;
-protected double ORUNDO02;
-protected double ORUNDO03;
-protected double ORUNDO04;
-protected double ORUNDO05;
-protected double ORUNDO06;
-protected double ORUNDO07;
-protected double ORUNDO08;
-protected double ORUNOUT;
-protected double OSITUAT;
-protected double OSTANDL;
-protected double OTHSRC1;
-protected double OTHSRC1_I;
-protected double OTHSRC1_IFLAG;
-protected double OTHSRC2;
-protected double OTHSRC2_I;
-protected double OTHSRC2_IFLAG;
-protected double OTHSRC3;
-protected double OTHSRC3_I;
-protected double OTHSRC3_IFLAG;
-protected double OTRUST01;
-protected double OTRUST02;
-protected double OTRUST03;
-protected double OTRUST04;
-protected double OTRUST05;
-protected double OTRUST06;
-protected double OTRUST07;
-protected double OTRUST08;
-protected double OTRUST09;
-protected double OTRUST10;
-protected double OTRUST11;
-protected double OTRUST12;
-protected double OTRUST13;
-protected double OTRUST14;
-protected double OUNDER;
-protected double OWNBUS;
-protected double PAGERET;
-protected double PARTNER;
-protected double PARTNO;
-protected double PAYBON;
-protected double PAYESM;
-protected double PAYESP;
-protected double PAYINC1;
-protected double PAYINC2;
-protected double PAYINC3;
-protected double PAYINC4;
-protected double PAYINC5;
-protected double PAYINC6;
-protected double PAYPER;
-protected double PAYSLP;
-protected double PEARLRS;
-protected double PEMELG;
-protected double PEMELG_I;
-protected double PEMELG_IFLAG;
-protected double PEMMEM;
-protected double PEMMEM_I;
-protected double PEMMEM_IFLAG;
-protected double PEMOFF;
-protected double PEMOFF_I;
-protected double PEMOFF_IFLAG;
-protected Integer PERSONW1;
-protected double PERSPROX;
-protected double PEVERC;
-protected double PEVERC_I;
-protected double PEVERC_IFLAG;
-protected double PEVERNC;
-protected double PEVERNC_I;
-protected double PEVERNC_IFLAG;
-protected double PEXPRET;
-protected double PFNUM;
-protected double PFNUM_I;
-protected double PFNUM_IFLAG;
-protected double PFULRET;
+protected byte OCSVR1;
+protected byte OCSVR2;
+protected byte OCSVR3;
+protected byte OCSVR4;
+protected byte OCSVR5;
+protected byte OCSVR6;
+protected byte OCSVR7;
+protected byte OCSVR8;
+protected byte OINTEND;
+protected byte OLARGE;
+protected byte OLEFT;
+protected byte OLEFTDO;
+protected byte OLONG;
+protected byte OLONGYR;
+protected byte ONETEN;
+protected byte OPENS01;
+protected byte OPENS02;
+protected byte OPENS03;
+protected byte OPENS04;
+protected byte OPENS05;
+protected byte OPENS06;
+protected byte OPENS07;
+protected byte OPENS08;
+protected byte ORETINC;
+protected byte ORISKA;
+protected byte ORISKC;
+protected byte ORUNDO01;
+protected byte ORUNDO02;
+protected byte ORUNDO03;
+protected byte ORUNDO04;
+protected byte ORUNDO05;
+protected byte ORUNDO06;
+protected byte ORUNDO07;
+protected byte ORUNDO08;
+protected byte ORUNOUT;
+protected byte OSITUAT;
+protected byte OSTANDL;
+protected byte OTHSRC1;
+protected byte OTHSRC1_I;
+protected boolean OTHSRC1_IFLAG;
+protected byte OTHSRC2;
+protected byte OTHSRC2_I;
+protected boolean OTHSRC2_IFLAG;
+protected byte OTHSRC3;
+protected byte OTHSRC3_I;
+protected byte OTHSRC3_IFLAG;
+protected byte OTRUST01;
+protected byte OTRUST02;
+protected byte OTRUST03;
+protected byte OTRUST04;
+protected byte OTRUST05;
+protected byte OTRUST06;
+protected byte OTRUST07;
+protected byte OTRUST08;
+protected byte OTRUST09;
+protected byte OTRUST10;
+protected byte OTRUST11;
+protected byte OTRUST12;
+protected byte OTRUST13;
+protected byte OTRUST14;
+protected byte OUNDER;
+protected byte OWNBUS;
+protected byte PAGERET;
+protected boolean PARTNER;
+protected byte PARTNO;
+protected byte PAYBON;
+protected byte PAYESM;
+protected byte PAYESP;
+protected byte PAYINC1;
+protected byte PAYINC2;
+protected byte PAYINC3;
+protected byte PAYINC4;
+protected byte PAYINC5;
+protected byte PAYINC6;
+protected byte PAYPER;
+protected byte PAYSLP;
+protected byte PEARLRS;
+protected byte PEMELG;
+protected byte PEMELG_I;
+protected boolean PEMELG_IFLAG;
+protected byte PEMMEM;
+protected byte PEMMEM_I;
+protected boolean PEMMEM_IFLAG;
+protected byte PEMOFF;
+protected byte PEMOFF_I;
+protected boolean PEMOFF_IFLAG;
+protected byte PERSONW1;
+protected byte PERSPROX;
+protected byte PEVERC;
+protected byte PEVERC_I;
+protected byte PEVERC_IFLAG;
+protected byte PEVERNC;
+protected byte PEVERNC_I;
+protected byte PEVERNC_IFLAG;
+protected byte PEXPRET;
+protected byte PFNUM;
+protected byte PFNUM_I;
+protected byte PFNUM_IFLAG;
+protected byte PFULRET;
 protected double PINCINP;
-protected double POCNMSC;
-protected double POCNMSC_I;
-protected double POCNMSC_IFLAG;
-protected double PPRNMSC;
-protected double PPRNMSC_I;
-protected double PPRNMSC_IFLAG;
-protected double PPYSTP10;
-protected double PRETAIN;
-protected double PRETAIN_I;
-protected double PRETAIN_IFLAG;
-protected double PSCHM_F;
-protected double PSCHM_F_I;
-protected double PSCHM_F_IFLAG;
-protected double PSCHM_S;
-protected double PSCHM_S_I;
-protected double PSCHM_S_IFLAG;
-protected double PSCHM_T;
-protected double PSCHM_T_I;
-protected double PSCHM_T_IFLAG;
-protected double PSIT;
-protected double PSITF;
+protected byte POCNMSC;
+protected byte POCNMSC_I;
+protected boolean POCNMSC_IFLAG;
+protected byte PPRNMSC;
+protected byte PPRNMSC_I;
+protected boolean PPRNMSC_IFLAG;
+protected byte PPYSTP10;
+protected byte PRETAIN;
+protected byte PRETAIN_I;
+protected byte PRETAIN_IFLAG;
+protected byte PSCHM_F;
+protected byte PSCHM_F_I;
+protected boolean PSCHM_F_IFLAG;
+protected byte PSCHM_S;
+protected byte PSCHM_S_I;
+protected boolean PSCHM_S_IFLAG;
+protected byte PSCHM_T;
+protected byte PSCHM_T_I;
+protected boolean PSCHM_T_IFLAG;
+protected byte PSIT;
+protected byte PSITF;
 protected double PWEXPA;
-protected double PWEXPA_I;
-protected double PWEXPA_IFLAG;
-protected double PWEXPH;
-protected double PWEXPH_I;
-protected double PWEXPH_IFLAG;
-protected double PWID;
-protected double PWIDFUT;
-protected double PWIDFUT_I;
-protected double PWIDFUT_IFLAG;
-protected double P_FLAG1;
-protected double P_FLAG3;
-protected double P_FLAG4;
-protected double QHEALTH1;
-protected double QUALCHK;
-protected double REGLRPY1;
-protected double REGLRPY2;
-protected double RELBUS;
-protected double RENTPAY;
-protected double SCHEMEET;
-protected double SEAMK;
-protected double SEESM;
-protected double SEESW;
-protected double SELECTAD;
-protected double SEMN;
-protected double SEMPSTY;
-protected double SEPEL;
-protected double SEPER;
-protected double SEX;
-protected double SINGPAR;
-protected double SJEMP1;
-protected double SJEMP2;
-protected double SJOB2;
-protected double SOLO;
-protected double STARTJ;
-protected double STAT;
-protected double STAT_I;
-protected double SVISE;
-protected double TBENEF;
-protected double TBENNUM;
-protected double TEA;
-protected double TINTRO;
+protected int PWEXPA_I;
+protected boolean PWEXPA_IFLAG;
+protected byte PWEXPH;
+protected byte PWEXPH_I;
+protected boolean PWEXPH_IFLAG;
+protected byte PWID;
+protected byte PWIDFUT;
+protected byte PWIDFUT_I;
+protected boolean PWIDFUT_IFLAG;
+protected byte P_FLAG1;
+protected byte P_FLAG3;
+protected byte P_FLAG4;
+protected byte QHEALTH1;
+protected byte QUALCHK;
+protected byte REGLRPY1;
+protected byte REGLRPY2;
+protected byte RELBUS;
+protected byte RENTPAY;
+protected byte SCHEMEET;
+protected byte SEAMK;
+protected byte SEESM;
+protected byte SEESW;
+protected byte SELECTAD;
+protected byte SEMN;
+protected short SEMPSTY;
+protected byte SEPEL;
+protected byte SEPER;
+protected boolean SEX;
+protected boolean SINGPAR;
+protected byte SJEMP1;
+protected byte SJEMP2;
+protected byte SJOB2;
+protected byte SOLO;
+protected byte STARTJ;
+protected byte STAT;
+protected byte STAT_I;
+protected byte SVISE;
+protected byte TBENEF;
+protected byte TBENNUM;
+protected byte TEA;
+protected byte TINTRO;
 protected double TOTPEN;
-protected double TSETT;
-protected double TYPE;
-protected double UNMTYP;
-protected double UNUMBD;
-protected double UNUMBD_I;
-protected double UNUMBD_IFLAG;
-protected double UNUMHS;
-protected double UNUMHS_I;
-protected double UNUMHS_IFLAG;
-protected double UNUMLA;
-protected double UNUMLA_I;
-protected double UNUMLA_IFLAG;
-protected double UNUMOV;
-protected double UNUMOV_I;
-protected double UNUMOV_IFLAG;
-protected double UNUMRE;
-protected double UNUMRE_I;
-protected double UNUMRE_IFLAG;
-protected double UPROP1;
-protected double UPROP1_I;
-protected double UPROP2;
-protected double UPROP2_I;
-protected double UPROP3;
-protected double UPROP3_I;
-protected double UPROP4;
-protected double UPROP4_I;
-protected double UPRSH1;
-protected double UPRSH2;
-protected double UPRSH3;
-protected double UPRSH4;
-protected double UPRSH5;
-protected double WORKAGE;
-protected double WRKING;
-protected double XINSOL;
-protected double XINTYP;
-protected double YEAR;
-protected double YINACT;
+protected byte TSETT;
+protected byte TYPE;
+protected byte UNMTYP;
+protected byte UNUMBD;
+protected byte UNUMBD_I;
+protected boolean UNUMBD_IFLAG;
+protected byte UNUMHS;
+protected byte UNUMHS_I;
+protected boolean UNUMHS_IFLAG;
+protected byte UNUMLA;
+protected byte UNUMLA_I;
+protected boolean UNUMLA_IFLAG;
+protected byte UNUMOV;
+protected byte UNUMOV_I;
+protected boolean UNUMOV_IFLAG;
+protected byte UNUMRE;
+protected byte UNUMRE_I;
+protected boolean UNUMRE_IFLAG;
+protected byte UPROP1;
+protected byte UPROP1_I;
+protected byte UPROP2;
+protected byte UPROP2_I;
+protected byte UPROP3;
+protected byte UPROP3_I;
+protected byte UPROP4;
+protected byte UPROP4_I;
+protected byte UPRSH1;
+protected byte UPRSH2;
+protected byte UPRSH3;
+protected byte UPRSH4;
+protected byte UPRSH5;
+protected byte WORKAGE;
+protected byte WRKING;
+protected byte XINSOL;
+protected byte XINTYP;
+protected short YEAR;
+protected byte YINACT;
 protected final void initATTEND(String s) {
 if (!s.trim().isEmpty()) {
-ATTEND = new Double(s);
+ATTEND = Byte.parseByte(s);
 } else {
-ATTEND = Double.NaN;
+ATTEND = Byte.MIN_VALUE;
 }
 }
 
@@ -1041,1941 +1041,1946 @@ BACCBEG3 = s;
 
 protected final void initBACCSA2(String s) {
 if (!s.trim().isEmpty()) {
-BACCSA2 = new Double(s);
+BACCSA2 = Byte.parseByte(s);
 } else {
-BACCSA2 = Double.NaN;
+BACCSA2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBACCSA3(String s) {
 if (!s.trim().isEmpty()) {
-BACCSA3 = new Double(s);
+BACCSA3 = Byte.parseByte(s);
 } else {
-BACCSA3 = Double.NaN;
+BACCSA3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBACCSB2(String s) {
 if (!s.trim().isEmpty()) {
-BACCSB2 = new Double(s);
+BACCSB2 = Byte.parseByte(s);
 } else {
-BACCSB2 = Double.NaN;
+BACCSB2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBACCSB3(String s) {
 if (!s.trim().isEmpty()) {
-BACCSB3 = new Double(s);
+BACCSB3 = Byte.parseByte(s);
 } else {
-BACCSB3 = Double.NaN;
+BACCSB3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBBEFORE2(String s) {
 if (!s.trim().isEmpty()) {
-BBEFORE2 = new Double(s);
+BBEFORE2 = Integer.parseInt(s);
 } else {
-BBEFORE2 = Double.NaN;
+BBEFORE2 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initBBEFORE3(String s) {
 if (!s.trim().isEmpty()) {
-BBEFORE3 = new Double(s);
+BBEFORE3 = Integer.parseInt(s);
 } else {
-BBEFORE3 = Double.NaN;
+BBEFORE3 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initBDEBTS2(String s) {
 if (!s.trim().isEmpty()) {
-BDEBTS2 = new Double(s);
+BDEBTS2 = Integer.parseInt(s);
 } else {
-BDEBTS2 = Double.NaN;
+BDEBTS2 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initBDEBTS3(String s) {
 if (!s.trim().isEmpty()) {
-BDEBTS3 = new Double(s);
+BDEBTS3 = Integer.parseInt(s);
 } else {
-BDEBTS3 = Double.NaN;
+BDEBTS3 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initBDIRNI2(String s) {
 if (!s.trim().isEmpty()) {
-BDIRNI2 = new Double(s);
+BDIRNI2 = Byte.parseByte(s);
 } else {
-BDIRNI2 = Double.NaN;
+BDIRNI2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBDIRNI3(String s) {
 if (!s.trim().isEmpty()) {
-BDIRNI3 = new Double(s);
+BDIRNI3 = Byte.parseByte(s);
 } else {
-BDIRNI3 = Double.NaN;
+BDIRNI3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBDOCS2(String s) {
 if (!s.trim().isEmpty()) {
-BDOCS2 = new Double(s);
+BDOCS2 = Byte.parseByte(s);
 } else {
-BDOCS2 = Double.NaN;
+BDOCS2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBDOCS3(String s) {
 if (!s.trim().isEmpty()) {
-BDOCS3 = new Double(s);
+BDOCS3 = Byte.parseByte(s);
 } else {
-BDOCS3 = Double.NaN;
+BDOCS3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBEMPN2(String s) {
 if (!s.trim().isEmpty()) {
-BEMPN2 = new Double(s);
+BEMPN2 = Byte.parseByte(s);
 } else {
-BEMPN2 = Double.NaN;
+BEMPN2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBEMPN3(String s) {
 if (!s.trim().isEmpty()) {
-BEMPN3 = new Double(s);
+BEMPN3 = Byte.parseByte(s);
 } else {
-BEMPN3 = Double.NaN;
+BEMPN3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBFUND1(String s) {
 if (!s.trim().isEmpty()) {
-BFUND1 = new Double(s);
+BFUND1 = Byte.parseByte(s);
 } else {
-BFUND1 = Double.NaN;
+BFUND1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBFUND10(String s) {
 if (!s.trim().isEmpty()) {
-BFUND10 = new Double(s);
+BFUND10 = Byte.parseByte(s);
 } else {
-BFUND10 = Double.NaN;
+BFUND10 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBFUND17(String s) {
 if (!s.trim().isEmpty()) {
-BFUND17 = new Double(s);
+BFUND17 = Byte.parseByte(s);
 } else {
-BFUND17 = Double.NaN;
+BFUND17 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBFUND2(String s) {
 if (!s.trim().isEmpty()) {
-BFUND2 = new Double(s);
+BFUND2 = Byte.parseByte(s);
 } else {
-BFUND2 = Double.NaN;
+BFUND2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBFUND9(String s) {
 if (!s.trim().isEmpty()) {
-BFUND9 = new Double(s);
+BFUND9 = Byte.parseByte(s);
 } else {
-BFUND9 = Double.NaN;
+BFUND9 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBMOREBUS(String s) {
 if (!s.trim().isEmpty()) {
-BMOREBUS = new Double(s);
+BMOREBUS = Byte.parseByte(s);
 } else {
-BMOREBUS = Double.NaN;
+BMOREBUS = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBNATINS2(String s) {
 if (!s.trim().isEmpty()) {
-BNATINS2 = new Double(s);
+BNATINS2 = Byte.parseByte(s);
 } else {
-BNATINS2 = Double.NaN;
+BNATINS2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBNATINS3(String s) {
 if (!s.trim().isEmpty()) {
-BNATINS3 = new Double(s);
+BNATINS3 = Byte.parseByte(s);
 } else {
-BNATINS3 = Double.NaN;
+BNATINS3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBONTAX(String s) {
 if (!s.trim().isEmpty()) {
-BONTAX = new Double(s);
+BONTAX = Byte.parseByte(s);
 } else {
-BONTAX = Double.NaN;
+BONTAX = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBOWED2(String s) {
 if (!s.trim().isEmpty()) {
-BOWED2 = new Double(s);
+BOWED2 = Integer.parseInt(s);
 } else {
-BOWED2 = Double.NaN;
+BOWED2 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initBOWED3(String s) {
 if (!s.trim().isEmpty()) {
-BOWED3 = new Double(s);
+BOWED3 = Integer.parseInt(s);
 } else {
-BOWED3 = Double.NaN;
+BOWED3 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initBOWN2(String s) {
 if (!s.trim().isEmpty()) {
-BOWN2 = new Double(s);
+BOWN2 = Byte.parseByte(s);
 } else {
-BOWN2 = Double.NaN;
+BOWN2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBOWN3(String s) {
 if (!s.trim().isEmpty()) {
-BOWN3 = new Double(s);
+BOWN3 = Byte.parseByte(s);
 } else {
-BOWN3 = Double.NaN;
+BOWN3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBPART2(String s) {
 if (!s.trim().isEmpty()) {
-BPART2 = new Double(s);
+BPART2 = Byte.parseByte(s);
 } else {
-BPART2 = Double.NaN;
+BPART2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBPART3(String s) {
 if (!s.trim().isEmpty()) {
-BPART3 = new Double(s);
+BPART3 = Byte.parseByte(s);
 } else {
-BPART3 = Double.NaN;
+BPART3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBPAST(String s) {
 if (!s.trim().isEmpty()) {
-BPAST = new Double(s);
+BPAST = Byte.parseByte(s);
 } else {
-BPAST = Double.NaN;
+BPAST = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBPROFIT2(String s) {
 if (!s.trim().isEmpty()) {
-BPROFIT2 = new Double(s);
+BPROFIT2 = Integer.parseInt(s);
 } else {
-BPROFIT2 = Double.NaN;
+BPROFIT2 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initBPROFIT3(String s) {
 if (!s.trim().isEmpty()) {
-BPROFIT3 = new Double(s);
+BPROFIT3 = Integer.parseInt(s);
 } else {
-BPROFIT3 = Double.NaN;
+BPROFIT3 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initBPROPN2(String s) {
 if (!s.trim().isEmpty()) {
-BPROPN2 = new Double(s);
+BPROPN2 = Byte.parseByte(s);
 } else {
-BPROPN2 = Double.NaN;
+BPROPN2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBPROPN3(String s) {
 if (!s.trim().isEmpty()) {
-BPROPN3 = new Double(s);
+BPROPN3 = Byte.parseByte(s);
 } else {
-BPROPN3 = Double.NaN;
+BPROPN3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBRETIRE2(String s) {
 if (!s.trim().isEmpty()) {
-BRETIRE2 = new Double(s);
+BRETIRE2 = Byte.parseByte(s);
 } else {
-BRETIRE2 = Double.NaN;
+BRETIRE2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBRETIRE3(String s) {
 if (!s.trim().isEmpty()) {
-BRETIRE3 = new Double(s);
+BRETIRE3 = Byte.parseByte(s);
 } else {
-BRETIRE3 = Double.NaN;
+BRETIRE3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBSELLAB(String s) {
 if (!s.trim().isEmpty()) {
-BSELLAB = new Double(s);
+BSELLAB = Byte.parseByte(s);
 } else {
-BSELLAB = Double.NaN;
+BSELLAB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBSELLAM(String s) {
 if (!s.trim().isEmpty()) {
-BSELLAM = new Double(s);
+BSELLAM = Integer.parseInt(s);
 } else {
-BSELLAM = Double.NaN;
+BSELLAM = Integer.MIN_VALUE;
 }
 }
 
 protected final void initBSELLTX(String s) {
 if (!s.trim().isEmpty()) {
-BSELLTX = new Double(s);
+BSELLTX = Byte.parseByte(s);
 } else {
-BSELLTX = Double.NaN;
+BSELLTX = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBSELLYR(String s) {
 if (!s.trim().isEmpty()) {
-BSELLYR = new Double(s);
+BSELLYR = Short.parseShort(s);
 } else {
-BSELLYR = Double.NaN;
+BSELLYR = Short.MIN_VALUE;
 }
 }
 
 protected final void initBSIZE2(String s) {
 if (!s.trim().isEmpty()) {
-BSIZE2 = new Double(s);
+BSIZE2 = Byte.parseByte(s);
 } else {
-BSIZE2 = Double.NaN;
+BSIZE2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBSIZE3(String s) {
 if (!s.trim().isEmpty()) {
-BSIZE3 = new Double(s);
+BSIZE3 = Byte.parseByte(s);
 } else {
-BSIZE3 = Double.NaN;
+BSIZE3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBSTART2(String s) {
 if (!s.trim().isEmpty()) {
-BSTART2 = new Double(s);
+BSTART2 = Byte.parseByte(s);
 } else {
-BSTART2 = Double.NaN;
+BSTART2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBSTART3(String s) {
 if (!s.trim().isEmpty()) {
-BSTART3 = new Double(s);
+BSTART3 = Byte.parseByte(s);
 } else {
-BSTART3 = Double.NaN;
+BSTART3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBTAX2(String s) {
 if (!s.trim().isEmpty()) {
-BTAX2 = new Double(s);
+BTAX2 = Byte.parseByte(s);
 } else {
-BTAX2 = Double.NaN;
+BTAX2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBTAX3(String s) {
 if (!s.trim().isEmpty()) {
-BTAX3 = new Double(s);
+BTAX3 = Byte.parseByte(s);
 } else {
-BTAX3 = Double.NaN;
+BTAX3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBTYPE2(String s) {
 if (!s.trim().isEmpty()) {
-BTYPE2 = new Double(s);
+BTYPE2 = Byte.parseByte(s);
 } else {
-BTYPE2 = Double.NaN;
+BTYPE2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBTYPE3(String s) {
 if (!s.trim().isEmpty()) {
-BTYPE3 = new Double(s);
+BTYPE3 = Byte.parseByte(s);
 } else {
-BTYPE3 = Double.NaN;
+BTYPE3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBVAL2(String s) {
 if (!s.trim().isEmpty()) {
-BVAL2 = new Double(s);
+BVAL2 = Integer.parseInt(s);
 } else {
-BVAL2 = Double.NaN;
+BVAL2 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initBVAL3(String s) {
 if (!s.trim().isEmpty()) {
-BVAL3 = new Double(s);
+BVAL3 = Integer.parseInt(s);
 } else {
-BVAL3 = Double.NaN;
+BVAL3 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initBVALB2(String s) {
 if (!s.trim().isEmpty()) {
-BVALB2 = new Double(s);
+BVALB2 = Byte.parseByte(s);
 } else {
-BVALB2 = Double.NaN;
+BVALB2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBWORTH(String s) {
 if (!s.trim().isEmpty()) {
-BWORTH = new Double(s);
+BWORTH = Integer.parseInt(s);
 } else {
-BWORTH = Double.NaN;
+BWORTH = Integer.MIN_VALUE;
 }
 }
 
 protected final void initBWORTHB(String s) {
 if (!s.trim().isEmpty()) {
-BWORTHB = new Double(s);
+BWORTHB = Byte.parseByte(s);
 } else {
-BWORTHB = Double.NaN;
+BWORTHB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initBYEAR2(String s) {
 if (!s.trim().isEmpty()) {
-BYEAR2 = new Double(s);
+BYEAR2 = Short.parseShort(s);
 } else {
-BYEAR2 = Double.NaN;
+BYEAR2 = Short.MIN_VALUE;
 }
 }
 
 protected final void initBYEAR3(String s) {
 if (!s.trim().isEmpty()) {
-BYEAR3 = new Double(s);
+BYEAR3 = Short.parseShort(s);
 } else {
-BYEAR3 = Double.NaN;
+BYEAR3 = Short.MIN_VALUE;
 }
 }
 
 protected final void initCACTF(String s) {
 if (!s.trim().isEmpty()) {
-CACTF = new Double(s);
+CACTF = Byte.parseByte(s);
 } else {
-CACTF = Double.NaN;
+CACTF = Byte.MIN_VALUE;
 }
 }
 
 protected final void initCACTF_I(String s) {
 if (!s.trim().isEmpty()) {
-CACTF_I = new Double(s);
+CACTF_I = Byte.parseByte(s);
 } else {
-CACTF_I = Double.NaN;
+CACTF_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initCACTF_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-CACTF_IFLAG = new Double(s);
+CACTF_IFLAG = Byte.parseByte(s);
 } else {
-CACTF_IFLAG = Double.NaN;
+CACTF_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initCACTV(String s) {
 if (!s.trim().isEmpty()) {
-CACTV = new Double(s);
+CACTV = Short.parseShort(s);
 } else {
-CACTV = Double.NaN;
+CACTV = Short.MIN_VALUE;
 }
 }
 
 protected final void initCACTV_I(String s) {
 if (!s.trim().isEmpty()) {
-CACTV_I = new Double(s);
+CACTV_I = Short.parseShort(s);
 } else {
-CACTV_I = Double.NaN;
+CACTV_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initCACTV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-CACTV_IFLAG = new Double(s);
+CACTV_IFLAG = Byte.parseByte(s);
 } else {
-CACTV_IFLAG = Double.NaN;
+CACTV_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initCASAV(String s) {
 if (!s.trim().isEmpty()) {
-CASAV = new Double(s);
+CASAV = Byte.parseByte(s);
 } else {
-CASAV = Double.NaN;
+CASAV = Byte.MIN_VALUE;
 }
 }
 
 protected final void initCASAV_I(String s) {
 if (!s.trim().isEmpty()) {
-CASAV_I = new Double(s);
+CASAV_I = Byte.parseByte(s);
 } else {
-CASAV_I = Double.NaN;
+CASAV_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initCASAV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-CASAV_IFLAG = new Double(s);
+CASAV_IFLAG = Byte.parseByte(s);
 } else {
-CASAV_IFLAG = Double.NaN;
+CASAV_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initCASEW1(String s) {
 if (!s.trim().isEmpty()) {
-CASEW1 = new Integer(s);
+CASEW1 = Short.parseShort(s);
+} else {
+CASEW1 = Short.MIN_VALUE;
 }
 }
 
 protected final void initCASVB(String s) {
 if (!s.trim().isEmpty()) {
-CASVB = new Double(s);
+CASVB = Byte.parseByte(s);
 } else {
-CASVB = Double.NaN;
+CASVB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initCASVV(String s) {
 if (!s.trim().isEmpty()) {
-CASVV = new Double(s);
+CASVV = Integer.parseInt(s);
 } else {
-CASVV = Double.NaN;
+CASVV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initCASVV_I(String s) {
 if (!s.trim().isEmpty()) {
-CASVV_I = new Double(s);
+CASVV_I = Integer.parseInt(s);
 } else {
-CASVV_I = Double.NaN;
+CASVV_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initCASVV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-CASVV_IFLAG = new Double(s);
+CASVV_IFLAG = Byte.parseByte(s);
 } else {
-CASVV_IFLAG = Double.NaN;
+CASVV_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initCOURSE(String s) {
 if (!s.trim().isEmpty()) {
-COURSE = new Double(s);
+COURSE = Byte.parseByte(s);
 } else {
-COURSE = Double.NaN;
+COURSE = Byte.MIN_VALUE;
 }
 }
 
 protected final void initCURRAC(String s) {
 if (!s.trim().isEmpty()) {
-CURRAC = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+CURRAC = false;
 } else {
-CURRAC = Double.NaN;
+CURRAC = true;
+}
 }
 }
 
 protected final void initDBURD(String s) {
 if (!s.trim().isEmpty()) {
-DBURD = new Double(s);
+DBURD = Byte.parseByte(s);
 } else {
-DBURD = Double.NaN;
+DBURD = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDBURDA(String s) {
 if (!s.trim().isEmpty()) {
-DBURDA = new Double(s);
+DBURDA = Byte.parseByte(s);
 } else {
-DBURDA = Double.NaN;
+DBURDA = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCAMC2(String s) {
 if (!s.trim().isEmpty()) {
-DCAMC2 = new Double(s);
+DCAMC2 = Integer.parseInt(s);
 } else {
-DCAMC2 = Double.NaN;
+DCAMC2 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDCAMC3(String s) {
 if (!s.trim().isEmpty()) {
-DCAMC3 = new Double(s);
+DCAMC3 = Integer.parseInt(s);
 } else {
-DCAMC3 = Double.NaN;
+DCAMC3 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDCAMD2(String s) {
 if (!s.trim().isEmpty()) {
-DCAMD2 = new Double(s);
+DCAMD2 = Short.parseShort(s);
 } else {
-DCAMD2 = Double.NaN;
+DCAMD2 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDCAMD3(String s) {
 if (!s.trim().isEmpty()) {
-DCAMD3 = new Double(s);
+DCAMD3 = Short.parseShort(s);
 } else {
-DCAMD3 = Double.NaN;
+DCAMD3 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDCAMP2(String s) {
 if (!s.trim().isEmpty()) {
-DCAMP2 = new Double(s);
+DCAMP2 = Short.parseShort(s);
 } else {
-DCAMP2 = Double.NaN;
+DCAMP2 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDCAMP3(String s) {
 if (!s.trim().isEmpty()) {
-DCAMP3 = new Double(s);
+DCAMP3 = Short.parseShort(s);
 } else {
-DCAMP3 = Double.NaN;
+DCAMP3 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDCANU(String s) {
 if (!s.trim().isEmpty()) {
-DCANU = new Double(s);
+DCANU = Byte.parseByte(s);
 } else {
-DCANU = Double.NaN;
+DCANU = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCANY(String s) {
 if (!s.trim().isEmpty()) {
-DCANY = new Double(s);
+DCANY = Byte.parseByte(s);
 } else {
-DCANY = Double.NaN;
+DCANY = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCCOS2(String s) {
 if (!s.trim().isEmpty()) {
-DCCOS2 = new Double(s);
+DCCOS2 = Byte.parseByte(s);
 } else {
-DCCOS2 = Double.NaN;
+DCCOS2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCCOS3(String s) {
 if (!s.trim().isEmpty()) {
-DCCOS3 = new Double(s);
+DCCOS3 = Byte.parseByte(s);
 } else {
-DCCOS3 = Double.NaN;
+DCCOS3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCCSP2(String s) {
 if (!s.trim().isEmpty()) {
-DCCSP2 = new Double(s);
+DCCSP2 = Byte.parseByte(s);
 } else {
-DCCSP2 = Double.NaN;
+DCCSP2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCCSP3(String s) {
 if (!s.trim().isEmpty()) {
-DCCSP3 = new Double(s);
+DCCSP3 = Byte.parseByte(s);
 } else {
-DCCSP3 = Double.NaN;
+DCCSP3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCESB2(String s) {
 if (!s.trim().isEmpty()) {
-DCESB2 = new Double(s);
+DCESB2 = Byte.parseByte(s);
 } else {
-DCESB2 = Double.NaN;
+DCESB2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCESB3(String s) {
 if (!s.trim().isEmpty()) {
-DCESB3 = new Double(s);
+DCESB3 = Byte.parseByte(s);
 } else {
-DCESB3 = Double.NaN;
+DCESB3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCINZ2(String s) {
 if (!s.trim().isEmpty()) {
-DCINZ2 = new Double(s);
+DCINZ2 = Byte.parseByte(s);
 } else {
-DCINZ2 = Double.NaN;
+DCINZ2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCINZ3(String s) {
 if (!s.trim().isEmpty()) {
-DCINZ3 = new Double(s);
+DCINZ3 = Byte.parseByte(s);
 } else {
-DCINZ3 = Double.NaN;
+DCINZ3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCNAM2(String s) {
 if (!s.trim().isEmpty()) {
-DCNAM2 = new Double(s);
+DCNAM2 = Byte.parseByte(s);
 } else {
-DCNAM2 = Double.NaN;
+DCNAM2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCNAM3(String s) {
 if (!s.trim().isEmpty()) {
-DCNAM3 = new Double(s);
+DCNAM3 = Byte.parseByte(s);
 } else {
-DCNAM3 = Double.NaN;
+DCNAM3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCOINV2(String s) {
 if (!s.trim().isEmpty()) {
-DCOINV2 = new Double(s);
+DCOINV2 = Integer.parseInt(s);
 } else {
-DCOINV2 = Double.NaN;
+DCOINV2 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDCOINV2_I(String s) {
 if (!s.trim().isEmpty()) {
-DCOINV2_I = new Double(s);
+DCOINV2_I = Integer.parseInt(s);
 } else {
-DCOINV2_I = Double.NaN;
+DCOINV2_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDCOINV2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DCOINV2_IFLAG = new Double(s);
+DCOINV2_IFLAG = Byte.parseByte(s);
 } else {
-DCOINV2_IFLAG = Double.NaN;
+DCOINV2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCOINV3(String s) {
 if (!s.trim().isEmpty()) {
-DCOINV3 = new Double(s);
+DCOINV3 = Short.parseShort(s);
 } else {
-DCOINV3 = Double.NaN;
+DCOINV3 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDCOINVB2(String s) {
 if (!s.trim().isEmpty()) {
-DCOINVB2 = new Double(s);
+DCOINVB2 = Byte.parseByte(s);
 } else {
-DCOINVB2 = Double.NaN;
+DCOINVB2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCOINVB3(String s) {
 if (!s.trim().isEmpty()) {
-DCOINVB3 = new Double(s);
+DCOINVB3 = Byte.parseByte(s);
 } else {
-DCOINVB3 = Double.NaN;
+DCOINVB3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCONM1(String s) {
 if (!s.trim().isEmpty()) {
-DCONM1 = new Double(s);
+DCONM1 = Byte.parseByte(s);
 } else {
-DCONM1 = Double.NaN;
+DCONM1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCONM2(String s) {
 if (!s.trim().isEmpty()) {
-DCONM2 = new Double(s);
+DCONM2 = Byte.parseByte(s);
 } else {
-DCONM2 = Double.NaN;
+DCONM2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCONM3(String s) {
 if (!s.trim().isEmpty()) {
-DCONM3 = new Double(s);
+DCONM3 = Byte.parseByte(s);
 } else {
-DCONM3 = Double.NaN;
+DCONM3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCONM4(String s) {
 if (!s.trim().isEmpty()) {
-DCONM4 = new Double(s);
+DCONM4 = Byte.parseByte(s);
 } else {
-DCONM4 = Double.NaN;
+DCONM4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCONM5(String s) {
 if (!s.trim().isEmpty()) {
-DCONM5 = new Double(s);
+DCONM5 = Byte.parseByte(s);
 } else {
-DCONM5 = Double.NaN;
+DCONM5 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCONM6(String s) {
 if (!s.trim().isEmpty()) {
-DCONM6 = new Double(s);
+DCONM6 = Byte.parseByte(s);
 } else {
-DCONM6 = Double.NaN;
+DCONM6 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCOSHV2(String s) {
 if (!s.trim().isEmpty()) {
-DCOSHV2 = new Double(s);
+DCOSHV2 = Integer.parseInt(s);
 } else {
-DCOSHV2 = Double.NaN;
+DCOSHV2 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDCOSHV2_I(String s) {
 if (!s.trim().isEmpty()) {
-DCOSHV2_I = new Double(s);
+DCOSHV2_I = Integer.parseInt(s);
 } else {
-DCOSHV2_I = Double.NaN;
+DCOSHV2_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDCOSHV2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DCOSHV2_IFLAG = new Double(s);
+DCOSHV2_IFLAG = Byte.parseByte(s);
 } else {
-DCOSHV2_IFLAG = Double.NaN;
+DCOSHV2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCOSHV3(String s) {
 if (!s.trim().isEmpty()) {
-DCOSHV3 = new Double(s);
+DCOSHV3 = Short.parseShort(s);
 } else {
-DCOSHV3 = Double.NaN;
+DCOSHV3 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDCOSHVB2(String s) {
 if (!s.trim().isEmpty()) {
-DCOSHVB2 = new Double(s);
+DCOSHVB2 = Byte.parseByte(s);
 } else {
-DCOSHVB2 = Double.NaN;
+DCOSHVB2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCPER2(String s) {
 if (!s.trim().isEmpty()) {
-DCPER2 = new Double(s);
+DCPER2 = Byte.parseByte(s);
 } else {
-DCPER2 = Double.NaN;
+DCPER2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCPER3(String s) {
 if (!s.trim().isEmpty()) {
-DCPER3 = new Double(s);
+DCPER3 = Byte.parseByte(s);
 } else {
-DCPER3 = Double.NaN;
+DCPER3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCREC2(String s) {
 if (!s.trim().isEmpty()) {
-DCREC2 = new Double(s);
+DCREC2 = Byte.parseByte(s);
 } else {
-DCREC2 = Double.NaN;
+DCREC2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCREC3(String s) {
 if (!s.trim().isEmpty()) {
-DCREC3 = new Double(s);
+DCREC3 = Byte.parseByte(s);
 } else {
-DCREC3 = Double.NaN;
+DCREC3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCRSP2(String s) {
 if (!s.trim().isEmpty()) {
-DCRSP2 = new Double(s);
+DCRSP2 = Byte.parseByte(s);
 } else {
-DCRSP2 = Double.NaN;
+DCRSP2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDCRSP3(String s) {
 if (!s.trim().isEmpty()) {
-DCRSP3 = new Double(s);
+DCRSP3 = Byte.parseByte(s);
 } else {
-DCRSP3 = Double.NaN;
+DCRSP3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT01(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT01 = new Double(s);
+DHBAMT01 = Short.parseShort(s);
 } else {
-DHBAMT01 = Double.NaN;
+DHBAMT01 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT01_I(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT01_I = new Double(s);
+DHBAMT01_I = Short.parseShort(s);
 } else {
-DHBAMT01_I = Double.NaN;
+DHBAMT01_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT01_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT01_IFLAG = new Double(s);
+DHBAMT01_IFLAG = Byte.parseByte(s);
 } else {
-DHBAMT01_IFLAG = Double.NaN;
+DHBAMT01_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT02(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT02 = new Double(s);
+DHBAMT02 = Short.parseShort(s);
 } else {
-DHBAMT02 = Double.NaN;
+DHBAMT02 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT02_I(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT02_I = new Double(s);
+DHBAMT02_I = Short.parseShort(s);
 } else {
-DHBAMT02_I = Double.NaN;
+DHBAMT02_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT02_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT02_IFLAG = new Double(s);
+DHBAMT02_IFLAG = Byte.parseByte(s);
 } else {
-DHBAMT02_IFLAG = Double.NaN;
+DHBAMT02_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT03(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT03 = new Double(s);
+DHBAMT03 = Short.parseShort(s);
 } else {
-DHBAMT03 = Double.NaN;
+DHBAMT03 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT03_I(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT03_I = new Double(s);
+DHBAMT03_I = Short.parseShort(s);
 } else {
-DHBAMT03_I = Double.NaN;
+DHBAMT03_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT03_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT03_IFLAG = new Double(s);
+DHBAMT03_IFLAG = Byte.parseByte(s);
 } else {
-DHBAMT03_IFLAG = Double.NaN;
+DHBAMT03_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT04(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT04 = new Double(s);
+DHBAMT04 = Short.parseShort(s);
 } else {
-DHBAMT04 = Double.NaN;
+DHBAMT04 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT04_I(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT04_I = new Double(s);
+DHBAMT04_I = Short.parseShort(s);
 } else {
-DHBAMT04_I = Double.NaN;
+DHBAMT04_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT04_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT04_IFLAG = new Double(s);
+DHBAMT04_IFLAG = Byte.parseByte(s);
 } else {
-DHBAMT04_IFLAG = Double.NaN;
+DHBAMT04_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT05(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT05 = new Double(s);
+DHBAMT05 = Short.parseShort(s);
 } else {
-DHBAMT05 = Double.NaN;
+DHBAMT05 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT05_I(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT05_I = new Double(s);
+DHBAMT05_I = Short.parseShort(s);
 } else {
-DHBAMT05_I = Double.NaN;
+DHBAMT05_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT05_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT05_IFLAG = new Double(s);
+DHBAMT05_IFLAG = Byte.parseByte(s);
 } else {
-DHBAMT05_IFLAG = Double.NaN;
+DHBAMT05_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT06(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT06 = new Double(s);
+DHBAMT06 = Short.parseShort(s);
 } else {
-DHBAMT06 = Double.NaN;
+DHBAMT06 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT06_I(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT06_I = new Double(s);
+DHBAMT06_I = Short.parseShort(s);
 } else {
-DHBAMT06_I = Double.NaN;
+DHBAMT06_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT06_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT06_IFLAG = new Double(s);
+DHBAMT06_IFLAG = Byte.parseByte(s);
 } else {
-DHBAMT06_IFLAG = Double.NaN;
+DHBAMT06_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT07(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT07 = new Double(s);
+DHBAMT07 = Short.parseShort(s);
 } else {
-DHBAMT07 = Double.NaN;
+DHBAMT07 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT07_I(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT07_I = new Double(s);
+DHBAMT07_I = Short.parseShort(s);
 } else {
-DHBAMT07_I = Double.NaN;
+DHBAMT07_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT07_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT07_IFLAG = new Double(s);
+DHBAMT07_IFLAG = Byte.parseByte(s);
 } else {
-DHBAMT07_IFLAG = Double.NaN;
+DHBAMT07_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT08(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT08 = new Double(s);
+DHBAMT08 = Short.parseShort(s);
 } else {
-DHBAMT08 = Double.NaN;
+DHBAMT08 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT08_I(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT08_I = new Double(s);
+DHBAMT08_I = Short.parseShort(s);
 } else {
-DHBAMT08_I = Double.NaN;
+DHBAMT08_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT08_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT08_IFLAG = new Double(s);
+DHBAMT08_IFLAG = Byte.parseByte(s);
 } else {
-DHBAMT08_IFLAG = Double.NaN;
+DHBAMT08_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT09(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT09 = new Double(s);
+DHBAMT09 = Integer.parseInt(s);
 } else {
-DHBAMT09 = Double.NaN;
+DHBAMT09 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT09_I(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT09_I = new Double(s);
+DHBAMT09_I = Integer.parseInt(s);
 } else {
-DHBAMT09_I = Double.NaN;
+DHBAMT09_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT09_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT09_IFLAG = new Double(s);
+DHBAMT09_IFLAG = Byte.parseByte(s);
 } else {
-DHBAMT09_IFLAG = Double.NaN;
+DHBAMT09_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT10(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT10 = new Double(s);
+DHBAMT10 = Short.parseShort(s);
 } else {
-DHBAMT10 = Double.NaN;
+DHBAMT10 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT10_I(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT10_I = new Double(s);
+DHBAMT10_I = Short.parseShort(s);
 } else {
-DHBAMT10_I = Double.NaN;
+DHBAMT10_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT10_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT10_IFLAG = new Double(s);
+DHBAMT10_IFLAG = Byte.parseByte(s);
 } else {
-DHBAMT10_IFLAG = Double.NaN;
+DHBAMT10_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT11(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT11 = new Double(s);
+DHBAMT11 = Integer.parseInt(s);
 } else {
-DHBAMT11 = Double.NaN;
+DHBAMT11 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT11_I(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT11_I = new Double(s);
+DHBAMT11_I = Integer.parseInt(s);
 } else {
-DHBAMT11_I = Double.NaN;
+DHBAMT11_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDHBAMT11_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHBAMT11_IFLAG = new Double(s);
+DHBAMT11_IFLAG = Byte.parseByte(s);
 } else {
-DHBAMT11_IFLAG = Double.NaN;
+DHBAMT11_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBANY01(String s) {
 if (!s.trim().isEmpty()) {
-DHBANY01 = new Double(s);
+DHBANY01 = Byte.parseByte(s);
 } else {
-DHBANY01 = Double.NaN;
+DHBANY01 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBANY01_I(String s) {
 if (!s.trim().isEmpty()) {
-DHBANY01_I = new Double(s);
+DHBANY01_I = Byte.parseByte(s);
 } else {
-DHBANY01_I = Double.NaN;
+DHBANY01_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBANY01_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHBANY01_IFLAG = new Double(s);
+DHBANY01_IFLAG = Byte.parseByte(s);
 } else {
-DHBANY01_IFLAG = Double.NaN;
+DHBANY01_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBANY02(String s) {
 if (!s.trim().isEmpty()) {
-DHBANY02 = new Double(s);
+DHBANY02 = Byte.parseByte(s);
 } else {
-DHBANY02 = Double.NaN;
+DHBANY02 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBANY02_I(String s) {
 if (!s.trim().isEmpty()) {
-DHBANY02_I = new Double(s);
+DHBANY02_I = Byte.parseByte(s);
 } else {
-DHBANY02_I = Double.NaN;
+DHBANY02_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBANY02_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHBANY02_IFLAG = new Double(s);
+DHBANY02_IFLAG = Byte.parseByte(s);
 } else {
-DHBANY02_IFLAG = Double.NaN;
+DHBANY02_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBANY03(String s) {
 if (!s.trim().isEmpty()) {
-DHBANY03 = new Double(s);
+DHBANY03 = Byte.parseByte(s);
 } else {
-DHBANY03 = Double.NaN;
+DHBANY03 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBANY03_I(String s) {
 if (!s.trim().isEmpty()) {
-DHBANY03_I = new Double(s);
+DHBANY03_I = Byte.parseByte(s);
 } else {
-DHBANY03_I = Double.NaN;
+DHBANY03_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBANY03_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHBANY03_IFLAG = new Double(s);
+DHBANY03_IFLAG = Byte.parseByte(s);
 } else {
-DHBANY03_IFLAG = Double.NaN;
+DHBANY03_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBANY04(String s) {
 if (!s.trim().isEmpty()) {
-DHBANY04 = new Double(s);
+DHBANY04 = Byte.parseByte(s);
 } else {
-DHBANY04 = Double.NaN;
+DHBANY04 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBANY04_I(String s) {
 if (!s.trim().isEmpty()) {
-DHBANY04_I = new Double(s);
+DHBANY04_I = Byte.parseByte(s);
 } else {
-DHBANY04_I = Double.NaN;
+DHBANY04_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBANY04_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHBANY04_IFLAG = new Double(s);
+DHBANY04_IFLAG = Byte.parseByte(s);
 } else {
-DHBANY04_IFLAG = Double.NaN;
+DHBANY04_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBANY05(String s) {
 if (!s.trim().isEmpty()) {
-DHBANY05 = new Double(s);
+DHBANY05 = Byte.parseByte(s);
 } else {
-DHBANY05 = Double.NaN;
+DHBANY05 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBANY05_I(String s) {
 if (!s.trim().isEmpty()) {
-DHBANY05_I = new Double(s);
+DHBANY05_I = Byte.parseByte(s);
 } else {
-DHBANY05_I = Double.NaN;
+DHBANY05_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBANY05_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHBANY05_IFLAG = new Double(s);
+DHBANY05_IFLAG = Byte.parseByte(s);
 } else {
-DHBANY05_IFLAG = Double.NaN;
+DHBANY05_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBANY06(String s) {
 if (!s.trim().isEmpty()) {
-DHBANY06 = new Double(s);
+DHBANY06 = Byte.parseByte(s);
 } else {
-DHBANY06 = Double.NaN;
+DHBANY06 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBANY06_I(String s) {
 if (!s.trim().isEmpty()) {
-DHBANY06_I = new Double(s);
+DHBANY06_I = Byte.parseByte(s);
 } else {
-DHBANY06_I = Double.NaN;
+DHBANY06_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBANY06_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHBANY06_IFLAG = new Double(s);
+DHBANY06_IFLAG = Byte.parseByte(s);
 } else {
-DHBANY06_IFLAG = Double.NaN;
+DHBANY06_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBANY07(String s) {
 if (!s.trim().isEmpty()) {
-DHBANY07 = new Double(s);
+DHBANY07 = Byte.parseByte(s);
 } else {
-DHBANY07 = Double.NaN;
+DHBANY07 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBANY07_I(String s) {
 if (!s.trim().isEmpty()) {
-DHBANY07_I = new Double(s);
+DHBANY07_I = Byte.parseByte(s);
 } else {
-DHBANY07_I = Double.NaN;
+DHBANY07_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBANY07_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHBANY07_IFLAG = new Double(s);
+DHBANY07_IFLAG = Byte.parseByte(s);
 } else {
-DHBANY07_IFLAG = Double.NaN;
+DHBANY07_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBEST01(String s) {
 if (!s.trim().isEmpty()) {
-DHBEST01 = new Double(s);
+DHBEST01 = Byte.parseByte(s);
 } else {
-DHBEST01 = Double.NaN;
+DHBEST01 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBEST02(String s) {
 if (!s.trim().isEmpty()) {
-DHBEST02 = new Double(s);
+DHBEST02 = Byte.parseByte(s);
 } else {
-DHBEST02 = Double.NaN;
+DHBEST02 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBEST03(String s) {
 if (!s.trim().isEmpty()) {
-DHBEST03 = new Double(s);
+DHBEST03 = Byte.parseByte(s);
 } else {
-DHBEST03 = Double.NaN;
+DHBEST03 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBEST04(String s) {
 if (!s.trim().isEmpty()) {
-DHBEST04 = new Double(s);
+DHBEST04 = Byte.parseByte(s);
 } else {
-DHBEST04 = Double.NaN;
+DHBEST04 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBEST05(String s) {
 if (!s.trim().isEmpty()) {
-DHBEST05 = new Double(s);
+DHBEST05 = Byte.parseByte(s);
 } else {
-DHBEST05 = Double.NaN;
+DHBEST05 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBEST06(String s) {
 if (!s.trim().isEmpty()) {
-DHBEST06 = new Double(s);
+DHBEST06 = Byte.parseByte(s);
 } else {
-DHBEST06 = Double.NaN;
+DHBEST06 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBEST07(String s) {
 if (!s.trim().isEmpty()) {
-DHBEST07 = new Double(s);
+DHBEST07 = Byte.parseByte(s);
 } else {
-DHBEST07 = Double.NaN;
+DHBEST07 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBEST08(String s) {
 if (!s.trim().isEmpty()) {
-DHBEST08 = new Double(s);
+DHBEST08 = Byte.parseByte(s);
 } else {
-DHBEST08 = Double.NaN;
+DHBEST08 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBEST09(String s) {
 if (!s.trim().isEmpty()) {
-DHBEST09 = new Double(s);
+DHBEST09 = Byte.parseByte(s);
 } else {
-DHBEST09 = Double.NaN;
+DHBEST09 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBEST10(String s) {
 if (!s.trim().isEmpty()) {
-DHBEST10 = new Double(s);
+DHBEST10 = Byte.parseByte(s);
 } else {
-DHBEST10 = Double.NaN;
+DHBEST10 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBEST11(String s) {
 if (!s.trim().isEmpty()) {
-DHBEST11 = new Double(s);
+DHBEST11 = Byte.parseByte(s);
 } else {
-DHBEST11 = Double.NaN;
+DHBEST11 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHBFIX(String s) {
 if (!s.trim().isEmpty()) {
-DHBFIX = new Double(s);
+DHBFIX = Byte.parseByte(s);
 } else {
-DHBFIX = Double.NaN;
+DHBFIX = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPANY1(String s) {
 if (!s.trim().isEmpty()) {
-DHPANY1 = new Double(s);
+DHPANY1 = Byte.parseByte(s);
 } else {
-DHPANY1 = Double.NaN;
+DHPANY1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPANY1_I(String s) {
 if (!s.trim().isEmpty()) {
-DHPANY1_I = new Double(s);
+DHPANY1_I = Byte.parseByte(s);
 } else {
-DHPANY1_I = Double.NaN;
+DHPANY1_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPANY1_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHPANY1_IFLAG = new Double(s);
+DHPANY1_IFLAG = Byte.parseByte(s);
 } else {
-DHPANY1_IFLAG = Double.NaN;
+DHPANY1_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPANY2(String s) {
 if (!s.trim().isEmpty()) {
-DHPANY2 = new Double(s);
+DHPANY2 = Byte.parseByte(s);
 } else {
-DHPANY2 = Double.NaN;
+DHPANY2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPANY2_I(String s) {
 if (!s.trim().isEmpty()) {
-DHPANY2_I = new Double(s);
+DHPANY2_I = Byte.parseByte(s);
 } else {
-DHPANY2_I = Double.NaN;
+DHPANY2_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPANY2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHPANY2_IFLAG = new Double(s);
+DHPANY2_IFLAG = Byte.parseByte(s);
 } else {
-DHPANY2_IFLAG = Double.NaN;
+DHPANY2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPANY3(String s) {
 if (!s.trim().isEmpty()) {
-DHPANY3 = new Double(s);
+DHPANY3 = Byte.parseByte(s);
 } else {
-DHPANY3 = Double.NaN;
+DHPANY3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPANY3_I(String s) {
 if (!s.trim().isEmpty()) {
-DHPANY3_I = new Double(s);
+DHPANY3_I = Byte.parseByte(s);
 } else {
-DHPANY3_I = Double.NaN;
+DHPANY3_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPANY3_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHPANY3_IFLAG = new Double(s);
+DHPANY3_IFLAG = Byte.parseByte(s);
 } else {
-DHPANY3_IFLAG = Double.NaN;
+DHPANY3_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPBEH2(String s) {
 if (!s.trim().isEmpty()) {
-DHPBEH2 = new Double(s);
+DHPBEH2 = Byte.parseByte(s);
 } else {
-DHPBEH2 = Double.NaN;
+DHPBEH2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPBEH2_I(String s) {
 if (!s.trim().isEmpty()) {
-DHPBEH2_I = new Double(s);
+DHPBEH2_I = Byte.parseByte(s);
 } else {
-DHPBEH2_I = Double.NaN;
+DHPBEH2_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPBEH2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHPBEH2_IFLAG = new Double(s);
+DHPBEH2_IFLAG = Byte.parseByte(s);
 } else {
-DHPBEH2_IFLAG = Double.NaN;
+DHPBEH2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPEST2(String s) {
 if (!s.trim().isEmpty()) {
-DHPEST2 = new Double(s);
+DHPEST2 = Byte.parseByte(s);
 } else {
-DHPEST2 = Double.NaN;
+DHPEST2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPINS2(String s) {
 if (!s.trim().isEmpty()) {
-DHPINS2 = new Double(s);
+DHPINS2 = Short.parseShort(s);
 } else {
-DHPINS2 = Double.NaN;
+DHPINS2 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDHPINS2_I(String s) {
 if (!s.trim().isEmpty()) {
-DHPINS2_I = new Double(s);
+DHPINS2_I = Short.parseShort(s);
 } else {
-DHPINS2_I = Double.NaN;
+DHPINS2_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDHPINS2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHPINS2_IFLAG = new Double(s);
+DHPINS2_IFLAG = Byte.parseByte(s);
 } else {
-DHPINS2_IFLAG = Double.NaN;
+DHPINS2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPINT2(String s) {
 if (!s.trim().isEmpty()) {
-DHPINT2 = new Double(s);
+DHPINT2 = Byte.parseByte(s);
 } else {
-DHPINT2 = Double.NaN;
+DHPINT2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPNUM(String s) {
 if (!s.trim().isEmpty()) {
-DHPNUM = new Double(s);
+DHPNUM = Byte.parseByte(s);
 } else {
-DHPNUM = Double.NaN;
+DHPNUM = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPNUM_I(String s) {
 if (!s.trim().isEmpty()) {
-DHPNUM_I = new Double(s);
+DHPNUM_I = Byte.parseByte(s);
 } else {
-DHPNUM_I = Double.NaN;
+DHPNUM_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPNUM_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHPNUM_IFLAG = new Double(s);
+DHPNUM_IFLAG = Byte.parseByte(s);
 } else {
-DHPNUM_IFLAG = Double.NaN;
+DHPNUM_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPOFT2(String s) {
 if (!s.trim().isEmpty()) {
-DHPOFT2 = new Double(s);
+DHPOFT2 = Byte.parseByte(s);
 } else {
-DHPOFT2 = Double.NaN;
+DHPOFT2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPOFT2_I(String s) {
 if (!s.trim().isEmpty()) {
-DHPOFT2_I = new Double(s);
+DHPOFT2_I = Byte.parseByte(s);
 } else {
-DHPOFT2_I = Double.NaN;
+DHPOFT2_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPOFT2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHPOFT2_IFLAG = new Double(s);
+DHPOFT2_IFLAG = Byte.parseByte(s);
 } else {
-DHPOFT2_IFLAG = Double.NaN;
+DHPOFT2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPOWE2(String s) {
 if (!s.trim().isEmpty()) {
-DHPOWE2 = new Double(s);
+DHPOWE2 = Short.parseShort(s);
 } else {
-DHPOWE2 = Double.NaN;
+DHPOWE2 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDHPOWE2_I(String s) {
 if (!s.trim().isEmpty()) {
-DHPOWE2_I = new Double(s);
+DHPOWE2_I = Short.parseShort(s);
 } else {
-DHPOWE2_I = Double.NaN;
+DHPOWE2_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDHPOWE2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHPOWE2_IFLAG = new Double(s);
+DHPOWE2_IFLAG = Byte.parseByte(s);
 } else {
-DHPOWE2_IFLAG = Double.NaN;
+DHPOWE2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPWEST2(String s) {
 if (!s.trim().isEmpty()) {
-DHPWEST2 = new Double(s);
+DHPWEST2 = Byte.parseByte(s);
 } else {
-DHPWEST2 = Double.NaN;
+DHPWEST2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPWHNM2(String s) {
 if (!s.trim().isEmpty()) {
-DHPWHNM2 = new Double(s);
+DHPWHNM2 = Byte.parseByte(s);
 } else {
-DHPWHNM2 = Double.NaN;
+DHPWHNM2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPWHNM2_I(String s) {
 if (!s.trim().isEmpty()) {
-DHPWHNM2_I = new Double(s);
+DHPWHNM2_I = Byte.parseByte(s);
 } else {
-DHPWHNM2_I = Double.NaN;
+DHPWHNM2_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPWHNM2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHPWHNM2_IFLAG = new Double(s);
+DHPWHNM2_IFLAG = Byte.parseByte(s);
 } else {
-DHPWHNM2_IFLAG = Double.NaN;
+DHPWHNM2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDHPWHNY2(String s) {
 if (!s.trim().isEmpty()) {
-DHPWHNY2 = new Double(s);
+DHPWHNY2 = Short.parseShort(s);
 } else {
-DHPWHNY2 = Double.NaN;
+DHPWHNY2 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDHPWHNY2_I(String s) {
 if (!s.trim().isEmpty()) {
-DHPWHNY2_I = new Double(s);
+DHPWHNY2_I = Short.parseShort(s);
 } else {
-DHPWHNY2_I = Double.NaN;
+DHPWHNY2_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDHPWHNY2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DHPWHNY2_IFLAG = new Double(s);
+DHPWHNY2_IFLAG = Byte.parseByte(s);
 } else {
-DHPWHNY2_IFLAG = Double.NaN;
+DHPWHNY2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDISEVER(String s) {
 if (!s.trim().isEmpty()) {
-DISEVER = new Double(s);
+DISEVER = Byte.parseByte(s);
 } else {
-DISEVER = Double.NaN;
+DISEVER = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDISTYPE1(String s) {
 if (!s.trim().isEmpty()) {
-DISTYPE1 = new Double(s);
+DISTYPE1 = Byte.parseByte(s);
 } else {
-DISTYPE1 = Double.NaN;
+DISTYPE1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDISTYPE2(String s) {
 if (!s.trim().isEmpty()) {
-DISTYPE2 = new Double(s);
+DISTYPE2 = Byte.parseByte(s);
 } else {
-DISTYPE2 = Double.NaN;
+DISTYPE2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDISTYPE3(String s) {
 if (!s.trim().isEmpty()) {
-DISTYPE3 = new Double(s);
+DISTYPE3 = Byte.parseByte(s);
 } else {
-DISTYPE3 = Double.NaN;
+DISTYPE3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDISTYPE4(String s) {
 if (!s.trim().isEmpty()) {
-DISTYPE4 = new Double(s);
+DISTYPE4 = Byte.parseByte(s);
 } else {
-DISTYPE4 = Double.NaN;
+DISTYPE4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDISTYPE5(String s) {
 if (!s.trim().isEmpty()) {
-DISTYPE5 = new Double(s);
+DISTYPE5 = Byte.parseByte(s);
 } else {
-DISTYPE5 = Double.NaN;
+DISTYPE5 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDISTYPE6(String s) {
 if (!s.trim().isEmpty()) {
-DISTYPE6 = new Double(s);
+DISTYPE6 = Byte.parseByte(s);
 } else {
-DISTYPE6 = Double.NaN;
+DISTYPE6 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDISTYPE7(String s) {
 if (!s.trim().isEmpty()) {
-DISTYPE7 = new Double(s);
+DISTYPE7 = Byte.parseByte(s);
 } else {
-DISTYPE7 = Double.NaN;
+DISTYPE7 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDISTYPE8(String s) {
 if (!s.trim().isEmpty()) {
-DISTYPE8 = new Double(s);
+DISTYPE8 = Byte.parseByte(s);
 } else {
-DISTYPE8 = Double.NaN;
+DISTYPE8 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDISTYPE9(String s) {
 if (!s.trim().isEmpty()) {
-DISTYPE9 = new Double(s);
+DISTYPE9 = Byte.parseByte(s);
 } else {
-DISTYPE9 = Double.NaN;
+DISTYPE9 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLANY(String s) {
 if (!s.trim().isEmpty()) {
-DLANY = new Double(s);
+DLANY = Byte.parseByte(s);
 } else {
-DLANY = Double.NaN;
+DLANY = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLANY_I(String s) {
 if (!s.trim().isEmpty()) {
-DLANY_I = new Double(s);
+DLANY_I = Byte.parseByte(s);
 } else {
-DLANY_I = Double.NaN;
+DLANY_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLANY_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLANY_IFLAG = new Double(s);
+DLANY_IFLAG = Byte.parseByte(s);
 } else {
-DLANY_IFLAG = Double.NaN;
+DLANY_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLBEH2(String s) {
 if (!s.trim().isEmpty()) {
-DLBEH2 = new Double(s);
+DLBEH2 = Byte.parseByte(s);
 } else {
-DLBEH2 = Double.NaN;
+DLBEH2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLBEH2_I(String s) {
 if (!s.trim().isEmpty()) {
-DLBEH2_I = new Double(s);
+DLBEH2_I = Byte.parseByte(s);
 } else {
-DLBEH2_I = Double.NaN;
+DLBEH2_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLBEH2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLBEH2_IFLAG = new Double(s);
+DLBEH2_IFLAG = Byte.parseByte(s);
 } else {
-DLBEH2_IFLAG = Double.NaN;
+DLBEH2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLBEH3(String s) {
 if (!s.trim().isEmpty()) {
-DLBEH3 = new Double(s);
+DLBEH3 = Byte.parseByte(s);
 } else {
-DLBEH3 = Double.NaN;
+DLBEH3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLBEH3_I(String s) {
 if (!s.trim().isEmpty()) {
-DLBEH3_I = new Double(s);
+DLBEH3_I = Byte.parseByte(s);
 } else {
-DLBEH3_I = Double.NaN;
+DLBEH3_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLBEH3_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLBEH3_IFLAG = new Double(s);
+DLBEH3_IFLAG = Byte.parseByte(s);
 } else {
-DLBEH3_IFLAG = Double.NaN;
+DLBEH3_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLBEH4(String s) {
 if (!s.trim().isEmpty()) {
-DLBEH4 = new Double(s);
+DLBEH4 = Byte.parseByte(s);
 } else {
-DLBEH4 = Double.NaN;
+DLBEH4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLBEH4_I(String s) {
 if (!s.trim().isEmpty()) {
-DLBEH4_I = new Double(s);
+DLBEH4_I = Byte.parseByte(s);
 } else {
-DLBEH4_I = Double.NaN;
+DLBEH4_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLBEH4_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLBEH4_IFLAG = new Double(s);
+DLBEH4_IFLAG = Byte.parseByte(s);
 } else {
-DLBEH4_IFLAG = Double.NaN;
+DLBEH4_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLBEH5(String s) {
 if (!s.trim().isEmpty()) {
-DLBEH5 = new Double(s);
+DLBEH5 = Byte.parseByte(s);
 } else {
-DLBEH5 = Double.NaN;
+DLBEH5 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLBEH5_I(String s) {
 if (!s.trim().isEmpty()) {
-DLBEH5_I = new Double(s);
+DLBEH5_I = Byte.parseByte(s);
 } else {
-DLBEH5_I = Double.NaN;
+DLBEH5_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLBEH5_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLBEH5_IFLAG = new Double(s);
+DLBEH5_IFLAG = Byte.parseByte(s);
 } else {
-DLBEH5_IFLAG = Double.NaN;
+DLBEH5_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLEST2(String s) {
 if (!s.trim().isEmpty()) {
-DLEST2 = new Double(s);
+DLEST2 = Byte.parseByte(s);
 } else {
-DLEST2 = Double.NaN;
+DLEST2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLEST3(String s) {
 if (!s.trim().isEmpty()) {
-DLEST3 = new Double(s);
+DLEST3 = Byte.parseByte(s);
 } else {
-DLEST3 = Double.NaN;
+DLEST3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLEST4(String s) {
 if (!s.trim().isEmpty()) {
-DLEST4 = new Double(s);
+DLEST4 = Byte.parseByte(s);
 } else {
-DLEST4 = Double.NaN;
+DLEST4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLINS2(String s) {
 if (!s.trim().isEmpty()) {
-DLINS2 = new Double(s);
+DLINS2 = Short.parseShort(s);
 } else {
-DLINS2 = Double.NaN;
+DLINS2 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDLINS2_I(String s) {
 if (!s.trim().isEmpty()) {
-DLINS2_I = new Double(s);
+DLINS2_I = Double.parseDouble(s);
 } else {
 DLINS2_I = Double.NaN;
 }
@@ -2983,47 +2988,47 @@ DLINS2_I = Double.NaN;
 
 protected final void initDLINS2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLINS2_IFLAG = new Double(s);
+DLINS2_IFLAG = Byte.parseByte(s);
 } else {
-DLINS2_IFLAG = Double.NaN;
+DLINS2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLINS3(String s) {
 if (!s.trim().isEmpty()) {
-DLINS3 = new Double(s);
+DLINS3 = Short.parseShort(s);
 } else {
-DLINS3 = Double.NaN;
+DLINS3 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDLINS3_I(String s) {
 if (!s.trim().isEmpty()) {
-DLINS3_I = new Double(s);
+DLINS3_I = Short.parseShort(s);
 } else {
-DLINS3_I = Double.NaN;
+DLINS3_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDLINS3_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLINS3_IFLAG = new Double(s);
+DLINS3_IFLAG = Byte.parseByte(s);
 } else {
-DLINS3_IFLAG = Double.NaN;
+DLINS3_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLINS4(String s) {
 if (!s.trim().isEmpty()) {
-DLINS4 = new Double(s);
+DLINS4 = Short.parseShort(s);
 } else {
-DLINS4 = Double.NaN;
+DLINS4 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDLINS4_I(String s) {
 if (!s.trim().isEmpty()) {
-DLINS4_I = new Double(s);
+DLINS4_I = Double.parseDouble(s);
 } else {
 DLINS4_I = Double.NaN;
 }
@@ -3031,1095 +3036,1095 @@ DLINS4_I = Double.NaN;
 
 protected final void initDLINS4_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLINS4_IFLAG = new Double(s);
+DLINS4_IFLAG = Byte.parseByte(s);
 } else {
-DLINS4_IFLAG = Double.NaN;
+DLINS4_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLINS5(String s) {
 if (!s.trim().isEmpty()) {
-DLINS5 = new Double(s);
+DLINS5 = Short.parseShort(s);
 } else {
-DLINS5 = Double.NaN;
+DLINS5 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDLINS5_I(String s) {
 if (!s.trim().isEmpty()) {
-DLINS5_I = new Double(s);
+DLINS5_I = Short.parseShort(s);
 } else {
-DLINS5_I = Double.NaN;
+DLINS5_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDLINS5_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLINS5_IFLAG = new Double(s);
+DLINS5_IFLAG = Byte.parseByte(s);
 } else {
-DLINS5_IFLAG = Double.NaN;
+DLINS5_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLINT2(String s) {
 if (!s.trim().isEmpty()) {
-DLINT2 = new Double(s);
+DLINT2 = Byte.parseByte(s);
 } else {
-DLINT2 = Double.NaN;
+DLINT2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLINT3(String s) {
 if (!s.trim().isEmpty()) {
-DLINT3 = new Double(s);
+DLINT3 = Byte.parseByte(s);
 } else {
-DLINT3 = Double.NaN;
+DLINT3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLINT4(String s) {
 if (!s.trim().isEmpty()) {
-DLINT4 = new Double(s);
+DLINT4 = Byte.parseByte(s);
 } else {
-DLINT4 = Double.NaN;
+DLINT4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLINT5(String s) {
 if (!s.trim().isEmpty()) {
-DLINT5 = new Double(s);
+DLINT5 = Byte.parseByte(s);
 } else {
-DLINT5 = Double.NaN;
+DLINT5 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLNUM(String s) {
 if (!s.trim().isEmpty()) {
-DLNUM = new Double(s);
+DLNUM = Byte.parseByte(s);
 } else {
-DLNUM = Double.NaN;
+DLNUM = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLNUM_I(String s) {
 if (!s.trim().isEmpty()) {
-DLNUM_I = new Double(s);
+DLNUM_I = Byte.parseByte(s);
 } else {
-DLNUM_I = Double.NaN;
+DLNUM_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLNUM_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLNUM_IFLAG = new Double(s);
+DLNUM_IFLAG = Byte.parseByte(s);
 } else {
-DLNUM_IFLAG = Double.NaN;
+DLNUM_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLOFT2(String s) {
 if (!s.trim().isEmpty()) {
-DLOFT2 = new Double(s);
+DLOFT2 = Byte.parseByte(s);
 } else {
-DLOFT2 = Double.NaN;
+DLOFT2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLOFT2_I(String s) {
 if (!s.trim().isEmpty()) {
-DLOFT2_I = new Double(s);
+DLOFT2_I = Byte.parseByte(s);
 } else {
-DLOFT2_I = Double.NaN;
+DLOFT2_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLOFT2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLOFT2_IFLAG = new Double(s);
+DLOFT2_IFLAG = Byte.parseByte(s);
 } else {
-DLOFT2_IFLAG = Double.NaN;
+DLOFT2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLOFT3(String s) {
 if (!s.trim().isEmpty()) {
-DLOFT3 = new Double(s);
+DLOFT3 = Byte.parseByte(s);
 } else {
-DLOFT3 = Double.NaN;
+DLOFT3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLOFT3_I(String s) {
 if (!s.trim().isEmpty()) {
-DLOFT3_I = new Double(s);
+DLOFT3_I = Byte.parseByte(s);
 } else {
-DLOFT3_I = Double.NaN;
+DLOFT3_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLOFT3_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLOFT3_IFLAG = new Double(s);
+DLOFT3_IFLAG = Byte.parseByte(s);
 } else {
-DLOFT3_IFLAG = Double.NaN;
+DLOFT3_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLOFT4(String s) {
 if (!s.trim().isEmpty()) {
-DLOFT4 = new Double(s);
+DLOFT4 = Byte.parseByte(s);
 } else {
-DLOFT4 = Double.NaN;
+DLOFT4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLOFT4_I(String s) {
 if (!s.trim().isEmpty()) {
-DLOFT4_I = new Double(s);
+DLOFT4_I = Byte.parseByte(s);
 } else {
-DLOFT4_I = Double.NaN;
+DLOFT4_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLOFT4_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLOFT4_IFLAG = new Double(s);
+DLOFT4_IFLAG = Byte.parseByte(s);
 } else {
-DLOFT4_IFLAG = Double.NaN;
+DLOFT4_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLOFT5(String s) {
 if (!s.trim().isEmpty()) {
-DLOFT5 = new Double(s);
+DLOFT5 = Byte.parseByte(s);
 } else {
-DLOFT5 = Double.NaN;
+DLOFT5 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLOFT5_I(String s) {
 if (!s.trim().isEmpty()) {
-DLOFT5_I = new Double(s);
+DLOFT5_I = Byte.parseByte(s);
 } else {
-DLOFT5_I = Double.NaN;
+DLOFT5_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLOFT5_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLOFT5_IFLAG = new Double(s);
+DLOFT5_IFLAG = Byte.parseByte(s);
 } else {
-DLOFT5_IFLAG = Double.NaN;
+DLOFT5_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLOWE2(String s) {
 if (!s.trim().isEmpty()) {
-DLOWE2 = new Double(s);
+DLOWE2 = Integer.parseInt(s);
 } else {
-DLOWE2 = Double.NaN;
+DLOWE2 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDLOWE2_I(String s) {
 if (!s.trim().isEmpty()) {
-DLOWE2_I = new Double(s);
+DLOWE2_I = Integer.parseInt(s);
 } else {
-DLOWE2_I = Double.NaN;
+DLOWE2_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDLOWE2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLOWE2_IFLAG = new Double(s);
+DLOWE2_IFLAG = Byte.parseByte(s);
 } else {
-DLOWE2_IFLAG = Double.NaN;
+DLOWE2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLOWE3(String s) {
 if (!s.trim().isEmpty()) {
-DLOWE3 = new Double(s);
+DLOWE3 = Short.parseShort(s);
 } else {
-DLOWE3 = Double.NaN;
+DLOWE3 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDLOWE3_I(String s) {
 if (!s.trim().isEmpty()) {
-DLOWE3_I = new Double(s);
+DLOWE3_I = Short.parseShort(s);
 } else {
-DLOWE3_I = Double.NaN;
+DLOWE3_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDLOWE3_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLOWE3_IFLAG = new Double(s);
+DLOWE3_IFLAG = Byte.parseByte(s);
 } else {
-DLOWE3_IFLAG = Double.NaN;
+DLOWE3_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLOWE4(String s) {
 if (!s.trim().isEmpty()) {
-DLOWE4 = new Double(s);
+DLOWE4 = Short.parseShort(s);
 } else {
-DLOWE4 = Double.NaN;
+DLOWE4 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDLOWE4_I(String s) {
 if (!s.trim().isEmpty()) {
-DLOWE4_I = new Double(s);
+DLOWE4_I = Short.parseShort(s);
 } else {
-DLOWE4_I = Double.NaN;
+DLOWE4_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDLOWE4_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLOWE4_IFLAG = new Double(s);
+DLOWE4_IFLAG = Byte.parseByte(s);
 } else {
-DLOWE4_IFLAG = Double.NaN;
+DLOWE4_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLOWE5(String s) {
 if (!s.trim().isEmpty()) {
-DLOWE5 = new Double(s);
+DLOWE5 = Short.parseShort(s);
 } else {
-DLOWE5 = Double.NaN;
+DLOWE5 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDLOWE5_I(String s) {
 if (!s.trim().isEmpty()) {
-DLOWE5_I = new Double(s);
+DLOWE5_I = Short.parseShort(s);
 } else {
-DLOWE5_I = Double.NaN;
+DLOWE5_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDLOWE5_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLOWE5_IFLAG = new Double(s);
+DLOWE5_IFLAG = Byte.parseByte(s);
 } else {
-DLOWE5_IFLAG = Double.NaN;
+DLOWE5_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLSEC2(String s) {
 if (!s.trim().isEmpty()) {
-DLSEC2 = new Double(s);
+DLSEC2 = Byte.parseByte(s);
 } else {
-DLSEC2 = Double.NaN;
+DLSEC2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLSEC3(String s) {
 if (!s.trim().isEmpty()) {
-DLSEC3 = new Double(s);
+DLSEC3 = Byte.parseByte(s);
 } else {
-DLSEC3 = Double.NaN;
+DLSEC3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLSEC4(String s) {
 if (!s.trim().isEmpty()) {
-DLSEC4 = new Double(s);
+DLSEC4 = Byte.parseByte(s);
 } else {
-DLSEC4 = Double.NaN;
+DLSEC4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLSEC5(String s) {
 if (!s.trim().isEmpty()) {
-DLSEC5 = new Double(s);
+DLSEC5 = Byte.parseByte(s);
 } else {
-DLSEC5 = Double.NaN;
+DLSEC5 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLTYPE2(String s) {
 if (!s.trim().isEmpty()) {
-DLTYPE2 = new Double(s);
+DLTYPE2 = Byte.parseByte(s);
 } else {
-DLTYPE2 = Double.NaN;
+DLTYPE2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLTYPE2_I(String s) {
 if (!s.trim().isEmpty()) {
-DLTYPE2_I = new Double(s);
+DLTYPE2_I = Byte.parseByte(s);
 } else {
-DLTYPE2_I = Double.NaN;
+DLTYPE2_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLTYPE2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLTYPE2_IFLAG = new Double(s);
+DLTYPE2_IFLAG = Byte.parseByte(s);
 } else {
-DLTYPE2_IFLAG = Double.NaN;
+DLTYPE2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLTYPE3(String s) {
 if (!s.trim().isEmpty()) {
-DLTYPE3 = new Double(s);
+DLTYPE3 = Byte.parseByte(s);
 } else {
-DLTYPE3 = Double.NaN;
+DLTYPE3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLTYPE3_I(String s) {
 if (!s.trim().isEmpty()) {
-DLTYPE3_I = new Double(s);
+DLTYPE3_I = Byte.parseByte(s);
 } else {
-DLTYPE3_I = Double.NaN;
+DLTYPE3_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLTYPE3_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLTYPE3_IFLAG = new Double(s);
+DLTYPE3_IFLAG = Byte.parseByte(s);
 } else {
-DLTYPE3_IFLAG = Double.NaN;
+DLTYPE3_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLTYPE4(String s) {
 if (!s.trim().isEmpty()) {
-DLTYPE4 = new Double(s);
+DLTYPE4 = Byte.parseByte(s);
 } else {
-DLTYPE4 = Double.NaN;
+DLTYPE4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLTYPE4_I(String s) {
 if (!s.trim().isEmpty()) {
-DLTYPE4_I = new Double(s);
+DLTYPE4_I = Byte.parseByte(s);
 } else {
-DLTYPE4_I = Double.NaN;
+DLTYPE4_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLTYPE4_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLTYPE4_IFLAG = new Double(s);
+DLTYPE4_IFLAG = Byte.parseByte(s);
 } else {
-DLTYPE4_IFLAG = Double.NaN;
+DLTYPE4_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLTYPE5(String s) {
 if (!s.trim().isEmpty()) {
-DLTYPE5 = new Double(s);
+DLTYPE5 = Byte.parseByte(s);
 } else {
-DLTYPE5 = Double.NaN;
+DLTYPE5 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLTYPE5_I(String s) {
 if (!s.trim().isEmpty()) {
-DLTYPE5_I = new Double(s);
+DLTYPE5_I = Byte.parseByte(s);
 } else {
-DLTYPE5_I = Double.NaN;
+DLTYPE5_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLTYPE5_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLTYPE5_IFLAG = new Double(s);
+DLTYPE5_IFLAG = Byte.parseByte(s);
 } else {
-DLTYPE5_IFLAG = Double.NaN;
+DLTYPE5_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWEST2(String s) {
 if (!s.trim().isEmpty()) {
-DLWEST2 = new Double(s);
+DLWEST2 = Byte.parseByte(s);
 } else {
-DLWEST2 = Double.NaN;
+DLWEST2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWEST3(String s) {
 if (!s.trim().isEmpty()) {
-DLWEST3 = new Double(s);
+DLWEST3 = Byte.parseByte(s);
 } else {
-DLWEST3 = Double.NaN;
+DLWEST3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWEST4(String s) {
 if (!s.trim().isEmpty()) {
-DLWEST4 = new Double(s);
+DLWEST4 = Byte.parseByte(s);
 } else {
-DLWEST4 = Double.NaN;
+DLWEST4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWEST5(String s) {
 if (!s.trim().isEmpty()) {
-DLWEST5 = new Double(s);
+DLWEST5 = Byte.parseByte(s);
 } else {
-DLWEST5 = Double.NaN;
+DLWEST5 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHNM2(String s) {
 if (!s.trim().isEmpty()) {
-DLWHNM2 = new Double(s);
+DLWHNM2 = Short.parseShort(s);
 } else {
-DLWHNM2 = Double.NaN;
+DLWHNM2 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDLWHNM2_I(String s) {
 if (!s.trim().isEmpty()) {
-DLWHNM2_I = new Double(s);
+DLWHNM2_I = Short.parseShort(s);
 } else {
-DLWHNM2_I = Double.NaN;
+DLWHNM2_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDLWHNM2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLWHNM2_IFLAG = new Double(s);
+DLWHNM2_IFLAG = Byte.parseByte(s);
 } else {
-DLWHNM2_IFLAG = Double.NaN;
+DLWHNM2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHNM3(String s) {
 if (!s.trim().isEmpty()) {
-DLWHNM3 = new Double(s);
+DLWHNM3 = Short.parseShort(s);
 } else {
-DLWHNM3 = Double.NaN;
+DLWHNM3 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDLWHNM3_I(String s) {
 if (!s.trim().isEmpty()) {
-DLWHNM3_I = new Double(s);
+DLWHNM3_I = Short.parseShort(s);
 } else {
-DLWHNM3_I = Double.NaN;
+DLWHNM3_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDLWHNM3_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLWHNM3_IFLAG = new Double(s);
+DLWHNM3_IFLAG = Byte.parseByte(s);
 } else {
-DLWHNM3_IFLAG = Double.NaN;
+DLWHNM3_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHNM4(String s) {
 if (!s.trim().isEmpty()) {
-DLWHNM4 = new Double(s);
+DLWHNM4 = Byte.parseByte(s);
 } else {
-DLWHNM4 = Double.NaN;
+DLWHNM4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHNM4_I(String s) {
 if (!s.trim().isEmpty()) {
-DLWHNM4_I = new Double(s);
+DLWHNM4_I = Byte.parseByte(s);
 } else {
-DLWHNM4_I = Double.NaN;
+DLWHNM4_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHNM4_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLWHNM4_IFLAG = new Double(s);
+DLWHNM4_IFLAG = Byte.parseByte(s);
 } else {
-DLWHNM4_IFLAG = Double.NaN;
+DLWHNM4_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHNM5(String s) {
 if (!s.trim().isEmpty()) {
-DLWHNM5 = new Double(s);
+DLWHNM5 = Byte.parseByte(s);
 } else {
-DLWHNM5 = Double.NaN;
+DLWHNM5 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHNM5_I(String s) {
 if (!s.trim().isEmpty()) {
-DLWHNM5_I = new Double(s);
+DLWHNM5_I = Byte.parseByte(s);
 } else {
-DLWHNM5_I = Double.NaN;
+DLWHNM5_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHNM5_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLWHNM5_IFLAG = new Double(s);
+DLWHNM5_IFLAG = Byte.parseByte(s);
 } else {
-DLWHNM5_IFLAG = Double.NaN;
+DLWHNM5_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHNY2(String s) {
 if (!s.trim().isEmpty()) {
-DLWHNY2 = new Double(s);
+DLWHNY2 = Short.parseShort(s);
 } else {
-DLWHNY2 = Double.NaN;
+DLWHNY2 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDLWHNY2_I(String s) {
 if (!s.trim().isEmpty()) {
-DLWHNY2_I = new Double(s);
+DLWHNY2_I = Short.parseShort(s);
 } else {
-DLWHNY2_I = Double.NaN;
+DLWHNY2_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDLWHNY2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLWHNY2_IFLAG = new Double(s);
+DLWHNY2_IFLAG = Byte.parseByte(s);
 } else {
-DLWHNY2_IFLAG = Double.NaN;
+DLWHNY2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHNY3(String s) {
 if (!s.trim().isEmpty()) {
-DLWHNY3 = new Double(s);
+DLWHNY3 = Short.parseShort(s);
 } else {
-DLWHNY3 = Double.NaN;
+DLWHNY3 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDLWHNY3_I(String s) {
 if (!s.trim().isEmpty()) {
-DLWHNY3_I = new Double(s);
+DLWHNY3_I = Short.parseShort(s);
 } else {
-DLWHNY3_I = Double.NaN;
+DLWHNY3_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDLWHNY3_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLWHNY3_IFLAG = new Double(s);
+DLWHNY3_IFLAG = Byte.parseByte(s);
 } else {
-DLWHNY3_IFLAG = Double.NaN;
+DLWHNY3_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHNY4(String s) {
 if (!s.trim().isEmpty()) {
-DLWHNY4 = new Double(s);
+DLWHNY4 = Short.parseShort(s);
 } else {
-DLWHNY4 = Double.NaN;
+DLWHNY4 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDLWHNY4_I(String s) {
 if (!s.trim().isEmpty()) {
-DLWHNY4_I = new Double(s);
+DLWHNY4_I = Short.parseShort(s);
 } else {
-DLWHNY4_I = Double.NaN;
+DLWHNY4_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDLWHNY4_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLWHNY4_IFLAG = new Double(s);
+DLWHNY4_IFLAG = Byte.parseByte(s);
 } else {
-DLWHNY4_IFLAG = Double.NaN;
+DLWHNY4_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHNY5(String s) {
 if (!s.trim().isEmpty()) {
-DLWHNY5 = new Double(s);
+DLWHNY5 = Short.parseShort(s);
 } else {
-DLWHNY5 = Double.NaN;
+DLWHNY5 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDLWHNY5_I(String s) {
 if (!s.trim().isEmpty()) {
-DLWHNY5_I = new Double(s);
+DLWHNY5_I = Short.parseShort(s);
 } else {
-DLWHNY5_I = Double.NaN;
+DLWHNY5_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDLWHNY5_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DLWHNY5_IFLAG = new Double(s);
+DLWHNY5_IFLAG = Byte.parseByte(s);
 } else {
-DLWHNY5_IFLAG = Double.NaN;
+DLWHNY5_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHY1(String s) {
 if (!s.trim().isEmpty()) {
-DLWHY1 = new Double(s);
+DLWHY1 = Byte.parseByte(s);
 } else {
-DLWHY1 = Double.NaN;
+DLWHY1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHY10(String s) {
 if (!s.trim().isEmpty()) {
-DLWHY10 = new Double(s);
+DLWHY10 = Byte.parseByte(s);
 } else {
-DLWHY10 = Double.NaN;
+DLWHY10 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHY15(String s) {
 if (!s.trim().isEmpty()) {
-DLWHY15 = new Double(s);
+DLWHY15 = Byte.parseByte(s);
 } else {
-DLWHY15 = Double.NaN;
+DLWHY15 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHY16(String s) {
 if (!s.trim().isEmpty()) {
-DLWHY16 = new Double(s);
+DLWHY16 = Byte.parseByte(s);
 } else {
-DLWHY16 = Double.NaN;
+DLWHY16 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHY2(String s) {
 if (!s.trim().isEmpty()) {
-DLWHY2 = new Double(s);
+DLWHY2 = Byte.parseByte(s);
 } else {
-DLWHY2 = Double.NaN;
+DLWHY2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHY22(String s) {
 if (!s.trim().isEmpty()) {
-DLWHY22 = new Double(s);
+DLWHY22 = Byte.parseByte(s);
 } else {
-DLWHY22 = Double.NaN;
+DLWHY22 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHY23(String s) {
 if (!s.trim().isEmpty()) {
-DLWHY23 = new Double(s);
+DLWHY23 = Byte.parseByte(s);
 } else {
-DLWHY23 = Double.NaN;
+DLWHY23 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHY29(String s) {
 if (!s.trim().isEmpty()) {
-DLWHY29 = new Double(s);
+DLWHY29 = Byte.parseByte(s);
 } else {
-DLWHY29 = Double.NaN;
+DLWHY29 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHY3(String s) {
 if (!s.trim().isEmpty()) {
-DLWHY3 = new Double(s);
+DLWHY3 = Byte.parseByte(s);
 } else {
-DLWHY3 = Double.NaN;
+DLWHY3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHY4(String s) {
 if (!s.trim().isEmpty()) {
-DLWHY4 = new Double(s);
+DLWHY4 = Byte.parseByte(s);
 } else {
-DLWHY4 = Double.NaN;
+DLWHY4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHY5(String s) {
 if (!s.trim().isEmpty()) {
-DLWHY5 = new Double(s);
+DLWHY5 = Byte.parseByte(s);
 } else {
-DLWHY5 = Double.NaN;
+DLWHY5 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHY8(String s) {
 if (!s.trim().isEmpty()) {
-DLWHY8 = new Double(s);
+DLWHY8 = Byte.parseByte(s);
 } else {
-DLWHY8 = Double.NaN;
+DLWHY8 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDLWHY9(String s) {
 if (!s.trim().isEmpty()) {
-DLWHY9 = new Double(s);
+DLWHY9 = Byte.parseByte(s);
 } else {
-DLWHY9 = Double.NaN;
+DLWHY9 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDMOANY(String s) {
 if (!s.trim().isEmpty()) {
-DMOANY = new Double(s);
+DMOANY = Byte.parseByte(s);
 } else {
-DMOANY = Double.NaN;
+DMOANY = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDMOANY_I(String s) {
 if (!s.trim().isEmpty()) {
-DMOANY_I = new Double(s);
+DMOANY_I = Byte.parseByte(s);
 } else {
-DMOANY_I = Double.NaN;
+DMOANY_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDMOANY_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DMOANY_IFLAG = new Double(s);
+DMOANY_IFLAG = Byte.parseByte(s);
 } else {
-DMOANY_IFLAG = Double.NaN;
+DMOANY_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDMOBEH2(String s) {
 if (!s.trim().isEmpty()) {
-DMOBEH2 = new Double(s);
+DMOBEH2 = Byte.parseByte(s);
 } else {
-DMOBEH2 = Double.NaN;
+DMOBEH2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDMOBEH2_I(String s) {
 if (!s.trim().isEmpty()) {
-DMOBEH2_I = new Double(s);
+DMOBEH2_I = Byte.parseByte(s);
 } else {
-DMOBEH2_I = Double.NaN;
+DMOBEH2_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDMOBEH2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DMOBEH2_IFLAG = new Double(s);
+DMOBEH2_IFLAG = Byte.parseByte(s);
 } else {
-DMOBEH2_IFLAG = Double.NaN;
+DMOBEH2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDMOEST2(String s) {
 if (!s.trim().isEmpty()) {
-DMOEST2 = new Double(s);
+DMOEST2 = Byte.parseByte(s);
 } else {
-DMOEST2 = Double.NaN;
+DMOEST2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDMOINS2(String s) {
 if (!s.trim().isEmpty()) {
-DMOINS2 = new Double(s);
+DMOINS2 = Short.parseShort(s);
 } else {
-DMOINS2 = Double.NaN;
+DMOINS2 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDMOINS2_I(String s) {
 if (!s.trim().isEmpty()) {
-DMOINS2_I = new Double(s);
+DMOINS2_I = Short.parseShort(s);
 } else {
-DMOINS2_I = Double.NaN;
+DMOINS2_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDMOINS2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DMOINS2_IFLAG = new Double(s);
+DMOINS2_IFLAG = Byte.parseByte(s);
 } else {
-DMOINS2_IFLAG = Double.NaN;
+DMOINS2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDMOINT2(String s) {
 if (!s.trim().isEmpty()) {
-DMOINT2 = new Double(s);
+DMOINT2 = Byte.parseByte(s);
 } else {
-DMOINT2 = Double.NaN;
+DMOINT2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDMONUM(String s) {
 if (!s.trim().isEmpty()) {
-DMONUM = new Double(s);
+DMONUM = Byte.parseByte(s);
 } else {
-DMONUM = Double.NaN;
+DMONUM = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDMONUM_I(String s) {
 if (!s.trim().isEmpty()) {
-DMONUM_I = new Double(s);
+DMONUM_I = Byte.parseByte(s);
 } else {
-DMONUM_I = Double.NaN;
+DMONUM_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDMONUM_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DMONUM_IFLAG = new Double(s);
+DMONUM_IFLAG = Byte.parseByte(s);
 } else {
-DMONUM_IFLAG = Double.NaN;
+DMONUM_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDMOOFT2(String s) {
 if (!s.trim().isEmpty()) {
-DMOOFT2 = new Double(s);
+DMOOFT2 = Byte.parseByte(s);
 } else {
-DMOOFT2 = Double.NaN;
+DMOOFT2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDMOOFT2_I(String s) {
 if (!s.trim().isEmpty()) {
-DMOOFT2_I = new Double(s);
+DMOOFT2_I = Byte.parseByte(s);
 } else {
-DMOOFT2_I = Double.NaN;
+DMOOFT2_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDMOOFT2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DMOOFT2_IFLAG = new Double(s);
+DMOOFT2_IFLAG = Byte.parseByte(s);
 } else {
-DMOOFT2_IFLAG = Double.NaN;
+DMOOFT2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDMOOWE2(String s) {
 if (!s.trim().isEmpty()) {
-DMOOWE2 = new Double(s);
+DMOOWE2 = Short.parseShort(s);
 } else {
-DMOOWE2 = Double.NaN;
+DMOOWE2 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDMOOWE2_I(String s) {
 if (!s.trim().isEmpty()) {
-DMOOWE2_I = new Double(s);
+DMOOWE2_I = Short.parseShort(s);
 } else {
-DMOOWE2_I = Double.NaN;
+DMOOWE2_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDMOOWE2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DMOOWE2_IFLAG = new Double(s);
+DMOOWE2_IFLAG = Byte.parseByte(s);
 } else {
-DMOOWE2_IFLAG = Double.NaN;
+DMOOWE2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDMOWEST2(String s) {
 if (!s.trim().isEmpty()) {
-DMOWEST2 = new Double(s);
+DMOWEST2 = Byte.parseByte(s);
 } else {
-DMOWEST2 = Double.NaN;
+DMOWEST2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDMOWHNM2(String s) {
 if (!s.trim().isEmpty()) {
-DMOWHNM2 = new Double(s);
+DMOWHNM2 = Byte.parseByte(s);
 } else {
-DMOWHNM2 = Double.NaN;
+DMOWHNM2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDMOWHNM2_I(String s) {
 if (!s.trim().isEmpty()) {
-DMOWHNM2_I = new Double(s);
+DMOWHNM2_I = Byte.parseByte(s);
 } else {
-DMOWHNM2_I = Double.NaN;
+DMOWHNM2_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDMOWHNM2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DMOWHNM2_IFLAG = new Double(s);
+DMOWHNM2_IFLAG = Byte.parseByte(s);
 } else {
-DMOWHNM2_IFLAG = Double.NaN;
+DMOWHNM2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDMOWHNY2(String s) {
 if (!s.trim().isEmpty()) {
-DMOWHNY2 = new Double(s);
+DMOWHNY2 = Short.parseShort(s);
 } else {
-DMOWHNY2 = Double.NaN;
+DMOWHNY2 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDMOWHNY2_I(String s) {
 if (!s.trim().isEmpty()) {
-DMOWHNY2_I = new Double(s);
+DMOWHNY2_I = Short.parseShort(s);
 } else {
-DMOWHNY2_I = Double.NaN;
+DMOWHNY2_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDMOWHNY2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DMOWHNY2_IFLAG = new Double(s);
+DMOWHNY2_IFLAG = Byte.parseByte(s);
 } else {
-DMOWHNY2_IFLAG = Double.NaN;
+DMOWHNY2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSAMC2(String s) {
 if (!s.trim().isEmpty()) {
-DSAMC2 = new Double(s);
+DSAMC2 = Short.parseShort(s);
 } else {
-DSAMC2 = Double.NaN;
+DSAMC2 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDSAMC3(String s) {
 if (!s.trim().isEmpty()) {
-DSAMC3 = new Double(s);
+DSAMC3 = Short.parseShort(s);
 } else {
-DSAMC3 = Double.NaN;
+DSAMC3 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDSAMD2(String s) {
 if (!s.trim().isEmpty()) {
-DSAMD2 = new Double(s);
+DSAMD2 = Short.parseShort(s);
 } else {
-DSAMD2 = Double.NaN;
+DSAMD2 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDSAMD3(String s) {
 if (!s.trim().isEmpty()) {
-DSAMD3 = new Double(s);
+DSAMD3 = Short.parseShort(s);
 } else {
-DSAMD3 = Double.NaN;
+DSAMD3 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDSAMP2(String s) {
 if (!s.trim().isEmpty()) {
-DSAMP2 = new Double(s);
+DSAMP2 = Short.parseShort(s);
 } else {
-DSAMP2 = Double.NaN;
+DSAMP2 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDSAMP3(String s) {
 if (!s.trim().isEmpty()) {
-DSAMP3 = new Double(s);
+DSAMP3 = Short.parseShort(s);
 } else {
-DSAMP3 = Double.NaN;
+DSAMP3 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDSANU1(String s) {
 if (!s.trim().isEmpty()) {
-DSANU1 = new Double(s);
+DSANU1 = Byte.parseByte(s);
 } else {
-DSANU1 = Double.NaN;
+DSANU1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSANU2(String s) {
 if (!s.trim().isEmpty()) {
-DSANU2 = new Double(s);
+DSANU2 = Byte.parseByte(s);
 } else {
-DSANU2 = Double.NaN;
+DSANU2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSANY1(String s) {
 if (!s.trim().isEmpty()) {
-DSANY1 = new Double(s);
+DSANY1 = Byte.parseByte(s);
 } else {
-DSANY1 = Double.NaN;
+DSANY1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSANY2(String s) {
 if (!s.trim().isEmpty()) {
-DSANY2 = new Double(s);
+DSANY2 = Byte.parseByte(s);
 } else {
-DSANY2 = Double.NaN;
+DSANY2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSCOS2(String s) {
 if (!s.trim().isEmpty()) {
-DSCOS2 = new Double(s);
+DSCOS2 = Byte.parseByte(s);
 } else {
-DSCOS2 = Double.NaN;
+DSCOS2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSCOS3(String s) {
 if (!s.trim().isEmpty()) {
-DSCOS3 = new Double(s);
+DSCOS3 = Byte.parseByte(s);
 } else {
-DSCOS3 = Double.NaN;
+DSCOS3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSCSP2(String s) {
 if (!s.trim().isEmpty()) {
-DSCSP2 = new Double(s);
+DSCSP2 = Byte.parseByte(s);
 } else {
-DSCSP2 = Double.NaN;
+DSCSP2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSCSP3(String s) {
 if (!s.trim().isEmpty()) {
-DSCSP3 = new Double(s);
+DSCSP3 = Byte.parseByte(s);
 } else {
-DSCSP3 = Double.NaN;
+DSCSP3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSESB2(String s) {
 if (!s.trim().isEmpty()) {
-DSESB2 = new Double(s);
+DSESB2 = Byte.parseByte(s);
 } else {
-DSESB2 = Double.NaN;
+DSESB2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSESB3(String s) {
 if (!s.trim().isEmpty()) {
-DSESB3 = new Double(s);
+DSESB3 = Byte.parseByte(s);
 } else {
-DSESB3 = Double.NaN;
+DSESB3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSLAMT2(String s) {
 if (!s.trim().isEmpty()) {
-DSLAMT2 = new Double(s);
+DSLAMT2 = Integer.parseInt(s);
 } else {
-DSLAMT2 = Double.NaN;
+DSLAMT2 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDSLAMT2_I(String s) {
 if (!s.trim().isEmpty()) {
-DSLAMT2_I = new Double(s);
+DSLAMT2_I = Double.parseDouble(s);
 } else {
 DSLAMT2_I = Double.NaN;
 }
@@ -4127,233 +4132,239 @@ DSLAMT2_I = Double.NaN;
 
 protected final void initDSLAMT2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DSLAMT2_IFLAG = new Double(s);
+DSLAMT2_IFLAG = Byte.parseByte(s);
 } else {
-DSLAMT2_IFLAG = Double.NaN;
+DSLAMT2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSLAMT3(String s) {
 if (!s.trim().isEmpty()) {
-DSLAMT3 = new Double(s);
+DSLAMT3 = Short.parseShort(s);
 } else {
-DSLAMT3 = Double.NaN;
+DSLAMT3 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDSLAMT3_I(String s) {
 if (!s.trim().isEmpty()) {
-DSLAMT3_I = new Double(s);
+DSLAMT3_I = Short.parseShort(s);
 } else {
-DSLAMT3_I = Double.NaN;
+DSLAMT3_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDSLAMT3_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DSLAMT3_IFLAG = new Double(s);
+DSLAMT3_IFLAG = Byte.parseByte(s);
 } else {
-DSLAMT3_IFLAG = Double.NaN;
+DSLAMT3_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSLAMT4(String s) {
 if (!s.trim().isEmpty()) {
-DSLAMT4 = new Double(s);
+DSLAMT4 = Short.parseShort(s);
 } else {
-DSLAMT4 = Double.NaN;
+DSLAMT4 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDSLAMT4_I(String s) {
 if (!s.trim().isEmpty()) {
-DSLAMT4_I = new Double(s);
+DSLAMT4_I = Short.parseShort(s);
 } else {
-DSLAMT4_I = Double.NaN;
+DSLAMT4_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDSLAMT4_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DSLAMT4_IFLAG = new Double(s);
+DSLAMT4_IFLAG = Byte.parseByte(s);
 } else {
-DSLAMT4_IFLAG = Double.NaN;
+DSLAMT4_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSLAMT5(String s) {
 if (!s.trim().isEmpty()) {
-DSLAMT5 = new Double(s);
+DSLAMT5 = Short.parseShort(s);
 } else {
-DSLAMT5 = Double.NaN;
+DSLAMT5 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDSLAMT5_I(String s) {
 if (!s.trim().isEmpty()) {
-DSLAMT5_I = new Double(s);
+DSLAMT5_I = Short.parseShort(s);
 } else {
-DSLAMT5_I = Double.NaN;
+DSLAMT5_I = Short.MIN_VALUE;
 }
 }
 
 protected final void initDSLAMT5_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-DSLAMT5_IFLAG = new Double(s);
+DSLAMT5_IFLAG = Byte.parseByte(s);
 } else {
-DSLAMT5_IFLAG = Double.NaN;
+DSLAMT5_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSLEST2(String s) {
 if (!s.trim().isEmpty()) {
-DSLEST2 = new Double(s);
+DSLEST2 = Byte.parseByte(s);
 } else {
-DSLEST2 = Double.NaN;
+DSLEST2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSLEST3(String s) {
 if (!s.trim().isEmpty()) {
-DSLEST3 = new Double(s);
+DSLEST3 = Byte.parseByte(s);
 } else {
-DSLEST3 = Double.NaN;
+DSLEST3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSLEST4(String s) {
 if (!s.trim().isEmpty()) {
-DSLEST4 = new Double(s);
+DSLEST4 = Byte.parseByte(s);
 } else {
-DSLEST4 = Double.NaN;
+DSLEST4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSLEST5(String s) {
 if (!s.trim().isEmpty()) {
-DSLEST5 = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == -7) {
+DSLEST5 = false;
 } else {
-DSLEST5 = Double.NaN;
+DSLEST5 = true;
+}
 }
 }
 
 protected final void initDSLPAY2(String s) {
 if (!s.trim().isEmpty()) {
-DSLPAY2 = new Double(s);
+DSLPAY2 = Byte.parseByte(s);
 } else {
-DSLPAY2 = Double.NaN;
+DSLPAY2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSLPAY3(String s) {
 if (!s.trim().isEmpty()) {
-DSLPAY3 = new Double(s);
+DSLPAY3 = Byte.parseByte(s);
 } else {
-DSLPAY3 = Double.NaN;
+DSLPAY3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSLPAY4(String s) {
 if (!s.trim().isEmpty()) {
-DSLPAY4 = new Double(s);
+DSLPAY4 = Byte.parseByte(s);
 } else {
-DSLPAY4 = Double.NaN;
+DSLPAY4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSLPAY5(String s) {
 if (!s.trim().isEmpty()) {
-DSLPAY5 = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == -7) {
+DSLPAY5 = false;
 } else {
-DSLPAY5 = Double.NaN;
+DSLPAY5 = true;
+}
 }
 }
 
 protected final void initDSNAM2(String s) {
 if (!s.trim().isEmpty()) {
-DSNAM2 = new Double(s);
+DSNAM2 = Byte.parseByte(s);
 } else {
-DSNAM2 = Double.NaN;
+DSNAM2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSNAM3(String s) {
 if (!s.trim().isEmpty()) {
-DSNAM3 = new Double(s);
+DSNAM3 = Byte.parseByte(s);
 } else {
-DSNAM3 = Double.NaN;
+DSNAM3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSONM1(String s) {
 if (!s.trim().isEmpty()) {
-DSONM1 = new Double(s);
+DSONM1 = Byte.parseByte(s);
 } else {
-DSONM1 = Double.NaN;
+DSONM1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSONM2(String s) {
 if (!s.trim().isEmpty()) {
-DSONM2 = new Double(s);
+DSONM2 = Byte.parseByte(s);
 } else {
-DSONM2 = Double.NaN;
+DSONM2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSONM3(String s) {
 if (!s.trim().isEmpty()) {
-DSONM3 = new Double(s);
+DSONM3 = Byte.parseByte(s);
 } else {
-DSONM3 = Double.NaN;
+DSONM3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSONM4(String s) {
 if (!s.trim().isEmpty()) {
-DSONM4 = new Double(s);
+DSONM4 = Byte.parseByte(s);
 } else {
-DSONM4 = Double.NaN;
+DSONM4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSONM5(String s) {
 if (!s.trim().isEmpty()) {
-DSONM5 = new Double(s);
+DSONM5 = Byte.parseByte(s);
 } else {
-DSONM5 = Double.NaN;
+DSONM5 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSONM6(String s) {
 if (!s.trim().isEmpty()) {
-DSONM6 = new Double(s);
+DSONM6 = Byte.parseByte(s);
 } else {
-DSONM6 = Double.NaN;
+DSONM6 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSPER2(String s) {
 if (!s.trim().isEmpty()) {
-DSPER2 = new Double(s);
+DSPER2 = Byte.parseByte(s);
 } else {
-DSPER2 = Double.NaN;
+DSPER2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSREC2(String s) {
 if (!s.trim().isEmpty()) {
-DSREC2 = new Double(s);
+DSREC2 = Byte.parseByte(s);
 } else {
-DSREC2 = Double.NaN;
+DSREC2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDSREC3(String s) {
 if (!s.trim().isEmpty()) {
-DSREC3 = new Double(s);
+DSREC3 = Byte.parseByte(s);
 } else {
-DSREC3 = Double.NaN;
+DSREC3 = Byte.MIN_VALUE;
 }
 }
 
@@ -4365,87 +4376,87 @@ DTJBL = s;
 
 protected final void initDVAGE17(String s) {
 if (!s.trim().isEmpty()) {
-DVAGE17 = new Double(s);
+DVAGE17 = Byte.parseByte(s);
 } else {
-DVAGE17 = Double.NaN;
+DVAGE17 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDVANYARR(String s) {
 if (!s.trim().isEmpty()) {
-DVANYARR = new Double(s);
+DVANYARR = Byte.parseByte(s);
 } else {
-DVANYARR = Double.NaN;
+DVANYARR = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDVCACTV(String s) {
 if (!s.trim().isEmpty()) {
-DVCACTV = new Double(s);
+DVCACTV = Short.parseShort(s);
 } else {
-DVCACTV = Double.NaN;
+DVCACTV = Short.MIN_VALUE;
 }
 }
 
 protected final void initDVCASVV(String s) {
 if (!s.trim().isEmpty()) {
-DVCASVV = new Double(s);
+DVCASVV = Integer.parseInt(s);
 } else {
-DVCASVV = Double.NaN;
+DVCASVV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVCHMARR(String s) {
 if (!s.trim().isEmpty()) {
-DVCHMARR = new Double(s);
+DVCHMARR = Byte.parseByte(s);
 } else {
-DVCHMARR = Double.NaN;
+DVCHMARR = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDVCISAV(String s) {
 if (!s.trim().isEmpty()) {
-DVCISAV = new Double(s);
+DVCISAV = Integer.parseInt(s);
 } else {
-DVCISAV = Double.NaN;
+DVCISAV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVCOINV2(String s) {
 if (!s.trim().isEmpty()) {
-DVCOINV2 = new Double(s);
+DVCOINV2 = Integer.parseInt(s);
 } else {
-DVCOINV2 = Double.NaN;
+DVCOINV2 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVCOINV3(String s) {
 if (!s.trim().isEmpty()) {
-DVCOINV3 = new Double(s);
+DVCOINV3 = Short.parseShort(s);
 } else {
-DVCOINV3 = Double.NaN;
+DVCOINV3 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDVCRTARR(String s) {
 if (!s.trim().isEmpty()) {
-DVCRTARR = new Double(s);
+DVCRTARR = Byte.parseByte(s);
 } else {
-DVCRTARR = Double.NaN;
+DVCRTARR = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDVCTARR(String s) {
 if (!s.trim().isEmpty()) {
-DVCTARR = new Double(s);
+DVCTARR = Byte.parseByte(s);
 } else {
-DVCTARR = Double.NaN;
+DVCTARR = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDVDBINC1(String s) {
 if (!s.trim().isEmpty()) {
-DVDBINC1 = new Double(s);
+DVDBINC1 = Double.parseDouble(s);
 } else {
 DVDBINC1 = Double.NaN;
 }
@@ -4453,7 +4464,7 @@ DVDBINC1 = Double.NaN;
 
 protected final void initDVDBINC2(String s) {
 if (!s.trim().isEmpty()) {
-DVDBINC2 = new Double(s);
+DVDBINC2 = Double.parseDouble(s);
 } else {
 DVDBINC2 = Double.NaN;
 }
@@ -4461,7 +4472,7 @@ DVDBINC2 = Double.NaN;
 
 protected final void initDVDBINC3(String s) {
 if (!s.trim().isEmpty()) {
-DVDBINC3 = new Double(s);
+DVDBINC3 = Double.parseDouble(s);
 } else {
 DVDBINC3 = Double.NaN;
 }
@@ -4469,7 +4480,7 @@ DVDBINC3 = Double.NaN;
 
 protected final void initDVDBINCALL(String s) {
 if (!s.trim().isEmpty()) {
-DVDBINCALL = new Double(s);
+DVDBINCALL = Double.parseDouble(s);
 } else {
 DVDBINCALL = Double.NaN;
 }
@@ -4477,7 +4488,7 @@ DVDBINCALL = Double.NaN;
 
 protected final void initDVDBLUMP1(String s) {
 if (!s.trim().isEmpty()) {
-DVDBLUMP1 = new Double(s);
+DVDBLUMP1 = Double.parseDouble(s);
 } else {
 DVDBLUMP1 = Double.NaN;
 }
@@ -4485,7 +4496,7 @@ DVDBLUMP1 = Double.NaN;
 
 protected final void initDVDBLUMP2(String s) {
 if (!s.trim().isEmpty()) {
-DVDBLUMP2 = new Double(s);
+DVDBLUMP2 = Double.parseDouble(s);
 } else {
 DVDBLUMP2 = Double.NaN;
 }
@@ -4493,7 +4504,7 @@ DVDBLUMP2 = Double.NaN;
 
 protected final void initDVDBLUMP3(String s) {
 if (!s.trim().isEmpty()) {
-DVDBLUMP3 = new Double(s);
+DVDBLUMP3 = Double.parseDouble(s);
 } else {
 DVDBLUMP3 = Double.NaN;
 }
@@ -4501,7 +4512,7 @@ DVDBLUMP3 = Double.NaN;
 
 protected final void initDVDBRWEALTHVAL(String s) {
 if (!s.trim().isEmpty()) {
-DVDBRWEALTHVAL = new Double(s);
+DVDBRWEALTHVAL = Double.parseDouble(s);
 } else {
 DVDBRWEALTHVAL = Double.NaN;
 }
@@ -4509,207 +4520,207 @@ DVDBRWEALTHVAL = Double.NaN;
 
 protected final void initDVDHPOWE2(String s) {
 if (!s.trim().isEmpty()) {
-DVDHPOWE2 = new Double(s);
+DVDHPOWE2 = Short.parseShort(s);
 } else {
-DVDHPOWE2 = Double.NaN;
+DVDHPOWE2 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDVDLOWE2(String s) {
 if (!s.trim().isEmpty()) {
-DVDLOWE2 = new Double(s);
+DVDLOWE2 = Integer.parseInt(s);
 } else {
-DVDLOWE2 = Double.NaN;
+DVDLOWE2 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVDLOWE3(String s) {
 if (!s.trim().isEmpty()) {
-DVDLOWE3 = new Double(s);
+DVDLOWE3 = Short.parseShort(s);
 } else {
-DVDLOWE3 = Double.NaN;
+DVDLOWE3 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDVDLOWE4(String s) {
 if (!s.trim().isEmpty()) {
-DVDLOWE4 = new Double(s);
+DVDLOWE4 = Short.parseShort(s);
 } else {
-DVDLOWE4 = Double.NaN;
+DVDLOWE4 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDVDMOOWE2(String s) {
 if (!s.trim().isEmpty()) {
-DVDMOOWE2 = new Double(s);
+DVDMOOWE2 = Short.parseShort(s);
 } else {
-DVDMOOWE2 = Double.NaN;
+DVDMOOWE2 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDVELARR(String s) {
 if (!s.trim().isEmpty()) {
-DVELARR = new Double(s);
+DVELARR = Byte.parseByte(s);
 } else {
-DVELARR = Double.NaN;
+DVELARR = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDVFBONDV(String s) {
 if (!s.trim().isEmpty()) {
-DVFBONDV = new Double(s);
+DVFBONDV = Integer.parseInt(s);
 } else {
-DVFBONDV = Double.NaN;
+DVFBONDV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFCINVAL(String s) {
 if (!s.trim().isEmpty()) {
-DVFCINVAL = new Double(s);
+DVFCINVAL = Integer.parseInt(s);
 } else {
-DVFCINVAL = Double.NaN;
+DVFCINVAL = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFCOLLV(String s) {
 if (!s.trim().isEmpty()) {
-DVFCOLLV = new Double(s);
+DVFCOLLV = Integer.parseInt(s);
 } else {
-DVFCOLLV = Double.NaN;
+DVFCOLLV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFEOPTV(String s) {
 if (!s.trim().isEmpty()) {
-DVFEOPTV = new Double(s);
+DVFEOPTV = Integer.parseInt(s);
 } else {
-DVFEOPTV = Double.NaN;
+DVFEOPTV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFESHAV(String s) {
 if (!s.trim().isEmpty()) {
-DVFESHAV = new Double(s);
+DVFESHAV = Integer.parseInt(s);
 } else {
-DVFESHAV = Double.NaN;
+DVFESHAV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFGLTFOV(String s) {
 if (!s.trim().isEmpty()) {
-DVFGLTFOV = new Double(s);
+DVFGLTFOV = Integer.parseInt(s);
 } else {
-DVFGLTFOV = Double.NaN;
+DVFGLTFOV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFGLTUKV(String s) {
 if (!s.trim().isEmpty()) {
-DVFGLTUKV = new Double(s);
+DVFGLTUKV = Integer.parseInt(s);
 } else {
-DVFGLTUKV = Double.NaN;
+DVFGLTUKV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFINFLV(String s) {
 if (!s.trim().isEmpty()) {
-DVFINFLV = new Double(s);
+DVFINFLV = Integer.parseInt(s);
 } else {
-DVFINFLV = Double.NaN;
+DVFINFLV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFINFV(String s) {
 if (!s.trim().isEmpty()) {
-DVFINFV = new Double(s);
+DVFINFV = Integer.parseInt(s);
 } else {
-DVFINFV = Double.NaN;
+DVFINFV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFINVOTV(String s) {
 if (!s.trim().isEmpty()) {
-DVFINVOTV = new Double(s);
+DVFINVOTV = Integer.parseInt(s);
 } else {
-DVFINVOTV = Double.NaN;
+DVFINVOTV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFLFENV(String s) {
 if (!s.trim().isEmpty()) {
-DVFLFENV = new Double(s);
+DVFLFENV = Integer.parseInt(s);
 } else {
-DVFLFENV = Double.NaN;
+DVFLFENV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFLFFSV(String s) {
 if (!s.trim().isEmpty()) {
-DVFLFFSV = new Double(s);
+DVFLFFSV = Integer.parseInt(s);
 } else {
-DVFLFFSV = Double.NaN;
+DVFLFFSV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFLFSIV(String s) {
 if (!s.trim().isEmpty()) {
-DVFLFSIV = new Double(s);
+DVFLFSIV = Integer.parseInt(s);
 } else {
-DVFLFSIV = Double.NaN;
+DVFLFSIV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFLFTEV(String s) {
 if (!s.trim().isEmpty()) {
-DVFLFTEV = new Double(s);
+DVFLFTEV = Integer.parseInt(s);
 } else {
-DVFLFTEV = Double.NaN;
+DVFLFTEV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFNSVAL(String s) {
 if (!s.trim().isEmpty()) {
-DVFNSVAL = new Double(s);
+DVFNSVAL = Integer.parseInt(s);
 } else {
-DVFNSVAL = Double.NaN;
+DVFNSVAL = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFSHOSV(String s) {
 if (!s.trim().isEmpty()) {
-DVFSHOSV = new Double(s);
+DVFSHOSV = Integer.parseInt(s);
 } else {
-DVFSHOSV = Double.NaN;
+DVFSHOSV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFSHUKV(String s) {
 if (!s.trim().isEmpty()) {
-DVFSHUKV = new Double(s);
+DVFSHUKV = Integer.parseInt(s);
 } else {
-DVFSHUKV = Double.NaN;
+DVFSHUKV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVFSINVAL(String s) {
 if (!s.trim().isEmpty()) {
-DVFSINVAL = new Double(s);
+DVFSINVAL = Integer.parseInt(s);
 } else {
-DVFSINVAL = Double.NaN;
+DVFSINVAL = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVGASARR(String s) {
 if (!s.trim().isEmpty()) {
-DVGASARR = new Double(s);
+DVGASARR = Byte.parseByte(s);
 } else {
-DVGASARR = Double.NaN;
+DVGASARR = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDVGRSPAY(String s) {
 if (!s.trim().isEmpty()) {
-DVGRSPAY = new Double(s);
+DVGRSPAY = Double.parseDouble(s);
 } else {
 DVGRSPAY = Double.NaN;
 }
@@ -4717,111 +4728,126 @@ DVGRSPAY = Double.NaN;
 
 protected final void initDVHASAVC(String s) {
 if (!s.trim().isEmpty()) {
-DVHASAVC = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+DVHASAVC = false;
 } else {
-DVHASAVC = Double.NaN;
+DVHASAVC = true;
+}
 }
 }
 
 protected final void initDVHASDB(String s) {
 if (!s.trim().isEmpty()) {
-DVHASDB = new Double(s);
+DVHASDB = Byte.parseByte(s);
 } else {
-DVHASDB = Double.NaN;
+DVHASDB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDVHASDC(String s) {
 if (!s.trim().isEmpty()) {
-DVHASDC = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+DVHASDC = false;
 } else {
-DVHASDC = Double.NaN;
+DVHASDC = true;
+}
 }
 }
 
 protected final void initDVHASPFCUR(String s) {
 if (!s.trim().isEmpty()) {
-DVHASPFCUR = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 1) {
+DVHASPFCUR = false;
 } else {
-DVHASPFCUR = Double.NaN;
+DVHASPFCUR = true;
+}
 }
 }
 
 protected final void initDVHASPFD(String s) {
 if (!s.trim().isEmpty()) {
-DVHASPFD = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 1) {
+DVHASPFD = false;
 } else {
-DVHASPFD = Double.NaN;
+DVHASPFD = true;
+}
 }
 }
 
 protected final void initDVHASPP(String s) {
 if (!s.trim().isEmpty()) {
-DVHASPP = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+DVHASPP = false;
 } else {
-DVHASPP = Double.NaN;
+DVHASPP = true;
+}
 }
 }
 
 protected final void initDVHPAR(String s) {
 if (!s.trim().isEmpty()) {
-DVHPAR = new Double(s);
+DVHPAR = Byte.parseByte(s);
 } else {
-DVHPAR = Double.NaN;
+DVHPAR = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDVIISAV(String s) {
 if (!s.trim().isEmpty()) {
-DVIISAV = new Double(s);
+DVIISAV = Integer.parseInt(s);
 } else {
-DVIISAV = Double.NaN;
+DVIISAV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVILO3A(String s) {
 if (!s.trim().isEmpty()) {
-DVILO3A = new Double(s);
+DVILO3A = Byte.parseByte(s);
 } else {
-DVILO3A = Double.NaN;
+DVILO3A = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDVILO4A(String s) {
 if (!s.trim().isEmpty()) {
-DVILO4A = new Double(s);
+DVILO4A = Byte.parseByte(s);
 } else {
-DVILO4A = Double.NaN;
+DVILO4A = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDVJB12ML(String s) {
 if (!s.trim().isEmpty()) {
-DVJB12ML = new Double(s);
+DVJB12ML = Byte.parseByte(s);
 } else {
-DVJB12ML = Double.NaN;
+DVJB12ML = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDVKISAV(String s) {
 if (!s.trim().isEmpty()) {
-DVKISAV = new Double(s);
+DVKISAV = Integer.parseInt(s);
 } else {
-DVKISAV = Double.NaN;
+DVKISAV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVMRDF(String s) {
 if (!s.trim().isEmpty()) {
-DVMRDF = new Double(s);
+DVMRDF = Byte.parseByte(s);
 } else {
-DVMRDF = Double.NaN;
+DVMRDF = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDVNETPAY(String s) {
 if (!s.trim().isEmpty()) {
-DVNETPAY = new Double(s);
+DVNETPAY = Double.parseDouble(s);
 } else {
 DVNETPAY = Double.NaN;
 }
@@ -4829,15 +4855,15 @@ DVNETPAY = Double.NaN;
 
 protected final void initDVOTHARR(String s) {
 if (!s.trim().isEmpty()) {
-DVOTHARR = new Double(s);
+DVOTHARR = Byte.parseByte(s);
 } else {
-DVOTHARR = Double.NaN;
+DVOTHARR = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDVPAVCUV(String s) {
 if (!s.trim().isEmpty()) {
-DVPAVCUV = new Double(s);
+DVPAVCUV = Double.parseDouble(s);
 } else {
 DVPAVCUV = Double.NaN;
 }
@@ -4845,7 +4871,7 @@ DVPAVCUV = Double.NaN;
 
 protected final void initDVPFCURVAL(String s) {
 if (!s.trim().isEmpty()) {
-DVPFCURVAL = new Double(s);
+DVPFCURVAL = Double.parseDouble(s);
 } else {
 DVPFCURVAL = Double.NaN;
 }
@@ -4853,15 +4879,15 @@ DVPFCURVAL = Double.NaN;
 
 protected final void initDVPFDDV(String s) {
 if (!s.trim().isEmpty()) {
-DVPFDDV = new Double(s);
+DVPFDDV = Integer.parseInt(s);
 } else {
-DVPFDDV = Double.NaN;
+DVPFDDV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVPINPVAL(String s) {
 if (!s.trim().isEmpty()) {
-DVPINPVAL = new Double(s);
+DVPINPVAL = Double.parseDouble(s);
 } else {
 DVPINPVAL = Double.NaN;
 }
@@ -4869,7 +4895,7 @@ DVPINPVAL = Double.NaN;
 
 protected final void initDVPPVAL(String s) {
 if (!s.trim().isEmpty()) {
-DVPPVAL = new Double(s);
+DVPPVAL = Double.parseDouble(s);
 } else {
 DVPPVAL = Double.NaN;
 }
@@ -4877,15 +4903,15 @@ DVPPVAL = Double.NaN;
 
 protected final void initDVRNTARR(String s) {
 if (!s.trim().isEmpty()) {
-DVRNTARR = new Double(s);
+DVRNTARR = Byte.parseByte(s);
 } else {
-DVRNTARR = Double.NaN;
+DVRNTARR = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDVSHCVAL(String s) {
 if (!s.trim().isEmpty()) {
-DVSHCVAL = new Double(s);
+DVSHCVAL = Double.parseDouble(s);
 } else {
 DVSHCVAL = Double.NaN;
 }
@@ -4893,7 +4919,7 @@ DVSHCVAL = Double.NaN;
 
 protected final void initDVSHODVAL2(String s) {
 if (!s.trim().isEmpty()) {
-DVSHODVAL2 = new Double(s);
+DVSHODVAL2 = Double.parseDouble(s);
 } else {
 DVSHODVAL2 = Double.NaN;
 }
@@ -4901,15 +4927,15 @@ DVSHODVAL2 = Double.NaN;
 
 protected final void initDVSHODVAL3(String s) {
 if (!s.trim().isEmpty()) {
-DVSHODVAL3 = new Double(s);
+DVSHODVAL3 = Short.parseShort(s);
 } else {
-DVSHODVAL3 = Double.NaN;
+DVSHODVAL3 = Short.MIN_VALUE;
 }
 }
 
 protected final void initDVSHSVAL(String s) {
 if (!s.trim().isEmpty()) {
-DVSHSVAL = new Double(s);
+DVSHSVAL = Double.parseDouble(s);
 } else {
 DVSHSVAL = Double.NaN;
 }
@@ -4917,7 +4943,7 @@ DVSHSVAL = Double.NaN;
 
 protected final void initDVSPEN(String s) {
 if (!s.trim().isEmpty()) {
-DVSPEN = new Double(s);
+DVSPEN = Double.parseDouble(s);
 } else {
 DVSPEN = Double.NaN;
 }
@@ -4925,23 +4951,23 @@ DVSPEN = Double.NaN;
 
 protected final void initDVTAXARR(String s) {
 if (!s.trim().isEmpty()) {
-DVTAXARR = new Double(s);
+DVTAXARR = Byte.parseByte(s);
 } else {
-DVTAXARR = Double.NaN;
+DVTAXARR = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDVTELARR(String s) {
 if (!s.trim().isEmpty()) {
-DVTELARR = new Double(s);
+DVTELARR = Byte.parseByte(s);
 } else {
-DVTELARR = Double.NaN;
+DVTELARR = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDVVALDBLUM(String s) {
 if (!s.trim().isEmpty()) {
-DVVALDBLUM = new Double(s);
+DVVALDBLUM = Double.parseDouble(s);
 } else {
 DVVALDBLUM = Double.NaN;
 }
@@ -4949,7 +4975,7 @@ DVVALDBLUM = Double.NaN;
 
 protected final void initDVVALDBT(String s) {
 if (!s.trim().isEmpty()) {
-DVVALDBT = new Double(s);
+DVVALDBT = Double.parseDouble(s);
 } else {
 DVVALDBT = Double.NaN;
 }
@@ -4957,7 +4983,7 @@ DVVALDBT = Double.NaN;
 
 protected final void initDVVALDCOS(String s) {
 if (!s.trim().isEmpty()) {
-DVVALDCOS = new Double(s);
+DVVALDCOS = Double.parseDouble(s);
 } else {
 DVVALDCOS = Double.NaN;
 }
@@ -4965,7 +4991,7 @@ DVVALDCOS = Double.NaN;
 
 protected final void initDVVALPBLUM(String s) {
 if (!s.trim().isEmpty()) {
-DVVALPBLUM = new Double(s);
+DVVALPBLUM = Double.parseDouble(s);
 } else {
 DVVALPBLUM = Double.NaN;
 }
@@ -4973,1375 +4999,1375 @@ DVVALPBLUM = Double.NaN;
 
 protected final void initDVVATARR(String s) {
 if (!s.trim().isEmpty()) {
-DVVATARR = new Double(s);
+DVVATARR = Byte.parseByte(s);
 } else {
-DVVATARR = Double.NaN;
+DVVATARR = Byte.MIN_VALUE;
 }
 }
 
 protected final void initDVWATARR(String s) {
 if (!s.trim().isEmpty()) {
-DVWATARR = new Double(s);
+DVWATARR = Byte.parseByte(s);
 } else {
-DVWATARR = Double.NaN;
+DVWATARR = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEDATTN1(String s) {
 if (!s.trim().isEmpty()) {
-EDATTN1 = new Double(s);
+EDATTN1 = Byte.parseByte(s);
 } else {
-EDATTN1 = Double.NaN;
+EDATTN1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEDATTN2(String s) {
 if (!s.trim().isEmpty()) {
-EDATTN2 = new Double(s);
+EDATTN2 = Byte.parseByte(s);
 } else {
-EDATTN2 = Double.NaN;
+EDATTN2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEDATTN3(String s) {
 if (!s.trim().isEmpty()) {
-EDATTN3 = new Double(s);
+EDATTN3 = Byte.parseByte(s);
 } else {
-EDATTN3 = Double.NaN;
+EDATTN3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEDLEVEL(String s) {
 if (!s.trim().isEmpty()) {
-EDLEVEL = new Double(s);
+EDLEVEL = Byte.parseByte(s);
 } else {
-EDLEVEL = Double.NaN;
+EDLEVEL = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEMPN(String s) {
 if (!s.trim().isEmpty()) {
-EMPN = new Double(s);
+EMPN = Byte.parseByte(s);
 } else {
-EMPN = Double.NaN;
+EMPN = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEMPSTY(String s) {
 if (!s.trim().isEmpty()) {
-EMPSTY = new Double(s);
+EMPSTY = Short.parseShort(s);
 } else {
-EMPSTY = Double.NaN;
+EMPSTY = Short.MIN_VALUE;
 }
 }
 
 protected final void initEMSHAR1(String s) {
 if (!s.trim().isEmpty()) {
-EMSHAR1 = new Double(s);
+EMSHAR1 = Byte.parseByte(s);
 } else {
-EMSHAR1 = Double.NaN;
+EMSHAR1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEMSHAR2(String s) {
 if (!s.trim().isEmpty()) {
-EMSHAR2 = new Double(s);
+EMSHAR2 = Byte.parseByte(s);
 } else {
-EMSHAR2 = Double.NaN;
+EMSHAR2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEMSHAR3(String s) {
 if (!s.trim().isEmpty()) {
-EMSHAR3 = new Double(s);
+EMSHAR3 = Byte.parseByte(s);
 } else {
-EMSHAR3 = Double.NaN;
+EMSHAR3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initENROLL(String s) {
 if (!s.trim().isEmpty()) {
-ENROLL = new Double(s);
+ENROLL = Byte.parseByte(s);
 } else {
-ENROLL = Double.NaN;
+ENROLL = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEVERWK(String s) {
 if (!s.trim().isEmpty()) {
-EVERWK = new Double(s);
+EVERWK = Byte.parseByte(s);
 } else {
-EVERWK = Double.NaN;
+EVERWK = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFBONDTY1(String s) {
 if (!s.trim().isEmpty()) {
-FBONDTY1 = new Double(s);
+FBONDTY1 = Byte.parseByte(s);
 } else {
-FBONDTY1 = Double.NaN;
+FBONDTY1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFBONDTY2(String s) {
 if (!s.trim().isEmpty()) {
-FBONDTY2 = new Double(s);
+FBONDTY2 = Byte.parseByte(s);
 } else {
-FBONDTY2 = Double.NaN;
+FBONDTY2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFBONDTY3(String s) {
 if (!s.trim().isEmpty()) {
-FBONDTY3 = new Double(s);
+FBONDTY3 = Byte.parseByte(s);
 } else {
-FBONDTY3 = Double.NaN;
+FBONDTY3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFBONDV(String s) {
 if (!s.trim().isEmpty()) {
-FBONDV = new Double(s);
+FBONDV = Integer.parseInt(s);
 } else {
-FBONDV = Double.NaN;
+FBONDV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFBONDVB(String s) {
 if (!s.trim().isEmpty()) {
-FBONDVB = new Double(s);
+FBONDVB = Byte.parseByte(s);
 } else {
-FBONDVB = Double.NaN;
+FBONDVB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFBONDV_I(String s) {
 if (!s.trim().isEmpty()) {
-FBONDV_I = new Double(s);
+FBONDV_I = Integer.parseInt(s);
 } else {
-FBONDV_I = Double.NaN;
+FBONDV_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFBONDV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FBONDV_IFLAG = new Double(s);
+FBONDV_IFLAG = Byte.parseByte(s);
 } else {
-FBONDV_IFLAG = Double.NaN;
+FBONDV_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCACSH(String s) {
 if (!s.trim().isEmpty()) {
-FCACSH = new Double(s);
+FCACSH = Byte.parseByte(s);
 } else {
-FCACSH = Double.NaN;
+FCACSH = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCACSH_I(String s) {
 if (!s.trim().isEmpty()) {
-FCACSH_I = new Double(s);
+FCACSH_I = Byte.parseByte(s);
 } else {
-FCACSH_I = Double.NaN;
+FCACSH_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCACSH_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FCACSH_IFLAG = new Double(s);
+FCACSH_IFLAG = Byte.parseByte(s);
 } else {
-FCACSH_IFLAG = Double.NaN;
+FCACSH_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCINVAL(String s) {
 if (!s.trim().isEmpty()) {
-FCINVAL = new Double(s);
+FCINVAL = Integer.parseInt(s);
 } else {
-FCINVAL = Double.NaN;
+FCINVAL = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFCINVAL_I(String s) {
 if (!s.trim().isEmpty()) {
-FCINVAL_I = new Double(s);
+FCINVAL_I = Integer.parseInt(s);
 } else {
-FCINVAL_I = Double.NaN;
+FCINVAL_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFCINVAL_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FCINVAL_IFLAG = new Double(s);
+FCINVAL_IFLAG = Byte.parseByte(s);
 } else {
-FCINVAL_IFLAG = Double.NaN;
+FCINVAL_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCINVLB(String s) {
 if (!s.trim().isEmpty()) {
-FCINVLB = new Double(s);
+FCINVLB = Byte.parseByte(s);
 } else {
-FCINVLB = Double.NaN;
+FCINVLB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCISAB(String s) {
 if (!s.trim().isEmpty()) {
-FCISAB = new Double(s);
+FCISAB = Byte.parseByte(s);
 } else {
-FCISAB = Double.NaN;
+FCISAB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCISAV(String s) {
 if (!s.trim().isEmpty()) {
-FCISAV = new Double(s);
+FCISAV = Integer.parseInt(s);
 } else {
-FCISAV = Double.NaN;
+FCISAV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFCISAV_I(String s) {
 if (!s.trim().isEmpty()) {
-FCISAV_I = new Double(s);
+FCISAV_I = Integer.parseInt(s);
 } else {
-FCISAV_I = Double.NaN;
+FCISAV_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFCISAV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FCISAV_IFLAG = new Double(s);
+FCISAV_IFLAG = Byte.parseByte(s);
 } else {
-FCISAV_IFLAG = Double.NaN;
+FCISAV_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCNUMIN(String s) {
 if (!s.trim().isEmpty()) {
-FCNUMIN = new Double(s);
+FCNUMIN = Byte.parseByte(s);
 } else {
-FCNUMIN = Double.NaN;
+FCNUMIN = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCNUMIN_I(String s) {
 if (!s.trim().isEmpty()) {
-FCNUMIN_I = new Double(s);
+FCNUMIN_I = Byte.parseByte(s);
 } else {
-FCNUMIN_I = Double.NaN;
+FCNUMIN_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCNUMIN_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FCNUMIN_IFLAG = new Double(s);
+FCNUMIN_IFLAG = Byte.parseByte(s);
 } else {
-FCNUMIN_IFLAG = Double.NaN;
+FCNUMIN_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCNUMSH(String s) {
 if (!s.trim().isEmpty()) {
-FCNUMSH = new Double(s);
+FCNUMSH = Byte.parseByte(s);
 } else {
-FCNUMSH = Double.NaN;
+FCNUMSH = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCNUMSH_I(String s) {
 if (!s.trim().isEmpty()) {
-FCNUMSH_I = new Double(s);
+FCNUMSH_I = Byte.parseByte(s);
 } else {
-FCNUMSH_I = Double.NaN;
+FCNUMSH_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCNUMSH_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FCNUMSH_IFLAG = new Double(s);
+FCNUMSH_IFLAG = Byte.parseByte(s);
 } else {
-FCNUMSH_IFLAG = Double.NaN;
+FCNUMSH_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCOLLV(String s) {
 if (!s.trim().isEmpty()) {
-FCOLLV = new Double(s);
+FCOLLV = Integer.parseInt(s);
 } else {
-FCOLLV = Double.NaN;
+FCOLLV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFCOLLVB(String s) {
 if (!s.trim().isEmpty()) {
-FCOLLVB = new Double(s);
+FCOLLVB = Byte.parseByte(s);
 } else {
-FCOLLVB = Double.NaN;
+FCOLLVB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCOLLV_I(String s) {
 if (!s.trim().isEmpty()) {
-FCOLLV_I = new Double(s);
+FCOLLV_I = Integer.parseInt(s);
 } else {
-FCOLLV_I = Double.NaN;
+FCOLLV_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFCOLLV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FCOLLV_IFLAG = new Double(s);
+FCOLLV_IFLAG = Byte.parseByte(s);
 } else {
-FCOLLV_IFLAG = Double.NaN;
+FCOLLV_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCOVDIF(String s) {
 if (!s.trim().isEmpty()) {
-FCOVDIF = new Double(s);
+FCOVDIF = Byte.parseByte(s);
 } else {
-FCOVDIF = Double.NaN;
+FCOVDIF = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCOVDIN(String s) {
 if (!s.trim().isEmpty()) {
-FCOVDIN = new Double(s);
+FCOVDIN = Byte.parseByte(s);
 } else {
-FCOVDIN = Double.NaN;
+FCOVDIN = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCOVDIN_I(String s) {
 if (!s.trim().isEmpty()) {
-FCOVDIN_I = new Double(s);
+FCOVDIN_I = Byte.parseByte(s);
 } else {
-FCOVDIN_I = Double.NaN;
+FCOVDIN_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCOVDIN_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FCOVDIN_IFLAG = new Double(s);
+FCOVDIN_IFLAG = Byte.parseByte(s);
 } else {
-FCOVDIN_IFLAG = Double.NaN;
+FCOVDIN_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCOVDSH(String s) {
 if (!s.trim().isEmpty()) {
-FCOVDSH = new Double(s);
+FCOVDSH = Byte.parseByte(s);
 } else {
-FCOVDSH = Double.NaN;
+FCOVDSH = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCOVDSH_I(String s) {
 if (!s.trim().isEmpty()) {
-FCOVDSH_I = new Double(s);
+FCOVDSH_I = Byte.parseByte(s);
 } else {
-FCOVDSH_I = Double.NaN;
+FCOVDSH_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCOVDSH_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FCOVDSH_IFLAG = new Double(s);
+FCOVDSH_IFLAG = Byte.parseByte(s);
 } else {
-FCOVDSH_IFLAG = Double.NaN;
+FCOVDSH_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCOVNIN(String s) {
 if (!s.trim().isEmpty()) {
-FCOVNIN = new Double(s);
+FCOVNIN = Byte.parseByte(s);
 } else {
-FCOVNIN = Double.NaN;
+FCOVNIN = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCOVNIN_I(String s) {
 if (!s.trim().isEmpty()) {
-FCOVNIN_I = new Double(s);
+FCOVNIN_I = Byte.parseByte(s);
 } else {
-FCOVNIN_I = Double.NaN;
+FCOVNIN_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCOVNIN_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FCOVNIN_IFLAG = new Double(s);
+FCOVNIN_IFLAG = Byte.parseByte(s);
 } else {
-FCOVNIN_IFLAG = Double.NaN;
+FCOVNIN_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCOVNSH(String s) {
 if (!s.trim().isEmpty()) {
-FCOVNSH = new Double(s);
+FCOVNSH = Byte.parseByte(s);
 } else {
-FCOVNSH = Double.NaN;
+FCOVNSH = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCOVNSH_I(String s) {
 if (!s.trim().isEmpty()) {
-FCOVNSH_I = new Double(s);
+FCOVNSH_I = Byte.parseByte(s);
 } else {
-FCOVNSH_I = Double.NaN;
+FCOVNSH_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCOVNSH_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FCOVNSH_IFLAG = new Double(s);
+FCOVNSH_IFLAG = Byte.parseByte(s);
 } else {
-FCOVNSH_IFLAG = Double.NaN;
+FCOVNSH_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCSHVAL(String s) {
 if (!s.trim().isEmpty()) {
-FCSHVAL = new Double(s);
+FCSHVAL = Integer.parseInt(s);
 } else {
-FCSHVAL = Double.NaN;
+FCSHVAL = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFCSHVAL_I(String s) {
 if (!s.trim().isEmpty()) {
-FCSHVAL_I = new Double(s);
+FCSHVAL_I = Integer.parseInt(s);
 } else {
-FCSHVAL_I = Double.NaN;
+FCSHVAL_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFCSHVAL_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FCSHVAL_IFLAG = new Double(s);
+FCSHVAL_IFLAG = Byte.parseByte(s);
 } else {
-FCSHVAL_IFLAG = Double.NaN;
+FCSHVAL_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCSHVLB(String s) {
 if (!s.trim().isEmpty()) {
-FCSHVLB = new Double(s);
+FCSHVLB = Byte.parseByte(s);
 } else {
-FCSHVLB = Double.NaN;
+FCSHVLB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFCSUPPR(String s) {
 if (!s.trim().isEmpty()) {
-FCSUPPR = new Double(s);
+FCSUPPR = Byte.parseByte(s);
 } else {
-FCSUPPR = Double.NaN;
+FCSUPPR = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFEOPTV(String s) {
 if (!s.trim().isEmpty()) {
-FEOPTV = new Double(s);
+FEOPTV = Integer.parseInt(s);
 } else {
-FEOPTV = Double.NaN;
+FEOPTV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFEOPTV_I(String s) {
 if (!s.trim().isEmpty()) {
-FEOPTV_I = new Double(s);
+FEOPTV_I = Integer.parseInt(s);
 } else {
-FEOPTV_I = Double.NaN;
+FEOPTV_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFEOPTV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FEOPTV_IFLAG = new Double(s);
+FEOPTV_IFLAG = Byte.parseByte(s);
 } else {
-FEOPTV_IFLAG = Double.NaN;
+FEOPTV_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFEOPVB(String s) {
 if (!s.trim().isEmpty()) {
-FEOPVB = new Double(s);
+FEOPVB = Byte.parseByte(s);
 } else {
-FEOPVB = Double.NaN;
+FEOPVB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFESHA(String s) {
 if (!s.trim().isEmpty()) {
-FESHA = new Double(s);
+FESHA = Byte.parseByte(s);
 } else {
-FESHA = Double.NaN;
+FESHA = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFESHAV(String s) {
 if (!s.trim().isEmpty()) {
-FESHAV = new Double(s);
+FESHAV = Integer.parseInt(s);
 } else {
-FESHAV = Double.NaN;
+FESHAV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFESHAV_I(String s) {
 if (!s.trim().isEmpty()) {
-FESHAV_I = new Double(s);
+FESHAV_I = Integer.parseInt(s);
 } else {
-FESHAV_I = Double.NaN;
+FESHAV_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFESHAV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FESHAV_IFLAG = new Double(s);
+FESHAV_IFLAG = Byte.parseByte(s);
 } else {
-FESHAV_IFLAG = Double.NaN;
+FESHAV_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFESHA_I(String s) {
 if (!s.trim().isEmpty()) {
-FESHA_I = new Double(s);
+FESHA_I = Byte.parseByte(s);
 } else {
-FESHA_I = Double.NaN;
+FESHA_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFESHA_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FESHA_IFLAG = new Double(s);
+FESHA_IFLAG = Byte.parseByte(s);
 } else {
-FESHA_IFLAG = Double.NaN;
+FESHA_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFESHVB(String s) {
 if (!s.trim().isEmpty()) {
-FESHVB = new Double(s);
+FESHVB = Byte.parseByte(s);
 } else {
-FESHVB = Double.NaN;
+FESHVB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFGFOVB(String s) {
 if (!s.trim().isEmpty()) {
-FGFOVB = new Double(s);
+FGFOVB = Byte.parseByte(s);
 } else {
-FGFOVB = Double.NaN;
+FGFOVB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFGILTS1(String s) {
 if (!s.trim().isEmpty()) {
-FGILTS1 = new Double(s);
+FGILTS1 = Byte.parseByte(s);
 } else {
-FGILTS1 = Double.NaN;
+FGILTS1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFGILTS1_I(String s) {
 if (!s.trim().isEmpty()) {
-FGILTS1_I = new Double(s);
+FGILTS1_I = Byte.parseByte(s);
 } else {
-FGILTS1_I = Double.NaN;
+FGILTS1_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFGILTS1_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FGILTS1_IFLAG = new Double(s);
+FGILTS1_IFLAG = Byte.parseByte(s);
 } else {
-FGILTS1_IFLAG = Double.NaN;
+FGILTS1_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFGILTS2(String s) {
 if (!s.trim().isEmpty()) {
-FGILTS2 = new Double(s);
+FGILTS2 = Byte.parseByte(s);
 } else {
-FGILTS2 = Double.NaN;
+FGILTS2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFGILTS2_I(String s) {
 if (!s.trim().isEmpty()) {
-FGILTS2_I = new Double(s);
+FGILTS2_I = Byte.parseByte(s);
 } else {
-FGILTS2_I = Double.NaN;
+FGILTS2_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFGILTS2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FGILTS2_IFLAG = new Double(s);
+FGILTS2_IFLAG = Byte.parseByte(s);
 } else {
-FGILTS2_IFLAG = Double.NaN;
+FGILTS2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFGILTS3(String s) {
 if (!s.trim().isEmpty()) {
-FGILTS3 = new Double(s);
+FGILTS3 = Byte.parseByte(s);
 } else {
-FGILTS3 = Double.NaN;
+FGILTS3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFGILTS3_I(String s) {
 if (!s.trim().isEmpty()) {
-FGILTS3_I = new Double(s);
+FGILTS3_I = Byte.parseByte(s);
 } else {
-FGILTS3_I = Double.NaN;
+FGILTS3_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFGILTS3_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FGILTS3_IFLAG = new Double(s);
+FGILTS3_IFLAG = Byte.parseByte(s);
 } else {
-FGILTS3_IFLAG = Double.NaN;
+FGILTS3_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFGILTS4(String s) {
 if (!s.trim().isEmpty()) {
-FGILTS4 = new Double(s);
+FGILTS4 = Byte.parseByte(s);
 } else {
-FGILTS4 = Double.NaN;
+FGILTS4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFGILTS4_I(String s) {
 if (!s.trim().isEmpty()) {
-FGILTS4_I = new Double(s);
+FGILTS4_I = Byte.parseByte(s);
 } else {
-FGILTS4_I = Double.NaN;
+FGILTS4_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFGILTS4_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FGILTS4_IFLAG = new Double(s);
+FGILTS4_IFLAG = Byte.parseByte(s);
 } else {
-FGILTS4_IFLAG = Double.NaN;
+FGILTS4_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFGLTFOV(String s) {
 if (!s.trim().isEmpty()) {
-FGLTFOV = new Double(s);
+FGLTFOV = Integer.parseInt(s);
 } else {
-FGLTFOV = Double.NaN;
+FGLTFOV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFGLTFOV_I(String s) {
 if (!s.trim().isEmpty()) {
-FGLTFOV_I = new Double(s);
+FGLTFOV_I = Integer.parseInt(s);
 } else {
-FGLTFOV_I = Double.NaN;
+FGLTFOV_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFGLTFOV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FGLTFOV_IFLAG = new Double(s);
+FGLTFOV_IFLAG = Byte.parseByte(s);
 } else {
-FGLTFOV_IFLAG = Double.NaN;
+FGLTFOV_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFGLTUKV(String s) {
 if (!s.trim().isEmpty()) {
-FGLTUKV = new Double(s);
+FGLTUKV = Integer.parseInt(s);
 } else {
-FGLTUKV = Double.NaN;
+FGLTUKV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFGLTUKV_I(String s) {
 if (!s.trim().isEmpty()) {
-FGLTUKV_I = new Double(s);
+FGLTUKV_I = Integer.parseInt(s);
 } else {
-FGLTUKV_I = Double.NaN;
+FGLTUKV_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFGLTUKV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FGLTUKV_IFLAG = new Double(s);
+FGLTUKV_IFLAG = Byte.parseByte(s);
 } else {
-FGLTUKV_IFLAG = Double.NaN;
+FGLTUKV_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFGUKVB(String s) {
 if (!s.trim().isEmpty()) {
-FGUKVB = new Double(s);
+FGUKVB = Byte.parseByte(s);
 } else {
-FGUKVB = Double.NaN;
+FGUKVB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFIISAB(String s) {
 if (!s.trim().isEmpty()) {
-FIISAB = new Double(s);
+FIISAB = Byte.parseByte(s);
 } else {
-FIISAB = Double.NaN;
+FIISAB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFIISAV(String s) {
 if (!s.trim().isEmpty()) {
-FIISAV = new Double(s);
+FIISAV = Integer.parseInt(s);
 } else {
-FIISAV = Double.NaN;
+FIISAV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFIISAV_I(String s) {
 if (!s.trim().isEmpty()) {
-FIISAV_I = new Double(s);
+FIISAV_I = Integer.parseInt(s);
 } else {
-FIISAV_I = Double.NaN;
+FIISAV_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFIISAV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FIISAV_IFLAG = new Double(s);
+FIISAV_IFLAG = Byte.parseByte(s);
 } else {
-FIISAV_IFLAG = Double.NaN;
+FIISAV_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINCVB(String s) {
 if (!s.trim().isEmpty()) {
-FINCVB = new Double(s);
+FINCVB = Byte.parseByte(s);
 } else {
-FINCVB = Double.NaN;
+FINCVB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINFLV(String s) {
 if (!s.trim().isEmpty()) {
-FINFLV = new Double(s);
+FINFLV = Integer.parseInt(s);
 } else {
-FINFLV = Double.NaN;
+FINFLV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFINFLV_I(String s) {
 if (!s.trim().isEmpty()) {
-FINFLV_I = new Double(s);
+FINFLV_I = Integer.parseInt(s);
 } else {
-FINFLV_I = Double.NaN;
+FINFLV_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFINFLV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FINFLV_IFLAG = new Double(s);
+FINFLV_IFLAG = Byte.parseByte(s);
 } else {
-FINFLV_IFLAG = Double.NaN;
+FINFLV_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINFSAV1(String s) {
 if (!s.trim().isEmpty()) {
-FINFSAV1 = new Double(s);
+FINFSAV1 = Byte.parseByte(s);
 } else {
-FINFSAV1 = Double.NaN;
+FINFSAV1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINFSAV1_I(String s) {
 if (!s.trim().isEmpty()) {
-FINFSAV1_I = new Double(s);
+FINFSAV1_I = Byte.parseByte(s);
 } else {
-FINFSAV1_I = Double.NaN;
+FINFSAV1_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINFSAV1_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FINFSAV1_IFLAG = new Double(s);
+FINFSAV1_IFLAG = Byte.parseByte(s);
 } else {
-FINFSAV1_IFLAG = Double.NaN;
+FINFSAV1_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINFSAV2(String s) {
 if (!s.trim().isEmpty()) {
-FINFSAV2 = new Double(s);
+FINFSAV2 = Byte.parseByte(s);
 } else {
-FINFSAV2 = Double.NaN;
+FINFSAV2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINFSAV2_I(String s) {
 if (!s.trim().isEmpty()) {
-FINFSAV2_I = new Double(s);
+FINFSAV2_I = Byte.parseByte(s);
 } else {
-FINFSAV2_I = Double.NaN;
+FINFSAV2_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINFSAV2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FINFSAV2_IFLAG = new Double(s);
+FINFSAV2_IFLAG = Byte.parseByte(s);
 } else {
-FINFSAV2_IFLAG = Double.NaN;
+FINFSAV2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINFSAV3(String s) {
 if (!s.trim().isEmpty()) {
-FINFSAV3 = new Double(s);
+FINFSAV3 = Byte.parseByte(s);
 } else {
-FINFSAV3 = Double.NaN;
+FINFSAV3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINFSAV3_I(String s) {
 if (!s.trim().isEmpty()) {
-FINFSAV3_I = new Double(s);
+FINFSAV3_I = Byte.parseByte(s);
 } else {
-FINFSAV3_I = Double.NaN;
+FINFSAV3_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINFSAV3_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FINFSAV3_IFLAG = new Double(s);
+FINFSAV3_IFLAG = Byte.parseByte(s);
 } else {
-FINFSAV3_IFLAG = Double.NaN;
+FINFSAV3_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINFSAV4(String s) {
 if (!s.trim().isEmpty()) {
-FINFSAV4 = new Double(s);
+FINFSAV4 = Byte.parseByte(s);
 } else {
-FINFSAV4 = Double.NaN;
+FINFSAV4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINFSAV4_I(String s) {
 if (!s.trim().isEmpty()) {
-FINFSAV4_I = new Double(s);
+FINFSAV4_I = Byte.parseByte(s);
 } else {
-FINFSAV4_I = Double.NaN;
+FINFSAV4_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINFSAV4_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FINFSAV4_IFLAG = new Double(s);
+FINFSAV4_IFLAG = Byte.parseByte(s);
 } else {
-FINFSAV4_IFLAG = Double.NaN;
+FINFSAV4_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINFV(String s) {
 if (!s.trim().isEmpty()) {
-FINFV = new Double(s);
+FINFV = Integer.parseInt(s);
 } else {
-FINFV = Double.NaN;
+FINFV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFINFVB(String s) {
 if (!s.trim().isEmpty()) {
-FINFVB = new Double(s);
+FINFVB = Byte.parseByte(s);
 } else {
-FINFVB = Double.NaN;
+FINFVB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINFV_I(String s) {
 if (!s.trim().isEmpty()) {
-FINFV_I = new Double(s);
+FINFV_I = Integer.parseInt(s);
 } else {
-FINFV_I = Double.NaN;
+FINFV_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFINFV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FINFV_IFLAG = new Double(s);
+FINFV_IFLAG = Byte.parseByte(s);
 } else {
-FINFV_IFLAG = Double.NaN;
+FINFV_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINS(String s) {
 if (!s.trim().isEmpty()) {
-FINS = new Double(s);
+FINS = Byte.parseByte(s);
 } else {
-FINS = Double.NaN;
+FINS = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINSV(String s) {
 if (!s.trim().isEmpty()) {
-FINSV = new Double(s);
+FINSV = Integer.parseInt(s);
 } else {
-FINSV = Double.NaN;
+FINSV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFINSV_I(String s) {
 if (!s.trim().isEmpty()) {
-FINSV_I = new Double(s);
+FINSV_I = Integer.parseInt(s);
 } else {
-FINSV_I = Double.NaN;
+FINSV_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFINSV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FINSV_IFLAG = new Double(s);
+FINSV_IFLAG = Byte.parseByte(s);
 } else {
-FINSV_IFLAG = Double.NaN;
+FINSV_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINS_I(String s) {
 if (!s.trim().isEmpty()) {
-FINS_I = new Double(s);
+FINS_I = Byte.parseByte(s);
 } else {
-FINS_I = Double.NaN;
+FINS_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINS_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FINS_IFLAG = new Double(s);
+FINS_IFLAG = Byte.parseByte(s);
 } else {
-FINS_IFLAG = Double.NaN;
+FINS_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINVOTV(String s) {
 if (!s.trim().isEmpty()) {
-FINVOTV = new Double(s);
+FINVOTV = Integer.parseInt(s);
 } else {
-FINVOTV = Double.NaN;
+FINVOTV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFINVOTV_I(String s) {
 if (!s.trim().isEmpty()) {
-FINVOTV_I = new Double(s);
+FINVOTV_I = Integer.parseInt(s);
 } else {
-FINVOTV_I = Double.NaN;
+FINVOTV_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFINVOTV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FINVOTV_IFLAG = new Double(s);
+FINVOTV_IFLAG = Byte.parseByte(s);
 } else {
-FINVOTV_IFLAG = Double.NaN;
+FINVOTV_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINVOVB(String s) {
 if (!s.trim().isEmpty()) {
-FINVOVB = new Double(s);
+FINVOVB = Byte.parseByte(s);
 } else {
-FINVOVB = Double.NaN;
+FINVOVB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINVTY01(String s) {
 if (!s.trim().isEmpty()) {
-FINVTY01 = new Double(s);
+FINVTY01 = Byte.parseByte(s);
 } else {
-FINVTY01 = Double.NaN;
+FINVTY01 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINVTY01_I(String s) {
 if (!s.trim().isEmpty()) {
-FINVTY01_I = new Double(s);
+FINVTY01_I = Byte.parseByte(s);
 } else {
-FINVTY01_I = Double.NaN;
+FINVTY01_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINVTY02(String s) {
 if (!s.trim().isEmpty()) {
-FINVTY02 = new Double(s);
+FINVTY02 = Byte.parseByte(s);
 } else {
-FINVTY02 = Double.NaN;
+FINVTY02 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINVTY02_I(String s) {
 if (!s.trim().isEmpty()) {
-FINVTY02_I = new Double(s);
+FINVTY02_I = Byte.parseByte(s);
 } else {
-FINVTY02_I = Double.NaN;
+FINVTY02_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINVTY03(String s) {
 if (!s.trim().isEmpty()) {
-FINVTY03 = new Double(s);
+FINVTY03 = Byte.parseByte(s);
 } else {
-FINVTY03 = Double.NaN;
+FINVTY03 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINVTY03_I(String s) {
 if (!s.trim().isEmpty()) {
-FINVTY03_I = new Double(s);
+FINVTY03_I = Byte.parseByte(s);
 } else {
-FINVTY03_I = Double.NaN;
+FINVTY03_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINVTY04(String s) {
 if (!s.trim().isEmpty()) {
-FINVTY04 = new Double(s);
+FINVTY04 = Byte.parseByte(s);
 } else {
-FINVTY04 = Double.NaN;
+FINVTY04 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINVTY04_I(String s) {
 if (!s.trim().isEmpty()) {
-FINVTY04_I = new Double(s);
+FINVTY04_I = Byte.parseByte(s);
 } else {
-FINVTY04_I = Double.NaN;
+FINVTY04_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINVTY05(String s) {
 if (!s.trim().isEmpty()) {
-FINVTY05 = new Double(s);
+FINVTY05 = Byte.parseByte(s);
 } else {
-FINVTY05 = Double.NaN;
+FINVTY05 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINVTY05_I(String s) {
 if (!s.trim().isEmpty()) {
-FINVTY05_I = new Double(s);
+FINVTY05_I = Byte.parseByte(s);
 } else {
-FINVTY05_I = Double.NaN;
+FINVTY05_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINVTY06(String s) {
 if (!s.trim().isEmpty()) {
-FINVTY06 = new Double(s);
+FINVTY06 = Byte.parseByte(s);
 } else {
-FINVTY06 = Double.NaN;
+FINVTY06 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINVTY06_I(String s) {
 if (!s.trim().isEmpty()) {
-FINVTY06_I = new Double(s);
+FINVTY06_I = Byte.parseByte(s);
 } else {
-FINVTY06_I = Double.NaN;
+FINVTY06_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINVTY07(String s) {
 if (!s.trim().isEmpty()) {
-FINVTY07 = new Double(s);
+FINVTY07 = Byte.parseByte(s);
 } else {
-FINVTY07 = Double.NaN;
+FINVTY07 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINVTY07_I(String s) {
 if (!s.trim().isEmpty()) {
-FINVTY07_I = new Double(s);
+FINVTY07_I = Byte.parseByte(s);
 } else {
-FINVTY07_I = Double.NaN;
+FINVTY07_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINVTY08(String s) {
 if (!s.trim().isEmpty()) {
-FINVTY08 = new Double(s);
+FINVTY08 = Byte.parseByte(s);
 } else {
-FINVTY08 = Double.NaN;
+FINVTY08 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINVTY08_I(String s) {
 if (!s.trim().isEmpty()) {
-FINVTY08_I = new Double(s);
+FINVTY08_I = Byte.parseByte(s);
 } else {
-FINVTY08_I = Double.NaN;
+FINVTY08_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINVTY09(String s) {
 if (!s.trim().isEmpty()) {
-FINVTY09 = new Double(s);
+FINVTY09 = Byte.parseByte(s);
 } else {
-FINVTY09 = Double.NaN;
+FINVTY09 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINVTY09_I(String s) {
 if (!s.trim().isEmpty()) {
-FINVTY09_I = new Double(s);
+FINVTY09_I = Byte.parseByte(s);
 } else {
-FINVTY09_I = Double.NaN;
+FINVTY09_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINVTY10(String s) {
 if (!s.trim().isEmpty()) {
-FINVTY10 = new Double(s);
+FINVTY10 = Byte.parseByte(s);
 } else {
-FINVTY10 = Double.NaN;
+FINVTY10 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINVTY10_I(String s) {
 if (!s.trim().isEmpty()) {
-FINVTY10_I = new Double(s);
+FINVTY10_I = Byte.parseByte(s);
 } else {
-FINVTY10_I = Double.NaN;
+FINVTY10_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFINVTY11(String s) {
 if (!s.trim().isEmpty()) {
-FINVTY11 = new Double(s);
+FINVTY11 = Byte.parseByte(s);
 } else {
-FINVTY11 = Double.NaN;
+FINVTY11 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFISA1(String s) {
 if (!s.trim().isEmpty()) {
-FISA1 = new Double(s);
+FISA1 = Byte.parseByte(s);
 } else {
-FISA1 = Double.NaN;
+FISA1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFISA1_I(String s) {
 if (!s.trim().isEmpty()) {
-FISA1_I = new Double(s);
+FISA1_I = Byte.parseByte(s);
 } else {
-FISA1_I = Double.NaN;
+FISA1_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFISA1_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FISA1_IFLAG = new Double(s);
+FISA1_IFLAG = Byte.parseByte(s);
 } else {
-FISA1_IFLAG = Double.NaN;
+FISA1_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFISA2(String s) {
 if (!s.trim().isEmpty()) {
-FISA2 = new Double(s);
+FISA2 = Byte.parseByte(s);
 } else {
-FISA2 = Double.NaN;
+FISA2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFISA2_I(String s) {
 if (!s.trim().isEmpty()) {
-FISA2_I = new Double(s);
+FISA2_I = Byte.parseByte(s);
 } else {
-FISA2_I = Double.NaN;
+FISA2_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFISA2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FISA2_IFLAG = new Double(s);
+FISA2_IFLAG = Byte.parseByte(s);
 } else {
-FISA2_IFLAG = Double.NaN;
+FISA2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFKISAB(String s) {
 if (!s.trim().isEmpty()) {
-FKISAB = new Double(s);
+FKISAB = Byte.parseByte(s);
 } else {
-FKISAB = Double.NaN;
+FKISAB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFKISAV(String s) {
 if (!s.trim().isEmpty()) {
-FKISAV = new Double(s);
+FKISAV = Integer.parseInt(s);
 } else {
-FKISAV = Double.NaN;
+FKISAV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFKISAV_I(String s) {
 if (!s.trim().isEmpty()) {
-FKISAV_I = new Double(s);
+FKISAV_I = Integer.parseInt(s);
 } else {
-FKISAV_I = Double.NaN;
+FKISAV_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFKISAV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FKISAV_IFLAG = new Double(s);
+FKISAV_IFLAG = Byte.parseByte(s);
 } else {
-FKISAV_IFLAG = Double.NaN;
+FKISAV_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFLFENV(String s) {
 if (!s.trim().isEmpty()) {
-FLFENV = new Double(s);
+FLFENV = Integer.parseInt(s);
 } else {
-FLFENV = Double.NaN;
+FLFENV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFLFENVB(String s) {
 if (!s.trim().isEmpty()) {
-FLFENVB = new Double(s);
+FLFENVB = Byte.parseByte(s);
 } else {
-FLFENVB = Double.NaN;
+FLFENVB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFLFENV_I(String s) {
 if (!s.trim().isEmpty()) {
-FLFENV_I = new Double(s);
+FLFENV_I = Integer.parseInt(s);
 } else {
-FLFENV_I = Double.NaN;
+FLFENV_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFLFENV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FLFENV_IFLAG = new Double(s);
+FLFENV_IFLAG = Byte.parseByte(s);
 } else {
-FLFENV_IFLAG = Double.NaN;
+FLFENV_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFLFFSV(String s) {
 if (!s.trim().isEmpty()) {
-FLFFSV = new Double(s);
+FLFFSV = Integer.parseInt(s);
 } else {
-FLFFSV = Double.NaN;
+FLFFSV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFLFFSVB(String s) {
 if (!s.trim().isEmpty()) {
-FLFFSVB = new Double(s);
+FLFFSVB = Byte.parseByte(s);
 } else {
-FLFFSVB = Double.NaN;
+FLFFSVB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFLFFSV_I(String s) {
 if (!s.trim().isEmpty()) {
-FLFFSV_I = new Double(s);
+FLFFSV_I = Integer.parseInt(s);
 } else {
-FLFFSV_I = Double.NaN;
+FLFFSV_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFLFFSV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FLFFSV_IFLAG = new Double(s);
+FLFFSV_IFLAG = Byte.parseByte(s);
 } else {
-FLFFSV_IFLAG = Double.NaN;
+FLFFSV_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFLFSIV(String s) {
 if (!s.trim().isEmpty()) {
-FLFSIV = new Double(s);
+FLFSIV = Integer.parseInt(s);
 } else {
-FLFSIV = Double.NaN;
+FLFSIV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFLFSIVB(String s) {
 if (!s.trim().isEmpty()) {
-FLFSIVB = new Double(s);
+FLFSIVB = Byte.parseByte(s);
 } else {
-FLFSIVB = Double.NaN;
+FLFSIVB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFLFSIV_I(String s) {
 if (!s.trim().isEmpty()) {
-FLFSIV_I = new Double(s);
+FLFSIV_I = Integer.parseInt(s);
 } else {
-FLFSIV_I = Double.NaN;
+FLFSIV_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFLFSIV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FLFSIV_IFLAG = new Double(s);
+FLFSIV_IFLAG = Byte.parseByte(s);
 } else {
-FLFSIV_IFLAG = Double.NaN;
+FLFSIV_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFLFTEV(String s) {
 if (!s.trim().isEmpty()) {
-FLFTEV = new Double(s);
+FLFTEV = Integer.parseInt(s);
 } else {
-FLFTEV = Double.NaN;
+FLFTEV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFLFTEVB(String s) {
 if (!s.trim().isEmpty()) {
-FLFTEVB = new Double(s);
+FLFTEVB = Byte.parseByte(s);
 } else {
-FLFTEVB = Double.NaN;
+FLFTEVB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFLFTEV_I(String s) {
 if (!s.trim().isEmpty()) {
-FLFTEV_I = new Double(s);
+FLFTEV_I = Integer.parseInt(s);
 } else {
-FLFTEV_I = Double.NaN;
+FLFTEV_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFLFTEV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FLFTEV_IFLAG = new Double(s);
+FLFTEV_IFLAG = Byte.parseByte(s);
 } else {
-FLFTEV_IFLAG = Double.NaN;
+FLFTEV_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFLNOS1(String s) {
 if (!s.trim().isEmpty()) {
-FLNOS1 = new Double(s);
+FLNOS1 = Double.parseDouble(s);
 } else {
 FLNOS1 = Double.NaN;
 }
@@ -6349,7 +6375,7 @@ FLNOS1 = Double.NaN;
 
 protected final void initFLNOS2(String s) {
 if (!s.trim().isEmpty()) {
-FLNOS2 = new Double(s);
+FLNOS2 = Double.parseDouble(s);
 } else {
 FLNOS2 = Double.NaN;
 }
@@ -6357,7 +6383,7 @@ FLNOS2 = Double.NaN;
 
 protected final void initFLNOS3(String s) {
 if (!s.trim().isEmpty()) {
-FLNOS3 = new Double(s);
+FLNOS3 = Double.parseDouble(s);
 } else {
 FLNOS3 = Double.NaN;
 }
@@ -6365,7 +6391,7 @@ FLNOS3 = Double.NaN;
 
 protected final void initFLNOS4(String s) {
 if (!s.trim().isEmpty()) {
-FLNOS4 = new Double(s);
+FLNOS4 = Double.parseDouble(s);
 } else {
 FLNOS4 = Double.NaN;
 }
@@ -6373,423 +6399,429 @@ FLNOS4 = Double.NaN;
 
 protected final void initFLOANVB(String s) {
 if (!s.trim().isEmpty()) {
-FLOANVB = new Double(s);
+FLOANVB = Byte.parseByte(s);
 } else {
-FLOANVB = Double.NaN;
+FLOANVB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFLPROD1(String s) {
 if (!s.trim().isEmpty()) {
-FLPROD1 = new Double(s);
+FLPROD1 = Byte.parseByte(s);
 } else {
-FLPROD1 = Double.NaN;
+FLPROD1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFLPROD1_I(String s) {
 if (!s.trim().isEmpty()) {
-FLPROD1_I = new Double(s);
+FLPROD1_I = Byte.parseByte(s);
 } else {
-FLPROD1_I = Double.NaN;
+FLPROD1_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFLPROD1_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FLPROD1_IFLAG = new Double(s);
+FLPROD1_IFLAG = Byte.parseByte(s);
 } else {
-FLPROD1_IFLAG = Double.NaN;
+FLPROD1_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFLPROD2(String s) {
 if (!s.trim().isEmpty()) {
-FLPROD2 = new Double(s);
+FLPROD2 = Byte.parseByte(s);
 } else {
-FLPROD2 = Double.NaN;
+FLPROD2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFLPROD2_I(String s) {
 if (!s.trim().isEmpty()) {
-FLPROD2_I = new Double(s);
+FLPROD2_I = Byte.parseByte(s);
 } else {
-FLPROD2_I = Double.NaN;
+FLPROD2_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFLPROD2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FLPROD2_IFLAG = new Double(s);
+FLPROD2_IFLAG = Byte.parseByte(s);
 } else {
-FLPROD2_IFLAG = Double.NaN;
+FLPROD2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFLPROD3(String s) {
 if (!s.trim().isEmpty()) {
-FLPROD3 = new Double(s);
+FLPROD3 = Byte.parseByte(s);
 } else {
-FLPROD3 = Double.NaN;
+FLPROD3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFLPROD3_I(String s) {
 if (!s.trim().isEmpty()) {
-FLPROD3_I = new Double(s);
+FLPROD3_I = Byte.parseByte(s);
 } else {
-FLPROD3_I = Double.NaN;
+FLPROD3_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFLPROD3_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FLPROD3_IFLAG = new Double(s);
+FLPROD3_IFLAG = Byte.parseByte(s);
 } else {
-FLPROD3_IFLAG = Double.NaN;
+FLPROD3_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFLPROD4(String s) {
 if (!s.trim().isEmpty()) {
-FLPROD4 = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == -7) {
+FLPROD4 = false;
 } else {
-FLPROD4 = Double.NaN;
+FLPROD4 = true;
+}
 }
 }
 
 protected final void initFLPROD4_I(String s) {
 if (!s.trim().isEmpty()) {
-FLPROD4_I = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == -7) {
+FLPROD4_I = false;
 } else {
-FLPROD4_I = Double.NaN;
+FLPROD4_I = true;
+}
 }
 }
 
 protected final void initFLPROD4_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FLPROD4_IFLAG = new Double(s);
+FLPROD4_IFLAG = Byte.parseByte(s);
 } else {
-FLPROD4_IFLAG = Double.NaN;
+FLPROD4_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFNSAV1(String s) {
 if (!s.trim().isEmpty()) {
-FNSAV1 = new Double(s);
+FNSAV1 = Byte.parseByte(s);
 } else {
-FNSAV1 = Double.NaN;
+FNSAV1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFNSAV2(String s) {
 if (!s.trim().isEmpty()) {
-FNSAV2 = new Double(s);
+FNSAV2 = Byte.parseByte(s);
 } else {
-FNSAV2 = Double.NaN;
+FNSAV2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFNSAV3(String s) {
 if (!s.trim().isEmpty()) {
-FNSAV3 = new Double(s);
+FNSAV3 = Byte.parseByte(s);
 } else {
-FNSAV3 = Double.NaN;
+FNSAV3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFNSAV4(String s) {
 if (!s.trim().isEmpty()) {
-FNSAV4 = new Double(s);
+FNSAV4 = Byte.parseByte(s);
 } else {
-FNSAV4 = Double.NaN;
+FNSAV4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFNSVAL_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FNSVAL_IFLAG = new Double(s);
+FNSVAL_IFLAG = Byte.parseByte(s);
 } else {
-FNSVAL_IFLAG = Double.NaN;
+FNSVAL_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFNSVB(String s) {
 if (!s.trim().isEmpty()) {
-FNSVB = new Double(s);
+FNSVB = Byte.parseByte(s);
 } else {
-FNSVB = Double.NaN;
+FNSVB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSACSH(String s) {
 if (!s.trim().isEmpty()) {
-FSACSH = new Double(s);
+FSACSH = Byte.parseByte(s);
 } else {
-FSACSH = Double.NaN;
+FSACSH = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSACSH_I(String s) {
 if (!s.trim().isEmpty()) {
-FSACSH_I = new Double(s);
+FSACSH_I = Byte.parseByte(s);
 } else {
-FSACSH_I = Double.NaN;
+FSACSH_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSACSH_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FSACSH_IFLAG = new Double(s);
+FSACSH_IFLAG = Byte.parseByte(s);
 } else {
-FSACSH_IFLAG = Double.NaN;
+FSACSH_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSHARE1(String s) {
 if (!s.trim().isEmpty()) {
-FSHARE1 = new Double(s);
+FSHARE1 = Byte.parseByte(s);
 } else {
-FSHARE1 = Double.NaN;
+FSHARE1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSHARE1_I(String s) {
 if (!s.trim().isEmpty()) {
-FSHARE1_I = new Double(s);
+FSHARE1_I = Byte.parseByte(s);
 } else {
-FSHARE1_I = Double.NaN;
+FSHARE1_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSHARE1_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FSHARE1_IFLAG = new Double(s);
+FSHARE1_IFLAG = Byte.parseByte(s);
 } else {
-FSHARE1_IFLAG = Double.NaN;
+FSHARE1_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSHARE2(String s) {
 if (!s.trim().isEmpty()) {
-FSHARE2 = new Double(s);
+FSHARE2 = Byte.parseByte(s);
 } else {
-FSHARE2 = Double.NaN;
+FSHARE2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSHARE2_I(String s) {
 if (!s.trim().isEmpty()) {
-FSHARE2_I = new Double(s);
+FSHARE2_I = Byte.parseByte(s);
 } else {
-FSHARE2_I = Double.NaN;
+FSHARE2_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSHARE2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FSHARE2_IFLAG = new Double(s);
+FSHARE2_IFLAG = Byte.parseByte(s);
 } else {
-FSHARE2_IFLAG = Double.NaN;
+FSHARE2_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSHARE3(String s) {
 if (!s.trim().isEmpty()) {
-FSHARE3 = new Double(s);
+FSHARE3 = Byte.parseByte(s);
 } else {
-FSHARE3 = Double.NaN;
+FSHARE3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSHARE3_I(String s) {
 if (!s.trim().isEmpty()) {
-FSHARE3_I = new Double(s);
+FSHARE3_I = Byte.parseByte(s);
 } else {
-FSHARE3_I = Double.NaN;
+FSHARE3_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSHARE3_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FSHARE3_IFLAG = new Double(s);
+FSHARE3_IFLAG = Byte.parseByte(s);
 } else {
-FSHARE3_IFLAG = Double.NaN;
+FSHARE3_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSHOSV(String s) {
 if (!s.trim().isEmpty()) {
-FSHOSV = new Double(s);
+FSHOSV = Integer.parseInt(s);
 } else {
-FSHOSV = Double.NaN;
+FSHOSV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFSHOSVB(String s) {
 if (!s.trim().isEmpty()) {
-FSHOSVB = new Double(s);
+FSHOSVB = Byte.parseByte(s);
 } else {
-FSHOSVB = Double.NaN;
+FSHOSVB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSHOSV_I(String s) {
 if (!s.trim().isEmpty()) {
-FSHOSV_I = new Double(s);
+FSHOSV_I = Integer.parseInt(s);
 } else {
-FSHOSV_I = Double.NaN;
+FSHOSV_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFSHOSV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FSHOSV_IFLAG = new Double(s);
+FSHOSV_IFLAG = Byte.parseByte(s);
 } else {
-FSHOSV_IFLAG = Double.NaN;
+FSHOSV_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSHUKV(String s) {
 if (!s.trim().isEmpty()) {
-FSHUKV = new Double(s);
+FSHUKV = Integer.parseInt(s);
 } else {
-FSHUKV = Double.NaN;
+FSHUKV = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFSHUKVB(String s) {
 if (!s.trim().isEmpty()) {
-FSHUKVB = new Double(s);
+FSHUKVB = Byte.parseByte(s);
 } else {
-FSHUKVB = Double.NaN;
+FSHUKVB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSHUKV_I(String s) {
 if (!s.trim().isEmpty()) {
-FSHUKV_I = new Double(s);
+FSHUKV_I = Integer.parseInt(s);
 } else {
-FSHUKV_I = Double.NaN;
+FSHUKV_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFSHUKV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FSHUKV_IFLAG = new Double(s);
+FSHUKV_IFLAG = Byte.parseByte(s);
 } else {
-FSHUKV_IFLAG = Double.NaN;
+FSHUKV_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSINVAL(String s) {
 if (!s.trim().isEmpty()) {
-FSINVAL = new Double(s);
+FSINVAL = Integer.parseInt(s);
 } else {
-FSINVAL = Double.NaN;
+FSINVAL = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFSINVAL_I(String s) {
 if (!s.trim().isEmpty()) {
-FSINVAL_I = new Double(s);
+FSINVAL_I = Integer.parseInt(s);
 } else {
-FSINVAL_I = Double.NaN;
+FSINVAL_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFSINVAL_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FSINVAL_IFLAG = new Double(s);
+FSINVAL_IFLAG = Byte.parseByte(s);
 } else {
-FSINVAL_IFLAG = Double.NaN;
+FSINVAL_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSINVLB(String s) {
 if (!s.trim().isEmpty()) {
-FSINVLB = new Double(s);
+FSINVLB = Byte.parseByte(s);
 } else {
-FSINVLB = Double.NaN;
+FSINVLB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSNUMIN(String s) {
 if (!s.trim().isEmpty()) {
-FSNUMIN = new Double(s);
+FSNUMIN = Byte.parseByte(s);
 } else {
-FSNUMIN = Double.NaN;
+FSNUMIN = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSNUMIN_I(String s) {
 if (!s.trim().isEmpty()) {
-FSNUMIN_I = new Double(s);
+FSNUMIN_I = Byte.parseByte(s);
 } else {
-FSNUMIN_I = Double.NaN;
+FSNUMIN_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSNUMIN_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FSNUMIN_IFLAG = new Double(s);
+FSNUMIN_IFLAG = Byte.parseByte(s);
 } else {
-FSNUMIN_IFLAG = Double.NaN;
+FSNUMIN_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSNUMSH(String s) {
 if (!s.trim().isEmpty()) {
-FSNUMSH = new Double(s);
+FSNUMSH = Byte.parseByte(s);
 } else {
-FSNUMSH = Double.NaN;
+FSNUMSH = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSNUMSH_I(String s) {
 if (!s.trim().isEmpty()) {
-FSNUMSH_I = new Double(s);
+FSNUMSH_I = Byte.parseByte(s);
 } else {
-FSNUMSH_I = Double.NaN;
+FSNUMSH_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSNUMSH_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FSNUMSH_IFLAG = new Double(s);
+FSNUMSH_IFLAG = Byte.parseByte(s);
 } else {
-FSNUMSH_IFLAG = Double.NaN;
+FSNUMSH_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSOSHAV(String s) {
 if (!s.trim().isEmpty()) {
-FSOSHAV = new Double(s);
+FSOSHAV = Byte.parseByte(s);
 } else {
-FSOSHAV = Double.NaN;
+FSOSHAV = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSOSVLB(String s) {
 if (!s.trim().isEmpty()) {
-FSOSVLB = new Double(s);
+FSOSVLB = Byte.parseByte(s);
 } else {
-FSOSVLB = Double.NaN;
+FSOSVLB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSSHVAL(String s) {
 if (!s.trim().isEmpty()) {
-FSSHVAL = new Double(s);
+FSSHVAL = Integer.parseInt(s);
 } else {
-FSSHVAL = Double.NaN;
+FSSHVAL = Integer.MIN_VALUE;
 }
 }
 
 protected final void initFSSHVAL_I(String s) {
 if (!s.trim().isEmpty()) {
-FSSHVAL_I = new Double(s);
+FSSHVAL_I = Double.parseDouble(s);
 } else {
 FSSHVAL_I = Double.NaN;
 }
@@ -6797,167 +6829,179 @@ FSSHVAL_I = Double.NaN;
 
 protected final void initFSSHVAL_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-FSSHVAL_IFLAG = new Double(s);
+FSSHVAL_IFLAG = Byte.parseByte(s);
 } else {
-FSSHVAL_IFLAG = Double.NaN;
+FSSHVAL_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSSHVLB(String s) {
 if (!s.trim().isEmpty()) {
-FSSHVLB = new Double(s);
+FSSHVLB = Byte.parseByte(s);
 } else {
-FSSHVLB = Double.NaN;
+FSSHVLB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSSUPPR(String s) {
 if (!s.trim().isEmpty()) {
-FSSUPPR = new Double(s);
+FSSUPPR = Byte.parseByte(s);
 } else {
-FSSUPPR = Double.NaN;
+FSSUPPR = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSTYPIN1(String s) {
 if (!s.trim().isEmpty()) {
-FSTYPIN1 = new Double(s);
+FSTYPIN1 = Byte.parseByte(s);
 } else {
-FSTYPIN1 = Double.NaN;
+FSTYPIN1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSTYPIN2(String s) {
 if (!s.trim().isEmpty()) {
-FSTYPIN2 = new Double(s);
+FSTYPIN2 = Byte.parseByte(s);
 } else {
-FSTYPIN2 = Double.NaN;
+FSTYPIN2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSTYPIN3(String s) {
 if (!s.trim().isEmpty()) {
-FSTYPIN3 = new Double(s);
+FSTYPIN3 = Byte.parseByte(s);
 } else {
-FSTYPIN3 = Double.NaN;
+FSTYPIN3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSTYPSH1(String s) {
 if (!s.trim().isEmpty()) {
-FSTYPSH1 = new Double(s);
+FSTYPSH1 = Byte.parseByte(s);
 } else {
-FSTYPSH1 = Double.NaN;
+FSTYPSH1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSTYPSH2(String s) {
 if (!s.trim().isEmpty()) {
-FSTYPSH2 = new Double(s);
+FSTYPSH2 = Byte.parseByte(s);
 } else {
-FSTYPSH2 = Double.NaN;
+FSTYPSH2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSTYPSH3(String s) {
 if (!s.trim().isEmpty()) {
-FSTYPSH3 = new Double(s);
+FSTYPSH3 = Byte.parseByte(s);
 } else {
-FSTYPSH3 = Double.NaN;
+FSTYPSH3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFSTYPSH4(String s) {
 if (!s.trim().isEmpty()) {
-FSTYPSH4 = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == -7) {
+FSTYPSH4 = false;
 } else {
-FSTYPSH4 = Double.NaN;
+FSTYPSH4 = true;
+}
 }
 }
 
 protected final void initFTED(String s) {
 if (!s.trim().isEmpty()) {
-FTED = new Double(s);
+FTED = Byte.parseByte(s);
 } else {
-FTED = Double.NaN;
+FTED = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFTED19(String s) {
 if (!s.trim().isEmpty()) {
-FTED19 = new Double(s);
+FTED19 = Byte.parseByte(s);
 } else {
-FTED19 = Double.NaN;
+FTED19 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initFTPTWK(String s) {
 if (!s.trim().isEmpty()) {
-FTPTWK = new Double(s);
+FTPTWK = Byte.parseByte(s);
 } else {
-FTPTWK = Double.NaN;
+FTPTWK = Byte.MIN_VALUE;
 }
 }
 
 protected final void initGOR(String s) {
 if (!s.trim().isEmpty()) {
-GOR = new Double(s);
+GOR = Byte.parseByte(s);
 } else {
-GOR = Double.NaN;
+GOR = Byte.MIN_VALUE;
 }
 }
 
 protected final void initGRSESM(String s) {
 if (!s.trim().isEmpty()) {
-GRSESM = new Double(s);
+GRSESM = Byte.parseByte(s);
 } else {
-GRSESM = Double.NaN;
+GRSESM = Byte.MIN_VALUE;
 }
 }
 
 protected final void initGRSESP(String s) {
 if (!s.trim().isEmpty()) {
-GRSESP = new Double(s);
+GRSESP = Byte.parseByte(s);
 } else {
-GRSESP = Double.NaN;
+GRSESP = Byte.MIN_VALUE;
 }
 }
 
 protected final void initHASCHD(String s) {
 if (!s.trim().isEmpty()) {
-HASCHD = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 1) {
+HASCHD = false;
 } else {
-HASCHD = Double.NaN;
+HASCHD = true;
+}
 }
 }
 
 protected final void initHASDEP(String s) {
 if (!s.trim().isEmpty()) {
-HASDEP = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 1) {
+HASDEP = false;
 } else {
-HASDEP = Double.NaN;
+HASDEP = true;
+}
 }
 }
 
 protected final void initHASNDEP(String s) {
 if (!s.trim().isEmpty()) {
-HASNDEP = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 1) {
+HASNDEP = false;
 } else {
-HASNDEP = Double.NaN;
+HASNDEP = true;
+}
 }
 }
 
 protected final void initHOUSGDST(String s) {
 if (!s.trim().isEmpty()) {
-HOUSGDST = new Double(s);
+HOUSGDST = Integer.parseInt(s);
 } else {
-HOUSGDST = Double.NaN;
+HOUSGDST = Integer.MIN_VALUE;
 }
 }
 
 protected final void initHPLFT2(String s) {
 if (!s.trim().isEmpty()) {
-HPLFT2 = new Double(s);
+HPLFT2 = Double.parseDouble(s);
 } else {
 HPLFT2 = Double.NaN;
 }
@@ -6965,7 +7009,7 @@ HPLFT2 = Double.NaN;
 
 protected final void initHPOS1(String s) {
 if (!s.trim().isEmpty()) {
-HPOS1 = new Double(s);
+HPOS1 = Double.parseDouble(s);
 } else {
 HPOS1 = Double.NaN;
 }
@@ -6973,7 +7017,7 @@ HPOS1 = Double.NaN;
 
 protected final void initHPOS2(String s) {
 if (!s.trim().isEmpty()) {
-HPOS2 = new Double(s);
+HPOS2 = Double.parseDouble(s);
 } else {
 HPOS2 = Double.NaN;
 }
@@ -6981,383 +7025,389 @@ HPOS2 = Double.NaN;
 
 protected final void initIGDS1(String s) {
 if (!s.trim().isEmpty()) {
-IGDS1 = new Double(s);
+IGDS1 = Byte.parseByte(s);
 } else {
-IGDS1 = Double.NaN;
+IGDS1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIGDS10(String s) {
 if (!s.trim().isEmpty()) {
-IGDS10 = new Double(s);
+IGDS10 = Byte.parseByte(s);
 } else {
-IGDS10 = Double.NaN;
+IGDS10 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIGDS11(String s) {
 if (!s.trim().isEmpty()) {
-IGDS11 = new Double(s);
+IGDS11 = Byte.parseByte(s);
 } else {
-IGDS11 = Double.NaN;
+IGDS11 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIGDS15(String s) {
 if (!s.trim().isEmpty()) {
-IGDS15 = new Double(s);
+IGDS15 = Byte.parseByte(s);
 } else {
-IGDS15 = Double.NaN;
+IGDS15 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIGDS2(String s) {
 if (!s.trim().isEmpty()) {
-IGDS2 = new Double(s);
+IGDS2 = Byte.parseByte(s);
 } else {
-IGDS2 = Double.NaN;
+IGDS2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIGDS3(String s) {
 if (!s.trim().isEmpty()) {
-IGDS3 = new Double(s);
+IGDS3 = Byte.parseByte(s);
 } else {
-IGDS3 = Double.NaN;
+IGDS3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIGDS4(String s) {
 if (!s.trim().isEmpty()) {
-IGDS4 = new Double(s);
+IGDS4 = Byte.parseByte(s);
 } else {
-IGDS4 = Double.NaN;
+IGDS4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIGDS5(String s) {
 if (!s.trim().isEmpty()) {
-IGDS5 = new Double(s);
+IGDS5 = Byte.parseByte(s);
 } else {
-IGDS5 = Double.NaN;
+IGDS5 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIGDS8(String s) {
 if (!s.trim().isEmpty()) {
-IGDS8 = new Double(s);
+IGDS8 = Byte.parseByte(s);
 } else {
-IGDS8 = Double.NaN;
+IGDS8 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIGDS9(String s) {
 if (!s.trim().isEmpty()) {
-IGDS9 = new Double(s);
+IGDS9 = Byte.parseByte(s);
 } else {
-IGDS9 = Double.NaN;
+IGDS9 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIGFVALB(String s) {
 if (!s.trim().isEmpty()) {
-IGFVALB = new Double(s);
+IGFVALB = Byte.parseByte(s);
 } else {
-IGFVALB = Double.NaN;
+IGFVALB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIHRCNUM(String s) {
 if (!s.trim().isEmpty()) {
-IHRCNUM = new Double(s);
+IHRCNUM = Byte.parseByte(s);
 } else {
-IHRCNUM = Double.NaN;
+IHRCNUM = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIHRECNT(String s) {
 if (!s.trim().isEmpty()) {
-IHRECNT = new Double(s);
+IHRECNT = Byte.parseByte(s);
 } else {
-IHRECNT = Double.NaN;
+IHRECNT = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIHSE1(String s) {
 if (!s.trim().isEmpty()) {
-IHSE1 = new Double(s);
+IHSE1 = Byte.parseByte(s);
 } else {
-IHSE1 = Double.NaN;
+IHSE1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIHSE2(String s) {
 if (!s.trim().isEmpty()) {
-IHSE2 = new Double(s);
+IHSE2 = Byte.parseByte(s);
 } else {
-IHSE2 = Double.NaN;
+IHSE2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIHSE7(String s) {
 if (!s.trim().isEmpty()) {
-IHSE7 = new Double(s);
+IHSE7 = Byte.parseByte(s);
 } else {
-IHSE7 = Double.NaN;
+IHSE7 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initILACB(String s) {
 if (!s.trim().isEmpty()) {
-ILACB = new Double(s);
+ILACB = Byte.parseByte(s);
 } else {
-ILACB = Double.NaN;
+ILACB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initILGIFT(String s) {
 if (!s.trim().isEmpty()) {
-ILGIFT = new Double(s);
+ILGIFT = Byte.parseByte(s);
 } else {
-ILGIFT = Double.NaN;
+ILGIFT = Byte.MIN_VALUE;
 }
 }
 
 protected final void initILIFB(String s) {
 if (!s.trim().isEmpty()) {
-ILIFB = new Double(s);
+ILIFB = Byte.parseByte(s);
 } else {
-ILIFB = Double.NaN;
+ILIFB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initILINB(String s) {
 if (!s.trim().isEmpty()) {
-ILINB = new Double(s);
+ILINB = Byte.parseByte(s);
 } else {
-ILINB = Double.NaN;
+ILINB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initILLLIM(String s) {
 if (!s.trim().isEmpty()) {
-ILLLIM = new Double(s);
+ILLLIM = Byte.parseByte(s);
 } else {
-ILLLIM = Double.NaN;
+ILLLIM = Byte.MIN_VALUE;
 }
 }
 
 protected final void initILOTB(String s) {
 if (!s.trim().isEmpty()) {
-ILOTB = new Double(s);
+ILOTB = Byte.parseByte(s);
 } else {
-ILOTB = Double.NaN;
+ILOTB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initILRDB(String s) {
 if (!s.trim().isEmpty()) {
-ILRDB = new Double(s);
+ILRDB = Byte.parseByte(s);
 } else {
-ILRDB = Double.NaN;
+ILRDB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initILUMP(String s) {
 if (!s.trim().isEmpty()) {
-ILUMP = new Double(s);
+ILUMP = Byte.parseByte(s);
 } else {
-ILUMP = Double.NaN;
+ILUMP = Byte.MIN_VALUE;
 }
 }
 
 protected final void initILUMTY1(String s) {
 if (!s.trim().isEmpty()) {
-ILUMTY1 = new Double(s);
+ILUMTY1 = Byte.parseByte(s);
 } else {
-ILUMTY1 = Double.NaN;
+ILUMTY1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initILUMTY2(String s) {
 if (!s.trim().isEmpty()) {
-ILUMTY2 = new Double(s);
+ILUMTY2 = Byte.parseByte(s);
 } else {
-ILUMTY2 = Double.NaN;
+ILUMTY2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initILUMTY3(String s) {
 if (!s.trim().isEmpty()) {
-ILUMTY3 = new Double(s);
+ILUMTY3 = Byte.parseByte(s);
 } else {
-ILUMTY3 = Double.NaN;
+ILUMTY3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initILUPB(String s) {
 if (!s.trim().isEmpty()) {
-ILUPB = new Double(s);
+ILUPB = Byte.parseByte(s);
 } else {
-ILUPB = Double.NaN;
+ILUPB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initILUPP(String s) {
 if (!s.trim().isEmpty()) {
-ILUPP = new Double(s);
+ILUPP = Integer.parseInt(s);
 } else {
-ILUPP = Double.NaN;
+ILUPP = Integer.MIN_VALUE;
 }
 }
 
 protected final void initILWNB(String s) {
 if (!s.trim().isEmpty()) {
-ILWNB = new Double(s);
+ILWNB = Byte.parseByte(s);
 } else {
-ILWNB = Double.NaN;
+ILWNB = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIOUT1(String s) {
 if (!s.trim().isEmpty()) {
-IOUT1 = new Double(s);
+IOUT1 = Byte.parseByte(s);
 } else {
-IOUT1 = Double.NaN;
+IOUT1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initISDEP(String s) {
 if (!s.trim().isEmpty()) {
-ISDEP = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 1) {
+ISDEP = false;
 } else {
-ISDEP = Double.NaN;
+ISDEP = true;
+}
 }
 }
 
 protected final void initISNDEP(String s) {
 if (!s.trim().isEmpty()) {
-ISNDEP = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 1) {
+ISNDEP = false;
 } else {
-ISNDEP = Double.NaN;
+ISNDEP = true;
+}
 }
 }
 
 protected final void initIVALB2(String s) {
 if (!s.trim().isEmpty()) {
-IVALB2 = new Double(s);
+IVALB2 = Byte.parseByte(s);
 } else {
-IVALB2 = Double.NaN;
+IVALB2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIVALB3(String s) {
 if (!s.trim().isEmpty()) {
-IVALB3 = new Double(s);
+IVALB3 = Byte.parseByte(s);
 } else {
-IVALB3 = Double.NaN;
+IVALB3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIWAT1(String s) {
 if (!s.trim().isEmpty()) {
-IWAT1 = new Double(s);
+IWAT1 = Byte.parseByte(s);
 } else {
-IWAT1 = Double.NaN;
+IWAT1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIWAT13(String s) {
 if (!s.trim().isEmpty()) {
-IWAT13 = new Double(s);
+IWAT13 = Byte.parseByte(s);
 } else {
-IWAT13 = Double.NaN;
+IWAT13 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIWAT2(String s) {
 if (!s.trim().isEmpty()) {
-IWAT2 = new Double(s);
+IWAT2 = Byte.parseByte(s);
 } else {
-IWAT2 = Double.NaN;
+IWAT2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIWAT3(String s) {
 if (!s.trim().isEmpty()) {
-IWAT3 = new Double(s);
+IWAT3 = Byte.parseByte(s);
 } else {
-IWAT3 = Double.NaN;
+IWAT3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIWAT4(String s) {
 if (!s.trim().isEmpty()) {
-IWAT4 = new Double(s);
+IWAT4 = Byte.parseByte(s);
 } else {
-IWAT4 = Double.NaN;
+IWAT4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIWAT5(String s) {
 if (!s.trim().isEmpty()) {
-IWAT5 = new Double(s);
+IWAT5 = Byte.parseByte(s);
 } else {
-IWAT5 = Double.NaN;
+IWAT5 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIWAT7(String s) {
 if (!s.trim().isEmpty()) {
-IWAT7 = new Double(s);
+IWAT7 = Byte.parseByte(s);
 } else {
-IWAT7 = Double.NaN;
+IWAT7 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIWHO2(String s) {
 if (!s.trim().isEmpty()) {
-IWHO2 = new Double(s);
+IWHO2 = Byte.parseByte(s);
 } else {
-IWHO2 = Double.NaN;
+IWHO2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initIWHO3(String s) {
 if (!s.trim().isEmpty()) {
-IWHO3 = new Double(s);
+IWHO3 = Byte.parseByte(s);
 } else {
-IWHO3 = Double.NaN;
+IWHO3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initJBAWAY(String s) {
 if (!s.trim().isEmpty()) {
-JBAWAY = new Double(s);
+JBAWAY = Byte.parseByte(s);
 } else {
-JBAWAY = Double.NaN;
+JBAWAY = Byte.MIN_VALUE;
 }
 }
 
 protected final void initJOBNO(String s) {
 if (!s.trim().isEmpty()) {
-JOBNO = new Double(s);
+JOBNO = Byte.parseByte(s);
 } else {
-JOBNO = Double.NaN;
+JOBNO = Byte.MIN_VALUE;
 }
 }
 
 protected final void initLKTIME(String s) {
 if (!s.trim().isEmpty()) {
-LKTIME = new Double(s);
+LKTIME = Byte.parseByte(s);
 } else {
-LKTIME = Double.NaN;
+LKTIME = Byte.MIN_VALUE;
 }
 }
 
 protected final void initLNLFT2(String s) {
 if (!s.trim().isEmpty()) {
-LNLFT2 = new Double(s);
+LNLFT2 = Double.parseDouble(s);
 } else {
 LNLFT2 = Double.NaN;
 }
@@ -7365,7 +7415,7 @@ LNLFT2 = Double.NaN;
 
 protected final void initLNLFT3(String s) {
 if (!s.trim().isEmpty()) {
-LNLFT3 = new Double(s);
+LNLFT3 = Double.parseDouble(s);
 } else {
 LNLFT3 = Double.NaN;
 }
@@ -7373,7 +7423,7 @@ LNLFT3 = Double.NaN;
 
 protected final void initLNLFT4(String s) {
 if (!s.trim().isEmpty()) {
-LNLFT4 = new Double(s);
+LNLFT4 = Double.parseDouble(s);
 } else {
 LNLFT4 = Double.NaN;
 }
@@ -7381,7 +7431,7 @@ LNLFT4 = Double.NaN;
 
 protected final void initLNLFT5(String s) {
 if (!s.trim().isEmpty()) {
-LNLFT5 = new Double(s);
+LNLFT5 = Double.parseDouble(s);
 } else {
 LNLFT5 = Double.NaN;
 }
@@ -7389,7 +7439,7 @@ LNLFT5 = Double.NaN;
 
 protected final void initLNOS1(String s) {
 if (!s.trim().isEmpty()) {
-LNOS1 = new Double(s);
+LNOS1 = Double.parseDouble(s);
 } else {
 LNOS1 = Double.NaN;
 }
@@ -7397,7 +7447,7 @@ LNOS1 = Double.NaN;
 
 protected final void initLNOS2(String s) {
 if (!s.trim().isEmpty()) {
-LNOS2 = new Double(s);
+LNOS2 = Double.parseDouble(s);
 } else {
 LNOS2 = Double.NaN;
 }
@@ -7405,7 +7455,7 @@ LNOS2 = Double.NaN;
 
 protected final void initLNOS3(String s) {
 if (!s.trim().isEmpty()) {
-LNOS3 = new Double(s);
+LNOS3 = Double.parseDouble(s);
 } else {
 LNOS3 = Double.NaN;
 }
@@ -7413,7 +7463,7 @@ LNOS3 = Double.NaN;
 
 protected final void initLNOS4(String s) {
 if (!s.trim().isEmpty()) {
-LNOS4 = new Double(s);
+LNOS4 = Double.parseDouble(s);
 } else {
 LNOS4 = Double.NaN;
 }
@@ -7421,7 +7471,7 @@ LNOS4 = Double.NaN;
 
 protected final void initLNOS5(String s) {
 if (!s.trim().isEmpty()) {
-LNOS5 = new Double(s);
+LNOS5 = Double.parseDouble(s);
 } else {
 LNOS5 = Double.NaN;
 }
@@ -7429,31 +7479,31 @@ LNOS5 = Double.NaN;
 
 protected final void initLOOKED(String s) {
 if (!s.trim().isEmpty()) {
-LOOKED = new Double(s);
+LOOKED = Byte.parseByte(s);
 } else {
-LOOKED = Double.NaN;
+LOOKED = Byte.MIN_VALUE;
 }
 }
 
 protected final void initLSILL(String s) {
 if (!s.trim().isEmpty()) {
-LSILL = new Double(s);
+LSILL = Byte.parseByte(s);
 } else {
-LSILL = Double.NaN;
+LSILL = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMARBEF(String s) {
 if (!s.trim().isEmpty()) {
-MARBEF = new Double(s);
+MARBEF = Byte.parseByte(s);
 } else {
-MARBEF = Double.NaN;
+MARBEF = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMOLFT2(String s) {
 if (!s.trim().isEmpty()) {
-MOLFT2 = new Double(s);
+MOLFT2 = Double.parseDouble(s);
 } else {
 MOLFT2 = Double.NaN;
 }
@@ -7461,15 +7511,15 @@ MOLFT2 = Double.NaN;
 
 protected final void initMONTH(String s) {
 if (!s.trim().isEmpty()) {
-MONTH = new Double(s);
+MONTH = Byte.parseByte(s);
 } else {
-MONTH = Double.NaN;
+MONTH = Byte.MIN_VALUE;
 }
 }
 
 protected final void initMOOS1(String s) {
 if (!s.trim().isEmpty()) {
-MOOS1 = new Double(s);
+MOOS1 = Double.parseDouble(s);
 } else {
 MOOS1 = Double.NaN;
 }
@@ -7477,7 +7527,7 @@ MOOS1 = Double.NaN;
 
 protected final void initMOOS2(String s) {
 if (!s.trim().isEmpty()) {
-MOOS2 = new Double(s);
+MOOS2 = Double.parseDouble(s);
 } else {
 MOOS2 = Double.NaN;
 }
@@ -7485,23 +7535,23 @@ MOOS2 = Double.NaN;
 
 protected final void initNSSEC3(String s) {
 if (!s.trim().isEmpty()) {
-NSSEC3 = new Double(s);
+NSSEC3 = Byte.parseByte(s);
 } else {
-NSSEC3 = Double.NaN;
+NSSEC3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initNSSEC5(String s) {
 if (!s.trim().isEmpty()) {
-NSSEC5 = new Double(s);
+NSSEC5 = Byte.parseByte(s);
 } else {
-NSSEC5 = Double.NaN;
+NSSEC5 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initNSSEC8(String s) {
 if (!s.trim().isEmpty()) {
-NSSEC8 = new Double(s);
+NSSEC8 = Double.parseDouble(s);
 } else {
 NSSEC8 = Double.NaN;
 }
@@ -7509,7 +7559,7 @@ NSSEC8 = Double.NaN;
 
 protected final void initNSSECB(String s) {
 if (!s.trim().isEmpty()) {
-NSSECB = new Double(s);
+NSSECB = Double.parseDouble(s);
 } else {
 NSSECB = Double.NaN;
 }
@@ -7517,797 +7567,817 @@ NSSECB = Double.NaN;
 
 protected final void initOCSVR1(String s) {
 if (!s.trim().isEmpty()) {
-OCSVR1 = new Double(s);
+OCSVR1 = Byte.parseByte(s);
 } else {
-OCSVR1 = Double.NaN;
+OCSVR1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOCSVR2(String s) {
 if (!s.trim().isEmpty()) {
-OCSVR2 = new Double(s);
+OCSVR2 = Byte.parseByte(s);
 } else {
-OCSVR2 = Double.NaN;
+OCSVR2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOCSVR3(String s) {
 if (!s.trim().isEmpty()) {
-OCSVR3 = new Double(s);
+OCSVR3 = Byte.parseByte(s);
 } else {
-OCSVR3 = Double.NaN;
+OCSVR3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOCSVR4(String s) {
 if (!s.trim().isEmpty()) {
-OCSVR4 = new Double(s);
+OCSVR4 = Byte.parseByte(s);
 } else {
-OCSVR4 = Double.NaN;
+OCSVR4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOCSVR5(String s) {
 if (!s.trim().isEmpty()) {
-OCSVR5 = new Double(s);
+OCSVR5 = Byte.parseByte(s);
 } else {
-OCSVR5 = Double.NaN;
+OCSVR5 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOCSVR6(String s) {
 if (!s.trim().isEmpty()) {
-OCSVR6 = new Double(s);
+OCSVR6 = Byte.parseByte(s);
 } else {
-OCSVR6 = Double.NaN;
+OCSVR6 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOCSVR7(String s) {
 if (!s.trim().isEmpty()) {
-OCSVR7 = new Double(s);
+OCSVR7 = Byte.parseByte(s);
 } else {
-OCSVR7 = Double.NaN;
+OCSVR7 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOCSVR8(String s) {
 if (!s.trim().isEmpty()) {
-OCSVR8 = new Double(s);
+OCSVR8 = Byte.parseByte(s);
 } else {
-OCSVR8 = Double.NaN;
+OCSVR8 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOINTEND(String s) {
 if (!s.trim().isEmpty()) {
-OINTEND = new Double(s);
+OINTEND = Byte.parseByte(s);
 } else {
-OINTEND = Double.NaN;
+OINTEND = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOLARGE(String s) {
 if (!s.trim().isEmpty()) {
-OLARGE = new Double(s);
+OLARGE = Byte.parseByte(s);
 } else {
-OLARGE = Double.NaN;
+OLARGE = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOLEFT(String s) {
 if (!s.trim().isEmpty()) {
-OLEFT = new Double(s);
+OLEFT = Byte.parseByte(s);
 } else {
-OLEFT = Double.NaN;
+OLEFT = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOLEFTDO(String s) {
 if (!s.trim().isEmpty()) {
-OLEFTDO = new Double(s);
+OLEFTDO = Byte.parseByte(s);
 } else {
-OLEFTDO = Double.NaN;
+OLEFTDO = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOLONG(String s) {
 if (!s.trim().isEmpty()) {
-OLONG = new Double(s);
+OLONG = Byte.parseByte(s);
 } else {
-OLONG = Double.NaN;
+OLONG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOLONGYR(String s) {
 if (!s.trim().isEmpty()) {
-OLONGYR = new Double(s);
+OLONGYR = Byte.parseByte(s);
 } else {
-OLONGYR = Double.NaN;
+OLONGYR = Byte.MIN_VALUE;
 }
 }
 
 protected final void initONETEN(String s) {
 if (!s.trim().isEmpty()) {
-ONETEN = new Double(s);
+ONETEN = Byte.parseByte(s);
 } else {
-ONETEN = Double.NaN;
+ONETEN = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOPENS01(String s) {
 if (!s.trim().isEmpty()) {
-OPENS01 = new Double(s);
+OPENS01 = Byte.parseByte(s);
 } else {
-OPENS01 = Double.NaN;
+OPENS01 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOPENS02(String s) {
 if (!s.trim().isEmpty()) {
-OPENS02 = new Double(s);
+OPENS02 = Byte.parseByte(s);
 } else {
-OPENS02 = Double.NaN;
+OPENS02 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOPENS03(String s) {
 if (!s.trim().isEmpty()) {
-OPENS03 = new Double(s);
+OPENS03 = Byte.parseByte(s);
 } else {
-OPENS03 = Double.NaN;
+OPENS03 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOPENS04(String s) {
 if (!s.trim().isEmpty()) {
-OPENS04 = new Double(s);
+OPENS04 = Byte.parseByte(s);
 } else {
-OPENS04 = Double.NaN;
+OPENS04 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOPENS05(String s) {
 if (!s.trim().isEmpty()) {
-OPENS05 = new Double(s);
+OPENS05 = Byte.parseByte(s);
 } else {
-OPENS05 = Double.NaN;
+OPENS05 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOPENS06(String s) {
 if (!s.trim().isEmpty()) {
-OPENS06 = new Double(s);
+OPENS06 = Byte.parseByte(s);
 } else {
-OPENS06 = Double.NaN;
+OPENS06 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOPENS07(String s) {
 if (!s.trim().isEmpty()) {
-OPENS07 = new Double(s);
+OPENS07 = Byte.parseByte(s);
 } else {
-OPENS07 = Double.NaN;
+OPENS07 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOPENS08(String s) {
 if (!s.trim().isEmpty()) {
-OPENS08 = new Double(s);
+OPENS08 = Byte.parseByte(s);
 } else {
-OPENS08 = Double.NaN;
+OPENS08 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initORETINC(String s) {
 if (!s.trim().isEmpty()) {
-ORETINC = new Double(s);
+ORETINC = Byte.parseByte(s);
 } else {
-ORETINC = Double.NaN;
+ORETINC = Byte.MIN_VALUE;
 }
 }
 
 protected final void initORISKA(String s) {
 if (!s.trim().isEmpty()) {
-ORISKA = new Double(s);
+ORISKA = Byte.parseByte(s);
 } else {
-ORISKA = Double.NaN;
+ORISKA = Byte.MIN_VALUE;
 }
 }
 
 protected final void initORISKC(String s) {
 if (!s.trim().isEmpty()) {
-ORISKC = new Double(s);
+ORISKC = Byte.parseByte(s);
 } else {
-ORISKC = Double.NaN;
+ORISKC = Byte.MIN_VALUE;
 }
 }
 
 protected final void initORUNDO01(String s) {
 if (!s.trim().isEmpty()) {
-ORUNDO01 = new Double(s);
+ORUNDO01 = Byte.parseByte(s);
 } else {
-ORUNDO01 = Double.NaN;
+ORUNDO01 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initORUNDO02(String s) {
 if (!s.trim().isEmpty()) {
-ORUNDO02 = new Double(s);
+ORUNDO02 = Byte.parseByte(s);
 } else {
-ORUNDO02 = Double.NaN;
+ORUNDO02 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initORUNDO03(String s) {
 if (!s.trim().isEmpty()) {
-ORUNDO03 = new Double(s);
+ORUNDO03 = Byte.parseByte(s);
 } else {
-ORUNDO03 = Double.NaN;
+ORUNDO03 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initORUNDO04(String s) {
 if (!s.trim().isEmpty()) {
-ORUNDO04 = new Double(s);
+ORUNDO04 = Byte.parseByte(s);
 } else {
-ORUNDO04 = Double.NaN;
+ORUNDO04 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initORUNDO05(String s) {
 if (!s.trim().isEmpty()) {
-ORUNDO05 = new Double(s);
+ORUNDO05 = Byte.parseByte(s);
 } else {
-ORUNDO05 = Double.NaN;
+ORUNDO05 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initORUNDO06(String s) {
 if (!s.trim().isEmpty()) {
-ORUNDO06 = new Double(s);
+ORUNDO06 = Byte.parseByte(s);
 } else {
-ORUNDO06 = Double.NaN;
+ORUNDO06 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initORUNDO07(String s) {
 if (!s.trim().isEmpty()) {
-ORUNDO07 = new Double(s);
+ORUNDO07 = Byte.parseByte(s);
 } else {
-ORUNDO07 = Double.NaN;
+ORUNDO07 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initORUNDO08(String s) {
 if (!s.trim().isEmpty()) {
-ORUNDO08 = new Double(s);
+ORUNDO08 = Byte.parseByte(s);
 } else {
-ORUNDO08 = Double.NaN;
+ORUNDO08 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initORUNOUT(String s) {
 if (!s.trim().isEmpty()) {
-ORUNOUT = new Double(s);
+ORUNOUT = Byte.parseByte(s);
 } else {
-ORUNOUT = Double.NaN;
+ORUNOUT = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOSITUAT(String s) {
 if (!s.trim().isEmpty()) {
-OSITUAT = new Double(s);
+OSITUAT = Byte.parseByte(s);
 } else {
-OSITUAT = Double.NaN;
+OSITUAT = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOSTANDL(String s) {
 if (!s.trim().isEmpty()) {
-OSTANDL = new Double(s);
+OSTANDL = Byte.parseByte(s);
 } else {
-OSTANDL = Double.NaN;
+OSTANDL = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOTHSRC1(String s) {
 if (!s.trim().isEmpty()) {
-OTHSRC1 = new Double(s);
+OTHSRC1 = Byte.parseByte(s);
 } else {
-OTHSRC1 = Double.NaN;
+OTHSRC1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOTHSRC1_I(String s) {
 if (!s.trim().isEmpty()) {
-OTHSRC1_I = new Double(s);
+OTHSRC1_I = Byte.parseByte(s);
 } else {
-OTHSRC1_I = Double.NaN;
+OTHSRC1_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOTHSRC1_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-OTHSRC1_IFLAG = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+OTHSRC1_IFLAG = false;
 } else {
-OTHSRC1_IFLAG = Double.NaN;
+OTHSRC1_IFLAG = true;
+}
 }
 }
 
 protected final void initOTHSRC2(String s) {
 if (!s.trim().isEmpty()) {
-OTHSRC2 = new Double(s);
+OTHSRC2 = Byte.parseByte(s);
 } else {
-OTHSRC2 = Double.NaN;
+OTHSRC2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOTHSRC2_I(String s) {
 if (!s.trim().isEmpty()) {
-OTHSRC2_I = new Double(s);
+OTHSRC2_I = Byte.parseByte(s);
 } else {
-OTHSRC2_I = Double.NaN;
+OTHSRC2_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOTHSRC2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-OTHSRC2_IFLAG = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+OTHSRC2_IFLAG = false;
 } else {
-OTHSRC2_IFLAG = Double.NaN;
+OTHSRC2_IFLAG = true;
+}
 }
 }
 
 protected final void initOTHSRC3(String s) {
 if (!s.trim().isEmpty()) {
-OTHSRC3 = new Double(s);
+OTHSRC3 = Byte.parseByte(s);
 } else {
-OTHSRC3 = Double.NaN;
+OTHSRC3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOTHSRC3_I(String s) {
 if (!s.trim().isEmpty()) {
-OTHSRC3_I = new Double(s);
+OTHSRC3_I = Byte.parseByte(s);
 } else {
-OTHSRC3_I = Double.NaN;
+OTHSRC3_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOTHSRC3_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-OTHSRC3_IFLAG = new Double(s);
+OTHSRC3_IFLAG = Byte.parseByte(s);
 } else {
-OTHSRC3_IFLAG = Double.NaN;
+OTHSRC3_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOTRUST01(String s) {
 if (!s.trim().isEmpty()) {
-OTRUST01 = new Double(s);
+OTRUST01 = Byte.parseByte(s);
 } else {
-OTRUST01 = Double.NaN;
+OTRUST01 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOTRUST02(String s) {
 if (!s.trim().isEmpty()) {
-OTRUST02 = new Double(s);
+OTRUST02 = Byte.parseByte(s);
 } else {
-OTRUST02 = Double.NaN;
+OTRUST02 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOTRUST03(String s) {
 if (!s.trim().isEmpty()) {
-OTRUST03 = new Double(s);
+OTRUST03 = Byte.parseByte(s);
 } else {
-OTRUST03 = Double.NaN;
+OTRUST03 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOTRUST04(String s) {
 if (!s.trim().isEmpty()) {
-OTRUST04 = new Double(s);
+OTRUST04 = Byte.parseByte(s);
 } else {
-OTRUST04 = Double.NaN;
+OTRUST04 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOTRUST05(String s) {
 if (!s.trim().isEmpty()) {
-OTRUST05 = new Double(s);
+OTRUST05 = Byte.parseByte(s);
 } else {
-OTRUST05 = Double.NaN;
+OTRUST05 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOTRUST06(String s) {
 if (!s.trim().isEmpty()) {
-OTRUST06 = new Double(s);
+OTRUST06 = Byte.parseByte(s);
 } else {
-OTRUST06 = Double.NaN;
+OTRUST06 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOTRUST07(String s) {
 if (!s.trim().isEmpty()) {
-OTRUST07 = new Double(s);
+OTRUST07 = Byte.parseByte(s);
 } else {
-OTRUST07 = Double.NaN;
+OTRUST07 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOTRUST08(String s) {
 if (!s.trim().isEmpty()) {
-OTRUST08 = new Double(s);
+OTRUST08 = Byte.parseByte(s);
 } else {
-OTRUST08 = Double.NaN;
+OTRUST08 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOTRUST09(String s) {
 if (!s.trim().isEmpty()) {
-OTRUST09 = new Double(s);
+OTRUST09 = Byte.parseByte(s);
 } else {
-OTRUST09 = Double.NaN;
+OTRUST09 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOTRUST10(String s) {
 if (!s.trim().isEmpty()) {
-OTRUST10 = new Double(s);
+OTRUST10 = Byte.parseByte(s);
 } else {
-OTRUST10 = Double.NaN;
+OTRUST10 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOTRUST11(String s) {
 if (!s.trim().isEmpty()) {
-OTRUST11 = new Double(s);
+OTRUST11 = Byte.parseByte(s);
 } else {
-OTRUST11 = Double.NaN;
+OTRUST11 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOTRUST12(String s) {
 if (!s.trim().isEmpty()) {
-OTRUST12 = new Double(s);
+OTRUST12 = Byte.parseByte(s);
 } else {
-OTRUST12 = Double.NaN;
+OTRUST12 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOTRUST13(String s) {
 if (!s.trim().isEmpty()) {
-OTRUST13 = new Double(s);
+OTRUST13 = Byte.parseByte(s);
 } else {
-OTRUST13 = Double.NaN;
+OTRUST13 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOTRUST14(String s) {
 if (!s.trim().isEmpty()) {
-OTRUST14 = new Double(s);
+OTRUST14 = Byte.parseByte(s);
 } else {
-OTRUST14 = Double.NaN;
+OTRUST14 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOUNDER(String s) {
 if (!s.trim().isEmpty()) {
-OUNDER = new Double(s);
+OUNDER = Byte.parseByte(s);
 } else {
-OUNDER = Double.NaN;
+OUNDER = Byte.MIN_VALUE;
 }
 }
 
 protected final void initOWNBUS(String s) {
 if (!s.trim().isEmpty()) {
-OWNBUS = new Double(s);
+OWNBUS = Byte.parseByte(s);
 } else {
-OWNBUS = Double.NaN;
+OWNBUS = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPAGERET(String s) {
 if (!s.trim().isEmpty()) {
-PAGERET = new Double(s);
+PAGERET = Byte.parseByte(s);
 } else {
-PAGERET = Double.NaN;
+PAGERET = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPARTNER(String s) {
 if (!s.trim().isEmpty()) {
-PARTNER = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 1) {
+PARTNER = false;
 } else {
-PARTNER = Double.NaN;
+PARTNER = true;
+}
 }
 }
 
 protected final void initPARTNO(String s) {
 if (!s.trim().isEmpty()) {
-PARTNO = new Double(s);
+PARTNO = Byte.parseByte(s);
 } else {
-PARTNO = Double.NaN;
+PARTNO = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPAYBON(String s) {
 if (!s.trim().isEmpty()) {
-PAYBON = new Double(s);
+PAYBON = Byte.parseByte(s);
 } else {
-PAYBON = Double.NaN;
+PAYBON = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPAYESM(String s) {
 if (!s.trim().isEmpty()) {
-PAYESM = new Double(s);
+PAYESM = Byte.parseByte(s);
 } else {
-PAYESM = Double.NaN;
+PAYESM = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPAYESP(String s) {
 if (!s.trim().isEmpty()) {
-PAYESP = new Double(s);
+PAYESP = Byte.parseByte(s);
 } else {
-PAYESP = Double.NaN;
+PAYESP = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPAYINC1(String s) {
 if (!s.trim().isEmpty()) {
-PAYINC1 = new Double(s);
+PAYINC1 = Byte.parseByte(s);
 } else {
-PAYINC1 = Double.NaN;
+PAYINC1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPAYINC2(String s) {
 if (!s.trim().isEmpty()) {
-PAYINC2 = new Double(s);
+PAYINC2 = Byte.parseByte(s);
 } else {
-PAYINC2 = Double.NaN;
+PAYINC2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPAYINC3(String s) {
 if (!s.trim().isEmpty()) {
-PAYINC3 = new Double(s);
+PAYINC3 = Byte.parseByte(s);
 } else {
-PAYINC3 = Double.NaN;
+PAYINC3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPAYINC4(String s) {
 if (!s.trim().isEmpty()) {
-PAYINC4 = new Double(s);
+PAYINC4 = Byte.parseByte(s);
 } else {
-PAYINC4 = Double.NaN;
+PAYINC4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPAYINC5(String s) {
 if (!s.trim().isEmpty()) {
-PAYINC5 = new Double(s);
+PAYINC5 = Byte.parseByte(s);
 } else {
-PAYINC5 = Double.NaN;
+PAYINC5 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPAYINC6(String s) {
 if (!s.trim().isEmpty()) {
-PAYINC6 = new Double(s);
+PAYINC6 = Byte.parseByte(s);
 } else {
-PAYINC6 = Double.NaN;
+PAYINC6 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPAYPER(String s) {
 if (!s.trim().isEmpty()) {
-PAYPER = new Double(s);
+PAYPER = Byte.parseByte(s);
 } else {
-PAYPER = Double.NaN;
+PAYPER = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPAYSLP(String s) {
 if (!s.trim().isEmpty()) {
-PAYSLP = new Double(s);
+PAYSLP = Byte.parseByte(s);
 } else {
-PAYSLP = Double.NaN;
+PAYSLP = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPEARLRS(String s) {
 if (!s.trim().isEmpty()) {
-PEARLRS = new Double(s);
+PEARLRS = Byte.parseByte(s);
 } else {
-PEARLRS = Double.NaN;
+PEARLRS = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPEMELG(String s) {
 if (!s.trim().isEmpty()) {
-PEMELG = new Double(s);
+PEMELG = Byte.parseByte(s);
 } else {
-PEMELG = Double.NaN;
+PEMELG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPEMELG_I(String s) {
 if (!s.trim().isEmpty()) {
-PEMELG_I = new Double(s);
+PEMELG_I = Byte.parseByte(s);
 } else {
-PEMELG_I = Double.NaN;
+PEMELG_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPEMELG_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-PEMELG_IFLAG = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+PEMELG_IFLAG = false;
 } else {
-PEMELG_IFLAG = Double.NaN;
+PEMELG_IFLAG = true;
+}
 }
 }
 
 protected final void initPEMMEM(String s) {
 if (!s.trim().isEmpty()) {
-PEMMEM = new Double(s);
+PEMMEM = Byte.parseByte(s);
 } else {
-PEMMEM = Double.NaN;
+PEMMEM = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPEMMEM_I(String s) {
 if (!s.trim().isEmpty()) {
-PEMMEM_I = new Double(s);
+PEMMEM_I = Byte.parseByte(s);
 } else {
-PEMMEM_I = Double.NaN;
+PEMMEM_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPEMMEM_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-PEMMEM_IFLAG = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+PEMMEM_IFLAG = false;
 } else {
-PEMMEM_IFLAG = Double.NaN;
+PEMMEM_IFLAG = true;
+}
 }
 }
 
 protected final void initPEMOFF(String s) {
 if (!s.trim().isEmpty()) {
-PEMOFF = new Double(s);
+PEMOFF = Byte.parseByte(s);
 } else {
-PEMOFF = Double.NaN;
+PEMOFF = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPEMOFF_I(String s) {
 if (!s.trim().isEmpty()) {
-PEMOFF_I = new Double(s);
+PEMOFF_I = Byte.parseByte(s);
 } else {
-PEMOFF_I = Double.NaN;
+PEMOFF_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPEMOFF_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-PEMOFF_IFLAG = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+PEMOFF_IFLAG = false;
 } else {
-PEMOFF_IFLAG = Double.NaN;
+PEMOFF_IFLAG = true;
+}
 }
 }
 
 protected final void initPERSONW1(String s) {
 if (!s.trim().isEmpty()) {
-PERSONW1 = new Integer(s);
+PERSONW1 = Byte.parseByte(s);
+} else {
+PERSONW1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPERSPROX(String s) {
 if (!s.trim().isEmpty()) {
-PERSPROX = new Double(s);
+PERSPROX = Byte.parseByte(s);
 } else {
-PERSPROX = Double.NaN;
+PERSPROX = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPEVERC(String s) {
 if (!s.trim().isEmpty()) {
-PEVERC = new Double(s);
+PEVERC = Byte.parseByte(s);
 } else {
-PEVERC = Double.NaN;
+PEVERC = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPEVERC_I(String s) {
 if (!s.trim().isEmpty()) {
-PEVERC_I = new Double(s);
+PEVERC_I = Byte.parseByte(s);
 } else {
-PEVERC_I = Double.NaN;
+PEVERC_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPEVERC_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-PEVERC_IFLAG = new Double(s);
+PEVERC_IFLAG = Byte.parseByte(s);
 } else {
-PEVERC_IFLAG = Double.NaN;
+PEVERC_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPEVERNC(String s) {
 if (!s.trim().isEmpty()) {
-PEVERNC = new Double(s);
+PEVERNC = Byte.parseByte(s);
 } else {
-PEVERNC = Double.NaN;
+PEVERNC = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPEVERNC_I(String s) {
 if (!s.trim().isEmpty()) {
-PEVERNC_I = new Double(s);
+PEVERNC_I = Byte.parseByte(s);
 } else {
-PEVERNC_I = Double.NaN;
+PEVERNC_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPEVERNC_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-PEVERNC_IFLAG = new Double(s);
+PEVERNC_IFLAG = Byte.parseByte(s);
 } else {
-PEVERNC_IFLAG = Double.NaN;
+PEVERNC_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPEXPRET(String s) {
 if (!s.trim().isEmpty()) {
-PEXPRET = new Double(s);
+PEXPRET = Byte.parseByte(s);
 } else {
-PEXPRET = Double.NaN;
+PEXPRET = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPFNUM(String s) {
 if (!s.trim().isEmpty()) {
-PFNUM = new Double(s);
+PFNUM = Byte.parseByte(s);
 } else {
-PFNUM = Double.NaN;
+PFNUM = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPFNUM_I(String s) {
 if (!s.trim().isEmpty()) {
-PFNUM_I = new Double(s);
+PFNUM_I = Byte.parseByte(s);
 } else {
-PFNUM_I = Double.NaN;
+PFNUM_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPFNUM_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-PFNUM_IFLAG = new Double(s);
+PFNUM_IFLAG = Byte.parseByte(s);
 } else {
-PFNUM_IFLAG = Double.NaN;
+PFNUM_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPFULRET(String s) {
 if (!s.trim().isEmpty()) {
-PFULRET = new Double(s);
+PFULRET = Byte.parseByte(s);
 } else {
-PFULRET = Double.NaN;
+PFULRET = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPINCINP(String s) {
 if (!s.trim().isEmpty()) {
-PINCINP = new Double(s);
+PINCINP = Double.parseDouble(s);
 } else {
 PINCINP = Double.NaN;
 }
@@ -8315,175 +8385,190 @@ PINCINP = Double.NaN;
 
 protected final void initPOCNMSC(String s) {
 if (!s.trim().isEmpty()) {
-POCNMSC = new Double(s);
+POCNMSC = Byte.parseByte(s);
 } else {
-POCNMSC = Double.NaN;
+POCNMSC = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPOCNMSC_I(String s) {
 if (!s.trim().isEmpty()) {
-POCNMSC_I = new Double(s);
+POCNMSC_I = Byte.parseByte(s);
 } else {
-POCNMSC_I = Double.NaN;
+POCNMSC_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPOCNMSC_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-POCNMSC_IFLAG = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+POCNMSC_IFLAG = false;
 } else {
-POCNMSC_IFLAG = Double.NaN;
+POCNMSC_IFLAG = true;
+}
 }
 }
 
 protected final void initPPRNMSC(String s) {
 if (!s.trim().isEmpty()) {
-PPRNMSC = new Double(s);
+PPRNMSC = Byte.parseByte(s);
 } else {
-PPRNMSC = Double.NaN;
+PPRNMSC = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPPRNMSC_I(String s) {
 if (!s.trim().isEmpty()) {
-PPRNMSC_I = new Double(s);
+PPRNMSC_I = Byte.parseByte(s);
 } else {
-PPRNMSC_I = Double.NaN;
+PPRNMSC_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPPRNMSC_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-PPRNMSC_IFLAG = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+PPRNMSC_IFLAG = false;
 } else {
-PPRNMSC_IFLAG = Double.NaN;
+PPRNMSC_IFLAG = true;
+}
 }
 }
 
 protected final void initPPYSTP10(String s) {
 if (!s.trim().isEmpty()) {
-PPYSTP10 = new Double(s);
+PPYSTP10 = Byte.parseByte(s);
 } else {
-PPYSTP10 = Double.NaN;
+PPYSTP10 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPRETAIN(String s) {
 if (!s.trim().isEmpty()) {
-PRETAIN = new Double(s);
+PRETAIN = Byte.parseByte(s);
 } else {
-PRETAIN = Double.NaN;
+PRETAIN = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPRETAIN_I(String s) {
 if (!s.trim().isEmpty()) {
-PRETAIN_I = new Double(s);
+PRETAIN_I = Byte.parseByte(s);
 } else {
-PRETAIN_I = Double.NaN;
+PRETAIN_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPRETAIN_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-PRETAIN_IFLAG = new Double(s);
+PRETAIN_IFLAG = Byte.parseByte(s);
 } else {
-PRETAIN_IFLAG = Double.NaN;
+PRETAIN_IFLAG = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPSCHM_F(String s) {
 if (!s.trim().isEmpty()) {
-PSCHM_F = new Double(s);
+PSCHM_F = Byte.parseByte(s);
 } else {
-PSCHM_F = Double.NaN;
+PSCHM_F = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPSCHM_F_I(String s) {
 if (!s.trim().isEmpty()) {
-PSCHM_F_I = new Double(s);
+PSCHM_F_I = Byte.parseByte(s);
 } else {
-PSCHM_F_I = Double.NaN;
+PSCHM_F_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPSCHM_F_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-PSCHM_F_IFLAG = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+PSCHM_F_IFLAG = false;
 } else {
-PSCHM_F_IFLAG = Double.NaN;
+PSCHM_F_IFLAG = true;
+}
 }
 }
 
 protected final void initPSCHM_S(String s) {
 if (!s.trim().isEmpty()) {
-PSCHM_S = new Double(s);
+PSCHM_S = Byte.parseByte(s);
 } else {
-PSCHM_S = Double.NaN;
+PSCHM_S = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPSCHM_S_I(String s) {
 if (!s.trim().isEmpty()) {
-PSCHM_S_I = new Double(s);
+PSCHM_S_I = Byte.parseByte(s);
 } else {
-PSCHM_S_I = Double.NaN;
+PSCHM_S_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPSCHM_S_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-PSCHM_S_IFLAG = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+PSCHM_S_IFLAG = false;
 } else {
-PSCHM_S_IFLAG = Double.NaN;
+PSCHM_S_IFLAG = true;
+}
 }
 }
 
 protected final void initPSCHM_T(String s) {
 if (!s.trim().isEmpty()) {
-PSCHM_T = new Double(s);
+PSCHM_T = Byte.parseByte(s);
 } else {
-PSCHM_T = Double.NaN;
+PSCHM_T = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPSCHM_T_I(String s) {
 if (!s.trim().isEmpty()) {
-PSCHM_T_I = new Double(s);
+PSCHM_T_I = Byte.parseByte(s);
 } else {
-PSCHM_T_I = Double.NaN;
+PSCHM_T_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPSCHM_T_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-PSCHM_T_IFLAG = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+PSCHM_T_IFLAG = false;
 } else {
-PSCHM_T_IFLAG = Double.NaN;
+PSCHM_T_IFLAG = true;
+}
 }
 }
 
 protected final void initPSIT(String s) {
 if (!s.trim().isEmpty()) {
-PSIT = new Double(s);
+PSIT = Byte.parseByte(s);
 } else {
-PSIT = Double.NaN;
+PSIT = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPSITF(String s) {
 if (!s.trim().isEmpty()) {
-PSITF = new Double(s);
+PSITF = Byte.parseByte(s);
 } else {
-PSITF = Double.NaN;
+PSITF = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPWEXPA(String s) {
 if (!s.trim().isEmpty()) {
-PWEXPA = new Double(s);
+PWEXPA = Double.parseDouble(s);
 } else {
 PWEXPA = Double.NaN;
 }
@@ -8491,335 +8576,350 @@ PWEXPA = Double.NaN;
 
 protected final void initPWEXPA_I(String s) {
 if (!s.trim().isEmpty()) {
-PWEXPA_I = new Double(s);
+PWEXPA_I = Integer.parseInt(s);
 } else {
-PWEXPA_I = Double.NaN;
+PWEXPA_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initPWEXPA_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-PWEXPA_IFLAG = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+PWEXPA_IFLAG = false;
 } else {
-PWEXPA_IFLAG = Double.NaN;
+PWEXPA_IFLAG = true;
+}
 }
 }
 
 protected final void initPWEXPH(String s) {
 if (!s.trim().isEmpty()) {
-PWEXPH = new Double(s);
+PWEXPH = Byte.parseByte(s);
 } else {
-PWEXPH = Double.NaN;
+PWEXPH = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPWEXPH_I(String s) {
 if (!s.trim().isEmpty()) {
-PWEXPH_I = new Double(s);
+PWEXPH_I = Byte.parseByte(s);
 } else {
-PWEXPH_I = Double.NaN;
+PWEXPH_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPWEXPH_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-PWEXPH_IFLAG = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+PWEXPH_IFLAG = false;
 } else {
-PWEXPH_IFLAG = Double.NaN;
+PWEXPH_IFLAG = true;
+}
 }
 }
 
 protected final void initPWID(String s) {
 if (!s.trim().isEmpty()) {
-PWID = new Double(s);
+PWID = Byte.parseByte(s);
 } else {
-PWID = Double.NaN;
+PWID = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPWIDFUT(String s) {
 if (!s.trim().isEmpty()) {
-PWIDFUT = new Double(s);
+PWIDFUT = Byte.parseByte(s);
 } else {
-PWIDFUT = Double.NaN;
+PWIDFUT = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPWIDFUT_I(String s) {
 if (!s.trim().isEmpty()) {
-PWIDFUT_I = new Double(s);
+PWIDFUT_I = Byte.parseByte(s);
 } else {
-PWIDFUT_I = Double.NaN;
+PWIDFUT_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initPWIDFUT_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-PWIDFUT_IFLAG = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+PWIDFUT_IFLAG = false;
 } else {
-PWIDFUT_IFLAG = Double.NaN;
+PWIDFUT_IFLAG = true;
+}
 }
 }
 
 protected final void initP_FLAG1(String s) {
 if (!s.trim().isEmpty()) {
-P_FLAG1 = new Double(s);
+P_FLAG1 = Byte.parseByte(s);
 } else {
-P_FLAG1 = Double.NaN;
+P_FLAG1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initP_FLAG3(String s) {
 if (!s.trim().isEmpty()) {
-P_FLAG3 = new Double(s);
+P_FLAG3 = Byte.parseByte(s);
 } else {
-P_FLAG3 = Double.NaN;
+P_FLAG3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initP_FLAG4(String s) {
 if (!s.trim().isEmpty()) {
-P_FLAG4 = new Double(s);
+P_FLAG4 = Byte.parseByte(s);
 } else {
-P_FLAG4 = Double.NaN;
+P_FLAG4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initQHEALTH1(String s) {
 if (!s.trim().isEmpty()) {
-QHEALTH1 = new Double(s);
+QHEALTH1 = Byte.parseByte(s);
 } else {
-QHEALTH1 = Double.NaN;
+QHEALTH1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initQUALCHK(String s) {
 if (!s.trim().isEmpty()) {
-QUALCHK = new Double(s);
+QUALCHK = Byte.parseByte(s);
 } else {
-QUALCHK = Double.NaN;
+QUALCHK = Byte.MIN_VALUE;
 }
 }
 
 protected final void initREGLRPY1(String s) {
 if (!s.trim().isEmpty()) {
-REGLRPY1 = new Double(s);
+REGLRPY1 = Byte.parseByte(s);
 } else {
-REGLRPY1 = Double.NaN;
+REGLRPY1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initREGLRPY2(String s) {
 if (!s.trim().isEmpty()) {
-REGLRPY2 = new Double(s);
+REGLRPY2 = Byte.parseByte(s);
 } else {
-REGLRPY2 = Double.NaN;
+REGLRPY2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initRELBUS(String s) {
 if (!s.trim().isEmpty()) {
-RELBUS = new Double(s);
+RELBUS = Byte.parseByte(s);
 } else {
-RELBUS = Double.NaN;
+RELBUS = Byte.MIN_VALUE;
 }
 }
 
 protected final void initRENTPAY(String s) {
 if (!s.trim().isEmpty()) {
-RENTPAY = new Double(s);
+RENTPAY = Byte.parseByte(s);
 } else {
-RENTPAY = Double.NaN;
+RENTPAY = Byte.MIN_VALUE;
 }
 }
 
 protected final void initSCHEMEET(String s) {
 if (!s.trim().isEmpty()) {
-SCHEMEET = new Double(s);
+SCHEMEET = Byte.parseByte(s);
 } else {
-SCHEMEET = Double.NaN;
+SCHEMEET = Byte.MIN_VALUE;
 }
 }
 
 protected final void initSEAMK(String s) {
 if (!s.trim().isEmpty()) {
-SEAMK = new Double(s);
+SEAMK = Byte.parseByte(s);
 } else {
-SEAMK = Double.NaN;
+SEAMK = Byte.MIN_VALUE;
 }
 }
 
 protected final void initSEESM(String s) {
 if (!s.trim().isEmpty()) {
-SEESM = new Double(s);
+SEESM = Byte.parseByte(s);
 } else {
-SEESM = Double.NaN;
+SEESM = Byte.MIN_VALUE;
 }
 }
 
 protected final void initSEESW(String s) {
 if (!s.trim().isEmpty()) {
-SEESW = new Double(s);
+SEESW = Byte.parseByte(s);
 } else {
-SEESW = Double.NaN;
+SEESW = Byte.MIN_VALUE;
 }
 }
 
 protected final void initSELECTAD(String s) {
 if (!s.trim().isEmpty()) {
-SELECTAD = new Double(s);
+SELECTAD = Byte.parseByte(s);
 } else {
-SELECTAD = Double.NaN;
+SELECTAD = Byte.MIN_VALUE;
 }
 }
 
 protected final void initSEMN(String s) {
 if (!s.trim().isEmpty()) {
-SEMN = new Double(s);
+SEMN = Byte.parseByte(s);
 } else {
-SEMN = Double.NaN;
+SEMN = Byte.MIN_VALUE;
 }
 }
 
 protected final void initSEMPSTY(String s) {
 if (!s.trim().isEmpty()) {
-SEMPSTY = new Double(s);
+SEMPSTY = Short.parseShort(s);
 } else {
-SEMPSTY = Double.NaN;
+SEMPSTY = Short.MIN_VALUE;
 }
 }
 
 protected final void initSEPEL(String s) {
 if (!s.trim().isEmpty()) {
-SEPEL = new Double(s);
+SEPEL = Byte.parseByte(s);
 } else {
-SEPEL = Double.NaN;
+SEPEL = Byte.MIN_VALUE;
 }
 }
 
 protected final void initSEPER(String s) {
 if (!s.trim().isEmpty()) {
-SEPER = new Double(s);
+SEPER = Byte.parseByte(s);
 } else {
-SEPER = Double.NaN;
+SEPER = Byte.MIN_VALUE;
 }
 }
 
 protected final void initSEX(String s) {
 if (!s.trim().isEmpty()) {
-SEX = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 1) {
+SEX = false;
 } else {
-SEX = Double.NaN;
+SEX = true;
+}
 }
 }
 
 protected final void initSINGPAR(String s) {
 if (!s.trim().isEmpty()) {
-SINGPAR = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 1) {
+SINGPAR = false;
 } else {
-SINGPAR = Double.NaN;
+SINGPAR = true;
+}
 }
 }
 
 protected final void initSJEMP1(String s) {
 if (!s.trim().isEmpty()) {
-SJEMP1 = new Double(s);
+SJEMP1 = Byte.parseByte(s);
 } else {
-SJEMP1 = Double.NaN;
+SJEMP1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initSJEMP2(String s) {
 if (!s.trim().isEmpty()) {
-SJEMP2 = new Double(s);
+SJEMP2 = Byte.parseByte(s);
 } else {
-SJEMP2 = Double.NaN;
+SJEMP2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initSJOB2(String s) {
 if (!s.trim().isEmpty()) {
-SJOB2 = new Double(s);
+SJOB2 = Byte.parseByte(s);
 } else {
-SJOB2 = Double.NaN;
+SJOB2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initSOLO(String s) {
 if (!s.trim().isEmpty()) {
-SOLO = new Double(s);
+SOLO = Byte.parseByte(s);
 } else {
-SOLO = Double.NaN;
+SOLO = Byte.MIN_VALUE;
 }
 }
 
 protected final void initSTARTJ(String s) {
 if (!s.trim().isEmpty()) {
-STARTJ = new Double(s);
+STARTJ = Byte.parseByte(s);
 } else {
-STARTJ = Double.NaN;
+STARTJ = Byte.MIN_VALUE;
 }
 }
 
 protected final void initSTAT(String s) {
 if (!s.trim().isEmpty()) {
-STAT = new Double(s);
+STAT = Byte.parseByte(s);
 } else {
-STAT = Double.NaN;
+STAT = Byte.MIN_VALUE;
 }
 }
 
 protected final void initSTAT_I(String s) {
 if (!s.trim().isEmpty()) {
-STAT_I = new Double(s);
+STAT_I = Byte.parseByte(s);
 } else {
-STAT_I = Double.NaN;
+STAT_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initSVISE(String s) {
 if (!s.trim().isEmpty()) {
-SVISE = new Double(s);
+SVISE = Byte.parseByte(s);
 } else {
-SVISE = Double.NaN;
+SVISE = Byte.MIN_VALUE;
 }
 }
 
 protected final void initTBENEF(String s) {
 if (!s.trim().isEmpty()) {
-TBENEF = new Double(s);
+TBENEF = Byte.parseByte(s);
 } else {
-TBENEF = Double.NaN;
+TBENEF = Byte.MIN_VALUE;
 }
 }
 
 protected final void initTBENNUM(String s) {
 if (!s.trim().isEmpty()) {
-TBENNUM = new Double(s);
+TBENNUM = Byte.parseByte(s);
 } else {
-TBENNUM = Double.NaN;
+TBENNUM = Byte.MIN_VALUE;
 }
 }
 
 protected final void initTEA(String s) {
 if (!s.trim().isEmpty()) {
-TEA = new Double(s);
+TEA = Byte.parseByte(s);
 } else {
-TEA = Double.NaN;
+TEA = Byte.MIN_VALUE;
 }
 }
 
 protected final void initTINTRO(String s) {
 if (!s.trim().isEmpty()) {
-TINTRO = new Double(s);
+TINTRO = Byte.parseByte(s);
 } else {
-TINTRO = Double.NaN;
+TINTRO = Byte.MIN_VALUE;
 }
 }
 
 protected final void initTOTPEN(String s) {
 if (!s.trim().isEmpty()) {
-TOTPEN = new Double(s);
+TOTPEN = Double.parseDouble(s);
 } else {
 TOTPEN = Double.NaN;
 }
@@ -8827,301 +8927,316 @@ TOTPEN = Double.NaN;
 
 protected final void initTSETT(String s) {
 if (!s.trim().isEmpty()) {
-TSETT = new Double(s);
+TSETT = Byte.parseByte(s);
 } else {
-TSETT = Double.NaN;
+TSETT = Byte.MIN_VALUE;
 }
 }
 
 protected final void initTYPE(String s) {
 if (!s.trim().isEmpty()) {
-TYPE = new Double(s);
+TYPE = Byte.parseByte(s);
 } else {
-TYPE = Double.NaN;
+TYPE = Byte.MIN_VALUE;
 }
 }
 
 protected final void initUNMTYP(String s) {
 if (!s.trim().isEmpty()) {
-UNMTYP = new Double(s);
+UNMTYP = Byte.parseByte(s);
 } else {
-UNMTYP = Double.NaN;
+UNMTYP = Byte.MIN_VALUE;
 }
 }
 
 protected final void initUNUMBD(String s) {
 if (!s.trim().isEmpty()) {
-UNUMBD = new Double(s);
+UNUMBD = Byte.parseByte(s);
 } else {
-UNUMBD = Double.NaN;
+UNUMBD = Byte.MIN_VALUE;
 }
 }
 
 protected final void initUNUMBD_I(String s) {
 if (!s.trim().isEmpty()) {
-UNUMBD_I = new Double(s);
+UNUMBD_I = Byte.parseByte(s);
 } else {
-UNUMBD_I = Double.NaN;
+UNUMBD_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initUNUMBD_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-UNUMBD_IFLAG = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+UNUMBD_IFLAG = false;
 } else {
-UNUMBD_IFLAG = Double.NaN;
+UNUMBD_IFLAG = true;
+}
 }
 }
 
 protected final void initUNUMHS(String s) {
 if (!s.trim().isEmpty()) {
-UNUMHS = new Double(s);
+UNUMHS = Byte.parseByte(s);
 } else {
-UNUMHS = Double.NaN;
+UNUMHS = Byte.MIN_VALUE;
 }
 }
 
 protected final void initUNUMHS_I(String s) {
 if (!s.trim().isEmpty()) {
-UNUMHS_I = new Double(s);
+UNUMHS_I = Byte.parseByte(s);
 } else {
-UNUMHS_I = Double.NaN;
+UNUMHS_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initUNUMHS_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-UNUMHS_IFLAG = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+UNUMHS_IFLAG = false;
 } else {
-UNUMHS_IFLAG = Double.NaN;
+UNUMHS_IFLAG = true;
+}
 }
 }
 
 protected final void initUNUMLA(String s) {
 if (!s.trim().isEmpty()) {
-UNUMLA = new Double(s);
+UNUMLA = Byte.parseByte(s);
 } else {
-UNUMLA = Double.NaN;
+UNUMLA = Byte.MIN_VALUE;
 }
 }
 
 protected final void initUNUMLA_I(String s) {
 if (!s.trim().isEmpty()) {
-UNUMLA_I = new Double(s);
+UNUMLA_I = Byte.parseByte(s);
 } else {
-UNUMLA_I = Double.NaN;
+UNUMLA_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initUNUMLA_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-UNUMLA_IFLAG = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+UNUMLA_IFLAG = false;
 } else {
-UNUMLA_IFLAG = Double.NaN;
+UNUMLA_IFLAG = true;
+}
 }
 }
 
 protected final void initUNUMOV(String s) {
 if (!s.trim().isEmpty()) {
-UNUMOV = new Double(s);
+UNUMOV = Byte.parseByte(s);
 } else {
-UNUMOV = Double.NaN;
+UNUMOV = Byte.MIN_VALUE;
 }
 }
 
 protected final void initUNUMOV_I(String s) {
 if (!s.trim().isEmpty()) {
-UNUMOV_I = new Double(s);
+UNUMOV_I = Byte.parseByte(s);
 } else {
-UNUMOV_I = Double.NaN;
+UNUMOV_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initUNUMOV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-UNUMOV_IFLAG = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+UNUMOV_IFLAG = false;
 } else {
-UNUMOV_IFLAG = Double.NaN;
+UNUMOV_IFLAG = true;
+}
 }
 }
 
 protected final void initUNUMRE(String s) {
 if (!s.trim().isEmpty()) {
-UNUMRE = new Double(s);
+UNUMRE = Byte.parseByte(s);
 } else {
-UNUMRE = Double.NaN;
+UNUMRE = Byte.MIN_VALUE;
 }
 }
 
 protected final void initUNUMRE_I(String s) {
 if (!s.trim().isEmpty()) {
-UNUMRE_I = new Double(s);
+UNUMRE_I = Byte.parseByte(s);
 } else {
-UNUMRE_I = Double.NaN;
+UNUMRE_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initUNUMRE_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-UNUMRE_IFLAG = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+UNUMRE_IFLAG = false;
 } else {
-UNUMRE_IFLAG = Double.NaN;
+UNUMRE_IFLAG = true;
+}
 }
 }
 
 protected final void initUPROP1(String s) {
 if (!s.trim().isEmpty()) {
-UPROP1 = new Double(s);
+UPROP1 = Byte.parseByte(s);
 } else {
-UPROP1 = Double.NaN;
+UPROP1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initUPROP1_I(String s) {
 if (!s.trim().isEmpty()) {
-UPROP1_I = new Double(s);
+UPROP1_I = Byte.parseByte(s);
 } else {
-UPROP1_I = Double.NaN;
+UPROP1_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initUPROP2(String s) {
 if (!s.trim().isEmpty()) {
-UPROP2 = new Double(s);
+UPROP2 = Byte.parseByte(s);
 } else {
-UPROP2 = Double.NaN;
+UPROP2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initUPROP2_I(String s) {
 if (!s.trim().isEmpty()) {
-UPROP2_I = new Double(s);
+UPROP2_I = Byte.parseByte(s);
 } else {
-UPROP2_I = Double.NaN;
+UPROP2_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initUPROP3(String s) {
 if (!s.trim().isEmpty()) {
-UPROP3 = new Double(s);
+UPROP3 = Byte.parseByte(s);
 } else {
-UPROP3 = Double.NaN;
+UPROP3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initUPROP3_I(String s) {
 if (!s.trim().isEmpty()) {
-UPROP3_I = new Double(s);
+UPROP3_I = Byte.parseByte(s);
 } else {
-UPROP3_I = Double.NaN;
+UPROP3_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initUPROP4(String s) {
 if (!s.trim().isEmpty()) {
-UPROP4 = new Double(s);
+UPROP4 = Byte.parseByte(s);
 } else {
-UPROP4 = Double.NaN;
+UPROP4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initUPROP4_I(String s) {
 if (!s.trim().isEmpty()) {
-UPROP4_I = new Double(s);
+UPROP4_I = Byte.parseByte(s);
 } else {
-UPROP4_I = Double.NaN;
+UPROP4_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initUPRSH1(String s) {
 if (!s.trim().isEmpty()) {
-UPRSH1 = new Double(s);
+UPRSH1 = Byte.parseByte(s);
 } else {
-UPRSH1 = Double.NaN;
+UPRSH1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initUPRSH2(String s) {
 if (!s.trim().isEmpty()) {
-UPRSH2 = new Double(s);
+UPRSH2 = Byte.parseByte(s);
 } else {
-UPRSH2 = Double.NaN;
+UPRSH2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initUPRSH3(String s) {
 if (!s.trim().isEmpty()) {
-UPRSH3 = new Double(s);
+UPRSH3 = Byte.parseByte(s);
 } else {
-UPRSH3 = Double.NaN;
+UPRSH3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initUPRSH4(String s) {
 if (!s.trim().isEmpty()) {
-UPRSH4 = new Double(s);
+UPRSH4 = Byte.parseByte(s);
 } else {
-UPRSH4 = Double.NaN;
+UPRSH4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initUPRSH5(String s) {
 if (!s.trim().isEmpty()) {
-UPRSH5 = new Double(s);
+UPRSH5 = Byte.parseByte(s);
 } else {
-UPRSH5 = Double.NaN;
+UPRSH5 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initWORKAGE(String s) {
 if (!s.trim().isEmpty()) {
-WORKAGE = new Double(s);
+WORKAGE = Byte.parseByte(s);
 } else {
-WORKAGE = Double.NaN;
+WORKAGE = Byte.MIN_VALUE;
 }
 }
 
 protected final void initWRKING(String s) {
 if (!s.trim().isEmpty()) {
-WRKING = new Double(s);
+WRKING = Byte.parseByte(s);
 } else {
-WRKING = Double.NaN;
+WRKING = Byte.MIN_VALUE;
 }
 }
 
 protected final void initXINSOL(String s) {
 if (!s.trim().isEmpty()) {
-XINSOL = new Double(s);
+XINSOL = Byte.parseByte(s);
 } else {
-XINSOL = Double.NaN;
+XINSOL = Byte.MIN_VALUE;
 }
 }
 
 protected final void initXINTYP(String s) {
 if (!s.trim().isEmpty()) {
-XINTYP = new Double(s);
+XINTYP = Byte.parseByte(s);
 } else {
-XINTYP = Double.NaN;
+XINTYP = Byte.MIN_VALUE;
 }
 }
 
 protected final void initYEAR(String s) {
 if (!s.trim().isEmpty()) {
-YEAR = new Double(s);
+YEAR = Short.parseShort(s);
 } else {
-YEAR = Double.NaN;
+YEAR = Short.MIN_VALUE;
 }
 }
 
 protected final void initYINACT(String s) {
 if (!s.trim().isEmpty()) {
-YINACT = new Double(s);
+YINACT = Byte.parseByte(s);
 } else {
-YINACT = Double.NaN;
+YINACT = Byte.MIN_VALUE;
 }
 }
 
-public double getATTEND() {
+public byte getATTEND() {
 return ATTEND;
 }
 
@@ -9133,1663 +9248,1663 @@ public String getBACCBEG3() {
 return BACCBEG3;
 }
 
-public double getBACCSA2() {
+public byte getBACCSA2() {
 return BACCSA2;
 }
 
-public double getBACCSA3() {
+public byte getBACCSA3() {
 return BACCSA3;
 }
 
-public double getBACCSB2() {
+public byte getBACCSB2() {
 return BACCSB2;
 }
 
-public double getBACCSB3() {
+public byte getBACCSB3() {
 return BACCSB3;
 }
 
-public double getBBEFORE2() {
+public int getBBEFORE2() {
 return BBEFORE2;
 }
 
-public double getBBEFORE3() {
+public int getBBEFORE3() {
 return BBEFORE3;
 }
 
-public double getBDEBTS2() {
+public int getBDEBTS2() {
 return BDEBTS2;
 }
 
-public double getBDEBTS3() {
+public int getBDEBTS3() {
 return BDEBTS3;
 }
 
-public double getBDIRNI2() {
+public byte getBDIRNI2() {
 return BDIRNI2;
 }
 
-public double getBDIRNI3() {
+public byte getBDIRNI3() {
 return BDIRNI3;
 }
 
-public double getBDOCS2() {
+public byte getBDOCS2() {
 return BDOCS2;
 }
 
-public double getBDOCS3() {
+public byte getBDOCS3() {
 return BDOCS3;
 }
 
-public double getBEMPN2() {
+public byte getBEMPN2() {
 return BEMPN2;
 }
 
-public double getBEMPN3() {
+public byte getBEMPN3() {
 return BEMPN3;
 }
 
-public double getBFUND1() {
+public byte getBFUND1() {
 return BFUND1;
 }
 
-public double getBFUND10() {
+public byte getBFUND10() {
 return BFUND10;
 }
 
-public double getBFUND17() {
+public byte getBFUND17() {
 return BFUND17;
 }
 
-public double getBFUND2() {
+public byte getBFUND2() {
 return BFUND2;
 }
 
-public double getBFUND9() {
+public byte getBFUND9() {
 return BFUND9;
 }
 
-public double getBMOREBUS() {
+public byte getBMOREBUS() {
 return BMOREBUS;
 }
 
-public double getBNATINS2() {
+public byte getBNATINS2() {
 return BNATINS2;
 }
 
-public double getBNATINS3() {
+public byte getBNATINS3() {
 return BNATINS3;
 }
 
-public double getBONTAX() {
+public byte getBONTAX() {
 return BONTAX;
 }
 
-public double getBOWED2() {
+public int getBOWED2() {
 return BOWED2;
 }
 
-public double getBOWED3() {
+public int getBOWED3() {
 return BOWED3;
 }
 
-public double getBOWN2() {
+public byte getBOWN2() {
 return BOWN2;
 }
 
-public double getBOWN3() {
+public byte getBOWN3() {
 return BOWN3;
 }
 
-public double getBPART2() {
+public byte getBPART2() {
 return BPART2;
 }
 
-public double getBPART3() {
+public byte getBPART3() {
 return BPART3;
 }
 
-public double getBPAST() {
+public byte getBPAST() {
 return BPAST;
 }
 
-public double getBPROFIT2() {
+public int getBPROFIT2() {
 return BPROFIT2;
 }
 
-public double getBPROFIT3() {
+public int getBPROFIT3() {
 return BPROFIT3;
 }
 
-public double getBPROPN2() {
+public byte getBPROPN2() {
 return BPROPN2;
 }
 
-public double getBPROPN3() {
+public byte getBPROPN3() {
 return BPROPN3;
 }
 
-public double getBRETIRE2() {
+public byte getBRETIRE2() {
 return BRETIRE2;
 }
 
-public double getBRETIRE3() {
+public byte getBRETIRE3() {
 return BRETIRE3;
 }
 
-public double getBSELLAB() {
+public byte getBSELLAB() {
 return BSELLAB;
 }
 
-public double getBSELLAM() {
+public int getBSELLAM() {
 return BSELLAM;
 }
 
-public double getBSELLTX() {
+public byte getBSELLTX() {
 return BSELLTX;
 }
 
-public double getBSELLYR() {
+public short getBSELLYR() {
 return BSELLYR;
 }
 
-public double getBSIZE2() {
+public byte getBSIZE2() {
 return BSIZE2;
 }
 
-public double getBSIZE3() {
+public byte getBSIZE3() {
 return BSIZE3;
 }
 
-public double getBSTART2() {
+public byte getBSTART2() {
 return BSTART2;
 }
 
-public double getBSTART3() {
+public byte getBSTART3() {
 return BSTART3;
 }
 
-public double getBTAX2() {
+public byte getBTAX2() {
 return BTAX2;
 }
 
-public double getBTAX3() {
+public byte getBTAX3() {
 return BTAX3;
 }
 
-public double getBTYPE2() {
+public byte getBTYPE2() {
 return BTYPE2;
 }
 
-public double getBTYPE3() {
+public byte getBTYPE3() {
 return BTYPE3;
 }
 
-public double getBVAL2() {
+public int getBVAL2() {
 return BVAL2;
 }
 
-public double getBVAL3() {
+public int getBVAL3() {
 return BVAL3;
 }
 
-public double getBVALB2() {
+public byte getBVALB2() {
 return BVALB2;
 }
 
-public double getBWORTH() {
+public int getBWORTH() {
 return BWORTH;
 }
 
-public double getBWORTHB() {
+public byte getBWORTHB() {
 return BWORTHB;
 }
 
-public double getBYEAR2() {
+public short getBYEAR2() {
 return BYEAR2;
 }
 
-public double getBYEAR3() {
+public short getBYEAR3() {
 return BYEAR3;
 }
 
-public double getCACTF() {
+public byte getCACTF() {
 return CACTF;
 }
 
-public double getCACTF_I() {
+public byte getCACTF_I() {
 return CACTF_I;
 }
 
-public double getCACTF_IFLAG() {
+public byte getCACTF_IFLAG() {
 return CACTF_IFLAG;
 }
 
-public double getCACTV() {
+public short getCACTV() {
 return CACTV;
 }
 
-public double getCACTV_I() {
+public short getCACTV_I() {
 return CACTV_I;
 }
 
-public double getCACTV_IFLAG() {
+public byte getCACTV_IFLAG() {
 return CACTV_IFLAG;
 }
 
-public double getCASAV() {
+public byte getCASAV() {
 return CASAV;
 }
 
-public double getCASAV_I() {
+public byte getCASAV_I() {
 return CASAV_I;
 }
 
-public double getCASAV_IFLAG() {
+public byte getCASAV_IFLAG() {
 return CASAV_IFLAG;
 }
 
-public Integer getCASEW1() {
+public short getCASEW1() {
 return CASEW1;
 }
 
-public double getCASVB() {
+public byte getCASVB() {
 return CASVB;
 }
 
-public double getCASVV() {
+public int getCASVV() {
 return CASVV;
 }
 
-public double getCASVV_I() {
+public int getCASVV_I() {
 return CASVV_I;
 }
 
-public double getCASVV_IFLAG() {
+public byte getCASVV_IFLAG() {
 return CASVV_IFLAG;
 }
 
-public double getCOURSE() {
+public byte getCOURSE() {
 return COURSE;
 }
 
-public double getCURRAC() {
+public boolean getCURRAC() {
 return CURRAC;
 }
 
-public double getDBURD() {
+public byte getDBURD() {
 return DBURD;
 }
 
-public double getDBURDA() {
+public byte getDBURDA() {
 return DBURDA;
 }
 
-public double getDCAMC2() {
+public int getDCAMC2() {
 return DCAMC2;
 }
 
-public double getDCAMC3() {
+public int getDCAMC3() {
 return DCAMC3;
 }
 
-public double getDCAMD2() {
+public short getDCAMD2() {
 return DCAMD2;
 }
 
-public double getDCAMD3() {
+public short getDCAMD3() {
 return DCAMD3;
 }
 
-public double getDCAMP2() {
+public short getDCAMP2() {
 return DCAMP2;
 }
 
-public double getDCAMP3() {
+public short getDCAMP3() {
 return DCAMP3;
 }
 
-public double getDCANU() {
+public byte getDCANU() {
 return DCANU;
 }
 
-public double getDCANY() {
+public byte getDCANY() {
 return DCANY;
 }
 
-public double getDCCOS2() {
+public byte getDCCOS2() {
 return DCCOS2;
 }
 
-public double getDCCOS3() {
+public byte getDCCOS3() {
 return DCCOS3;
 }
 
-public double getDCCSP2() {
+public byte getDCCSP2() {
 return DCCSP2;
 }
 
-public double getDCCSP3() {
+public byte getDCCSP3() {
 return DCCSP3;
 }
 
-public double getDCESB2() {
+public byte getDCESB2() {
 return DCESB2;
 }
 
-public double getDCESB3() {
+public byte getDCESB3() {
 return DCESB3;
 }
 
-public double getDCINZ2() {
+public byte getDCINZ2() {
 return DCINZ2;
 }
 
-public double getDCINZ3() {
+public byte getDCINZ3() {
 return DCINZ3;
 }
 
-public double getDCNAM2() {
+public byte getDCNAM2() {
 return DCNAM2;
 }
 
-public double getDCNAM3() {
+public byte getDCNAM3() {
 return DCNAM3;
 }
 
-public double getDCOINV2() {
+public int getDCOINV2() {
 return DCOINV2;
 }
 
-public double getDCOINV2_I() {
+public int getDCOINV2_I() {
 return DCOINV2_I;
 }
 
-public double getDCOINV2_IFLAG() {
+public byte getDCOINV2_IFLAG() {
 return DCOINV2_IFLAG;
 }
 
-public double getDCOINV3() {
+public short getDCOINV3() {
 return DCOINV3;
 }
 
-public double getDCOINVB2() {
+public byte getDCOINVB2() {
 return DCOINVB2;
 }
 
-public double getDCOINVB3() {
+public byte getDCOINVB3() {
 return DCOINVB3;
 }
 
-public double getDCONM1() {
+public byte getDCONM1() {
 return DCONM1;
 }
 
-public double getDCONM2() {
+public byte getDCONM2() {
 return DCONM2;
 }
 
-public double getDCONM3() {
+public byte getDCONM3() {
 return DCONM3;
 }
 
-public double getDCONM4() {
+public byte getDCONM4() {
 return DCONM4;
 }
 
-public double getDCONM5() {
+public byte getDCONM5() {
 return DCONM5;
 }
 
-public double getDCONM6() {
+public byte getDCONM6() {
 return DCONM6;
 }
 
-public double getDCOSHV2() {
+public int getDCOSHV2() {
 return DCOSHV2;
 }
 
-public double getDCOSHV2_I() {
+public int getDCOSHV2_I() {
 return DCOSHV2_I;
 }
 
-public double getDCOSHV2_IFLAG() {
+public byte getDCOSHV2_IFLAG() {
 return DCOSHV2_IFLAG;
 }
 
-public double getDCOSHV3() {
+public short getDCOSHV3() {
 return DCOSHV3;
 }
 
-public double getDCOSHVB2() {
+public byte getDCOSHVB2() {
 return DCOSHVB2;
 }
 
-public double getDCPER2() {
+public byte getDCPER2() {
 return DCPER2;
 }
 
-public double getDCPER3() {
+public byte getDCPER3() {
 return DCPER3;
 }
 
-public double getDCREC2() {
+public byte getDCREC2() {
 return DCREC2;
 }
 
-public double getDCREC3() {
+public byte getDCREC3() {
 return DCREC3;
 }
 
-public double getDCRSP2() {
+public byte getDCRSP2() {
 return DCRSP2;
 }
 
-public double getDCRSP3() {
+public byte getDCRSP3() {
 return DCRSP3;
 }
 
-public double getDHBAMT01() {
+public short getDHBAMT01() {
 return DHBAMT01;
 }
 
-public double getDHBAMT01_I() {
+public short getDHBAMT01_I() {
 return DHBAMT01_I;
 }
 
-public double getDHBAMT01_IFLAG() {
+public byte getDHBAMT01_IFLAG() {
 return DHBAMT01_IFLAG;
 }
 
-public double getDHBAMT02() {
+public short getDHBAMT02() {
 return DHBAMT02;
 }
 
-public double getDHBAMT02_I() {
+public short getDHBAMT02_I() {
 return DHBAMT02_I;
 }
 
-public double getDHBAMT02_IFLAG() {
+public byte getDHBAMT02_IFLAG() {
 return DHBAMT02_IFLAG;
 }
 
-public double getDHBAMT03() {
+public short getDHBAMT03() {
 return DHBAMT03;
 }
 
-public double getDHBAMT03_I() {
+public short getDHBAMT03_I() {
 return DHBAMT03_I;
 }
 
-public double getDHBAMT03_IFLAG() {
+public byte getDHBAMT03_IFLAG() {
 return DHBAMT03_IFLAG;
 }
 
-public double getDHBAMT04() {
+public short getDHBAMT04() {
 return DHBAMT04;
 }
 
-public double getDHBAMT04_I() {
+public short getDHBAMT04_I() {
 return DHBAMT04_I;
 }
 
-public double getDHBAMT04_IFLAG() {
+public byte getDHBAMT04_IFLAG() {
 return DHBAMT04_IFLAG;
 }
 
-public double getDHBAMT05() {
+public short getDHBAMT05() {
 return DHBAMT05;
 }
 
-public double getDHBAMT05_I() {
+public short getDHBAMT05_I() {
 return DHBAMT05_I;
 }
 
-public double getDHBAMT05_IFLAG() {
+public byte getDHBAMT05_IFLAG() {
 return DHBAMT05_IFLAG;
 }
 
-public double getDHBAMT06() {
+public short getDHBAMT06() {
 return DHBAMT06;
 }
 
-public double getDHBAMT06_I() {
+public short getDHBAMT06_I() {
 return DHBAMT06_I;
 }
 
-public double getDHBAMT06_IFLAG() {
+public byte getDHBAMT06_IFLAG() {
 return DHBAMT06_IFLAG;
 }
 
-public double getDHBAMT07() {
+public short getDHBAMT07() {
 return DHBAMT07;
 }
 
-public double getDHBAMT07_I() {
+public short getDHBAMT07_I() {
 return DHBAMT07_I;
 }
 
-public double getDHBAMT07_IFLAG() {
+public byte getDHBAMT07_IFLAG() {
 return DHBAMT07_IFLAG;
 }
 
-public double getDHBAMT08() {
+public short getDHBAMT08() {
 return DHBAMT08;
 }
 
-public double getDHBAMT08_I() {
+public short getDHBAMT08_I() {
 return DHBAMT08_I;
 }
 
-public double getDHBAMT08_IFLAG() {
+public byte getDHBAMT08_IFLAG() {
 return DHBAMT08_IFLAG;
 }
 
-public double getDHBAMT09() {
+public int getDHBAMT09() {
 return DHBAMT09;
 }
 
-public double getDHBAMT09_I() {
+public int getDHBAMT09_I() {
 return DHBAMT09_I;
 }
 
-public double getDHBAMT09_IFLAG() {
+public byte getDHBAMT09_IFLAG() {
 return DHBAMT09_IFLAG;
 }
 
-public double getDHBAMT10() {
+public short getDHBAMT10() {
 return DHBAMT10;
 }
 
-public double getDHBAMT10_I() {
+public short getDHBAMT10_I() {
 return DHBAMT10_I;
 }
 
-public double getDHBAMT10_IFLAG() {
+public byte getDHBAMT10_IFLAG() {
 return DHBAMT10_IFLAG;
 }
 
-public double getDHBAMT11() {
+public int getDHBAMT11() {
 return DHBAMT11;
 }
 
-public double getDHBAMT11_I() {
+public int getDHBAMT11_I() {
 return DHBAMT11_I;
 }
 
-public double getDHBAMT11_IFLAG() {
+public byte getDHBAMT11_IFLAG() {
 return DHBAMT11_IFLAG;
 }
 
-public double getDHBANY01() {
+public byte getDHBANY01() {
 return DHBANY01;
 }
 
-public double getDHBANY01_I() {
+public byte getDHBANY01_I() {
 return DHBANY01_I;
 }
 
-public double getDHBANY01_IFLAG() {
+public byte getDHBANY01_IFLAG() {
 return DHBANY01_IFLAG;
 }
 
-public double getDHBANY02() {
+public byte getDHBANY02() {
 return DHBANY02;
 }
 
-public double getDHBANY02_I() {
+public byte getDHBANY02_I() {
 return DHBANY02_I;
 }
 
-public double getDHBANY02_IFLAG() {
+public byte getDHBANY02_IFLAG() {
 return DHBANY02_IFLAG;
 }
 
-public double getDHBANY03() {
+public byte getDHBANY03() {
 return DHBANY03;
 }
 
-public double getDHBANY03_I() {
+public byte getDHBANY03_I() {
 return DHBANY03_I;
 }
 
-public double getDHBANY03_IFLAG() {
+public byte getDHBANY03_IFLAG() {
 return DHBANY03_IFLAG;
 }
 
-public double getDHBANY04() {
+public byte getDHBANY04() {
 return DHBANY04;
 }
 
-public double getDHBANY04_I() {
+public byte getDHBANY04_I() {
 return DHBANY04_I;
 }
 
-public double getDHBANY04_IFLAG() {
+public byte getDHBANY04_IFLAG() {
 return DHBANY04_IFLAG;
 }
 
-public double getDHBANY05() {
+public byte getDHBANY05() {
 return DHBANY05;
 }
 
-public double getDHBANY05_I() {
+public byte getDHBANY05_I() {
 return DHBANY05_I;
 }
 
-public double getDHBANY05_IFLAG() {
+public byte getDHBANY05_IFLAG() {
 return DHBANY05_IFLAG;
 }
 
-public double getDHBANY06() {
+public byte getDHBANY06() {
 return DHBANY06;
 }
 
-public double getDHBANY06_I() {
+public byte getDHBANY06_I() {
 return DHBANY06_I;
 }
 
-public double getDHBANY06_IFLAG() {
+public byte getDHBANY06_IFLAG() {
 return DHBANY06_IFLAG;
 }
 
-public double getDHBANY07() {
+public byte getDHBANY07() {
 return DHBANY07;
 }
 
-public double getDHBANY07_I() {
+public byte getDHBANY07_I() {
 return DHBANY07_I;
 }
 
-public double getDHBANY07_IFLAG() {
+public byte getDHBANY07_IFLAG() {
 return DHBANY07_IFLAG;
 }
 
-public double getDHBEST01() {
+public byte getDHBEST01() {
 return DHBEST01;
 }
 
-public double getDHBEST02() {
+public byte getDHBEST02() {
 return DHBEST02;
 }
 
-public double getDHBEST03() {
+public byte getDHBEST03() {
 return DHBEST03;
 }
 
-public double getDHBEST04() {
+public byte getDHBEST04() {
 return DHBEST04;
 }
 
-public double getDHBEST05() {
+public byte getDHBEST05() {
 return DHBEST05;
 }
 
-public double getDHBEST06() {
+public byte getDHBEST06() {
 return DHBEST06;
 }
 
-public double getDHBEST07() {
+public byte getDHBEST07() {
 return DHBEST07;
 }
 
-public double getDHBEST08() {
+public byte getDHBEST08() {
 return DHBEST08;
 }
 
-public double getDHBEST09() {
+public byte getDHBEST09() {
 return DHBEST09;
 }
 
-public double getDHBEST10() {
+public byte getDHBEST10() {
 return DHBEST10;
 }
 
-public double getDHBEST11() {
+public byte getDHBEST11() {
 return DHBEST11;
 }
 
-public double getDHBFIX() {
+public byte getDHBFIX() {
 return DHBFIX;
 }
 
-public double getDHPANY1() {
+public byte getDHPANY1() {
 return DHPANY1;
 }
 
-public double getDHPANY1_I() {
+public byte getDHPANY1_I() {
 return DHPANY1_I;
 }
 
-public double getDHPANY1_IFLAG() {
+public byte getDHPANY1_IFLAG() {
 return DHPANY1_IFLAG;
 }
 
-public double getDHPANY2() {
+public byte getDHPANY2() {
 return DHPANY2;
 }
 
-public double getDHPANY2_I() {
+public byte getDHPANY2_I() {
 return DHPANY2_I;
 }
 
-public double getDHPANY2_IFLAG() {
+public byte getDHPANY2_IFLAG() {
 return DHPANY2_IFLAG;
 }
 
-public double getDHPANY3() {
+public byte getDHPANY3() {
 return DHPANY3;
 }
 
-public double getDHPANY3_I() {
+public byte getDHPANY3_I() {
 return DHPANY3_I;
 }
 
-public double getDHPANY3_IFLAG() {
+public byte getDHPANY3_IFLAG() {
 return DHPANY3_IFLAG;
 }
 
-public double getDHPBEH2() {
+public byte getDHPBEH2() {
 return DHPBEH2;
 }
 
-public double getDHPBEH2_I() {
+public byte getDHPBEH2_I() {
 return DHPBEH2_I;
 }
 
-public double getDHPBEH2_IFLAG() {
+public byte getDHPBEH2_IFLAG() {
 return DHPBEH2_IFLAG;
 }
 
-public double getDHPEST2() {
+public byte getDHPEST2() {
 return DHPEST2;
 }
 
-public double getDHPINS2() {
+public short getDHPINS2() {
 return DHPINS2;
 }
 
-public double getDHPINS2_I() {
+public short getDHPINS2_I() {
 return DHPINS2_I;
 }
 
-public double getDHPINS2_IFLAG() {
+public byte getDHPINS2_IFLAG() {
 return DHPINS2_IFLAG;
 }
 
-public double getDHPINT2() {
+public byte getDHPINT2() {
 return DHPINT2;
 }
 
-public double getDHPNUM() {
+public byte getDHPNUM() {
 return DHPNUM;
 }
 
-public double getDHPNUM_I() {
+public byte getDHPNUM_I() {
 return DHPNUM_I;
 }
 
-public double getDHPNUM_IFLAG() {
+public byte getDHPNUM_IFLAG() {
 return DHPNUM_IFLAG;
 }
 
-public double getDHPOFT2() {
+public byte getDHPOFT2() {
 return DHPOFT2;
 }
 
-public double getDHPOFT2_I() {
+public byte getDHPOFT2_I() {
 return DHPOFT2_I;
 }
 
-public double getDHPOFT2_IFLAG() {
+public byte getDHPOFT2_IFLAG() {
 return DHPOFT2_IFLAG;
 }
 
-public double getDHPOWE2() {
+public short getDHPOWE2() {
 return DHPOWE2;
 }
 
-public double getDHPOWE2_I() {
+public short getDHPOWE2_I() {
 return DHPOWE2_I;
 }
 
-public double getDHPOWE2_IFLAG() {
+public byte getDHPOWE2_IFLAG() {
 return DHPOWE2_IFLAG;
 }
 
-public double getDHPWEST2() {
+public byte getDHPWEST2() {
 return DHPWEST2;
 }
 
-public double getDHPWHNM2() {
+public byte getDHPWHNM2() {
 return DHPWHNM2;
 }
 
-public double getDHPWHNM2_I() {
+public byte getDHPWHNM2_I() {
 return DHPWHNM2_I;
 }
 
-public double getDHPWHNM2_IFLAG() {
+public byte getDHPWHNM2_IFLAG() {
 return DHPWHNM2_IFLAG;
 }
 
-public double getDHPWHNY2() {
+public short getDHPWHNY2() {
 return DHPWHNY2;
 }
 
-public double getDHPWHNY2_I() {
+public short getDHPWHNY2_I() {
 return DHPWHNY2_I;
 }
 
-public double getDHPWHNY2_IFLAG() {
+public byte getDHPWHNY2_IFLAG() {
 return DHPWHNY2_IFLAG;
 }
 
-public double getDISEVER() {
+public byte getDISEVER() {
 return DISEVER;
 }
 
-public double getDISTYPE1() {
+public byte getDISTYPE1() {
 return DISTYPE1;
 }
 
-public double getDISTYPE2() {
+public byte getDISTYPE2() {
 return DISTYPE2;
 }
 
-public double getDISTYPE3() {
+public byte getDISTYPE3() {
 return DISTYPE3;
 }
 
-public double getDISTYPE4() {
+public byte getDISTYPE4() {
 return DISTYPE4;
 }
 
-public double getDISTYPE5() {
+public byte getDISTYPE5() {
 return DISTYPE5;
 }
 
-public double getDISTYPE6() {
+public byte getDISTYPE6() {
 return DISTYPE6;
 }
 
-public double getDISTYPE7() {
+public byte getDISTYPE7() {
 return DISTYPE7;
 }
 
-public double getDISTYPE8() {
+public byte getDISTYPE8() {
 return DISTYPE8;
 }
 
-public double getDISTYPE9() {
+public byte getDISTYPE9() {
 return DISTYPE9;
 }
 
-public double getDLANY() {
+public byte getDLANY() {
 return DLANY;
 }
 
-public double getDLANY_I() {
+public byte getDLANY_I() {
 return DLANY_I;
 }
 
-public double getDLANY_IFLAG() {
+public byte getDLANY_IFLAG() {
 return DLANY_IFLAG;
 }
 
-public double getDLBEH2() {
+public byte getDLBEH2() {
 return DLBEH2;
 }
 
-public double getDLBEH2_I() {
+public byte getDLBEH2_I() {
 return DLBEH2_I;
 }
 
-public double getDLBEH2_IFLAG() {
+public byte getDLBEH2_IFLAG() {
 return DLBEH2_IFLAG;
 }
 
-public double getDLBEH3() {
+public byte getDLBEH3() {
 return DLBEH3;
 }
 
-public double getDLBEH3_I() {
+public byte getDLBEH3_I() {
 return DLBEH3_I;
 }
 
-public double getDLBEH3_IFLAG() {
+public byte getDLBEH3_IFLAG() {
 return DLBEH3_IFLAG;
 }
 
-public double getDLBEH4() {
+public byte getDLBEH4() {
 return DLBEH4;
 }
 
-public double getDLBEH4_I() {
+public byte getDLBEH4_I() {
 return DLBEH4_I;
 }
 
-public double getDLBEH4_IFLAG() {
+public byte getDLBEH4_IFLAG() {
 return DLBEH4_IFLAG;
 }
 
-public double getDLBEH5() {
+public byte getDLBEH5() {
 return DLBEH5;
 }
 
-public double getDLBEH5_I() {
+public byte getDLBEH5_I() {
 return DLBEH5_I;
 }
 
-public double getDLBEH5_IFLAG() {
+public byte getDLBEH5_IFLAG() {
 return DLBEH5_IFLAG;
 }
 
-public double getDLEST2() {
+public byte getDLEST2() {
 return DLEST2;
 }
 
-public double getDLEST3() {
+public byte getDLEST3() {
 return DLEST3;
 }
 
-public double getDLEST4() {
+public byte getDLEST4() {
 return DLEST4;
 }
 
-public double getDLINS2() {
+public short getDLINS2() {
 return DLINS2;
 }
 
-public double getDLINS2_I() {
+protected double DLINS2_I() {
 return DLINS2_I;
 }
 
-public double getDLINS2_IFLAG() {
+public byte getDLINS2_IFLAG() {
 return DLINS2_IFLAG;
 }
 
-public double getDLINS3() {
+public short getDLINS3() {
 return DLINS3;
 }
 
-public double getDLINS3_I() {
+public short getDLINS3_I() {
 return DLINS3_I;
 }
 
-public double getDLINS3_IFLAG() {
+public byte getDLINS3_IFLAG() {
 return DLINS3_IFLAG;
 }
 
-public double getDLINS4() {
+public short getDLINS4() {
 return DLINS4;
 }
 
-public double getDLINS4_I() {
+protected double DLINS4_I() {
 return DLINS4_I;
 }
 
-public double getDLINS4_IFLAG() {
+public byte getDLINS4_IFLAG() {
 return DLINS4_IFLAG;
 }
 
-public double getDLINS5() {
+public short getDLINS5() {
 return DLINS5;
 }
 
-public double getDLINS5_I() {
+public short getDLINS5_I() {
 return DLINS5_I;
 }
 
-public double getDLINS5_IFLAG() {
+public byte getDLINS5_IFLAG() {
 return DLINS5_IFLAG;
 }
 
-public double getDLINT2() {
+public byte getDLINT2() {
 return DLINT2;
 }
 
-public double getDLINT3() {
+public byte getDLINT3() {
 return DLINT3;
 }
 
-public double getDLINT4() {
+public byte getDLINT4() {
 return DLINT4;
 }
 
-public double getDLINT5() {
+public byte getDLINT5() {
 return DLINT5;
 }
 
-public double getDLNUM() {
+public byte getDLNUM() {
 return DLNUM;
 }
 
-public double getDLNUM_I() {
+public byte getDLNUM_I() {
 return DLNUM_I;
 }
 
-public double getDLNUM_IFLAG() {
+public byte getDLNUM_IFLAG() {
 return DLNUM_IFLAG;
 }
 
-public double getDLOFT2() {
+public byte getDLOFT2() {
 return DLOFT2;
 }
 
-public double getDLOFT2_I() {
+public byte getDLOFT2_I() {
 return DLOFT2_I;
 }
 
-public double getDLOFT2_IFLAG() {
+public byte getDLOFT2_IFLAG() {
 return DLOFT2_IFLAG;
 }
 
-public double getDLOFT3() {
+public byte getDLOFT3() {
 return DLOFT3;
 }
 
-public double getDLOFT3_I() {
+public byte getDLOFT3_I() {
 return DLOFT3_I;
 }
 
-public double getDLOFT3_IFLAG() {
+public byte getDLOFT3_IFLAG() {
 return DLOFT3_IFLAG;
 }
 
-public double getDLOFT4() {
+public byte getDLOFT4() {
 return DLOFT4;
 }
 
-public double getDLOFT4_I() {
+public byte getDLOFT4_I() {
 return DLOFT4_I;
 }
 
-public double getDLOFT4_IFLAG() {
+public byte getDLOFT4_IFLAG() {
 return DLOFT4_IFLAG;
 }
 
-public double getDLOFT5() {
+public byte getDLOFT5() {
 return DLOFT5;
 }
 
-public double getDLOFT5_I() {
+public byte getDLOFT5_I() {
 return DLOFT5_I;
 }
 
-public double getDLOFT5_IFLAG() {
+public byte getDLOFT5_IFLAG() {
 return DLOFT5_IFLAG;
 }
 
-public double getDLOWE2() {
+public int getDLOWE2() {
 return DLOWE2;
 }
 
-public double getDLOWE2_I() {
+public int getDLOWE2_I() {
 return DLOWE2_I;
 }
 
-public double getDLOWE2_IFLAG() {
+public byte getDLOWE2_IFLAG() {
 return DLOWE2_IFLAG;
 }
 
-public double getDLOWE3() {
+public short getDLOWE3() {
 return DLOWE3;
 }
 
-public double getDLOWE3_I() {
+public short getDLOWE3_I() {
 return DLOWE3_I;
 }
 
-public double getDLOWE3_IFLAG() {
+public byte getDLOWE3_IFLAG() {
 return DLOWE3_IFLAG;
 }
 
-public double getDLOWE4() {
+public short getDLOWE4() {
 return DLOWE4;
 }
 
-public double getDLOWE4_I() {
+public short getDLOWE4_I() {
 return DLOWE4_I;
 }
 
-public double getDLOWE4_IFLAG() {
+public byte getDLOWE4_IFLAG() {
 return DLOWE4_IFLAG;
 }
 
-public double getDLOWE5() {
+public short getDLOWE5() {
 return DLOWE5;
 }
 
-public double getDLOWE5_I() {
+public short getDLOWE5_I() {
 return DLOWE5_I;
 }
 
-public double getDLOWE5_IFLAG() {
+public byte getDLOWE5_IFLAG() {
 return DLOWE5_IFLAG;
 }
 
-public double getDLSEC2() {
+public byte getDLSEC2() {
 return DLSEC2;
 }
 
-public double getDLSEC3() {
+public byte getDLSEC3() {
 return DLSEC3;
 }
 
-public double getDLSEC4() {
+public byte getDLSEC4() {
 return DLSEC4;
 }
 
-public double getDLSEC5() {
+public byte getDLSEC5() {
 return DLSEC5;
 }
 
-public double getDLTYPE2() {
+public byte getDLTYPE2() {
 return DLTYPE2;
 }
 
-public double getDLTYPE2_I() {
+public byte getDLTYPE2_I() {
 return DLTYPE2_I;
 }
 
-public double getDLTYPE2_IFLAG() {
+public byte getDLTYPE2_IFLAG() {
 return DLTYPE2_IFLAG;
 }
 
-public double getDLTYPE3() {
+public byte getDLTYPE3() {
 return DLTYPE3;
 }
 
-public double getDLTYPE3_I() {
+public byte getDLTYPE3_I() {
 return DLTYPE3_I;
 }
 
-public double getDLTYPE3_IFLAG() {
+public byte getDLTYPE3_IFLAG() {
 return DLTYPE3_IFLAG;
 }
 
-public double getDLTYPE4() {
+public byte getDLTYPE4() {
 return DLTYPE4;
 }
 
-public double getDLTYPE4_I() {
+public byte getDLTYPE4_I() {
 return DLTYPE4_I;
 }
 
-public double getDLTYPE4_IFLAG() {
+public byte getDLTYPE4_IFLAG() {
 return DLTYPE4_IFLAG;
 }
 
-public double getDLTYPE5() {
+public byte getDLTYPE5() {
 return DLTYPE5;
 }
 
-public double getDLTYPE5_I() {
+public byte getDLTYPE5_I() {
 return DLTYPE5_I;
 }
 
-public double getDLTYPE5_IFLAG() {
+public byte getDLTYPE5_IFLAG() {
 return DLTYPE5_IFLAG;
 }
 
-public double getDLWEST2() {
+public byte getDLWEST2() {
 return DLWEST2;
 }
 
-public double getDLWEST3() {
+public byte getDLWEST3() {
 return DLWEST3;
 }
 
-public double getDLWEST4() {
+public byte getDLWEST4() {
 return DLWEST4;
 }
 
-public double getDLWEST5() {
+public byte getDLWEST5() {
 return DLWEST5;
 }
 
-public double getDLWHNM2() {
+public short getDLWHNM2() {
 return DLWHNM2;
 }
 
-public double getDLWHNM2_I() {
+public short getDLWHNM2_I() {
 return DLWHNM2_I;
 }
 
-public double getDLWHNM2_IFLAG() {
+public byte getDLWHNM2_IFLAG() {
 return DLWHNM2_IFLAG;
 }
 
-public double getDLWHNM3() {
+public short getDLWHNM3() {
 return DLWHNM3;
 }
 
-public double getDLWHNM3_I() {
+public short getDLWHNM3_I() {
 return DLWHNM3_I;
 }
 
-public double getDLWHNM3_IFLAG() {
+public byte getDLWHNM3_IFLAG() {
 return DLWHNM3_IFLAG;
 }
 
-public double getDLWHNM4() {
+public byte getDLWHNM4() {
 return DLWHNM4;
 }
 
-public double getDLWHNM4_I() {
+public byte getDLWHNM4_I() {
 return DLWHNM4_I;
 }
 
-public double getDLWHNM4_IFLAG() {
+public byte getDLWHNM4_IFLAG() {
 return DLWHNM4_IFLAG;
 }
 
-public double getDLWHNM5() {
+public byte getDLWHNM5() {
 return DLWHNM5;
 }
 
-public double getDLWHNM5_I() {
+public byte getDLWHNM5_I() {
 return DLWHNM5_I;
 }
 
-public double getDLWHNM5_IFLAG() {
+public byte getDLWHNM5_IFLAG() {
 return DLWHNM5_IFLAG;
 }
 
-public double getDLWHNY2() {
+public short getDLWHNY2() {
 return DLWHNY2;
 }
 
-public double getDLWHNY2_I() {
+public short getDLWHNY2_I() {
 return DLWHNY2_I;
 }
 
-public double getDLWHNY2_IFLAG() {
+public byte getDLWHNY2_IFLAG() {
 return DLWHNY2_IFLAG;
 }
 
-public double getDLWHNY3() {
+public short getDLWHNY3() {
 return DLWHNY3;
 }
 
-public double getDLWHNY3_I() {
+public short getDLWHNY3_I() {
 return DLWHNY3_I;
 }
 
-public double getDLWHNY3_IFLAG() {
+public byte getDLWHNY3_IFLAG() {
 return DLWHNY3_IFLAG;
 }
 
-public double getDLWHNY4() {
+public short getDLWHNY4() {
 return DLWHNY4;
 }
 
-public double getDLWHNY4_I() {
+public short getDLWHNY4_I() {
 return DLWHNY4_I;
 }
 
-public double getDLWHNY4_IFLAG() {
+public byte getDLWHNY4_IFLAG() {
 return DLWHNY4_IFLAG;
 }
 
-public double getDLWHNY5() {
+public short getDLWHNY5() {
 return DLWHNY5;
 }
 
-public double getDLWHNY5_I() {
+public short getDLWHNY5_I() {
 return DLWHNY5_I;
 }
 
-public double getDLWHNY5_IFLAG() {
+public byte getDLWHNY5_IFLAG() {
 return DLWHNY5_IFLAG;
 }
 
-public double getDLWHY1() {
+public byte getDLWHY1() {
 return DLWHY1;
 }
 
-public double getDLWHY10() {
+public byte getDLWHY10() {
 return DLWHY10;
 }
 
-public double getDLWHY15() {
+public byte getDLWHY15() {
 return DLWHY15;
 }
 
-public double getDLWHY16() {
+public byte getDLWHY16() {
 return DLWHY16;
 }
 
-public double getDLWHY2() {
+public byte getDLWHY2() {
 return DLWHY2;
 }
 
-public double getDLWHY22() {
+public byte getDLWHY22() {
 return DLWHY22;
 }
 
-public double getDLWHY23() {
+public byte getDLWHY23() {
 return DLWHY23;
 }
 
-public double getDLWHY29() {
+public byte getDLWHY29() {
 return DLWHY29;
 }
 
-public double getDLWHY3() {
+public byte getDLWHY3() {
 return DLWHY3;
 }
 
-public double getDLWHY4() {
+public byte getDLWHY4() {
 return DLWHY4;
 }
 
-public double getDLWHY5() {
+public byte getDLWHY5() {
 return DLWHY5;
 }
 
-public double getDLWHY8() {
+public byte getDLWHY8() {
 return DLWHY8;
 }
 
-public double getDLWHY9() {
+public byte getDLWHY9() {
 return DLWHY9;
 }
 
-public double getDMOANY() {
+public byte getDMOANY() {
 return DMOANY;
 }
 
-public double getDMOANY_I() {
+public byte getDMOANY_I() {
 return DMOANY_I;
 }
 
-public double getDMOANY_IFLAG() {
+public byte getDMOANY_IFLAG() {
 return DMOANY_IFLAG;
 }
 
-public double getDMOBEH2() {
+public byte getDMOBEH2() {
 return DMOBEH2;
 }
 
-public double getDMOBEH2_I() {
+public byte getDMOBEH2_I() {
 return DMOBEH2_I;
 }
 
-public double getDMOBEH2_IFLAG() {
+public byte getDMOBEH2_IFLAG() {
 return DMOBEH2_IFLAG;
 }
 
-public double getDMOEST2() {
+public byte getDMOEST2() {
 return DMOEST2;
 }
 
-public double getDMOINS2() {
+public short getDMOINS2() {
 return DMOINS2;
 }
 
-public double getDMOINS2_I() {
+public short getDMOINS2_I() {
 return DMOINS2_I;
 }
 
-public double getDMOINS2_IFLAG() {
+public byte getDMOINS2_IFLAG() {
 return DMOINS2_IFLAG;
 }
 
-public double getDMOINT2() {
+public byte getDMOINT2() {
 return DMOINT2;
 }
 
-public double getDMONUM() {
+public byte getDMONUM() {
 return DMONUM;
 }
 
-public double getDMONUM_I() {
+public byte getDMONUM_I() {
 return DMONUM_I;
 }
 
-public double getDMONUM_IFLAG() {
+public byte getDMONUM_IFLAG() {
 return DMONUM_IFLAG;
 }
 
-public double getDMOOFT2() {
+public byte getDMOOFT2() {
 return DMOOFT2;
 }
 
-public double getDMOOFT2_I() {
+public byte getDMOOFT2_I() {
 return DMOOFT2_I;
 }
 
-public double getDMOOFT2_IFLAG() {
+public byte getDMOOFT2_IFLAG() {
 return DMOOFT2_IFLAG;
 }
 
-public double getDMOOWE2() {
+public short getDMOOWE2() {
 return DMOOWE2;
 }
 
-public double getDMOOWE2_I() {
+public short getDMOOWE2_I() {
 return DMOOWE2_I;
 }
 
-public double getDMOOWE2_IFLAG() {
+public byte getDMOOWE2_IFLAG() {
 return DMOOWE2_IFLAG;
 }
 
-public double getDMOWEST2() {
+public byte getDMOWEST2() {
 return DMOWEST2;
 }
 
-public double getDMOWHNM2() {
+public byte getDMOWHNM2() {
 return DMOWHNM2;
 }
 
-public double getDMOWHNM2_I() {
+public byte getDMOWHNM2_I() {
 return DMOWHNM2_I;
 }
 
-public double getDMOWHNM2_IFLAG() {
+public byte getDMOWHNM2_IFLAG() {
 return DMOWHNM2_IFLAG;
 }
 
-public double getDMOWHNY2() {
+public short getDMOWHNY2() {
 return DMOWHNY2;
 }
 
-public double getDMOWHNY2_I() {
+public short getDMOWHNY2_I() {
 return DMOWHNY2_I;
 }
 
-public double getDMOWHNY2_IFLAG() {
+public byte getDMOWHNY2_IFLAG() {
 return DMOWHNY2_IFLAG;
 }
 
-public double getDSAMC2() {
+public short getDSAMC2() {
 return DSAMC2;
 }
 
-public double getDSAMC3() {
+public short getDSAMC3() {
 return DSAMC3;
 }
 
-public double getDSAMD2() {
+public short getDSAMD2() {
 return DSAMD2;
 }
 
-public double getDSAMD3() {
+public short getDSAMD3() {
 return DSAMD3;
 }
 
-public double getDSAMP2() {
+public short getDSAMP2() {
 return DSAMP2;
 }
 
-public double getDSAMP3() {
+public short getDSAMP3() {
 return DSAMP3;
 }
 
-public double getDSANU1() {
+public byte getDSANU1() {
 return DSANU1;
 }
 
-public double getDSANU2() {
+public byte getDSANU2() {
 return DSANU2;
 }
 
-public double getDSANY1() {
+public byte getDSANY1() {
 return DSANY1;
 }
 
-public double getDSANY2() {
+public byte getDSANY2() {
 return DSANY2;
 }
 
-public double getDSCOS2() {
+public byte getDSCOS2() {
 return DSCOS2;
 }
 
-public double getDSCOS3() {
+public byte getDSCOS3() {
 return DSCOS3;
 }
 
-public double getDSCSP2() {
+public byte getDSCSP2() {
 return DSCSP2;
 }
 
-public double getDSCSP3() {
+public byte getDSCSP3() {
 return DSCSP3;
 }
 
-public double getDSESB2() {
+public byte getDSESB2() {
 return DSESB2;
 }
 
-public double getDSESB3() {
+public byte getDSESB3() {
 return DSESB3;
 }
 
-public double getDSLAMT2() {
+public int getDSLAMT2() {
 return DSLAMT2;
 }
 
-public double getDSLAMT2_I() {
+protected double DSLAMT2_I() {
 return DSLAMT2_I;
 }
 
-public double getDSLAMT2_IFLAG() {
+public byte getDSLAMT2_IFLAG() {
 return DSLAMT2_IFLAG;
 }
 
-public double getDSLAMT3() {
+public short getDSLAMT3() {
 return DSLAMT3;
 }
 
-public double getDSLAMT3_I() {
+public short getDSLAMT3_I() {
 return DSLAMT3_I;
 }
 
-public double getDSLAMT3_IFLAG() {
+public byte getDSLAMT3_IFLAG() {
 return DSLAMT3_IFLAG;
 }
 
-public double getDSLAMT4() {
+public short getDSLAMT4() {
 return DSLAMT4;
 }
 
-public double getDSLAMT4_I() {
+public short getDSLAMT4_I() {
 return DSLAMT4_I;
 }
 
-public double getDSLAMT4_IFLAG() {
+public byte getDSLAMT4_IFLAG() {
 return DSLAMT4_IFLAG;
 }
 
-public double getDSLAMT5() {
+public short getDSLAMT5() {
 return DSLAMT5;
 }
 
-public double getDSLAMT5_I() {
+public short getDSLAMT5_I() {
 return DSLAMT5_I;
 }
 
-public double getDSLAMT5_IFLAG() {
+public byte getDSLAMT5_IFLAG() {
 return DSLAMT5_IFLAG;
 }
 
-public double getDSLEST2() {
+public byte getDSLEST2() {
 return DSLEST2;
 }
 
-public double getDSLEST3() {
+public byte getDSLEST3() {
 return DSLEST3;
 }
 
-public double getDSLEST4() {
+public byte getDSLEST4() {
 return DSLEST4;
 }
 
-public double getDSLEST5() {
+public boolean getDSLEST5() {
 return DSLEST5;
 }
 
-public double getDSLPAY2() {
+public byte getDSLPAY2() {
 return DSLPAY2;
 }
 
-public double getDSLPAY3() {
+public byte getDSLPAY3() {
 return DSLPAY3;
 }
 
-public double getDSLPAY4() {
+public byte getDSLPAY4() {
 return DSLPAY4;
 }
 
-public double getDSLPAY5() {
+public boolean getDSLPAY5() {
 return DSLPAY5;
 }
 
-public double getDSNAM2() {
+public byte getDSNAM2() {
 return DSNAM2;
 }
 
-public double getDSNAM3() {
+public byte getDSNAM3() {
 return DSNAM3;
 }
 
-public double getDSONM1() {
+public byte getDSONM1() {
 return DSONM1;
 }
 
-public double getDSONM2() {
+public byte getDSONM2() {
 return DSONM2;
 }
 
-public double getDSONM3() {
+public byte getDSONM3() {
 return DSONM3;
 }
 
-public double getDSONM4() {
+public byte getDSONM4() {
 return DSONM4;
 }
 
-public double getDSONM5() {
+public byte getDSONM5() {
 return DSONM5;
 }
 
-public double getDSONM6() {
+public byte getDSONM6() {
 return DSONM6;
 }
 
-public double getDSPER2() {
+public byte getDSPER2() {
 return DSPER2;
 }
 
-public double getDSREC2() {
+public byte getDSREC2() {
 return DSREC2;
 }
 
-public double getDSREC3() {
+public byte getDSREC3() {
 return DSREC3;
 }
 
@@ -10797,2383 +10912,2383 @@ public String getDTJBL() {
 return DTJBL;
 }
 
-public double getDVAGE17() {
+public byte getDVAGE17() {
 return DVAGE17;
 }
 
-public double getDVANYARR() {
+public byte getDVANYARR() {
 return DVANYARR;
 }
 
-public double getDVCACTV() {
+public short getDVCACTV() {
 return DVCACTV;
 }
 
-public double getDVCASVV() {
+public int getDVCASVV() {
 return DVCASVV;
 }
 
-public double getDVCHMARR() {
+public byte getDVCHMARR() {
 return DVCHMARR;
 }
 
-public double getDVCISAV() {
+public int getDVCISAV() {
 return DVCISAV;
 }
 
-public double getDVCOINV2() {
+public int getDVCOINV2() {
 return DVCOINV2;
 }
 
-public double getDVCOINV3() {
+public short getDVCOINV3() {
 return DVCOINV3;
 }
 
-public double getDVCRTARR() {
+public byte getDVCRTARR() {
 return DVCRTARR;
 }
 
-public double getDVCTARR() {
+public byte getDVCTARR() {
 return DVCTARR;
 }
 
-public double getDVDBINC1() {
+protected double DVDBINC1() {
 return DVDBINC1;
 }
 
-public double getDVDBINC2() {
+protected double DVDBINC2() {
 return DVDBINC2;
 }
 
-public double getDVDBINC3() {
+protected double DVDBINC3() {
 return DVDBINC3;
 }
 
-public double getDVDBINCALL() {
+protected double DVDBINCALL() {
 return DVDBINCALL;
 }
 
-public double getDVDBLUMP1() {
+protected double DVDBLUMP1() {
 return DVDBLUMP1;
 }
 
-public double getDVDBLUMP2() {
+protected double DVDBLUMP2() {
 return DVDBLUMP2;
 }
 
-public double getDVDBLUMP3() {
+protected double DVDBLUMP3() {
 return DVDBLUMP3;
 }
 
-public double getDVDBRWEALTHVAL() {
+protected double DVDBRWEALTHVAL() {
 return DVDBRWEALTHVAL;
 }
 
-public double getDVDHPOWE2() {
+public short getDVDHPOWE2() {
 return DVDHPOWE2;
 }
 
-public double getDVDLOWE2() {
+public int getDVDLOWE2() {
 return DVDLOWE2;
 }
 
-public double getDVDLOWE3() {
+public short getDVDLOWE3() {
 return DVDLOWE3;
 }
 
-public double getDVDLOWE4() {
+public short getDVDLOWE4() {
 return DVDLOWE4;
 }
 
-public double getDVDMOOWE2() {
+public short getDVDMOOWE2() {
 return DVDMOOWE2;
 }
 
-public double getDVELARR() {
+public byte getDVELARR() {
 return DVELARR;
 }
 
-public double getDVFBONDV() {
+public int getDVFBONDV() {
 return DVFBONDV;
 }
 
-public double getDVFCINVAL() {
+public int getDVFCINVAL() {
 return DVFCINVAL;
 }
 
-public double getDVFCOLLV() {
+public int getDVFCOLLV() {
 return DVFCOLLV;
 }
 
-public double getDVFEOPTV() {
+public int getDVFEOPTV() {
 return DVFEOPTV;
 }
 
-public double getDVFESHAV() {
+public int getDVFESHAV() {
 return DVFESHAV;
 }
 
-public double getDVFGLTFOV() {
+public int getDVFGLTFOV() {
 return DVFGLTFOV;
 }
 
-public double getDVFGLTUKV() {
+public int getDVFGLTUKV() {
 return DVFGLTUKV;
 }
 
-public double getDVFINFLV() {
+public int getDVFINFLV() {
 return DVFINFLV;
 }
 
-public double getDVFINFV() {
+public int getDVFINFV() {
 return DVFINFV;
 }
 
-public double getDVFINVOTV() {
+public int getDVFINVOTV() {
 return DVFINVOTV;
 }
 
-public double getDVFLFENV() {
+public int getDVFLFENV() {
 return DVFLFENV;
 }
 
-public double getDVFLFFSV() {
+public int getDVFLFFSV() {
 return DVFLFFSV;
 }
 
-public double getDVFLFSIV() {
+public int getDVFLFSIV() {
 return DVFLFSIV;
 }
 
-public double getDVFLFTEV() {
+public int getDVFLFTEV() {
 return DVFLFTEV;
 }
 
-public double getDVFNSVAL() {
+public int getDVFNSVAL() {
 return DVFNSVAL;
 }
 
-public double getDVFSHOSV() {
+public int getDVFSHOSV() {
 return DVFSHOSV;
 }
 
-public double getDVFSHUKV() {
+public int getDVFSHUKV() {
 return DVFSHUKV;
 }
 
-public double getDVFSINVAL() {
+public int getDVFSINVAL() {
 return DVFSINVAL;
 }
 
-public double getDVGASARR() {
+public byte getDVGASARR() {
 return DVGASARR;
 }
 
-public double getDVGRSPAY() {
+protected double DVGRSPAY() {
 return DVGRSPAY;
 }
 
-public double getDVHASAVC() {
+public boolean getDVHASAVC() {
 return DVHASAVC;
 }
 
-public double getDVHASDB() {
+public byte getDVHASDB() {
 return DVHASDB;
 }
 
-public double getDVHASDC() {
+public boolean getDVHASDC() {
 return DVHASDC;
 }
 
-public double getDVHASPFCUR() {
+public boolean getDVHASPFCUR() {
 return DVHASPFCUR;
 }
 
-public double getDVHASPFD() {
+public boolean getDVHASPFD() {
 return DVHASPFD;
 }
 
-public double getDVHASPP() {
+public boolean getDVHASPP() {
 return DVHASPP;
 }
 
-public double getDVHPAR() {
+public byte getDVHPAR() {
 return DVHPAR;
 }
 
-public double getDVIISAV() {
+public int getDVIISAV() {
 return DVIISAV;
 }
 
-public double getDVILO3A() {
+public byte getDVILO3A() {
 return DVILO3A;
 }
 
-public double getDVILO4A() {
+public byte getDVILO4A() {
 return DVILO4A;
 }
 
-public double getDVJB12ML() {
+public byte getDVJB12ML() {
 return DVJB12ML;
 }
 
-public double getDVKISAV() {
+public int getDVKISAV() {
 return DVKISAV;
 }
 
-public double getDVMRDF() {
+public byte getDVMRDF() {
 return DVMRDF;
 }
 
-public double getDVNETPAY() {
+protected double DVNETPAY() {
 return DVNETPAY;
 }
 
-public double getDVOTHARR() {
+public byte getDVOTHARR() {
 return DVOTHARR;
 }
 
-public double getDVPAVCUV() {
+protected double DVPAVCUV() {
 return DVPAVCUV;
 }
 
-public double getDVPFCURVAL() {
+protected double DVPFCURVAL() {
 return DVPFCURVAL;
 }
 
-public double getDVPFDDV() {
+public int getDVPFDDV() {
 return DVPFDDV;
 }
 
-public double getDVPINPVAL() {
+protected double DVPINPVAL() {
 return DVPINPVAL;
 }
 
-public double getDVPPVAL() {
+protected double DVPPVAL() {
 return DVPPVAL;
 }
 
-public double getDVRNTARR() {
+public byte getDVRNTARR() {
 return DVRNTARR;
 }
 
-public double getDVSHCVAL() {
+protected double DVSHCVAL() {
 return DVSHCVAL;
 }
 
-public double getDVSHODVAL2() {
+protected double DVSHODVAL2() {
 return DVSHODVAL2;
 }
 
-public double getDVSHODVAL3() {
+public short getDVSHODVAL3() {
 return DVSHODVAL3;
 }
 
-public double getDVSHSVAL() {
+protected double DVSHSVAL() {
 return DVSHSVAL;
 }
 
-public double getDVSPEN() {
+protected double DVSPEN() {
 return DVSPEN;
 }
 
-public double getDVTAXARR() {
+public byte getDVTAXARR() {
 return DVTAXARR;
 }
 
-public double getDVTELARR() {
+public byte getDVTELARR() {
 return DVTELARR;
 }
 
-public double getDVVALDBLUM() {
+protected double DVVALDBLUM() {
 return DVVALDBLUM;
 }
 
-public double getDVVALDBT() {
+protected double DVVALDBT() {
 return DVVALDBT;
 }
 
-public double getDVVALDCOS() {
+protected double DVVALDCOS() {
 return DVVALDCOS;
 }
 
-public double getDVVALPBLUM() {
+protected double DVVALPBLUM() {
 return DVVALPBLUM;
 }
 
-public double getDVVATARR() {
+public byte getDVVATARR() {
 return DVVATARR;
 }
 
-public double getDVWATARR() {
+public byte getDVWATARR() {
 return DVWATARR;
 }
 
-public double getEDATTN1() {
+public byte getEDATTN1() {
 return EDATTN1;
 }
 
-public double getEDATTN2() {
+public byte getEDATTN2() {
 return EDATTN2;
 }
 
-public double getEDATTN3() {
+public byte getEDATTN3() {
 return EDATTN3;
 }
 
-public double getEDLEVEL() {
+public byte getEDLEVEL() {
 return EDLEVEL;
 }
 
-public double getEMPN() {
+public byte getEMPN() {
 return EMPN;
 }
 
-public double getEMPSTY() {
+public short getEMPSTY() {
 return EMPSTY;
 }
 
-public double getEMSHAR1() {
+public byte getEMSHAR1() {
 return EMSHAR1;
 }
 
-public double getEMSHAR2() {
+public byte getEMSHAR2() {
 return EMSHAR2;
 }
 
-public double getEMSHAR3() {
+public byte getEMSHAR3() {
 return EMSHAR3;
 }
 
-public double getENROLL() {
+public byte getENROLL() {
 return ENROLL;
 }
 
-public double getEVERWK() {
+public byte getEVERWK() {
 return EVERWK;
 }
 
-public double getFBONDTY1() {
+public byte getFBONDTY1() {
 return FBONDTY1;
 }
 
-public double getFBONDTY2() {
+public byte getFBONDTY2() {
 return FBONDTY2;
 }
 
-public double getFBONDTY3() {
+public byte getFBONDTY3() {
 return FBONDTY3;
 }
 
-public double getFBONDV() {
+public int getFBONDV() {
 return FBONDV;
 }
 
-public double getFBONDVB() {
+public byte getFBONDVB() {
 return FBONDVB;
 }
 
-public double getFBONDV_I() {
+public int getFBONDV_I() {
 return FBONDV_I;
 }
 
-public double getFBONDV_IFLAG() {
+public byte getFBONDV_IFLAG() {
 return FBONDV_IFLAG;
 }
 
-public double getFCACSH() {
+public byte getFCACSH() {
 return FCACSH;
 }
 
-public double getFCACSH_I() {
+public byte getFCACSH_I() {
 return FCACSH_I;
 }
 
-public double getFCACSH_IFLAG() {
+public byte getFCACSH_IFLAG() {
 return FCACSH_IFLAG;
 }
 
-public double getFCINVAL() {
+public int getFCINVAL() {
 return FCINVAL;
 }
 
-public double getFCINVAL_I() {
+public int getFCINVAL_I() {
 return FCINVAL_I;
 }
 
-public double getFCINVAL_IFLAG() {
+public byte getFCINVAL_IFLAG() {
 return FCINVAL_IFLAG;
 }
 
-public double getFCINVLB() {
+public byte getFCINVLB() {
 return FCINVLB;
 }
 
-public double getFCISAB() {
+public byte getFCISAB() {
 return FCISAB;
 }
 
-public double getFCISAV() {
+public int getFCISAV() {
 return FCISAV;
 }
 
-public double getFCISAV_I() {
+public int getFCISAV_I() {
 return FCISAV_I;
 }
 
-public double getFCISAV_IFLAG() {
+public byte getFCISAV_IFLAG() {
 return FCISAV_IFLAG;
 }
 
-public double getFCNUMIN() {
+public byte getFCNUMIN() {
 return FCNUMIN;
 }
 
-public double getFCNUMIN_I() {
+public byte getFCNUMIN_I() {
 return FCNUMIN_I;
 }
 
-public double getFCNUMIN_IFLAG() {
+public byte getFCNUMIN_IFLAG() {
 return FCNUMIN_IFLAG;
 }
 
-public double getFCNUMSH() {
+public byte getFCNUMSH() {
 return FCNUMSH;
 }
 
-public double getFCNUMSH_I() {
+public byte getFCNUMSH_I() {
 return FCNUMSH_I;
 }
 
-public double getFCNUMSH_IFLAG() {
+public byte getFCNUMSH_IFLAG() {
 return FCNUMSH_IFLAG;
 }
 
-public double getFCOLLV() {
+public int getFCOLLV() {
 return FCOLLV;
 }
 
-public double getFCOLLVB() {
+public byte getFCOLLVB() {
 return FCOLLVB;
 }
 
-public double getFCOLLV_I() {
+public int getFCOLLV_I() {
 return FCOLLV_I;
 }
 
-public double getFCOLLV_IFLAG() {
+public byte getFCOLLV_IFLAG() {
 return FCOLLV_IFLAG;
 }
 
-public double getFCOVDIF() {
+public byte getFCOVDIF() {
 return FCOVDIF;
 }
 
-public double getFCOVDIN() {
+public byte getFCOVDIN() {
 return FCOVDIN;
 }
 
-public double getFCOVDIN_I() {
+public byte getFCOVDIN_I() {
 return FCOVDIN_I;
 }
 
-public double getFCOVDIN_IFLAG() {
+public byte getFCOVDIN_IFLAG() {
 return FCOVDIN_IFLAG;
 }
 
-public double getFCOVDSH() {
+public byte getFCOVDSH() {
 return FCOVDSH;
 }
 
-public double getFCOVDSH_I() {
+public byte getFCOVDSH_I() {
 return FCOVDSH_I;
 }
 
-public double getFCOVDSH_IFLAG() {
+public byte getFCOVDSH_IFLAG() {
 return FCOVDSH_IFLAG;
 }
 
-public double getFCOVNIN() {
+public byte getFCOVNIN() {
 return FCOVNIN;
 }
 
-public double getFCOVNIN_I() {
+public byte getFCOVNIN_I() {
 return FCOVNIN_I;
 }
 
-public double getFCOVNIN_IFLAG() {
+public byte getFCOVNIN_IFLAG() {
 return FCOVNIN_IFLAG;
 }
 
-public double getFCOVNSH() {
+public byte getFCOVNSH() {
 return FCOVNSH;
 }
 
-public double getFCOVNSH_I() {
+public byte getFCOVNSH_I() {
 return FCOVNSH_I;
 }
 
-public double getFCOVNSH_IFLAG() {
+public byte getFCOVNSH_IFLAG() {
 return FCOVNSH_IFLAG;
 }
 
-public double getFCSHVAL() {
+public int getFCSHVAL() {
 return FCSHVAL;
 }
 
-public double getFCSHVAL_I() {
+public int getFCSHVAL_I() {
 return FCSHVAL_I;
 }
 
-public double getFCSHVAL_IFLAG() {
+public byte getFCSHVAL_IFLAG() {
 return FCSHVAL_IFLAG;
 }
 
-public double getFCSHVLB() {
+public byte getFCSHVLB() {
 return FCSHVLB;
 }
 
-public double getFCSUPPR() {
+public byte getFCSUPPR() {
 return FCSUPPR;
 }
 
-public double getFEOPTV() {
+public int getFEOPTV() {
 return FEOPTV;
 }
 
-public double getFEOPTV_I() {
+public int getFEOPTV_I() {
 return FEOPTV_I;
 }
 
-public double getFEOPTV_IFLAG() {
+public byte getFEOPTV_IFLAG() {
 return FEOPTV_IFLAG;
 }
 
-public double getFEOPVB() {
+public byte getFEOPVB() {
 return FEOPVB;
 }
 
-public double getFESHA() {
+public byte getFESHA() {
 return FESHA;
 }
 
-public double getFESHAV() {
+public int getFESHAV() {
 return FESHAV;
 }
 
-public double getFESHAV_I() {
+public int getFESHAV_I() {
 return FESHAV_I;
 }
 
-public double getFESHAV_IFLAG() {
+public byte getFESHAV_IFLAG() {
 return FESHAV_IFLAG;
 }
 
-public double getFESHA_I() {
+public byte getFESHA_I() {
 return FESHA_I;
 }
 
-public double getFESHA_IFLAG() {
+public byte getFESHA_IFLAG() {
 return FESHA_IFLAG;
 }
 
-public double getFESHVB() {
+public byte getFESHVB() {
 return FESHVB;
 }
 
-public double getFGFOVB() {
+public byte getFGFOVB() {
 return FGFOVB;
 }
 
-public double getFGILTS1() {
+public byte getFGILTS1() {
 return FGILTS1;
 }
 
-public double getFGILTS1_I() {
+public byte getFGILTS1_I() {
 return FGILTS1_I;
 }
 
-public double getFGILTS1_IFLAG() {
+public byte getFGILTS1_IFLAG() {
 return FGILTS1_IFLAG;
 }
 
-public double getFGILTS2() {
+public byte getFGILTS2() {
 return FGILTS2;
 }
 
-public double getFGILTS2_I() {
+public byte getFGILTS2_I() {
 return FGILTS2_I;
 }
 
-public double getFGILTS2_IFLAG() {
+public byte getFGILTS2_IFLAG() {
 return FGILTS2_IFLAG;
 }
 
-public double getFGILTS3() {
+public byte getFGILTS3() {
 return FGILTS3;
 }
 
-public double getFGILTS3_I() {
+public byte getFGILTS3_I() {
 return FGILTS3_I;
 }
 
-public double getFGILTS3_IFLAG() {
+public byte getFGILTS3_IFLAG() {
 return FGILTS3_IFLAG;
 }
 
-public double getFGILTS4() {
+public byte getFGILTS4() {
 return FGILTS4;
 }
 
-public double getFGILTS4_I() {
+public byte getFGILTS4_I() {
 return FGILTS4_I;
 }
 
-public double getFGILTS4_IFLAG() {
+public byte getFGILTS4_IFLAG() {
 return FGILTS4_IFLAG;
 }
 
-public double getFGLTFOV() {
+public int getFGLTFOV() {
 return FGLTFOV;
 }
 
-public double getFGLTFOV_I() {
+public int getFGLTFOV_I() {
 return FGLTFOV_I;
 }
 
-public double getFGLTFOV_IFLAG() {
+public byte getFGLTFOV_IFLAG() {
 return FGLTFOV_IFLAG;
 }
 
-public double getFGLTUKV() {
+public int getFGLTUKV() {
 return FGLTUKV;
 }
 
-public double getFGLTUKV_I() {
+public int getFGLTUKV_I() {
 return FGLTUKV_I;
 }
 
-public double getFGLTUKV_IFLAG() {
+public byte getFGLTUKV_IFLAG() {
 return FGLTUKV_IFLAG;
 }
 
-public double getFGUKVB() {
+public byte getFGUKVB() {
 return FGUKVB;
 }
 
-public double getFIISAB() {
+public byte getFIISAB() {
 return FIISAB;
 }
 
-public double getFIISAV() {
+public int getFIISAV() {
 return FIISAV;
 }
 
-public double getFIISAV_I() {
+public int getFIISAV_I() {
 return FIISAV_I;
 }
 
-public double getFIISAV_IFLAG() {
+public byte getFIISAV_IFLAG() {
 return FIISAV_IFLAG;
 }
 
-public double getFINCVB() {
+public byte getFINCVB() {
 return FINCVB;
 }
 
-public double getFINFLV() {
+public int getFINFLV() {
 return FINFLV;
 }
 
-public double getFINFLV_I() {
+public int getFINFLV_I() {
 return FINFLV_I;
 }
 
-public double getFINFLV_IFLAG() {
+public byte getFINFLV_IFLAG() {
 return FINFLV_IFLAG;
 }
 
-public double getFINFSAV1() {
+public byte getFINFSAV1() {
 return FINFSAV1;
 }
 
-public double getFINFSAV1_I() {
+public byte getFINFSAV1_I() {
 return FINFSAV1_I;
 }
 
-public double getFINFSAV1_IFLAG() {
+public byte getFINFSAV1_IFLAG() {
 return FINFSAV1_IFLAG;
 }
 
-public double getFINFSAV2() {
+public byte getFINFSAV2() {
 return FINFSAV2;
 }
 
-public double getFINFSAV2_I() {
+public byte getFINFSAV2_I() {
 return FINFSAV2_I;
 }
 
-public double getFINFSAV2_IFLAG() {
+public byte getFINFSAV2_IFLAG() {
 return FINFSAV2_IFLAG;
 }
 
-public double getFINFSAV3() {
+public byte getFINFSAV3() {
 return FINFSAV3;
 }
 
-public double getFINFSAV3_I() {
+public byte getFINFSAV3_I() {
 return FINFSAV3_I;
 }
 
-public double getFINFSAV3_IFLAG() {
+public byte getFINFSAV3_IFLAG() {
 return FINFSAV3_IFLAG;
 }
 
-public double getFINFSAV4() {
+public byte getFINFSAV4() {
 return FINFSAV4;
 }
 
-public double getFINFSAV4_I() {
+public byte getFINFSAV4_I() {
 return FINFSAV4_I;
 }
 
-public double getFINFSAV4_IFLAG() {
+public byte getFINFSAV4_IFLAG() {
 return FINFSAV4_IFLAG;
 }
 
-public double getFINFV() {
+public int getFINFV() {
 return FINFV;
 }
 
-public double getFINFVB() {
+public byte getFINFVB() {
 return FINFVB;
 }
 
-public double getFINFV_I() {
+public int getFINFV_I() {
 return FINFV_I;
 }
 
-public double getFINFV_IFLAG() {
+public byte getFINFV_IFLAG() {
 return FINFV_IFLAG;
 }
 
-public double getFINS() {
+public byte getFINS() {
 return FINS;
 }
 
-public double getFINSV() {
+public int getFINSV() {
 return FINSV;
 }
 
-public double getFINSV_I() {
+public int getFINSV_I() {
 return FINSV_I;
 }
 
-public double getFINSV_IFLAG() {
+public byte getFINSV_IFLAG() {
 return FINSV_IFLAG;
 }
 
-public double getFINS_I() {
+public byte getFINS_I() {
 return FINS_I;
 }
 
-public double getFINS_IFLAG() {
+public byte getFINS_IFLAG() {
 return FINS_IFLAG;
 }
 
-public double getFINVOTV() {
+public int getFINVOTV() {
 return FINVOTV;
 }
 
-public double getFINVOTV_I() {
+public int getFINVOTV_I() {
 return FINVOTV_I;
 }
 
-public double getFINVOTV_IFLAG() {
+public byte getFINVOTV_IFLAG() {
 return FINVOTV_IFLAG;
 }
 
-public double getFINVOVB() {
+public byte getFINVOVB() {
 return FINVOVB;
 }
 
-public double getFINVTY01() {
+public byte getFINVTY01() {
 return FINVTY01;
 }
 
-public double getFINVTY01_I() {
+public byte getFINVTY01_I() {
 return FINVTY01_I;
 }
 
-public double getFINVTY02() {
+public byte getFINVTY02() {
 return FINVTY02;
 }
 
-public double getFINVTY02_I() {
+public byte getFINVTY02_I() {
 return FINVTY02_I;
 }
 
-public double getFINVTY03() {
+public byte getFINVTY03() {
 return FINVTY03;
 }
 
-public double getFINVTY03_I() {
+public byte getFINVTY03_I() {
 return FINVTY03_I;
 }
 
-public double getFINVTY04() {
+public byte getFINVTY04() {
 return FINVTY04;
 }
 
-public double getFINVTY04_I() {
+public byte getFINVTY04_I() {
 return FINVTY04_I;
 }
 
-public double getFINVTY05() {
+public byte getFINVTY05() {
 return FINVTY05;
 }
 
-public double getFINVTY05_I() {
+public byte getFINVTY05_I() {
 return FINVTY05_I;
 }
 
-public double getFINVTY06() {
+public byte getFINVTY06() {
 return FINVTY06;
 }
 
-public double getFINVTY06_I() {
+public byte getFINVTY06_I() {
 return FINVTY06_I;
 }
 
-public double getFINVTY07() {
+public byte getFINVTY07() {
 return FINVTY07;
 }
 
-public double getFINVTY07_I() {
+public byte getFINVTY07_I() {
 return FINVTY07_I;
 }
 
-public double getFINVTY08() {
+public byte getFINVTY08() {
 return FINVTY08;
 }
 
-public double getFINVTY08_I() {
+public byte getFINVTY08_I() {
 return FINVTY08_I;
 }
 
-public double getFINVTY09() {
+public byte getFINVTY09() {
 return FINVTY09;
 }
 
-public double getFINVTY09_I() {
+public byte getFINVTY09_I() {
 return FINVTY09_I;
 }
 
-public double getFINVTY10() {
+public byte getFINVTY10() {
 return FINVTY10;
 }
 
-public double getFINVTY10_I() {
+public byte getFINVTY10_I() {
 return FINVTY10_I;
 }
 
-public double getFINVTY11() {
+public byte getFINVTY11() {
 return FINVTY11;
 }
 
-public double getFISA1() {
+public byte getFISA1() {
 return FISA1;
 }
 
-public double getFISA1_I() {
+public byte getFISA1_I() {
 return FISA1_I;
 }
 
-public double getFISA1_IFLAG() {
+public byte getFISA1_IFLAG() {
 return FISA1_IFLAG;
 }
 
-public double getFISA2() {
+public byte getFISA2() {
 return FISA2;
 }
 
-public double getFISA2_I() {
+public byte getFISA2_I() {
 return FISA2_I;
 }
 
-public double getFISA2_IFLAG() {
+public byte getFISA2_IFLAG() {
 return FISA2_IFLAG;
 }
 
-public double getFKISAB() {
+public byte getFKISAB() {
 return FKISAB;
 }
 
-public double getFKISAV() {
+public int getFKISAV() {
 return FKISAV;
 }
 
-public double getFKISAV_I() {
+public int getFKISAV_I() {
 return FKISAV_I;
 }
 
-public double getFKISAV_IFLAG() {
+public byte getFKISAV_IFLAG() {
 return FKISAV_IFLAG;
 }
 
-public double getFLFENV() {
+public int getFLFENV() {
 return FLFENV;
 }
 
-public double getFLFENVB() {
+public byte getFLFENVB() {
 return FLFENVB;
 }
 
-public double getFLFENV_I() {
+public int getFLFENV_I() {
 return FLFENV_I;
 }
 
-public double getFLFENV_IFLAG() {
+public byte getFLFENV_IFLAG() {
 return FLFENV_IFLAG;
 }
 
-public double getFLFFSV() {
+public int getFLFFSV() {
 return FLFFSV;
 }
 
-public double getFLFFSVB() {
+public byte getFLFFSVB() {
 return FLFFSVB;
 }
 
-public double getFLFFSV_I() {
+public int getFLFFSV_I() {
 return FLFFSV_I;
 }
 
-public double getFLFFSV_IFLAG() {
+public byte getFLFFSV_IFLAG() {
 return FLFFSV_IFLAG;
 }
 
-public double getFLFSIV() {
+public int getFLFSIV() {
 return FLFSIV;
 }
 
-public double getFLFSIVB() {
+public byte getFLFSIVB() {
 return FLFSIVB;
 }
 
-public double getFLFSIV_I() {
+public int getFLFSIV_I() {
 return FLFSIV_I;
 }
 
-public double getFLFSIV_IFLAG() {
+public byte getFLFSIV_IFLAG() {
 return FLFSIV_IFLAG;
 }
 
-public double getFLFTEV() {
+public int getFLFTEV() {
 return FLFTEV;
 }
 
-public double getFLFTEVB() {
+public byte getFLFTEVB() {
 return FLFTEVB;
 }
 
-public double getFLFTEV_I() {
+public int getFLFTEV_I() {
 return FLFTEV_I;
 }
 
-public double getFLFTEV_IFLAG() {
+public byte getFLFTEV_IFLAG() {
 return FLFTEV_IFLAG;
 }
 
-public double getFLNOS1() {
+protected double FLNOS1() {
 return FLNOS1;
 }
 
-public double getFLNOS2() {
+protected double FLNOS2() {
 return FLNOS2;
 }
 
-public double getFLNOS3() {
+protected double FLNOS3() {
 return FLNOS3;
 }
 
-public double getFLNOS4() {
+protected double FLNOS4() {
 return FLNOS4;
 }
 
-public double getFLOANVB() {
+public byte getFLOANVB() {
 return FLOANVB;
 }
 
-public double getFLPROD1() {
+public byte getFLPROD1() {
 return FLPROD1;
 }
 
-public double getFLPROD1_I() {
+public byte getFLPROD1_I() {
 return FLPROD1_I;
 }
 
-public double getFLPROD1_IFLAG() {
+public byte getFLPROD1_IFLAG() {
 return FLPROD1_IFLAG;
 }
 
-public double getFLPROD2() {
+public byte getFLPROD2() {
 return FLPROD2;
 }
 
-public double getFLPROD2_I() {
+public byte getFLPROD2_I() {
 return FLPROD2_I;
 }
 
-public double getFLPROD2_IFLAG() {
+public byte getFLPROD2_IFLAG() {
 return FLPROD2_IFLAG;
 }
 
-public double getFLPROD3() {
+public byte getFLPROD3() {
 return FLPROD3;
 }
 
-public double getFLPROD3_I() {
+public byte getFLPROD3_I() {
 return FLPROD3_I;
 }
 
-public double getFLPROD3_IFLAG() {
+public byte getFLPROD3_IFLAG() {
 return FLPROD3_IFLAG;
 }
 
-public double getFLPROD4() {
+public boolean getFLPROD4() {
 return FLPROD4;
 }
 
-public double getFLPROD4_I() {
+public boolean getFLPROD4_I() {
 return FLPROD4_I;
 }
 
-public double getFLPROD4_IFLAG() {
+public byte getFLPROD4_IFLAG() {
 return FLPROD4_IFLAG;
 }
 
-public double getFNSAV1() {
+public byte getFNSAV1() {
 return FNSAV1;
 }
 
-public double getFNSAV2() {
+public byte getFNSAV2() {
 return FNSAV2;
 }
 
-public double getFNSAV3() {
+public byte getFNSAV3() {
 return FNSAV3;
 }
 
-public double getFNSAV4() {
+public byte getFNSAV4() {
 return FNSAV4;
 }
 
-public double getFNSVAL_IFLAG() {
+public byte getFNSVAL_IFLAG() {
 return FNSVAL_IFLAG;
 }
 
-public double getFNSVB() {
+public byte getFNSVB() {
 return FNSVB;
 }
 
-public double getFSACSH() {
+public byte getFSACSH() {
 return FSACSH;
 }
 
-public double getFSACSH_I() {
+public byte getFSACSH_I() {
 return FSACSH_I;
 }
 
-public double getFSACSH_IFLAG() {
+public byte getFSACSH_IFLAG() {
 return FSACSH_IFLAG;
 }
 
-public double getFSHARE1() {
+public byte getFSHARE1() {
 return FSHARE1;
 }
 
-public double getFSHARE1_I() {
+public byte getFSHARE1_I() {
 return FSHARE1_I;
 }
 
-public double getFSHARE1_IFLAG() {
+public byte getFSHARE1_IFLAG() {
 return FSHARE1_IFLAG;
 }
 
-public double getFSHARE2() {
+public byte getFSHARE2() {
 return FSHARE2;
 }
 
-public double getFSHARE2_I() {
+public byte getFSHARE2_I() {
 return FSHARE2_I;
 }
 
-public double getFSHARE2_IFLAG() {
+public byte getFSHARE2_IFLAG() {
 return FSHARE2_IFLAG;
 }
 
-public double getFSHARE3() {
+public byte getFSHARE3() {
 return FSHARE3;
 }
 
-public double getFSHARE3_I() {
+public byte getFSHARE3_I() {
 return FSHARE3_I;
 }
 
-public double getFSHARE3_IFLAG() {
+public byte getFSHARE3_IFLAG() {
 return FSHARE3_IFLAG;
 }
 
-public double getFSHOSV() {
+public int getFSHOSV() {
 return FSHOSV;
 }
 
-public double getFSHOSVB() {
+public byte getFSHOSVB() {
 return FSHOSVB;
 }
 
-public double getFSHOSV_I() {
+public int getFSHOSV_I() {
 return FSHOSV_I;
 }
 
-public double getFSHOSV_IFLAG() {
+public byte getFSHOSV_IFLAG() {
 return FSHOSV_IFLAG;
 }
 
-public double getFSHUKV() {
+public int getFSHUKV() {
 return FSHUKV;
 }
 
-public double getFSHUKVB() {
+public byte getFSHUKVB() {
 return FSHUKVB;
 }
 
-public double getFSHUKV_I() {
+public int getFSHUKV_I() {
 return FSHUKV_I;
 }
 
-public double getFSHUKV_IFLAG() {
+public byte getFSHUKV_IFLAG() {
 return FSHUKV_IFLAG;
 }
 
-public double getFSINVAL() {
+public int getFSINVAL() {
 return FSINVAL;
 }
 
-public double getFSINVAL_I() {
+public int getFSINVAL_I() {
 return FSINVAL_I;
 }
 
-public double getFSINVAL_IFLAG() {
+public byte getFSINVAL_IFLAG() {
 return FSINVAL_IFLAG;
 }
 
-public double getFSINVLB() {
+public byte getFSINVLB() {
 return FSINVLB;
 }
 
-public double getFSNUMIN() {
+public byte getFSNUMIN() {
 return FSNUMIN;
 }
 
-public double getFSNUMIN_I() {
+public byte getFSNUMIN_I() {
 return FSNUMIN_I;
 }
 
-public double getFSNUMIN_IFLAG() {
+public byte getFSNUMIN_IFLAG() {
 return FSNUMIN_IFLAG;
 }
 
-public double getFSNUMSH() {
+public byte getFSNUMSH() {
 return FSNUMSH;
 }
 
-public double getFSNUMSH_I() {
+public byte getFSNUMSH_I() {
 return FSNUMSH_I;
 }
 
-public double getFSNUMSH_IFLAG() {
+public byte getFSNUMSH_IFLAG() {
 return FSNUMSH_IFLAG;
 }
 
-public double getFSOSHAV() {
+public byte getFSOSHAV() {
 return FSOSHAV;
 }
 
-public double getFSOSVLB() {
+public byte getFSOSVLB() {
 return FSOSVLB;
 }
 
-public double getFSSHVAL() {
+public int getFSSHVAL() {
 return FSSHVAL;
 }
 
-public double getFSSHVAL_I() {
+protected double FSSHVAL_I() {
 return FSSHVAL_I;
 }
 
-public double getFSSHVAL_IFLAG() {
+public byte getFSSHVAL_IFLAG() {
 return FSSHVAL_IFLAG;
 }
 
-public double getFSSHVLB() {
+public byte getFSSHVLB() {
 return FSSHVLB;
 }
 
-public double getFSSUPPR() {
+public byte getFSSUPPR() {
 return FSSUPPR;
 }
 
-public double getFSTYPIN1() {
+public byte getFSTYPIN1() {
 return FSTYPIN1;
 }
 
-public double getFSTYPIN2() {
+public byte getFSTYPIN2() {
 return FSTYPIN2;
 }
 
-public double getFSTYPIN3() {
+public byte getFSTYPIN3() {
 return FSTYPIN3;
 }
 
-public double getFSTYPSH1() {
+public byte getFSTYPSH1() {
 return FSTYPSH1;
 }
 
-public double getFSTYPSH2() {
+public byte getFSTYPSH2() {
 return FSTYPSH2;
 }
 
-public double getFSTYPSH3() {
+public byte getFSTYPSH3() {
 return FSTYPSH3;
 }
 
-public double getFSTYPSH4() {
+public boolean getFSTYPSH4() {
 return FSTYPSH4;
 }
 
-public double getFTED() {
+public byte getFTED() {
 return FTED;
 }
 
-public double getFTED19() {
+public byte getFTED19() {
 return FTED19;
 }
 
-public double getFTPTWK() {
+public byte getFTPTWK() {
 return FTPTWK;
 }
 
-public double getGOR() {
+public byte getGOR() {
 return GOR;
 }
 
-public double getGRSESM() {
+public byte getGRSESM() {
 return GRSESM;
 }
 
-public double getGRSESP() {
+public byte getGRSESP() {
 return GRSESP;
 }
 
-public double getHASCHD() {
+public boolean getHASCHD() {
 return HASCHD;
 }
 
-public double getHASDEP() {
+public boolean getHASDEP() {
 return HASDEP;
 }
 
-public double getHASNDEP() {
+public boolean getHASNDEP() {
 return HASNDEP;
 }
 
-public double getHOUSGDST() {
+public int getHOUSGDST() {
 return HOUSGDST;
 }
 
-public double getHPLFT2() {
+protected double HPLFT2() {
 return HPLFT2;
 }
 
-public double getHPOS1() {
+protected double HPOS1() {
 return HPOS1;
 }
 
-public double getHPOS2() {
+protected double HPOS2() {
 return HPOS2;
 }
 
-public double getIGDS1() {
+public byte getIGDS1() {
 return IGDS1;
 }
 
-public double getIGDS10() {
+public byte getIGDS10() {
 return IGDS10;
 }
 
-public double getIGDS11() {
+public byte getIGDS11() {
 return IGDS11;
 }
 
-public double getIGDS15() {
+public byte getIGDS15() {
 return IGDS15;
 }
 
-public double getIGDS2() {
+public byte getIGDS2() {
 return IGDS2;
 }
 
-public double getIGDS3() {
+public byte getIGDS3() {
 return IGDS3;
 }
 
-public double getIGDS4() {
+public byte getIGDS4() {
 return IGDS4;
 }
 
-public double getIGDS5() {
+public byte getIGDS5() {
 return IGDS5;
 }
 
-public double getIGDS8() {
+public byte getIGDS8() {
 return IGDS8;
 }
 
-public double getIGDS9() {
+public byte getIGDS9() {
 return IGDS9;
 }
 
-public double getIGFVALB() {
+public byte getIGFVALB() {
 return IGFVALB;
 }
 
-public double getIHRCNUM() {
+public byte getIHRCNUM() {
 return IHRCNUM;
 }
 
-public double getIHRECNT() {
+public byte getIHRECNT() {
 return IHRECNT;
 }
 
-public double getIHSE1() {
+public byte getIHSE1() {
 return IHSE1;
 }
 
-public double getIHSE2() {
+public byte getIHSE2() {
 return IHSE2;
 }
 
-public double getIHSE7() {
+public byte getIHSE7() {
 return IHSE7;
 }
 
-public double getILACB() {
+public byte getILACB() {
 return ILACB;
 }
 
-public double getILGIFT() {
+public byte getILGIFT() {
 return ILGIFT;
 }
 
-public double getILIFB() {
+public byte getILIFB() {
 return ILIFB;
 }
 
-public double getILINB() {
+public byte getILINB() {
 return ILINB;
 }
 
-public double getILLLIM() {
+public byte getILLLIM() {
 return ILLLIM;
 }
 
-public double getILOTB() {
+public byte getILOTB() {
 return ILOTB;
 }
 
-public double getILRDB() {
+public byte getILRDB() {
 return ILRDB;
 }
 
-public double getILUMP() {
+public byte getILUMP() {
 return ILUMP;
 }
 
-public double getILUMTY1() {
+public byte getILUMTY1() {
 return ILUMTY1;
 }
 
-public double getILUMTY2() {
+public byte getILUMTY2() {
 return ILUMTY2;
 }
 
-public double getILUMTY3() {
+public byte getILUMTY3() {
 return ILUMTY3;
 }
 
-public double getILUPB() {
+public byte getILUPB() {
 return ILUPB;
 }
 
-public double getILUPP() {
+public int getILUPP() {
 return ILUPP;
 }
 
-public double getILWNB() {
+public byte getILWNB() {
 return ILWNB;
 }
 
-public double getIOUT1() {
+public byte getIOUT1() {
 return IOUT1;
 }
 
-public double getISDEP() {
+public boolean getISDEP() {
 return ISDEP;
 }
 
-public double getISNDEP() {
+public boolean getISNDEP() {
 return ISNDEP;
 }
 
-public double getIVALB2() {
+public byte getIVALB2() {
 return IVALB2;
 }
 
-public double getIVALB3() {
+public byte getIVALB3() {
 return IVALB3;
 }
 
-public double getIWAT1() {
+public byte getIWAT1() {
 return IWAT1;
 }
 
-public double getIWAT13() {
+public byte getIWAT13() {
 return IWAT13;
 }
 
-public double getIWAT2() {
+public byte getIWAT2() {
 return IWAT2;
 }
 
-public double getIWAT3() {
+public byte getIWAT3() {
 return IWAT3;
 }
 
-public double getIWAT4() {
+public byte getIWAT4() {
 return IWAT4;
 }
 
-public double getIWAT5() {
+public byte getIWAT5() {
 return IWAT5;
 }
 
-public double getIWAT7() {
+public byte getIWAT7() {
 return IWAT7;
 }
 
-public double getIWHO2() {
+public byte getIWHO2() {
 return IWHO2;
 }
 
-public double getIWHO3() {
+public byte getIWHO3() {
 return IWHO3;
 }
 
-public double getJBAWAY() {
+public byte getJBAWAY() {
 return JBAWAY;
 }
 
-public double getJOBNO() {
+public byte getJOBNO() {
 return JOBNO;
 }
 
-public double getLKTIME() {
+public byte getLKTIME() {
 return LKTIME;
 }
 
-public double getLNLFT2() {
+protected double LNLFT2() {
 return LNLFT2;
 }
 
-public double getLNLFT3() {
+protected double LNLFT3() {
 return LNLFT3;
 }
 
-public double getLNLFT4() {
+protected double LNLFT4() {
 return LNLFT4;
 }
 
-public double getLNLFT5() {
+protected double LNLFT5() {
 return LNLFT5;
 }
 
-public double getLNOS1() {
+protected double LNOS1() {
 return LNOS1;
 }
 
-public double getLNOS2() {
+protected double LNOS2() {
 return LNOS2;
 }
 
-public double getLNOS3() {
+protected double LNOS3() {
 return LNOS3;
 }
 
-public double getLNOS4() {
+protected double LNOS4() {
 return LNOS4;
 }
 
-public double getLNOS5() {
+protected double LNOS5() {
 return LNOS5;
 }
 
-public double getLOOKED() {
+public byte getLOOKED() {
 return LOOKED;
 }
 
-public double getLSILL() {
+public byte getLSILL() {
 return LSILL;
 }
 
-public double getMARBEF() {
+public byte getMARBEF() {
 return MARBEF;
 }
 
-public double getMOLFT2() {
+protected double MOLFT2() {
 return MOLFT2;
 }
 
-public double getMONTH() {
+public byte getMONTH() {
 return MONTH;
 }
 
-public double getMOOS1() {
+protected double MOOS1() {
 return MOOS1;
 }
 
-public double getMOOS2() {
+protected double MOOS2() {
 return MOOS2;
 }
 
-public double getNSSEC3() {
+public byte getNSSEC3() {
 return NSSEC3;
 }
 
-public double getNSSEC5() {
+public byte getNSSEC5() {
 return NSSEC5;
 }
 
-public double getNSSEC8() {
+protected double NSSEC8() {
 return NSSEC8;
 }
 
-public double getNSSECB() {
+protected double NSSECB() {
 return NSSECB;
 }
 
-public double getOCSVR1() {
+public byte getOCSVR1() {
 return OCSVR1;
 }
 
-public double getOCSVR2() {
+public byte getOCSVR2() {
 return OCSVR2;
 }
 
-public double getOCSVR3() {
+public byte getOCSVR3() {
 return OCSVR3;
 }
 
-public double getOCSVR4() {
+public byte getOCSVR4() {
 return OCSVR4;
 }
 
-public double getOCSVR5() {
+public byte getOCSVR5() {
 return OCSVR5;
 }
 
-public double getOCSVR6() {
+public byte getOCSVR6() {
 return OCSVR6;
 }
 
-public double getOCSVR7() {
+public byte getOCSVR7() {
 return OCSVR7;
 }
 
-public double getOCSVR8() {
+public byte getOCSVR8() {
 return OCSVR8;
 }
 
-public double getOINTEND() {
+public byte getOINTEND() {
 return OINTEND;
 }
 
-public double getOLARGE() {
+public byte getOLARGE() {
 return OLARGE;
 }
 
-public double getOLEFT() {
+public byte getOLEFT() {
 return OLEFT;
 }
 
-public double getOLEFTDO() {
+public byte getOLEFTDO() {
 return OLEFTDO;
 }
 
-public double getOLONG() {
+public byte getOLONG() {
 return OLONG;
 }
 
-public double getOLONGYR() {
+public byte getOLONGYR() {
 return OLONGYR;
 }
 
-public double getONETEN() {
+public byte getONETEN() {
 return ONETEN;
 }
 
-public double getOPENS01() {
+public byte getOPENS01() {
 return OPENS01;
 }
 
-public double getOPENS02() {
+public byte getOPENS02() {
 return OPENS02;
 }
 
-public double getOPENS03() {
+public byte getOPENS03() {
 return OPENS03;
 }
 
-public double getOPENS04() {
+public byte getOPENS04() {
 return OPENS04;
 }
 
-public double getOPENS05() {
+public byte getOPENS05() {
 return OPENS05;
 }
 
-public double getOPENS06() {
+public byte getOPENS06() {
 return OPENS06;
 }
 
-public double getOPENS07() {
+public byte getOPENS07() {
 return OPENS07;
 }
 
-public double getOPENS08() {
+public byte getOPENS08() {
 return OPENS08;
 }
 
-public double getORETINC() {
+public byte getORETINC() {
 return ORETINC;
 }
 
-public double getORISKA() {
+public byte getORISKA() {
 return ORISKA;
 }
 
-public double getORISKC() {
+public byte getORISKC() {
 return ORISKC;
 }
 
-public double getORUNDO01() {
+public byte getORUNDO01() {
 return ORUNDO01;
 }
 
-public double getORUNDO02() {
+public byte getORUNDO02() {
 return ORUNDO02;
 }
 
-public double getORUNDO03() {
+public byte getORUNDO03() {
 return ORUNDO03;
 }
 
-public double getORUNDO04() {
+public byte getORUNDO04() {
 return ORUNDO04;
 }
 
-public double getORUNDO05() {
+public byte getORUNDO05() {
 return ORUNDO05;
 }
 
-public double getORUNDO06() {
+public byte getORUNDO06() {
 return ORUNDO06;
 }
 
-public double getORUNDO07() {
+public byte getORUNDO07() {
 return ORUNDO07;
 }
 
-public double getORUNDO08() {
+public byte getORUNDO08() {
 return ORUNDO08;
 }
 
-public double getORUNOUT() {
+public byte getORUNOUT() {
 return ORUNOUT;
 }
 
-public double getOSITUAT() {
+public byte getOSITUAT() {
 return OSITUAT;
 }
 
-public double getOSTANDL() {
+public byte getOSTANDL() {
 return OSTANDL;
 }
 
-public double getOTHSRC1() {
+public byte getOTHSRC1() {
 return OTHSRC1;
 }
 
-public double getOTHSRC1_I() {
+public byte getOTHSRC1_I() {
 return OTHSRC1_I;
 }
 
-public double getOTHSRC1_IFLAG() {
+public boolean getOTHSRC1_IFLAG() {
 return OTHSRC1_IFLAG;
 }
 
-public double getOTHSRC2() {
+public byte getOTHSRC2() {
 return OTHSRC2;
 }
 
-public double getOTHSRC2_I() {
+public byte getOTHSRC2_I() {
 return OTHSRC2_I;
 }
 
-public double getOTHSRC2_IFLAG() {
+public boolean getOTHSRC2_IFLAG() {
 return OTHSRC2_IFLAG;
 }
 
-public double getOTHSRC3() {
+public byte getOTHSRC3() {
 return OTHSRC3;
 }
 
-public double getOTHSRC3_I() {
+public byte getOTHSRC3_I() {
 return OTHSRC3_I;
 }
 
-public double getOTHSRC3_IFLAG() {
+public byte getOTHSRC3_IFLAG() {
 return OTHSRC3_IFLAG;
 }
 
-public double getOTRUST01() {
+public byte getOTRUST01() {
 return OTRUST01;
 }
 
-public double getOTRUST02() {
+public byte getOTRUST02() {
 return OTRUST02;
 }
 
-public double getOTRUST03() {
+public byte getOTRUST03() {
 return OTRUST03;
 }
 
-public double getOTRUST04() {
+public byte getOTRUST04() {
 return OTRUST04;
 }
 
-public double getOTRUST05() {
+public byte getOTRUST05() {
 return OTRUST05;
 }
 
-public double getOTRUST06() {
+public byte getOTRUST06() {
 return OTRUST06;
 }
 
-public double getOTRUST07() {
+public byte getOTRUST07() {
 return OTRUST07;
 }
 
-public double getOTRUST08() {
+public byte getOTRUST08() {
 return OTRUST08;
 }
 
-public double getOTRUST09() {
+public byte getOTRUST09() {
 return OTRUST09;
 }
 
-public double getOTRUST10() {
+public byte getOTRUST10() {
 return OTRUST10;
 }
 
-public double getOTRUST11() {
+public byte getOTRUST11() {
 return OTRUST11;
 }
 
-public double getOTRUST12() {
+public byte getOTRUST12() {
 return OTRUST12;
 }
 
-public double getOTRUST13() {
+public byte getOTRUST13() {
 return OTRUST13;
 }
 
-public double getOTRUST14() {
+public byte getOTRUST14() {
 return OTRUST14;
 }
 
-public double getOUNDER() {
+public byte getOUNDER() {
 return OUNDER;
 }
 
-public double getOWNBUS() {
+public byte getOWNBUS() {
 return OWNBUS;
 }
 
-public double getPAGERET() {
+public byte getPAGERET() {
 return PAGERET;
 }
 
-public double getPARTNER() {
+public boolean getPARTNER() {
 return PARTNER;
 }
 
-public double getPARTNO() {
+public byte getPARTNO() {
 return PARTNO;
 }
 
-public double getPAYBON() {
+public byte getPAYBON() {
 return PAYBON;
 }
 
-public double getPAYESM() {
+public byte getPAYESM() {
 return PAYESM;
 }
 
-public double getPAYESP() {
+public byte getPAYESP() {
 return PAYESP;
 }
 
-public double getPAYINC1() {
+public byte getPAYINC1() {
 return PAYINC1;
 }
 
-public double getPAYINC2() {
+public byte getPAYINC2() {
 return PAYINC2;
 }
 
-public double getPAYINC3() {
+public byte getPAYINC3() {
 return PAYINC3;
 }
 
-public double getPAYINC4() {
+public byte getPAYINC4() {
 return PAYINC4;
 }
 
-public double getPAYINC5() {
+public byte getPAYINC5() {
 return PAYINC5;
 }
 
-public double getPAYINC6() {
+public byte getPAYINC6() {
 return PAYINC6;
 }
 
-public double getPAYPER() {
+public byte getPAYPER() {
 return PAYPER;
 }
 
-public double getPAYSLP() {
+public byte getPAYSLP() {
 return PAYSLP;
 }
 
-public double getPEARLRS() {
+public byte getPEARLRS() {
 return PEARLRS;
 }
 
-public double getPEMELG() {
+public byte getPEMELG() {
 return PEMELG;
 }
 
-public double getPEMELG_I() {
+public byte getPEMELG_I() {
 return PEMELG_I;
 }
 
-public double getPEMELG_IFLAG() {
+public boolean getPEMELG_IFLAG() {
 return PEMELG_IFLAG;
 }
 
-public double getPEMMEM() {
+public byte getPEMMEM() {
 return PEMMEM;
 }
 
-public double getPEMMEM_I() {
+public byte getPEMMEM_I() {
 return PEMMEM_I;
 }
 
-public double getPEMMEM_IFLAG() {
+public boolean getPEMMEM_IFLAG() {
 return PEMMEM_IFLAG;
 }
 
-public double getPEMOFF() {
+public byte getPEMOFF() {
 return PEMOFF;
 }
 
-public double getPEMOFF_I() {
+public byte getPEMOFF_I() {
 return PEMOFF_I;
 }
 
-public double getPEMOFF_IFLAG() {
+public boolean getPEMOFF_IFLAG() {
 return PEMOFF_IFLAG;
 }
 
-public Integer getPERSONW1() {
+public byte getPERSONW1() {
 return PERSONW1;
 }
 
-public double getPERSPROX() {
+public byte getPERSPROX() {
 return PERSPROX;
 }
 
-public double getPEVERC() {
+public byte getPEVERC() {
 return PEVERC;
 }
 
-public double getPEVERC_I() {
+public byte getPEVERC_I() {
 return PEVERC_I;
 }
 
-public double getPEVERC_IFLAG() {
+public byte getPEVERC_IFLAG() {
 return PEVERC_IFLAG;
 }
 
-public double getPEVERNC() {
+public byte getPEVERNC() {
 return PEVERNC;
 }
 
-public double getPEVERNC_I() {
+public byte getPEVERNC_I() {
 return PEVERNC_I;
 }
 
-public double getPEVERNC_IFLAG() {
+public byte getPEVERNC_IFLAG() {
 return PEVERNC_IFLAG;
 }
 
-public double getPEXPRET() {
+public byte getPEXPRET() {
 return PEXPRET;
 }
 
-public double getPFNUM() {
+public byte getPFNUM() {
 return PFNUM;
 }
 
-public double getPFNUM_I() {
+public byte getPFNUM_I() {
 return PFNUM_I;
 }
 
-public double getPFNUM_IFLAG() {
+public byte getPFNUM_IFLAG() {
 return PFNUM_IFLAG;
 }
 
-public double getPFULRET() {
+public byte getPFULRET() {
 return PFULRET;
 }
 
-public double getPINCINP() {
+protected double PINCINP() {
 return PINCINP;
 }
 
-public double getPOCNMSC() {
+public byte getPOCNMSC() {
 return POCNMSC;
 }
 
-public double getPOCNMSC_I() {
+public byte getPOCNMSC_I() {
 return POCNMSC_I;
 }
 
-public double getPOCNMSC_IFLAG() {
+public boolean getPOCNMSC_IFLAG() {
 return POCNMSC_IFLAG;
 }
 
-public double getPPRNMSC() {
+public byte getPPRNMSC() {
 return PPRNMSC;
 }
 
-public double getPPRNMSC_I() {
+public byte getPPRNMSC_I() {
 return PPRNMSC_I;
 }
 
-public double getPPRNMSC_IFLAG() {
+public boolean getPPRNMSC_IFLAG() {
 return PPRNMSC_IFLAG;
 }
 
-public double getPPYSTP10() {
+public byte getPPYSTP10() {
 return PPYSTP10;
 }
 
-public double getPRETAIN() {
+public byte getPRETAIN() {
 return PRETAIN;
 }
 
-public double getPRETAIN_I() {
+public byte getPRETAIN_I() {
 return PRETAIN_I;
 }
 
-public double getPRETAIN_IFLAG() {
+public byte getPRETAIN_IFLAG() {
 return PRETAIN_IFLAG;
 }
 
-public double getPSCHM_F() {
+public byte getPSCHM_F() {
 return PSCHM_F;
 }
 
-public double getPSCHM_F_I() {
+public byte getPSCHM_F_I() {
 return PSCHM_F_I;
 }
 
-public double getPSCHM_F_IFLAG() {
+public boolean getPSCHM_F_IFLAG() {
 return PSCHM_F_IFLAG;
 }
 
-public double getPSCHM_S() {
+public byte getPSCHM_S() {
 return PSCHM_S;
 }
 
-public double getPSCHM_S_I() {
+public byte getPSCHM_S_I() {
 return PSCHM_S_I;
 }
 
-public double getPSCHM_S_IFLAG() {
+public boolean getPSCHM_S_IFLAG() {
 return PSCHM_S_IFLAG;
 }
 
-public double getPSCHM_T() {
+public byte getPSCHM_T() {
 return PSCHM_T;
 }
 
-public double getPSCHM_T_I() {
+public byte getPSCHM_T_I() {
 return PSCHM_T_I;
 }
 
-public double getPSCHM_T_IFLAG() {
+public boolean getPSCHM_T_IFLAG() {
 return PSCHM_T_IFLAG;
 }
 
-public double getPSIT() {
+public byte getPSIT() {
 return PSIT;
 }
 
-public double getPSITF() {
+public byte getPSITF() {
 return PSITF;
 }
 
-public double getPWEXPA() {
+protected double PWEXPA() {
 return PWEXPA;
 }
 
-public double getPWEXPA_I() {
+public int getPWEXPA_I() {
 return PWEXPA_I;
 }
 
-public double getPWEXPA_IFLAG() {
+public boolean getPWEXPA_IFLAG() {
 return PWEXPA_IFLAG;
 }
 
-public double getPWEXPH() {
+public byte getPWEXPH() {
 return PWEXPH;
 }
 
-public double getPWEXPH_I() {
+public byte getPWEXPH_I() {
 return PWEXPH_I;
 }
 
-public double getPWEXPH_IFLAG() {
+public boolean getPWEXPH_IFLAG() {
 return PWEXPH_IFLAG;
 }
 
-public double getPWID() {
+public byte getPWID() {
 return PWID;
 }
 
-public double getPWIDFUT() {
+public byte getPWIDFUT() {
 return PWIDFUT;
 }
 
-public double getPWIDFUT_I() {
+public byte getPWIDFUT_I() {
 return PWIDFUT_I;
 }
 
-public double getPWIDFUT_IFLAG() {
+public boolean getPWIDFUT_IFLAG() {
 return PWIDFUT_IFLAG;
 }
 
-public double getP_FLAG1() {
+public byte getP_FLAG1() {
 return P_FLAG1;
 }
 
-public double getP_FLAG3() {
+public byte getP_FLAG3() {
 return P_FLAG3;
 }
 
-public double getP_FLAG4() {
+public byte getP_FLAG4() {
 return P_FLAG4;
 }
 
-public double getQHEALTH1() {
+public byte getQHEALTH1() {
 return QHEALTH1;
 }
 
-public double getQUALCHK() {
+public byte getQUALCHK() {
 return QUALCHK;
 }
 
-public double getREGLRPY1() {
+public byte getREGLRPY1() {
 return REGLRPY1;
 }
 
-public double getREGLRPY2() {
+public byte getREGLRPY2() {
 return REGLRPY2;
 }
 
-public double getRELBUS() {
+public byte getRELBUS() {
 return RELBUS;
 }
 
-public double getRENTPAY() {
+public byte getRENTPAY() {
 return RENTPAY;
 }
 
-public double getSCHEMEET() {
+public byte getSCHEMEET() {
 return SCHEMEET;
 }
 
-public double getSEAMK() {
+public byte getSEAMK() {
 return SEAMK;
 }
 
-public double getSEESM() {
+public byte getSEESM() {
 return SEESM;
 }
 
-public double getSEESW() {
+public byte getSEESW() {
 return SEESW;
 }
 
-public double getSELECTAD() {
+public byte getSELECTAD() {
 return SELECTAD;
 }
 
-public double getSEMN() {
+public byte getSEMN() {
 return SEMN;
 }
 
-public double getSEMPSTY() {
+public short getSEMPSTY() {
 return SEMPSTY;
 }
 
-public double getSEPEL() {
+public byte getSEPEL() {
 return SEPEL;
 }
 
-public double getSEPER() {
+public byte getSEPER() {
 return SEPER;
 }
 
-public double getSEX() {
+public boolean getSEX() {
 return SEX;
 }
 
-public double getSINGPAR() {
+public boolean getSINGPAR() {
 return SINGPAR;
 }
 
-public double getSJEMP1() {
+public byte getSJEMP1() {
 return SJEMP1;
 }
 
-public double getSJEMP2() {
+public byte getSJEMP2() {
 return SJEMP2;
 }
 
-public double getSJOB2() {
+public byte getSJOB2() {
 return SJOB2;
 }
 
-public double getSOLO() {
+public byte getSOLO() {
 return SOLO;
 }
 
-public double getSTARTJ() {
+public byte getSTARTJ() {
 return STARTJ;
 }
 
-public double getSTAT() {
+public byte getSTAT() {
 return STAT;
 }
 
-public double getSTAT_I() {
+public byte getSTAT_I() {
 return STAT_I;
 }
 
-public double getSVISE() {
+public byte getSVISE() {
 return SVISE;
 }
 
-public double getTBENEF() {
+public byte getTBENEF() {
 return TBENEF;
 }
 
-public double getTBENNUM() {
+public byte getTBENNUM() {
 return TBENNUM;
 }
 
-public double getTEA() {
+public byte getTEA() {
 return TEA;
 }
 
-public double getTINTRO() {
+public byte getTINTRO() {
 return TINTRO;
 }
 
-public double getTOTPEN() {
+protected double TOTPEN() {
 return TOTPEN;
 }
 
-public double getTSETT() {
+public byte getTSETT() {
 return TSETT;
 }
 
-public double getTYPE() {
+public byte getTYPE() {
 return TYPE;
 }
 
-public double getUNMTYP() {
+public byte getUNMTYP() {
 return UNMTYP;
 }
 
-public double getUNUMBD() {
+public byte getUNUMBD() {
 return UNUMBD;
 }
 
-public double getUNUMBD_I() {
+public byte getUNUMBD_I() {
 return UNUMBD_I;
 }
 
-public double getUNUMBD_IFLAG() {
+public boolean getUNUMBD_IFLAG() {
 return UNUMBD_IFLAG;
 }
 
-public double getUNUMHS() {
+public byte getUNUMHS() {
 return UNUMHS;
 }
 
-public double getUNUMHS_I() {
+public byte getUNUMHS_I() {
 return UNUMHS_I;
 }
 
-public double getUNUMHS_IFLAG() {
+public boolean getUNUMHS_IFLAG() {
 return UNUMHS_IFLAG;
 }
 
-public double getUNUMLA() {
+public byte getUNUMLA() {
 return UNUMLA;
 }
 
-public double getUNUMLA_I() {
+public byte getUNUMLA_I() {
 return UNUMLA_I;
 }
 
-public double getUNUMLA_IFLAG() {
+public boolean getUNUMLA_IFLAG() {
 return UNUMLA_IFLAG;
 }
 
-public double getUNUMOV() {
+public byte getUNUMOV() {
 return UNUMOV;
 }
 
-public double getUNUMOV_I() {
+public byte getUNUMOV_I() {
 return UNUMOV_I;
 }
 
-public double getUNUMOV_IFLAG() {
+public boolean getUNUMOV_IFLAG() {
 return UNUMOV_IFLAG;
 }
 
-public double getUNUMRE() {
+public byte getUNUMRE() {
 return UNUMRE;
 }
 
-public double getUNUMRE_I() {
+public byte getUNUMRE_I() {
 return UNUMRE_I;
 }
 
-public double getUNUMRE_IFLAG() {
+public boolean getUNUMRE_IFLAG() {
 return UNUMRE_IFLAG;
 }
 
-public double getUPROP1() {
+public byte getUPROP1() {
 return UPROP1;
 }
 
-public double getUPROP1_I() {
+public byte getUPROP1_I() {
 return UPROP1_I;
 }
 
-public double getUPROP2() {
+public byte getUPROP2() {
 return UPROP2;
 }
 
-public double getUPROP2_I() {
+public byte getUPROP2_I() {
 return UPROP2_I;
 }
 
-public double getUPROP3() {
+public byte getUPROP3() {
 return UPROP3;
 }
 
-public double getUPROP3_I() {
+public byte getUPROP3_I() {
 return UPROP3_I;
 }
 
-public double getUPROP4() {
+public byte getUPROP4() {
 return UPROP4;
 }
 
-public double getUPROP4_I() {
+public byte getUPROP4_I() {
 return UPROP4_I;
 }
 
-public double getUPRSH1() {
+public byte getUPRSH1() {
 return UPRSH1;
 }
 
-public double getUPRSH2() {
+public byte getUPRSH2() {
 return UPRSH2;
 }
 
-public double getUPRSH3() {
+public byte getUPRSH3() {
 return UPRSH3;
 }
 
-public double getUPRSH4() {
+public byte getUPRSH4() {
 return UPRSH4;
 }
 
-public double getUPRSH5() {
+public byte getUPRSH5() {
 return UPRSH5;
 }
 
-public double getWORKAGE() {
+public byte getWORKAGE() {
 return WORKAGE;
 }
 
-public double getWRKING() {
+public byte getWRKING() {
 return WRKING;
 }
 
-public double getXINSOL() {
+public byte getXINSOL() {
 return XINSOL;
 }
 
-public double getXINTYP() {
+public byte getXINTYP() {
 return XINTYP;
 }
 
-public double getYEAR() {
+public short getYEAR() {
 return YEAR;
 }
 
-public double getYINACT() {
+public byte getYINACT() {
 return YINACT;
 }
 

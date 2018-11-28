@@ -25,12 +25,12 @@ public class WIGB_PERSON_ID implements Serializable {
 
     //private int wave;
     private int CASEID;
-    private int PERSONID;
+    private byte PERSONID;
 
     public WIGB_PERSON_ID() {
     }
 
-    public WIGB_PERSON_ID(int wave, Integer CASEID, Integer PERSONID) {
+    public WIGB_PERSON_ID(int wave, int CASEID, byte PERSONID) {
         //this.wave = wave;
         this.CASEID = CASEID;
         this.PERSONID = PERSONID;
@@ -56,7 +56,7 @@ public class WIGB_PERSON_ID implements Serializable {
      *
      * @return the PERSONID
      */
-    public int getPERSONID() {
+    public byte getPERSONID() {
         return PERSONID;
     }
 
@@ -91,9 +91,11 @@ public class WIGB_PERSON_ID implements Serializable {
 
     @Override
     public int hashCode() {
-        int hash = 3;
+        int hash = 7;
         hash = 23 * hash + this.CASEID;
         hash = 23 * hash + this.PERSONID;
         return hash;
     }
+
+    
 }

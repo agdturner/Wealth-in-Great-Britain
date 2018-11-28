@@ -3,263 +3,275 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold;
 public class WIGB_Wave4_HHOLD_Record extends WIGB_Wave4Or5_HHOLD_Record {
-protected double DVTOTCARVAL;
-protected double DVTOTMOTBVAL;
-protected double DVTOTVANVAL;
-protected double EQREAS1;
-protected double EQREAS2;
-protected double EQREAS3;
-protected double EQREAS4;
-protected double HINTRO;
-protected double VESTV1;
-protected double VESTV2;
-protected double VESTV2_I;
-protected double VESTV2_IFLAG;
-protected double VESTV_I;
-protected double VESTV_IFLAG;
-protected double VESVB1;
-protected double VESVB2;
-protected double VESVB3;
-protected double VTYPE2_IFLAG;
-protected double VTYPE_I;
+protected int DVTOTCARVAL;
+protected int DVTOTMOTBVAL;
+protected int DVTOTVANVAL;
+protected byte EQREAS1;
+protected byte EQREAS2;
+protected byte EQREAS3;
+protected byte EQREAS4;
+protected boolean HINTRO;
+protected int VESTV1;
+protected int VESTV2;
+protected int VESTV2_I;
+protected boolean VESTV2_IFLAG;
+protected int VESTV_I;
+protected boolean VESTV_IFLAG;
+protected byte VESVB1;
+protected byte VESVB2;
+protected byte VESVB3;
+protected boolean VTYPE2_IFLAG;
+protected byte VTYPE_I;
 protected double W4XSHHWGT;
 protected final void initDVTOTCARVAL(String s) {
 if (!s.trim().isEmpty()) {
-DVTOTCARVAL = new Double(s);
+DVTOTCARVAL = Integer.parseInt(s);
 } else {
-DVTOTCARVAL = Double.NaN;
+DVTOTCARVAL = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVTOTMOTBVAL(String s) {
 if (!s.trim().isEmpty()) {
-DVTOTMOTBVAL = new Double(s);
+DVTOTMOTBVAL = Integer.parseInt(s);
 } else {
-DVTOTMOTBVAL = Double.NaN;
+DVTOTMOTBVAL = Integer.MIN_VALUE;
 }
 }
 
 protected final void initDVTOTVANVAL(String s) {
 if (!s.trim().isEmpty()) {
-DVTOTVANVAL = new Double(s);
+DVTOTVANVAL = Integer.parseInt(s);
 } else {
-DVTOTVANVAL = Double.NaN;
+DVTOTVANVAL = Integer.MIN_VALUE;
 }
 }
 
 protected final void initEQREAS1(String s) {
 if (!s.trim().isEmpty()) {
-EQREAS1 = new Double(s);
+EQREAS1 = Byte.parseByte(s);
 } else {
-EQREAS1 = Double.NaN;
+EQREAS1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEQREAS2(String s) {
 if (!s.trim().isEmpty()) {
-EQREAS2 = new Double(s);
+EQREAS2 = Byte.parseByte(s);
 } else {
-EQREAS2 = Double.NaN;
+EQREAS2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEQREAS3(String s) {
 if (!s.trim().isEmpty()) {
-EQREAS3 = new Double(s);
+EQREAS3 = Byte.parseByte(s);
 } else {
-EQREAS3 = Double.NaN;
+EQREAS3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initEQREAS4(String s) {
 if (!s.trim().isEmpty()) {
-EQREAS4 = new Double(s);
+EQREAS4 = Byte.parseByte(s);
 } else {
-EQREAS4 = Double.NaN;
+EQREAS4 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initHINTRO(String s) {
 if (!s.trim().isEmpty()) {
-HINTRO = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == -7) {
+HINTRO = false;
 } else {
-HINTRO = Double.NaN;
+HINTRO = true;
+}
 }
 }
 
 protected final void initVESTV1(String s) {
 if (!s.trim().isEmpty()) {
-VESTV1 = new Double(s);
+VESTV1 = Integer.parseInt(s);
 } else {
-VESTV1 = Double.NaN;
+VESTV1 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initVESTV2(String s) {
 if (!s.trim().isEmpty()) {
-VESTV2 = new Double(s);
+VESTV2 = Integer.parseInt(s);
 } else {
-VESTV2 = Double.NaN;
+VESTV2 = Integer.MIN_VALUE;
 }
 }
 
 protected final void initVESTV2_I(String s) {
 if (!s.trim().isEmpty()) {
-VESTV2_I = new Double(s);
+VESTV2_I = Integer.parseInt(s);
 } else {
-VESTV2_I = Double.NaN;
+VESTV2_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initVESTV2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-VESTV2_IFLAG = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+VESTV2_IFLAG = false;
 } else {
-VESTV2_IFLAG = Double.NaN;
+VESTV2_IFLAG = true;
+}
 }
 }
 
 protected final void initVESTV_I(String s) {
 if (!s.trim().isEmpty()) {
-VESTV_I = new Double(s);
+VESTV_I = Integer.parseInt(s);
 } else {
-VESTV_I = Double.NaN;
+VESTV_I = Integer.MIN_VALUE;
 }
 }
 
 protected final void initVESTV_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-VESTV_IFLAG = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+VESTV_IFLAG = false;
 } else {
-VESTV_IFLAG = Double.NaN;
+VESTV_IFLAG = true;
+}
 }
 }
 
 protected final void initVESVB1(String s) {
 if (!s.trim().isEmpty()) {
-VESVB1 = new Double(s);
+VESVB1 = Byte.parseByte(s);
 } else {
-VESVB1 = Double.NaN;
+VESVB1 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initVESVB2(String s) {
 if (!s.trim().isEmpty()) {
-VESVB2 = new Double(s);
+VESVB2 = Byte.parseByte(s);
 } else {
-VESVB2 = Double.NaN;
+VESVB2 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initVESVB3(String s) {
 if (!s.trim().isEmpty()) {
-VESVB3 = new Double(s);
+VESVB3 = Byte.parseByte(s);
 } else {
-VESVB3 = Double.NaN;
+VESVB3 = Byte.MIN_VALUE;
 }
 }
 
 protected final void initVTYPE2_IFLAG(String s) {
 if (!s.trim().isEmpty()) {
-VTYPE2_IFLAG = new Double(s);
+byte b = Byte.parseByte(s);
+if (b == 0) {
+VTYPE2_IFLAG = false;
 } else {
-VTYPE2_IFLAG = Double.NaN;
+VTYPE2_IFLAG = true;
+}
 }
 }
 
 protected final void initVTYPE_I(String s) {
 if (!s.trim().isEmpty()) {
-VTYPE_I = new Double(s);
+VTYPE_I = Byte.parseByte(s);
 } else {
-VTYPE_I = Double.NaN;
+VTYPE_I = Byte.MIN_VALUE;
 }
 }
 
 protected final void initW4XSHHWGT(String s) {
 if (!s.trim().isEmpty()) {
-W4XSHHWGT = new Double(s);
+W4XSHHWGT = Double.parseDouble(s);
 } else {
 W4XSHHWGT = Double.NaN;
 }
 }
 
-public double getDVTOTCARVAL() {
+public int getDVTOTCARVAL() {
 return DVTOTCARVAL;
 }
 
-public double getDVTOTMOTBVAL() {
+public int getDVTOTMOTBVAL() {
 return DVTOTMOTBVAL;
 }
 
-public double getDVTOTVANVAL() {
+public int getDVTOTVANVAL() {
 return DVTOTVANVAL;
 }
 
-public double getEQREAS1() {
+public byte getEQREAS1() {
 return EQREAS1;
 }
 
-public double getEQREAS2() {
+public byte getEQREAS2() {
 return EQREAS2;
 }
 
-public double getEQREAS3() {
+public byte getEQREAS3() {
 return EQREAS3;
 }
 
-public double getEQREAS4() {
+public byte getEQREAS4() {
 return EQREAS4;
 }
 
-public double getHINTRO() {
+public boolean getHINTRO() {
 return HINTRO;
 }
 
-public double getVESTV1() {
+public int getVESTV1() {
 return VESTV1;
 }
 
-public double getVESTV2() {
+public int getVESTV2() {
 return VESTV2;
 }
 
-public double getVESTV2_I() {
+public int getVESTV2_I() {
 return VESTV2_I;
 }
 
-public double getVESTV2_IFLAG() {
+public boolean getVESTV2_IFLAG() {
 return VESTV2_IFLAG;
 }
 
-public double getVESTV_I() {
+public int getVESTV_I() {
 return VESTV_I;
 }
 
-public double getVESTV_IFLAG() {
+public boolean getVESTV_IFLAG() {
 return VESTV_IFLAG;
 }
 
-public double getVESVB1() {
+public byte getVESVB1() {
 return VESVB1;
 }
 
-public double getVESVB2() {
+public byte getVESVB2() {
 return VESVB2;
 }
 
-public double getVESVB3() {
+public byte getVESVB3() {
 return VESVB3;
 }
 
-public double getVTYPE2_IFLAG() {
+public boolean getVTYPE2_IFLAG() {
 return VTYPE2_IFLAG;
 }
 
-public double getVTYPE_I() {
+public byte getVTYPE_I() {
 return VTYPE_I;
 }
 
-public double getW4XSHHWGT() {
+protected double W4XSHHWGT() {
 return W4XSHHWGT;
 }
 

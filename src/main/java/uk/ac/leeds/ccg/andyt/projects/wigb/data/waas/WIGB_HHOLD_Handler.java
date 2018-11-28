@@ -22,7 +22,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_ReadCSV;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_StaticIO;
-import uk.ac.leeds.ccg.andyt.generic.io.Generic_StaticIO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_Wave1_HHOLD_Record;
@@ -95,10 +94,10 @@ public class WIGB_HHOLD_Handler extends WIGB_WAAS_Handler {
             File f;
             f = getInputFile(wave);
             r = new Object[2];
-            HashMap<Integer, WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record> r0;
+            HashMap<Short, WIGB_Wave1Or2Or3Or4Or5_HHOLD_Record> r0;
             r0 = new HashMap<>();
             r[0] = r0;
-            HashSet<Integer>[] r1;
+            HashSet<Short>[] r1;
             r1 = new HashSet[wave];
             for (int i = 0; i < wave; i++) {
                 r1[i] = new HashSet<>();
@@ -135,12 +134,25 @@ public class WIGB_HHOLD_Handler extends WIGB_WAAS_Handler {
                             WIGB_Wave5_HHOLD_Record rec;
                             try {
                                 rec = new WIGB_Wave5_HHOLD_Record(line);
-                                r1[0].add(rec.getCASEW5());
-                                r1[1].add(rec.getCASEW4());
-                                r1[2].add(rec.getCASEW3());
-                                r1[3].add(rec.getCASEW2());
-                                r1[4].add(rec.getCASEW1());
-                                r0.put(rec.getCASEW5(), rec);
+                                short CASEW5 = rec.getCASEW5();
+                                r1[0].add(CASEW5);
+                                short CASEW4 = rec.getCASEW4();
+                                if (CASEW4 > Short.MIN_VALUE) {
+                                    r1[1].add(CASEW4);
+                                }
+                                short CASEW3 = rec.getCASEW3();
+                                if (CASEW3 > Short.MIN_VALUE) {
+                                    r1[2].add(CASEW3);
+                                }
+                                short CASEW2 = rec.getCASEW2();
+                                if (CASEW2 > Short.MIN_VALUE) {
+                                    r1[3].add(CASEW2);
+                                }
+                                short CASEW1 = rec.getCASEW1();
+                                if (CASEW1 > Short.MIN_VALUE) {
+                                    r1[4].add(CASEW1);
+                                }
+                                r0.put(CASEW5, rec);
                             } catch (ArrayIndexOutOfBoundsException e) {
                                 e.printStackTrace(System.err);
                                 System.err.println(line);
@@ -152,11 +164,21 @@ public class WIGB_HHOLD_Handler extends WIGB_WAAS_Handler {
                             WIGB_Wave4_HHOLD_Record rec;
                             try {
                                 rec = new WIGB_Wave4_HHOLD_Record(line);
-                                r1[0].add(rec.getCASEW4());
-                                r1[1].add(rec.getCASEW3());
-                                r1[2].add(rec.getCASEW2());
-                                r1[3].add(rec.getCASEW1());
-                                r0.put(rec.getCASEW4(), rec);
+                                short CASEW4 = rec.getCASEW4();
+                                r1[0].add(CASEW4);
+                                short CASEW3 = rec.getCASEW3();
+                                if (CASEW3 > Short.MIN_VALUE) {
+                                    r1[1].add(CASEW3);
+                                }
+                                short CASEW2 = rec.getCASEW2();
+                                if (CASEW2 > Short.MIN_VALUE) {
+                                    r1[2].add(CASEW2);
+                                }
+                                short CASEW1 = rec.getCASEW1();
+                                if (CASEW1 > Short.MIN_VALUE) {
+                                    r1[3].add(CASEW1);
+                                }
+                                r0.put(CASEW4, rec);
                             } catch (ArrayIndexOutOfBoundsException e) {
                                 e.printStackTrace(System.err);
                                 System.err.println(line);
@@ -168,10 +190,17 @@ public class WIGB_HHOLD_Handler extends WIGB_WAAS_Handler {
                             WIGB_Wave3_HHOLD_Record rec;
                             try {
                                 rec = new WIGB_Wave3_HHOLD_Record(line);
-                                r1[0].add(rec.getCASEW3());
-                                r1[1].add(rec.getCASEW2());
-                                r1[2].add(rec.getCASEW1());
-                                r0.put(rec.getCASEW3(), rec);
+                                short CASEW3 = rec.getCASEW3();
+                                r1[0].add(CASEW3);
+                                short CASEW2 = rec.getCASEW2();
+                                if (CASEW2 > Short.MIN_VALUE) {
+                                    r1[1].add(CASEW2);
+                                }
+                                short CASEW1 = rec.getCASEW1();
+                                if (CASEW1 > Short.MIN_VALUE) {
+                                    r1[2].add(CASEW1);
+                                }
+                                r0.put(CASEW3, rec);
                             } catch (ArrayIndexOutOfBoundsException e) {
                                 e.printStackTrace(System.err);
                                 System.err.println(line);
@@ -183,9 +212,13 @@ public class WIGB_HHOLD_Handler extends WIGB_WAAS_Handler {
                             WIGB_Wave2_HHOLD_Record rec;
                             try {
                                 rec = new WIGB_Wave2_HHOLD_Record(line);
-                                r1[0].add(rec.getCASEW2());
-                                r1[1].add(rec.getCASEW1());
-                                r0.put(rec.getCASEW2(), rec);
+                                short CASEW2 = rec.getCASEW2();
+                                r1[0].add(CASEW2);
+                                short CASEW1 = rec.getCASEW1();
+                                if (CASEW1 > Short.MIN_VALUE) {
+                                    r1[1].add(CASEW1);
+                                }
+                                r0.put(CASEW2, rec);
                             } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
                                 e.printStackTrace(System.err);
                                 System.err.println(line);
@@ -198,8 +231,9 @@ public class WIGB_HHOLD_Handler extends WIGB_WAAS_Handler {
                             WIGB_Wave1_HHOLD_Record rec;
                             try {
                                 rec = new WIGB_Wave1_HHOLD_Record(line);
-                                r1[0].add(rec.getCASEW1());
-                                r0.put(rec.getCASEW1(), rec);
+                                short CASEW1 = rec.getCASEW1();
+                                r1[0].add(CASEW1);
+                                r0.put(CASEW1, rec);
                             } catch (ArrayIndexOutOfBoundsException e) {
                                 e.printStackTrace(System.err);
                                 System.err.println(line);
@@ -219,80 +253,80 @@ public class WIGB_HHOLD_Handler extends WIGB_WAAS_Handler {
         return r;
     }
 
-    public HashMap<Integer, WIGB_Wave1_HHOLD_Record> loadCacheSubsetWave1()
+    public HashMap<Short, WIGB_Wave1_HHOLD_Record> loadCacheSubsetWave1()
             throws Exception {
-        HashMap<Integer, WIGB_Wave1_HHOLD_Record> r;
+        HashMap<Short, WIGB_Wave1_HHOLD_Record> r;
         File dir;
         dir = Env.Files.getGeneratedWaASDirectory();
         dir = new File(dir, "Subsets");
         File cf;
         cf = new File(dir, TYPE + "1." + Env.Strings.S_dat);
         if (cf.exists()) {
-            r = (HashMap<Integer, WIGB_Wave1_HHOLD_Record>) Generic_StaticIO.readObject(cf);
+            r = (HashMap<Short, WIGB_Wave1_HHOLD_Record>) Generic_StaticIO.readObject(cf);
         } else {
             throw new Exception("Subset for Wave 1 not found!");
         }
         return r;
     }
 
-    public HashMap<Integer, WIGB_Wave2_HHOLD_Record> loadCacheSubsetWave2()
+    public HashMap<Short, WIGB_Wave2_HHOLD_Record> loadCacheSubsetWave2()
             throws Exception {
-        HashMap<Integer, WIGB_Wave2_HHOLD_Record> r;
+        HashMap<Short, WIGB_Wave2_HHOLD_Record> r;
         File dir;
         dir = Env.Files.getGeneratedWaASDirectory();
         dir = new File(dir, "Subsets");
         File cf;
         cf = new File(dir, TYPE + "2." + Env.Strings.S_dat);
         if (cf.exists()) {
-            r = (HashMap<Integer, WIGB_Wave2_HHOLD_Record>) Generic_StaticIO.readObject(cf);
+            r = (HashMap<Short, WIGB_Wave2_HHOLD_Record>) Generic_StaticIO.readObject(cf);
         } else {
             throw new Exception("Subset for Wave 2 not found!");
         }
         return r;
     }
 
-    public HashMap<Integer, WIGB_Wave3_HHOLD_Record> loadCacheSubsetWave3()
+    public HashMap<Short, WIGB_Wave3_HHOLD_Record> loadCacheSubsetWave3()
             throws Exception {
-        HashMap<Integer, WIGB_Wave3_HHOLD_Record> r;
+        HashMap<Short, WIGB_Wave3_HHOLD_Record> r;
         File dir;
         dir = Env.Files.getGeneratedWaASDirectory();
         dir = new File(dir, "Subsets");
         File cf;
         cf = new File(dir, TYPE + "3." + Env.Strings.S_dat);
         if (cf.exists()) {
-            r = (HashMap<Integer, WIGB_Wave3_HHOLD_Record>) Generic_StaticIO.readObject(cf);
+            r = (HashMap<Short, WIGB_Wave3_HHOLD_Record>) Generic_StaticIO.readObject(cf);
         } else {
             throw new Exception("Subset for Wave 3 not found!");
         }
         return r;
     }
 
-    public HashMap<Integer, WIGB_Wave4_HHOLD_Record> loadCacheSubsetWave4()
+    public HashMap<Short, WIGB_Wave4_HHOLD_Record> loadCacheSubsetWave4()
             throws Exception {
-        HashMap<Integer, WIGB_Wave4_HHOLD_Record> r;
+        HashMap<Short, WIGB_Wave4_HHOLD_Record> r;
         File dir;
         dir = Env.Files.getGeneratedWaASDirectory();
         dir = new File(dir, "Subsets");
         File cf;
         cf = new File(dir, TYPE + "4." + Env.Strings.S_dat);
         if (cf.exists()) {
-            r = (HashMap<Integer, WIGB_Wave4_HHOLD_Record>) Generic_StaticIO.readObject(cf);
+            r = (HashMap<Short, WIGB_Wave4_HHOLD_Record>) Generic_StaticIO.readObject(cf);
         } else {
             throw new Exception("Subset for Wave 4 not found!");
         }
         return r;
     }
 
-    public HashMap<Integer, WIGB_Wave5_HHOLD_Record> loadCacheSubsetWave5()
+    public HashMap<Short, WIGB_Wave5_HHOLD_Record> loadCacheSubsetWave5()
             throws Exception {
-        HashMap<Integer, WIGB_Wave5_HHOLD_Record> r;
+        HashMap<Short, WIGB_Wave5_HHOLD_Record> r;
         File dir;
         dir = Env.Files.getGeneratedWaASDirectory();
         dir = new File(dir, "Subsets");
         File cf;
         cf = new File(dir, TYPE + "5." + Env.Strings.S_dat);
         if (cf.exists()) {
-            r = (HashMap<Integer, WIGB_Wave5_HHOLD_Record>) Generic_StaticIO.readObject(cf);
+            r = (HashMap<Short, WIGB_Wave5_HHOLD_Record>) Generic_StaticIO.readObject(cf);
         } else {
             throw new Exception("Subset for Wave 5 not found!");
         }
