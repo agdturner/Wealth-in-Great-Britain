@@ -95,14 +95,14 @@ public class WIGB_Main_Process extends WIGB_Object {
         outdir.mkdirs();
         hholdHandler = new WIGB_WaAS_HHOLD_Handler(Env, indir);
 
-        //doDataProcessingStep1(indir, outdir, hholdHandler, nwaves);
+        //doDataProcessingStep1(indir, outdir, hholdHandler, NWAVES);
         run2(indir, outdir, hholdHandler);
 
     }
 
     public void run2(File indir, File outdir, WIGB_WaAS_HHOLD_Handler hholdHandler) {
         byte nwaves;
-        nwaves = WIGB_WaAS_Data.nwaves;
+        nwaves = WIGB_WaAS_Data.NWAVES;
         Object[] personSubsetW1;
         Object[] personSubsetW2;
         Object[] personSubsetW3;
@@ -193,15 +193,20 @@ public class WIGB_Main_Process extends WIGB_Object {
         System.out.println("Merging Person and Household Data");
         Iterator<Short> ite;
         short CASEW1;
+        int i;
+        i = 0;
 
         byte collectionID;
         collectionID = 0;
-        WIGB_WaAS_Collection collection;
-        collection = new WIGB_WaAS_Collection(collectionID);
+        WIGB_WaAS_Collection c;
+        c = new WIGB_WaAS_Collection(collectionID);
+        Env.data.data.put(collectionID, c);
 
         HashMap<Short, WIGB_WaAS_Combined_Record> crs;
         WIGB_WaAS_Combined_Record cr;
-        // Wave 1.
+        /**
+         * Wave 1.
+         */
         wave = 1;
         ite = hholdSubsetW1.keySet().iterator();
         while (ite.hasNext()) {
@@ -219,10 +224,27 @@ public class WIGB_Main_Process extends WIGB_Object {
             w1rec = new WIGB_WaAS_Wave1_Record(w1hhold, list);
             cr.add(w1rec);
             crs.put(CASEW1, cr);
-            collection.getData().put(CASEW1, cr);
+            c.getData().put(CASEW1, cr);
+            if (i > 0 && i % chunkSize == 0) {
+                // Stash collection
+                storeCacheSubsetCollection(collectionID, c);
+                Env.data.data.remove(collectionID);
+                // Start a new collection.
+                collectionID++;
+                c = new WIGB_WaAS_Collection(collectionID);
+                Env.data.data.put(collectionID, c);
+            }
+            i++;
         }
+        // Stash collection
+        storeCacheSubsetCollection(collectionID, c);
+        Env.data.data.remove(collectionID);
         Env.data.clearAllCache();
-        // Wave 2.
+        /**
+         * Wave 2.
+         */
+        i = 0;
+        c = new WIGB_WaAS_Collection(collectionID);
         wave = 2;
         short CASEW2;
         ite = hholdSubsetW2.keySet().iterator();
@@ -242,7 +264,7 @@ public class WIGB_Main_Process extends WIGB_Object {
             w2rec = new WIGB_WaAS_Wave2_Record(w2hhold, list);
             cr.add(w2rec);
             crs.put(CASEW1, cr);
-            collection.getData().put(CASEW1, cr);
+            c.getData().put(CASEW1, cr);
         }
         Env.data.clearAllCache();
         // Wave 3.
@@ -265,7 +287,7 @@ public class WIGB_Main_Process extends WIGB_Object {
             w3rec = new WIGB_WaAS_Wave3_Record(w3hhold, list);
             cr.add(w3rec);
             crs.put(CASEW1, cr);
-            collection.getData().put(CASEW1, cr);
+            c.getData().put(CASEW1, cr);
         }
         Env.data.clearAllCache();
         // Wave 4.
@@ -288,7 +310,7 @@ public class WIGB_Main_Process extends WIGB_Object {
             w4rec = new WIGB_WaAS_Wave4_Record(w4hhold, list);
             cr.add(w4rec);
             crs.put(CASEW1, cr);
-            collection.getData().put(CASEW1, cr);
+            c.getData().put(CASEW1, cr);
         }
         Env.data.clearAllCache();
         // Wave 5.
@@ -311,7 +333,7 @@ public class WIGB_Main_Process extends WIGB_Object {
             w5rec = new WIGB_WaAS_Wave5_Record(w5hhold, list);
             cr.add(w5rec);
             crs.put(CASEW1, cr);
-            collection.getData().put(CASEW1, cr);
+            c.getData().put(CASEW1, cr);
         }
         Env.data.clearAllCache();
     }
@@ -803,4 +825,38 @@ public class WIGB_Main_Process extends WIGB_Object {
 
     boolean doJavaCodeGeneration = false;
     boolean doLoadDataIntoCaches = false;
+
+    public void storeCacheSubsetCollection(short collectionID, Object o) {
+        File dir;
+        dir = Env.Files.getGeneratedWaASDirectory();
+        dir = new File(dir, "Subsets");
+        File cf;
+        cf = new File(dir, "WaAS_" + collectionID + "." + Env.Strings.S_dat);
+        storeCache(cf, o);
+    }
+
+    protected void storeCache(File cf, Object o) {
+        System.out.println("<Storing Collection in cache file " + cf + ">");
+        Generic_StaticIO.writeObject(o, cf);
+        System.out.println("</Storing Collection in cache file " + cf + ">");
+    }
+    
+    public Object loadCacheSubsetCollection(short collectionID) {
+        Object r;
+        File dir;
+        dir = Env.Files.getGeneratedWaASDirectory();
+        dir = new File(dir, "Subsets");
+        File cf;
+        cf = new File(dir, "WaAS_" + collectionID + "." + Env.Strings.S_dat);
+        r = loadCache(cf);
+        return r;
+    }
+    
+    protected Object loadCache(File cf) {
+        Object r;
+        System.out.println("<Loading Collection from cache file " + cf + ">");
+        r = Generic_StaticIO.readObject(cf);
+        System.out.println("</Loading Collection from cache file " + cf + ">");
+        return r;
+    }
 }

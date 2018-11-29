@@ -15,6 +15,7 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -36,18 +37,20 @@ public class WIGB_WaAS_Data {
     /**
      * Stores the number of waves in the WaAS
      */
-    public static final byte nwaves = 5;
-    public static final byte w1 = 1;
-    public static final byte w2 = 2;
-    public static final byte w3 = 3;
-    public static final byte w4 = 4;
-    public static final byte w5 = 5;
+    public static final byte NWAVES = 5;
+    public static final byte W1 = 1;
+    public static final byte W2 = 2;
+    public static final byte W3 = 3;
+    public static final byte W4 = 4;
+    public static final byte W5 = 5;
 
     public HashMap<Short, Byte> personLookupW1;
     public HashMap<Short, Byte> personLookupW2;
     public HashMap<Short, Byte> personLookupW3;
     public HashMap<Short, Byte> personLookupW4;
     public HashMap<Short, Byte> personLookupW5;
+    
+    public HashMap<Byte, WIGB_WaAS_Collection> data;
 
     /**
      * Keys are personCollectionIDs, values are Maps where keys are CASEW1 and
@@ -110,7 +113,7 @@ public class WIGB_WaAS_Data {
     boolean hasPersonDataW5;
 
     public WIGB_WaAS_Data() {
-
+        data = new HashMap<>();
     }
 
     public HashMap<Short, ArrayList<WIGB_WaAS_Wave1_PERSON_Record>> getPersonCollectionW1(
@@ -118,11 +121,11 @@ public class WIGB_WaAS_Data {
         HashMap<Short, ArrayList<WIGB_WaAS_Wave1_PERSON_Record>> r;
         byte b;
         b = personLookupW1.get(CASEW1);
-        System.out.println("Person Collection ID " + b);
+        //System.out.println("Person Collection ID " + b);
         if (personDataW1.containsKey(b)) {
             r = personDataW1.get(b);
         } else {
-            r = (HashMap<Short, ArrayList<WIGB_WaAS_Wave1_PERSON_Record>>) personHandler.loadCacheSubsetCollection(b, w1);
+            r = (HashMap<Short, ArrayList<WIGB_WaAS_Wave1_PERSON_Record>>) personHandler.loadCacheSubsetCollection(b, W1);
             personDataW1.put(b, r);
         }
         return r;
@@ -133,11 +136,11 @@ public class WIGB_WaAS_Data {
         HashMap<Short, ArrayList<WIGB_WaAS_Wave2_PERSON_Record>> r;
         byte b;
         b = personLookupW2.get(CASEW2);
-        System.out.println("Person Collection ID " + b);
+        //System.out.println("Person Collection ID " + b);
         if (personDataW2.containsKey(b)) {
             r = personDataW2.get(b);
         } else {
-            r = (HashMap<Short, ArrayList<WIGB_WaAS_Wave2_PERSON_Record>>) personHandler.loadCacheSubsetCollection(b, w2);
+            r = (HashMap<Short, ArrayList<WIGB_WaAS_Wave2_PERSON_Record>>) personHandler.loadCacheSubsetCollection(b, W2);
             personDataW2.put(b, r);
         }
         return r;
@@ -148,11 +151,11 @@ public class WIGB_WaAS_Data {
         HashMap<Short, ArrayList<WIGB_WaAS_Wave3_PERSON_Record>> r;
         byte b;
         b = personLookupW3.get(CASEW3);
-        System.out.println("Person Collection ID " + b);
+        //System.out.println("Person Collection ID " + b);
         if (personDataW3.containsKey(b)) {
             r = personDataW3.get(b);
         } else {
-            r = (HashMap<Short, ArrayList<WIGB_WaAS_Wave3_PERSON_Record>>) personHandler.loadCacheSubsetCollection(b, w3);
+            r = (HashMap<Short, ArrayList<WIGB_WaAS_Wave3_PERSON_Record>>) personHandler.loadCacheSubsetCollection(b, W3);
             personDataW3.put(b, r);
         }
         return r;
@@ -163,11 +166,11 @@ public class WIGB_WaAS_Data {
         HashMap<Short, ArrayList<WIGB_WaAS_Wave4_PERSON_Record>> r;
         byte b;
         b = personLookupW4.get(CASEW4);
-        System.out.println("Person Collection ID " + b);
+        //System.out.println("Person Collection ID " + b);
         if (personDataW4.containsKey(b)) {
             r = personDataW4.get(b);
         } else {
-            r = (HashMap<Short, ArrayList<WIGB_WaAS_Wave4_PERSON_Record>>) personHandler.loadCacheSubsetCollection(b, w4);
+            r = (HashMap<Short, ArrayList<WIGB_WaAS_Wave4_PERSON_Record>>) personHandler.loadCacheSubsetCollection(b, W4);
             personDataW4.put(b, r);
         }
         return r;
@@ -178,11 +181,11 @@ public class WIGB_WaAS_Data {
         HashMap<Short, ArrayList<WIGB_WaAS_Wave5_PERSON_Record>> r;
         byte b;
         b = personLookupW5.get(CASEW5);
-        System.out.println("Person Collection ID " + b);
+        //System.out.println("Person Collection ID " + b);
         if (personDataW5.containsKey(b)) {
             r = personDataW5.get(b);
         } else {
-            r = (HashMap<Short, ArrayList<WIGB_WaAS_Wave5_PERSON_Record>>) personHandler.loadCacheSubsetCollection(b, w5);
+            r = (HashMap<Short, ArrayList<WIGB_WaAS_Wave5_PERSON_Record>>) personHandler.loadCacheSubsetCollection(b, W5);
             personDataW5.put(b, r);
         }
         return r;
@@ -649,4 +652,6 @@ public class WIGB_WaAS_Data {
         }
         return false;
     }
+    
+    
 }
