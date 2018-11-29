@@ -536,7 +536,7 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
         String className;
         String extendedClassName;
         String prepend;
-        prepend = "WIGB_";
+        prepend = "WIGB_WaAS_";
         type = type.toUpperCase();
 
         for (int w = 0; w < fields.length; w++) {

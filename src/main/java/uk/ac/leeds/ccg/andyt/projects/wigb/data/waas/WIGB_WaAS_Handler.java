@@ -16,20 +16,23 @@
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_StaticIO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Object;
+import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person.WIGB_WaAS_Wave1_PERSON_Record;
 
 /**
  *
  * @author geoagdt
  */
-public abstract class WIGB_WAAS_Handler extends WIGB_Object {
+public abstract class WIGB_WaAS_Handler extends WIGB_Object {
 
     protected String TYPE;
     protected File INDIR;
 
-    public WIGB_WAAS_Handler(WIGB_Environment env) {
+    public WIGB_WaAS_Handler(WIGB_Environment env) {
         super(env);
     }
 
@@ -45,11 +48,11 @@ public abstract class WIGB_WAAS_Handler extends WIGB_Object {
         return f;
     }
 
-    protected Object[] loadCache(int wave, File cf) {
-        Object[] r;
+    protected Object loadCache(int wave, File cf) {
+        Object r;
         System.out.println("<Loading wave " + wave + " " + TYPE + " WaAS "
                 + "data from cache file " + cf + ">");
-        r = (Object[]) Generic_StaticIO.readObject(cf);
+        r = Generic_StaticIO.readObject(cf);
         System.out.println("</Loading wave " + wave + " " + TYPE + " WaAS "
                 + "data from cache file " + cf + ">");
         return r;
@@ -70,5 +73,25 @@ public abstract class WIGB_WAAS_Handler extends WIGB_Object {
         File cf;
         cf = new File(dir, TYPE + wave + "." + Env.Strings.S_dat);
         storeCache(wave, cf, o);
+    }
+    
+    public void storeCacheSubsetCollection(short collectionID, int wave, Object o) {
+        File dir;
+        dir = Env.Files.getGeneratedWaASDirectory();
+        dir = new File(dir, "Subsets");
+        File cf;
+        cf = new File(dir, TYPE + wave + "_" + collectionID + "." + Env.Strings.S_dat);
+        storeCache(wave, cf, o);
+    }
+    
+    public Object loadCacheSubsetCollection(short collectionID, int wave) {
+        Object r;
+        File dir;
+        dir = Env.Files.getGeneratedWaASDirectory();
+        dir = new File(dir, "Subsets");
+        File cf;
+        cf = new File(dir, TYPE + wave + "_" + collectionID + "." + Env.Strings.S_dat);
+        r = loadCache(wave, cf);
+        return r;
     }
 }
