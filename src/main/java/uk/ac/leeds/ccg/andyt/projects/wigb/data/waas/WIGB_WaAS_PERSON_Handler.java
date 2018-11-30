@@ -51,6 +51,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
      *
      * @param CASEW1IDs
      * @param chunkSize
+     * @param wave
      * @return
      */
     public Object[] loadSubsetWave1(Set<Short> CASEW1IDs, int chunkSize, byte wave) {
@@ -63,20 +64,20 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
              * This lookup is used to identify which collection a person record
              * is in. The key is CASEW1, the value is the CollectionID.
              */
-            HashMap<Short, Byte> lookup;
+            HashMap<Short, Short> lookup;
             /**
              * This data holds the data, the keys are the CollectionID and the
              * values are a Map with the keys as CASEW1 and values a List of
              * WIGB_WaAS_Wave1_PERSON_Record records.
              */
-            HashMap<Byte, HashMap<Short, ArrayList<WIGB_WaAS_Wave1_PERSON_Record>>> data;
+            HashMap<Short, HashMap<Short, ArrayList<WIGB_WaAS_Wave1_PERSON_Record>>> data;
             lookup = new HashMap<>();
             data = new HashMap<>();
             r[0] = lookup;
             r[1] = data;
             int recID;
             recID = 0;
-            byte collectionID;
+            short collectionID;
             collectionID = 0;
             File f;
             f = getInputFile(wave);
@@ -129,7 +130,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
                         if (recID > 0 && recID % chunkSize == 0) {
                             // Cache collection
                             storeCacheSubsetCollection(collectionID, wave, records);
-                            data.remove(collectionID, records);
+                            data.remove(collectionID);
                             // Start a new collection.
                             collectionID++;
                             records = new HashMap<>();
@@ -141,7 +142,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
             }
             // Cache final collection=
             storeCacheSubsetCollection(collectionID, wave, records);
-            data.remove(collectionID, records);
+            data.remove(collectionID);
             System.out.println("</Loading wave " + wave + " subset " + TYPE
                     + " WaAS data from " + f + ">");
             storeCacheSubset(wave, r);
@@ -156,6 +157,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
      *
      * @param CASEW2IDs
      * @param chunkSize
+     * @param wave
      * @return
      */
     public Object[] loadSubsetWave2(Set<Short> CASEW2IDs, int chunkSize, byte wave) {
@@ -168,20 +170,20 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
              * This lookup is used to identify which collection a person record
              * is in. The key is CASEW2, the value is the CollectionID.
              */
-            HashMap<Short, Byte> lookup;
+            HashMap<Short, Short> lookup;
             /**
              * This data holds the data, the keys are the CollectionID and the
              * values are a Map with the keys as CASEW2 and values a List of
              * WIGB_WaAS_Wave2_PERSON_Record records.
              */
-            HashMap<Byte, HashMap<Short, ArrayList<WIGB_WaAS_Wave2_PERSON_Record>>> data;
+            HashMap<Short, HashMap<Short, ArrayList<WIGB_WaAS_Wave2_PERSON_Record>>> data;
             lookup = new HashMap<>();
             data = new HashMap<>();
             r[0] = lookup;
             r[1] = data;
             int recID;
             recID = 0;
-            byte collectionID;
+            short collectionID;
             collectionID = 0;
             File f;
             f = getInputFile(wave);
@@ -234,7 +236,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
                         if (recID > 0 && recID % chunkSize == 0) {
                             // Cache collection
                             storeCacheSubsetCollection(collectionID, wave, records);
-                            data.remove(collectionID, records);
+                            data.remove(collectionID);
                             // Start a new collection.
                             collectionID++;
                             records = new HashMap<>();
@@ -246,7 +248,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
             }
             // Cache final collection=
             storeCacheSubsetCollection(collectionID, wave, records);
-            data.remove(collectionID, records);
+            data.remove(collectionID);
             System.out.println("</Loading wave " + wave + " subset " + TYPE
                     + " WaAS data from " + f + ">");
             storeCacheSubset(wave, r);
@@ -256,10 +258,12 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
 
     /**
      * Loads Wave 3 of the person WaAS for those records with CASEW3 in
-     * CASEW3IDs. If this data are in a cache then the cache is loaded otherwise
+     * CASEW3IDs.If this data are in a cache then the cache is loaded otherwise
      * the data are selected and the cache is written for next time.
      *
      * @param CASEW3IDs
+     * @param chunkSize
+     * @param wave
      * @return
      */
     public Object[] loadSubsetWave3(Set<Short> CASEW3IDs, int chunkSize, byte wave) {
@@ -272,20 +276,20 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
              * This lookup is used to identify which collection a person record
              * is in. The key is CASEW3, the value is the CollectionID.
              */
-            HashMap<Short, Byte> lookup;
+            HashMap<Short, Short> lookup;
             /**
              * This data holds the data, the keys are the CollectionID and the
              * values are a Map with the keys as CASEW2 and values a List of
              * WIGB_WaAS_Wave3_PERSON_Record records.
              */
-            HashMap<Byte, HashMap<Short, ArrayList<WIGB_WaAS_Wave3_PERSON_Record>>> data;
+            HashMap<Short, HashMap<Short, ArrayList<WIGB_WaAS_Wave3_PERSON_Record>>> data;
             lookup = new HashMap<>();
             data = new HashMap<>();
             r[0] = lookup;
             r[1] = data;
             int recID;
             recID = 0;
-            byte collectionID;
+            short collectionID;
             collectionID = 0;
             File f;
             f = getInputFile(wave);
@@ -341,7 +345,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
                         if (recID > 0 && recID % chunkSize == 0) {
                             // Cache collection
                             storeCacheSubsetCollection(collectionID, wave, records);
-                            data.remove(collectionID, records);
+                            data.remove(collectionID);
                             // Start a new collection.
                             collectionID++;
                             records = new HashMap<>();
@@ -353,7 +357,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
             }
             // Cache final collection=
             storeCacheSubsetCollection(collectionID, wave, records);
-            data.remove(collectionID, records);
+            data.remove(collectionID);
             System.out.println("</Loading wave " + wave + " subset " + TYPE
                     + " WaAS data from " + f + ">");
             storeCacheSubset(wave, r);
@@ -371,10 +375,12 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
 
     /**
      * Loads Wave 3 of the person WaAS for those records with CASEW3 in
-     * CASEW3IDs. If this data are in a cache then the cache is loaded otherwise
+     * CASEW3IDs.If this data are in a cache then the cache is loaded otherwise
      * the data are selected and the cache is written for next time.
      *
-     * @param CASEW3IDs
+     * @param CASEW4IDs
+     * @param chunkSize
+     * @param wave
      * @return
      */
     public Object[] loadSubsetWave4(Set<Short> CASEW4IDs, int chunkSize, byte wave) {
@@ -387,20 +393,20 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
              * This lookup is used to identify which collection a person record
              * is in. The key is CASEW4, the value is the CollectionID.
              */
-            HashMap<Short, Byte> lookup;
+            HashMap<Short, Short> lookup;
             /**
              * This data holds the data, the keys are the CollectionID and the
              * values are a Map with the keys as CASEW2 and values a List of
              * WIGB_WaAS_Wave4_PERSON_Record records.
              */
-            HashMap<Byte, HashMap<Short, ArrayList<WIGB_WaAS_Wave4_PERSON_Record>>> data;
+            HashMap<Short, HashMap<Short, ArrayList<WIGB_WaAS_Wave4_PERSON_Record>>> data;
             lookup = new HashMap<>();
             data = new HashMap<>();
             r[0] = lookup;
             r[1] = data;
             int recID;
             recID = 0;
-            byte collectionID;
+            short collectionID;
             collectionID = 0;
             File f;
             f = getInputFile(wave);
@@ -456,7 +462,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
                         if (recID > 0 && recID % chunkSize == 0) {
                             // Cache collection
                             storeCacheSubsetCollection(collectionID, wave, records);
-                            data.remove(collectionID, records);
+                            data.remove(collectionID);
                             // Start a new collection.
                             collectionID++;
                             records = new HashMap<>();
@@ -468,7 +474,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
             }
             // Cache final collection=
             storeCacheSubsetCollection(collectionID, wave, records);
-            data.remove(collectionID, records);
+            data.remove(collectionID);
             System.out.println("</Loading wave " + wave + " subset " + TYPE
                     + " WaAS data from " + f + ">");
             storeCacheSubset(wave, r);
@@ -478,10 +484,12 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
 
     /**
      * Loads Wave 5 of the person WaAS for those records with CASEW5 in
-     * CASEW5IDs. If this data are in a cache then the cache is loaded otherwise
-     * the data are selected and the cache is written for next time.
+     * CASEW5IDs.If this data are in a cache then the cache is loaded otherwise
+ the data are selected and the cache is written for next time.
      *
      * @param CASEW5IDs
+     * @param chunkSize
+     * @param wave
      * @return
      */
     public Object[] loadSubsetWave5(Set<Short> CASEW5IDs, int chunkSize, byte wave) {
@@ -494,20 +502,20 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
              * This lookup is used to identify which collection a person record
              * is in. The key is CASEW5, the value is the CollectionID.
              */
-            HashMap<Short, Byte> lookup;
+            HashMap<Short, Short> lookup;
             /**
              * This data holds the data, the keys are the CollectionID and the
              * values are a Map with the keys as CASEW2 and values a List of
              * WIGB_WaAS_Wave5_PERSON_Record records.
              */
-            HashMap<Byte, HashMap<Short, ArrayList<WIGB_WaAS_Wave5_PERSON_Record>>> data;
+            HashMap<Short, HashMap<Short, ArrayList<WIGB_WaAS_Wave5_PERSON_Record>>> data;
             lookup = new HashMap<>();
             data = new HashMap<>();
             r[0] = lookup;
             r[1] = data;
             int recID;
             recID = 0;
-            byte collectionID;
+            short collectionID;
             collectionID = 0;
             File f;
             f = getInputFile(wave);
@@ -586,6 +594,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
     /**
      * Loads subsets from a cache in generated data.
      *
+     * @param nwaves
      * @return an Object[] r with size 5. r[] is a HashMap with keys that are
      * Integer CASEW1Each element is an Object[] ...
      */

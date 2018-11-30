@@ -30,7 +30,7 @@ public class WIGB_WaAS_Collection extends WIGB_Object {
      * The keys are CASEW1 and the values are the collectionID where those data
      * are stored.
      */
-    private final HashMap<Short, Byte> lookup;
+    private final HashMap<Short, Short> lookup;
 
     /**
      * The keys are CASEW1, the values are the respective combined record.
@@ -53,7 +53,7 @@ public class WIGB_WaAS_Collection extends WIGB_Object {
     /**
      * @return the lookup
      */
-    public HashMap<Short, Byte> getLookup() {
+    public HashMap<Short, Short> getLookup() {
         return lookup;
     }
 

@@ -15,11 +15,13 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas;
 
+import java.io.Serializable;
+
 /**
  *
  * @author geoagdt
  */
-public abstract class WIGB_WaAS_Record {
+public abstract class WIGB_WaAS_Record implements Serializable {
     
     protected final short ID;
 

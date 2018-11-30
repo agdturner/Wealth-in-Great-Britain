@@ -10,7 +10,7 @@ public abstract class WIGB_Object implements Serializable {
     /**
      * A reference to LR_Environment
      */
-    protected transient WIGB_Environment Env;
+    public transient WIGB_Environment Env;
 
 //    public LR_Object(){
 //        Env = new LR_Environment();

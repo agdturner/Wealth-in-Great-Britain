@@ -54,12 +54,8 @@ public class WIGB_WaAS_HHOLD_Handler extends WIGB_WaAS_Handler {
     public Object[] load() {
         Object[] r;
         r = new Object[5];
-        // Load waves
-        int wave;
-        // Load Waves 1 to 5 inclusive.
-        for (int i = 0; i < 5; i++) {
-            wave = i + 1;
-            r[i] = load(wave);
+        for (byte wave = 1; wave < 6; wave++) {
+            r[wave - 1] = load(wave);
         }
         return r;
     }
@@ -82,7 +78,7 @@ public class WIGB_WaAS_HHOLD_Handler extends WIGB_WaAS_Handler {
      * @param wave
      * @return
      */
-    public Object[] load(int wave) {
+    public Object[] load(byte wave) {
         Object[] r;
         File dir;
         dir = Env.Files.getGeneratedWaASDirectory();

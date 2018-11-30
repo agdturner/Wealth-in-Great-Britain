@@ -34,23 +34,23 @@ public class WIGB_WaAS_Combined_Record extends WIGB_WaAS_Record {
     }
     
     public void add(WIGB_WaAS_Wave1_Record r) {
-        data.get((byte)1).put(r.getID(), r);
+        data.get(WIGB_WaAS_Data.W1).put(r.getID(), r);
     }
     
     public void add(WIGB_WaAS_Wave2_Record r) {
-        data.get((byte)2).put(r.getID(), r);
+        data.get(WIGB_WaAS_Data.W2).put(r.getID(), r);
     }
     
     public void add(WIGB_WaAS_Wave3_Record r) {
-       data.get((byte)3).put(r.getID(), r);
+       data.get(WIGB_WaAS_Data.W3).put(r.getID(), r);
     }
     
     public void add(WIGB_WaAS_Wave4_Record r) {
-        data.get((byte)4).put(r.getID(), r);
+        data.get(WIGB_WaAS_Data.W4).put(r.getID(), r);
     }
     
     public void add(WIGB_WaAS_Wave5_Record r) {
-        data.get((byte)5).put(r.getID(), r);
+        data.get(WIGB_WaAS_Data.W5).put(r.getID(), r);
     }
     
 }

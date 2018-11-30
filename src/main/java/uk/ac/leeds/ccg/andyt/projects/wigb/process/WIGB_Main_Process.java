@@ -70,7 +70,10 @@ public class WIGB_Main_Process extends WIGB_Object {
 
     public static void main(String[] args) {
         WIGB_Main_Process p;
-        p = new WIGB_Main_Process(new WIGB_Environment());
+        WIGB_Environment env;
+        env = new WIGB_Environment();
+        p = new WIGB_Main_Process(env);
+        p.Env.data.Env = env;
         p.Files.setDataDirectory(new File(System.getProperty("user.dir"), "data"));
         // Main switches
         //p.doJavaCodeGeneration = true;
@@ -95,12 +98,21 @@ public class WIGB_Main_Process extends WIGB_Object {
         outdir.mkdirs();
         hholdHandler = new WIGB_WaAS_HHOLD_Handler(Env, indir);
 
-        //doDataProcessingStep1(indir, outdir, hholdHandler, NWAVES);
-        run2(indir, outdir, hholdHandler);
+        
+        int personChunkSize;
+        int collectionChunkSize;
+        personChunkSize = 1024;//512;
+        collectionChunkSize = 512;//256;
+        //doDataProcessingStep1(indir, outdir, hholdHandler);
+        doDataProcessingStep2(indir, outdir, hholdHandler, personChunkSize,
+                collectionChunkSize);
 
     }
 
-    public void run2(File indir, File outdir, WIGB_WaAS_HHOLD_Handler hholdHandler) {
+    public void doDataProcessingStep2(File indir, File outdir,
+            WIGB_WaAS_HHOLD_Handler hholdHandler, int personChunkSize,
+        int collectionChunkSize) {
+        // For convenience/code brevity.
         byte nwaves;
         nwaves = WIGB_WaAS_Data.NWAVES;
         Object[] personSubsetW1;
@@ -112,63 +124,59 @@ public class WIGB_Main_Process extends WIGB_Object {
         personHandler = new WIGB_WaAS_PERSON_Handler(Env, indir);
         Object[] o;
         byte wave;
-        int chunkSize;
-        chunkSize = 1000;
         /**
          * Get lookups and selected person data for Waves 1 and Wave 2.
          */
         wave = 2;
-        o = getLookups(wave, 1, outdir);
+        o = getLookups(wave, WIGB_WaAS_Data.W1, outdir);
         HashMap<Short, Short> tWave2ToWave1HHOLDIDLookup;
         HashMap<Short, HashSet<Short>> tWave1ToWave2HHOLDIDLookup;
         tWave2ToWave1HHOLDIDLookup = (HashMap<Short, Short>) o[0];
         tWave1ToWave2HHOLDIDLookup = (HashMap<Short, HashSet<Short>>) o[1];
         wave = 1;
-        personSubsetW1 = personHandler.loadSubsetWave1(tWave1ToWave2HHOLDIDLookup.keySet(), chunkSize, wave);
-        Env.data.personLookupW1 = (HashMap<Short, Byte>) personSubsetW1[0];
-        Env.data.personDataW1 = (HashMap<Byte, HashMap<Short, ArrayList<WIGB_WaAS_Wave1_PERSON_Record>>>) personSubsetW1[0];
+        personSubsetW1 = personHandler.loadSubsetWave1(tWave1ToWave2HHOLDIDLookup.keySet(), personChunkSize, wave);
+        Env.data.personLookupW1 = (HashMap<Short, Short>) personSubsetW1[0];
+        Env.data.personDataW1 = (HashMap<Short, HashMap<Short, ArrayList<WIGB_WaAS_Wave1_PERSON_Record>>>) personSubsetW1[1];
         wave = 2;
-        personSubsetW2 = personHandler.loadSubsetWave2(tWave2ToWave1HHOLDIDLookup.keySet(), chunkSize, wave);
-        Env.data.personLookupW2 = (HashMap<Short, Byte>) personSubsetW2[0];
-        Env.data.personDataW2 = (HashMap<Byte, HashMap<Short, ArrayList<WIGB_WaAS_Wave2_PERSON_Record>>>) personSubsetW2[0];
-
+        personSubsetW2 = personHandler.loadSubsetWave2(tWave2ToWave1HHOLDIDLookup.keySet(), personChunkSize, wave);
+        Env.data.personLookupW2 = (HashMap<Short, Short>) personSubsetW2[0];
+        Env.data.personDataW2 = (HashMap<Short, HashMap<Short, ArrayList<WIGB_WaAS_Wave2_PERSON_Record>>>) personSubsetW2[1];
         /**
          * Get lookups and selected person data for Wave 3.
          */
         wave = 3;
-        o = getLookups(wave, 1, outdir);
+        o = getLookups(wave, WIGB_WaAS_Data.W1, outdir);
         HashMap<Short, Short> tWave3ToWave1HHOLDIDLookup;
         HashMap<Short, HashSet<Short>> tWave1ToWave3HHOLDIDLookup;
         tWave3ToWave1HHOLDIDLookup = (HashMap<Short, Short>) o[0];
         tWave1ToWave3HHOLDIDLookup = (HashMap<Short, HashSet<Short>>) o[1];
-        personSubsetW3 = personHandler.loadSubsetWave3(tWave3ToWave1HHOLDIDLookup.keySet(), chunkSize, wave);
-        Env.data.personLookupW3 = (HashMap<Short, Byte>) personSubsetW1[0];
-        Env.data.personDataW3 = (HashMap<Byte, HashMap<Short, ArrayList<WIGB_WaAS_Wave3_PERSON_Record>>>) personSubsetW3[0];
+        personSubsetW3 = personHandler.loadSubsetWave3(tWave3ToWave1HHOLDIDLookup.keySet(), personChunkSize, wave);
+        Env.data.personLookupW3 = (HashMap<Short, Short>) personSubsetW1[0];
+        Env.data.personDataW3 = (HashMap<Short, HashMap<Short, ArrayList<WIGB_WaAS_Wave3_PERSON_Record>>>) personSubsetW3[1];
         /**
          * Get lookups and selected person data for Wave 4.
          */
         wave = 4;
-        o = getLookups(wave, 1, outdir);
+        o = getLookups(wave, WIGB_WaAS_Data.W1, outdir);
         HashMap<Short, Short> tWave4ToWave1HHOLDIDLookup;
         HashMap<Short, HashSet<Short>> tWave1ToWave4HHOLDIDLookup;
         tWave4ToWave1HHOLDIDLookup = (HashMap<Short, Short>) o[0];
         tWave1ToWave4HHOLDIDLookup = (HashMap<Short, HashSet<Short>>) o[1];
-        personSubsetW4 = personHandler.loadSubsetWave4(tWave1ToWave4HHOLDIDLookup.keySet(), chunkSize, wave);
-        Env.data.personLookupW4 = (HashMap<Short, Byte>) personSubsetW4[0];
-        Env.data.personDataW4 = (HashMap<Byte, HashMap<Short, ArrayList<WIGB_WaAS_Wave4_PERSON_Record>>>) personSubsetW4[0];
-
+        personSubsetW4 = personHandler.loadSubsetWave4(tWave1ToWave4HHOLDIDLookup.keySet(), personChunkSize, wave);
+        Env.data.personLookupW4 = (HashMap<Short, Short>) personSubsetW4[0];
+        Env.data.personDataW4 = (HashMap<Short, HashMap<Short, ArrayList<WIGB_WaAS_Wave4_PERSON_Record>>>) personSubsetW4[1];
         /**
          * Get lookups and selected person data for Wave 5.
          */
         wave = 5;
-        o = getLookups(wave, 1, outdir);
+        o = getLookups(wave, WIGB_WaAS_Data.W1, outdir);
         HashMap<Short, Short> tWave5ToWave1HHOLDIDLookup;
         HashMap<Short, HashSet<Short>> tWave1ToWave5HHOLDIDLookup;
         tWave5ToWave1HHOLDIDLookup = (HashMap<Short, Short>) o[0];
         tWave1ToWave5HHOLDIDLookup = (HashMap<Short, HashSet<Short>>) o[1];
-        personSubsetW5 = personHandler.loadSubsetWave5(tWave5ToWave1HHOLDIDLookup.keySet(), chunkSize, wave);
-        Env.data.personLookupW5 = (HashMap<Short, Byte>) personSubsetW5[0];
-        Env.data.personDataW5 = (HashMap<Byte, HashMap<Short, ArrayList<WIGB_WaAS_Wave5_PERSON_Record>>>) personSubsetW1[0];
+        personSubsetW5 = personHandler.loadSubsetWave5(tWave5ToWave1HHOLDIDLookup.keySet(), personChunkSize, wave);
+        Env.data.personLookupW5 = (HashMap<Short, Short>) personSubsetW5[0];
+        Env.data.personDataW5 = (HashMap<Short, HashMap<Short, ArrayList<WIGB_WaAS_Wave5_PERSON_Record>>>) personSubsetW1[1];
         /**
          * Load HHOLD Data.
          */
@@ -186,7 +194,6 @@ public class WIGB_Main_Process extends WIGB_Object {
         } catch (Exception ex) {
             Logger.getLogger(WIGB_Main_Process.class.getName()).log(Level.SEVERE, null, ex);
         }
-
         /**
          * Merge Person and Household Data
          */
@@ -195,23 +202,27 @@ public class WIGB_Main_Process extends WIGB_Object {
         short CASEW1;
         int i;
         i = 0;
-
-        byte collectionID;
+        collectionChunkSize = 256;
+        short collectionID;
         collectionID = 0;
         WIGB_WaAS_Collection c;
         c = new WIGB_WaAS_Collection(collectionID);
         Env.data.data.put(collectionID, c);
+        //Env.data.lookup = new HashMap<>();
 
         HashMap<Short, WIGB_WaAS_Combined_Record> crs;
         WIGB_WaAS_Combined_Record cr;
         /**
          * Wave 1.
          */
+        System.out.println("Wave 1");
         wave = 1;
         ite = hholdSubsetW1.keySet().iterator();
         while (ite.hasNext()) {
             CASEW1 = ite.next();
-            System.out.println("CASEW1 " + CASEW1);
+            Env.checkAndMaybeFreeMemory();
+            //System.out.println("CASEW1 " + CASEW1);
+            Env.data.lookup.put(CASEW1, collectionID);
             WIGB_WaAS_Wave1_HHOLD_Record w1hhold;
             w1hhold = hholdSubsetW1.get(CASEW1);
             cr = new WIGB_WaAS_Combined_Record(CASEW1, nwaves);
@@ -225,9 +236,9 @@ public class WIGB_Main_Process extends WIGB_Object {
             cr.add(w1rec);
             crs.put(CASEW1, cr);
             c.getData().put(CASEW1, cr);
-            if (i > 0 && i % chunkSize == 0) {
+            if (i > 0 && i % collectionChunkSize == 0) {
                 // Stash collection
-                storeCacheSubsetCollection(collectionID, c);
+                Env.storeCacheSubsetCollection(collectionID, c);
                 Env.data.data.remove(collectionID);
                 // Start a new collection.
                 collectionID++;
@@ -237,25 +248,26 @@ public class WIGB_Main_Process extends WIGB_Object {
             i++;
         }
         // Stash collection
-        storeCacheSubsetCollection(collectionID, c);
+        Env.storeCacheSubsetCollection(collectionID, c);
         Env.data.data.remove(collectionID);
-        Env.data.clearAllCache();
+//        Env.data.clearAllCache();
         /**
          * Wave 2.
          */
-        i = 0;
-        c = new WIGB_WaAS_Collection(collectionID);
+        System.out.println("Wave 2");
         wave = 2;
         short CASEW2;
         ite = hholdSubsetW2.keySet().iterator();
         while (ite.hasNext()) {
             CASEW2 = ite.next();
-            System.out.println("CASEW2 " + CASEW2);
+            Env.checkAndMaybeFreeMemory();
+            //System.out.println("CASEW2 " + CASEW2);
             WIGB_WaAS_Wave2_HHOLD_Record w2hhold;
             w2hhold = hholdSubsetW2.get(CASEW2);
             CASEW1 = w2hhold.getCASEW1();
-            cr = new WIGB_WaAS_Combined_Record(CASEW1, nwaves);
-            crs = new HashMap<>();
+            //System.out.println("CASEW1 " + CASEW1);
+            c = Env.data.getCollection(CASEW1);
+            cr = c.getData().get(CASEW1);
             HashMap<Short, ArrayList<WIGB_WaAS_Wave2_PERSON_Record>> personCollection;
             personCollection = Env.data.getPersonCollectionW2(personHandler, CASEW2);
             ArrayList<WIGB_WaAS_Wave2_PERSON_Record> list;
@@ -263,22 +275,26 @@ public class WIGB_Main_Process extends WIGB_Object {
             WIGB_WaAS_Wave2_Record w2rec;
             w2rec = new WIGB_WaAS_Wave2_Record(w2hhold, list);
             cr.add(w2rec);
-            crs.put(CASEW1, cr);
-            c.getData().put(CASEW1, cr);
+            collectionID = c.getID();
+            Env.data.hasChanged.add(collectionID);
         }
         Env.data.clearAllCache();
-        // Wave 3.
+        /**
+         * Wave 3.
+         */
+        System.out.println("Wave 3");
         wave = 3;
         short CASEW3;
         ite = hholdSubsetW3.keySet().iterator();
         while (ite.hasNext()) {
             CASEW3 = ite.next();
-            System.out.println("CASEW3 " + CASEW3);
+            Env.checkAndMaybeFreeMemory();
+            //System.out.println("CASEW3 " + CASEW3);
             WIGB_WaAS_Wave3_HHOLD_Record w3hhold;
             w3hhold = hholdSubsetW3.get(CASEW3);
             CASEW1 = w3hhold.getCASEW1();
-            cr = new WIGB_WaAS_Combined_Record(CASEW1, nwaves);
-            crs = new HashMap<>();
+            c = Env.data.getCollection(CASEW1);
+            cr = c.getData().get(CASEW1);
             HashMap<Short, ArrayList<WIGB_WaAS_Wave3_PERSON_Record>> personCollection;
             personCollection = Env.data.getPersonCollectionW3(personHandler, CASEW3);
             ArrayList<WIGB_WaAS_Wave3_PERSON_Record> list;
@@ -286,22 +302,26 @@ public class WIGB_Main_Process extends WIGB_Object {
             WIGB_WaAS_Wave3_Record w3rec;
             w3rec = new WIGB_WaAS_Wave3_Record(w3hhold, list);
             cr.add(w3rec);
-            crs.put(CASEW1, cr);
-            c.getData().put(CASEW1, cr);
+            collectionID = c.getID();
+                Env.data.hasChanged.add(collectionID);
         }
-        Env.data.clearAllCache();
-        // Wave 4.
+//        Env.data.clearAllCache();
+        /**
+         * Wave 4.
+         */
+        System.out.println("Wave 4");
         wave = 4;
         short CASEW4;
         ite = hholdSubsetW4.keySet().iterator();
         while (ite.hasNext()) {
             CASEW4 = ite.next();
-            System.out.println("CASEW4 " + CASEW4);
+            Env.checkAndMaybeFreeMemory();
+            //System.out.println("CASEW4 " + CASEW4);
             WIGB_WaAS_Wave4_HHOLD_Record w4hhold;
             w4hhold = hholdSubsetW4.get(CASEW4);
             CASEW1 = w4hhold.getCASEW1();
-            cr = new WIGB_WaAS_Combined_Record(CASEW1, nwaves);
-            crs = new HashMap<>();
+            c = Env.data.getCollection(CASEW1);
+            cr = c.getData().get(CASEW1);
             HashMap<Short, ArrayList<WIGB_WaAS_Wave4_PERSON_Record>> personCollection;
             personCollection = Env.data.getPersonCollectionW4(personHandler, CASEW4);
             ArrayList<WIGB_WaAS_Wave4_PERSON_Record> list;
@@ -309,22 +329,26 @@ public class WIGB_Main_Process extends WIGB_Object {
             WIGB_WaAS_Wave4_Record w4rec;
             w4rec = new WIGB_WaAS_Wave4_Record(w4hhold, list);
             cr.add(w4rec);
-            crs.put(CASEW1, cr);
-            c.getData().put(CASEW1, cr);
+            collectionID = c.getID();
+                Env.data.hasChanged.add(collectionID);
         }
-        Env.data.clearAllCache();
-        // Wave 5.
+//        Env.data.clearAllCache();
+        /**
+         * Wave 5.
+         */
+        System.out.println("Wave 5");
         wave = 5;
         short CASEW5;
         ite = hholdSubsetW5.keySet().iterator();
         while (ite.hasNext()) {
             CASEW5 = ite.next();
-            System.out.println("CASEW5 " + CASEW5);
+            Env.checkAndMaybeFreeMemory();
+            //System.out.println("CASEW5 " + CASEW5);
             WIGB_WaAS_Wave5_HHOLD_Record w5hhold;
             w5hhold = hholdSubsetW5.get(CASEW5);
             CASEW1 = w5hhold.getCASEW1();
-            cr = new WIGB_WaAS_Combined_Record(CASEW1, nwaves);
-            crs = new HashMap<>();
+            c = Env.data.getCollection(CASEW1);
+            cr = c.getData().get(CASEW1);
             HashMap<Short, ArrayList<WIGB_WaAS_Wave5_PERSON_Record>> personCollection;
             personCollection = Env.data.getPersonCollectionW5(personHandler, CASEW5);
             ArrayList<WIGB_WaAS_Wave5_PERSON_Record> list;
@@ -332,10 +356,12 @@ public class WIGB_Main_Process extends WIGB_Object {
             WIGB_WaAS_Wave5_Record w5rec;
             w5rec = new WIGB_WaAS_Wave5_Record(w5hhold, list);
             cr.add(w5rec);
-            crs.put(CASEW1, cr);
-            c.getData().put(CASEW1, cr);
+            collectionID = c.getID();
+                Env.data.hasChanged.add(collectionID);
         }
         Env.data.clearAllCache();
+        System.out.println("Store Cache");
+        Env.storeCache();
     }
 
     /**
@@ -354,8 +380,10 @@ public class WIGB_Main_Process extends WIGB_Object {
      * @param hholdHandler
      */
     public void doDataProcessingStep1(File indir, File outdir,
-            WIGB_WaAS_HHOLD_Handler hholdHandler, byte nwaves) {
-
+            WIGB_WaAS_HHOLD_Handler hholdHandler) {
+        // For convenience/code brevity.
+        byte nwaves;
+        nwaves = WIGB_WaAS_Data.NWAVES;
         /**
          * Step 1: Load household data into cache and memory.
          */
@@ -552,7 +580,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                             (WIGB_WaAS_Wave1_HHOLD_Record) hholdW1.get(CASEW1));
                 }
             }
-            hholdHandler.storeCacheSubset(1, hholdSubsetW1);
+            hholdHandler.storeCacheSubset(WIGB_WaAS_Data.W1, hholdSubsetW1);
         }
         hholdW1 = null;
 
@@ -613,7 +641,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                             (WIGB_WaAS_Wave2_HHOLD_Record) hholdW2.get(CASEW2));
                 }
             }
-            hholdHandler.storeCacheSubset(2, hholdSubsetW2);
+            hholdHandler.storeCacheSubset(WIGB_WaAS_Data.W2, hholdSubsetW2);
         }
         hholdW2 = null;
 
@@ -673,7 +701,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                             (WIGB_WaAS_Wave3_HHOLD_Record) hholdW3.get(CASEW3));
                 }
             }
-            hholdHandler.storeCacheSubset(3, hholdSubsetW3);
+            hholdHandler.storeCacheSubset(WIGB_WaAS_Data.W3, hholdSubsetW3);
         }
         hholdW3 = null;
 
@@ -738,7 +766,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                             (WIGB_WaAS_Wave4_HHOLD_Record) hholdW4.get(CASEW4));
                 }
             }
-            hholdHandler.storeCacheSubset(4, hholdSubsetW4);
+            hholdHandler.storeCacheSubset(WIGB_WaAS_Data.W4, hholdSubsetW4);
         }
         hholdW4 = null;
         /**
@@ -798,7 +826,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                             (WIGB_WaAS_Wave5_HHOLD_Record) hholdW5.get(CASEW5));
                 }
             }
-            hholdHandler.storeCacheSubset(5, hholdSubsetW5);
+            hholdHandler.storeCacheSubset(WIGB_WaAS_Data.W5, hholdSubsetW5);
         }
         hholdW5 = null;
 //        WIGB_PERSON_Handler personHandler;
@@ -810,7 +838,7 @@ public class WIGB_Main_Process extends WIGB_Object {
 //        personHandler.loadSubsetWave5(tWave5ToWave1HHOLDIDLookup.keySet());
     }
 
-    protected Object[] getLookups(int wavel, int waveh, File dir) {
+    protected Object[] getLookups(byte wavel, byte waveh, File dir) {
         Object[] r = null;
         String filename;
         filename = "Wave" + wavel + "ToFromWave" + waveh + "Lookups."
@@ -826,37 +854,4 @@ public class WIGB_Main_Process extends WIGB_Object {
     boolean doJavaCodeGeneration = false;
     boolean doLoadDataIntoCaches = false;
 
-    public void storeCacheSubsetCollection(short collectionID, Object o) {
-        File dir;
-        dir = Env.Files.getGeneratedWaASDirectory();
-        dir = new File(dir, "Subsets");
-        File cf;
-        cf = new File(dir, "WaAS_" + collectionID + "." + Env.Strings.S_dat);
-        storeCache(cf, o);
-    }
-
-    protected void storeCache(File cf, Object o) {
-        System.out.println("<Storing Collection in cache file " + cf + ">");
-        Generic_StaticIO.writeObject(o, cf);
-        System.out.println("</Storing Collection in cache file " + cf + ">");
-    }
-    
-    public Object loadCacheSubsetCollection(short collectionID) {
-        Object r;
-        File dir;
-        dir = Env.Files.getGeneratedWaASDirectory();
-        dir = new File(dir, "Subsets");
-        File cf;
-        cf = new File(dir, "WaAS_" + collectionID + "." + Env.Strings.S_dat);
-        r = loadCache(cf);
-        return r;
-    }
-    
-    protected Object loadCache(File cf) {
-        Object r;
-        System.out.println("<Loading Collection from cache file " + cf + ">");
-        r = Generic_StaticIO.readObject(cf);
-        System.out.println("</Loading Collection from cache file " + cf + ">");
-        return r;
-    }
 }
