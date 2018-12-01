@@ -98,7 +98,7 @@ public class WIGB_WaAS_Data extends WIGB_Object {
      * Keys are personCollectionIDs, values are Maps where keys are CASEW1 and
      * values are lists of WIGB_WaAS_Wave1_PERSON_Record.
      */
-    public HashMap<Short, HashMap<Short, ArrayList<WIGB_WaAS_Wave1_PERSON_Record>>> personDataW1;
+    public HashMap<Short, HashMap<WIGB_WaAS_ID, ArrayList<WIGB_WaAS_Wave1_PERSON_Record>>> personDataW1;
 
     /**
      * Indicates if there is some personDataW1 that can be deleted from memory
@@ -110,7 +110,7 @@ public class WIGB_WaAS_Data extends WIGB_Object {
      * Keys are personCollectionIDs, values are Maps where keys are CASEW2 and
      * Values are lists of WIGB_WaAS_Wave2_PERSON_Record.
      */
-    public HashMap<Short, HashMap<Short, ArrayList<WIGB_WaAS_Wave2_PERSON_Record>>> personDataW2;
+    public HashMap<Short, HashMap<WIGB_WaAS_ID, ArrayList<WIGB_WaAS_Wave2_PERSON_Record>>> personDataW2;
 
     /**
      * Indicates if there is some personDataW2 that can be deleted from memory
@@ -122,7 +122,7 @@ public class WIGB_WaAS_Data extends WIGB_Object {
      * Keys are personCollectionIDs, values are Maps where keys are CASEW3 and
      * Values are lists of WIGB_WaAS_Wave3_PERSON_Record.
      */
-    public HashMap<Short, HashMap<Short, ArrayList<WIGB_WaAS_Wave3_PERSON_Record>>> personDataW3;
+    public HashMap<Short, HashMap<WIGB_WaAS_ID, ArrayList<WIGB_WaAS_Wave3_PERSON_Record>>> personDataW3;
 
     /**
      * Indicates if there is some personDataW3 that can be deleted from memory
@@ -134,7 +134,7 @@ public class WIGB_WaAS_Data extends WIGB_Object {
      * Keys are personCollectionIDs, values are Maps where keys are CASEW4 and
      * Values are lists of WIGB_WaAS_Wave4_PERSON_Record.
      */
-    public HashMap<Short, HashMap<Short, ArrayList<WIGB_WaAS_Wave4_PERSON_Record>>> personDataW4;
+    public HashMap<Short, HashMap<WIGB_WaAS_ID, ArrayList<WIGB_WaAS_Wave4_PERSON_Record>>> personDataW4;
 
     /**
      * Indicates if there is some personDataW4 that can be deleted from memory
@@ -146,7 +146,7 @@ public class WIGB_WaAS_Data extends WIGB_Object {
      * Keys are personCollectionIDs, values are Maps where keys are CASEW5 and
      * Values are lists of WIGB_WaAS_Wave5_PERSON_Record.
      */
-    public HashMap<Short, HashMap<Short, ArrayList<WIGB_WaAS_Wave5_PERSON_Record>>> personDataW5;
+    public HashMap<Short, HashMap<WIGB_WaAS_ID, ArrayList<WIGB_WaAS_Wave5_PERSON_Record>>> personDataW5;
 
     /**
      * Indicates if there is some personDataW5 that can be deleted from memory
@@ -169,80 +169,80 @@ public class WIGB_WaAS_Data extends WIGB_Object {
         hasChanged = new HashSet<>();
     }
 
-    public HashMap<Short, ArrayList<WIGB_WaAS_Wave1_PERSON_Record>> getPersonCollectionW1(
+    public HashMap<WIGB_WaAS_ID, ArrayList<WIGB_WaAS_Wave1_PERSON_Record>> getPersonCollectionW1(
             WIGB_WaAS_PERSON_Handler personHandler, short CASEW1) {
-        HashMap<Short, ArrayList<WIGB_WaAS_Wave1_PERSON_Record>> r;
+        HashMap<WIGB_WaAS_ID, ArrayList<WIGB_WaAS_Wave1_PERSON_Record>> r;
         short pID;
         pID = personLookupW1.get(CASEW1);
         //System.out.println("Person Collection ID " + pID);
         if (personDataW1.containsKey(pID)) {
             r = personDataW1.get(pID);
         } else {
-            r = (HashMap<Short, ArrayList<WIGB_WaAS_Wave1_PERSON_Record>>) personHandler.loadCacheSubsetCollection(pID, W1);
+            r = (HashMap<WIGB_WaAS_ID, ArrayList<WIGB_WaAS_Wave1_PERSON_Record>>) personHandler.loadCacheSubsetCollection(pID, W1);
             personDataW1.put(pID, r);
         }
         hasPersonDataW1 = true;
         return r;
     }
 
-    public HashMap<Short, ArrayList<WIGB_WaAS_Wave2_PERSON_Record>> getPersonCollectionW2(
+    public HashMap<WIGB_WaAS_ID, ArrayList<WIGB_WaAS_Wave2_PERSON_Record>> getPersonCollectionW2(
             WIGB_WaAS_PERSON_Handler personHandler, short CASEW2) {
-        HashMap<Short, ArrayList<WIGB_WaAS_Wave2_PERSON_Record>> r;
+        HashMap<WIGB_WaAS_ID, ArrayList<WIGB_WaAS_Wave2_PERSON_Record>> r;
         short pID;
         pID = personLookupW2.get(CASEW2);
         //System.out.println("Person Collection ID " + pID);
         if (personDataW2.containsKey(pID)) {
             r = personDataW2.get(pID);
         } else {
-            r = (HashMap<Short, ArrayList<WIGB_WaAS_Wave2_PERSON_Record>>) personHandler.loadCacheSubsetCollection(pID, W2);
+            r = (HashMap<WIGB_WaAS_ID, ArrayList<WIGB_WaAS_Wave2_PERSON_Record>>) personHandler.loadCacheSubsetCollection(pID, W2);
             personDataW2.put(pID, r);
         }
         hasPersonDataW2 = true;
         return r;
     }
 
-    public HashMap<Short, ArrayList<WIGB_WaAS_Wave3_PERSON_Record>> getPersonCollectionW3(
+    public HashMap<WIGB_WaAS_ID, ArrayList<WIGB_WaAS_Wave3_PERSON_Record>> getPersonCollectionW3(
             WIGB_WaAS_PERSON_Handler personHandler, short CASEW3) {
-        HashMap<Short, ArrayList<WIGB_WaAS_Wave3_PERSON_Record>> r;
+        HashMap<WIGB_WaAS_ID, ArrayList<WIGB_WaAS_Wave3_PERSON_Record>> r;
         short pID;
         pID = personLookupW3.get(CASEW3);
         //System.out.println("Person Collection ID " + pID);
         if (personDataW3.containsKey(pID)) {
             r = personDataW3.get(pID);
         } else {
-            r = (HashMap<Short, ArrayList<WIGB_WaAS_Wave3_PERSON_Record>>) personHandler.loadCacheSubsetCollection(pID, W3);
+            r = (HashMap<WIGB_WaAS_ID, ArrayList<WIGB_WaAS_Wave3_PERSON_Record>>) personHandler.loadCacheSubsetCollection(pID, W3);
             personDataW3.put(pID, r);
         }
         hasPersonDataW3 = true;
         return r;
     }
 
-    public HashMap<Short, ArrayList<WIGB_WaAS_Wave4_PERSON_Record>> getPersonCollectionW4(
+    public HashMap<WIGB_WaAS_ID, ArrayList<WIGB_WaAS_Wave4_PERSON_Record>> getPersonCollectionW4(
             WIGB_WaAS_PERSON_Handler personHandler, short CASEW4) {
-        HashMap<Short, ArrayList<WIGB_WaAS_Wave4_PERSON_Record>> r;
+        HashMap<WIGB_WaAS_ID, ArrayList<WIGB_WaAS_Wave4_PERSON_Record>> r;
         short pID;
         pID = personLookupW4.get(CASEW4);
         //System.out.println("Person Collection ID " + pID);
         if (personDataW4.containsKey(pID)) {
             r = personDataW4.get(pID);
         } else {
-            r = (HashMap<Short, ArrayList<WIGB_WaAS_Wave4_PERSON_Record>>) personHandler.loadCacheSubsetCollection(pID, W4);
+            r = (HashMap<WIGB_WaAS_ID, ArrayList<WIGB_WaAS_Wave4_PERSON_Record>>) personHandler.loadCacheSubsetCollection(pID, W4);
             personDataW4.put(pID, r);
         }
         hasPersonDataW4 = true;
         return r;
     }
 
-    public HashMap<Short, ArrayList<WIGB_WaAS_Wave5_PERSON_Record>> getPersonCollectionW5(
+    public HashMap<WIGB_WaAS_ID, ArrayList<WIGB_WaAS_Wave5_PERSON_Record>> getPersonCollectionW5(
             WIGB_WaAS_PERSON_Handler personHandler, short CASEW5) {
-        HashMap<Short, ArrayList<WIGB_WaAS_Wave5_PERSON_Record>> r;
+        HashMap<WIGB_WaAS_ID, ArrayList<WIGB_WaAS_Wave5_PERSON_Record>> r;
         short pID;
         pID = personLookupW5.get(CASEW5);
         //System.out.println("Person Collection ID " + pID);
         if (personDataW5.containsKey(pID)) {
             r = personDataW5.get(pID);
         } else {
-            r = (HashMap<Short, ArrayList<WIGB_WaAS_Wave5_PERSON_Record>>) personHandler.loadCacheSubsetCollection(pID, W5);
+            r = (HashMap<WIGB_WaAS_ID, ArrayList<WIGB_WaAS_Wave5_PERSON_Record>>) personHandler.loadCacheSubsetCollection(pID, W5);
             personDataW5.put(pID, r);
         }
         hasPersonDataW5 = true;

@@ -7,7 +7,6 @@ import uk.ac.leeds.ccg.andyt.generic.data.Generic_UKPostcode_Handler;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_StaticIO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_Data;
 import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
-import uk.ac.leeds.ccg.andyt.projects.wigb.process.WIGB_Main_Process;
 
 /**
  *
@@ -53,6 +52,7 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
      */
     @Override
     public boolean checkAndMaybeFreeMemory() {
+        System.gc();
         while (getTotalFreeMemory() < Memory_Threshold) {
 //            int clear = clearAllCache();
 //            if (clear == 0) {
@@ -84,7 +84,7 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
     }
 
     /**
-     * Currently this just tries to swap a SHBE collection.
+     * Currently this just tries to swap WaAS data.
      *
      * @return
      */

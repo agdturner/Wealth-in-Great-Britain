@@ -54,7 +54,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
      * @param wave
      * @return
      */
-    public Object[] loadSubsetWave1(Set<Short> CASEW1IDs, int chunkSize, byte wave) {
+    public Object[] loadSubsetWave1(Set<WIGB_WaAS_ID> CASEW1IDs, int chunkSize, byte wave) {
         Object[] r;
         try {
             r = (Object[]) loadCacheSubset(wave);
@@ -70,7 +70,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
              * values are a Map with the keys as CASEW1 and values a List of
              * WIGB_WaAS_Wave1_PERSON_Record records.
              */
-            HashMap<Short, HashMap<Short, ArrayList<WIGB_WaAS_Wave1_PERSON_Record>>> data;
+            HashMap<Short, HashMap<WIGB_WaAS_ID, ArrayList<WIGB_WaAS_Wave1_PERSON_Record>>> data;
             lookup = new HashMap<>();
             data = new HashMap<>();
             r[0] = lookup;
@@ -78,28 +78,48 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
             int recID;
             recID = 0;
             short collectionID;
-            collectionID = 0;
+            //collectionID = 0;
             File f;
             f = getInputFile(wave);
-            HashMap<Short, ArrayList<WIGB_WaAS_Wave1_PERSON_Record>> records;
+            HashMap<WIGB_WaAS_ID, ArrayList<WIGB_WaAS_Wave1_PERSON_Record>> records;
             ArrayList<WIGB_WaAS_Wave1_PERSON_Record> list;
             records = new HashMap<>();
             data.put(collectionID, records);
             System.out.println("<Loading wave " + wave + " subset " + TYPE
                     + " WaAS data from " + f + ">");
             BufferedReader br;
-            br = Generic_StaticIO.getBufferedReader(f);
             StreamTokenizer st;
+            int lineNumber;
+            boolean read;
+            Short sID;
+            WIGB_WaAS_ID ID;
+
+            /**
+             * Read through the lines and figure out which lines should be put
+             * in which collection. REad through fiorst and create a
+             * TreeSet<WIGB_WaAS_ID> The first chunksize ones of these are in
+             * the first collection, the second chunksize ones in the second and
+             * so on.
+             *
+             * On the second read through get the right collection for each 
+             * record and add to it being careful before each read to check 
+             * there is enough room. N.B. 1) It should be possible to write out 
+             * full collections and clear these from memory. 2) After the first 
+             * read through the data, we can know which collection is needed 
+             * next if we keep a little information and this should avoid 
+             * swapping out data that is immediately read back in. (We could 
+             * swap out everything, but that could be expensive. We could read 
+             * through the data n times, once for each collection (or some 
+             * variation of this).) 
+             */
+            br = Generic_StaticIO.getBufferedReader(f);
             st = new StreamTokenizer(br);
             Generic_StaticIO.setStreamTokenizerSyntax7(st);
-            int lineNumber;
             lineNumber = 0;
+            read = false;
             String line;
             // skip header
             Generic_ReadCSV.readLine(st, null);
-            boolean read;
-            read = false;
-            Short ID;
             while (!read) {
                 line = Generic_ReadCSV.readLine(st, null);
                 lineNumber++;
@@ -113,7 +133,8 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
                      * Optimisation using the fact that CASEW1 is the first part
                      * of the string.
                      */
-                    ID = Short.valueOf(line.substring(0, line.indexOf("\t")));
+                    sID = Short.valueOf(line.substring(0, line.indexOf("\t")));
+                    ID = new WIGB_WaAS_ID(sID, sID);
                     if (CASEW1IDs.contains(ID)) {
                         WIGB_WaAS_Wave1_PERSON_Record rec;
                         rec = new WIGB_WaAS_Wave1_PERSON_Record(line);
@@ -124,7 +145,55 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
                             list = records.get(CASEW1);
                         } else {
                             list = new ArrayList<>();
-                            records.put(CASEW1, list);
+                            records.put(new WIGB_WaAS_ID(CASEW1, CASEW1), list);
+                        }
+                        list.add(rec);
+                        if (recID > 0 && recID % chunkSize == 0) {
+                            // Cache collection
+                            storeCacheSubsetCollection(collectionID, wave, records);
+                            data.remove(collectionID);
+                            // Start a new collection.
+                            collectionID++;
+                            records = new HashMap<>();
+                            data.put(collectionID, records);
+                        }
+                        recID++;
+                    }
+                }
+            }
+
+            br = Generic_StaticIO.getBufferedReader(f);
+            st = new StreamTokenizer(br);
+            Generic_StaticIO.setStreamTokenizerSyntax7(st);
+            lineNumber = 0;
+            // skip header
+            Generic_ReadCSV.readLine(st, null);
+            read = false;
+            while (!read) {
+                line = Generic_ReadCSV.readLine(st, null);
+                lineNumber++;
+                if (lineNumber % 1000 == 0) {
+                    System.out.println("lineNumber " + lineNumber);
+                }
+                if (line == null) {
+                    read = true;
+                } else {
+                    /**
+                     * Optimisation using the fact that CASEW1 is the first part
+                     * of the string.
+                     */
+                    sID = Short.valueOf(line.substring(0, line.indexOf("\t")));
+                    if (CASEW1IDs.contains(sID)) {
+                        WIGB_WaAS_Wave1_PERSON_Record rec;
+                        rec = new WIGB_WaAS_Wave1_PERSON_Record(line);
+                        short CASEW1;
+                        CASEW1 = rec.getCASEW1();
+                        lookup.put(CASEW1, collectionID);
+                        if (records.containsKey(CASEW1)) {
+                            list = records.get(CASEW1);
+                        } else {
+                            list = new ArrayList<>();
+                            records.put(new WIGB_WaAS_ID(CASEW1, CASEW1), list);
                         }
                         list.add(rec);
                         if (recID > 0 && recID % chunkSize == 0) {
@@ -485,7 +554,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
     /**
      * Loads Wave 5 of the person WaAS for those records with CASEW5 in
      * CASEW5IDs.If this data are in a cache then the cache is loaded otherwise
- the data are selected and the cache is written for next time.
+     * the data are selected and the cache is written for next time.
      *
      * @param CASEW5IDs
      * @param chunkSize
