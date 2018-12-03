@@ -403,11 +403,7 @@ MENDV13 = Short.MIN_VALUE;
 protected final void initMENDV14(String s) {
 if (!s.trim().isEmpty()) {
 byte b = Byte.parseByte(s);
-if (b == -7) {
-MENDV14 = false;
-} else {
-MENDV14 = true;
-}
+MENDV14 = b != -7;
 }
 }
 

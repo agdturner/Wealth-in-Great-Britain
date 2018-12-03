@@ -22,7 +22,7 @@ import java.io.Serializable;
  * @author geoagdt
  */
 public class WIGB_WaAS_ID implements Comparable, Serializable {
-    
+
     private final short CASEW1;
     private final short CASEWX;
 
@@ -30,7 +30,7 @@ public class WIGB_WaAS_ID implements Comparable, Serializable {
         this.CASEW1 = CASEW1;
         this.CASEWX = CASEWX;
     }
-    
+
     @Override
     public int compareTo(Object o) {
         if (o instanceof WIGB_WaAS_ID) {
@@ -41,11 +41,11 @@ public class WIGB_WaAS_ID implements Comparable, Serializable {
                 if (CASEW1 < o2.CASEW1) {
                     return -2;
                 }
-                if (CASEWX > o2.CASEW1) {
+                if (CASEWX > o2.CASEWX) {
                     return 1;
                 } else {
-                    if (CASEWX < o2.CASEW1) {
-                       return -1;
+                    if (CASEWX < o2.CASEWX) {
+                        return -1;
                     }
                 }
                 return 0;
@@ -67,6 +67,32 @@ public class WIGB_WaAS_ID implements Comparable, Serializable {
     public short getCASEWX() {
         return CASEWX;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "CASEW1 " + CASEW1 + " CASEWX " + CASEWX;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof WIGB_WaAS_ID) {
+            WIGB_WaAS_ID o2;
+            o2 = (WIGB_WaAS_ID) o;
+            if (CASEW1 == o2.CASEW1) {
+                if (CASEWX == o2.CASEWX) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 59 * hash + this.CASEW1;
+        hash = 59 * hash + this.CASEWX;
+        return hash;
+    }
+
 }

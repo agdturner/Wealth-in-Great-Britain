@@ -15,42 +15,19 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas;
 
-import java.util.HashMap;
-
 /**
  *
  * @author geoagdt
  */
 public class WIGB_WaAS_Combined_Record extends WIGB_WaAS_Record {
     
-    public HashMap<Byte, HashMap<Short, WIGB_WaAS_Record>> data;
+    public WIGB_WaAS_Wave1_Record w1Record;
+    public WIGB_WaAS_Wave2_Record w2Record;
+    public WIGB_WaAS_Wave3_Record w3Record;
+    public WIGB_WaAS_Wave4_Record w4Record;
+    public WIGB_WaAS_Wave5_Record w5Record;
     
-    public WIGB_WaAS_Combined_Record(short CASEW1, byte nwaves) {
+    public WIGB_WaAS_Combined_Record(short CASEW1) {
         super(CASEW1);
-        data = new HashMap<>();
-        for (byte b = 0; b < nwaves; b ++) {
-            data.put(b, new HashMap<>());
-        }
     }
-    
-    public void add(WIGB_WaAS_Wave1_Record r) {
-        data.get(WIGB_WaAS_Data.W1).put(r.getID(), r);
-    }
-    
-    public void add(WIGB_WaAS_Wave2_Record r) {
-        data.get(WIGB_WaAS_Data.W2).put(r.getID(), r);
-    }
-    
-    public void add(WIGB_WaAS_Wave3_Record r) {
-       data.get(WIGB_WaAS_Data.W3).put(r.getID(), r);
-    }
-    
-    public void add(WIGB_WaAS_Wave4_Record r) {
-        data.get(WIGB_WaAS_Data.W4).put(r.getID(), r);
-    }
-    
-    public void add(WIGB_WaAS_Wave5_Record r) {
-        data.get(WIGB_WaAS_Data.W5).put(r.getID(), r);
-    }
-    
 }

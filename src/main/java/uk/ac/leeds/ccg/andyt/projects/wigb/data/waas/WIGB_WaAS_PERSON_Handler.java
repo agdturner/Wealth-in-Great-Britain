@@ -17,12 +17,15 @@ package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.io.StreamTokenizer;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_ReadCSV;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_StaticIO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
@@ -52,170 +55,120 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
      * @param CASEW1IDs
      * @param chunkSize
      * @param wave
+     * @param outdir
      * @return
      */
-    public Object[] loadSubsetWave1(Set<WIGB_WaAS_ID> CASEW1IDs, int chunkSize, byte wave) {
+    public Object[] loadSubsetWave1(Set<WIGB_WaAS_ID> CASEW1IDs, int chunkSize,
+            byte wave, File outdir) {
         Object[] r;
-        try {
-            r = (Object[]) loadCacheSubset(wave);
-        } catch (Exception ex) {
-            r = new Object[2];
-            /**
-             * This lookup is used to identify which collection a person record
-             * is in. The key is CASEW1, the value is the CollectionID.
-             */
-            HashMap<Short, Short> lookup;
-            /**
-             * This data holds the data, the keys are the CollectionID and the
-             * values are a Map with the keys as CASEW1 and values a List of
-             * WIGB_WaAS_Wave1_PERSON_Record records.
-             */
-            HashMap<Short, HashMap<WIGB_WaAS_ID, ArrayList<WIGB_WaAS_Wave1_PERSON_Record>>> data;
-            lookup = new HashMap<>();
-            data = new HashMap<>();
-            r[0] = lookup;
-            r[1] = data;
-            int recID;
-            recID = 0;
-            short collectionID;
-            //collectionID = 0;
+        r = new Object[2];
+        /**
+         * This lookup is used to identify which collection a person record is
+         * in. The key is CASEW1, the value is the CollectionID.
+         */
+        HashMap<Short, Short> lookup;
+        lookup = new HashMap<>();
+        // Calculate how many subsets
+        int n;
+        n = CASEW1IDs.size();
+        int numberOfCollections;
+        numberOfCollections = (int) Math.ceil((double) n / (double) chunkSize);
+        int sizeOfCollection;
+        sizeOfCollection = (int) Math.floor((double) n / (double) numberOfCollections);
+        /**
+         * Initialise collectionIDSets and collectionIDPrintWriters.
+         */
+        HashMap<Short, Set<WIGB_WaAS_ID>> collectionIDSets;
+        HashMap<Short, PrintWriter> collectionIDPrintWriters;
+        HashMap<Short, File> collectionIDFiles;
+        collectionIDSets = new HashMap<>();
+        collectionIDPrintWriters = new HashMap<>();
+        collectionIDFiles = new HashMap<>();
+        int start = 0;
+        int count = sizeOfCollection;
+        for (short collectionID = 0; collectionID < numberOfCollections; collectionID++) {
+            Set<WIGB_WaAS_ID> set;
+            set = CASEW1IDs.stream()
+                    .skip(start) // offset
+                    .limit(count) // number of items wanted
+                    .collect(Collectors.toSet());
+            collectionIDSets.put(collectionID, set);
             File f;
-            f = getInputFile(wave);
-            HashMap<WIGB_WaAS_ID, ArrayList<WIGB_WaAS_Wave1_PERSON_Record>> records;
-            ArrayList<WIGB_WaAS_Wave1_PERSON_Record> list;
-            records = new HashMap<>();
-            data.put(collectionID, records);
-            System.out.println("<Loading wave " + wave + " subset " + TYPE
-                    + " WaAS data from " + f + ">");
-            BufferedReader br;
-            StreamTokenizer st;
-            int lineNumber;
-            boolean read;
-            Short sID;
-            WIGB_WaAS_ID ID;
-
-            /**
-             * Read through the lines and figure out which lines should be put
-             * in which collection. REad through fiorst and create a
-             * TreeSet<WIGB_WaAS_ID> The first chunksize ones of these are in
-             * the first collection, the second chunksize ones in the second and
-             * so on.
-             *
-             * On the second read through get the right collection for each 
-             * record and add to it being careful before each read to check 
-             * there is enough room. N.B. 1) It should be possible to write out 
-             * full collections and clear these from memory. 2) After the first 
-             * read through the data, we can know which collection is needed 
-             * next if we keep a little information and this should avoid 
-             * swapping out data that is immediately read back in. (We could 
-             * swap out everything, but that could be expensive. We could read 
-             * through the data n times, once for each collection (or some 
-             * variation of this).) 
-             */
-            br = Generic_StaticIO.getBufferedReader(f);
-            st = new StreamTokenizer(br);
-            Generic_StaticIO.setStreamTokenizerSyntax7(st);
-            lineNumber = 0;
-            read = false;
-            String line;
-            // skip header
-            Generic_ReadCSV.readLine(st, null);
-            while (!read) {
-                line = Generic_ReadCSV.readLine(st, null);
-                lineNumber++;
-                if (lineNumber % 1000 == 0) {
-                    System.out.println("lineNumber " + lineNumber);
-                }
-                if (line == null) {
-                    read = true;
-                } else {
-                    /**
-                     * Optimisation using the fact that CASEW1 is the first part
-                     * of the string.
-                     */
-                    sID = Short.valueOf(line.substring(0, line.indexOf("\t")));
-                    ID = new WIGB_WaAS_ID(sID, sID);
-                    if (CASEW1IDs.contains(ID)) {
-                        WIGB_WaAS_Wave1_PERSON_Record rec;
-                        rec = new WIGB_WaAS_Wave1_PERSON_Record(line);
-                        short CASEW1;
-                        CASEW1 = rec.getCASEW1();
-                        lookup.put(CASEW1, collectionID);
-                        if (records.containsKey(CASEW1)) {
-                            list = records.get(CASEW1);
-                        } else {
-                            list = new ArrayList<>();
-                            records.put(new WIGB_WaAS_ID(CASEW1, CASEW1), list);
-                        }
-                        list.add(rec);
-                        if (recID > 0 && recID % chunkSize == 0) {
-                            // Cache collection
-                            storeCacheSubsetCollection(collectionID, wave, records);
-                            data.remove(collectionID);
-                            // Start a new collection.
-                            collectionID++;
-                            records = new HashMap<>();
-                            data.put(collectionID, records);
-                        }
-                        recID++;
-                    }
-                }
-            }
-
-            br = Generic_StaticIO.getBufferedReader(f);
-            st = new StreamTokenizer(br);
-            Generic_StaticIO.setStreamTokenizerSyntax7(st);
-            lineNumber = 0;
-            // skip header
-            Generic_ReadCSV.readLine(st, null);
-            read = false;
-            while (!read) {
-                line = Generic_ReadCSV.readLine(st, null);
-                lineNumber++;
-                if (lineNumber % 1000 == 0) {
-                    System.out.println("lineNumber " + lineNumber);
-                }
-                if (line == null) {
-                    read = true;
-                } else {
-                    /**
-                     * Optimisation using the fact that CASEW1 is the first part
-                     * of the string.
-                     */
-                    sID = Short.valueOf(line.substring(0, line.indexOf("\t")));
-                    if (CASEW1IDs.contains(sID)) {
-                        WIGB_WaAS_Wave1_PERSON_Record rec;
-                        rec = new WIGB_WaAS_Wave1_PERSON_Record(line);
-                        short CASEW1;
-                        CASEW1 = rec.getCASEW1();
-                        lookup.put(CASEW1, collectionID);
-                        if (records.containsKey(CASEW1)) {
-                            list = records.get(CASEW1);
-                        } else {
-                            list = new ArrayList<>();
-                            records.put(new WIGB_WaAS_ID(CASEW1, CASEW1), list);
-                        }
-                        list.add(rec);
-                        if (recID > 0 && recID % chunkSize == 0) {
-                            // Cache collection
-                            storeCacheSubsetCollection(collectionID, wave, records);
-                            data.remove(collectionID);
-                            // Start a new collection.
-                            collectionID++;
-                            records = new HashMap<>();
-                            data.put(collectionID, records);
-                        }
-                        recID++;
-                    }
-                }
-            }
-            // Cache final collection=
-            storeCacheSubsetCollection(collectionID, wave, records);
-            data.remove(collectionID);
-            System.out.println("</Loading wave " + wave + " subset " + TYPE
-                    + " WaAS data from " + f + ">");
-            storeCacheSubset(wave, r);
+            f = new File(outdir, "person" + wave + "_" + collectionID + ".tab");
+            collectionIDPrintWriters.put(collectionID,
+                    Generic_StaticIO.getPrintWriter(f, false));
+            collectionIDFiles.put(collectionID, f);
+            start += count;
         }
+        r[0] = collectionIDSets;
+        r[1] = collectionIDFiles;
+        /**
+         * Initialise lookup.
+         */
+        collectionIDSets.keySet().stream()
+                .forEach(collectionID -> {
+                    Set<WIGB_WaAS_ID> set;
+                    set = collectionIDSets.get(collectionID);
+                    set.stream()
+                            .forEach(y -> {
+                                lookup.put(y.getCASEW1(), collectionID);
+                            });
+                });
+        /**
+         * Read through the lines and figure out which lines should be put in
+         * which collection.
+         */
+        File f;
+        f = getInputFile(wave);
+        BufferedReader br;
+        br = Generic_StaticIO.getBufferedReader(f);
+        /**
+         * Read the header and write this out to the split files.
+         */
+        final String header;
+        try {
+            header = br.readLine();
+            collectionIDPrintWriters.keySet().stream()
+                    .forEach(collectionID -> {
+                        PrintWriter pw;
+                        pw = collectionIDPrintWriters.get(collectionID);
+                        pw.println(header);
+                    });
+        } catch (IOException ex1) {
+            Logger.getLogger(WIGB_WaAS_PERSON_Handler.class.getName()).log(Level.SEVERE, null, ex1);
+        }
+        /**
+         * Read through the lines and write them to the appropriate files.
+         */
+        br.lines()
+                .forEach(line -> {
+                    WIGB_WaAS_Wave1_PERSON_Record rec;
+                    short CASEW1;
+                    WIGB_WaAS_ID ID;
+                    rec = new WIGB_WaAS_Wave1_PERSON_Record(line);
+                    CASEW1 = rec.getCASEW1();
+                    if (CASEW1 > Short.MIN_VALUE) {
+                        ID = new WIGB_WaAS_ID(CASEW1, CASEW1);
+                        if (lookup.containsKey(CASEW1)) {
+                            short collectionID;
+                            collectionID = lookup.get(CASEW1);
+                            Set<WIGB_WaAS_ID> set;
+                            set = collectionIDSets.get(collectionID);
+                            if (set.contains(ID)) {
+                                PrintWriter pw;
+                                pw = collectionIDPrintWriters.get(collectionID);
+                                pw.println(line);
+                            }
+                        }
+                    }
+                });
+        // Close the PrintWriters.
+        collectionIDPrintWriters.keySet().stream()
+                .forEach(collectionID -> {
+                    PrintWriter pw;
+                    pw = collectionIDPrintWriters.get(collectionID);
+                    pw.close();
+                });
         return r;
     }
 
@@ -227,101 +180,122 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
      * @param CASEW2IDs
      * @param chunkSize
      * @param wave
+     * @param outdir
      * @return
      */
-    public Object[] loadSubsetWave2(Set<Short> CASEW2IDs, int chunkSize, byte wave) {
+    public Object[] loadSubsetWave2(Set<WIGB_WaAS_ID> CASEW2IDs, int chunkSize,
+            byte wave, File outdir) {
         Object[] r;
-        try {
-            r = (Object[]) loadCacheSubset(wave);
-        } catch (Exception ex) {
-            r = new Object[2];
-            /**
-             * This lookup is used to identify which collection a person record
-             * is in. The key is CASEW2, the value is the CollectionID.
-             */
-            HashMap<Short, Short> lookup;
-            /**
-             * This data holds the data, the keys are the CollectionID and the
-             * values are a Map with the keys as CASEW2 and values a List of
-             * WIGB_WaAS_Wave2_PERSON_Record records.
-             */
-            HashMap<Short, HashMap<Short, ArrayList<WIGB_WaAS_Wave2_PERSON_Record>>> data;
-            lookup = new HashMap<>();
-            data = new HashMap<>();
-            r[0] = lookup;
-            r[1] = data;
-            int recID;
-            recID = 0;
-            short collectionID;
-            collectionID = 0;
+        r = new Object[2];
+        /**
+         * This lookup is used to identify which collection a person record is
+         * in. The key is CASEW2, the value is the CollectionID.
+         */
+        HashMap<Short, Short> lookup;
+        lookup = new HashMap<>();
+        // Calculate how many subsets
+        int n;
+        n = CASEW2IDs.size();
+        int numberOfCollections;
+        numberOfCollections = (int) Math.ceil((double) n / (double) chunkSize);
+        int sizeOfCollection;
+        sizeOfCollection = (int) Math.floor((double) n / (double) numberOfCollections);
+        /**
+         * Initialise collectionIDSets and collectionIDPrintWriters.
+         */
+        HashMap<Short, Set<WIGB_WaAS_ID>> collectionIDSets;
+        HashMap<Short, PrintWriter> collectionIDPrintWriters;
+        HashMap<Short, File> collectionIDFiles;
+        collectionIDSets = new HashMap<>();
+        collectionIDPrintWriters = new HashMap<>();
+        collectionIDFiles = new HashMap<>();
+        int start = 0;
+        int count = sizeOfCollection;
+        for (short collectionID = 0; collectionID < numberOfCollections; collectionID++) {
+            Set<WIGB_WaAS_ID> set;
+            set = CASEW2IDs.stream()
+                    .skip(start) // offset
+                    .limit(count) // number of items wanted
+                    .collect(Collectors.toSet());
+            collectionIDSets.put(collectionID, set);
             File f;
-            f = getInputFile(wave);
-            HashMap<Short, ArrayList<WIGB_WaAS_Wave2_PERSON_Record>> records;
-            ArrayList<WIGB_WaAS_Wave2_PERSON_Record> list;
-            records = new HashMap<>();
-            data.put(collectionID, records);
-            System.out.println("<Loading wave " + wave + " subset " + TYPE
-                    + " WaAS data from " + f + ">");
-            BufferedReader br;
-            br = Generic_StaticIO.getBufferedReader(f);
-            StreamTokenizer st;
-            st = new StreamTokenizer(br);
-            Generic_StaticIO.setStreamTokenizerSyntax7(st);
-            int lineNumber;
-            lineNumber = 0;
-            String line;
-            // skip header
-            Generic_ReadCSV.readLine(st, null);
-            boolean read;
-            read = false;
-            Short ID;
-            while (!read) {
-                line = Generic_ReadCSV.readLine(st, null);
-                lineNumber++;
-                if (lineNumber % 1000 == 0) {
-                    System.out.println("lineNumber " + lineNumber);
-                }
-                if (line == null) {
-                    read = true;
-                } else {
-                    /**
-                     * Optimisation using the fact that CASEW2 is the first part
-                     * of the string.
-                     */
-                    ID = Short.valueOf(line.substring(0, line.indexOf("\t")));
-                    if (CASEW2IDs.contains(ID)) {
-                        WIGB_WaAS_Wave2_PERSON_Record rec;
-                        rec = new WIGB_WaAS_Wave2_PERSON_Record(line);
-                        short CASEW2;
-                        CASEW2 = rec.getCASEW2();
-                        lookup.put(CASEW2, collectionID);
-                        if (records.containsKey(CASEW2)) {
-                            list = records.get(CASEW2);
-                        } else {
-                            list = new ArrayList<>();
-                            records.put(ID, list);
-                        }
-                        list.add(rec);
-                        if (recID > 0 && recID % chunkSize == 0) {
-                            // Cache collection
-                            storeCacheSubsetCollection(collectionID, wave, records);
-                            data.remove(collectionID);
-                            // Start a new collection.
-                            collectionID++;
-                            records = new HashMap<>();
-                            data.put(collectionID, records);
-                        }
-                        recID++;
-                    }
-                }
-            }
-            // Cache final collection=
-            storeCacheSubsetCollection(collectionID, wave, records);
-            data.remove(collectionID);
-            System.out.println("</Loading wave " + wave + " subset " + TYPE
-                    + " WaAS data from " + f + ">");
-            storeCacheSubset(wave, r);
+            f = new File(outdir, "person" + wave + "_" + collectionID + ".tab");
+            collectionIDPrintWriters.put(collectionID,
+                    Generic_StaticIO.getPrintWriter(f, false));
+            collectionIDFiles.put(collectionID, f);
+            start += count;
         }
+        r[0] = collectionIDSets;
+        r[1] = collectionIDFiles;
+        /**
+         * Initialise lookup.
+         */
+        collectionIDSets.keySet().stream()
+                .forEach(collectionID -> {
+                    Set<WIGB_WaAS_ID> set;
+                    set = collectionIDSets.get(collectionID);
+                    set.stream()
+                            .forEach(y -> {
+                                lookup.put(y.getCASEW1(), collectionID);
+                            });
+                });
+        /**
+         * Read through the lines and figure out which lines should be put in
+         * which collection.
+         */
+        File f;
+        f = getInputFile(wave);
+        BufferedReader br;
+        br = Generic_StaticIO.getBufferedReader(f);
+        /**
+         * Read the header and write this out to the split files.
+         */
+        final String header;
+        try {
+            header = br.readLine();
+            collectionIDPrintWriters.keySet().stream()
+                    .forEach(collectionID -> {
+                        PrintWriter pw;
+                        pw = collectionIDPrintWriters.get(collectionID);
+                        pw.println(header);
+                    });
+        } catch (IOException ex1) {
+            Logger.getLogger(WIGB_WaAS_PERSON_Handler.class.getName()).log(Level.SEVERE, null, ex1);
+        }
+        /**
+         * Read through the lines and write them to the appropriate files.
+         */
+        br.lines()
+                .forEach(line -> {
+                    WIGB_WaAS_Wave2_PERSON_Record rec;
+                    short CASEW1;
+                    WIGB_WaAS_ID ID;
+                    rec = new WIGB_WaAS_Wave2_PERSON_Record(line);
+                    CASEW1 = rec.getCASEW1();
+                    if (CASEW1 > Short.MIN_VALUE) {
+                        if (lookup.containsKey(CASEW1)) {
+                            short CASEW2;
+                            CASEW2 = rec.getCASEW2();
+                            ID = new WIGB_WaAS_ID(CASEW1, CASEW2);
+                            short collectionID;
+                            collectionID = lookup.get(CASEW1);
+                            Set<WIGB_WaAS_ID> set;
+                            set = collectionIDSets.get(collectionID);
+                            if (set.contains(ID)) {
+                                PrintWriter pw;
+                                pw = collectionIDPrintWriters.get(collectionID);
+                                pw.println(line);
+                            }
+                        }
+                    }
+                });
+        // Close the PrintWriters.
+        collectionIDPrintWriters.keySet().stream()
+                .forEach(collectionID -> {
+                    PrintWriter pw;
+                    pw = collectionIDPrintWriters.get(collectionID);
+                    pw.close();
+                });
         return r;
     }
 
@@ -333,221 +307,249 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
      * @param CASEW3IDs
      * @param chunkSize
      * @param wave
+     * @param outdir
      * @return
      */
-    public Object[] loadSubsetWave3(Set<Short> CASEW3IDs, int chunkSize, byte wave) {
+    public Object[] loadSubsetWave3(Set<WIGB_WaAS_ID> CASEW3IDs, int chunkSize,
+            byte wave, File outdir) {
         Object[] r;
-        try {
-            r = (Object[]) loadCacheSubset(wave);
-        } catch (Exception ex) {
-            r = new Object[2];
-            /**
-             * This lookup is used to identify which collection a person record
-             * is in. The key is CASEW3, the value is the CollectionID.
-             */
-            HashMap<Short, Short> lookup;
-            /**
-             * This data holds the data, the keys are the CollectionID and the
-             * values are a Map with the keys as CASEW2 and values a List of
-             * WIGB_WaAS_Wave3_PERSON_Record records.
-             */
-            HashMap<Short, HashMap<Short, ArrayList<WIGB_WaAS_Wave3_PERSON_Record>>> data;
-            lookup = new HashMap<>();
-            data = new HashMap<>();
-            r[0] = lookup;
-            r[1] = data;
-            int recID;
-            recID = 0;
-            short collectionID;
-            collectionID = 0;
+        r = new Object[2];
+        /**
+         * This lookup is used to identify which collection a person record is
+         * in. The key is CASEW3, the value is the CollectionID.
+         */
+        HashMap<Short, Short> lookup;
+        lookup = new HashMap<>();
+        // Calculate how many subsets
+        int n;
+        n = CASEW3IDs.size();
+        int numberOfCollections;
+        numberOfCollections = (int) Math.ceil((double) n / (double) chunkSize);
+        int sizeOfCollection;
+        sizeOfCollection = (int) Math.floor((double) n / (double) numberOfCollections);
+        /**
+         * Initialise collectionIDSets and collectionIDPrintWriters.
+         */
+        HashMap<Short, Set<WIGB_WaAS_ID>> collectionIDSets;
+        HashMap<Short, PrintWriter> collectionIDPrintWriters;
+        HashMap<Short, File> collectionIDFiles;
+        collectionIDSets = new HashMap<>();
+        collectionIDPrintWriters = new HashMap<>();
+        collectionIDFiles = new HashMap<>();
+        int start = 0;
+        int count = sizeOfCollection;
+        for (short collectionID = 0; collectionID < numberOfCollections; collectionID++) {
+            Set<WIGB_WaAS_ID> set;
+            set = CASEW3IDs.stream()
+                    .skip(start) // offset
+                    .limit(count) // number of items wanted
+                    .collect(Collectors.toSet());
+            collectionIDSets.put(collectionID, set);
             File f;
-            f = getInputFile(wave);
-            HashMap<Short, ArrayList<WIGB_WaAS_Wave3_PERSON_Record>> records;
-            ArrayList<WIGB_WaAS_Wave3_PERSON_Record> list;
-            records = new HashMap<>();
-            data.put(collectionID, records);
-            System.out.println("<Loading wave " + wave + " subset " + TYPE
-                    + " WaAS data from " + f + ">");
-            BufferedReader br;
-            br = Generic_StaticIO.getBufferedReader(f);
-            StreamTokenizer st;
-            st = new StreamTokenizer(br);
-            Generic_StaticIO.setStreamTokenizerSyntax7(st);
-            int lineNumber;
-            lineNumber = 0;
-            String line;
-            String l;
-            String tab = "\t";
-            // skip header
-            Generic_ReadCSV.readLine(st, null);
-            boolean read;
-            read = false;
-            Short ID;
-            while (!read) {
-                line = Generic_ReadCSV.readLine(st, null);
-                lineNumber++;
-                if (lineNumber % 1000 == 0) {
-                    System.out.println("lineNumber " + lineNumber);
-                }
-                if (line == null) {
-                    read = true;
-                } else {
-                    /**
-                     * Optimisation using the fact that CASEW3 is the 3763 part
-                     * of the string.
-                     */
-                    l = line.substring(getIndex(line, tab, 3763));
-                    ID = Short.valueOf(l.substring(0, getIndex(l, tab, 2)).split(tab)[1]);
-                    if (CASEW3IDs.contains(ID)) {
-                        WIGB_WaAS_Wave3_PERSON_Record rec;
-                        rec = new WIGB_WaAS_Wave3_PERSON_Record(line);
-                        short CASEW3;
-                        CASEW3 = rec.getCASEW3();
-                        lookup.put(CASEW3, collectionID);
-                        if (records.containsKey(CASEW3)) {
-                            list = records.get(CASEW3);
-                        } else {
-                            list = new ArrayList<>();
-                            records.put(ID, list);
+            f = new File(outdir, "person" + wave + "_" + collectionID + ".tab");
+            collectionIDPrintWriters.put(collectionID,
+                    Generic_StaticIO.getPrintWriter(f, false));
+            collectionIDFiles.put(collectionID, f);
+            start += count;
+        }
+        r[0] = collectionIDSets;
+        r[1] = collectionIDFiles;
+        /**
+         * Initialise lookup.
+         */
+        collectionIDSets.keySet().stream()
+                .forEach(collectionID -> {
+                    Set<WIGB_WaAS_ID> set;
+                    set = collectionIDSets.get(collectionID);
+                    set.stream()
+                            .forEach(y -> {
+                                lookup.put(y.getCASEW1(), collectionID);
+                            });
+                });
+        /**
+         * Read through the lines and figure out which lines should be put in
+         * which collection.
+         */
+        File f;
+        f = getInputFile(wave);
+        BufferedReader br;
+        br = Generic_StaticIO.getBufferedReader(f);
+        /**
+         * Read the header and write this out to the split files.
+         */
+        final String header;
+        try {
+            header = br.readLine();
+            collectionIDPrintWriters.keySet().stream()
+                    .forEach(collectionID -> {
+                        PrintWriter pw;
+                        pw = collectionIDPrintWriters.get(collectionID);
+                        pw.println(header);
+                    });
+        } catch (IOException ex1) {
+            Logger.getLogger(WIGB_WaAS_PERSON_Handler.class.getName()).log(Level.SEVERE, null, ex1);
+        }
+        /**
+         * Read through the lines and write them to the appropriate files.
+         */
+        br.lines()
+                .forEach(line -> {
+                    WIGB_WaAS_Wave3_PERSON_Record rec;
+                    short CASEW1;
+                    WIGB_WaAS_ID ID;
+                    rec = new WIGB_WaAS_Wave3_PERSON_Record(line);
+                    CASEW1 = rec.getCASEW1();
+                    if (CASEW1 > Short.MIN_VALUE) {
+                        if (lookup.containsKey(CASEW1)) {
+                            short CASEW3;
+                            CASEW3 = rec.getCASEW3();
+                            ID = new WIGB_WaAS_ID(CASEW1, CASEW3);
+                            short collectionID;
+                            collectionID = lookup.get(CASEW1);
+                            Set<WIGB_WaAS_ID> set;
+                            set = collectionIDSets.get(collectionID);
+                            if (set.contains(ID)) {
+                                PrintWriter pw;
+                                pw = collectionIDPrintWriters.get(collectionID);
+                                pw.println(line);
+                            }
                         }
-                        list.add(rec);
-                        if (recID > 0 && recID % chunkSize == 0) {
-                            // Cache collection
-                            storeCacheSubsetCollection(collectionID, wave, records);
-                            data.remove(collectionID);
-                            // Start a new collection.
-                            collectionID++;
-                            records = new HashMap<>();
-                            data.put(collectionID, records);
-                        }
-                        recID++;
                     }
-                }
-            }
-            // Cache final collection=
-            storeCacheSubsetCollection(collectionID, wave, records);
-            data.remove(collectionID);
-            System.out.println("</Loading wave " + wave + " subset " + TYPE
-                    + " WaAS data from " + f + ">");
-            storeCacheSubset(wave, r);
-        }
-        return r;
-    }
-
-    public int getIndex(String line, String del, int n) {
-        int r = line.indexOf(del);
-        while (--n > 0 && r != -1) {
-            r = line.indexOf(del, r + 1);
-        }
+                });
+        // Close the PrintWriters.
+        collectionIDPrintWriters.keySet().stream()
+                .forEach(collectionID -> {
+                    PrintWriter pw;
+                    pw = collectionIDPrintWriters.get(collectionID);
+                    pw.close();
+                });
         return r;
     }
 
     /**
-     * Loads Wave 3 of the person WaAS for those records with CASEW3 in
-     * CASEW3IDs.If this data are in a cache then the cache is loaded otherwise
+     * Loads Wave 4 of the person WaAS for those records with CASEW4 in
+     * CASEW4IDs.If this data are in a cache then the cache is loaded otherwise
      * the data are selected and the cache is written for next time.
      *
      * @param CASEW4IDs
      * @param chunkSize
      * @param wave
+     * @param outdir
      * @return
      */
-    public Object[] loadSubsetWave4(Set<Short> CASEW4IDs, int chunkSize, byte wave) {
+    public Object[] loadSubsetWave4(Set<WIGB_WaAS_ID> CASEW4IDs, int chunkSize,
+            byte wave, File outdir) {
         Object[] r;
-        try {
-            r = (Object[]) loadCacheSubset(wave);
-        } catch (Exception ex) {
-            r = new Object[2];
-            /**
-             * This lookup is used to identify which collection a person record
-             * is in. The key is CASEW4, the value is the CollectionID.
-             */
-            HashMap<Short, Short> lookup;
-            /**
-             * This data holds the data, the keys are the CollectionID and the
-             * values are a Map with the keys as CASEW2 and values a List of
-             * WIGB_WaAS_Wave4_PERSON_Record records.
-             */
-            HashMap<Short, HashMap<Short, ArrayList<WIGB_WaAS_Wave4_PERSON_Record>>> data;
-            lookup = new HashMap<>();
-            data = new HashMap<>();
-            r[0] = lookup;
-            r[1] = data;
-            int recID;
-            recID = 0;
-            short collectionID;
-            collectionID = 0;
+        r = new Object[2];
+        /**
+         * This lookup is used to identify which collection a person record is
+         * in. The key is CASEW4, the value is the CollectionID.
+         */
+        HashMap<Short, Short> lookup;
+        lookup = new HashMap<>();
+        // Calculate how many subsets
+        int n;
+        n = CASEW4IDs.size();
+        int numberOfCollections;
+        numberOfCollections = (int) Math.ceil((double) n / (double) chunkSize);
+        int sizeOfCollection;
+        sizeOfCollection = (int) Math.floor((double) n / (double) numberOfCollections);
+        /**
+         * Initialise collectionIDSets and collectionIDPrintWriters.
+         */
+        HashMap<Short, Set<WIGB_WaAS_ID>> collectionIDSets;
+        HashMap<Short, PrintWriter> collectionIDPrintWriters;
+        HashMap<Short, File> collectionIDFiles;
+        collectionIDSets = new HashMap<>();
+        collectionIDPrintWriters = new HashMap<>();
+        collectionIDFiles = new HashMap<>();
+        int start = 0;
+        int count = sizeOfCollection;
+        for (short collectionID = 0; collectionID < numberOfCollections; collectionID++) {
+            Set<WIGB_WaAS_ID> set;
+            set = CASEW4IDs.stream()
+                    .skip(start) // offset
+                    .limit(count) // number of items wanted
+                    .collect(Collectors.toSet());
+            collectionIDSets.put(collectionID, set);
             File f;
-            f = getInputFile(wave);
-            HashMap<Short, ArrayList<WIGB_WaAS_Wave4_PERSON_Record>> records;
-            ArrayList<WIGB_WaAS_Wave4_PERSON_Record> list;
-            records = new HashMap<>();
-            data.put(collectionID, records);
-            System.out.println("<Loading wave " + wave + " subset " + TYPE
-                    + " WaAS data from " + f + ">");
-            BufferedReader br;
-            br = Generic_StaticIO.getBufferedReader(f);
-            StreamTokenizer st;
-            st = new StreamTokenizer(br);
-            Generic_StaticIO.setStreamTokenizerSyntax7(st);
-            int lineNumber;
-            lineNumber = 0;
-            String line;
-            String l;
-            String tab = "\t";
-            // skip header
-            Generic_ReadCSV.readLine(st, null);
-            boolean read;
-            read = false;
-            Short ID;
-            while (!read) {
-                line = Generic_ReadCSV.readLine(st, null);
-                lineNumber++;
-                if (lineNumber % 1000 == 0) {
-                    System.out.println("lineNumber " + lineNumber);
-                }
-                if (line == null) {
-                    read = true;
-                } else {
-                    /**
-                     * Optimisation using the fact that CASEW4 is the 3055 part
-                     * of the string.
-                     */
-                    l = line.substring(getIndex(line, tab, 3055));
-                    ID = Short.valueOf(l.substring(0, getIndex(l, tab, 2)).split(tab)[1]);
-                    if (CASEW4IDs.contains(ID)) {
-                        WIGB_WaAS_Wave4_PERSON_Record rec;
-                        rec = new WIGB_WaAS_Wave4_PERSON_Record(line);
-                        short CASEW4;
-                        CASEW4 = rec.getCASEW4();
-                        lookup.put(CASEW4, collectionID);
-                        if (records.containsKey(CASEW4)) {
-                            list = records.get(CASEW4);
-                        } else {
-                            list = new ArrayList<>();
-                            records.put(ID, list);
-                        }
-                        list.add(rec);
-                        if (recID > 0 && recID % chunkSize == 0) {
-                            // Cache collection
-                            storeCacheSubsetCollection(collectionID, wave, records);
-                            data.remove(collectionID);
-                            // Start a new collection.
-                            collectionID++;
-                            records = new HashMap<>();
-                            data.put(collectionID, records);
-                        }
-                        recID++;
-                    }
-                }
-            }
-            // Cache final collection=
-            storeCacheSubsetCollection(collectionID, wave, records);
-            data.remove(collectionID);
-            System.out.println("</Loading wave " + wave + " subset " + TYPE
-                    + " WaAS data from " + f + ">");
-            storeCacheSubset(wave, r);
+            f = new File(outdir, "person" + wave + "_" + collectionID + ".tab");
+            collectionIDPrintWriters.put(collectionID,
+                    Generic_StaticIO.getPrintWriter(f, false));
+            collectionIDFiles.put(collectionID, f);
+            start += count;
         }
+        r[0] = collectionIDSets;
+        r[1] = collectionIDFiles;
+        /**
+         * Initialise lookup.
+         */
+        collectionIDSets.keySet().stream()
+                .forEach(collectionID -> {
+                    Set<WIGB_WaAS_ID> set;
+                    set = collectionIDSets.get(collectionID);
+                    set.stream()
+                            .forEach(y -> {
+                                lookup.put(y.getCASEW1(), collectionID);
+                            });
+                });
+        /**
+         * Read through the lines and figure out which lines should be put in
+         * which collection.
+         */
+        File f;
+        f = getInputFile(wave);
+        BufferedReader br;
+        br = Generic_StaticIO.getBufferedReader(f);
+        /**
+         * Read the header and write this out to the split files.
+         */
+        final String header;
+        try {
+            header = br.readLine();
+            collectionIDPrintWriters.keySet().stream()
+                    .forEach(collectionID -> {
+                        PrintWriter pw;
+                        pw = collectionIDPrintWriters.get(collectionID);
+                        pw.println(header);
+                    });
+        } catch (IOException ex1) {
+            Logger.getLogger(WIGB_WaAS_PERSON_Handler.class.getName()).log(Level.SEVERE, null, ex1);
+        }
+        /**
+         * Read through the lines and write them to the appropriate files.
+         */
+        br.lines()
+                .forEach(line -> {
+                    WIGB_WaAS_Wave4_PERSON_Record rec;
+                    short CASEW1;
+                    WIGB_WaAS_ID ID;
+                    rec = new WIGB_WaAS_Wave4_PERSON_Record(line);
+                    CASEW1 = rec.getCASEW1();
+                    if (CASEW1 > Short.MIN_VALUE) {
+                        if (lookup.containsKey(CASEW1)) {
+                            short CASEW4;
+                            CASEW4 = rec.getCASEW4();
+                            ID = new WIGB_WaAS_ID(CASEW1, CASEW4);
+                            short collectionID;
+                            collectionID = lookup.get(CASEW1);
+                            Set<WIGB_WaAS_ID> set;
+                            set = collectionIDSets.get(collectionID);
+                            if (set.contains(ID)) {
+                                PrintWriter pw;
+                                pw = collectionIDPrintWriters.get(collectionID);
+                                pw.println(line);
+                            }
+                        }
+                    }
+                });
+        // Close the PrintWriters.
+        collectionIDPrintWriters.keySet().stream()
+                .forEach(collectionID -> {
+                    PrintWriter pw;
+                    pw = collectionIDPrintWriters.get(collectionID);
+                    pw.close();
+                });
         return r;
     }
 
@@ -559,104 +561,122 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
      * @param CASEW5IDs
      * @param chunkSize
      * @param wave
+     * @param outdir
      * @return
      */
-    public Object[] loadSubsetWave5(Set<Short> CASEW5IDs, int chunkSize, byte wave) {
+    public Object[] loadSubsetWave5(Set<WIGB_WaAS_ID> CASEW5IDs, int chunkSize,
+            byte wave, File outdir) {
         Object[] r;
-        try {
-            r = (Object[]) loadCacheSubset(wave);
-        } catch (Exception ex) {
-            r = new Object[2];
-            /**
-             * This lookup is used to identify which collection a person record
-             * is in. The key is CASEW5, the value is the CollectionID.
-             */
-            HashMap<Short, Short> lookup;
-            /**
-             * This data holds the data, the keys are the CollectionID and the
-             * values are a Map with the keys as CASEW2 and values a List of
-             * WIGB_WaAS_Wave5_PERSON_Record records.
-             */
-            HashMap<Short, HashMap<Short, ArrayList<WIGB_WaAS_Wave5_PERSON_Record>>> data;
-            lookup = new HashMap<>();
-            data = new HashMap<>();
-            r[0] = lookup;
-            r[1] = data;
-            int recID;
-            recID = 0;
-            short collectionID;
-            collectionID = 0;
+        r = new Object[2];
+        /**
+         * This lookup is used to identify which collection a person record is
+         * in. The key is CASEW5, the value is the CollectionID.
+         */
+        HashMap<Short, Short> lookup;
+        lookup = new HashMap<>();
+        // Calculate how many subsets
+        int n;
+        n = CASEW5IDs.size();
+        int numberOfCollections;
+        numberOfCollections = (int) Math.ceil((double) n / (double) chunkSize);
+        int sizeOfCollection;
+        sizeOfCollection = (int) Math.floor((double) n / (double) numberOfCollections);
+        /**
+         * Initialise collectionIDSets and collectionIDPrintWriters.
+         */
+        HashMap<Short, Set<WIGB_WaAS_ID>> collectionIDSets;
+        HashMap<Short, PrintWriter> collectionIDPrintWriters;
+        HashMap<Short, File> collectionIDFiles;
+        collectionIDSets = new HashMap<>();
+        collectionIDPrintWriters = new HashMap<>();
+        collectionIDFiles = new HashMap<>();
+        int start = 0;
+        int count = sizeOfCollection;
+        for (short collectionID = 0; collectionID < numberOfCollections; collectionID++) {
+            Set<WIGB_WaAS_ID> set;
+            set = CASEW5IDs.stream()
+                    .skip(start) // offset
+                    .limit(count) // number of items wanted
+                    .collect(Collectors.toSet());
+            collectionIDSets.put(collectionID, set);
             File f;
-            f = getInputFile(wave);
-            HashMap<Short, ArrayList<WIGB_WaAS_Wave5_PERSON_Record>> records;
-            ArrayList<WIGB_WaAS_Wave5_PERSON_Record> list;
-            records = new HashMap<>();
-            data.put(collectionID, records);
-            System.out.println("<Loading wave " + wave + " subset " + TYPE
-                    + " WaAS data from " + f + ">");
-            BufferedReader br;
-            br = Generic_StaticIO.getBufferedReader(f);
-            StreamTokenizer st;
-            st = new StreamTokenizer(br);
-            Generic_StaticIO.setStreamTokenizerSyntax7(st);
-            int lineNumber;
-            lineNumber = 0;
-            String line;
-            String l;
-            String tab = "\t";
-            // skip header
-            Generic_ReadCSV.readLine(st, null);
-            boolean read;
-            read = false;
-            Short ID;
-            while (!read) {
-                line = Generic_ReadCSV.readLine(st, null);
-                lineNumber++;
-                if (lineNumber % 1000 == 0) {
-                    System.out.println("lineNumber " + lineNumber);
-                }
-                if (line == null) {
-                    read = true;
-                } else {
-                    /**
-                     * Optimisation using the fact that CASEW5 is the 2987 part
-                     * of the string.
-                     */
-                    l = line.substring(getIndex(line, tab, 2987));
-                    ID = Short.valueOf(l.substring(0, getIndex(l, tab, 2)).split(tab)[1]);
-                    if (CASEW5IDs.contains(ID)) {
-                        WIGB_WaAS_Wave5_PERSON_Record rec;
-                        rec = new WIGB_WaAS_Wave5_PERSON_Record(line);
-                        short CASEW5;
-                        CASEW5 = rec.getCASEW5();
-                        lookup.put(CASEW5, collectionID);
-                        if (records.containsKey(CASEW5)) {
-                            list = records.get(CASEW5);
-                        } else {
-                            list = new ArrayList<>();
-                            records.put(ID, list);
-                        }
-                        list.add(rec);
-                        if (recID > 0 && recID % chunkSize == 0) {
-                            // Cache collection
-                            storeCacheSubsetCollection(collectionID, wave, records);
-                            data.remove(collectionID, records);
-                            // Start a new collection.
-                            collectionID++;
-                            records = new HashMap<>();
-                            data.put(collectionID, records);
-                        }
-                        recID++;
-                    }
-                }
-            }
-            // Cache final collection=
-            storeCacheSubsetCollection(collectionID, wave, records);
-            data.remove(collectionID, records);
-            System.out.println("</Loading wave " + wave + " subset " + TYPE
-                    + " WaAS data from " + f + ">");
-            storeCacheSubset(wave, r);
+            f = new File(outdir, "person" + wave + "_" + collectionID + ".tab");
+            collectionIDPrintWriters.put(collectionID,
+                    Generic_StaticIO.getPrintWriter(f, false));
+            collectionIDFiles.put(collectionID, f);
+            start += count;
         }
+        r[0] = collectionIDSets;
+        r[1] = collectionIDFiles;
+        /**
+         * Initialise lookup.
+         */
+        collectionIDSets.keySet().stream()
+                .forEach(collectionID -> {
+                    Set<WIGB_WaAS_ID> set;
+                    set = collectionIDSets.get(collectionID);
+                    set.stream()
+                            .forEach(y -> {
+                                lookup.put(y.getCASEW1(), collectionID);
+                            });
+                });
+        /**
+         * Read through the lines and figure out which lines should be put in
+         * which collection.
+         */
+        File f;
+        f = getInputFile(wave);
+        BufferedReader br;
+        br = Generic_StaticIO.getBufferedReader(f);
+        /**
+         * Read the header and write this out to the split files.
+         */
+        final String header;
+        try {
+            header = br.readLine();
+            collectionIDPrintWriters.keySet().stream()
+                    .forEach(collectionID -> {
+                        PrintWriter pw;
+                        pw = collectionIDPrintWriters.get(collectionID);
+                        pw.println(header);
+                    });
+        } catch (IOException ex1) {
+            Logger.getLogger(WIGB_WaAS_PERSON_Handler.class.getName()).log(Level.SEVERE, null, ex1);
+        }
+        /**
+         * Read through the lines and write them to the appropriate files.
+         */
+        br.lines()
+                .forEach(line -> {
+                    WIGB_WaAS_Wave5_PERSON_Record rec;
+                    short CASEW1;
+                    WIGB_WaAS_ID ID;
+                    rec = new WIGB_WaAS_Wave5_PERSON_Record(line);
+                    CASEW1 = rec.getCASEW1();
+                    if (CASEW1 > Short.MIN_VALUE) {
+                        if (lookup.containsKey(CASEW1)) {
+                            short CASEW5;
+                            CASEW5 = rec.getCASEW5();
+                            ID = new WIGB_WaAS_ID(CASEW1, CASEW5);
+                            short collectionID;
+                            collectionID = lookup.get(CASEW1);
+                            Set<WIGB_WaAS_ID> set;
+                            set = collectionIDSets.get(collectionID);
+                            if (set.contains(ID)) {
+                                PrintWriter pw;
+                                pw = collectionIDPrintWriters.get(collectionID);
+                                pw.println(line);
+                            }
+                        }
+                    }
+                });
+        // Close the PrintWriters.
+        collectionIDPrintWriters.keySet().stream()
+                .forEach(collectionID -> {
+                    PrintWriter pw;
+                    pw = collectionIDPrintWriters.get(collectionID);
+                    pw.close();
+                });
         return r;
     }
 
