@@ -29,5 +29,10 @@ public class WIGB_WaAS_Combined_Record extends WIGB_WaAS_Record {
     
     public WIGB_WaAS_Combined_Record(short CASEW1) {
         super(CASEW1);
+        w1Record = new WIGB_WaAS_Wave1_Record(CASEW1);
+        w2Record = new WIGB_WaAS_Wave2_Record(CASEW1);
+        w3Record = new WIGB_WaAS_Wave3_Record(CASEW1);
+        w4Record = new WIGB_WaAS_Wave4_Record(CASEW1);
+        w5Record = new WIGB_WaAS_Wave5_Record(CASEW1);
     }
 }

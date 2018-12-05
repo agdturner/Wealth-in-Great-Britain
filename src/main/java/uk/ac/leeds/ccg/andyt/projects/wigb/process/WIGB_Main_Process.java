@@ -82,6 +82,11 @@ public class WIGB_Main_Process extends WIGB_Object {
         // Main switches
         //p.doJavaCodeGeneration = true;
         p.doLoadDataIntoCaches = true; // rename/reuse just left here for convenience...
+//        // For adding back collection keys.
+//        for (short s = 0; s < 18; s ++ ){
+//            p.Env.data.data.put(s, null);
+//        }
+//        p.Env.cacheData();
         p.run();
     }
 
@@ -102,284 +107,739 @@ public class WIGB_Main_Process extends WIGB_Object {
         outdir.mkdirs();
         hholdHandler = new WIGB_WaAS_HHOLD_Handler(Env, indir);
 
-        int personChunkSize;
-        int collectionChunkSize;
-        personChunkSize = 1024;//512;
-        collectionChunkSize = 512;//256;
-        //doDataProcessingStep1(indir, outdir, hholdHandler);
-        try {
-            doDataProcessingStep2(indir, outdir, hholdHandler, personChunkSize,
-                    collectionChunkSize);
-        } catch (Exception ex) {
-            Logger.getLogger(WIGB_Main_Process.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        int chunkSize;
+        chunkSize = 256; //1024; 512; 256;
+        doDataProcessingStep1(indir, outdir, hholdHandler);
+        doDataProcessingStep2(indir, outdir, hholdHandler, chunkSize);
+        doDataProcessingStep3(indir, outdir, hholdHandler, chunkSize);
     }
 
-    public void doDataProcessingStep2(File indir, File outdir,
-            WIGB_WaAS_HHOLD_Handler hholdHandler, int personChunkSize,
-            int collectionChunkSize) {
-        // For convenience/code brevity.
-        byte nwaves;
-        nwaves = WIGB_WaAS_Data.NWAVES;
-        /**
-         * Load HHOLD Data.
-         */
-        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave1_HHOLD_Record> hholdSubsetW1;
-        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave2_HHOLD_Record> hholdSubsetW2;
-        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave3_HHOLD_Record> hholdSubsetW3;
-        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave4_HHOLD_Record> hholdSubsetW4;
-        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave5_HHOLD_Record> hholdSubsetW5;
-        hholdSubsetW1 = hholdHandler.loadCacheSubsetWave1();
-        hholdSubsetW2 = hholdHandler.loadCacheSubsetWave2();
-        hholdSubsetW3 = hholdHandler.loadCacheSubsetWave3();
-        hholdSubsetW4 = hholdHandler.loadCacheSubsetWave4();
-        hholdSubsetW5 = hholdHandler.loadCacheSubsetWave5();
+    public void doDataProcessingStep3(File indir, File outdir,
+            WIGB_WaAS_HHOLD_Handler hholdHandler, int chunkSize) {
+        System.out.println(Env.data.lookup.size());
+        System.out.println(Env.data.data.size());
+//        // This way although good in that it uses streams is inefficient as is 
+//        // due to repetitive loading and caching of data.
+//        long tDVLUKVAL = Env.data.lookup.entrySet().stream()
+//                .mapToLong(o -> {
+//                    Env.checkAndMaybeFreeMemory();
+//                    short CASEW1 = o.getKey();
+//                    short collectionID = Env.data.lookup.get(CASEW1);
+//                    WIGB_WaAS_Collection c;
+//                    c = Env.data.getCollection(collectionID);
+//                    WIGB_WaAS_Combined_Record cr;
+//                    cr = c.getData().get(CASEW1);
+//                    return cr.w1Record.getHhold().getDVLUKVAL();  // Value of UK Land
+//                }).sum();
+//        System.out.println("tDVLUKVAL " + tDVLUKVAL);
+        // This way although good in that it uses streams is inefficient as is 
+        // due to repetitive loading and caching of data.
+        long total_DVLUKVAL = Env.data.data.keySet().stream()
+                .mapToLong(collectionID -> {
+                    WIGB_WaAS_Collection c;
+                    c = Env.data.getCollection(collectionID);
+                    long tDVLUKVAL = c.getData().keySet().stream()
+                            .mapToLong(CASEW1 -> {
+                                WIGB_WaAS_Combined_Record cr;
+                                cr = c.getData().get(CASEW1);
+                                c.getData().get(CASEW1);
+                                return cr.w1Record.getHhold().getDVLUKVAL();  // Value of UK Land
+                            }).sum();
+                    Env.data.clearCollection(collectionID);
+                    return tDVLUKVAL;  // Value of UK Land
+                }).sum();
+        System.out.println("total_DVLUKVAL " + total_DVLUKVAL);
+//        .forEach(CASEW1 -> {
+//                    
+//                    WIGB_WaAS_Combined_Record cr;
+//                    cr = c.getData().get(CASEW1);
+//                    //cr.w1Record.getHhold().getDVLUKDEBT(); // Debt on UK Land
+//                    tDVLUKVAL += cr.w1Record.getHhold().getDVLUKVAL();  // Value of UK Land
+//                    //cr.w1Record.getHhold().getDVOPRDEBT(); // Debt on other property
+//                    //cr.w1Record.getHhold().getDVOPRVAL();  // Value of other property
+//                    //cr.w1Record.getHhold().getHPROPW(); // Total property wealth
+//                    //cr.w1Record.getHhold().getGOR(); // Government Office Region Code
+//                    cr.w2Record.getHhold().getDVLUKVAL();  // Value of UK Land
+//                    cr.w3Record.getHhold().getDVLUKVAL_SUM();  // Value of UK Land
+//                    cr.w4Record.getHhold().getDVLUKVAL_SUM();  // Value of UK Land
+//                    cr.w5Record.getHhold().getDVLUKVAL_SUM();  // Value of UK Land
+//                    cr.w1Record.getPeople().stream()
+//                            .forEach(w1person -> {
+//                                w1person.getDVLUKDEBT(); // Derived - Total land uk debt
+//                                w1person.getDVLUKV(); // Derived - Total land uk value
+//                            });
+//                });
+    }
 
-        Object[] personSubsetW1;
-        Object[] personSubsetW2;
-        Object[] personSubsetW3;
-        Object[] personSubsetW4;
-        Object[] personSubsetW5;
+    /**
+     * Merge Person and Household Data
+     */
+    public void doDataProcessingStep2(File indir, File outdir,
+            WIGB_WaAS_HHOLD_Handler hholdHandler, int chunkSize) {
         WIGB_WaAS_PERSON_Handler personHandler;
         personHandler = new WIGB_WaAS_PERSON_Handler(Env, indir);
-        /**
-         * Get lookups and selected person data for Waves 1 and Wave 2.
-         */
-        personSubsetW1 = personHandler.loadSubsetWave1(hholdSubsetW1.keySet(),
-                personChunkSize, WIGB_WaAS_Data.W1, outdir);
-        HashMap<Short, Set<WIGB_WaAS_ID>> collectionIDSetsW1;
-        collectionIDSetsW1 = (HashMap<Short, Set<WIGB_WaAS_ID>>) personSubsetW1[0];
-        HashMap<Short, File> collectionIDFilesW1;
-        collectionIDFilesW1 = (HashMap<Short, File>) personSubsetW1[1];
-
-        personSubsetW2 = personHandler.loadSubsetWave2(hholdSubsetW2.keySet(),
-                personChunkSize, WIGB_WaAS_Data.W2, outdir);
-        HashMap<Short, Set<WIGB_WaAS_ID>> collectionIDSetsW2;
-        collectionIDSetsW2 = (HashMap<Short, Set<WIGB_WaAS_ID>>) personSubsetW2[0];
-        HashMap<Short, File> collectionIDFilesW2;
-        collectionIDFilesW2 = (HashMap<Short, File>) personSubsetW2[1];
-
-        personSubsetW3 = personHandler.loadSubsetWave3(hholdSubsetW3.keySet(),
-                personChunkSize, WIGB_WaAS_Data.W3, outdir);
-        HashMap<Short, Set<WIGB_WaAS_ID>> collectionIDSetsW3;
-        collectionIDSetsW3 = (HashMap<Short, Set<WIGB_WaAS_ID>>) personSubsetW3[0];
-        HashMap<Short, File> collectionIDFilesW3;
-        collectionIDFilesW3 = (HashMap<Short, File>) personSubsetW3[1];
-
-        personSubsetW4 = personHandler.loadSubsetWave4(hholdSubsetW4.keySet(),
-                personChunkSize, WIGB_WaAS_Data.W4, outdir);
-        HashMap<Short, Set<WIGB_WaAS_ID>> collectionIDSetsW4;
-        collectionIDSetsW4 = (HashMap<Short, Set<WIGB_WaAS_ID>>) personSubsetW4[0];
-        HashMap<Short, File> collectionIDFilesW4;
-        collectionIDFilesW4 = (HashMap<Short, File>) personSubsetW4[1];
-
-        personSubsetW5 = personHandler.loadSubsetWave5(hholdSubsetW5.keySet(),
-                personChunkSize, WIGB_WaAS_Data.W5, outdir);
-        HashMap<Short, Set<WIGB_WaAS_ID>> collectionIDSetsW5;
-        collectionIDSetsW5 = (HashMap<Short, Set<WIGB_WaAS_ID>>) personSubsetW5[0];
-        HashMap<Short, File> collectionIDFilesW5;
-        collectionIDFilesW5 = (HashMap<Short, File>) personSubsetW5[1];
-        /**
-         * Merge Person and Household Data
-         */
-        System.out.println("Merging Person and Household Data");
-        // Initialise crs and add HHOLD records.
-        HashMap<Short, WIGB_WaAS_Combined_Record> crs;
-        crs = new HashMap<>();
-        collectionIDSetsW1.keySet().stream()
-                .forEach(collectionID -> {
-                    Set<WIGB_WaAS_ID> s;
-                    s = collectionIDSetsW1.get(collectionID);
-                    s.stream()
-                            .forEach(ID -> {
-                                short CASEW1 = ID.getCASEW1();
-                                WIGB_WaAS_Combined_Record cr;
-                                cr = new WIGB_WaAS_Combined_Record(CASEW1);
-                                WIGB_WaAS_Wave1_HHOLD_Record w1hholdr;
-                                w1hholdr = hholdSubsetW1.get(ID);
-                                cr.w1Record = new WIGB_WaAS_Wave1_Record(
-                                        w1hholdr,
-                                        new ArrayList<>());
-                                crs.put(CASEW1, cr);
-                            });
-                });
-        collectionIDSetsW2.keySet().stream()
-                .forEach(collectionID -> {
-                    Set<WIGB_WaAS_ID> s;
-                    s = collectionIDSetsW2.get(collectionID);
-                    s.stream()
-                            .forEach(ID -> {
-                                short CASEW1 = ID.getCASEW1();
-                                WIGB_WaAS_Combined_Record cr;
-                                cr = crs.get(CASEW1);
-                                WIGB_WaAS_Wave2_HHOLD_Record w2hholdr;
-                                w2hholdr = hholdSubsetW2.get(ID);
-                                cr.w2Record = new WIGB_WaAS_Wave2_Record(
-                                        w2hholdr,
-                                        new ArrayList<>());
-                            });
-                });
-        collectionIDSetsW3.keySet().stream()
-                .forEach(collectionID -> {
-                    Set<WIGB_WaAS_ID> s;
-                    s = collectionIDSetsW3.get(collectionID);
-                    s.stream()
-                            .forEach(ID -> {
-                                short CASEW1 = ID.getCASEW1();
-                                WIGB_WaAS_Combined_Record cr;
-                                cr = crs.get(CASEW1);
-                                WIGB_WaAS_Wave3_HHOLD_Record w3hholdr;
-                                w3hholdr = hholdSubsetW3.get(ID);
-                                cr.w3Record = new WIGB_WaAS_Wave3_Record(
-                                        w3hholdr,
-                                        new ArrayList<>());
-                            });
-                });
-        collectionIDSetsW4.keySet().stream()
-                .forEach(collectionID -> {
-                    Set<WIGB_WaAS_ID> s;
-                    s = collectionIDSetsW4.get(collectionID);
-                    s.stream()
-                            .forEach(ID -> {
-                                short CASEW1 = ID.getCASEW1();
-                                WIGB_WaAS_Combined_Record cr;
-                                cr = crs.get(CASEW1);
-                                WIGB_WaAS_Wave4_HHOLD_Record w4hholdr;
-                                w4hholdr = hholdSubsetW4.get(ID);
-                                try {
-                                    cr.w4Record = new WIGB_WaAS_Wave4_Record(
-                                            w4hholdr,
-                                            new ArrayList<>());
-                                } catch (NullPointerException e){
-                                    e.printStackTrace(System.err);
-                                }
-                            });
-                });
-        collectionIDSetsW5.keySet().stream()
-                .forEach(collectionID -> {
-                    Set<WIGB_WaAS_ID> s;
-                    s = collectionIDSetsW5.get(collectionID);
-                    s.stream()
-                            .forEach(ID -> {
-                                short CASEW1 = ID.getCASEW1();
-                                WIGB_WaAS_Combined_Record cr;
-                                cr = crs.get(CASEW1);
-                                WIGB_WaAS_Wave5_HHOLD_Record w5hholdr;
-                                w5hholdr = hholdSubsetW5.get(ID);
-                                if (w5hholdr != null) {
-                                    cr.w5Record = new WIGB_WaAS_Wave5_Record(
-                                            w5hholdr,
-                                            new ArrayList<>());
-                                }
-
-                            });
-                });
-        // Add Person data.
-        collectionIDSetsW1.keySet().stream()
-                .forEach(collectionID -> {
-                    // Initialise collection and variables;
-                    WIGB_WaAS_Collection c;
-                    c = new WIGB_WaAS_Collection(collectionID);
-                    Env.data.data.put(collectionID, c);
-                    File f;
-                    BufferedReader reader;
-                    // Wave 1
-                    f = collectionIDFilesW1.get(collectionID);
-                    reader = Generic_StaticIO.getBufferedReader(f);
-                    try {
-                        reader.readLine(); // Skip header
-                    } catch (IOException ex) {
-                        Logger.getLogger(WIGB_Main_Process.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    reader.lines()
-                            .forEach(line -> {
-                                WIGB_WaAS_Wave1_PERSON_Record w1person;
-                                w1person = new WIGB_WaAS_Wave1_PERSON_Record(line);
-                                short CASEW1;
-                                CASEW1 = w1person.getCASEW1();
-                                WIGB_WaAS_Combined_Record cr;
-                                cr = crs.get(CASEW1);
-                                cr.w1Record.getPeople().add(w1person);
-                            });
-                    // Wave 2
-                    f = collectionIDFilesW2.get(collectionID);
-                    reader = Generic_StaticIO.getBufferedReader(f);
-                    try {
-                        reader.readLine(); // Skip header
-                    } catch (IOException ex) {
-                        Logger.getLogger(WIGB_Main_Process.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    reader.lines()
-                            .forEach(line -> {
-                                WIGB_WaAS_Wave2_PERSON_Record w2person;
-                                w2person = new WIGB_WaAS_Wave2_PERSON_Record(line);
-                                short CASEW1;
-                                CASEW1 = w2person.getCASEW1();
-                                WIGB_WaAS_Combined_Record cr;
-                                cr = crs.get(CASEW1);
-                                cr.w2Record.getPeople().add(w2person);
-                            });
-                    // Wave 3
-                    f = collectionIDFilesW3.get(collectionID);
-                    reader = Generic_StaticIO.getBufferedReader(f);
-                    try {
-                        reader.readLine(); // Skip header
-                    } catch (IOException ex) {
-                        Logger.getLogger(WIGB_Main_Process.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    reader.lines()
-                            .forEach(line -> {
-                                WIGB_WaAS_Wave3_PERSON_Record w3person;
-                                w3person = new WIGB_WaAS_Wave3_PERSON_Record(line);
-                                short CASEW1;
-                                CASEW1 = w3person.getCASEW1();
-                                WIGB_WaAS_Combined_Record cr;
-                                cr = crs.get(CASEW1);
-                                cr.w3Record.getPeople().add(w3person);
-                            });
-                    // Wave 4
-                    f = collectionIDFilesW4.get(collectionID);
-                    reader = Generic_StaticIO.getBufferedReader(f);
-                    try {
-                        reader.readLine(); // Skip header
-                    } catch (IOException ex) {
-                        Logger.getLogger(WIGB_Main_Process.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    reader.lines()
-                            .forEach(line -> {
-                                WIGB_WaAS_Wave4_PERSON_Record w4person;
-                                w4person = new WIGB_WaAS_Wave4_PERSON_Record(line);
-                                short CASEW1;
-                                CASEW1 = w4person.getCASEW1();
-                                WIGB_WaAS_Combined_Record cr;
-                                cr = crs.get(CASEW1);
-                                cr.w4Record.getPeople().add(w4person);
-                            });
-                    // Wave 5
-                    f = collectionIDFilesW5.get(collectionID);
-                    reader = Generic_StaticIO.getBufferedReader(f);
-                    try {
-                        reader.readLine(); // Skip header
-                    } catch (IOException ex) {
-                        Logger.getLogger(WIGB_Main_Process.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    reader.lines()
-                            .forEach(line -> {
-                                WIGB_WaAS_Wave5_PERSON_Record w5person;
-                                w5person = new WIGB_WaAS_Wave5_PERSON_Record(line);
-                                short CASEW1;
-                                CASEW1 = w5person.getCASEW1();
-                                WIGB_WaAS_Combined_Record cr;
-                                cr = crs.get(CASEW1);
-                                cr.w5Record.getPeople().add(w5person);
-                            });
-                    // Write out collection and clear resources
-                    Env.storeCacheSubsetCollection(collectionID, c);
-                    Env.data.data.remove(collectionID);
-                });
-        Env.data.clearAllCache();
-        System.out.println("Store Cache");
-        Env.storeCache();
+        System.out.println("Merge Person and Household Data");
+        int numberOfCollections;
+        // Wave 1
+        if (true) {
+            System.out.println("Wave 1");
+            TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave1_HHOLD_Record> hs;
+            hs = hholdHandler.loadCacheSubsetWave1();
+            Set<WIGB_WaAS_ID> set;
+            set = hs.keySet();
+            numberOfCollections = (int) Math.ceil((double) set.size() / (double) chunkSize);
+            Object[] personSubsetW1;
+            personSubsetW1 = personHandler.loadSubsetWave1(set,
+                    numberOfCollections, WIGB_WaAS_Data.W1, outdir);
+            HashMap<Short, Set<WIGB_WaAS_ID>> collectionIDSetsW1;
+            collectionIDSetsW1 = (HashMap<Short, Set<WIGB_WaAS_ID>>) personSubsetW1[0];
+            HashMap<Short, File> collectionIDFilesW1;
+            collectionIDFilesW1 = (HashMap<Short, File>) personSubsetW1[1];
+            collectionIDSetsW1.keySet().stream()
+                    .forEach(collectionID -> {
+                        System.out.println("collectionID " + collectionID);
+                        WIGB_WaAS_Collection c;
+                        c = new WIGB_WaAS_Collection(collectionID);
+                        data.data.put(collectionID, c);
+                        // Add household records.
+                        Set<WIGB_WaAS_ID> s;
+                        s = collectionIDSetsW1.get(collectionID);
+                        s.stream()
+                                .forEach(ID -> {
+                                    short CASEW1 = ID.getCASEW1();
+                                    Env.data.lookup.put(CASEW1, collectionID);
+                                    HashMap<Short, WIGB_WaAS_Combined_Record> m;
+                                    m = c.getData();
+                                    WIGB_WaAS_Combined_Record cr;
+                                    cr = m.get(CASEW1);
+                                    if (cr == null) {
+                                        cr = new WIGB_WaAS_Combined_Record(CASEW1);
+                                        m.put(CASEW1, cr);
+                                    }
+                                    cr.w1Record.setHhold(hs.get(ID));
+                                });
+                        // Add person records.
+                        File f;
+                        BufferedReader reader;
+                        f = collectionIDFilesW1.get(collectionID);
+                        reader = Generic_StaticIO.getBufferedReader(f);
+                        reader.lines()
+                                .skip(1) // Skip header.
+                                .forEach(line -> {
+                                    WIGB_WaAS_Wave1_PERSON_Record w1person;
+                                    w1person = new WIGB_WaAS_Wave1_PERSON_Record(line);
+                                    short CASEW1;
+                                    CASEW1 = w1person.getCASEW1();
+                                    HashMap<Short, WIGB_WaAS_Combined_Record> m;
+                                    m = c.getData();
+                                    WIGB_WaAS_Combined_Record cr;
+                                    cr = m.get(CASEW1);
+                                    cr.w1Record.getPeople().add(w1person);
+                                });
+                        Env.data.clearCollection(collectionID);
+                    });
+        }
+        // Wave 2
+        if (true) {
+            System.out.println("Wave 2");
+            TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave2_HHOLD_Record> hholdSubsetW2;
+            hholdSubsetW2 = hholdHandler.loadCacheSubsetWave2();
+            Object[] personSubsetW2;
+            personSubsetW2 = personHandler.loadSubsetWave2(hholdSubsetW2.keySet(),
+                    numberOfCollections, WIGB_WaAS_Data.W2, outdir);
+            HashMap<Short, Set<WIGB_WaAS_ID>> collectionIDSetsW2;
+            collectionIDSetsW2 = (HashMap<Short, Set<WIGB_WaAS_ID>>) personSubsetW2[0];
+            HashMap<Short, File> collectionIDFilesW2;
+            collectionIDFilesW2 = (HashMap<Short, File>) personSubsetW2[1];
+            collectionIDSetsW2.keySet().stream()
+                    .forEach(collectionID -> {
+                        System.out.println("collectionID " + collectionID);
+                        WIGB_WaAS_Collection c;
+                        c = data.getCollection(collectionID);
+                        // Add household records.
+                        Set<WIGB_WaAS_ID> s;
+                        s = collectionIDSetsW2.get(collectionID);
+                        s.stream()
+                                .forEach(ID -> {
+                                    short CASEW1 = ID.getCASEW1();
+                                    Env.data.lookup.put(CASEW1, collectionID);
+                                    HashMap<Short, WIGB_WaAS_Combined_Record> m;
+                                    m = c.getData();
+                                    WIGB_WaAS_Combined_Record cr;
+                                    cr = m.get(CASEW1);
+                                    if (cr == null) {
+                                        System.out.println("No combined record "
+                                                + "for CASEW1 " + CASEW1
+                                                + " which appears in "
+                                                + "collectionIDSetsW2, but "
+                                                + "there is no associated "
+                                                + "combined record for it. "
+                                                + "This may be a data error?");
+                                    } else {
+                                        cr.w2Record.setHhold(
+                                                hholdSubsetW2.get(ID));
+                                    }
+                                });
+                        // Add person records.
+                        File f;
+                        BufferedReader reader;
+                        f = collectionIDFilesW2.get(collectionID);
+                        reader = Generic_StaticIO.getBufferedReader(f);
+                        reader.lines()
+                                .skip(1) // Skip header.
+                                .forEach(line -> {
+                                    WIGB_WaAS_Wave2_PERSON_Record w2person;
+                                    w2person = new WIGB_WaAS_Wave2_PERSON_Record(line);
+                                    short CASEW1;
+                                    CASEW1 = w2person.getCASEW1();
+                                    HashMap<Short, WIGB_WaAS_Combined_Record> m;
+                                    m = c.getData();
+                                    WIGB_WaAS_Combined_Record cr;
+                                    cr = m.get(CASEW1);
+                                    if (cr == null) {
+                                        System.out.println("No combined record "
+                                                + "for CASEW1 " + CASEW1
+                                                + " which appears in "
+                                                + "collectionIDSetsW2, but "
+                                                + "there is no associated "
+                                                + "combined record for it. "
+                                                + "This may be a data error, "
+                                                + "or this person may have "
+                                                + "moved from one household "
+                                                + "to another?");
+                                    } else {
+                                        cr.w2Record.getPeople().add(w2person);
+                                    }
+                                });
+                        Env.data.clearCollection(collectionID);
+                    });
+        }
+        // Wave 3
+        if (true) {
+            System.out.println("Wave 3");
+            TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave3_HHOLD_Record> hholdSubsetW3;
+            hholdSubsetW3 = hholdHandler.loadCacheSubsetWave3();
+            Object[] personSubsetW3;
+            personSubsetW3 = personHandler.loadSubsetWave3(hholdSubsetW3.keySet(),
+                    numberOfCollections, WIGB_WaAS_Data.W3, outdir);
+            HashMap<Short, Set<WIGB_WaAS_ID>> collectionIDSetsW3;
+            collectionIDSetsW3 = (HashMap<Short, Set<WIGB_WaAS_ID>>) personSubsetW3[0];
+            HashMap<Short, File> collectionIDFilesW3;
+            collectionIDFilesW3 = (HashMap<Short, File>) personSubsetW3[1];
+            collectionIDSetsW3.keySet().stream()
+                    .forEach(collectionID -> {
+                        System.out.println("collectionID " + collectionID);
+                        WIGB_WaAS_Collection c;
+                        c = data.getCollection(collectionID);
+                        // Add household records.
+                        Set<WIGB_WaAS_ID> s;
+                        s = collectionIDSetsW3.get(collectionID);
+                        s.stream()
+                                .forEach(ID -> {
+                                    short CASEW1 = ID.getCASEW1();
+                                    Env.data.lookup.put(CASEW1, collectionID);
+                                    HashMap<Short, WIGB_WaAS_Combined_Record> m;
+                                    m = c.getData();
+                                    WIGB_WaAS_Combined_Record cr;
+                                    cr = m.get(CASEW1);
+                                    if (cr == null) {
+                                        System.out.println("No combined record "
+                                                + "for CASEW1 " + CASEW1
+                                                + " which appears in "
+                                                + "collectionIDSetsW3, but "
+                                                + "there is no associated "
+                                                + "combined record for it. "
+                                                + "This may be a data error?");
+                                    } else {
+                                        cr.w3Record.setHhold(
+                                                hholdSubsetW3.get(ID));
+                                    }
+                                });
+                        // Add person records.
+                        File f;
+                        BufferedReader reader;
+                        f = collectionIDFilesW3.get(collectionID);
+                        reader = Generic_StaticIO.getBufferedReader(f);
+                        reader.lines()
+                                .skip(1) // Skip header.
+                                .forEach(line -> {
+                                    WIGB_WaAS_Wave3_PERSON_Record w3person;
+                                    w3person = new WIGB_WaAS_Wave3_PERSON_Record(line);
+                                    short CASEW1;
+                                    CASEW1 = w3person.getCASEW1();
+                                    HashMap<Short, WIGB_WaAS_Combined_Record> m;
+                                    m = c.getData();
+                                    WIGB_WaAS_Combined_Record cr;
+                                    cr = m.get(CASEW1);
+                                    if (cr == null) {
+                                        System.out.println("No combined record "
+                                                + "for CASEW1 " + CASEW1
+                                                + " which appears in "
+                                                + "collectionIDSetsW3, but "
+                                                + "there is no associated "
+                                                + "combined record for it. "
+                                                + "This may be a data error, "
+                                                + "or this person may have "
+                                                + "moved from one household "
+                                                + "to another?");
+                                    } else {
+                                    cr.w3Record.getPeople().add(w3person);
+                                    }
+                                });
+                        Env.data.clearCollection(collectionID);
+                    });
+        }
+        // Wave 4
+        if (true) {
+            System.out.println("Wave 4");
+            TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave4_HHOLD_Record> hholdSubsetW4;
+            hholdSubsetW4 = hholdHandler.loadCacheSubsetWave4();
+            Object[] personSubsetW4;
+            personSubsetW4 = personHandler.loadSubsetWave4(hholdSubsetW4.keySet(),
+                    numberOfCollections, WIGB_WaAS_Data.W4, outdir);
+            HashMap<Short, Set<WIGB_WaAS_ID>> collectionIDSetsW4;
+            collectionIDSetsW4 = (HashMap<Short, Set<WIGB_WaAS_ID>>) personSubsetW4[0];
+            HashMap<Short, File> collectionIDFilesW4;
+            collectionIDFilesW4 = (HashMap<Short, File>) personSubsetW4[1];
+            collectionIDSetsW4.keySet().stream()
+                    .forEach(collectionID -> {
+                        System.out.println("collectionID " + collectionID);
+                        WIGB_WaAS_Collection c;
+                        c = data.getCollection(collectionID);
+                        // Add household records.
+                        Set<WIGB_WaAS_ID> s;
+                        s = collectionIDSetsW4.get(collectionID);
+                        s.stream()
+                                .forEach(ID -> {
+                                    short CASEW1 = ID.getCASEW1();
+                                    Env.data.lookup.put(CASEW1, collectionID);
+                                    HashMap<Short, WIGB_WaAS_Combined_Record> m;
+                                    m = c.getData();
+                                    WIGB_WaAS_Combined_Record cr;
+                                    cr = m.get(CASEW1);
+                                    if (cr == null) {
+                                        System.out.println("No combined record "
+                                                + "for CASEW1 " + CASEW1
+                                                + " which appears in "
+                                                + "collectionIDSetsW4, but "
+                                                + "there is no associated "
+                                                + "combined record for it. "
+                                                + "This may be a data error?");
+                                    } else {
+                                        cr.w4Record.setHhold(
+                                                hholdSubsetW4.get(ID));
+                                    }
+                                });
+                        // Add person records.
+                        File f;
+                        BufferedReader reader;
+                        f = collectionIDFilesW4.get(collectionID);
+                        reader = Generic_StaticIO.getBufferedReader(f);
+                        reader.lines()
+                                .skip(1) // Skip header.
+                                .forEach(line -> {
+                                    WIGB_WaAS_Wave4_PERSON_Record w4person;
+                                    w4person = new WIGB_WaAS_Wave4_PERSON_Record(line);
+                                    short CASEW1;
+                                    CASEW1 = w4person.getCASEW1();
+                                    HashMap<Short, WIGB_WaAS_Combined_Record> m;
+                                    m = c.getData();
+                                    WIGB_WaAS_Combined_Record cr;
+                                    cr = m.get(CASEW1);
+                                    if (cr == null) {
+                                        System.out.println("No combined record "
+                                                + "for CASEW1 " + CASEW1
+                                                + " which appears in "
+                                                + "collectionIDSetsW4, but "
+                                                + "there is no associated "
+                                                + "combined record for it. "
+                                                + "This may be a data error, "
+                                                + "or this person may have "
+                                                + "moved from one household "
+                                                + "to another?");
+                                    } else {
+                                    cr.w4Record.getPeople().add(w4person);
+                                    }
+                                });
+                        Env.data.clearCollection(collectionID);
+                    });
+        }
+        // Wave 5
+        if (true) {
+            System.out.println("Wave 5");
+            TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave5_HHOLD_Record> hholdSubsetW5;
+            hholdSubsetW5 = hholdHandler.loadCacheSubsetWave5();
+            Object[] personSubsetW5;
+            personSubsetW5 = personHandler.loadSubsetWave5(hholdSubsetW5.keySet(),
+                    numberOfCollections, WIGB_WaAS_Data.W5, outdir);
+            HashMap<Short, Set<WIGB_WaAS_ID>> collectionIDSetsW5;
+            collectionIDSetsW5 = (HashMap<Short, Set<WIGB_WaAS_ID>>) personSubsetW5[0];
+            HashMap<Short, File> collectionIDFilesW5;
+            collectionIDFilesW5 = (HashMap<Short, File>) personSubsetW5[1];
+            collectionIDSetsW5.keySet().stream()
+                    .forEach(collectionID -> {
+                        WIGB_WaAS_Collection c;
+                        c = data.getCollection(collectionID);
+                        // Add household records.
+                        Set<WIGB_WaAS_ID> s;
+                        s = collectionIDSetsW5.get(collectionID);
+                        s.stream()
+                                .forEach(ID -> {
+                                    short CASEW1 = ID.getCASEW1();
+                                    Env.data.lookup.put(CASEW1, collectionID);
+                                    HashMap<Short, WIGB_WaAS_Combined_Record> m;
+                                    m = c.getData();
+                                    WIGB_WaAS_Combined_Record cr;
+                                    cr = m.get(CASEW1);
+                                    if (cr == null) {
+                                        System.out.println("No combined record "
+                                                + "for CASEW1 " + CASEW1
+                                                + " which appears in "
+                                                + "collectionIDSetsW5, but "
+                                                + "there is no associated "
+                                                + "combined record for it. "
+                                                + "This may be a data error?");
+                                    } else {
+                                        cr.w5Record.setHhold(
+                                                hholdSubsetW5.get(ID));
+                                    }
+                                });
+                        // Add person records.
+                        File f;
+                        BufferedReader reader;
+                        f = collectionIDFilesW5.get(collectionID);
+                        reader = Generic_StaticIO.getBufferedReader(f);
+                        reader.lines()
+                                .skip(1) // Skip header.
+                                .forEach(line -> {
+                                    WIGB_WaAS_Wave5_PERSON_Record w5person;
+                                    w5person = new WIGB_WaAS_Wave5_PERSON_Record(line);
+                                    short CASEW1;
+                                    CASEW1 = w5person.getCASEW1();
+                                    HashMap<Short, WIGB_WaAS_Combined_Record> m;
+                                    m = c.getData();
+                                    WIGB_WaAS_Combined_Record cr;
+                                    cr = m.get(CASEW1);
+                                    if (cr == null) {
+                                        System.out.println("No combined record "
+                                                + "for CASEW1 " + CASEW1
+                                                + " which appears in "
+                                                + "collectionIDSetsW5, but "
+                                                + "there is no associated "
+                                                + "combined record for it. "
+                                                + "This may be a data error, "
+                                                + "or this person may have "
+                                                + "moved from one household "
+                                                + "to another?");
+                                    } else {
+                                    cr.w5Record.getPeople().add(w5person);
+                                    }
+                                });
+                        Env.data.clearCollection(collectionID);
+                    });
+        }
+//
+//        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave2_HHOLD_Record> hholdSubsetW2;
+//        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave3_HHOLD_Record> hholdSubsetW3;
+//        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave4_HHOLD_Record> hholdSubsetW4;
+//        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave5_HHOLD_Record> hholdSubsetW5;
+//        hholdSubsetW2 = hholdHandler.loadCacheSubsetWave2();
+//        hholdSubsetW3 = hholdHandler.loadCacheSubsetWave3();
+//        hholdSubsetW4 = hholdHandler.loadCacheSubsetWave4();
+//        hholdSubsetW5 = hholdHandler.loadCacheSubsetWave5();
+//
+//        Object[] personSubsetW2;
+//        Object[] personSubsetW3;
+//        Object[] personSubsetW4;
+//        Object[] personSubsetW5;
+//
+//        personSubsetW2 = personHandler.loadSubsetWave2(hholdSubsetW2.keySet(),
+//                chunkSize, WIGB_WaAS_Data.W2, outdir);
+//        HashMap<Short, Set<WIGB_WaAS_ID>> collectionIDSetsW2;
+//        collectionIDSetsW2 = (HashMap<Short, Set<WIGB_WaAS_ID>>) personSubsetW2[0];
+//        HashMap<Short, File> collectionIDFilesW2;
+//        collectionIDFilesW2 = (HashMap<Short, File>) personSubsetW2[1];
+//
+//        personSubsetW3 = personHandler.loadSubsetWave3(hholdSubsetW3.keySet(),
+//                chunkSize, WIGB_WaAS_Data.W3, outdir);
+//        HashMap<Short, Set<WIGB_WaAS_ID>> collectionIDSetsW3;
+//        collectionIDSetsW3 = (HashMap<Short, Set<WIGB_WaAS_ID>>) personSubsetW3[0];
+//        HashMap<Short, File> collectionIDFilesW3;
+//        collectionIDFilesW3 = (HashMap<Short, File>) personSubsetW3[1];
+//
+//        personSubsetW4 = personHandler.loadSubsetWave4(hholdSubsetW4.keySet(),
+//                chunkSize, WIGB_WaAS_Data.W4, outdir);
+//        HashMap<Short, Set<WIGB_WaAS_ID>> collectionIDSetsW4;
+//        collectionIDSetsW4 = (HashMap<Short, Set<WIGB_WaAS_ID>>) personSubsetW4[0];
+//        HashMap<Short, File> collectionIDFilesW4;
+//        collectionIDFilesW4 = (HashMap<Short, File>) personSubsetW4[1];
+//
+//        personSubsetW5 = personHandler.loadSubsetWave5(hholdSubsetW5.keySet(),
+//                chunkSize, WIGB_WaAS_Data.W5, outdir);
+//        HashMap<Short, Set<WIGB_WaAS_ID>> collectionIDSetsW5;
+//        collectionIDSetsW5 = (HashMap<Short, Set<WIGB_WaAS_ID>>) personSubsetW5[0];
+//        HashMap<Short, File> collectionIDFilesW5;
+//        collectionIDFilesW5 = (HashMap<Short, File>) personSubsetW5[1];
+//
+//        // Initialise crs and add HHOLD records.
+//        data.HashMap<Short, WIGB_WaAS_Combined_Record> crs;
+//        crs = new HashMap<>();
+//        collectionIDSetsW1.keySet().stream()
+//                .forEach(collectionID -> {
+//                    Set<WIGB_WaAS_ID> s;
+//                    s = collectionIDSetsW1.get(collectionID);
+//                    s.stream()
+//                            .forEach(ID -> {
+//                                short CASEW1 = ID.getCASEW1();
+//                                WIGB_WaAS_Combined_Record cr;
+//                                cr = new WIGB_WaAS_Combined_Record(CASEW1);
+//                                WIGB_WaAS_Wave1_HHOLD_Record w1hholdr;
+//                                w1hholdr = hholdSubsetW1.get(ID);
+//                                cr.w1Record = new WIGB_WaAS_Wave1_Record(
+//                                        w1hholdr,
+//                                        new ArrayList<>());
+//                                crs.put(CASEW1, cr);
+//                            });
+//                });
+//        collectionIDSetsW2.keySet().stream()
+//                .forEach(collectionID -> {
+//                    Set<WIGB_WaAS_ID> s;
+//                    s = collectionIDSetsW2.get(collectionID);
+//                    s.stream()
+//                            .forEach(ID -> {
+//                                short CASEW1 = ID.getCASEW1();
+//                                WIGB_WaAS_Combined_Record cr;
+//                                cr = crs.get(CASEW1);
+//                                if (cr == null) {
+//                                    System.out.println("No combined record for "
+//                                            + "CASEW1 " + CASEW1 + " which "
+//                                            + "appears in collectionIDSetsW2, "
+//                                            + "but there is no associated "
+//                                            + "combined record for it. This "
+//                                            + "may be a data error?");
+//                                } else {
+//                                    WIGB_WaAS_Wave2_HHOLD_Record w2hholdr;
+//                                    w2hholdr = hholdSubsetW2.get(ID);
+//                                    cr.w2Record = new WIGB_WaAS_Wave2_Record(
+//                                            w2hholdr,
+//                                            new ArrayList<>());
+//                                }
+//                            });
+//                });
+//        collectionIDSetsW3.keySet().stream()
+//                .forEach(collectionID -> {
+//                    Set<WIGB_WaAS_ID> s;
+//                    s = collectionIDSetsW3.get(collectionID);
+//                    s.stream()
+//                            .forEach(ID -> {
+//                                short CASEW1 = ID.getCASEW1();
+//                                WIGB_WaAS_Combined_Record cr;
+//                                cr = crs.get(CASEW1);
+//                                if (cr == null) {
+//                                    System.out.println("No combined record for "
+//                                            + "CASEW1 " + CASEW1 + " which "
+//                                            + "appears in collectionIDSetsW3, "
+//                                            + "but there is no associated "
+//                                            + "combined record for it. This "
+//                                            + "may be a data error?");
+//                                } else {
+//                                    WIGB_WaAS_Wave3_HHOLD_Record w3hholdr;
+//                                    w3hholdr = hholdSubsetW3.get(ID);
+//                                    cr.w3Record = new WIGB_WaAS_Wave3_Record(
+//                                            w3hholdr,
+//                                            new ArrayList<>());
+//                                }
+//                            });
+//                });
+//        collectionIDSetsW4.keySet().stream()
+//                .forEach(collectionID -> {
+//                    Set<WIGB_WaAS_ID> s;
+//                    s = collectionIDSetsW4.get(collectionID);
+//                    s.stream()
+//                            .forEach(ID -> {
+//                                short CASEW1 = ID.getCASEW1();
+//                                WIGB_WaAS_Combined_Record cr;
+//                                cr = crs.get(CASEW1);
+//                                if (cr == null) {
+//                                    System.out.println("No combined record for "
+//                                            + "CASEW1 " + CASEW1 + " which "
+//                                            + "appears in collectionIDSetsW4, "
+//                                            + "but there is no associated "
+//                                            + "combined record for it. This "
+//                                            + "may be a data error?");
+//                                } else {
+//                                    WIGB_WaAS_Wave4_HHOLD_Record w4hholdr;
+//                                    w4hholdr = hholdSubsetW4.get(ID);
+//                                    cr.w4Record = new WIGB_WaAS_Wave4_Record(
+//                                            w4hholdr,
+//                                            new ArrayList<>());
+//                                }
+//                            });
+//                });
+//        collectionIDSetsW5.keySet().stream()
+//                .forEach(collectionID -> {
+//                    Set<WIGB_WaAS_ID> s;
+//                    s = collectionIDSetsW5.get(collectionID);
+//                    s.stream()
+//                            .forEach(ID -> {
+//                                short CASEW1 = ID.getCASEW1();
+//                                WIGB_WaAS_Combined_Record cr;
+//                                cr = crs.get(CASEW1);
+//                                if (cr == null) {
+//                                    System.out.println("No combined record for "
+//                                            + "CASEW1 " + CASEW1 + " which "
+//                                            + "appears in collectionIDSetsW5, "
+//                                            + "but there is no associated "
+//                                            + "combined record for it. This "
+//                                            + "may be a data error?");
+//                                } else {
+//                                    WIGB_WaAS_Wave5_HHOLD_Record w5hholdr;
+//                                    w5hholdr = hholdSubsetW5.get(ID);
+//                                    cr.w5Record = new WIGB_WaAS_Wave5_Record(
+//                                            w5hholdr,
+//                                            new ArrayList<>());
+//                                }
+//                            });
+//                });
+//        // Add Person data.
+//        collectionIDSetsW1.keySet().stream()
+//                .forEach(collectionID -> {
+//                    // Initialise collection and variables;
+//                    WIGB_WaAS_Collection c;
+//                    c = new WIGB_WaAS_Collection(collectionID);
+//                    Env.data.data.put(collectionID, c);
+//                    File f;
+//                    BufferedReader reader;
+//                    // Wave 1
+//                    f = collectionIDFilesW1.get(collectionID);
+//                    reader = Generic_StaticIO.getBufferedReader(f);
+//                    try {
+//                        reader.readLine(); // Skip header
+//                    } catch (IOException ex) {
+//                        Logger.getLogger(WIGB_Main_Process.class.getName()).log(Level.SEVERE, null, ex);
+//                    }
+//                    reader.lines()
+//                            .forEach(line -> {
+//                                WIGB_WaAS_Wave1_PERSON_Record w1person;
+//                                w1person = new WIGB_WaAS_Wave1_PERSON_Record(line);
+//                                short CASEW1;
+//                                CASEW1 = w1person.getCASEW1();
+//                                Env.data.lookup.put(CASEW1, collectionID);
+//                                Env.data WIGB_WaAS_Combined_Record cr;
+//                                cr = crs.get(CASEW1);
+//                                cr.w1Record.getPeople().add(w1person);
+//                                c.getData().put(CASEW1, cr);
+//                            });
+//                    // Wave 2
+//                    f = collectionIDFilesW2.get(collectionID);
+//                    reader = Generic_StaticIO.getBufferedReader(f);
+//                    try {
+//                        reader.readLine(); // Skip header
+//                    } catch (IOException ex) {
+//                        Logger.getLogger(WIGB_Main_Process.class.getName()).log(Level.SEVERE, null, ex);
+//                    }
+//                    reader.lines()
+//                            .forEach(line -> {
+//                                WIGB_WaAS_Wave2_PERSON_Record w2person;
+//                                w2person = new WIGB_WaAS_Wave2_PERSON_Record(line);
+//                                short CASEW1;
+//                                CASEW1 = w2person.getCASEW1();
+//                                WIGB_WaAS_Combined_Record cr;
+//                                cr = c.getData().get(CASEW1);
+//                                if (cr == null) {
+//                                    System.out.println("No combined record for "
+//                                            + "CASEW1 " + CASEW1 + " which "
+//                                            + "appears in person subset for "
+//                                            + "wave " + WIGB_WaAS_Data.W2);
+//                                } else {
+//                                    cr.w2Record.getPeople().add(w2person);
+//                                }
+//                            });
+//                    // Wave 3
+//                    f = collectionIDFilesW3.get(collectionID);
+//                    reader = Generic_StaticIO.getBufferedReader(f);
+//                    try {
+//                        reader.readLine(); // Skip header
+//                    } catch (IOException ex) {
+//                        Logger.getLogger(WIGB_Main_Process.class.getName()).log(Level.SEVERE, null, ex);
+//                    }
+//                    reader.lines()
+//                            .forEach(line -> {
+//                                WIGB_WaAS_Wave3_PERSON_Record w3person;
+//                                w3person = new WIGB_WaAS_Wave3_PERSON_Record(line);
+//                                short CASEW1;
+//                                CASEW1 = w3person.getCASEW1();
+//                                WIGB_WaAS_Combined_Record cr;
+//                                cr = c.getData().get(CASEW1);
+//                                if (cr == null) {
+//                                    System.out.println("No combined record for "
+//                                            + "CASEW1 " + CASEW1 + " which "
+//                                            + "appears in person subset for "
+//                                            + "wave " + WIGB_WaAS_Data.W3);
+//                                } else {
+//                                    cr.w3Record.getPeople().add(w3person);
+//                                }
+//                            });
+//                    // Wave 4
+//                    f = collectionIDFilesW4.get(collectionID);
+//                    reader = Generic_StaticIO.getBufferedReader(f);
+//                    try {
+//                        reader.readLine(); // Skip header
+//                    } catch (IOException ex) {
+//                        Logger.getLogger(WIGB_Main_Process.class.getName()).log(Level.SEVERE, null, ex);
+//                    }
+//                    reader.lines()
+//                            .forEach(line -> {
+//                                WIGB_WaAS_Wave4_PERSON_Record w4person;
+//                                w4person = new WIGB_WaAS_Wave4_PERSON_Record(line);
+//                                short CASEW1;
+//                                CASEW1 = w4person.getCASEW1();
+//                                WIGB_WaAS_Combined_Record cr;
+//                                cr = c.getData().get(CASEW1);
+//                                if (cr == null) {
+//                                    System.out.println("No combined record for "
+//                                            + "CASEW1 " + CASEW1 + " which "
+//                                            + "appears in person subset for "
+//                                            + "wave " + WIGB_WaAS_Data.W4);
+//                                } else {
+//                                    cr.w4Record.getPeople().add(w4person);
+//                                }
+//                            });
+//                    // Wave 5
+//                    f = collectionIDFilesW5.get(collectionID);
+//                    reader = Generic_StaticIO.getBufferedReader(f);
+//                    try {
+//                        reader.readLine(); // Skip header
+//                    } catch (IOException ex) {
+//                        Logger.getLogger(WIGB_Main_Process.class.getName()).log(Level.SEVERE, null, ex);
+//                    }
+//                    reader.lines()
+//                            .forEach(line -> {
+//                                WIGB_WaAS_Wave5_PERSON_Record w5person;
+//                                w5person = new WIGB_WaAS_Wave5_PERSON_Record(line);
+//                                short CASEW1;
+//                                CASEW1 = w5person.getCASEW1();
+//                                WIGB_WaAS_Combined_Record cr;
+//                                cr = c.getData().get(CASEW1);
+//                                if (cr == null) {
+//                                    System.out.println("No combined record for "
+//                                            + "CASEW1 " + CASEW1 + " which "
+//                                            + "appears in person subset for "
+//                                            + "wave " + WIGB_WaAS_Data.W5);
+//                                } else {
+//                                    cr.w5Record.getPeople().add(w5person);
+//                                }
+//                            });
+//                    // Write out collection and clear memory
+//                    Env.cacheSubsetCollection(collectionID, c);
+//                    Env.data.clearCollection(collectionID);
+//                    c.getData().keySet().stream()
+//                            .forEach(CASEW1 -> {
+//                                crs.remove(CASEW1);
+//                            });
+//                });
+        Env.data.clearAllData();
+        Env.cacheData();
     }
 
     /**
@@ -392,6 +852,9 @@ public class WIGB_Main_Process extends WIGB_Object {
     }
 
     /**
+     * Read input data and create subsets. Organise for person records that each
+     * subset is split into separate files one for each collection. The
+     * collections will be merged one by one in doDataProcessingStep2.
      *
      * @param indir
      * @param outdir
@@ -497,8 +960,9 @@ public class WIGB_Main_Process extends WIGB_Object {
         System.out.println("" + all.size()
                 + "\tNumber of HHOLDs in Waves 5, 4, 3, 2 and 1");
 // Previously we assumed that the links from one wave to the follwoing wave were 
-// correct, but it was very suspicious that only 2 records were matched from 
-// Wave 3 to Wave 2.
+// correct, but it odd that only 2 records were matched from Wave 3 to Wave 2 so
+// this could be a data issue and the new way above is probably better!? It 
+// might be worth contacting ONS about this... 
 //        /**
 //         * Step 4: Get IDs of all hholds in waves going back from Wave 5 to Wave
 //         * 1; and, report the number of Households that are in all 5 waves
@@ -584,20 +1048,18 @@ public class WIGB_Main_Process extends WIGB_Object {
          */
         Iterator<WIGB_WaAS_ID> ite;
         WIGB_WaAS_ID ID;
-        short CASEW5;
-        short CASEW4;
-        short CASEW3;
-        short CASEW2;
+//        short CASEW5;
+//        short CASEW4;
+//        short CASEW3;
+//        short CASEW2;
         short CASEW1;
         /**
          * Wave 1.
          */
         // Load test or generate hholdSubsetW1 subset.
-        try {
-            TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave1_HHOLD_Record> hholdSubsetW1;
-            hholdSubsetW1 = hholdHandler.loadCacheSubsetWave1();
-        } catch (Exception ex) {
-            TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave1_HHOLD_Record> hholdSubsetW1;
+        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave1_HHOLD_Record> hholdSubsetW1;
+        hholdSubsetW1 = hholdHandler.loadCacheSubsetWave1();
+        if (hholdSubsetW1 == null) {
             hholdSubsetW1 = new TreeMap<>();
             ite = all.iterator();
             while (ite.hasNext()) {
@@ -609,17 +1071,15 @@ public class WIGB_Main_Process extends WIGB_Object {
 //                }
                 hholdSubsetW1.put(ID, rec);
             }
-            hholdHandler.storeCacheSubset(WIGB_WaAS_Data.W1, hholdSubsetW1);
+            hholdHandler.cacheSubset(WIGB_WaAS_Data.W1, hholdSubsetW1);
         }
         /**
          * Wave 2.
          */
         // Load test or generate hholdSubsetW2 subset.
-        try {
-            TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave2_HHOLD_Record> hholdSubsetW2;
-            hholdSubsetW2 = hholdHandler.loadCacheSubsetWave2();
-        } catch (Exception ex) {
-            TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave2_HHOLD_Record> hholdSubsetW2;
+        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave2_HHOLD_Record> hholdSubsetW2;
+        hholdSubsetW2 = hholdHandler.loadCacheSubsetWave2();
+        if (hholdSubsetW2 == null) {
             hholdSubsetW2 = new TreeMap<>();
             ite = hholdW2.keySet().iterator();
             while (ite.hasNext()) {
@@ -633,17 +1093,15 @@ public class WIGB_Main_Process extends WIGB_Object {
                     hholdSubsetW2.put(ID, rec);
                 }
             }
-            hholdHandler.storeCacheSubset(WIGB_WaAS_Data.W2, hholdSubsetW2);
+            hholdHandler.cacheSubset(WIGB_WaAS_Data.W2, hholdSubsetW2);
         }
         /**
          * Wave 3.
          */
         // Load test or generate hholdSubsetW3 subset.
-        try {
-            TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave3_HHOLD_Record> hholdSubsetW3;
-            hholdSubsetW3 = hholdHandler.loadCacheSubsetWave3();
-        } catch (Exception ex) {
-            TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave3_HHOLD_Record> hholdSubsetW3;
+        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave3_HHOLD_Record> hholdSubsetW3;
+        hholdSubsetW3 = hholdHandler.loadCacheSubsetWave3();
+        if (hholdSubsetW3 == null) {
             hholdSubsetW3 = new TreeMap<>();
             ite = hholdW3.keySet().iterator();
             while (ite.hasNext()) {
@@ -657,17 +1115,15 @@ public class WIGB_Main_Process extends WIGB_Object {
                     hholdSubsetW3.put(ID, rec);
                 }
             }
-            hholdHandler.storeCacheSubset(WIGB_WaAS_Data.W3, hholdSubsetW3);
+            hholdHandler.cacheSubset(WIGB_WaAS_Data.W3, hholdSubsetW3);
         }
         /**
          * Wave 4.
          */
         // Load test or generate hholdSubsetW4 subset.
-        try {
-            TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave4_HHOLD_Record> hholdSubsetW4;
-            hholdSubsetW4 = hholdHandler.loadCacheSubsetWave4();
-        } catch (Exception ex) {
-            TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave4_HHOLD_Record> hholdSubsetW4;
+        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave4_HHOLD_Record> hholdSubsetW4;
+        hholdSubsetW4 = hholdHandler.loadCacheSubsetWave4();
+        if (hholdSubsetW4 == null) {
             hholdSubsetW4 = new TreeMap<>();
             ite = hholdW4.keySet().iterator();
             while (ite.hasNext()) {
@@ -681,17 +1137,15 @@ public class WIGB_Main_Process extends WIGB_Object {
                     hholdSubsetW4.put(ID, rec);
                 }
             }
-            hholdHandler.storeCacheSubset(WIGB_WaAS_Data.W4, hholdSubsetW4);
+            hholdHandler.cacheSubset(WIGB_WaAS_Data.W4, hholdSubsetW4);
         }
         /**
          * Wave 5.
          */
         // Load test or generate hholdSubsetW5 subset.
-        try {
-            TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave5_HHOLD_Record> hholdSubsetW5;
-            hholdSubsetW5 = hholdHandler.loadCacheSubsetWave5();
-        } catch (Exception ex) {
-            TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave5_HHOLD_Record> hholdSubsetW5;
+        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave5_HHOLD_Record> hholdSubsetW5;
+        hholdSubsetW5 = hholdHandler.loadCacheSubsetWave5();
+        if (hholdSubsetW5 == null) {
             hholdSubsetW5 = new TreeMap<>();
             ite = hholdW5.keySet().iterator();
             while (ite.hasNext()) {
@@ -705,7 +1159,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                     hholdSubsetW5.put(ID, rec);
                 }
             }
-            hholdHandler.storeCacheSubset(WIGB_WaAS_Data.W5, hholdSubsetW5);
+            hholdHandler.cacheSubset(WIGB_WaAS_Data.W5, hholdSubsetW5);
         }
     }
 

@@ -45,50 +45,50 @@ public abstract class WIGB_WaAS_Handler extends WIGB_Object {
         return f;
     }
 
-    protected Object loadCache(byte wave, File cf) {
+    protected Object cache(byte wave, File cf) {
         Object r;
-        System.out.println("<Loading wave " + wave + " " + TYPE + " WaAS "
-                + "data from cache file " + cf + ">");
+        System.out.println("<load wave " + wave + " " + TYPE + " WaAS "
+                + "from file " + cf + ">");
         r = Generic_StaticIO.readObject(cf);
-        System.out.println("</Loading wave " + wave + " " + TYPE + " WaAS "
-                + "data from cache file " + cf + ">");
+        System.out.println("</load wave " + wave + " " + TYPE + " WaAS "
+                + "from file " + cf + ">");
         return r;
     }
 
-    protected void storeCache(byte wave, File cf, Object o) {
-        System.out.println("<Storing " + wave + " " + TYPE + " WaAS "
-                + "in cache file " + cf + ">");
+    protected void cache(byte wave, File cf, Object o) {
+        System.out.println("<store wave " + wave + " " + TYPE + " WaAS "
+                + "in file " + cf + ">");
         Generic_StaticIO.writeObject(o, cf);
-        System.out.println("</Storing " + wave + " " + TYPE + " WaAS "
-                + "in cache file " + cf + ">");
+        System.out.println("</store wave " + wave + " " + TYPE + " WaAS "
+                + "in file " + cf + ">");
     }
     
-    public void storeCacheSubset(byte wave, Object o) {
+    public void cacheSubset(byte wave, Object o) {
         File dir;
         dir = Env.Files.getGeneratedWaASDirectory();
         dir = new File(dir, "Subsets");
         File cf;
         cf = new File(dir, TYPE + wave + "." + Env.Strings.S_dat);
-        storeCache(wave, cf, o);
+        cache(wave, cf, o);
     }
     
-    public void storeCacheSubsetCollection(short collectionID, byte wave, Object o) {
+    public void cacheSubsetCollection(short collectionID, byte wave, Object o) {
         File dir;
         dir = Env.Files.getGeneratedWaASDirectory();
         dir = new File(dir, "Subsets");
         File cf;
         cf = new File(dir, TYPE + wave + "_" + collectionID + "." + Env.Strings.S_dat);
-        storeCache(wave, cf, o);
+        WIGB_WaAS_Handler.this.cache(wave, cf, o);
     }
     
-    public Object loadCacheSubsetCollection(short collectionID, byte wave) {
+    public Object loadSubsetCollection(short collectionID, byte wave) {
         Object r;
         File dir;
         dir = Env.Files.getGeneratedWaASDirectory();
         dir = new File(dir, "Subsets");
         File cf;
         cf = new File(dir, TYPE + wave + "_" + collectionID + "." + Env.Strings.S_dat);
-        r = loadCache(wave, cf);
+        r = cache(wave, cf);
         return r;
     }
 }

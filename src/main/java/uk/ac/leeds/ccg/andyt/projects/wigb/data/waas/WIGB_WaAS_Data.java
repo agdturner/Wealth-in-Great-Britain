@@ -48,49 +48,45 @@ public class WIGB_WaAS_Data extends WIGB_Object {
      */
     public HashMap<Short, Short> lookup;
 
-    /**
-     * A set of CASEW1 indicating what WIGB_WaAS_Collections in data have
-     * changed.
-     */
-    public HashSet<Short> hasChanged;
-
-    public WIGB_WaAS_Collection getCollection(short CASEW1) {
+    public WIGB_WaAS_Collection getCollection(short collectionID) {
         WIGB_WaAS_Collection r;
-        short collectionID;
-        collectionID = lookup.get(CASEW1);
         if (data.containsKey(collectionID)) {
             r = data.get(collectionID);
         } else {
-            r = (WIGB_WaAS_Collection) Env.loadCacheSubsetCollection(collectionID);
+            r = (WIGB_WaAS_Collection) Env.loadSubsetCollection(collectionID);
             data.put(collectionID, r);
         }
         return r;
+    }
+    
+    public void clearCollection(short collectionID) {
+        WIGB_WaAS_Collection c;
+        c = data.get(collectionID);
+        c = null;
     }
 
     public WIGB_WaAS_Data(WIGB_Environment env) {
         super(env);
         data = new HashMap<>();
         lookup = new HashMap<>();
-        hasChanged = new HashSet<>();
     }
 
-    public boolean clearSomeCache() {
+    public boolean clearSomeData() {
         Iterator<Short> ite;
         ite = data.keySet().iterator();
         short collectionID;
         while (ite.hasNext()) {
             collectionID = ite.next();
-            if (hasChanged.contains(collectionID)) {
-                Env.storeCacheSubsetCollection(collectionID, data.get(collectionID));
-                hasChanged.remove(collectionID);
-            }
-            data.remove(collectionID);
+            WIGB_WaAS_Collection c;
+            c = data.get(collectionID);
+            Env.cacheSubsetCollection(collectionID, c);
+            c = null;
             return true;
         }
         return false;
     }
 
-    public int clearAllCache() {
+    public int clearAllData() {
         int r;
         r = 0;
         Iterator<Short> ite;
@@ -98,11 +94,10 @@ public class WIGB_WaAS_Data extends WIGB_Object {
         short collectionID;
         while (ite.hasNext()) {
             collectionID = ite.next();
-            if (hasChanged.contains(collectionID)) {
-                Env.storeCacheSubsetCollection(collectionID, data.get(collectionID));
-                hasChanged.remove(collectionID);
-            }
-            data.remove(collectionID);
+            WIGB_WaAS_Collection c;
+            c = data.get(collectionID);
+            Env.cacheSubsetCollection(collectionID, c);
+            c = null;
             r++;
         }
         return r;

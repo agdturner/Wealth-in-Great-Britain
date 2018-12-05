@@ -25,9 +25,15 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person.WIGB_WaAS_Wave1_PERS
  */
 public class WIGB_WaAS_Wave1_Record extends WIGB_WaAS_Record {
     
-    private final WIGB_WaAS_Wave1_HHOLD_Record hhold;
+    private WIGB_WaAS_Wave1_HHOLD_Record hhold;
     
-    private final ArrayList<WIGB_WaAS_Wave1_PERSON_Record> people;
+    private final  ArrayList<WIGB_WaAS_Wave1_PERSON_Record> people;
+    
+    public WIGB_WaAS_Wave1_Record(short CASEW1){
+        super(CASEW1);
+        hhold = null;
+        people = new ArrayList<>();
+    }
     
     public WIGB_WaAS_Wave1_Record(WIGB_WaAS_Wave1_HHOLD_Record hhold,
             ArrayList<WIGB_WaAS_Wave1_PERSON_Record> people){
@@ -42,11 +48,18 @@ public class WIGB_WaAS_Wave1_Record extends WIGB_WaAS_Record {
     public WIGB_WaAS_Wave1_HHOLD_Record getHhold() {
         return hhold;
     }
-
+    
     /**
      * @return the people
      */
     public ArrayList<WIGB_WaAS_Wave1_PERSON_Record> getPeople() {
         return people;
+    }
+
+    /**
+     * @param hhold the hhold to set
+     */
+    public void setHhold(WIGB_WaAS_Wave1_HHOLD_Record hhold) {
+        this.hhold = hhold;
     }
 }

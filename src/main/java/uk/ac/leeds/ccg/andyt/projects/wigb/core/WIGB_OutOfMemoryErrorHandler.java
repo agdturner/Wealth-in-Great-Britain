@@ -13,7 +13,8 @@ public abstract class WIGB_OutOfMemoryErrorHandler
         implements Serializable, Generic_OutOfMemoryErrorHandlerInterface {
 
     //static final long serialVersionUID = 1L;
-    public static long Memory_Threshold = 3000000000L;
+    //public static long Memory_Threshold = 3000000000L;
+    public static long Memory_Threshold = 2000000000L;
 
     @Override
     public boolean swapDataAny() {

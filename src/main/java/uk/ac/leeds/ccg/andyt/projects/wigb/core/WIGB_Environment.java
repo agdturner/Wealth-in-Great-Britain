@@ -37,9 +37,7 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
         File f;
         f = Files.getEnvDataFile();
         if (f.exists()) {
-            System.out.println("Loading cache...");
-            data = (WIGB_WaAS_Data) Generic_StaticIO.readObject(f);
-            System.out.println("Loaded cache.");
+            loadData();
         } else {
             data = new WIGB_WaAS_Data(this);
         }
@@ -54,7 +52,7 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
     public boolean checkAndMaybeFreeMemory() {
         System.gc();
         while (getTotalFreeMemory() < Memory_Threshold) {
-//            int clear = clearAllCache();
+//            int clear = clearAllData();
 //            if (clear == 0) {
 //                return false;
 //            }
@@ -91,7 +89,7 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
     @Override
     public boolean swapDataAny() {
         boolean r;
-        r = clearSomeCache();
+        r = clearSomeData();
         if (r) {
             return r;
         } else {
@@ -102,15 +100,13 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
         }
     }
 
-    public boolean clearSomeCache() {
-        return data.clearSomeCache();
+    public boolean clearSomeData() {
+        return data.clearSomeData();
     }
 
-    public int clearAllCache() {
-        System.out.println("<clearAllCache>");
+    public int clearAllData() {
         int r;
-        r = data.clearAllCache();
-        System.out.println("</clearAllCache>");
+        r = data.clearAllData();
         return r;
     }
     
@@ -119,13 +115,13 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
      * @param collectionID the value of collectionID
      * @param o the value of o
      */
-    public void storeCacheSubsetCollection(short collectionID, Object o) {
+    public void cacheSubsetCollection(short collectionID, Object o) {
         File dir;
         dir = Files.getGeneratedWaASDirectory();
         dir = new File(dir, "Subsets");
         File cf;
         cf = new File(dir, "WaAS_" + collectionID + "." + Strings.S_dat);
-        storeCache(cf, o);
+        cache(cf, o);
     }
 
     /**
@@ -133,14 +129,14 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
      * @param collectionID the value of collectionID
      * @return 
      */
-    public Object loadCacheSubsetCollection(short collectionID) {
+    public Object loadSubsetCollection(short collectionID) {
         Object r;
         File dir;
         dir = Files.getGeneratedWaASDirectory();
         dir = new File(dir, "Subsets");
         File cf;
         cf = new File(dir, "WaAS_" + collectionID + "." + Strings.S_dat);
-        r = loadCache(cf);
+        r = cache(cf);
         return r;
     }
 
@@ -149,11 +145,11 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
      * @param cf the value of cf
      * @return
      */
-    protected Object loadCache(File cf) {
+    protected Object cache(File cf) {
         Object r;
-        System.out.println("<Loading Collection from cache file " + cf + ">");
+        System.out.println("<load from File " + cf + ">");
         r = Generic_StaticIO.readObject(cf);
-        System.out.println("</Loading Collection from cache file " + cf + ">");
+        System.out.println("</load from File " + cf + ">");
         return r;
     }
 
@@ -162,18 +158,26 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
      * @param cf the value of cf
      * @param o the value of o
      */
-    protected void storeCache(File cf, Object o) {
-        System.out.println("<Storing Collection in cache file " + cf + ">");
+    protected void cache(File cf, Object o) {
+        System.out.println("<cache in File " + cf + ">");
         Generic_StaticIO.writeObject(o, cf);
-        System.out.println("</Storing Collection in cache file " + cf + ">");
+        System.out.println("</cache in File " + cf + ">");
     }
 
-    public void storeCache() {
+    public void cacheData() {
         File f;
         f = Files.getEnvDataFile();
-        System.out.println("Storing cache...");
+        System.out.println("<cache data>");
         Generic_StaticIO.writeObject(data, f);
-        System.out.println("Stored cache.");
+        System.out.println("</cache data>");
     }
 
+    public final void loadData() {
+        File f;
+        f = Files.getEnvDataFile();
+        System.out.println("<load data>");
+        data = (WIGB_WaAS_Data) Generic_StaticIO.readObject(f);
+        data.Env = this;
+        System.out.println("<load data>");
+    }
 }

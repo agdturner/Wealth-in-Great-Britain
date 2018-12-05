@@ -85,7 +85,7 @@ public class WIGB_WaAS_HHOLD_Handler extends WIGB_WaAS_Handler {
         File cf;
         cf = new File(dir, TYPE + wave + "." + Env.Strings.S_dat);
         if (cf.exists()) {
-            r = (Object[]) loadCache(wave, cf);
+            r = (Object[]) cache(wave, cf);
         } else {
             File f;
             f = getInputFile(wave);
@@ -99,8 +99,8 @@ public class WIGB_WaAS_HHOLD_Handler extends WIGB_WaAS_Handler {
                 r1[i] = new TreeSet<>();
             }
             r[1] = r1;
-            System.out.println("<Loading wave " + wave + " " + TYPE + " WaAS "
-                    + "data from " + f + ">");
+            System.out.println("<load wave " + wave + " " + TYPE + " WaAS "
+                    + "from " + f + ">");
             BufferedReader br;
             br = Generic_StaticIO.getBufferedReader(f);
             StreamTokenizer st;
@@ -270,9 +270,9 @@ public class WIGB_WaAS_HHOLD_Handler extends WIGB_WaAS_Handler {
                     }
                 }
             }
-            System.out.println("</Loading wave " + wave + " " + TYPE + " WaAS "
-                    + "data from " + f + ">");
-            storeCache(wave, cf, r);
+            System.out.println("</load wave " + wave + " " + TYPE + " WaAS "
+                    + "from " + f + ">");
+            cache(wave, cf, r);
         }
         return r;
     }
