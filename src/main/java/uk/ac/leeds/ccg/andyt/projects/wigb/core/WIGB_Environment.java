@@ -39,7 +39,7 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
         if (f.exists()) {
             loadData();
         } else {
-            data = new WIGB_WaAS_Data(this);
+            data = new WIGB_WaAS_Data(Files, Strings);
         }
     }
 
@@ -110,60 +110,6 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
         return r;
     }
     
-    /**
-     *
-     * @param collectionID the value of collectionID
-     * @param o the value of o
-     */
-    public void cacheSubsetCollection(short collectionID, Object o) {
-        File dir;
-        dir = Files.getGeneratedWaASDirectory();
-        dir = new File(dir, "Subsets");
-        File cf;
-        cf = new File(dir, "WaAS_" + collectionID + "." + Strings.S_dat);
-        cache(cf, o);
-    }
-
-    /**
-     *
-     * @param collectionID the value of collectionID
-     * @return 
-     */
-    public Object loadSubsetCollection(short collectionID) {
-        Object r;
-        File dir;
-        dir = Files.getGeneratedWaASDirectory();
-        dir = new File(dir, "Subsets");
-        File cf;
-        cf = new File(dir, "WaAS_" + collectionID + "." + Strings.S_dat);
-        r = cache(cf);
-        return r;
-    }
-
-    /**
-     *
-     * @param cf the value of cf
-     * @return
-     */
-    protected Object cache(File cf) {
-        Object r;
-        System.out.println("<load from File " + cf + ">");
-        r = Generic_StaticIO.readObject(cf);
-        System.out.println("</load from File " + cf + ">");
-        return r;
-    }
-
-    /**
-     *
-     * @param cf the value of cf
-     * @param o the value of o
-     */
-    protected void cache(File cf, Object o) {
-        System.out.println("<cache in File " + cf + ">");
-        Generic_StaticIO.writeObject(o, cf);
-        System.out.println("</cache in File " + cf + ">");
-    }
-
     public void cacheData() {
         File f;
         f = Files.getEnvDataFile();
@@ -177,7 +123,6 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
         f = Files.getEnvDataFile();
         System.out.println("<load data>");
         data = (WIGB_WaAS_Data) Generic_StaticIO.readObject(f);
-        data.Env = this;
         System.out.println("<load data>");
     }
 }

@@ -170,6 +170,11 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
                             }
                         }
                     });
+            try {
+                br.close();
+            } catch (IOException ex) {
+                Logger.getLogger(WIGB_WaAS_PERSON_Handler.class.getName()).log(Level.SEVERE, null, ex);
+            }
             // Close the PrintWriters.
             collectionIDPrintWriters.keySet().stream()
                     .forEach(collectionID -> {
@@ -304,6 +309,11 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
                             }
                         }
                     });
+            try {
+                br.close();
+            } catch (IOException ex) {
+                Logger.getLogger(WIGB_WaAS_PERSON_Handler.class.getName()).log(Level.SEVERE, null, ex);
+            }
             // Close the PrintWriters.
             collectionIDPrintWriters.keySet().stream()
                     .forEach(collectionID -> {
@@ -437,6 +447,11 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
                             }
                         }
                     });
+            try {
+                br.close();
+            } catch (IOException ex) {
+                Logger.getLogger(WIGB_WaAS_PERSON_Handler.class.getName()).log(Level.SEVERE, null, ex);
+            }
             // Close the PrintWriters.
             collectionIDPrintWriters.keySet().stream()
                     .forEach(collectionID -> {
@@ -570,6 +585,11 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
                             }
                         }
                     });
+            try {
+                br.close();
+            } catch (IOException ex) {
+                Logger.getLogger(WIGB_WaAS_PERSON_Handler.class.getName()).log(Level.SEVERE, null, ex);
+            }
             // Close the PrintWriters.
             collectionIDPrintWriters.keySet().stream()
                     .forEach(collectionID -> {
@@ -703,6 +723,11 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
                             }
                         }
                     });
+            try {
+                br.close();
+            } catch (IOException ex) {
+                Logger.getLogger(WIGB_WaAS_PERSON_Handler.class.getName()).log(Level.SEVERE, null, ex);
+            }
             // Close the PrintWriters.
             collectionIDPrintWriters.keySet().stream()
                     .forEach(collectionID -> {

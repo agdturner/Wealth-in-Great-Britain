@@ -17,13 +17,14 @@ package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.StreamTokenizer;
+import java.io.IOException;
+import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
-import uk.ac.leeds.ccg.andyt.generic.io.Generic_ReadCSV;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_StaticIO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
-import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave1Or2Or3Or4Or5_HHOLD_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave1_HHOLD_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave2_HHOLD_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave3_HHOLD_Record;
@@ -48,49 +49,45 @@ public class WIGB_WaAS_HHOLD_Handler extends WIGB_WaAS_Handler {
      * 7GB of memory to hold all the data in memory.
      *
      * @return an Object[] r with size 5. Each element is an Object[] containing
-     * the data from loading each wave @see load(File,int). r[0] is the data
-     * from Wave 1, r[1] is the data from Wave 2 etc...
+     * the data from loading each wave...
      */
     public Object[] load() {
         Object[] r;
         r = new Object[5];
-        for (byte wave = 1; wave < 6; wave++) {
-            r[wave - 1] = load(wave);
-        }
+        r[4] = loadWave5(WIGB_WaAS_Data.W5);
+        TreeSet<WIGB_WaAS_ID>[] sa = (TreeSet<WIGB_WaAS_ID>[]) ((Object[]) r[4])[1];
+        TreeSet<WIGB_WaAS_ID> s;
+        s = sa[sa.length - 1];
+        r[3] = loadWave4(WIGB_WaAS_Data.W4, s);
+        r[2] = loadWave3(WIGB_WaAS_Data.W3, s);
+        r[1] = loadWave2(WIGB_WaAS_Data.W2, s);
+        r[0] = loadWave1(WIGB_WaAS_Data.W1, s);
         return r;
     }
 
     /**
-     * Loads a specific wave of the hhold WaAS from f. The result r is an
-     * Object[] of length 2. r[0] is a HashMap with Integer keys which are the
-     * CASE id for the wave and the values are
-     * WIGB_WaAS_Wave1Or2Or3Or4Or5_HHOLD_Record>. r[1] is an array of HashSets
-     * where: For Wave 5; r[1][0] is a list of CASEW5 values, r[1][1] is a list
-     * of CASEW4 values, r[1][2] is a list of CASEW3 values, r[1][3] is a list
-     * of CASEW2 values, r[1][4] is a list of CASEW1 values. For Wave 4; r[1][0]
-     * is a list of CASEW4 values, r[1][1] is a list of CASEW3 values, r[1][2]
-     * is a list of CASEW2 values, r[1][3] is a list of CASEW1 values. For Wave
-     * 3; r[1][0] is a list of CASEW3 values, r[1][1] is a list of CASEW2
-     * values, r[1][2] is a list of CASEW1 values. For Wave 2; r[1][0] is a list
-     * of CASEW2 values, r[1][1] is a list of CASEW1 values. For Wave 1: r[1][0]
-     * is a list of CASEW1 values.
+     * Load Wave 5 household records that are reportedly in all 5 waves and some
+     * sets of WIGB_WaAS_ID for those records in multiple waves.
      *
      * @param wave
-     * @return
+     *
+     * @return r - an Object[] of length 2. r[0] is a TreeMap with keys as
+     * CASEW1 and values as WIGB_WaAS_Wave5_HHOLD_Records. r[1] is an array of
+     * TreeSet where: r[1][0] is a list of CASEW5 values, r[1][1] is a list of
+     * CASEW4 values, r[1][2] is a list of CASEW3 values, r[1][3] is a list of
+     * CASEW2 values, r[1][4] is a list of CASEW1 values.
      */
-    public Object[] load(byte wave) {
+    public Object[] loadWave5(byte wave) {
         Object[] r;
-        File dir;
-        dir = Env.Files.getGeneratedWaASDirectory();
         File cf;
-        cf = new File(dir, TYPE + wave + "." + Env.Strings.S_dat);
+        cf = getGeneratedFile(wave);
         if (cf.exists()) {
             r = (Object[]) cache(wave, cf);
         } else {
             File f;
             f = getInputFile(wave);
             r = new Object[2];
-            TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave1Or2Or3Or4Or5_HHOLD_Record> r0;
+            TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave5_HHOLD_Record> r0;
             r0 = new TreeMap<>();
             r[0] = r0;
             TreeSet<WIGB_WaAS_ID>[] r1;
@@ -103,172 +100,336 @@ public class WIGB_WaAS_HHOLD_Handler extends WIGB_WaAS_Handler {
                     + "from " + f + ">");
             BufferedReader br;
             br = Generic_StaticIO.getBufferedReader(f);
-            StreamTokenizer st;
-            st = new StreamTokenizer(br);
-            Generic_StaticIO.setStreamTokenizerSyntax7(st);
-            int lineNumber;
-            lineNumber = 0;
-            String line;
+            br.lines()
+                    .skip(1) // Skip header
+                    .forEach(line -> {
+                        WIGB_WaAS_Wave5_HHOLD_Record rec;
+                        rec = new WIGB_WaAS_Wave5_HHOLD_Record(line);
+                        WIGB_WaAS_ID ID;
+                        short CASEW5 = rec.getCASEW5();
+                        short CASEW4 = rec.getCASEW4();
+                        short CASEW3 = rec.getCASEW3();
+                        short CASEW2 = rec.getCASEW2();
+                        short CASEW1 = rec.getCASEW1();
+                        if (CASEW4 > Short.MIN_VALUE) {
+                            ID = new WIGB_WaAS_ID(CASEW1, CASEW4);
+                            r1[1].add(ID);
+                        }
+                        if (CASEW3 > Short.MIN_VALUE) {
+                            ID = new WIGB_WaAS_ID(CASEW1, CASEW3);
+                            r1[2].add(ID);
+                        }
+                        if (CASEW2 > Short.MIN_VALUE) {
+                            ID = new WIGB_WaAS_ID(CASEW1, CASEW2);
+                            r1[3].add(ID);
+                        }
+                        if (CASEW1 > Short.MIN_VALUE) {
+                            ID = new WIGB_WaAS_ID(CASEW1, CASEW5);
+                            r1[0].add(ID);
+                            WIGB_WaAS_ID ID2;
+                            ID2 = new WIGB_WaAS_ID(CASEW1, CASEW1);
+                            r1[4].add(ID2);
+                            if (CASEW2 > Short.MIN_VALUE
+                                    && CASEW3 > Short.MIN_VALUE
+                                    && CASEW4 > Short.MIN_VALUE) {
+                                r0.put(ID, rec);
+                            }
+                        }
+                    });
+            try {
+                br.close();
+            } catch (IOException ex) {
+                Logger.getLogger(WIGB_WaAS_HHOLD_Handler.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            System.out.println("</load wave " + wave + " " + TYPE + " WaAS "
+                    + "from " + f + ">");
+            cache(wave, cf, r);
+        }
+        return r;
+    }
 
-            // skip header
-            Generic_ReadCSV.readLine(st, null);
+    protected File getGeneratedFile(short wave) {
+        File dir;
+        dir = Env.Files.getGeneratedWaASDirectory();
+        File f;
+        f = new File(dir, TYPE + wave + "." + Env.Strings.S_dat);
+        return f;
+    }
 
-            boolean read;
-            read = false;
+    /**
+     * Load Wave 4 household records that are reportedly in all 5 waves and some
+     * sets of WIGB_WaAS_ID for those records in multiple waves.
+     *
+     * @param wave
+     * @param s A set of CASEW1 values for all CASEW1 in Wave 5.
+     *
+     * @return r - an Object[] of length 2. r[0] is a TreeMap with keys as
+     * CASEW1 and values as WIGB_WaAS_Wave4_HHOLD_Records. r[1] is an array of
+     * TreeSet where: r[1][0] is a list of CASEW4 values, r[1][1] is a list of
+     * CASEW3 values, r[1][2] is a list of CASEW2 values, r[1][3] is a list of
+     * CASEW1 values.
+     */
+    public Object[] loadWave4(byte wave, Set<WIGB_WaAS_ID> s) {
+        Object[] r;
+        File cf;
+        cf = getGeneratedFile(wave);
+        if (cf.exists()) {
+            r = (Object[]) cache(wave, cf);
+        } else {
+            File f;
+            f = getInputFile(wave);
+            r = new Object[2];
+            TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave4_HHOLD_Record> r0;
+            r0 = new TreeMap<>();
+            r[0] = r0;
+            TreeSet<WIGB_WaAS_ID>[] r1;
+            r1 = new TreeSet[wave];
+            for (int i = 0; i < wave; i++) {
+                r1[i] = new TreeSet<>();
+            }
+            r[1] = r1;
+            System.out.println("<load wave " + wave + " " + TYPE + " WaAS "
+                    + "from " + f + ">");
+            BufferedReader br;
+            br = Generic_StaticIO.getBufferedReader(f);
+            br.lines()
+                    .skip(1) // Skip header
+                    .forEach(line -> {
+                        WIGB_WaAS_Wave4_HHOLD_Record rec;
+                        rec = new WIGB_WaAS_Wave4_HHOLD_Record(line);
+                        WIGB_WaAS_ID ID;
+                        short CASEW4 = rec.getCASEW4();
+                        short CASEW3 = rec.getCASEW3();
+                        short CASEW2 = rec.getCASEW2();
+                        short CASEW1 = rec.getCASEW1();
+                        if (CASEW3 > Short.MIN_VALUE) {
+                            ID = new WIGB_WaAS_ID(CASEW1, CASEW3);
+                            r1[1].add(ID);
+                        }
+                        if (CASEW2 > Short.MIN_VALUE) {
+                            ID = new WIGB_WaAS_ID(CASEW1, CASEW2);
+                            r1[2].add(ID);
+                        }
+                        if (CASEW1 > Short.MIN_VALUE) {
+                            ID = new WIGB_WaAS_ID(CASEW1, CASEW4);
+                            r1[0].add(ID);
+                            WIGB_WaAS_ID ID2;
+                            ID2 = new WIGB_WaAS_ID(CASEW1, CASEW1);
+                            r1[3].add(ID2);
+                            if (CASEW2 > Short.MIN_VALUE
+                                    && CASEW3 > Short.MIN_VALUE) {
+                                if (s.contains(ID2)) {
+                                    r0.put(ID, rec);
+                                }
+                            }
+                        }
+                    });
+            try {
+                br.close();
+            } catch (IOException ex) {
+                Logger.getLogger(WIGB_WaAS_HHOLD_Handler.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            System.out.println("</load wave " + wave + " " + TYPE + " WaAS "
+                    + "from " + f + ">");
+            cache(wave, cf, r);
+        }
+        return r;
+    }
 
-            while (!read) {
-                line = Generic_ReadCSV.readLine(st, null);
-                lineNumber++;
-                if (lineNumber % 1000 == 0) {
-                    System.out.println("loaded " + lineNumber + " lines...");
-                }
-                if (line == null) {
-                    read = true;
-                } else {
-                    switch (wave) {
-                        case 5: {
-                            WIGB_WaAS_Wave5_HHOLD_Record rec;
-                            try {
-                                rec = new WIGB_WaAS_Wave5_HHOLD_Record(line);
-                                WIGB_WaAS_ID ID;
-                                short CASEW5 = rec.getCASEW5();
-                                short CASEW4 = rec.getCASEW4();
-                                short CASEW3 = rec.getCASEW3();
-                                short CASEW2 = rec.getCASEW2();
-                                short CASEW1 = rec.getCASEW1();
-                                if (CASEW1 > Short.MIN_VALUE) {
-                                    ID = new WIGB_WaAS_ID(CASEW1, CASEW5);
-                                    r0.put(ID, rec);
-                                    r1[0].add(ID);
-                                }
-                                if (CASEW4 > Short.MIN_VALUE) {
-                                    ID = new WIGB_WaAS_ID(CASEW1, CASEW4);
-                                    r1[1].add(ID);
-                                }
-                                if (CASEW3 > Short.MIN_VALUE) {
-                                    ID = new WIGB_WaAS_ID(CASEW1, CASEW3);
-                                    r1[2].add(ID);
-                                }
-                                if (CASEW2 > Short.MIN_VALUE) {
-                                    ID = new WIGB_WaAS_ID(CASEW1, CASEW2);
-                                    r1[3].add(ID);
-                                }
-                                if (CASEW1 > Short.MIN_VALUE) {
-                                    ID = new WIGB_WaAS_ID(CASEW1, CASEW1);
-                                    r1[4].add(ID);
-                                }
-                            } catch (ArrayIndexOutOfBoundsException e) {
-                                e.printStackTrace(System.err);
-                                System.err.println(line);
-                                //rec = new WIGB_WaAS_Wave5_HHOLD_Record(line); // For debugging
-                            }
-                            break;
+    /**
+     * Load Wave 3 household records that are reportedly in all 5 waves and some
+     * sets of WIGB_WaAS_ID for those records in multiple waves.
+     *
+     * @param wave
+     * @param s A set of CASEW1 values for all CASEW1 in Wave 5.
+     *
+     * @return r - an Object[] of length 2. r[0] is a TreeMap with keys as
+     * CASEW1 and values as WIGB_WaAS_Wave3_HHOLD_Records. r[1] is an array of
+     * TreeSet where: r[1][0] is a list of CASEW3 values, r[1][1] is a list of
+     * CASEW2 values, r[1][2] is a list of CASEW1 values.
+     */
+    public Object[] loadWave3(byte wave, Set<WIGB_WaAS_ID> s) {
+        Object[] r;
+        File cf;
+        cf = getGeneratedFile(wave);
+        if (cf.exists()) {
+            r = (Object[]) cache(wave, cf);
+        } else {
+            File f;
+            f = getInputFile(wave);
+            r = new Object[2];
+            TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave3_HHOLD_Record> r0;
+            r0 = new TreeMap<>();
+            r[0] = r0;
+            TreeSet<WIGB_WaAS_ID>[] r1;
+            r1 = new TreeSet[wave];
+            for (int i = 0; i < wave; i++) {
+                r1[i] = new TreeSet<>();
+            }
+            r[1] = r1;
+            System.out.println("<load wave " + wave + " " + TYPE + " WaAS "
+                    + "from " + f + ">");
+            BufferedReader br;
+            br = Generic_StaticIO.getBufferedReader(f);
+            br.lines()
+                    .skip(1) // Skip header
+                    .forEach(line -> {
+                        WIGB_WaAS_Wave3_HHOLD_Record rec;
+                        rec = new WIGB_WaAS_Wave3_HHOLD_Record(line);
+                        WIGB_WaAS_ID ID;
+                        short CASEW3 = rec.getCASEW3();
+                        short CASEW2 = rec.getCASEW2();
+                        short CASEW1 = rec.getCASEW1();
+                        if (CASEW2 > Short.MIN_VALUE) {
+                            ID = new WIGB_WaAS_ID(CASEW1, CASEW2);
+                            r1[1].add(ID);
                         }
-                        case 4: {
-                            WIGB_WaAS_Wave4_HHOLD_Record rec;
-                            try {
-                                rec = new WIGB_WaAS_Wave4_HHOLD_Record(line);
-                                WIGB_WaAS_ID ID;
-                                short CASEW4 = rec.getCASEW4();
-                                short CASEW3 = rec.getCASEW3();
-                                short CASEW2 = rec.getCASEW2();
-                                short CASEW1 = rec.getCASEW1();
-                                if (CASEW1 > Short.MIN_VALUE) {
-                                    ID = new WIGB_WaAS_ID(CASEW1, CASEW4);
+                        if (CASEW1 > Short.MIN_VALUE) {
+                            ID = new WIGB_WaAS_ID(CASEW1, CASEW3);
+                            r1[0].add(ID);
+                            WIGB_WaAS_ID ID2;
+                            ID2 = new WIGB_WaAS_ID(CASEW1, CASEW1);
+                            r1[2].add(ID2);
+                            if (CASEW2 > Short.MIN_VALUE) {
+                                if (s.contains(ID2)) {
                                     r0.put(ID, rec);
-                                    r1[0].add(ID);
                                 }
-                                if (CASEW3 > Short.MIN_VALUE) {
-                                    ID = new WIGB_WaAS_ID(CASEW1, CASEW3);
-                                    r1[1].add(ID);
-                                }
-                                if (CASEW2 > Short.MIN_VALUE) {
-                                    ID = new WIGB_WaAS_ID(CASEW1, CASEW2);
-                                    r1[2].add(ID);
-                                }
-                                if (CASEW1 > Short.MIN_VALUE) {
-                                    ID = new WIGB_WaAS_ID(CASEW1, CASEW1);
-                                    r1[3].add(ID);
-                                }
-                            } catch (ArrayIndexOutOfBoundsException e) {
-                                e.printStackTrace(System.err);
-                                System.err.println(line);
-                                //rec = new WIGB_WaAS_Wave4_HHOLD_Record(line); // For debugging
                             }
-                            break;
                         }
-                        case 3: {
-                            WIGB_WaAS_Wave3_HHOLD_Record rec;
-                            try {
-                                rec = new WIGB_WaAS_Wave3_HHOLD_Record(line);
-                                WIGB_WaAS_ID ID;
-                                short CASEW3 = rec.getCASEW3();
-                                short CASEW2 = rec.getCASEW2();
-                                short CASEW1 = rec.getCASEW1();
-                                if (CASEW1 > Short.MIN_VALUE) {
-                                    ID = new WIGB_WaAS_ID(CASEW1, CASEW3);
-                                    r0.put(ID, rec);
-                                    r1[0].add(ID);
+                    });
+            try {
+                br.close();
+            } catch (IOException ex) {
+                Logger.getLogger(WIGB_WaAS_HHOLD_Handler.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            System.out.println("</load wave " + wave + " " + TYPE + " WaAS "
+                    + "from " + f + ">");
+            cache(wave, cf, r);
+        }
+        return r;
+    }
+
+    /**
+     * Load Wave 2 household records that are reportedly in all 5 waves and some
+     * sets of WIGB_WaAS_ID for those records in multiple waves.
+     *
+     * @param wave
+     * @param s A set of CASEW1 values for all CASEW1 in Wave 5.
+     *
+     * @return r - an Object[] of length 2. r[0] is a TreeMap with keys as
+     * CASEW1 and values as WIGB_WaAS_Wave2_HHOLD_Records. r[1] is an array of
+     * TreeSet where: r[1][0] is a list of CASEW2 values, r[1][1] is a list of
+     * CASEW2 values.
+     */
+    public Object[] loadWave2(byte wave, Set<WIGB_WaAS_ID> s) {
+        Object[] r;
+        File cf;
+        cf = getGeneratedFile(wave);
+        if (cf.exists()) {
+            r = (Object[]) cache(wave, cf);
+        } else {
+            File f;
+            f = getInputFile(wave);
+            r = new Object[2];
+            TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave2_HHOLD_Record> r0;
+            r0 = new TreeMap<>();
+            r[0] = r0;
+            TreeSet<WIGB_WaAS_ID>[] r1;
+            r1 = new TreeSet[wave];
+            for (int i = 0; i < wave; i++) {
+                r1[i] = new TreeSet<>();
+            }
+            r[1] = r1;
+            System.out.println("<load wave " + wave + " " + TYPE + " WaAS "
+                    + "from " + f + ">");
+            BufferedReader br;
+            br = Generic_StaticIO.getBufferedReader(f);
+            br.lines()
+                    .skip(1) // Skip header
+                    .forEach(line -> {
+                        WIGB_WaAS_Wave2_HHOLD_Record rec;
+                        rec = new WIGB_WaAS_Wave2_HHOLD_Record(line);
+                        WIGB_WaAS_ID ID;
+                        short CASEW2 = rec.getCASEW2();
+                        short CASEW1 = rec.getCASEW1();
+                        if (CASEW1 > Short.MIN_VALUE) {
+                            WIGB_WaAS_ID ID2;
+                            ID2 = new WIGB_WaAS_ID(CASEW1, CASEW2);
+                            r1[0].add(ID2);
+                            ID = new WIGB_WaAS_ID(CASEW1, CASEW1);
+                            r1[1].add(ID);
+                            if (CASEW2 > Short.MIN_VALUE) {
+                                if (s.contains(ID)) {
+                                    r0.put(ID2, rec);
                                 }
-                                if (CASEW2 > Short.MIN_VALUE) {
-                                    ID = new WIGB_WaAS_ID(CASEW1, CASEW2);
-                                    r1[1].add(ID);
-                                }
-                                if (CASEW1 > Short.MIN_VALUE) {
-                                    ID = new WIGB_WaAS_ID(CASEW1, CASEW1);
-                                    r1[2].add(ID);
-                                }
-                            } catch (ArrayIndexOutOfBoundsException e) {
-                                e.printStackTrace(System.err);
-                                System.err.println(line);
-                                //rec = new WIGB_WaAS_Wave3_HHOLD_Record(line); // For debugging
                             }
-                            break;
                         }
-                        case 2: {
-                            WIGB_WaAS_Wave2_HHOLD_Record rec;
-                            try {
-                                rec = new WIGB_WaAS_Wave2_HHOLD_Record(line);
-                                WIGB_WaAS_ID ID;
-                                short CASEW2 = rec.getCASEW2();
-                                short CASEW1 = rec.getCASEW1();
-                                if (CASEW1 > Short.MIN_VALUE) {
-                                    ID = new WIGB_WaAS_ID(CASEW1, CASEW2);
-                                    r0.put(ID, rec);
-                                    r1[0].add(ID);
-                                    ID = new WIGB_WaAS_ID(CASEW1, CASEW1);
-                                    r1[1].add(ID);
-                                }
-                            } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
-                                e.printStackTrace(System.err);
-                                System.err.println(line);
-                                //rec = new WIGB_WaAS_Wave2_HHOLD_Record(line); // For debugging
+                    });
+            try {
+                br.close();
+            } catch (IOException ex) {
+                Logger.getLogger(WIGB_WaAS_HHOLD_Handler.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            System.out.println("</load wave " + wave + " " + TYPE + " WaAS "
+                    + "from " + f + ">");
+            cache(wave, cf, r);
+        }
+        return r;
+    }
+
+    /**
+     * Load Wave 2 household records that are reportedly in all 5 waves and some
+     * sets of WIGB_WaAS_ID for those records in multiple waves.
+     *
+     * @param wave
+     * @param s A set of CASEW1 values for all CASEW1 in Wave 5.
+     *
+     * @return r - an Object[] of length 2. r[0] is a TreeMap with keys as
+     * CASEW1 and values as WIGB_WaAS_Wave1_HHOLD_Records. r[1] is an array of
+     * TreeSet where: r[1][0] is a list of CASEW1 values.
+     */
+    public Object[] loadWave1(byte wave, Set<WIGB_WaAS_ID> s) {
+        Object[] r;
+        File cf;
+        cf = getGeneratedFile(wave);
+        if (cf.exists()) {
+            r = (Object[]) cache(wave, cf);
+        } else {
+            File f;
+            f = getInputFile(wave);
+            r = new Object[2];
+            TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave1_HHOLD_Record> r0;
+            r0 = new TreeMap<>();
+            r[0] = r0;
+            TreeSet<WIGB_WaAS_ID>[] r1;
+            r1 = new TreeSet[wave];
+            for (int i = 0; i < wave; i++) {
+                r1[i] = new TreeSet<>();
+            }
+            r[1] = r1;
+            System.out.println("<load wave " + wave + " " + TYPE + " WaAS "
+                    + "from " + f + ">");
+            BufferedReader br;
+            br = Generic_StaticIO.getBufferedReader(f);
+            br.lines()
+                    .skip(1) // Skip header
+                    .forEach(line -> {
+                        WIGB_WaAS_Wave1_HHOLD_Record rec;
+                        rec = new WIGB_WaAS_Wave1_HHOLD_Record(line);
+                        WIGB_WaAS_ID ID;
+                        short CASEW1 = rec.getCASEW1();
+                        if (CASEW1 > Short.MIN_VALUE) {
+                            ID = new WIGB_WaAS_ID(CASEW1, CASEW1);
+                            r1[0].add(ID);
+                            if (s.contains(ID)) {
+                                r0.put(ID, rec);
                             }
-                            // For debugging
-                            break;
                         }
-                        case 1: {
-                            WIGB_WaAS_Wave1_HHOLD_Record rec;
-                            try {
-                                rec = new WIGB_WaAS_Wave1_HHOLD_Record(line);
-                                WIGB_WaAS_ID ID;
-                                short CASEW1 = rec.getCASEW1();
-                                if (CASEW1 > Short.MIN_VALUE) {
-                                    ID = new WIGB_WaAS_ID(CASEW1, CASEW1);
-                                    r0.put(ID, rec);
-                                    r1[0].add(ID);
-                                }
-                            } catch (ArrayIndexOutOfBoundsException e) {
-                                e.printStackTrace(System.err);
-                                System.err.println(line);
-                                //rec = new WIGB_WaAS_Wave1_HHOLD_Record(line); // For debugging
-                            }
-                            break;
-                        }
-                        default:
-                            break;
-                    }
-                }
+                    });
+            try {
+                br.close();
+            } catch (IOException ex) {
+                Logger.getLogger(WIGB_WaAS_HHOLD_Handler.class.getName()).log(Level.SEVERE, null, ex);
             }
             System.out.println("</load wave " + wave + " " + TYPE + " WaAS "
                     + "from " + f + ">");

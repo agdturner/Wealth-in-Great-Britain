@@ -15,18 +15,22 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas;
 
+import java.io.File;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Iterator;
-import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
-import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Object;
+import uk.ac.leeds.ccg.andyt.generic.io.Generic_StaticIO;
+import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Strings;
+import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
 
 /**
  *
  * @author geoagdt
  */
-public class WIGB_WaAS_Data extends WIGB_Object {
+public class WIGB_WaAS_Data {
 
+    private final WIGB_Files Files;
+    private final WIGB_Strings Strings;
+    
     /**
      * Stores the number of waves in the WaAS
      */
@@ -53,7 +57,7 @@ public class WIGB_WaAS_Data extends WIGB_Object {
         if (data.containsKey(collectionID)) {
             r = data.get(collectionID);
         } else {
-            r = (WIGB_WaAS_Collection) Env.loadSubsetCollection(collectionID);
+            r = (WIGB_WaAS_Collection) loadSubsetCollection(collectionID);
             data.put(collectionID, r);
         }
         return r;
@@ -65,8 +69,9 @@ public class WIGB_WaAS_Data extends WIGB_Object {
         c = null;
     }
 
-    public WIGB_WaAS_Data(WIGB_Environment env) {
-        super(env);
+    public WIGB_WaAS_Data(WIGB_Files Files, WIGB_Strings Strings) {
+        this.Files = Files;
+        this.Strings = Strings;
         data = new HashMap<>();
         lookup = new HashMap<>();
     }
@@ -79,7 +84,7 @@ public class WIGB_WaAS_Data extends WIGB_Object {
             collectionID = ite.next();
             WIGB_WaAS_Collection c;
             c = data.get(collectionID);
-            Env.cacheSubsetCollection(collectionID, c);
+            cacheSubsetCollection(collectionID, c);
             c = null;
             return true;
         }
@@ -96,11 +101,65 @@ public class WIGB_WaAS_Data extends WIGB_Object {
             collectionID = ite.next();
             WIGB_WaAS_Collection c;
             c = data.get(collectionID);
-            Env.cacheSubsetCollection(collectionID, c);
+            cacheSubsetCollection(collectionID, c);
             c = null;
             r++;
         }
         return r;
+    }
+    
+    /**
+     *
+     * @param collectionID the value of collectionID
+     * @param o the value of o
+     */
+    public void cacheSubsetCollection(short collectionID, Object o) {
+        File dir;
+        dir = Files.getGeneratedWaASDirectory();
+        dir = new File(dir, "Subsets");
+        File cf;
+        cf = new File(dir, "WaAS_" + collectionID + "." + Strings.S_dat);
+        cache(cf, o);
+    }
+
+    /**
+     *
+     * @param collectionID the value of collectionID
+     * @return 
+     */
+    public Object loadSubsetCollection(short collectionID) {
+        Object r;
+        File dir;
+        dir = Files.getGeneratedWaASDirectory();
+        dir = new File(dir, "Subsets");
+        File cf;
+        cf = new File(dir, "WaAS_" + collectionID + "." + Strings.S_dat);
+        r = cache(cf);
+        return r;
+    }
+
+    /**
+     *
+     * @param cf the value of cf
+     * @return
+     */
+    protected Object cache(File cf) {
+        Object r;
+        System.out.println("<load from File " + cf + ">");
+        r = Generic_StaticIO.readObject(cf);
+        System.out.println("</load from File " + cf + ">");
+        return r;
+    }
+
+    /**
+     *
+     * @param cf the value of cf
+     * @param o the value of o
+     */
+    protected void cache(File cf, Object o) {
+        System.out.println("<cache in File " + cf + ">");
+        Generic_StaticIO.writeObject(o, cf);
+        System.out.println("</cache in File " + cf + ">");
     }
 
 }
