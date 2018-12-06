@@ -16,13 +16,12 @@
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas;
 
 import java.util.HashMap;
-import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Object;
 
 /**
  *
  * @author geoagdt
  */
-public class WIGB_WaAS_Collection extends WIGB_Object {
+public class WIGB_WaAS_Collection {
 
     private final short ID;
 

@@ -21,12 +21,13 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_StaticIO;
-import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
+import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Strings;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave1_HHOLD_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave2_HHOLD_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave3_HHOLD_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave4_HHOLD_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave5_HHOLD_Record;
+import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
 
 /**
  *
@@ -34,8 +35,8 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave5_HHOLD
  */
 public class WIGB_WaAS_HHOLD_Handler extends WIGB_WaAS_Handler {
 
-    public WIGB_WaAS_HHOLD_Handler(WIGB_Environment env, File indir) {
-        super(env);
+    public WIGB_WaAS_HHOLD_Handler(WIGB_Files Files, WIGB_Strings Strings, File indir) {
+        super(Files, Strings);
         TYPE = "hhold";
         INDIR = indir;
     }
@@ -88,10 +89,7 @@ public class WIGB_WaAS_HHOLD_Handler extends WIGB_WaAS_Handler {
             r0 = new TreeMap<>();
             r[0] = r0;
             TreeSet<WIGB_WaAS_ID>[] r1;
-            r1 = new TreeSet[wave];
-            for (int i = 0; i < wave; i++) {
-                r1[i] = new TreeSet<>();
-            }
+            r1 = getSets(wave);
             r[1] = r1;
             System.out.println("<load wave " + wave + " " + TYPE + " WaAS "
                     + "from " + f + ">");
@@ -142,11 +140,25 @@ public class WIGB_WaAS_HHOLD_Handler extends WIGB_WaAS_Handler {
         return r;
     }
 
+    /**
+     * 
+     * @param wave
+     * @return 
+     */
+    protected TreeSet<WIGB_WaAS_ID>[] getSets(byte wave) {
+        TreeSet<WIGB_WaAS_ID>[] r;
+        r = new TreeSet[wave];
+        for (int i = 0; i < wave; i++) {
+            r[i] = new TreeSet<>();
+        }
+        return r;
+    }
+
     protected File getGeneratedFile(short wave) {
         File dir;
-        dir = Env.Files.getGeneratedWaASDirectory();
+        dir = Files.getGeneratedWaASDirectory();
         File f;
-        f = new File(dir, TYPE + wave + "." + Env.Strings.S_dat);
+        f = new File(dir, TYPE + wave + "." + Strings.S_dat);
         return f;
     }
 
@@ -177,10 +189,7 @@ public class WIGB_WaAS_HHOLD_Handler extends WIGB_WaAS_Handler {
             r0 = new TreeMap<>();
             r[0] = r0;
             TreeSet<WIGB_WaAS_ID>[] r1;
-            r1 = new TreeSet[wave];
-            for (int i = 0; i < wave; i++) {
-                r1[i] = new TreeSet<>();
-            }
+            r1 = getSets(wave);
             r[1] = r1;
             System.out.println("<load wave " + wave + " " + TYPE + " WaAS "
                     + "from " + f + ">");
@@ -253,10 +262,7 @@ public class WIGB_WaAS_HHOLD_Handler extends WIGB_WaAS_Handler {
             r0 = new TreeMap<>();
             r[0] = r0;
             TreeSet<WIGB_WaAS_ID>[] r1;
-            r1 = new TreeSet[wave];
-            for (int i = 0; i < wave; i++) {
-                r1[i] = new TreeSet<>();
-            }
+            r1 = getSets(wave);
             r[1] = r1;
             System.out.println("<load wave " + wave + " " + TYPE + " WaAS "
                     + "from " + f + ">");
@@ -323,10 +329,7 @@ public class WIGB_WaAS_HHOLD_Handler extends WIGB_WaAS_Handler {
             r0 = new TreeMap<>();
             r[0] = r0;
             TreeSet<WIGB_WaAS_ID>[] r1;
-            r1 = new TreeSet[wave];
-            for (int i = 0; i < wave; i++) {
-                r1[i] = new TreeSet<>();
-            }
+            r1 = getSets(wave);
             r[1] = r1;
             System.out.println("<load wave " + wave + " " + TYPE + " WaAS "
                     + "from " + f + ">");
@@ -387,10 +390,7 @@ public class WIGB_WaAS_HHOLD_Handler extends WIGB_WaAS_Handler {
             r0 = new TreeMap<>();
             r[0] = r0;
             TreeSet<WIGB_WaAS_ID>[] r1;
-            r1 = new TreeSet[wave];
-            for (int i = 0; i < wave; i++) {
-                r1[i] = new TreeSet<>();
-            }
+            r1 = getSets(wave);
             r[1] = r1;
             System.out.println("<load wave " + wave + " " + TYPE + " WaAS "
                     + "from " + f + ">");
@@ -422,11 +422,8 @@ public class WIGB_WaAS_HHOLD_Handler extends WIGB_WaAS_Handler {
 
     public TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave1_HHOLD_Record> loadCacheSubsetWave1() {
         TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave1_HHOLD_Record> r;
-        File dir;
-        dir = Env.Files.getGeneratedWaASDirectory();
-        dir = new File(dir, "Subsets");
         File cf;
-        cf = new File(dir, TYPE + "1." + Env.Strings.S_dat);
+        cf = getFile(WIGB_WaAS_Data.W1);
         if (cf.exists()) {
             r = (TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave1_HHOLD_Record>) Generic_StaticIO.readObject(cf);
         } else {
@@ -435,13 +432,24 @@ public class WIGB_WaAS_HHOLD_Handler extends WIGB_WaAS_Handler {
         return r;
     }
 
+    /**
+     *
+     * @param wave
+     * @return
+     */
+    protected File getFile(byte wave) {
+        File r;
+        File dir;
+        dir = Files.getGeneratedWaASDirectory();
+        dir = new File(dir, "Subsets");
+        r = new File(dir, TYPE + wave + "." + Strings.S_dat);
+        return r;
+    }
+
     public TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave2_HHOLD_Record> loadCacheSubsetWave2() {
         TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave2_HHOLD_Record> r;
-        File dir;
-        dir = Env.Files.getGeneratedWaASDirectory();
-        dir = new File(dir, "Subsets");
         File cf;
-        cf = new File(dir, TYPE + "2." + Env.Strings.S_dat);
+        cf = getFile(WIGB_WaAS_Data.W2);
         if (cf.exists()) {
             r = (TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave2_HHOLD_Record>) Generic_StaticIO.readObject(cf);
         } else {
@@ -452,11 +460,8 @@ public class WIGB_WaAS_HHOLD_Handler extends WIGB_WaAS_Handler {
 
     public TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave3_HHOLD_Record> loadCacheSubsetWave3() {
         TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave3_HHOLD_Record> r;
-        File dir;
-        dir = Env.Files.getGeneratedWaASDirectory();
-        dir = new File(dir, "Subsets");
         File cf;
-        cf = new File(dir, TYPE + "3." + Env.Strings.S_dat);
+        cf = getFile(WIGB_WaAS_Data.W3);
         if (cf.exists()) {
             r = (TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave3_HHOLD_Record>) Generic_StaticIO.readObject(cf);
         } else {
@@ -467,11 +472,8 @@ public class WIGB_WaAS_HHOLD_Handler extends WIGB_WaAS_Handler {
 
     public TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave4_HHOLD_Record> loadCacheSubsetWave4() {
         TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave4_HHOLD_Record> r;
-        File dir;
-        dir = Env.Files.getGeneratedWaASDirectory();
-        dir = new File(dir, "Subsets");
         File cf;
-        cf = new File(dir, TYPE + "4." + Env.Strings.S_dat);
+        cf = getFile(WIGB_WaAS_Data.W4);
         if (cf.exists()) {
             r = (TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave4_HHOLD_Record>) Generic_StaticIO.readObject(cf);
         } else {
@@ -482,11 +484,8 @@ public class WIGB_WaAS_HHOLD_Handler extends WIGB_WaAS_Handler {
 
     public TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave5_HHOLD_Record> loadCacheSubsetWave5() {
         TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave5_HHOLD_Record> r;
-        File dir;
-        dir = Env.Files.getGeneratedWaASDirectory();
-        dir = new File(dir, "Subsets");
         File cf;
-        cf = new File(dir, TYPE + "5." + Env.Strings.S_dat);
+        cf = getFile(WIGB_WaAS_Data.W5);
         if (cf.exists()) {
             r = (TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave5_HHOLD_Record>) Generic_StaticIO.readObject(cf);
         } else {

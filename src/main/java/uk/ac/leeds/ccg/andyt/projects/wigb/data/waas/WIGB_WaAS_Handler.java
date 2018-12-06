@@ -17,20 +17,23 @@ package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas;
 
 import java.io.File;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_StaticIO;
-import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
-import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Object;
+import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Strings;
+import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
 
 /**
  *
  * @author geoagdt
  */
-public abstract class WIGB_WaAS_Handler extends WIGB_Object {
+public abstract class WIGB_WaAS_Handler {
 
+    protected final WIGB_Files Files;
+    protected final WIGB_Strings Strings;
     protected String TYPE;
     protected File INDIR;
 
-    public WIGB_WaAS_Handler(WIGB_Environment env) {
-        super(env);
+    public WIGB_WaAS_Handler(WIGB_Files Files, WIGB_Strings Strings) {
+        this.Files = Files;
+        this.Strings = Strings;
     }
 
     public File getInputFile(byte wave) {
@@ -65,29 +68,29 @@ public abstract class WIGB_WaAS_Handler extends WIGB_Object {
     
     public void cacheSubset(byte wave, Object o) {
         File dir;
-        dir = Env.Files.getGeneratedWaASDirectory();
+        dir = Files.getGeneratedWaASDirectory();
         dir = new File(dir, "Subsets");
         File cf;
-        cf = new File(dir, TYPE + wave + "." + Env.Strings.S_dat);
+        cf = new File(dir, TYPE + wave + "." + Strings.S_dat);
         cache(wave, cf, o);
     }
     
     public void cacheSubsetCollection(short collectionID, byte wave, Object o) {
         File dir;
-        dir = Env.Files.getGeneratedWaASDirectory();
+        dir = Files.getGeneratedWaASDirectory();
         dir = new File(dir, "Subsets");
         File cf;
-        cf = new File(dir, TYPE + wave + "_" + collectionID + "." + Env.Strings.S_dat);
+        cf = new File(dir, TYPE + wave + "_" + collectionID + "." + Strings.S_dat);
         WIGB_WaAS_Handler.this.cache(wave, cf, o);
     }
     
     public Object loadSubsetCollection(short collectionID, byte wave) {
         Object r;
         File dir;
-        dir = Env.Files.getGeneratedWaASDirectory();
+        dir = Files.getGeneratedWaASDirectory();
         dir = new File(dir, "Subsets");
         File cf;
-        cf = new File(dir, TYPE + wave + "_" + collectionID + "." + Env.Strings.S_dat);
+        cf = new File(dir, TYPE + wave + "_" + collectionID + "." + Strings.S_dat);
         r = cache(wave, cf);
         return r;
     }

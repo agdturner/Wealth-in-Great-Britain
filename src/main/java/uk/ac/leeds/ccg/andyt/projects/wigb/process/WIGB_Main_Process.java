@@ -17,14 +17,11 @@ package uk.ac.leeds.ccg.andyt.projects.wigb.process;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_StaticIO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Strings;
@@ -36,7 +33,6 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_Data;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_HHOLD_Handler;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_ID;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_PERSON_Handler;
-import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave1Or2Or3Or4Or5_HHOLD_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave1_HHOLD_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave2_HHOLD_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave3_HHOLD_Record;
@@ -98,7 +94,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         generateddir = Files.getGeneratedWaASDirectory();
         outdir = new File(generateddir, "Subsets");
         outdir.mkdirs();
-        hholdHandler = new WIGB_WaAS_HHOLD_Handler(Env, indir);
+        hholdHandler = new WIGB_WaAS_HHOLD_Handler(Env.Files, Env.Strings, indir);
 
         int chunkSize;
         chunkSize = 256; //1024; 512; 256;
@@ -175,7 +171,7 @@ public class WIGB_Main_Process extends WIGB_Object {
     public void doDataProcessingStep2(File indir, File outdir,
             WIGB_WaAS_HHOLD_Handler hholdHandler, int chunkSize) {
         WIGB_WaAS_PERSON_Handler personHandler;
-        personHandler = new WIGB_WaAS_PERSON_Handler(Env, indir);
+        personHandler = new WIGB_WaAS_PERSON_Handler(Env.Files, Env.Strings, indir);
         System.out.println("Merge Person and Household Data");
         int numberOfCollections = doDataProcessingStep2Wave1(
                 data, personHandler, indir, outdir, hholdHandler, chunkSize);

@@ -26,12 +26,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_StaticIO;
-import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
+import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Strings;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person.WIGB_WaAS_Wave1_PERSON_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person.WIGB_WaAS_Wave2_PERSON_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person.WIGB_WaAS_Wave3_PERSON_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person.WIGB_WaAS_Wave4_PERSON_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person.WIGB_WaAS_Wave5_PERSON_Record;
+import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
 
 /**
  *
@@ -39,8 +40,8 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person.WIGB_WaAS_Wave5_PERS
  */
 public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
 
-    public WIGB_WaAS_PERSON_Handler(WIGB_Environment env, File indir) {
-        super(env);
+    public WIGB_WaAS_PERSON_Handler(WIGB_Files Files, WIGB_Strings Strings, File indir) {
+        super(Files, Strings);
         TYPE = "person";
         INDIR = indir;
     }
@@ -644,10 +645,10 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
     public Object[] loadCacheSubset(byte wave) throws Exception {
         Object[] r;
         File dir;
-        dir = Env.Files.getGeneratedWaASDirectory();
+        dir = Files.getGeneratedWaASDirectory();
         dir = new File(dir, "Subsets");
         File cf;
-        cf = new File(dir, TYPE + wave + "." + Env.Strings.S_dat);
+        cf = new File(dir, TYPE + wave + "." + Strings.S_dat);
         if (cf.exists()) {
             r = (Object[]) Generic_StaticIO.readObject(cf);
         } else {
