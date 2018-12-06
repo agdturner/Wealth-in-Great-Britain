@@ -98,31 +98,99 @@ public class WIGB_Main_Process extends WIGB_Object {
         doDataProcessingStep3(outdir);
     }
 
+    /**
+     * Go through households for all waves and figure which ones have not
+     * significantly changed in terms of household composition. Having children
+     * and children leaving home is fine. Anything else is perhaps an issue.
+     *
+     * @param outdir
+     */
     public void doDataProcessingStep3(File outdir) {
         System.out.println(data.lookup.size());
         System.out.println(data.data.size());
-        /**
-         * Stream through the data and calculate the total value of UK Land in
-         * Wave 1.
-         */
-        /**
-         * tDVLUKVAL stores the total value of UK Land in Wave 1.
-         */
-        long tDVLUKVAL = data.data.keySet().stream()
+
+        long n = data.data.keySet().stream()
                 .mapToLong(cID -> {
                     WIGB_WaAS_Collection c;
                     c = data.getCollection(cID);
-                    long cDVLUKVAL = c.getData().keySet().stream()
+                    long nc = c.getData().keySet().stream()
                             .mapToLong(CASEW1 -> {
                                 WIGB_WaAS_Combined_Record cr;
                                 cr = c.getData().get(CASEW1);
                                 c.getData().get(CASEW1);
-                                return cr.w1Record.getHhold().getDVLUKVAL();
+                                try {
+                                byte w1 = cr.w1Record.getHhold().getNUMADULT();
+                                byte w2 = cr.w2Record.getHhold().getNUMADULT();
+                                byte w3 = cr.w3Record.getHhold().getNUMADULT();
+                                byte w4 = cr.w4Record.getHhold().getNUMADULT();
+                                byte w5 = cr.w5Record.getHhold().getNUMADULT();
+                                if (w1 == w2 && w2 == w3 && w3 == w4 && w4 == w5) {
+                                    return 1;
+                                } else {
+                                    return 0;
+                                }
+                                } catch (NullPointerException e) {
+                                    return 0;
+                                }
                             }).sum();
-                    data.clearCollection(cID);
-                    return cDVLUKVAL;  // Total value of UK Land in c.
+                    return nc;
                 }).sum();
-        System.out.println("Total value of UK Land in Wave 1 " + tDVLUKVAL);
+        System.out.println("There are " + n + " households that contain the "
+                + "same number of adults throughout");
+//        /**
+//         * Stream through the data and calculate the total value of UK Land in
+//         * Wave 1 households. This value is an aggregate of numerical class
+//         * values.
+//         */
+//        long tDVLUKVAL = data.data.keySet().stream()
+//                .mapToLong(cID -> {
+//                    WIGB_WaAS_Collection c;
+//                    c = data.getCollection(cID);
+//                    long cDVLUKVAL = c.getData().keySet().stream()
+//                            .mapToLong(CASEW1 -> {
+//                                WIGB_WaAS_Combined_Record cr;
+//                                cr = c.getData().get(CASEW1);
+//                                int DVLUKVAL;
+//                                DVLUKVAL = cr.w1Record.getHhold().getDVLUKVAL();
+//                                if (DVLUKVAL == Integer.MIN_VALUE) {
+//                                    DVLUKVAL = 0;
+//                                }
+//                                return DVLUKVAL;
+//                            }).sum();
+//                    data.clearCollection(cID);
+//                    return cDVLUKVAL;  // Total value of UK Land in c.
+//                }).sum();
+//        System.out.println("Total value of UK Land in Wave 1 " + tDVLUKVAL);
+        //
+//        /**
+//         * Stream through the data and calculate the total income in the last 12
+//         * months of all individual people. This value is an aggregate of
+//         * numerical class values.
+//         */
+//        long tFINCVB = data.data.keySet().stream()
+//                .mapToLong(cID -> {
+//                    WIGB_WaAS_Collection c;
+//                    c = data.getCollection(cID);
+//                    long cFINCVB = c.getData().keySet().stream()
+//                            .mapToLong(CASEW1 -> {
+//                                WIGB_WaAS_Combined_Record cr;
+//                                cr = c.getData().get(CASEW1);
+//                                long hFINCVB = cr.w1Record.getPeople().stream()
+//                                        .mapToLong(p -> {
+//                                            byte FINCVB;
+//                                            FINCVB = p.getFINCVB();
+//                                            //if (FINCVB == Byte.MIN_VALUE) {
+//                                            if (FINCVB < 0) {
+//                                                FINCVB = 0;
+//                                            }
+//                                            return FINCVB;
+//                                        }).sum();
+//                                return hFINCVB;
+//                            }).sum();
+//                    data.clearCollection(cID);
+//                    return cFINCVB;  // Total income in the last 12 months.
+//                }).sum();
+//        System.out.println("Total income in the last 12 months " + tFINCVB);
         /**
          * The main WaAS data store. Keys are Collection IDs.
          */
@@ -134,9 +202,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         addVariable(sDVLUKDEBT, vIDToVName, vNameToVID);
         String sDVLUKVAL = "DVLUKVAL";
         addVariable(sDVLUKVAL, vIDToVName, vNameToVID);
-                
-   
-                    
+
 //                    WIGB_WaAS_Combined_Record cr;
 //                    cr = c.getData().get(CASEW1);
 //                    //cr.w1Record.getHhold().getDVLUKDEBT(); // Debt on UK Land
@@ -157,7 +223,7 @@ public class WIGB_Main_Process extends WIGB_Object {
 //                });
     }
 
-      protected void addVariable(String s, TreeMap<Integer, String> vIDToVName,
+    protected void addVariable(String s, TreeMap<Integer, String> vIDToVName,
             TreeMap<String, Integer> vNameToVID) {
         vIDToVName.put(0, s);
         vNameToVID.put(s, 0);
