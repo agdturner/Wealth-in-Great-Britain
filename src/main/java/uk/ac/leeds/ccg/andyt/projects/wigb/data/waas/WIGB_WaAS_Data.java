@@ -30,7 +30,7 @@ public class WIGB_WaAS_Data {
 
     private final WIGB_Files Files;
     private final WIGB_Strings Strings;
-    
+
     /**
      * Stores the number of waves in the WaAS
      */
@@ -54,19 +54,17 @@ public class WIGB_WaAS_Data {
 
     public WIGB_WaAS_Collection getCollection(short collectionID) {
         WIGB_WaAS_Collection r;
-        if (data.containsKey(collectionID)) {
-            r = data.get(collectionID);
-        } else {
+        r = data.get(collectionID);
+        if (r == null) {
             r = (WIGB_WaAS_Collection) loadSubsetCollection(collectionID);
             data.put(collectionID, r);
         }
         return r;
     }
-    
-    public void clearCollection(short collectionID) {
+
+    public void clearCollection(short cID) {
         WIGB_WaAS_Collection c;
-        c = data.get(collectionID);
-        c = null;
+        data.put(cID, null);
     }
 
     public WIGB_WaAS_Data(WIGB_Files Files, WIGB_Strings Strings) {
@@ -79,13 +77,13 @@ public class WIGB_WaAS_Data {
     public boolean clearSomeData() {
         Iterator<Short> ite;
         ite = data.keySet().iterator();
-        short collectionID;
+        short cID;
         while (ite.hasNext()) {
-            collectionID = ite.next();
+            cID = ite.next();
             WIGB_WaAS_Collection c;
-            c = data.get(collectionID);
-            cacheSubsetCollection(collectionID, c);
-            c = null;
+            c = data.get(cID);
+            cacheSubsetCollection(cID, c);
+            data.put(cID, null);
             return true;
         }
         return false;
@@ -96,45 +94,45 @@ public class WIGB_WaAS_Data {
         r = 0;
         Iterator<Short> ite;
         ite = data.keySet().iterator();
-        short collectionID;
+        short cID;
         while (ite.hasNext()) {
-            collectionID = ite.next();
+            cID = ite.next();
             WIGB_WaAS_Collection c;
-            c = data.get(collectionID);
-            cacheSubsetCollection(collectionID, c);
-            c = null;
+            c = data.get(cID);
+            cacheSubsetCollection(cID, c);
+            data.put(cID, null);
             r++;
         }
         return r;
     }
-    
+
     /**
      *
-     * @param collectionID the value of collectionID
+     * @param cID the value of collectionID
      * @param o the value of o
      */
-    public void cacheSubsetCollection(short collectionID, Object o) {
+    public void cacheSubsetCollection(short cID, Object o) {
         File dir;
         dir = Files.getGeneratedWaASDirectory();
         dir = new File(dir, "Subsets");
-        File cf;
-        cf = new File(dir, "WaAS_" + collectionID + "." + Strings.S_dat);
-        cache(cf, o);
+        File f;
+        f = new File(dir, "WaAS_" + cID + "." + Strings.S_dat);
+        cache(f, o);
     }
 
     /**
      *
-     * @param collectionID the value of collectionID
-     * @return 
+     * @param cID the value of collectionID
+     * @return
      */
-    public Object loadSubsetCollection(short collectionID) {
+    public Object loadSubsetCollection(short cID) {
         Object r;
         File dir;
         dir = Files.getGeneratedWaASDirectory();
         dir = new File(dir, "Subsets");
-        File cf;
-        cf = new File(dir, "WaAS_" + collectionID + "." + Strings.S_dat);
-        r = cache(cf);
+        File f;
+        f = new File(dir, "WaAS_" + cID + "." + Strings.S_dat);
+        r = load(f);
         return r;
     }
 
@@ -143,7 +141,7 @@ public class WIGB_WaAS_Data {
      * @param cf the value of cf
      * @return
      */
-    protected Object cache(File cf) {
+    protected Object load(File cf) {
         Object r;
         System.out.println("<load from File " + cf + ">");
         r = Generic_StaticIO.readObject(cf);

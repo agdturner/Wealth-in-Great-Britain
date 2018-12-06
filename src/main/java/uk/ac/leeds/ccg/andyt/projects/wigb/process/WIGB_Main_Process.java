@@ -173,16 +173,16 @@ public class WIGB_Main_Process extends WIGB_Object {
         WIGB_WaAS_PERSON_Handler personHandler;
         personHandler = new WIGB_WaAS_PERSON_Handler(Env.Files, Env.Strings, indir);
         System.out.println("Merge Person and Household Data");
-        int numberOfCollections = doDataProcessingStep2Wave1(
+        int nOC = doDataProcessingStep2Wave1(
                 data, personHandler, indir, outdir, hholdHandler, chunkSize);
         doDataProcessingStep2Wave2(
-                data, personHandler, indir, outdir, hholdHandler, numberOfCollections);
+                data, personHandler, indir, outdir, hholdHandler, nOC);
         doDataProcessingStep2Wave3(
-                data, personHandler, indir, outdir, hholdHandler, numberOfCollections);
+                data, personHandler, indir, outdir, hholdHandler, nOC);
         doDataProcessingStep2Wave4(
-                data, personHandler, indir, outdir, hholdHandler, numberOfCollections);
+                data, personHandler, indir, outdir, hholdHandler, nOC);
         doDataProcessingStep2Wave5(
-                data, personHandler, indir, outdir, hholdHandler, numberOfCollections);
+                data, personHandler, indir, outdir, hholdHandler, nOC);
         data.clearAllData();
         Env.cacheData();
     }
@@ -203,33 +203,32 @@ public class WIGB_Main_Process extends WIGB_Object {
             WIGB_WaAS_PERSON_Handler personHandler,
             File indir, File outdir,
             WIGB_WaAS_HHOLD_Handler hholdHandler, int chunkSize) {
-        int numberOfCollections;
         System.out.println("Wave 1");
         TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave1_HHOLD_Record> hs;
         hs = hholdHandler.loadCacheSubsetWave1();
         Set<WIGB_WaAS_ID> set;
         set = hs.keySet();
-        numberOfCollections = (int) Math.ceil((double) set.size() / (double) chunkSize);
+        int nOC;
+        nOC = (int) Math.ceil((double) set.size() / (double) chunkSize);
         Object[] ps;
-        ps = personHandler.loadSubsetWave1(set,
-                numberOfCollections, WIGB_WaAS_Data.W1, outdir);
-        HashMap<Short, Set<WIGB_WaAS_ID>> collectionIDSets;
-        collectionIDSets = (HashMap<Short, Set<WIGB_WaAS_ID>>) ps[0];
-        HashMap<Short, File> collectionIDFiles;
-        collectionIDFiles = (HashMap<Short, File>) ps[1];
-        collectionIDSets.keySet().stream()
-                .forEach(collectionID -> {
-                    System.out.println("collectionID " + collectionID);
+        ps = personHandler.loadSubsetWave1(set, nOC, WIGB_WaAS_Data.W1, outdir);
+        HashMap<Short, Set<WIGB_WaAS_ID>> cIDs;
+        cIDs = (HashMap<Short, Set<WIGB_WaAS_ID>>) ps[0];
+        HashMap<Short, File> cFs;
+        cFs = (HashMap<Short, File>) ps[1];
+        cIDs.keySet().stream()
+                .forEach(cID -> {
+                    System.out.println("collectionID " + cID);
                     WIGB_WaAS_Collection c;
-                    c = new WIGB_WaAS_Collection(collectionID);
-                    data.data.put(collectionID, c);
+                    c = new WIGB_WaAS_Collection(cID);
+                    data.data.put(cID, c);
                     // Add household records.
                     Set<WIGB_WaAS_ID> s;
-                    s = collectionIDSets.get(collectionID);
+                    s = cIDs.get(cID);
                     s.stream()
                             .forEach(ID -> {
                                 short CASEW1 = ID.getCASEW1();
-                                data.lookup.put(CASEW1, collectionID);
+                                data.lookup.put(CASEW1, cID);
                                 HashMap<Short, WIGB_WaAS_Combined_Record> m;
                                 m = c.getData();
                                 WIGB_WaAS_Combined_Record cr;
@@ -243,7 +242,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                     // Add person records.
                     File f;
                     BufferedReader br;
-                    f = collectionIDFiles.get(collectionID);
+                    f = cFs.get(cID);
                     br = Generic_StaticIO.getBufferedReader(f);
                     br.lines()
                             .skip(1) // Skip header.
@@ -260,49 +259,49 @@ public class WIGB_Main_Process extends WIGB_Object {
                             });
                     // Close br
                     Generic_StaticIO.closeBufferedReader(br);
-                    data.clearCollection(collectionID);
+                    // Cache and clear collection
+                    data.cacheSubsetCollection(cID, c);
+                    data.clearCollection(cID);
                 });
 
-        return numberOfCollections;
+        return nOC;
     }
 
     /**
-     * Merge Person and Household Data for Wave 1.
+     * Merge Person and Household Data for Wave 2.
      *
      * @param data
      * @param personHandler
      * @param indir
      * @param outdir
      * @param hholdHandler
-     * @param numberOfCollections
+     * @param nOC
      */
-    public static void doDataProcessingStep2Wave2(
-            WIGB_WaAS_Data data,
-            WIGB_WaAS_PERSON_Handler personHandler,
-            File indir, File outdir,
-            WIGB_WaAS_HHOLD_Handler hholdHandler, int numberOfCollections) {
+    public static void doDataProcessingStep2Wave2(WIGB_WaAS_Data data,
+            WIGB_WaAS_PERSON_Handler personHandler, File indir, File outdir,
+            WIGB_WaAS_HHOLD_Handler hholdHandler, int nOC) {
         System.out.println("Wave 2");
         TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave2_HHOLD_Record> hs;
         hs = hholdHandler.loadCacheSubsetWave2();
         Object[] ps;
-        ps = personHandler.loadSubsetWave2(hs.keySet(),
-                numberOfCollections, WIGB_WaAS_Data.W2, outdir);
-        HashMap<Short, Set<WIGB_WaAS_ID>> collectionIDSets;
-        collectionIDSets = (HashMap<Short, Set<WIGB_WaAS_ID>>) ps[0];
-        HashMap<Short, File> collectionIDFiles;
-        collectionIDFiles = (HashMap<Short, File>) ps[1];
-        collectionIDSets.keySet().stream()
-                .forEach(collectionID -> {
-                    System.out.println("collectionID " + collectionID);
+        ps = personHandler.loadSubsetWave2(hs.keySet(), nOC, WIGB_WaAS_Data.W2, 
+                outdir);
+        HashMap<Short, Set<WIGB_WaAS_ID>> cIDs;
+        cIDs = (HashMap<Short, Set<WIGB_WaAS_ID>>) ps[0];
+        HashMap<Short, File> cFs;
+        cFs = (HashMap<Short, File>) ps[1];
+        cIDs.keySet().stream()
+                .forEach(cID -> {
+                    System.out.println("collectionID " + cID);
                     WIGB_WaAS_Collection c;
-                    c = data.getCollection(collectionID);
+                    c = data.getCollection(cID);
                     // Add household records.
                     Set<WIGB_WaAS_ID> s;
-                    s = collectionIDSets.get(collectionID);
+                    s = cIDs.get(cID);
                     s.stream()
                             .forEach(ID -> {
                                 short CASEW1 = ID.getCASEW1();
-                                data.lookup.put(CASEW1, collectionID);
+                                data.lookup.put(CASEW1, cID);
                                 HashMap<Short, WIGB_WaAS_Combined_Record> m;
                                 m = c.getData();
                                 WIGB_WaAS_Combined_Record cr;
@@ -319,7 +318,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                     // Add person records.
                     File f;
                     BufferedReader br;
-                    f = collectionIDFiles.get(collectionID);
+                    f = cFs.get(cID);
                     br = Generic_StaticIO.getBufferedReader(f);
                     br.lines()
                             .skip(1) // Skip header.
@@ -345,7 +344,9 @@ public class WIGB_Main_Process extends WIGB_Object {
                             });
                     // Close br
                     Generic_StaticIO.closeBufferedReader(br);
-                    data.clearCollection(collectionID);
+                    // Cache and clear collection
+                    data.cacheSubsetCollection(cID, c);
+                    data.clearCollection(cID);
                 });
     }
 
@@ -357,35 +358,33 @@ public class WIGB_Main_Process extends WIGB_Object {
      * @param indir
      * @param outdir
      * @param hholdHandler
-     * @param numberOfCollections
+     * @param nOC
      */
-    public static void doDataProcessingStep2Wave3(
-            WIGB_WaAS_Data data,
-            WIGB_WaAS_PERSON_Handler personHandler,
-            File indir, File outdir,
-            WIGB_WaAS_HHOLD_Handler hholdHandler, int numberOfCollections) {
+    public static void doDataProcessingStep2Wave3(WIGB_WaAS_Data data,
+            WIGB_WaAS_PERSON_Handler personHandler, File indir, File outdir,
+            WIGB_WaAS_HHOLD_Handler hholdHandler, int nOC) {
         System.out.println("Wave 3");
         TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave3_HHOLD_Record> hs;
         hs = hholdHandler.loadCacheSubsetWave3();
         Object[] ps;
-        ps = personHandler.loadSubsetWave3(hs.keySet(),
-                numberOfCollections, WIGB_WaAS_Data.W3, outdir);
-        HashMap<Short, Set<WIGB_WaAS_ID>> collectionIDSets;
-        collectionIDSets = (HashMap<Short, Set<WIGB_WaAS_ID>>) ps[0];
-        HashMap<Short, File> collectionIDFiles;
-        collectionIDFiles = (HashMap<Short, File>) ps[1];
-        collectionIDSets.keySet().stream()
-                .forEach(collectionID -> {
-                    System.out.println("collectionID " + collectionID);
+        ps = personHandler.loadSubsetWave3(hs.keySet(), nOC, WIGB_WaAS_Data.W3,
+                outdir);
+        HashMap<Short, Set<WIGB_WaAS_ID>> cIDs;
+        cIDs = (HashMap<Short, Set<WIGB_WaAS_ID>>) ps[0];
+        HashMap<Short, File> cFs;
+        cFs = (HashMap<Short, File>) ps[1];
+        cIDs.keySet().stream()
+                .forEach(cID -> {
+                    System.out.println("collectionID " + cID);
                     WIGB_WaAS_Collection c;
-                    c = data.getCollection(collectionID);
+                    c = data.getCollection(cID);
                     // Add household records.
                     Set<WIGB_WaAS_ID> s;
-                    s = collectionIDSets.get(collectionID);
+                    s = cIDs.get(cID);
                     s.stream()
                             .forEach(ID -> {
                                 short CASEW1 = ID.getCASEW1();
-                                data.lookup.put(CASEW1, collectionID);
+                                data.lookup.put(CASEW1, cID);
                                 HashMap<Short, WIGB_WaAS_Combined_Record> m;
                                 m = c.getData();
                                 WIGB_WaAS_Combined_Record cr;
@@ -402,7 +401,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                     // Add person records.
                     File f;
                     BufferedReader br;
-                    f = collectionIDFiles.get(collectionID);
+                    f = cFs.get(cID);
                     br = Generic_StaticIO.getBufferedReader(f);
                     br.lines()
                             .skip(1) // Skip header.
@@ -428,7 +427,9 @@ public class WIGB_Main_Process extends WIGB_Object {
                             });
                     // Close br
                     Generic_StaticIO.closeBufferedReader(br);
-                    data.clearCollection(collectionID);
+                    // Cache and clear collection
+                    data.cacheSubsetCollection(cID, c);
+                    data.clearCollection(cID);
                 });
     }
 
@@ -440,36 +441,36 @@ public class WIGB_Main_Process extends WIGB_Object {
      * @param indir
      * @param outdir
      * @param hholdHandler
-     * @param numberOfCollections
+     * @param nOC
      */
     public static void doDataProcessingStep2Wave4(
             WIGB_WaAS_Data data,
             WIGB_WaAS_PERSON_Handler personHandler,
             File indir, File outdir,
-            WIGB_WaAS_HHOLD_Handler hholdHandler, int numberOfCollections) {
+            WIGB_WaAS_HHOLD_Handler hholdHandler, int nOC) {
         // Wave 4
         System.out.println("Wave 4");
         TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave4_HHOLD_Record> hs;
         hs = hholdHandler.loadCacheSubsetWave4();
         Object[] ps;
-        ps = personHandler.loadSubsetWave4(hs.keySet(),
-                numberOfCollections, WIGB_WaAS_Data.W4, outdir);
-        HashMap<Short, Set<WIGB_WaAS_ID>> collectionIDSets;
-        collectionIDSets = (HashMap<Short, Set<WIGB_WaAS_ID>>) ps[0];
-        HashMap<Short, File> collectionIDFiles;
-        collectionIDFiles = (HashMap<Short, File>) ps[1];
-        collectionIDSets.keySet().stream()
-                .forEach(collectionID -> {
-                    System.out.println("collectionID " + collectionID);
+        ps = personHandler.loadSubsetWave4(hs.keySet(), nOC, WIGB_WaAS_Data.W4,
+                outdir);
+        HashMap<Short, Set<WIGB_WaAS_ID>> cIDs;
+        cIDs = (HashMap<Short, Set<WIGB_WaAS_ID>>) ps[0];
+        HashMap<Short, File> cFs;
+        cFs = (HashMap<Short, File>) ps[1];
+        cIDs.keySet().stream()
+                .forEach(cID -> {
+                    System.out.println("collectionID " + cID);
                     WIGB_WaAS_Collection c;
-                    c = data.getCollection(collectionID);
+                    c = data.getCollection(cID);
                     // Add household records.
                     Set<WIGB_WaAS_ID> s;
-                    s = collectionIDSets.get(collectionID);
+                    s = cIDs.get(cID);
                     s.stream()
                             .forEach(ID -> {
                                 short CASEW1 = ID.getCASEW1();
-                                data.lookup.put(CASEW1, collectionID);
+                                data.lookup.put(CASEW1, cID);
                                 HashMap<Short, WIGB_WaAS_Combined_Record> m;
                                 m = c.getData();
                                 WIGB_WaAS_Combined_Record cr;
@@ -486,7 +487,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                     // Add person records.
                     File f;
                     BufferedReader br;
-                    f = collectionIDFiles.get(collectionID);
+                    f = cFs.get(cID);
                     br = Generic_StaticIO.getBufferedReader(f);
                     br.lines()
                             .skip(1) // Skip header.
@@ -512,7 +513,9 @@ public class WIGB_Main_Process extends WIGB_Object {
                             });
                     // Close br
                     Generic_StaticIO.closeBufferedReader(br);
-                    data.clearCollection(collectionID);
+                    // Cache and clear collection
+                    data.cacheSubsetCollection(cID, c);
+                    data.clearCollection(cID);
                 });
     }
 
@@ -524,33 +527,33 @@ public class WIGB_Main_Process extends WIGB_Object {
      * @param indir
      * @param outdir
      * @param hholdHandler
-     * @param numberOfCollections
+     * @param cOC
      */
     public static void doDataProcessingStep2Wave5(
             WIGB_WaAS_Data data,
             WIGB_WaAS_PERSON_Handler personHandler,
             File indir, File outdir,
-            WIGB_WaAS_HHOLD_Handler hholdHandler, int numberOfCollections) {
+            WIGB_WaAS_HHOLD_Handler hholdHandler, int cOC) {
         TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave5_HHOLD_Record> hs;
         hs = hholdHandler.loadCacheSubsetWave5();
         Object[] ps;
-        ps = personHandler.loadSubsetWave5(hs.keySet(),
-                numberOfCollections, WIGB_WaAS_Data.W5, outdir);
-        HashMap<Short, Set<WIGB_WaAS_ID>> collectionIDSets;
-        collectionIDSets = (HashMap<Short, Set<WIGB_WaAS_ID>>) ps[0];
-        HashMap<Short, File> collectionIDFiles;
-        collectionIDFiles = (HashMap<Short, File>) ps[1];
-        collectionIDSets.keySet().stream()
-                .forEach(collectionID -> {
+        ps = personHandler.loadSubsetWave5(hs.keySet(), cOC, WIGB_WaAS_Data.W5,
+                outdir);
+        HashMap<Short, Set<WIGB_WaAS_ID>> cIDs;
+        cIDs = (HashMap<Short, Set<WIGB_WaAS_ID>>) ps[0];
+        HashMap<Short, File> cFs;
+        cFs = (HashMap<Short, File>) ps[1];
+        cIDs.keySet().stream()
+                .forEach(cID -> {
                     WIGB_WaAS_Collection c;
-                    c = data.getCollection(collectionID);
+                    c = data.getCollection(cID);
                     // Add household records.
                     Set<WIGB_WaAS_ID> s;
-                    s = collectionIDSets.get(collectionID);
+                    s = cIDs.get(cID);
                     s.stream()
                             .forEach(ID -> {
                                 short CASEW1 = ID.getCASEW1();
-                                data.lookup.put(CASEW1, collectionID);
+                                data.lookup.put(CASEW1, cID);
                                 HashMap<Short, WIGB_WaAS_Combined_Record> m;
                                 m = c.getData();
                                 WIGB_WaAS_Combined_Record cr;
@@ -567,7 +570,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                     // Add person records.
                     File f;
                     BufferedReader br;
-                    f = collectionIDFiles.get(collectionID);
+                    f = cFs.get(cID);
                     br = Generic_StaticIO.getBufferedReader(f);
                     br.lines()
                             .skip(1) // Skip header.
@@ -593,7 +596,9 @@ public class WIGB_Main_Process extends WIGB_Object {
                             });
                     // Close br
                     Generic_StaticIO.closeBufferedReader(br);
-                    data.clearCollection(collectionID);
+                    // Cache and clear collection
+                    data.cacheSubsetCollection(cID, c);
+                    data.clearCollection(cID);
                 });
     }
 

@@ -632,27 +632,23 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
         Object[] r;
         r = new Object[nwaves];
         for (byte wave = 1; wave <= nwaves; wave++) {
-            try {
-                // Load Waves 1 to 5 inclusive.
-                r[wave] = loadCacheSubset(wave);
-            } catch (Exception ex) {
-                Logger.getLogger(WIGB_WaAS_PERSON_Handler.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            // Load Waves 1 to 5 inclusive.
+            r[wave] = loadSubset(wave);
         }
         return r;
     }
 
-    public Object[] loadCacheSubset(byte wave) throws Exception {
+    public Object[] loadSubset(byte wave) {
         Object[] r;
         File dir;
         dir = Files.getGeneratedWaASDirectory();
         dir = new File(dir, "Subsets");
-        File cf;
-        cf = new File(dir, TYPE + wave + "." + Strings.S_dat);
-        if (cf.exists()) {
-            r = (Object[]) Generic_StaticIO.readObject(cf);
+        File f;
+        f = new File(dir, TYPE + wave + "." + Strings.S_dat);
+        if (f.exists()) {
+            r = (Object[]) Generic_StaticIO.readObject(f);
         } else {
-            throw new Exception("Subset for Wave " + wave + " not found!");
+            r = null;
         }
         return r;
     }

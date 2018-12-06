@@ -15,13 +15,14 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas;
 
+import java.io.Serializable;
 import java.util.HashMap;
 
 /**
  *
  * @author geoagdt
  */
-public class WIGB_WaAS_Collection {
+public class WIGB_WaAS_Collection implements Serializable {
 
     private final short ID;
 
