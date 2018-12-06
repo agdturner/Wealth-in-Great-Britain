@@ -26,8 +26,8 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
  */
 public abstract class WIGB_WaAS_Handler {
 
-    protected final WIGB_Files Files;
-    protected final WIGB_Strings Strings;
+    public transient WIGB_Files Files;
+    public transient WIGB_Strings Strings;
     protected String TYPE;
     protected File INDIR;
 

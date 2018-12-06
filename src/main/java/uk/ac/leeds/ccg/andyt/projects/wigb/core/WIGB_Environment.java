@@ -16,11 +16,9 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
         implements Serializable {
 
     public transient Generic_Environment ge;
-
     public transient WIGB_Strings Strings;
     public transient WIGB_Files Files;
-    public transient Generic_UKPostcode_Handler PostcodeHandler;
-
+    
     /**
      * Data.
      */
@@ -33,11 +31,13 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
         Strings = new WIGB_Strings();
         Files = new WIGB_Files(Strings, Strings.getS_data());
         ge = new Generic_Environment(Files, Strings);
-        PostcodeHandler = new Generic_UKPostcode_Handler();
         File f;
         f = Files.getEnvDataFile();
         if (f.exists()) {
             loadData();
+            data.Files = Files;
+            data.Files.Strings = Strings;
+            data.Strings = Strings;
         } else {
             data = new WIGB_WaAS_Data(Files, Strings);
         }

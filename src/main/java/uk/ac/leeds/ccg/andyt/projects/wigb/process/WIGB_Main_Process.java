@@ -51,9 +51,9 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person.WIGB_WaAS_Wave5_PERS
 public class WIGB_Main_Process extends WIGB_Object {
 
     // For convenience
-    protected WIGB_WaAS_Data data;
-    protected WIGB_Strings Strings;
-    protected WIGB_Files Files;
+    protected final WIGB_WaAS_Data data;
+    protected final WIGB_Strings Strings;
+    protected final WIGB_Files Files;
 
     public WIGB_Main_Process(WIGB_Environment env) {
         super(env);
@@ -71,11 +71,6 @@ public class WIGB_Main_Process extends WIGB_Object {
         // Main switches
         //p.doJavaCodeGeneration = true;
         p.doLoadDataIntoCaches = true; // rename/reuse just left here for convenience...
-//        // For adding back collection keys.
-//        for (short s = 0; s < 18; s ++ ){
-//            p.Env.data.data.put(s, null);
-//        }
-//        p.Env.cacheData();
         p.run();
     }
 
@@ -98,48 +93,50 @@ public class WIGB_Main_Process extends WIGB_Object {
 
         int chunkSize;
         chunkSize = 256; //1024; 512; 256;
-        //doDataProcessingStep1(indir, outdir, hholdHandler);
-        doDataProcessingStep2(indir, outdir, hholdHandler, chunkSize);
-//        doDataProcessingStep3(indir, outdir, hholdHandler, chunkSize);
+//        doDataProcessingStep1(indir, outdir, hholdHandler);
+//        doDataProcessingStep2(indir, outdir, hholdHandler, chunkSize);
+        doDataProcessingStep3(outdir);
     }
 
-    public void doDataProcessingStep3(File indir, File outdir,
-            WIGB_WaAS_HHOLD_Handler hholdHandler, int chunkSize) {
-        System.out.println(Env.data.lookup.size());
-        System.out.println(Env.data.data.size());
-//        // This way although good in that it uses streams is inefficient as is 
-//        // due to repetitive loading and caching of data.
-//        long tDVLUKVAL = Env.data.lookup.entrySet().stream()
-//                .mapToLong(o -> {
-//                    Env.checkAndMaybeFreeMemory();
-//                    short CASEW1 = o.getKey();
-//                    short collectionID = Env.data.lookup.get(CASEW1);
-//                    WIGB_WaAS_Collection c;
-//                    c = Env.data.getCollection(collectionID);
-//                    WIGB_WaAS_Combined_Record cr;
-//                    cr = c.getData().get(CASEW1);
-//                    return cr.w1Record.getHhold().getDVLUKVAL();  // Value of UK Land
-//                }).sum();
-//        System.out.println("tDVLUKVAL " + tDVLUKVAL);
-        // This way although good in that it uses streams is inefficient as is 
-        // due to repetitive loading and caching of data.
-        long total_DVLUKVAL = Env.data.data.keySet().stream()
-                .mapToLong(collectionID -> {
+    public void doDataProcessingStep3(File outdir) {
+        System.out.println(data.lookup.size());
+        System.out.println(data.data.size());
+        /**
+         * Stream through the data and calculate the total value of UK Land in
+         * Wave 1.
+         */
+        /**
+         * tDVLUKVAL stores the total value of UK Land in Wave 1.
+         */
+        long tDVLUKVAL = data.data.keySet().stream()
+                .mapToLong(cID -> {
                     WIGB_WaAS_Collection c;
-                    c = Env.data.getCollection(collectionID);
-                    long tDVLUKVAL = c.getData().keySet().stream()
+                    c = data.getCollection(cID);
+                    long cDVLUKVAL = c.getData().keySet().stream()
                             .mapToLong(CASEW1 -> {
                                 WIGB_WaAS_Combined_Record cr;
                                 cr = c.getData().get(CASEW1);
                                 c.getData().get(CASEW1);
-                                return cr.w1Record.getHhold().getDVLUKVAL();  // Value of UK Land
+                                return cr.w1Record.getHhold().getDVLUKVAL();
                             }).sum();
-                    Env.data.clearCollection(collectionID);
-                    return tDVLUKVAL;  // Value of UK Land
+                    data.clearCollection(cID);
+                    return cDVLUKVAL;  // Total value of UK Land in c.
                 }).sum();
-        System.out.println("total_DVLUKVAL " + total_DVLUKVAL);
-//        .forEach(CASEW1 -> {
-//                    
+        System.out.println("Total value of UK Land in Wave 1 " + tDVLUKVAL);
+        /**
+         * The main WaAS data store. Keys are Collection IDs.
+         */
+        TreeMap<Integer, String> vIDToVName;
+        TreeMap<String, Integer> vNameToVID;
+        vIDToVName = new TreeMap<>();
+        vNameToVID = new TreeMap<>();
+        String sDVLUKDEBT = "DVLUKDEBT";
+        addVariable(sDVLUKDEBT, vIDToVName, vNameToVID);
+        String sDVLUKVAL = "DVLUKVAL";
+        addVariable(sDVLUKVAL, vIDToVName, vNameToVID);
+                
+   
+                    
 //                    WIGB_WaAS_Combined_Record cr;
 //                    cr = c.getData().get(CASEW1);
 //                    //cr.w1Record.getHhold().getDVLUKDEBT(); // Debt on UK Land
@@ -160,6 +157,12 @@ public class WIGB_Main_Process extends WIGB_Object {
 //                });
     }
 
+      protected void addVariable(String s, TreeMap<Integer, String> vIDToVName,
+            TreeMap<String, Integer> vNameToVID) {
+        vIDToVName.put(0, s);
+        vNameToVID.put(s, 0);
+    }
+
     /**
      * Merge Person and Household Data
      *
@@ -171,7 +174,7 @@ public class WIGB_Main_Process extends WIGB_Object {
     public void doDataProcessingStep2(File indir, File outdir,
             WIGB_WaAS_HHOLD_Handler hholdHandler, int chunkSize) {
         WIGB_WaAS_PERSON_Handler personHandler;
-        personHandler = new WIGB_WaAS_PERSON_Handler(Env.Files, Env.Strings, indir);
+        personHandler = new WIGB_WaAS_PERSON_Handler(Files, Strings, indir);
         System.out.println("Merge Person and Household Data");
         int nOC = doDataProcessingStep2Wave1(
                 data, personHandler, indir, outdir, hholdHandler, chunkSize);
@@ -183,7 +186,8 @@ public class WIGB_Main_Process extends WIGB_Object {
                 data, personHandler, indir, outdir, hholdHandler, nOC);
         doDataProcessingStep2Wave5(
                 data, personHandler, indir, outdir, hholdHandler, nOC);
-        data.clearAllData();
+        System.out.println(data.lookup.size());
+        System.out.println(data.data.size());
         Env.cacheData();
     }
 
@@ -284,7 +288,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave2_HHOLD_Record> hs;
         hs = hholdHandler.loadCacheSubsetWave2();
         Object[] ps;
-        ps = personHandler.loadSubsetWave2(hs.keySet(), nOC, WIGB_WaAS_Data.W2, 
+        ps = personHandler.loadSubsetWave2(hs.keySet(), nOC, WIGB_WaAS_Data.W2,
                 outdir);
         HashMap<Short, Set<WIGB_WaAS_ID>> cIDs;
         cIDs = (HashMap<Short, Set<WIGB_WaAS_ID>>) ps[0];

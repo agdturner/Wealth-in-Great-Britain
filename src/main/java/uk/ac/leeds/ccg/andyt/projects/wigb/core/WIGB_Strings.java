@@ -15,13 +15,14 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.core;
 
+import java.io.Serializable;
 import uk.ac.leeds.ccg.andyt.generic.core.Generic_Strings;
 
 /**
  *
  * @author geoagdt
  */
-public class WIGB_Strings extends Generic_Strings {
+public class WIGB_Strings extends Generic_Strings implements Serializable {
 
     /*
      * General names.

@@ -16,6 +16,7 @@
 package uk.ac.leeds.ccg.andyt.projects.wigb.io;
 
 import java.io.File;
+import java.io.Serializable;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_Files;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Strings;
 
@@ -23,16 +24,10 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Strings;
  *
  * @author geoagdt
  */
-public class WIGB_Files extends Generic_Files {
+public class WIGB_Files extends Generic_Files implements Serializable {
 
-    protected transient WIGB_Strings Strings;
+    public transient WIGB_Strings Strings;
 
-    protected WIGB_Files() {
-    }
-
-//    public LR_Files(LR_Strings Strings) {
-//        this.Strings = Strings;
-//    }
     /**
      *
      * @param s

@@ -16,6 +16,7 @@
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas;
 
 import java.io.File;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Iterator;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_StaticIO;
@@ -26,10 +27,10 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
  *
  * @author geoagdt
  */
-public class WIGB_WaAS_Data {
+public class WIGB_WaAS_Data implements Serializable {
 
-    private final WIGB_Files Files;
-    private final WIGB_Strings Strings;
+    public transient WIGB_Files Files;
+    public transient WIGB_Strings Strings;
 
     /**
      * Stores the number of waves in the WaAS
