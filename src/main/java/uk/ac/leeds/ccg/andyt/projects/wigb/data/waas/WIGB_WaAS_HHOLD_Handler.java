@@ -17,12 +17,9 @@ package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.IOException;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_StaticIO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave1_HHOLD_Record;
@@ -136,11 +133,8 @@ public class WIGB_WaAS_HHOLD_Handler extends WIGB_WaAS_Handler {
                             }
                         }
                     });
-            try {
-                br.close();
-            } catch (IOException ex) {
-                Logger.getLogger(WIGB_WaAS_HHOLD_Handler.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            // Close br
+            Generic_StaticIO.closeBufferedReader(br);
             System.out.println("</load wave " + wave + " " + TYPE + " WaAS "
                     + "from " + f + ">");
             cache(wave, cf, r);
@@ -224,11 +218,8 @@ public class WIGB_WaAS_HHOLD_Handler extends WIGB_WaAS_Handler {
                             }
                         }
                     });
-            try {
-                br.close();
-            } catch (IOException ex) {
-                Logger.getLogger(WIGB_WaAS_HHOLD_Handler.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            // Close br
+            Generic_StaticIO.closeBufferedReader(br);
             System.out.println("</load wave " + wave + " " + TYPE + " WaAS "
                     + "from " + f + ">");
             cache(wave, cf, r);
@@ -297,11 +288,8 @@ public class WIGB_WaAS_HHOLD_Handler extends WIGB_WaAS_Handler {
                             }
                         }
                     });
-            try {
-                br.close();
-            } catch (IOException ex) {
-                Logger.getLogger(WIGB_WaAS_HHOLD_Handler.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            // Close br
+            Generic_StaticIO.closeBufferedReader(br);
             System.out.println("</load wave " + wave + " " + TYPE + " WaAS "
                     + "from " + f + ">");
             cache(wave, cf, r);
@@ -365,11 +353,8 @@ public class WIGB_WaAS_HHOLD_Handler extends WIGB_WaAS_Handler {
                             }
                         }
                     });
-            try {
-                br.close();
-            } catch (IOException ex) {
-                Logger.getLogger(WIGB_WaAS_HHOLD_Handler.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            // Close br
+            Generic_StaticIO.closeBufferedReader(br);
             System.out.println("</load wave " + wave + " " + TYPE + " WaAS "
                     + "from " + f + ">");
             cache(wave, cf, r);
@@ -426,11 +411,8 @@ public class WIGB_WaAS_HHOLD_Handler extends WIGB_WaAS_Handler {
                             }
                         }
                     });
-            try {
-                br.close();
-            } catch (IOException ex) {
-                Logger.getLogger(WIGB_WaAS_HHOLD_Handler.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            // Close br
+            Generic_StaticIO.closeBufferedReader(br);
             System.out.println("</load wave " + wave + " " + TYPE + " WaAS "
                     + "from " + f + ">");
             cache(wave, cf, r);

@@ -262,11 +262,8 @@ public class WIGB_Main_Process extends WIGB_Object {
                                 cr = m.get(CASEW1);
                                 cr.w1Record.getPeople().add(p);
                             });
-                    try {
-                        br.close();
-                    } catch (IOException ex) {
-                        Logger.getLogger(WIGB_Main_Process.class.getName()).log(Level.SEVERE, null, ex);
-                    }
+                    // Close br
+                    Generic_StaticIO.closeBufferedReader(br);
                     data.clearCollection(collectionID);
                 });
 
@@ -350,11 +347,8 @@ public class WIGB_Main_Process extends WIGB_Object {
                                     cr.w2Record.getPeople().add(p);
                                 }
                             });
-                    try {
-                        br.close();
-                    } catch (IOException ex) {
-                        Logger.getLogger(WIGB_Main_Process.class.getName()).log(Level.SEVERE, null, ex);
-                    }
+                    // Close br
+                    Generic_StaticIO.closeBufferedReader(br);
                     data.clearCollection(collectionID);
                 });
     }
@@ -436,11 +430,8 @@ public class WIGB_Main_Process extends WIGB_Object {
                                     cr.w3Record.getPeople().add(p);
                                 }
                             });
-                    try {
-                        br.close();
-                    } catch (IOException ex) {
-                        Logger.getLogger(WIGB_Main_Process.class.getName()).log(Level.SEVERE, null, ex);
-                    }
+                    // Close br
+                    Generic_StaticIO.closeBufferedReader(br);
                     data.clearCollection(collectionID);
                 });
     }
@@ -523,11 +514,8 @@ public class WIGB_Main_Process extends WIGB_Object {
                                     cr.w4Record.getPeople().add(p);
                                 }
                             });
-                    try {
-                        br.close();
-                    } catch (IOException ex) {
-                        Logger.getLogger(WIGB_Main_Process.class.getName()).log(Level.SEVERE, null, ex);
-                    }
+                    // Close br
+                    Generic_StaticIO.closeBufferedReader(br);
                     data.clearCollection(collectionID);
                 });
     }
@@ -607,11 +595,8 @@ public class WIGB_Main_Process extends WIGB_Object {
                                     cr.w5Record.getPeople().add(p);
                                 }
                             });
-                    try {
-                        br.close();
-                    } catch (IOException ex) {
-                        Logger.getLogger(WIGB_Main_Process.class.getName()).log(Level.SEVERE, null, ex);
-                    }
+                    // Close br
+                    Generic_StaticIO.closeBufferedReader(br);
                     data.clearCollection(collectionID);
                 });
     }
