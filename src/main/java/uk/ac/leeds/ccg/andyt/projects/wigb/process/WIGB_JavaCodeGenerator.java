@@ -26,8 +26,8 @@ import java.util.Iterator;
 import java.util.TreeSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import uk.ac.leeds.ccg.andyt.generic.io.Generic_ReadCSV;
-import uk.ac.leeds.ccg.andyt.generic.io.Generic_StaticIO;
+import uk.ac.leeds.ccg.andyt.data.format.Generic_ReadCSV;
+import uk.ac.leeds.ccg.andyt.generic.io.Generic_IO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Strings;
 import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
@@ -113,7 +113,7 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
         File outdir;
         File generateddir;
         indir = Files.getWaASInputDir();
-        generateddir = Files.getGeneratedWaASDirectory();
+        generateddir = Files.getGeneratedWaASDir();
         outdir = new File(generateddir, "Subsets");
         outdir.mkdirs();
         HashMap<String, Integer>[] allFieldTypes;
@@ -253,10 +253,10 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
         System.out.println("<Test load wave " + wave + " " + TYPE + " WaAS "
                 + "data from " + f + ">");
         BufferedReader br;
-        br = Generic_StaticIO.getBufferedReader(f);
+        br = Generic_IO.getBufferedReader(f);
         StreamTokenizer st;
         st = new StreamTokenizer(br);
-        Generic_StaticIO.setStreamTokenizerSyntax7(st);
+        Generic_IO.setStreamTokenizerSyntax7(st);
         int lineNumber;
         lineNumber = 0;
         String line;
@@ -547,7 +547,7 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                 v0m = v0ms[w];
                 className = prepend + "Wave" + wave + "_" + type + "_Record";
                 fout = new File(outdir, className + ".java");
-                pw = Generic_StaticIO.getPrintWriter(fout, false);
+                pw = Generic_IO.getPrintWriter(fout, false);
                 writeHeaderPackageAndImports(pw, packageName, "");
                 switch (w) {
                     case 0:
@@ -589,7 +589,7 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                 if (w == nwaves) {
                     className = prepend + "Wave1Or2Or3Or4Or5_" + type + "_Record";
                     fout = new File(outdir, className + ".java");
-                    pw = Generic_StaticIO.getPrintWriter(fout, false);
+                    pw = Generic_IO.getPrintWriter(fout, false);
                     writeHeaderPackageAndImports(pw, packageName,
                             "java.io.Serializable");
                     printClassDeclarationSerialVersionUID(pw, packageName,
@@ -598,7 +598,7 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                 } else if (w == (nwaves + 1)) {
                     className = prepend + "Wave1Or2_" + type + "_Record";
                     fout = new File(outdir, className + ".java");
-                    pw = Generic_StaticIO.getPrintWriter(fout, false);
+                    pw = Generic_IO.getPrintWriter(fout, false);
                     writeHeaderPackageAndImports(pw, packageName, "");
                     extendedClassName = prepend + "Wave1Or2Or3Or4Or5_" + type + "_Record";
                     printClassDeclarationSerialVersionUID(pw, packageName,
@@ -606,7 +606,7 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                 } else if (w == (nwaves + 2)) {
                     className = prepend + "Wave3Or4Or5_" + type + "_Record";
                     fout = new File(outdir, className + ".java");
-                    pw = Generic_StaticIO.getPrintWriter(fout, false);
+                    pw = Generic_IO.getPrintWriter(fout, false);
                     writeHeaderPackageAndImports(pw, packageName, "");
                     extendedClassName = prepend + "Wave1Or2Or3Or4Or5_" + type + "_Record";
                     printClassDeclarationSerialVersionUID(pw, packageName,
@@ -614,7 +614,7 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                 } else if (w == (nwaves + 3)) {
                     className = prepend + "Wave4Or5_" + type + "_Record";
                     fout = new File(outdir, className + ".java");
-                    pw = Generic_StaticIO.getPrintWriter(fout, false);
+                    pw = Generic_IO.getPrintWriter(fout, false);
                     writeHeaderPackageAndImports(pw, packageName, "");
                     extendedClassName = prepend + "Wave3Or4Or5_" + type + "_Record";
                     printClassDeclarationSerialVersionUID(pw, packageName,

@@ -25,7 +25,7 @@ import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
-import uk.ac.leeds.ccg.andyt.generic.io.Generic_StaticIO;
+import uk.ac.leeds.ccg.andyt.generic.io.Generic_IO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Strings;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person.WIGB_WaAS_Wave1_PERSON_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person.WIGB_WaAS_Wave2_PERSON_Record;
@@ -70,7 +70,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
         File cf;
         cf = getFile(outdir, wave);
         if (cf.exists()) {
-            r = (Object[]) Generic_StaticIO.readObject(cf);
+            r = (Object[]) Generic_IO.readObject(cf);
         } else {
             // Calculate how many subsets
             int cSize;
@@ -104,7 +104,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
             File f;
             f = getInputFile(wave);
             BufferedReader br;
-            br = Generic_StaticIO.getBufferedReader(f);
+            br = Generic_IO.getBufferedReader(f);
             /**
              * Read and write header.
              */
@@ -136,7 +136,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
                         }
                     });
             // Close br
-            Generic_StaticIO.closeBufferedReader(br);
+            Generic_IO.closeBufferedReader(br);
             // Close the PrintWriters.
             closePrintWriters(cPWs);
             cache(wave, cf, r);
@@ -189,7 +189,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
             cIDs.put(cID, set);
             File f;
             f = new File(outdir, "person" + wave + "_" + cID + ".tab");
-            cPWs.put(cID, Generic_StaticIO.getPrintWriter(f, false));
+            cPWs.put(cID, Generic_IO.getPrintWriter(f, false));
             cFs.put(cID, f);
             start += cSize;
         }
@@ -252,7 +252,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
         File cf;
         cf = getFile(outdir, wave);
         if (cf.exists()) {
-            r = (Object[]) Generic_StaticIO.readObject(cf);
+            r = (Object[]) Generic_IO.readObject(cf);
         } else {
             // Get the size of each collection.
             int cSize;
@@ -285,7 +285,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
             File f;
             f = getInputFile(wave);
             BufferedReader br;
-            br = Generic_StaticIO.getBufferedReader(f);
+            br = Generic_IO.getBufferedReader(f);
             /**
              * Read and write header.
              */
@@ -319,7 +319,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
                         }
                     });
             // Close br
-            Generic_StaticIO.closeBufferedReader(br);
+            Generic_IO.closeBufferedReader(br);
             // Close the PrintWriters.
             closePrintWriters(cPWs);
             cache(wave, cf, r);
@@ -359,7 +359,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
         File cf;
         cf = getFile(outdir, wave);
         if (cf.exists()) {
-            r = (Object[]) Generic_StaticIO.readObject(cf);
+            r = (Object[]) Generic_IO.readObject(cf);
         } else {
             // Get the size of each collection.
             int cSize;
@@ -392,7 +392,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
             File f;
             f = getInputFile(wave);
             BufferedReader br;
-            br = Generic_StaticIO.getBufferedReader(f);
+            br = Generic_IO.getBufferedReader(f);
             /**
              * Read and write header.
              */
@@ -426,7 +426,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
                         }
                     });
             // Close br
-            Generic_StaticIO.closeBufferedReader(br);
+            Generic_IO.closeBufferedReader(br);
             // Close the PrintWriters.
             closePrintWriters(cPWs);
             cache(wave, cf, r);
@@ -452,7 +452,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
         File cf;
         cf = getFile(outdir, wave);
         if (cf.exists()) {
-            r = (Object[]) Generic_StaticIO.readObject(cf);
+            r = (Object[]) Generic_IO.readObject(cf);
         } else {
             // Get the size of each collection.
             int cSize;
@@ -485,7 +485,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
             File f;
             f = getInputFile(wave);
             BufferedReader br;
-            br = Generic_StaticIO.getBufferedReader(f);
+            br = Generic_IO.getBufferedReader(f);
             /**
              * Read and write header.
              */
@@ -519,7 +519,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
                         }
                     });
             // Close br
-            Generic_StaticIO.closeBufferedReader(br);
+            Generic_IO.closeBufferedReader(br);
             // Close the PrintWriters.
             closePrintWriters(cPWs);
             cache(wave, cf, r);
@@ -545,7 +545,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
         File cf;
         cf = getFile(outdir, wave);
         if (cf.exists()) {
-            r = (Object[]) Generic_StaticIO.readObject(cf);
+            r = (Object[]) Generic_IO.readObject(cf);
         } else {
             // Get the size of each collection.
             int cSize;
@@ -579,7 +579,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
             File f;
             f = getInputFile(wave);
             BufferedReader br;
-            br = Generic_StaticIO.getBufferedReader(f);
+            br = Generic_IO.getBufferedReader(f);
             /**
              * Read and write header.
              */
@@ -613,7 +613,7 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
                         }
                     });
             // Close br
-            Generic_StaticIO.closeBufferedReader(br);
+            Generic_IO.closeBufferedReader(br);
             // Close the PrintWriters.
             closePrintWriters(cPWs);
             cache(wave, cf, r);
@@ -641,12 +641,12 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
     public Object[] loadSubset(byte wave) {
         Object[] r;
         File dir;
-        dir = Files.getGeneratedWaASDirectory();
+        dir = Files.getGeneratedWaASDir();
         dir = new File(dir, "Subsets");
         File f;
         f = new File(dir, TYPE + wave + "." + Strings.S_dat);
         if (f.exists()) {
-            r = (Object[]) Generic_StaticIO.readObject(f);
+            r = (Object[]) Generic_IO.readObject(f);
         } else {
             r = null;
         }

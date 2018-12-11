@@ -40,7 +40,7 @@ public class WIGB_Files extends Generic_Files implements Serializable {
 
     public File getInputDataDir() {
         if (InputDataDir == null) {
-            InputDataDir = new File(getDataDir(), Strings.getS_input());
+            InputDataDir = new File(getDataDir(), Strings.s_input);
         }
         return InputDataDir;
     }
@@ -65,11 +65,20 @@ public class WIGB_Files extends Generic_Files implements Serializable {
         return r;
     }
 
-    public File getGeneratedWaASDirectory() {
+    public File getGeneratedWaASDir() {
         File dir;
         dir = getGeneratedDataDir(Strings);
         File f;
         f = new File(dir, "WaAS");
+        f.mkdirs();
+        return f;
+    }
+    
+    public File getGeneratedWaASSubsetsDir() {
+        File dir;
+        dir = getGeneratedWaASDir();
+        File f;
+        f = new File(dir, "Subsets");
         f.mkdirs();
         return f;
     }

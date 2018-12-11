@@ -17,12 +17,14 @@ package uk.ac.leeds.ccg.andyt.projects.wigb.process;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.PrintWriter;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
-import uk.ac.leeds.ccg.andyt.generic.io.Generic_StaticIO;
+import uk.ac.leeds.ccg.andyt.generic.io.Generic_IO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Strings;
 import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
@@ -33,6 +35,7 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_Data;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_HHOLD_Handler;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_ID;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_PERSON_Handler;
+import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave1Or2Or3Or4Or5_HHOLD_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave1_HHOLD_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave2_HHOLD_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave3_HHOLD_Record;
@@ -55,6 +58,12 @@ public class WIGB_Main_Process extends WIGB_Object {
     protected final WIGB_Strings Strings;
     protected final WIGB_Files Files;
 
+    // For logging.
+    File logF;
+    public static transient PrintWriter logPW;
+    File logF0;
+    public static transient PrintWriter logPW0;
+
     public WIGB_Main_Process(WIGB_Environment env) {
         super(env);
         data = env.data;
@@ -75,6 +84,8 @@ public class WIGB_Main_Process extends WIGB_Object {
     }
 
     public void run() {
+        logF0 = new File(Files.getOutputDataDir(Strings), "log0.txt");
+        logPW0 = Generic_IO.getPrintWriter(logF0, false); // Overwrite log file.
 
         if (doJavaCodeGeneration) {
             runJavaCodeGeneration();
@@ -86,16 +97,18 @@ public class WIGB_Main_Process extends WIGB_Object {
         WIGB_WaAS_HHOLD_Handler hholdHandler;
 
         indir = Files.getWaASInputDir();
-        generateddir = Files.getGeneratedWaASDirectory();
+        generateddir = Files.getGeneratedWaASDir();
         outdir = new File(generateddir, "Subsets");
         outdir.mkdirs();
         hholdHandler = new WIGB_WaAS_HHOLD_Handler(Env.Files, Env.Strings, indir);
 
         int chunkSize;
         chunkSize = 256; //1024; 512; 256;
-//        doDataProcessingStep1(indir, outdir, hholdHandler);
-//        doDataProcessingStep2(indir, outdir, hholdHandler, chunkSize);
-        doDataProcessingStep3(outdir);
+        doDataProcessingStep1(indir, outdir, hholdHandler);
+        doDataProcessingStep2(indir, outdir, hholdHandler, chunkSize);
+        //doDataProcessingStep3(outdir);
+
+        logPW.close();
     }
 
     /**
@@ -106,37 +119,187 @@ public class WIGB_Main_Process extends WIGB_Object {
      * @param outdir
      */
     public void doDataProcessingStep3(File outdir) {
-        System.out.println(data.lookup.size());
-        System.out.println(data.data.size());
+        initlog(3);
+        //log(data.lookup.size());
+        //log(data.data.size());
+//        /**
+//         * Calculate the number of households that have the same number of
+//         * adults throughout.
+//         */
+//        long n = data.data.keySet().stream()
+//                .mapToLong(cID -> {
+//                    WIGB_WaAS_Collection c;
+//                    c = data.getCollection(cID);
+//                    long nc = c.getData().keySet().stream()
+//                            .mapToLong(CASEW1 -> {
+//                                WIGB_WaAS_Combined_Record cr;
+//                                cr = c.getData().get(CASEW1);
+//                                c.getData().get(CASEW1);
+//                                try {
+//                                    byte w1 = cr.w1Record.getHhold().getNUMADULT();
+//                                    byte w2 = cr.w2Record.getHhold().getNUMADULT();
+//                                    byte w3 = cr.w3Record.getHhold().getNUMADULT();
+//                                    byte w4 = cr.w4Record.getHhold().getNUMADULT();
+//                                    byte w5 = cr.w5Record.getHhold().getNUMADULT();
+//                                    if (w1 == w2 && w2 == w3 && w3 == w4 && w4 == w5) {
+//                                        return 1;
+//                                    } else {
+//                                        return 0;
+//                                    }
+//                                } catch (NullPointerException e) {
+//                                    return 0;
+//                                }
+//                            }).sum();
+//                    data.clearCollection(cID);
+//                    return nc;
+//                }).sum();
+//        log("There are " + n + " households that contain the "
+//                + "same number of adults throughout.");
+// For brevity/convenience.
+        byte W1 = WIGB_WaAS_Data.W1;
+        byte W2 = WIGB_WaAS_Data.W2;
+        byte W3 = WIGB_WaAS_Data.W3;
+        byte W4 = WIGB_WaAS_Data.W4;
+        byte W5 = WIGB_WaAS_Data.W5;
 
-        long n = data.data.keySet().stream()
-                .mapToLong(cID -> {
-                    WIGB_WaAS_Collection c;
-                    c = data.getCollection(cID);
-                    long nc = c.getData().keySet().stream()
-                            .mapToLong(CASEW1 -> {
-                                WIGB_WaAS_Combined_Record cr;
-                                cr = c.getData().get(CASEW1);
-                                c.getData().get(CASEW1);
-                                try {
-                                byte w1 = cr.w1Record.getHhold().getNUMADULT();
-                                byte w2 = cr.w2Record.getHhold().getNUMADULT();
-                                byte w3 = cr.w3Record.getHhold().getNUMADULT();
-                                byte w4 = cr.w4Record.getHhold().getNUMADULT();
-                                byte w5 = cr.w5Record.getHhold().getNUMADULT();
-                                if (w1 == w2 && w2 == w3 && w3 == w4 && w4 == w5) {
-                                    return 1;
-                                } else {
-                                    return 0;
-                                }
-                                } catch (NullPointerException e) {
-                                    return 0;
-                                }
-                            }).sum();
-                    return nc;
-                }).sum();
-        System.out.println("There are " + n + " households that contain the "
-                + "same number of adults throughout");
+        HashSet<Short> s = new HashSet<>();
+        Iterator<Short> ite;
+        Iterator<Short> ite2;
+        short cID;
+        short CASEW1;
+        WIGB_WaAS_Wave1_HHOLD_Record w1h;
+        WIGB_WaAS_Wave2_HHOLD_Record w2h;
+        WIGB_WaAS_Wave3_HHOLD_Record w3h;
+        WIGB_WaAS_Wave4_HHOLD_Record w4h;
+        WIGB_WaAS_Wave5_HHOLD_Record w5h;
+        WIGB_WaAS_Collection c;
+        WIGB_WaAS_Combined_Record cr;
+        String m;
+        // Check w1Records
+        m = "Check w1Records";
+        log("<" + m + ">");
+        ite = data.data.keySet().iterator();
+        while (ite.hasNext()) {
+            cID = ite.next();
+            c = data.getCollection(cID);
+            ite2 = c.getData().keySet().iterator();
+            while (ite2.hasNext()) {
+                CASEW1 = ite2.next();
+                cr = c.getData().get(CASEW1);
+                c.getData().get(CASEW1);
+                w1h = cr.w1Record.getHhold();
+                process0(W1, CASEW1, w1h);
+            }
+            data.clearCollection(cID);
+        }
+        log("</" + m + ">");
+        // Check w2Records
+        m = "Check w2Records";
+        log("<" + m + ">");
+        ite = data.data.keySet().iterator();
+        while (ite.hasNext()) {
+            cID = ite.next();
+            c = data.getCollection(cID);
+            ite2 = c.getData().keySet().iterator();
+            while (ite2.hasNext()) {
+                CASEW1 = ite2.next();
+                cr = c.getData().get(CASEW1);
+                c.getData().get(CASEW1);
+                w2h = cr.w2Record.getHhold();
+                process0(W2, CASEW1, w2h);
+            }
+            data.clearCollection(cID);
+        }
+        log("</" + m + ">");
+        // Check w3Records
+        m = "Check w3Records";
+        log("<" + m + ">");
+        ite = data.data.keySet().iterator();
+        while (ite.hasNext()) {
+            cID = ite.next();
+            c = data.getCollection(cID);
+            ite2 = c.getData().keySet().iterator();
+            while (ite2.hasNext()) {
+                CASEW1 = ite2.next();
+                cr = c.getData().get(CASEW1);
+                c.getData().get(CASEW1);
+                w3h = cr.w3Record.getHhold();
+                process0(W3, CASEW1, w3h);
+            }
+            data.clearCollection(cID);
+        }
+        log("</" + m + ">");
+        // Check w4Records
+        m = "Check w4Records";
+        log("<" + m + ">");
+        ite = data.data.keySet().iterator();
+        while (ite.hasNext()) {
+            cID = ite.next();
+            c = data.getCollection(cID);
+            ite2 = c.getData().keySet().iterator();
+            while (ite2.hasNext()) {
+                CASEW1 = ite2.next();
+                cr = c.getData().get(CASEW1);
+                c.getData().get(CASEW1);
+                w4h = cr.w4Record.getHhold();
+                process0(W4, CASEW1, w4h);
+            }
+            data.clearCollection(cID);
+        }
+        log("</" + m + ">");
+        // Check w5Records
+        m = "Check w5Records";
+        log("<" + m + ">");
+        ite = data.data.keySet().iterator();
+        while (ite.hasNext()) {
+            cID = ite.next();
+            c = data.getCollection(cID);
+            ite2 = c.getData().keySet().iterator();
+            while (ite2.hasNext()) {
+                CASEW1 = ite2.next();
+                cr = c.getData().get(CASEW1);
+                c.getData().get(CASEW1);
+                w5h = cr.w5Record.getHhold();
+                process0(W5, CASEW1, w5h);
+            }
+            data.clearCollection(cID);
+        }
+
+//        /**
+//         * Get the IDs of households that have the same number of adults
+//         * throughout.
+//         */
+//        ite = data.data.keySet().iterator();
+//        while (ite.hasNext()) {
+//            cID = ite.next();
+//            log1("Processing collection " + cID);
+//            c = data.getCollection(cID);
+//            ite2 = c.getData().keySet().iterator();
+//            while (ite2.hasNext()) {
+//                CASEW1 = ite2.next();
+//                cr = c.getData().get(CASEW1);
+//                c.getData().get(CASEW1);
+//                w1h = cr.w1Record.getHhold();
+//                w2h = cr.w2Record.getHhold();
+//                w3h = cr.w3Record.getHhold();
+//                w4h = cr.w4Record.getHhold();
+//                w5h = cr.w5Record.getHhold();
+//                if (process0(W1, CASEW1, w1h)) {
+//                    if (process0(W2, CASEW1, w2h)) {
+//                        if (process0(W3, CASEW1, w3h)) {
+//                            if (process0(W4, CASEW1, w4h)) {
+//                                if (process0(W5, CASEW1, w5h)) {
+//                                    s.add(CASEW1);
+//                                }
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//            data.clearCollection(cID);
+//        }
+//        log("Number of combined records with all hhold records "
+//                + "for each wave " + s.size() + ".");
 //        /**
 //         * Stream through the data and calculate the total value of UK Land in
 //         * Wave 1 households. This value is an aggregate of numerical class
@@ -160,7 +323,7 @@ public class WIGB_Main_Process extends WIGB_Object {
 //                    data.clearCollection(cID);
 //                    return cDVLUKVAL;  // Total value of UK Land in c.
 //                }).sum();
-//        System.out.println("Total value of UK Land in Wave 1 " + tDVLUKVAL);
+//        log("Total value of UK Land in Wave 1 " + tDVLUKVAL);
         //
 //        /**
 //         * Stream through the data and calculate the total income in the last 12
@@ -190,7 +353,7 @@ public class WIGB_Main_Process extends WIGB_Object {
 //                    data.clearCollection(cID);
 //                    return cFINCVB;  // Total income in the last 12 months.
 //                }).sum();
-//        System.out.println("Total income in the last 12 months " + tFINCVB);
+//        log("Total income in the last 12 months " + tFINCVB);
         /**
          * The main WaAS data store. Keys are Collection IDs.
          */
@@ -221,6 +384,17 @@ public class WIGB_Main_Process extends WIGB_Object {
 //                                w1person.getDVLUKV(); // Derived - Total land uk value
 //                            });
 //                });
+        logPW.close();
+    }
+
+    protected boolean process0(byte wave, short CASEW1,
+            WIGB_WaAS_Wave1Or2Or3Or4Or5_HHOLD_Record wxh) {
+        if (wxh != null) {
+            return true;
+        } else {
+            log("w" + wave + "h == null for CASEW1 " + CASEW1);
+            return false;
+        }
     }
 
     protected void addVariable(String s, TreeMap<Integer, String> vIDToVName,
@@ -239,9 +413,10 @@ public class WIGB_Main_Process extends WIGB_Object {
      */
     public void doDataProcessingStep2(File indir, File outdir,
             WIGB_WaAS_HHOLD_Handler hholdHandler, int chunkSize) {
+        initlog(2);
         WIGB_WaAS_PERSON_Handler personHandler;
         personHandler = new WIGB_WaAS_PERSON_Handler(Files, Strings, indir);
-        System.out.println("Merge Person and Household Data");
+        log("Merge Person and Household Data");
         int nOC = doDataProcessingStep2Wave1(
                 data, personHandler, indir, outdir, hholdHandler, chunkSize);
         doDataProcessingStep2Wave2(
@@ -252,9 +427,10 @@ public class WIGB_Main_Process extends WIGB_Object {
                 data, personHandler, indir, outdir, hholdHandler, nOC);
         doDataProcessingStep2Wave5(
                 data, personHandler, indir, outdir, hholdHandler, nOC);
-        System.out.println(data.lookup.size());
-        System.out.println(data.data.size());
+        log("data.lookup.size() " + data.lookup.size());
+        log("data.data.size() " + data.data.size());
         Env.cacheData();
+        logPW.close();
     }
 
     /**
@@ -273,7 +449,7 @@ public class WIGB_Main_Process extends WIGB_Object {
             WIGB_WaAS_PERSON_Handler personHandler,
             File indir, File outdir,
             WIGB_WaAS_HHOLD_Handler hholdHandler, int chunkSize) {
-        System.out.println("Wave 1");
+        log("Wave 1");
         TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave1_HHOLD_Record> hs;
         hs = hholdHandler.loadCacheSubsetWave1();
         Set<WIGB_WaAS_ID> set;
@@ -288,7 +464,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         cFs = (HashMap<Short, File>) ps[1];
         cIDs.keySet().stream()
                 .forEach(cID -> {
-                    System.out.println("collectionID " + cID);
+                    log("collectionID " + cID);
                     WIGB_WaAS_Collection c;
                     c = new WIGB_WaAS_Collection(cID);
                     data.data.put(cID, c);
@@ -313,7 +489,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                     File f;
                     BufferedReader br;
                     f = cFs.get(cID);
-                    br = Generic_StaticIO.getBufferedReader(f);
+                    br = Generic_IO.getBufferedReader(f);
                     br.lines()
                             .skip(1) // Skip header.
                             .forEach(line -> {
@@ -328,7 +504,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                 cr.w1Record.getPeople().add(p);
                             });
                     // Close br
-                    Generic_StaticIO.closeBufferedReader(br);
+                    Generic_IO.closeBufferedReader(br);
                     // Cache and clear collection
                     data.cacheSubsetCollection(cID, c);
                     data.clearCollection(cID);
@@ -350,7 +526,7 @@ public class WIGB_Main_Process extends WIGB_Object {
     public static void doDataProcessingStep2Wave2(WIGB_WaAS_Data data,
             WIGB_WaAS_PERSON_Handler personHandler, File indir, File outdir,
             WIGB_WaAS_HHOLD_Handler hholdHandler, int nOC) {
-        System.out.println("Wave 2");
+        log("Wave 2");
         TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave2_HHOLD_Record> hs;
         hs = hholdHandler.loadCacheSubsetWave2();
         Object[] ps;
@@ -362,7 +538,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         cFs = (HashMap<Short, File>) ps[1];
         cIDs.keySet().stream()
                 .forEach(cID -> {
-                    System.out.println("collectionID " + cID);
+                    log1("collectionID " + cID);
                     WIGB_WaAS_Collection c;
                     c = data.getCollection(cID);
                     // Add household records.
@@ -377,7 +553,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                 WIGB_WaAS_Combined_Record cr;
                                 cr = m.get(CASEW1);
                                 if (cr == null) {
-                                    System.out.println("No combined record "
+                                    log("No combined record "
                                             + "for CASEW1 " + CASEW1 + "! "
                                             + "This may be a data error?");
                                 } else {
@@ -389,7 +565,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                     File f;
                     BufferedReader br;
                     f = cFs.get(cID);
-                    br = Generic_StaticIO.getBufferedReader(f);
+                    br = Generic_IO.getBufferedReader(f);
                     br.lines()
                             .skip(1) // Skip header.
                             .forEach(line -> {
@@ -402,7 +578,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                 WIGB_WaAS_Combined_Record cr;
                                 cr = m.get(CASEW1);
                                 if (cr == null) {
-                                    System.out.println("No combined record "
+                                    log("No combined record "
                                             + "for CASEW1 " + CASEW1 + "! "
                                             + "This may be a data error, "
                                             + "or this person may have "
@@ -413,7 +589,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                 }
                             });
                     // Close br
-                    Generic_StaticIO.closeBufferedReader(br);
+                    Generic_IO.closeBufferedReader(br);
                     // Cache and clear collection
                     data.cacheSubsetCollection(cID, c);
                     data.clearCollection(cID);
@@ -433,7 +609,7 @@ public class WIGB_Main_Process extends WIGB_Object {
     public static void doDataProcessingStep2Wave3(WIGB_WaAS_Data data,
             WIGB_WaAS_PERSON_Handler personHandler, File indir, File outdir,
             WIGB_WaAS_HHOLD_Handler hholdHandler, int nOC) {
-        System.out.println("Wave 3");
+        log("Wave 3");
         TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave3_HHOLD_Record> hs;
         hs = hholdHandler.loadCacheSubsetWave3();
         Object[] ps;
@@ -445,7 +621,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         cFs = (HashMap<Short, File>) ps[1];
         cIDs.keySet().stream()
                 .forEach(cID -> {
-                    System.out.println("collectionID " + cID);
+                    log("collectionID " + cID);
                     WIGB_WaAS_Collection c;
                     c = data.getCollection(cID);
                     // Add household records.
@@ -460,7 +636,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                 WIGB_WaAS_Combined_Record cr;
                                 cr = m.get(CASEW1);
                                 if (cr == null) {
-                                    System.out.println("No combined record "
+                                    log("No combined record "
                                             + "for CASEW1 " + CASEW1 + "! "
                                             + "This may be a data error?");
                                 } else {
@@ -472,7 +648,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                     File f;
                     BufferedReader br;
                     f = cFs.get(cID);
-                    br = Generic_StaticIO.getBufferedReader(f);
+                    br = Generic_IO.getBufferedReader(f);
                     br.lines()
                             .skip(1) // Skip header.
                             .forEach(line -> {
@@ -485,7 +661,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                 WIGB_WaAS_Combined_Record cr;
                                 cr = m.get(CASEW1);
                                 if (cr == null) {
-                                    System.out.println("No combined record "
+                                    log("No combined record "
                                             + "for CASEW1 " + CASEW1 + "! "
                                             + "This may be a data error, "
                                             + "or this person may have "
@@ -496,7 +672,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                 }
                             });
                     // Close br
-                    Generic_StaticIO.closeBufferedReader(br);
+                    Generic_IO.closeBufferedReader(br);
                     // Cache and clear collection
                     data.cacheSubsetCollection(cID, c);
                     data.clearCollection(cID);
@@ -519,7 +695,7 @@ public class WIGB_Main_Process extends WIGB_Object {
             File indir, File outdir,
             WIGB_WaAS_HHOLD_Handler hholdHandler, int nOC) {
         // Wave 4
-        System.out.println("Wave 4");
+        log("Wave 4");
         TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave4_HHOLD_Record> hs;
         hs = hholdHandler.loadCacheSubsetWave4();
         Object[] ps;
@@ -531,7 +707,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         cFs = (HashMap<Short, File>) ps[1];
         cIDs.keySet().stream()
                 .forEach(cID -> {
-                    System.out.println("collectionID " + cID);
+                    log("collectionID " + cID);
                     WIGB_WaAS_Collection c;
                     c = data.getCollection(cID);
                     // Add household records.
@@ -546,7 +722,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                 WIGB_WaAS_Combined_Record cr;
                                 cr = m.get(CASEW1);
                                 if (cr == null) {
-                                    System.out.println("No combined record "
+                                    log("No combined record "
                                             + "for CASEW1 " + CASEW1 + "! "
                                             + "This may be a data error?");
                                 } else {
@@ -558,7 +734,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                     File f;
                     BufferedReader br;
                     f = cFs.get(cID);
-                    br = Generic_StaticIO.getBufferedReader(f);
+                    br = Generic_IO.getBufferedReader(f);
                     br.lines()
                             .skip(1) // Skip header.
                             .forEach(line -> {
@@ -571,7 +747,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                 WIGB_WaAS_Combined_Record cr;
                                 cr = m.get(CASEW1);
                                 if (cr == null) {
-                                    System.out.println("No combined record "
+                                    log("No combined record "
                                             + "for CASEW1 " + CASEW1 + "! "
                                             + "This may be a data error, "
                                             + "or this person may have "
@@ -582,7 +758,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                 }
                             });
                     // Close br
-                    Generic_StaticIO.closeBufferedReader(br);
+                    Generic_IO.closeBufferedReader(br);
                     // Cache and clear collection
                     data.cacheSubsetCollection(cID, c);
                     data.clearCollection(cID);
@@ -629,7 +805,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                 WIGB_WaAS_Combined_Record cr;
                                 cr = m.get(CASEW1);
                                 if (cr == null) {
-                                    System.out.println("No combined record "
+                                    log("No combined record "
                                             + "for CASEW1 " + CASEW1 + "! "
                                             + "This may be a data error?");
                                 } else {
@@ -641,7 +817,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                     File f;
                     BufferedReader br;
                     f = cFs.get(cID);
-                    br = Generic_StaticIO.getBufferedReader(f);
+                    br = Generic_IO.getBufferedReader(f);
                     br.lines()
                             .skip(1) // Skip header.
                             .forEach(line -> {
@@ -654,7 +830,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                 WIGB_WaAS_Combined_Record cr;
                                 cr = m.get(CASEW1);
                                 if (cr == null) {
-                                    System.out.println("No combined record "
+                                    log("No combined record "
                                             + "for CASEW1 " + CASEW1 + "! "
                                             + "This may be a data error, "
                                             + "or this person may have "
@@ -665,7 +841,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                 }
                             });
                     // Close br
-                    Generic_StaticIO.closeBufferedReader(br);
+                    Generic_IO.closeBufferedReader(br);
                     // Cache and clear collection
                     data.cacheSubsetCollection(cID, c);
                     data.clearCollection(cID);
@@ -681,6 +857,11 @@ public class WIGB_Main_Process extends WIGB_Object {
         WIGB_JavaCodeGenerator.main(args);
     }
 
+    protected void initlog(int i) {
+        logF = new File(Files.getOutputDataDir(Strings), "log" + i + ".txt");
+        logPW = Generic_IO.getPrintWriter(logF, true); // Append to log file.
+    }
+
     /**
      * Read input data and create subsets. Organise for person records that each
      * subset is split into separate files one for each collection. The
@@ -692,6 +873,7 @@ public class WIGB_Main_Process extends WIGB_Object {
      */
     public void doDataProcessingStep1(File indir, File outdir,
             WIGB_WaAS_HHOLD_Handler hholdHandler) {
+        initlog(1);
         // For convenience/code brevity.
         byte nwaves;
         nwaves = WIGB_WaAS_Data.NWAVES;
@@ -699,8 +881,8 @@ public class WIGB_Main_Process extends WIGB_Object {
          * Step 1: Load household data into cache and memory.
          */
         Object[] hholdData;
-        hholdData = hholdHandler.load();
-
+        //hholdData = hholdHandler.load();
+        hholdData = hholdHandler.loadNew();
         /**
          * Step 2: Unpack hholdData. hholdData is an Object[] of length 2. r[0]
          * is a TreeMap with Integer keys which are the CASE id for the wave and
@@ -758,28 +940,27 @@ public class WIGB_Main_Process extends WIGB_Object {
         TreeSet<WIGB_WaAS_ID>[] iDListsW5;
         iDListsW5 = (TreeSet<WIGB_WaAS_ID>[]) hholdDataW5[1];
         iDLists.put(WIGB_WaAS_Data.W5, iDListsW5);
-
         /**
          * Step 3: Print out the Number of Households in each wave.
          */
         for (byte wave = nwaves; wave > 0; wave--) {
             for (int i = 0; i < wave; i++) {
                 if (i == 0) {
-                    System.out.print("" + iDLists.get(wave)[i].size()
+                    String m;
+                    m = "" + iDLists.get(wave)[i].size()
                             + "\tNumber of HHOLD IDs in Wave " + wave
-                            + " reported as being in ");
+                            + " reported as being in ";
                     for (int j = wave; j > 1; j--) {
-                        System.out.print("Wave " + j + ", ");
+                        m += "Wave " + j + ", ";
                     }
-                    System.out.println("Wave 1");
+                    log(m + "Wave 1");
                 } else {
-                    System.out.println("" + iDLists.get(wave)[i].size()
+                    log("" + iDLists.get(wave)[i].size()
                             + "\tNumber of HHOLD IDs from Wave " + (wave - i)
                             + " reported as being in Wave " + wave);
                 }
             }
         }
-
         /**
          * Step 4: Get IDs of all hholds in all waves. This assumes that CASEW1
          * has been correctly encoded in each wave.
@@ -792,7 +973,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         all.retainAll(iDListsW3[iDListsW3.length - 1]);
         all.retainAll(iDListsW4[iDListsW4.length - 1]);
         all.retainAll(iDListsW5[iDListsW5.length - 1]);
-        System.out.println("" + all.size()
+        log("" + all.size()
                 + "\tNumber of HHOLDs in Waves 5, 4, 3, 2 and 1");
         /**
          * Step 5: Working forward from Wave 1, get the subset of households
@@ -817,7 +998,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                 WIGB_WaAS_Wave1_HHOLD_Record rec;
                 rec = hholdW1.get(ID);
 //                if (rec == null) {
-//                    System.out.println("Debug"); // Never occurs.
+//                    log("Debug"); // Never occurs.
 //                }
                 hholdSubsetW1.put(ID, rec);
             }
@@ -911,6 +1092,20 @@ public class WIGB_Main_Process extends WIGB_Object {
             }
             hholdHandler.cacheSubset(WIGB_WaAS_Data.W5, hholdSubsetW5);
         }
+        logPW.close();
+    }
+
+    public static void log0(String s) {
+        logPW.println(s);
+    }
+
+    public static void log1(String s) {
+        System.out.println(s);
+    }
+
+    public static void log(String s) {
+        logPW.println(s);
+        System.out.println(s);
     }
 
     boolean doJavaCodeGeneration = false;

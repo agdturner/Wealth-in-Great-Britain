@@ -16,9 +16,10 @@
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas;
 
 import java.io.File;
-import uk.ac.leeds.ccg.andyt.generic.io.Generic_StaticIO;
+import uk.ac.leeds.ccg.andyt.generic.io.Generic_IO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Strings;
 import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
+import uk.ac.leeds.ccg.andyt.projects.wigb.process.WIGB_Main_Process;
 
 /**
  *
@@ -48,50 +49,52 @@ public abstract class WIGB_WaAS_Handler {
         return f;
     }
 
-    protected Object cache(byte wave, File cf) {
+    protected Object cache(byte wave, File f) {
         Object r;
-        System.out.println("<load wave " + wave + " " + TYPE + " WaAS "
-                + "from file " + cf + ">");
-        r = Generic_StaticIO.readObject(cf);
-        System.out.println("</load wave " + wave + " " + TYPE + " WaAS "
-                + "from file " + cf + ">");
+        String m;
+        m = "load " + getString0(wave, f);
+        WIGB_Main_Process.log1("<" + m + ">");
+        r = Generic_IO.readObject(f);
+        WIGB_Main_Process.log1("</" + m + ">");
         return r;
     }
 
-    protected void cache(byte wave, File cf, Object o) {
-        System.out.println("<store wave " + wave + " " + TYPE + " WaAS "
-                + "in file " + cf + ">");
-        Generic_StaticIO.writeObject(o, cf);
-        System.out.println("</store wave " + wave + " " + TYPE + " WaAS "
-                + "in file " + cf + ">");
+    protected String getString0(byte wave, File f) {
+        return "wave " + wave + " " + TYPE + " WaAS file " + f;
     }
-    
+
+    protected void cache(byte wave, File f, Object o) {
+        String m;
+        m = "store " + getString0(wave, f);
+        WIGB_Main_Process.log1("<" + m + ">");
+        Generic_IO.writeObject(o, f);
+        WIGB_Main_Process.log1("</" + m + ">");
+    }
+
     public void cacheSubset(byte wave, Object o) {
-        File dir;
-        dir = Files.getGeneratedWaASDirectory();
-        dir = new File(dir, "Subsets");
-        File cf;
-        cf = new File(dir, TYPE + wave + "." + Strings.S_dat);
-        cache(wave, cf, o);
+        File f;
+        f = new File(Files.getGeneratedWaASSubsetsDir(),
+                TYPE + wave + "." + Strings.S_dat);
+        cache(wave, f, o);
     }
-    
-    public void cacheSubsetCollection(short collectionID, byte wave, Object o) {
-        File dir;
-        dir = Files.getGeneratedWaASDirectory();
-        dir = new File(dir, "Subsets");
-        File cf;
-        cf = new File(dir, TYPE + wave + "_" + collectionID + "." + Strings.S_dat);
-        WIGB_WaAS_Handler.this.cache(wave, cf, o);
+
+    public void cacheSubsetCollection(short cID, byte wave, Object o) {
+        File f;
+        f = new File(Files.getGeneratedWaASSubsetsDir(),
+                getString1(wave, cID) + "." + Strings.S_dat);
+        WIGB_WaAS_Handler.this.cache(wave, f, o);
     }
-    
-    public Object loadSubsetCollection(short collectionID, byte wave) {
+
+    protected String getString1(byte wave, short cID) {
+        return TYPE + wave + "_" + cID;
+    }
+
+    public Object loadSubsetCollection(short cID, byte wave) {
         Object r;
-        File dir;
-        dir = Files.getGeneratedWaASDirectory();
-        dir = new File(dir, "Subsets");
-        File cf;
-        cf = new File(dir, TYPE + wave + "_" + collectionID + "." + Strings.S_dat);
-        r = cache(wave, cf);
+        File f;
+        f = new File(Files.getGeneratedWaASSubsetsDir(),
+                getString1(wave, cID) + "." + Strings.S_dat);
+        r = cache(wave, f);
         return r;
     }
 }

@@ -3,8 +3,8 @@ package uk.ac.leeds.ccg.andyt.projects.wigb.core;
 import java.io.File;
 import java.io.Serializable;
 import uk.ac.leeds.ccg.andyt.generic.core.Generic_Environment;
-import uk.ac.leeds.ccg.andyt.generic.data.Generic_UKPostcode_Handler;
-import uk.ac.leeds.ccg.andyt.generic.io.Generic_StaticIO;
+import uk.ac.leeds.ccg.andyt.data.postcode.Generic_UKPostcode_Handler;
+import uk.ac.leeds.ccg.andyt.generic.io.Generic_IO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_Data;
 import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
 
@@ -29,7 +29,7 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
     public WIGB_Environment() {
         //Memory_Threshold = 3000000000L;
         Strings = new WIGB_Strings();
-        Files = new WIGB_Files(Strings, Strings.getS_data());
+        Files = new WIGB_Files(Strings, Strings.s_data);
         ge = new Generic_Environment(Files, Strings);
         File f;
         f = Files.getEnvDataFile();
@@ -114,7 +114,7 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
         File f;
         f = Files.getEnvDataFile();
         System.out.println("<cache data>");
-        Generic_StaticIO.writeObject(data, f);
+        Generic_IO.writeObject(data, f);
         System.out.println("</cache data>");
     }
 
@@ -122,7 +122,7 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
         File f;
         f = Files.getEnvDataFile();
         System.out.println("<load data>");
-        data = (WIGB_WaAS_Data) Generic_StaticIO.readObject(f);
+        data = (WIGB_WaAS_Data) Generic_IO.readObject(f);
         System.out.println("<load data>");
     }
 }

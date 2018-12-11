@@ -19,9 +19,10 @@ import java.io.File;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Iterator;
-import uk.ac.leeds.ccg.andyt.generic.io.Generic_StaticIO;
+import uk.ac.leeds.ccg.andyt.generic.io.Generic_IO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Strings;
 import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
+import uk.ac.leeds.ccg.andyt.projects.wigb.process.WIGB_Main_Process;
 
 /**
  *
@@ -113,11 +114,9 @@ public class WIGB_WaAS_Data implements Serializable {
      * @param o the value of o
      */
     public void cacheSubsetCollection(short cID, Object o) {
-        File dir;
-        dir = Files.getGeneratedWaASDirectory();
-        dir = new File(dir, "Subsets");
         File f;
-        f = new File(dir, "WaAS_" + cID + "." + Strings.S_dat);
+        f = new File(Files.getGeneratedWaASSubsetsDir(),
+                "WaAS_" + cID + "." + Strings.S_dat);
         cache(f, o);
     }
 
@@ -128,37 +127,35 @@ public class WIGB_WaAS_Data implements Serializable {
      */
     public Object loadSubsetCollection(short cID) {
         Object r;
-        File dir;
-        dir = Files.getGeneratedWaASDirectory();
-        dir = new File(dir, "Subsets");
         File f;
-        f = new File(dir, "WaAS_" + cID + "." + Strings.S_dat);
+        f = new File(Files.getGeneratedWaASSubsetsDir(),
+                "WaAS_" + cID + "." + Strings.S_dat);
         r = load(f);
         return r;
     }
 
     /**
      *
-     * @param cf the value of cf
+     * @param f the File to load Object result from.
      * @return
      */
-    protected Object load(File cf) {
+    protected Object load(File f) {
         Object r;
-        System.out.println("<load from File " + cf + ">");
-        r = Generic_StaticIO.readObject(cf);
-        System.out.println("</load from File " + cf + ">");
+        WIGB_Main_Process.log1("<load File " + f + ">");
+        r = Generic_IO.readObject(f);
+        WIGB_Main_Process.log1("</load File " + f + ">");
         return r;
     }
 
     /**
      *
-     * @param cf the value of cf
+     * @param f the value of cf
      * @param o the value of o
      */
-    protected void cache(File cf, Object o) {
-        System.out.println("<cache in File " + cf + ">");
-        Generic_StaticIO.writeObject(o, cf);
-        System.out.println("</cache in File " + cf + ">");
+    protected void cache(File f, Object o) {
+        WIGB_Main_Process.log1("<cache File " + f + ">");
+        Generic_IO.writeObject(o, f);
+        WIGB_Main_Process.log1("</cache File " + f + ">");
     }
 
 }
