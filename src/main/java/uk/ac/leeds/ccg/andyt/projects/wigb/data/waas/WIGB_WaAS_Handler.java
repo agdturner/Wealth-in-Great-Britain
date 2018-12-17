@@ -16,6 +16,8 @@
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas;
 
 import java.io.File;
+import java.util.HashSet;
+import java.util.TreeMap;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_IO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Strings;
 import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
@@ -49,7 +51,7 @@ public abstract class WIGB_WaAS_Handler {
         return f;
     }
 
-    protected Object cache(byte wave, File f) {
+    protected Object load(byte wave, File f) {
         Object r;
         String m;
         m = "load " + getString0(wave, f);
@@ -78,6 +80,17 @@ public abstract class WIGB_WaAS_Handler {
         cache(wave, f, o);
     }
 
+    public void cacheSubsetLookups(byte wave, TreeMap<Short, HashSet<Short>> m0, 
+            TreeMap<Short, Short> m1) {
+        File f;
+        f = new File(Files.getGeneratedWaASSubsetsDir(),
+                TYPE + wave + "To" + (wave + 1) + "." + Strings.S_dat);        
+        cache(wave, f, m0);
+        f = new File(Files.getGeneratedWaASSubsetsDir(),
+                TYPE + (wave + 1) + "To" + wave + "." + Strings.S_dat);        
+        cache(wave, f, m1);
+    }
+    
     public void cacheSubsetCollection(short cID, byte wave, Object o) {
         File f;
         f = new File(Files.getGeneratedWaASSubsetsDir(),
@@ -89,12 +102,30 @@ public abstract class WIGB_WaAS_Handler {
         return TYPE + wave + "_" + cID;
     }
 
+    public Object[] loadSubsetLookups(byte wave) {
+        Object[] r;
+        r = new Object[2];
+        TreeMap<Short, HashSet<Short>> m0;
+        TreeMap<Short, Short> m1;
+        File f;
+        f = new File(Files.getGeneratedWaASSubsetsDir(),
+                TYPE + wave + "To" + (wave + 1) + "." + Strings.S_dat);        
+        m0 = (TreeMap<Short, HashSet<Short>>) Generic_IO.readObject(f);
+        r[0] = m0;
+        cache(wave, f, m0);
+        f = new File(Files.getGeneratedWaASSubsetsDir(),
+                TYPE + (wave + 1) + "To" + wave + "." + Strings.S_dat);   
+        m1 = (TreeMap<Short, Short>) Generic_IO.readObject(f);
+        r[1] = m1;
+        return r;
+    }
+    
     public Object loadSubsetCollection(short cID, byte wave) {
         Object r;
         File f;
         f = new File(Files.getGeneratedWaASSubsetsDir(),
                 getString1(wave, cID) + "." + Strings.S_dat);
-        r = cache(wave, f);
+        r = load(wave, f);
         return r;
     }
 }

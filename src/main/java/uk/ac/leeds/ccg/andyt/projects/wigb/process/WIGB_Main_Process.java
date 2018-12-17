@@ -21,7 +21,6 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_IO;
@@ -33,7 +32,6 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_Collection;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_Combined_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_Data;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_HHOLD_Handler;
-import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_ID;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_PERSON_Handler;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave1Or2Or3Or4Or5_HHOLD_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave1_HHOLD_Record;
@@ -104,7 +102,7 @@ public class WIGB_Main_Process extends WIGB_Object {
 
         int chunkSize;
         chunkSize = 256; //1024; 512; 256;
-        doDataProcessingStep1(indir, outdir, hholdHandler);
+        //doDataProcessingStep1New(indir, outdir, hholdHandler);
         doDataProcessingStep2(indir, outdir, hholdHandler, chunkSize);
         //doDataProcessingStep3(outdir);
 
@@ -112,8 +110,8 @@ public class WIGB_Main_Process extends WIGB_Object {
     }
 
     /**
-     * Go through households for all waves and figure which ones have not
-     * significantly changed in terms of household composition. Having children
+     * Go through hholds for all waves and figure which ones have not
+     * significantly changed in terms of hhold composition. Having children
      * and children leaving home is fine. Anything else is perhaps an issue.
      *
      * @param outdir
@@ -123,7 +121,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         //log(data.lookup.size());
         //log(data.data.size());
 //        /**
-//         * Calculate the number of households that have the same number of
+//         * Calculate the number of hholds that have the same number of
 //         * adults throughout.
 //         */
 //        long n = data.data.keySet().stream()
@@ -153,7 +151,7 @@ public class WIGB_Main_Process extends WIGB_Object {
 //                    data.clearCollection(cID);
 //                    return nc;
 //                }).sum();
-//        log("There are " + n + " households that contain the "
+//        log("There are " + n + " hholds that contain the "
 //                + "same number of adults throughout.");
 // For brevity/convenience.
         byte W1 = WIGB_WaAS_Data.W1;
@@ -266,7 +264,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         }
 
 //        /**
-//         * Get the IDs of households that have the same number of adults
+//         * Get the IDs of hholds that have the same number of adults
 //         * throughout.
 //         */
 //        ite = data.data.keySet().iterator();
@@ -302,7 +300,7 @@ public class WIGB_Main_Process extends WIGB_Object {
 //                + "for each wave " + s.size() + ".");
 //        /**
 //         * Stream through the data and calculate the total value of UK Land in
-//         * Wave 1 households. This value is an aggregate of numerical class
+//         * Wave 1 hholds. This value is an aggregate of numerical class
 //         * values.
 //         */
 //        long tDVLUKVAL = data.data.keySet().stream()
@@ -417,16 +415,64 @@ public class WIGB_Main_Process extends WIGB_Object {
         WIGB_WaAS_PERSON_Handler personHandler;
         personHandler = new WIGB_WaAS_PERSON_Handler(Files, Strings, indir);
         log("Merge Person and Household Data");
-        int nOC = doDataProcessingStep2Wave1(
+        /**
+         * Wave 1
+         */
+        Object[] o;
+        o = doDataProcessingStep2Wave1(
                 data, personHandler, indir, outdir, hholdHandler, chunkSize);
-        doDataProcessingStep2Wave2(
-                data, personHandler, indir, outdir, hholdHandler, nOC);
-        doDataProcessingStep2Wave3(
-                data, personHandler, indir, outdir, hholdHandler, nOC);
-        doDataProcessingStep2Wave4(
-                data, personHandler, indir, outdir, hholdHandler, nOC);
-        doDataProcessingStep2Wave5(
-                data, personHandler, indir, outdir, hholdHandler, nOC);
+        int nOC = (Integer) o[0];
+        TreeMap<Short, HashSet<Short>> CIDToCASEW1;
+        CIDToCASEW1 = (TreeMap<Short, HashSet<Short>>) o[1];
+        HashMap<Short, Short> CASEW1ToCID;
+        CASEW1ToCID = (HashMap<Short, Short>) o[2];
+        /**
+         * Wave 2
+         */
+        Object[] lookups;
+        lookups = hholdHandler.loadSubsetLookups(WIGB_WaAS_Data.W1);
+        TreeMap<Short, HashSet<Short>> CASEW1ToCASEW2;
+        CASEW1ToCASEW2 = (TreeMap<Short, HashSet<Short>>) lookups[0];
+        TreeMap<Short, Short> CASEW2ToCASEW1;
+        CASEW2ToCASEW1 = (TreeMap<Short, Short>) lookups[1];
+        doDataProcessingStep2Wave2(data, personHandler, indir, outdir,
+                hholdHandler, nOC, CASEW1ToCID, CIDToCASEW1, CASEW1ToCASEW2,
+                CASEW2ToCASEW1);
+        /**
+         * Wave 3
+         */
+        lookups = hholdHandler.loadSubsetLookups(WIGB_WaAS_Data.W2);
+        TreeMap<Short, HashSet<Short>> CASEW2ToCASEW3;
+        CASEW2ToCASEW3 = (TreeMap<Short, HashSet<Short>>) lookups[0];
+        TreeMap<Short, Short> CASEW3ToCASEW2;
+        CASEW3ToCASEW2 = (TreeMap<Short, Short>) lookups[1];
+        doDataProcessingStep2Wave3(data, personHandler, indir, outdir,
+                hholdHandler, nOC, CASEW1ToCID, CIDToCASEW1, CASEW1ToCASEW2,
+                CASEW2ToCASEW1, CASEW2ToCASEW3, CASEW3ToCASEW2);
+        /**
+         * Wave 4
+         */
+        lookups = hholdHandler.loadSubsetLookups(WIGB_WaAS_Data.W3);
+        TreeMap<Short, HashSet<Short>> CASEW3ToCASEW4;
+        CASEW3ToCASEW4 = (TreeMap<Short, HashSet<Short>>) lookups[0];
+        TreeMap<Short, Short> CASEW4ToCASEW3;
+        CASEW4ToCASEW3 = (TreeMap<Short, Short>) lookups[1];
+        doDataProcessingStep2Wave4(data, personHandler, indir, outdir,
+                hholdHandler, nOC, CASEW1ToCID, CIDToCASEW1, CASEW1ToCASEW2,
+                CASEW2ToCASEW1, CASEW2ToCASEW3, CASEW3ToCASEW2, CASEW3ToCASEW4,
+                CASEW4ToCASEW3);
+        /**
+         * Wave 5
+         */
+        lookups = hholdHandler.loadSubsetLookups(WIGB_WaAS_Data.W4);
+        TreeMap<Short, HashSet<Short>> CASEW4ToCASEW5;
+        CASEW4ToCASEW5 = (TreeMap<Short, HashSet<Short>>) lookups[0];
+        TreeMap<Short, Short> CASEW5ToCASEW4;
+        CASEW5ToCASEW4 = (TreeMap<Short, Short>) lookups[1];
+        doDataProcessingStep2Wave5(data, personHandler, indir, outdir,
+                hholdHandler, nOC, CASEW1ToCID, CIDToCASEW1, CASEW1ToCASEW2,
+                CASEW2ToCASEW1, CASEW2ToCASEW3, CASEW3ToCASEW2, CASEW3ToCASEW4, 
+                CASEW4ToCASEW3, CASEW4ToCASEW5, CASEW5ToCASEW4);
         log("data.lookup.size() " + data.lookup.size());
         log("data.data.size() " + data.data.size());
         Env.cacheData();
@@ -444,36 +490,42 @@ public class WIGB_Main_Process extends WIGB_Object {
      * @param chunkSize
      * @return
      */
-    public static int doDataProcessingStep2Wave1(
+    public static Object[] doDataProcessingStep2Wave1(
             WIGB_WaAS_Data data,
             WIGB_WaAS_PERSON_Handler personHandler,
             File indir, File outdir,
             WIGB_WaAS_HHOLD_Handler hholdHandler, int chunkSize) {
         log("Wave 1");
-        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave1_HHOLD_Record> hs;
+        Object[] r;
+        r = new Object[3];
+        TreeMap<Short, WIGB_WaAS_Wave1_HHOLD_Record> hs;
         hs = hholdHandler.loadCacheSubsetWave1();
-        Set<WIGB_WaAS_ID> set;
-        set = hs.keySet();
+        TreeSet<Short> CASEW1IDs;
+        CASEW1IDs = new TreeSet<>();
+        CASEW1IDs.addAll(hs.keySet());
         int nOC;
-        nOC = (int) Math.ceil((double) set.size() / (double) chunkSize);
+        nOC = (int) Math.ceil((double) CASEW1IDs.size() / (double) chunkSize);
+        r[0] = nOC;
         Object[] ps;
-        ps = personHandler.loadSubsetWave1(set, nOC, WIGB_WaAS_Data.W1, outdir);
-        HashMap<Short, Set<WIGB_WaAS_ID>> cIDs;
-        cIDs = (HashMap<Short, Set<WIGB_WaAS_ID>>) ps[0];
-        HashMap<Short, File> cFs;
-        cFs = (HashMap<Short, File>) ps[1];
-        cIDs.keySet().stream()
+        ps = personHandler.loadSubsetWave1(CASEW1IDs, nOC, WIGB_WaAS_Data.W1,
+                outdir);
+        TreeMap<Short, HashSet<Short>> CIDToCASEW1;
+        CIDToCASEW1 = (TreeMap<Short, HashSet<Short>>) ps[0];
+        TreeMap<Short, File> cFs;
+        cFs = (TreeMap<Short, File>) ps[2];
+        r[1] = ps[0];
+        r[2] = ps[1];
+        CIDToCASEW1.keySet().stream()
                 .forEach(cID -> {
                     log("collectionID " + cID);
                     WIGB_WaAS_Collection c;
                     c = new WIGB_WaAS_Collection(cID);
                     data.data.put(cID, c);
-                    // Add household records.
-                    Set<WIGB_WaAS_ID> s;
-                    s = cIDs.get(cID);
+                    // Add hhold records.
+                    HashSet<Short> s;
+                    s = CIDToCASEW1.get(cID);
                     s.stream()
-                            .forEach(ID -> {
-                                short CASEW1 = ID.getCASEW1();
+                            .forEach(CASEW1 -> {
                                 data.lookup.put(CASEW1, cID);
                                 HashMap<Short, WIGB_WaAS_Combined_Record> m;
                                 m = c.getData();
@@ -483,7 +535,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                     cr = new WIGB_WaAS_Combined_Record(CASEW1);
                                     m.put(CASEW1, cr);
                                 }
-                                cr.w1Record.setHhold(hs.get(ID));
+                                cr.w1Record.setHhold(hs.get(CASEW1));
                             });
                     // Add person records.
                     File f;
@@ -509,8 +561,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                     data.cacheSubsetCollection(cID, c);
                     data.clearCollection(cID);
                 });
-
-        return nOC;
+        return r;
     }
 
     /**
@@ -522,31 +573,34 @@ public class WIGB_Main_Process extends WIGB_Object {
      * @param outdir
      * @param hholdHandler
      * @param nOC
+     * @param CASEW1ToCID
+     *
+     * @param CIDToCASEW1 @param CASEW1ToCASEW2
+     * @param CASEW2ToCASEW1
      */
     public static void doDataProcessingStep2Wave2(WIGB_WaAS_Data data,
             WIGB_WaAS_PERSON_Handler personHandler, File indir, File outdir,
-            WIGB_WaAS_HHOLD_Handler hholdHandler, int nOC) {
+            WIGB_WaAS_HHOLD_Handler hholdHandler, int nOC,
+            HashMap<Short, Short> CASEW1ToCID,
+            TreeMap<Short, HashSet<Short>> CIDToCASEW1,
+            TreeMap<Short, HashSet<Short>> CASEW1ToCASEW2,
+            TreeMap<Short, Short> CASEW2ToCASEW1) {
         log("Wave 2");
-        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave2_HHOLD_Record> hs;
+        TreeMap<Short, WIGB_WaAS_Wave2_HHOLD_Record> hs;
         hs = hholdHandler.loadCacheSubsetWave2();
-        Object[] ps;
-        ps = personHandler.loadSubsetWave2(hs.keySet(), nOC, WIGB_WaAS_Data.W2,
-                outdir);
-        HashMap<Short, Set<WIGB_WaAS_ID>> cIDs;
-        cIDs = (HashMap<Short, Set<WIGB_WaAS_ID>>) ps[0];
-        HashMap<Short, File> cFs;
-        cFs = (HashMap<Short, File>) ps[1];
-        cIDs.keySet().stream()
+        TreeMap<Short, File> cFs;
+        cFs = personHandler.loadSubsetWave2(nOC, CASEW1ToCID, WIGB_WaAS_Data.W2,
+                outdir, CASEW2ToCASEW1);
+        cFs.keySet().stream()
                 .forEach(cID -> {
-                    log1("collectionID " + cID);
+                    log1("CollectionID " + cID);
                     WIGB_WaAS_Collection c;
                     c = data.getCollection(cID);
-                    // Add household records.
-                    Set<WIGB_WaAS_ID> s;
-                    s = cIDs.get(cID);
+                    // Add hhold records.
+                    HashSet<Short> s;
+                    s = CIDToCASEW1.get(cID);
                     s.stream()
-                            .forEach(ID -> {
-                                short CASEW1 = ID.getCASEW1();
+                            .forEach(CASEW1 -> {
                                 data.lookup.put(CASEW1, cID);
                                 HashMap<Short, WIGB_WaAS_Combined_Record> m;
                                 m = c.getData();
@@ -557,8 +611,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                             + "for CASEW1 " + CASEW1 + "! "
                                             + "This may be a data error?");
                                 } else {
-                                    cr.w2Record.setHhold(
-                                            hs.get(ID));
+                                    cr.w2Record.setHhold(hs.get(CASEW1));
                                 }
                             });
                     // Add person records.
@@ -571,8 +624,13 @@ public class WIGB_Main_Process extends WIGB_Object {
                             .forEach(line -> {
                                 WIGB_WaAS_Wave2_PERSON_Record p;
                                 p = new WIGB_WaAS_Wave2_PERSON_Record(line);
+                                short CASEW1Check;
+                                CASEW1Check = p.getCASEW1();
+                                short CASEW2;
+                                CASEW2 = p.getCASEW2();
                                 short CASEW1;
-                                CASEW1 = p.getCASEW1();
+                                CASEW1 = CASEW2ToCASEW1.get(CASEW2);
+                                printCheck(WIGB_WaAS_Data.W2, CASEW1Check, CASEW1, CASEW1ToCASEW2);
                                 HashMap<Short, WIGB_WaAS_Combined_Record> m;
                                 m = c.getData();
                                 WIGB_WaAS_Combined_Record cr;
@@ -582,7 +640,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                             + "for CASEW1 " + CASEW1 + "! "
                                             + "This may be a data error, "
                                             + "or this person may have "
-                                            + "moved from one household "
+                                            + "moved from one hhold "
                                             + "to another?");
                                 } else {
                                     cr.w2Record.getPeople().add(p);
@@ -596,6 +654,25 @@ public class WIGB_Main_Process extends WIGB_Object {
                 });
     }
 
+    protected static void printCheck(byte wave, short CASEWXCheck,
+            short CASEWX, TreeMap<Short, HashSet<Short>> lookup) {
+        if (CASEWXCheck != CASEWX) {
+            log("Person in Wave " + wave + " record given by "
+                    + "CASEW" + wave + " " + CASEWX + " has a "
+                    + "CASEW" + (wave - 1) + " as " + CASEWXCheck + ", "
+                    + "but in the CASEW" + wave + "ToCASEW" + (wave - 1) + " "
+                    + "lookup this is " + CASEWX);
+            if (lookup.get(CASEWXCheck) == null) {
+                log("CASEW" + (wave - 1) + "ToCASEW" + wave + ".get(CASEW"
+                        + (wave - 1) + "Check) == null");
+            } else {
+                log("CASEW" + (wave - 1) + "ToCASEW" + wave + ".get(CASEW"
+                        + (wave - 1) + "Check).size() "
+                        + lookup.get(CASEWXCheck).size());
+            }
+        }
+    }
+
     /**
      * Merge Person and Household Data for Wave 3.
      *
@@ -605,31 +682,38 @@ public class WIGB_Main_Process extends WIGB_Object {
      * @param outdir
      * @param hholdHandler
      * @param nOC
+     * @param CASEW1ToCID
+     * @param CIDToCASEW1
+     * @param CASEW1ToCASEW2
+     * @param CASEW2ToCASEW1
+     * @param CASEW2ToCASEW3
+     * @param CASEW3ToCASEW2
      */
     public static void doDataProcessingStep2Wave3(WIGB_WaAS_Data data,
             WIGB_WaAS_PERSON_Handler personHandler, File indir, File outdir,
-            WIGB_WaAS_HHOLD_Handler hholdHandler, int nOC) {
+            WIGB_WaAS_HHOLD_Handler hholdHandler, int nOC,
+            HashMap<Short, Short> CASEW1ToCID,
+            TreeMap<Short, HashSet<Short>> CIDToCASEW1,
+            TreeMap<Short, HashSet<Short>> CASEW1ToCASEW2,
+            TreeMap<Short, Short> CASEW2ToCASEW1,
+            TreeMap<Short, HashSet<Short>> CASEW2ToCASEW3,
+            TreeMap<Short, Short> CASEW3ToCASEW2) {
         log("Wave 3");
-        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave3_HHOLD_Record> hs;
+        TreeMap<Short, WIGB_WaAS_Wave3_HHOLD_Record> hs;
         hs = hholdHandler.loadCacheSubsetWave3();
-        Object[] ps;
-        ps = personHandler.loadSubsetWave3(hs.keySet(), nOC, WIGB_WaAS_Data.W3,
-                outdir);
-        HashMap<Short, Set<WIGB_WaAS_ID>> cIDs;
-        cIDs = (HashMap<Short, Set<WIGB_WaAS_ID>>) ps[0];
-        HashMap<Short, File> cFs;
-        cFs = (HashMap<Short, File>) ps[1];
-        cIDs.keySet().stream()
+        TreeMap<Short, File> cFs;
+        cFs = personHandler.loadSubsetWave3(nOC, CASEW1ToCID, WIGB_WaAS_Data.W3,
+                outdir, CASEW2ToCASEW1, CASEW3ToCASEW2);
+        cFs.keySet().stream()
                 .forEach(cID -> {
                     log("collectionID " + cID);
                     WIGB_WaAS_Collection c;
                     c = data.getCollection(cID);
-                    // Add household records.
-                    Set<WIGB_WaAS_ID> s;
-                    s = cIDs.get(cID);
+                    // Add hhold records.
+                    HashSet<Short> s;
+                    s = CIDToCASEW1.get(cID);
                     s.stream()
-                            .forEach(ID -> {
-                                short CASEW1 = ID.getCASEW1();
+                            .forEach(CASEW1 -> {
                                 data.lookup.put(CASEW1, cID);
                                 HashMap<Short, WIGB_WaAS_Combined_Record> m;
                                 m = c.getData();
@@ -640,8 +724,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                             + "for CASEW1 " + CASEW1 + "! "
                                             + "This may be a data error?");
                                 } else {
-                                    cr.w3Record.setHhold(
-                                            hs.get(ID));
+                                    cr.w3Record.setHhold(hs.get(CASEW1));
                                 }
                             });
                     // Add person records.
@@ -654,8 +737,18 @@ public class WIGB_Main_Process extends WIGB_Object {
                             .forEach(line -> {
                                 WIGB_WaAS_Wave3_PERSON_Record p;
                                 p = new WIGB_WaAS_Wave3_PERSON_Record(line);
+                                short CASEW1Check;
+                                CASEW1Check = p.getCASEW1();
+                                short CASEW2Check;
+                                CASEW2Check = p.getCASEW2();
+                                short CASEW3;
+                                CASEW3 = p.getCASEW3();
+                                short CASEW2;
+                                CASEW2 = CASEW3ToCASEW2.get(CASEW3);
                                 short CASEW1;
-                                CASEW1 = p.getCASEW1();
+                                CASEW1 = CASEW2ToCASEW1.get(CASEW2);
+                                printCheck(WIGB_WaAS_Data.W2, CASEW1Check, CASEW1, CASEW1ToCASEW2);
+                                printCheck(WIGB_WaAS_Data.W3, CASEW2Check, CASEW2, CASEW2ToCASEW3);
                                 HashMap<Short, WIGB_WaAS_Combined_Record> m;
                                 m = c.getData();
                                 WIGB_WaAS_Combined_Record cr;
@@ -665,7 +758,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                             + "for CASEW1 " + CASEW1 + "! "
                                             + "This may be a data error, "
                                             + "or this person may have "
-                                            + "moved from one household "
+                                            + "moved from one hhold "
                                             + "to another?");
                                 } else {
                                     cr.w3Record.getPeople().add(p);
@@ -688,34 +781,43 @@ public class WIGB_Main_Process extends WIGB_Object {
      * @param outdir
      * @param hholdHandler
      * @param nOC
+     * @param CASEW1ToCID
+     * @param CIDToCASEW1
+     * @param CASEW1ToCASEW2
+     * @param CASEW2ToCASEW1
+     * @param CASEW2ToCASEW3
+     * @param CASEW3ToCASEW2
+     * @param CASEW3ToCASEW4
+     * @param CASEW4ToCASEW3
      */
-    public static void doDataProcessingStep2Wave4(
-            WIGB_WaAS_Data data,
-            WIGB_WaAS_PERSON_Handler personHandler,
-            File indir, File outdir,
-            WIGB_WaAS_HHOLD_Handler hholdHandler, int nOC) {
+    public static void doDataProcessingStep2Wave4(WIGB_WaAS_Data data,
+            WIGB_WaAS_PERSON_Handler personHandler, File indir, File outdir,
+            WIGB_WaAS_HHOLD_Handler hholdHandler, int nOC,
+            HashMap<Short, Short> CASEW1ToCID,
+            TreeMap<Short, HashSet<Short>> CIDToCASEW1,
+            TreeMap<Short, HashSet<Short>> CASEW1ToCASEW2,
+            TreeMap<Short, Short> CASEW2ToCASEW1,
+            TreeMap<Short, HashSet<Short>> CASEW2ToCASEW3,
+            TreeMap<Short, Short> CASEW3ToCASEW2,
+            TreeMap<Short, HashSet<Short>> CASEW3ToCASEW4,
+            TreeMap<Short, Short> CASEW4ToCASEW3) {
         // Wave 4
         log("Wave 4");
-        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave4_HHOLD_Record> hs;
+        TreeMap<Short, WIGB_WaAS_Wave4_HHOLD_Record> hs;
         hs = hholdHandler.loadCacheSubsetWave4();
-        Object[] ps;
-        ps = personHandler.loadSubsetWave4(hs.keySet(), nOC, WIGB_WaAS_Data.W4,
-                outdir);
-        HashMap<Short, Set<WIGB_WaAS_ID>> cIDs;
-        cIDs = (HashMap<Short, Set<WIGB_WaAS_ID>>) ps[0];
-        HashMap<Short, File> cFs;
-        cFs = (HashMap<Short, File>) ps[1];
-        cIDs.keySet().stream()
+        TreeMap<Short, File> cFs;
+        cFs = personHandler.loadSubsetWave4(nOC, CASEW1ToCID, WIGB_WaAS_Data.W4,
+                outdir, CASEW2ToCASEW1, CASEW3ToCASEW2, CASEW4ToCASEW3);
+        cFs.keySet().stream()
                 .forEach(cID -> {
                     log("collectionID " + cID);
                     WIGB_WaAS_Collection c;
                     c = data.getCollection(cID);
-                    // Add household records.
-                    Set<WIGB_WaAS_ID> s;
-                    s = cIDs.get(cID);
+                    // Add hhold records.
+                    HashSet<Short> s;
+                    s = CIDToCASEW1.get(cID);
                     s.stream()
-                            .forEach(ID -> {
-                                short CASEW1 = ID.getCASEW1();
+                            .forEach(CASEW1 -> {
                                 data.lookup.put(CASEW1, cID);
                                 HashMap<Short, WIGB_WaAS_Combined_Record> m;
                                 m = c.getData();
@@ -726,8 +828,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                             + "for CASEW1 " + CASEW1 + "! "
                                             + "This may be a data error?");
                                 } else {
-                                    cr.w4Record.setHhold(
-                                            hs.get(ID));
+                                    cr.w4Record.setHhold(hs.get(CASEW1));
                                 }
                             });
                     // Add person records.
@@ -740,8 +841,23 @@ public class WIGB_Main_Process extends WIGB_Object {
                             .forEach(line -> {
                                 WIGB_WaAS_Wave4_PERSON_Record p;
                                 p = new WIGB_WaAS_Wave4_PERSON_Record(line);
+                                short CASEW1Check;
+                                CASEW1Check = p.getCASEW1();
+                                short CASEW2Check;
+                                CASEW2Check = p.getCASEW2();
+                                short CASEW3Check;
+                                CASEW3Check = p.getCASEW3();
+                                short CASEW4;
+                                CASEW4 = p.getCASEW4();
+                                short CASEW3;
+                                CASEW3 = CASEW4ToCASEW3.get(CASEW4);
+                                short CASEW2;
+                                CASEW2 = CASEW3ToCASEW2.get(CASEW3);
                                 short CASEW1;
-                                CASEW1 = p.getCASEW1();
+                                CASEW1 = CASEW2ToCASEW1.get(CASEW2);
+                                printCheck(WIGB_WaAS_Data.W2, CASEW1Check, CASEW1, CASEW1ToCASEW2);
+                                printCheck(WIGB_WaAS_Data.W3, CASEW2Check, CASEW2, CASEW2ToCASEW3);
+                                printCheck(WIGB_WaAS_Data.W4, CASEW3Check, CASEW3, CASEW3ToCASEW4);
                                 HashMap<Short, WIGB_WaAS_Combined_Record> m;
                                 m = c.getData();
                                 WIGB_WaAS_Combined_Record cr;
@@ -751,7 +867,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                             + "for CASEW1 " + CASEW1 + "! "
                                             + "This may be a data error, "
                                             + "or this person may have "
-                                            + "moved from one household "
+                                            + "moved from one hhold "
                                             + "to another?");
                                 } else {
                                     cr.w4Record.getPeople().add(p);
@@ -773,32 +889,46 @@ public class WIGB_Main_Process extends WIGB_Object {
      * @param indir
      * @param outdir
      * @param hholdHandler
-     * @param cOC
+     * @param nOC
+     * @param CASEW1ToCID
+     * @param CIDToCASEW1
+     * @param CASEW1ToCASEW2
+     * @param CASEW2ToCASEW1
+     * @param CASEW2ToCASEW3
+     * @param CASEW3ToCASEW2
+     * @param CASEW3ToCASEW4
+     * @param CASEW4ToCASEW3
+     * @param CASEW4ToCASEW5
+     * @param CASEW5ToCASEW4
      */
-    public static void doDataProcessingStep2Wave5(
-            WIGB_WaAS_Data data,
-            WIGB_WaAS_PERSON_Handler personHandler,
-            File indir, File outdir,
-            WIGB_WaAS_HHOLD_Handler hholdHandler, int cOC) {
-        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave5_HHOLD_Record> hs;
+    public static void doDataProcessingStep2Wave5(WIGB_WaAS_Data data,
+            WIGB_WaAS_PERSON_Handler personHandler, File indir, File outdir,
+            WIGB_WaAS_HHOLD_Handler hholdHandler, int nOC,
+            HashMap<Short, Short> CASEW1ToCID,
+            TreeMap<Short, HashSet<Short>> CIDToCASEW1,
+            TreeMap<Short, HashSet<Short>> CASEW1ToCASEW2,
+            TreeMap<Short, Short> CASEW2ToCASEW1,
+            TreeMap<Short, HashSet<Short>> CASEW2ToCASEW3,
+            TreeMap<Short, Short> CASEW3ToCASEW2,
+            TreeMap<Short, HashSet<Short>> CASEW3ToCASEW4,
+            TreeMap<Short, Short> CASEW4ToCASEW3,
+            TreeMap<Short, HashSet<Short>> CASEW4ToCASEW5,
+            TreeMap<Short, Short> CASEW5ToCASEW4) {
+        TreeMap<Short, WIGB_WaAS_Wave5_HHOLD_Record> hs;
         hs = hholdHandler.loadCacheSubsetWave5();
-        Object[] ps;
-        ps = personHandler.loadSubsetWave5(hs.keySet(), cOC, WIGB_WaAS_Data.W5,
-                outdir);
-        HashMap<Short, Set<WIGB_WaAS_ID>> cIDs;
-        cIDs = (HashMap<Short, Set<WIGB_WaAS_ID>>) ps[0];
-        HashMap<Short, File> cFs;
-        cFs = (HashMap<Short, File>) ps[1];
-        cIDs.keySet().stream()
+        TreeMap<Short, File> cFs;
+        cFs = personHandler.loadSubsetWave5(nOC, CASEW1ToCID, WIGB_WaAS_Data.W5,
+                outdir, CASEW2ToCASEW1, CASEW3ToCASEW2, CASEW4ToCASEW3,
+                CASEW5ToCASEW4);
+        cFs.keySet().stream()
                 .forEach(cID -> {
                     WIGB_WaAS_Collection c;
                     c = data.getCollection(cID);
-                    // Add household records.
-                    Set<WIGB_WaAS_ID> s;
-                    s = cIDs.get(cID);
+                    // Add hhold records.
+                    HashSet<Short> s;
+                    s = CIDToCASEW1.get(cID);
                     s.stream()
-                            .forEach(ID -> {
-                                short CASEW1 = ID.getCASEW1();
+                            .forEach(CASEW1 -> {
                                 data.lookup.put(CASEW1, cID);
                                 HashMap<Short, WIGB_WaAS_Combined_Record> m;
                                 m = c.getData();
@@ -809,8 +939,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                             + "for CASEW1 " + CASEW1 + "! "
                                             + "This may be a data error?");
                                 } else {
-                                    cr.w5Record.setHhold(
-                                            hs.get(ID));
+                                    cr.w5Record.setHhold(hs.get(CASEW1));
                                 }
                             });
                     // Add person records.
@@ -823,8 +952,28 @@ public class WIGB_Main_Process extends WIGB_Object {
                             .forEach(line -> {
                                 WIGB_WaAS_Wave5_PERSON_Record p;
                                 p = new WIGB_WaAS_Wave5_PERSON_Record(line);
+                                short CASEW1Check;
+                                CASEW1Check = p.getCASEW1();
+                                short CASEW2Check;
+                                CASEW2Check = p.getCASEW2();
+                                short CASEW3Check;
+                                CASEW3Check = p.getCASEW3();
+                                short CASEW4Check;
+                                CASEW4Check = p.getCASEW4();
+                                short CASEW5;
+                                CASEW5 = p.getCASEW5();
+                                short CASEW4;
+                                CASEW4 = CASEW5ToCASEW4.get(CASEW5);
+                                short CASEW3;
+                                CASEW3 = CASEW4ToCASEW3.get(CASEW4);
+                                short CASEW2;
+                                CASEW2 = CASEW3ToCASEW2.get(CASEW3);
                                 short CASEW1;
-                                CASEW1 = p.getCASEW1();
+                                CASEW1 = CASEW2ToCASEW1.get(CASEW2);
+                                printCheck(WIGB_WaAS_Data.W2, CASEW1Check, CASEW1, CASEW1ToCASEW2);
+                                printCheck(WIGB_WaAS_Data.W3, CASEW2Check, CASEW2, CASEW2ToCASEW3);
+                                printCheck(WIGB_WaAS_Data.W4, CASEW3Check, CASEW3, CASEW3ToCASEW4);
+                                printCheck(WIGB_WaAS_Data.W5, CASEW4Check, CASEW4, CASEW4ToCASEW5);
                                 HashMap<Short, WIGB_WaAS_Combined_Record> m;
                                 m = c.getData();
                                 WIGB_WaAS_Combined_Record cr;
@@ -834,7 +983,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                             + "for CASEW1 " + CASEW1 + "! "
                                             + "This may be a data error, "
                                             + "or this person may have "
-                                            + "moved from one household "
+                                            + "moved from one hhold "
                                             + "to another?");
                                 } else {
                                     cr.w5Record.getPeople().add(p);
@@ -871,18 +1020,17 @@ public class WIGB_Main_Process extends WIGB_Object {
      * @param outdir
      * @param hholdHandler
      */
-    public void doDataProcessingStep1(File indir, File outdir,
+    public void doDataProcessingStep1New(File indir, File outdir,
             WIGB_WaAS_HHOLD_Handler hholdHandler) {
         initlog(1);
         // For convenience/code brevity.
-        byte nwaves;
-        nwaves = WIGB_WaAS_Data.NWAVES;
+        byte NWAVES;
+        NWAVES = WIGB_WaAS_Data.NWAVES;
         /**
-         * Step 1: Load household data into cache and memory.
+         * Step 1: Load hhold data into cache and memory.
          */
         Object[] hholdData;
-        //hholdData = hholdHandler.load();
-        hholdData = hholdHandler.loadNew();
+        hholdData = hholdHandler.load();
         /**
          * Step 2: Unpack hholdData. hholdData is an Object[] of length 2. r[0]
          * is a TreeMap with Integer keys which are the CASE id for the wave and
@@ -898,199 +1046,59 @@ public class WIGB_Main_Process extends WIGB_Object {
          * values, r[1][1] is a list of CASEW1 values. For Wave 1: r[1][0] is a
          * list of CASEW1 values.
          */
-        HashMap<Byte, TreeSet<WIGB_WaAS_ID>[]> iDLists;
+        HashMap<Byte, TreeSet<Short>[]> iDLists;
         iDLists = new HashMap<>();
+        TreeSet<Short>[] iDList;
         // W1
         Object[] hholdDataW1;
         hholdDataW1 = (Object[]) hholdData[0];
-        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave1_HHOLD_Record> hholdW1;
-        hholdW1 = (TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave1_HHOLD_Record>) hholdDataW1[0];
-        TreeSet<WIGB_WaAS_ID>[] iDListsW1;
-        iDListsW1 = (TreeSet<WIGB_WaAS_ID>[]) hholdDataW1[1];
-        iDLists.put(WIGB_WaAS_Data.W1, iDListsW1);
+        iDLists.put(WIGB_WaAS_Data.W1, (TreeSet<Short>[]) hholdDataW1[1]);
         // W2
         Object[] hholdDataW2;
         hholdDataW2 = (Object[]) hholdData[1];
-        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave2_HHOLD_Record> hholdW2;
-        hholdW2 = (TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave2_HHOLD_Record>) hholdDataW2[0];
-        TreeSet<WIGB_WaAS_ID>[] iDListsW2;
-        iDListsW2 = (TreeSet<WIGB_WaAS_ID>[]) hholdDataW2[1];
-        iDLists.put(WIGB_WaAS_Data.W2, iDListsW2);
+        iDLists.put(WIGB_WaAS_Data.W2, (TreeSet<Short>[]) hholdDataW2[1]);
         // W3
         Object[] hholdDataW3;
         hholdDataW3 = (Object[]) hholdData[2];
-        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave3_HHOLD_Record> hholdW3;
-        hholdW3 = (TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave3_HHOLD_Record>) hholdDataW3[0];
-        TreeSet<WIGB_WaAS_ID>[] iDListsW3;
-        iDListsW3 = (TreeSet<WIGB_WaAS_ID>[]) hholdDataW3[1];
-        iDLists.put(WIGB_WaAS_Data.W3, iDListsW3);
+        iDLists.put(WIGB_WaAS_Data.W3, (TreeSet<Short>[]) hholdDataW3[1]);
         // W4
         Object[] hholdDataW4;
         hholdDataW4 = (Object[]) hholdData[3];
-        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave4_HHOLD_Record> hholdW4;
-        hholdW4 = (TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave4_HHOLD_Record>) hholdDataW4[0];
-        TreeSet<WIGB_WaAS_ID>[] iDListsW4;
-        iDListsW4 = (TreeSet<WIGB_WaAS_ID>[]) hholdDataW4[1];
-        iDLists.put(WIGB_WaAS_Data.W4, iDListsW4);
+        iDLists.put(WIGB_WaAS_Data.W4, (TreeSet<Short>[]) hholdDataW4[1]);
         // W5
         Object[] hholdDataW5;
         hholdDataW5 = (Object[]) hholdData[4];
-        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave5_HHOLD_Record> hholdW5;
-        hholdW5 = (TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave5_HHOLD_Record>) hholdDataW5[0];
-        TreeSet<WIGB_WaAS_ID>[] iDListsW5;
-        iDListsW5 = (TreeSet<WIGB_WaAS_ID>[]) hholdDataW5[1];
-        iDLists.put(WIGB_WaAS_Data.W5, iDListsW5);
+        iDLists.put(WIGB_WaAS_Data.W5, (TreeSet<Short>[]) hholdDataW5[1]);
         /**
          * Step 3: Print out the Number of Households in each wave.
+         *
+         * @return r - an Object[] of length 2. r[0] is a TreeMap with keys as
+         * CASEW5 and values as WIGB_WaAS_Wave5_HHOLD_Records. r[1] is an array
+         * of TreeSets where: r[1][0] is a list of CASEW1 values, r[1][1] is a
+         * list of CASEW2 values, r[1][2] is a list of CASEW3 values, r[1][3] is
+         * a list of CASEW4 values.
          */
-        for (byte wave = nwaves; wave > 0; wave--) {
-            for (int i = 0; i < wave; i++) {
-                if (i == 0) {
-                    String m;
-                    m = "" + iDLists.get(wave)[i].size()
-                            + "\tNumber of HHOLD IDs in Wave " + wave
-                            + " reported as being in ";
-                    for (int j = wave; j > 1; j--) {
-                        m += "Wave " + j + ", ";
+        for (byte wave = NWAVES; wave > 0; wave--) {
+            iDList = iDLists.get(wave);
+            for (int i = wave; i > 0; i--) {
+                String m;
+                if (i == wave) {
+                    if (wave > 2) {
+                        m = "" + iDList[i].size()
+                                + "\tNumber of HHOLD IDs in Wave " + wave
+                                + " reported as being in ";
+                        for (int j = wave - 1; j > 0; j--) {
+                            m += "Wave " + j + ", ";
+                        }
+                        log(m);
                     }
-                    log(m + "Wave 1");
                 } else {
-                    log("" + iDLists.get(wave)[i].size()
-                            + "\tNumber of HHOLD IDs from Wave " + (wave - i)
-                            + " reported as being in Wave " + wave);
+                    m = "" + iDList[i].size()
+                            + "\tNumber of HHOLD IDs in Wave " + wave
+                            + " reported as being in Wave " + i;
+                    log(m);
                 }
             }
-        }
-        /**
-         * Step 4: Get IDs of all hholds in all waves. This assumes that CASEW1
-         * has been correctly encoded in each wave.
-         */
-        // Wave 1
-        TreeSet<WIGB_WaAS_ID> all;
-        all = new TreeSet<>();
-        all.addAll(iDListsW1[0]);
-        all.retainAll(iDListsW2[iDListsW2.length - 1]);
-        all.retainAll(iDListsW3[iDListsW3.length - 1]);
-        all.retainAll(iDListsW4[iDListsW4.length - 1]);
-        all.retainAll(iDListsW5[iDListsW5.length - 1]);
-        log("" + all.size()
-                + "\tNumber of HHOLDs in Waves 5, 4, 3, 2 and 1");
-        /**
-         * Step 5: Working forward from Wave 1, get the subset of households
-         * that are in all 5 waves; create mappings from the wave ID to the Wave
-         * 1 ID and vice versa as appropriate (a mapping from Wave 1 to itself
-         * is unnecessary).
-         */
-        Iterator<WIGB_WaAS_ID> ite;
-        WIGB_WaAS_ID ID;
-        short CASEW1;
-        /**
-         * Wave 1.
-         */
-        // Load test or generate hholdSubsetW1 subset.
-        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave1_HHOLD_Record> hholdSubsetW1;
-        hholdSubsetW1 = hholdHandler.loadCacheSubsetWave1();
-        if (hholdSubsetW1 == null) {
-            hholdSubsetW1 = new TreeMap<>();
-            ite = all.iterator();
-            while (ite.hasNext()) {
-                ID = ite.next();
-                WIGB_WaAS_Wave1_HHOLD_Record rec;
-                rec = hholdW1.get(ID);
-//                if (rec == null) {
-//                    log("Debug"); // Never occurs.
-//                }
-                hholdSubsetW1.put(ID, rec);
-            }
-            hholdHandler.cacheSubset(WIGB_WaAS_Data.W1, hholdSubsetW1);
-        }
-        /**
-         * Wave 2.
-         */
-        // Load test or generate hholdSubsetW2 subset.
-        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave2_HHOLD_Record> hholdSubsetW2;
-        hholdSubsetW2 = hholdHandler.loadCacheSubsetWave2();
-        if (hholdSubsetW2 == null) {
-            hholdSubsetW2 = new TreeMap<>();
-            ite = hholdW2.keySet().iterator();
-            while (ite.hasNext()) {
-                ID = ite.next();
-                WIGB_WaAS_Wave2_HHOLD_Record rec;
-                rec = hholdW2.get(ID);
-                CASEW1 = rec.getCASEW1();
-                WIGB_WaAS_ID ID2;
-                ID2 = new WIGB_WaAS_ID(CASEW1, CASEW1);
-                if (all.contains(ID2)) {
-                    hholdSubsetW2.put(ID, rec);
-                }
-            }
-            hholdHandler.cacheSubset(WIGB_WaAS_Data.W2, hholdSubsetW2);
-        }
-        /**
-         * Wave 3.
-         */
-        // Load test or generate hholdSubsetW3 subset.
-        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave3_HHOLD_Record> hholdSubsetW3;
-        hholdSubsetW3 = hholdHandler.loadCacheSubsetWave3();
-        if (hholdSubsetW3 == null) {
-            hholdSubsetW3 = new TreeMap<>();
-            ite = hholdW3.keySet().iterator();
-            while (ite.hasNext()) {
-                ID = ite.next();
-                WIGB_WaAS_Wave3_HHOLD_Record rec;
-                rec = hholdW3.get(ID);
-                CASEW1 = rec.getCASEW1();
-                WIGB_WaAS_ID ID2;
-                ID2 = new WIGB_WaAS_ID(CASEW1, CASEW1);
-                if (all.contains(ID2)) {
-                    hholdSubsetW3.put(ID, rec);
-                }
-            }
-            hholdHandler.cacheSubset(WIGB_WaAS_Data.W3, hholdSubsetW3);
-        }
-        /**
-         * Wave 4.
-         */
-        // Load test or generate hholdSubsetW4 subset.
-        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave4_HHOLD_Record> hholdSubsetW4;
-        hholdSubsetW4 = hholdHandler.loadCacheSubsetWave4();
-        if (hholdSubsetW4 == null) {
-            hholdSubsetW4 = new TreeMap<>();
-            ite = hholdW4.keySet().iterator();
-            while (ite.hasNext()) {
-                ID = ite.next();
-                WIGB_WaAS_Wave4_HHOLD_Record rec;
-                rec = hholdW4.get(ID);
-                CASEW1 = rec.getCASEW1();
-                WIGB_WaAS_ID ID2;
-                ID2 = new WIGB_WaAS_ID(CASEW1, CASEW1);
-                if (all.contains(ID2)) {
-                    hholdSubsetW4.put(ID, rec);
-                }
-            }
-            hholdHandler.cacheSubset(WIGB_WaAS_Data.W4, hholdSubsetW4);
-        }
-        /**
-         * Wave 5.
-         */
-        // Load test or generate hholdSubsetW5 subset.
-        TreeMap<WIGB_WaAS_ID, WIGB_WaAS_Wave5_HHOLD_Record> hholdSubsetW5;
-        hholdSubsetW5 = hholdHandler.loadCacheSubsetWave5();
-        if (hholdSubsetW5 == null) {
-            hholdSubsetW5 = new TreeMap<>();
-            ite = hholdW5.keySet().iterator();
-            while (ite.hasNext()) {
-                ID = ite.next();
-                WIGB_WaAS_Wave5_HHOLD_Record rec;
-                rec = hholdW5.get(ID);
-                CASEW1 = rec.getCASEW1();
-                WIGB_WaAS_ID ID2;
-                ID2 = new WIGB_WaAS_ID(CASEW1, CASEW1);
-                if (all.contains(ID2)) {
-                    hholdSubsetW5.put(ID, rec);
-                }
-            }
-            hholdHandler.cacheSubset(WIGB_WaAS_Data.W5, hholdSubsetW5);
         }
         logPW.close();
     }

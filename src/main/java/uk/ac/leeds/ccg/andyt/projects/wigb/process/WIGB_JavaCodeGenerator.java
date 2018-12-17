@@ -18,7 +18,6 @@ package uk.ac.leeds.ccg.andyt.projects.wigb.process;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.PrintWriter;
-import java.io.StreamTokenizer;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -26,7 +25,6 @@ import java.util.Iterator;
 import java.util.TreeSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import uk.ac.leeds.ccg.andyt.data.format.Generic_ReadCSV;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_IO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Strings;
@@ -100,6 +98,7 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
      * each field in the data.
      *
      * @param type
+     * @param nwaves
      * @return keys are standardised field names, value is: 0 if field is to be
      * represented by a String; 1 if field is to be represented by a double; 2
      * if field is to be represented by a int; 3 if field is to be represented
@@ -254,16 +253,12 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
                 + "data from " + f + ">");
         BufferedReader br;
         br = Generic_IO.getBufferedReader(f);
-        StreamTokenizer st;
-        st = new StreamTokenizer(br);
-        Generic_IO.setStreamTokenizerSyntax7(st);
-        int lineNumber;
-        lineNumber = 0;
         String line;
-        // skip header
-        line = Generic_ReadCSV.readLine(st, null);
-        fields = parseHeader(line, wave);
         int n;
+        line = br.lines()
+                .findFirst()
+                .get();
+        fields = parseHeader(line, wave);
         n = fields.length;
         strings = new boolean[n];
         doubles = new boolean[n];
@@ -285,25 +280,15 @@ public class WIGB_JavaCodeGenerator extends WIGB_Object {
             v0[i] = Byte.MIN_VALUE;
             v1[i] = Byte.MIN_VALUE;
         }
-        String[] split;
-        boolean read;
-        read = false;
-        while (!read) {
-            line = Generic_ReadCSV.readLine(st, null);
-            lineNumber++;
-            if (lineNumber % 1000 == 0) {
-                System.out.println("Test load " + lineNumber + " lines...");
-            }
-            if (line == null) {
-                read = true;
-            } else {
-                split = line.split("\t");
-                for (int i = 0; i < n; i++) {
-                    parse(split[i], fields[i], i, strings, doubles, ints,
-                            shorts, bytes, booleans, v0, v1, v0m, v1m);
-                }
-            }
-        }
+        br.lines()
+                .skip(1)
+                .forEach(l -> {
+                    String[] split = l.split("\t");
+                    for (int i = 0; i < n; i++) {
+                        parse(split[i], fields[i], i, strings, doubles, ints,
+                                shorts, bytes, booleans, v0, v1, v0m, v1m);
+                    }
+                });
         /**
          * Order v0m and v1m so that v0m always has the smaller value and v1m
          * the larger.

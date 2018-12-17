@@ -21,11 +21,14 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.Set;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.TreeMap;
+import java.util.TreeSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_IO;
+import uk.ac.leeds.ccg.andyt.generic.util.Generic_Collections;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Strings;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person.WIGB_WaAS_Wave1_PERSON_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.person.WIGB_WaAS_Wave2_PERSON_Record;
@@ -63,10 +66,10 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
      * @param outdir
      * @return
      */
-    public Object[] loadSubsetWave1(Set<WIGB_WaAS_ID> CASEW1IDs,
+    public Object[] loadSubsetWave1(TreeSet<Short> CASEW1IDs,
             int nOC, byte wave, File outdir) {
         Object[] r;
-        r = new Object[2];
+        r = new Object[3];
         File cf;
         cf = getFile(outdir, wave);
         if (cf.exists()) {
@@ -76,27 +79,31 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
             int cSize;
             cSize = getCSize(CASEW1IDs, nOC);
             /**
-             * Initialise collectionIDSets, collectionIDPrintWriters and
-             * collectionIDFiles.
+             * Initialise lookup to be used to identify which CASEW1 records are
+             * in each collection.
              */
-            HashMap<Short, Set<WIGB_WaAS_ID>> cIDs;
-            HashMap<Short, PrintWriter> cPWs;
-            HashMap<Short, File> cFs;
-            cIDs = new HashMap<>();
-            cPWs = new HashMap<>();
-            cFs = new HashMap<>();
-            initialiseSetsFilesAndPrintWriters(cIDs, cFs, cPWs, CASEW1IDs,
-                    nOC, cSize, wave, outdir);
-            r[0] = cIDs;
-            r[1] = cFs;
+            TreeMap<Short, HashSet<Short>> CIDToCASEW1;
+            CIDToCASEW1 = new TreeMap<>();
+            r[0] = CIDToCASEW1;
             /**
              * Initialise lookup to be used to identify which collection a
              * person record is in. The key is CASEW1, the value is the
              * CollectionID.
              */
-            HashMap<Short, Short> lookup;
-            lookup = new HashMap<>();
-            initialiseLookup(lookup, cIDs);
+            HashMap<Short, Short> CASEW1ToCID;
+            CASEW1ToCID = new HashMap<>();
+            initialiseCASEW1ToCID(CASEW1ToCID, CASEW1IDs, cSize);
+            r[1] = CASEW1ToCID;
+            /**
+             * Initialise collectionIDSets, collectionIDPrintWriters and
+             * collectionIDFiles.
+             */
+            HashMap<Short, PrintWriter> cPWs;
+            TreeMap<Short, File> cFs;
+            cPWs = new HashMap<>();
+            cFs = new TreeMap<>();
+            initialiseFilesAndPrintWriters(cFs, cPWs, nOC, wave, outdir);
+            r[2] = cFs;
             /**
              * Read through the lines and figure out which lines should be put
              * in which collection.
@@ -122,16 +129,13 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
                         CASEW1 = rec.getCASEW1();
                         if (CASEW1 > Short.MIN_VALUE) {
                             ID = new WIGB_WaAS_ID(CASEW1, CASEW1);
-                            if (lookup.containsKey(CASEW1)) {
-                                short collectionID;
-                                collectionID = lookup.get(CASEW1);
-                                Set<WIGB_WaAS_ID> set;
-                                set = cIDs.get(collectionID);
-                                if (set.contains(ID)) {
-                                    PrintWriter pw;
-                                    pw = cPWs.get(collectionID);
-                                    pw.println(line);
-                                }
+                            if (CASEW1ToCID.containsKey(CASEW1)) {
+                                short cID;
+                                cID = CASEW1ToCID.get(CASEW1);
+                                PrintWriter pw;
+                                pw = cPWs.get(cID);
+                                pw.println(line);
+                                Generic_Collections.addToMap(CIDToCASEW1, cID, CASEW1);
                             }
                         }
                     });
@@ -145,53 +149,48 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
     }
 
     /**
-     * Initialise lookup.
+     * Initialise CASEW1ToCID lookup.
      *
-     * @param lookup
-     * @param cIDs
+     * @param CASEW1ToCID
+     * @param CASEW1IDs
+     * @param cSize
      */
-    protected void initialiseLookup(HashMap<Short, Short> lookup,
-            HashMap<Short, Set<WIGB_WaAS_ID>> cIDs) {
-        cIDs.keySet().stream()
-                .forEach(cID -> {
-                    Set<WIGB_WaAS_ID> set;
-                    set = cIDs.get(cID);
-                    set.stream()
-                            .forEach(y -> {
-                                lookup.put(y.getCASEW1(), cID);
-                            });
-                });
+    protected void initialiseCASEW1ToCID(HashMap<Short, Short> CASEW1ToCID,
+            TreeSet<Short> CASEW1IDs, int cSize) {
+        Iterator<Short> ite;
+        ite = CASEW1IDs.iterator();
+        short cID = 0;
+        Short CASEW1;
+        int i;
+        i = 0;
+        while (ite.hasNext()) {
+            CASEW1 = ite.next();
+            CASEW1ToCID.put(CASEW1, cID);
+            i++;
+            if (i == cSize) {
+                i = 0;
+                cID++;
+            }
+        }
     }
 
     /**
      * Initialise cIDs, cPWs and cFs.
      *
-     * @param cIDs
      * @param cFs
      * @param cPWs
-     * @param CASEWXIDs
-     * @param nCs Number of collections.
-     * @param cSize Normal size of each collection.
+     * @param nOC Number of collections.
      * @param wave
      * @param outdir
      */
-    protected void initialiseSetsFilesAndPrintWriters(
-            HashMap<Short, Set<WIGB_WaAS_ID>> cIDs, HashMap<Short, File> cFs,
-            HashMap<Short, PrintWriter> cPWs, Set<WIGB_WaAS_ID> CASEWXIDs,
-            int nCs, int cSize, byte wave, File outdir) {
-        int start = 0;
-        for (short cID = 0; cID < nCs; cID++) {
-            Set<WIGB_WaAS_ID> set;
-            set = CASEWXIDs.stream()
-                    .skip(start) // offset
-                    .limit(cSize) // number of items wanted
-                    .collect(Collectors.toSet());
-            cIDs.put(cID, set);
+    protected void initialiseFilesAndPrintWriters(
+            TreeMap<Short, File> cFs, HashMap<Short, PrintWriter> cPWs,
+            int nOC, byte wave, File outdir) {
+        for (short cID = 0; cID < nOC; cID++) {
             File f;
             f = new File(outdir, "person" + wave + "_" + cID + ".tab");
             cPWs.put(cID, Generic_IO.getPrintWriter(f, false));
             cFs.put(cID, f);
-            start += cSize;
         }
     }
 
@@ -239,45 +238,28 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
      * CASEW2IDs.If this data are in a cache then the cache is loaded otherwise
      * the data are selected and the cache is written for next time.
      *
-     * @param CASEW2IDs
      * @param nOC Number of collections.
+     * @param CASEW1ToCID
      * @param wave
      * @param outdir
+     * @param CASEW2ToCASEW1
      * @return
      */
-    public Object[] loadSubsetWave2(Set<WIGB_WaAS_ID> CASEW2IDs, int nOC,
-            byte wave, File outdir) {
-        Object[] r;
-        r = new Object[2];
+    public TreeMap<Short, File> loadSubsetWave2(int nOC, HashMap<Short, Short> CASEW1ToCID,
+            byte wave, File outdir, TreeMap<Short, Short> CASEW2ToCASEW1) {
         File cf;
         cf = getFile(outdir, wave);
         if (cf.exists()) {
-            r = (Object[]) Generic_IO.readObject(cf);
+            return (TreeMap<Short, File>) Generic_IO.readObject(cf);
         } else {
-            // Get the size of each collection.
-            int cSize;
-            cSize = getCSize(CASEW2IDs, nOC);
             /**
              * Initialise collectionIDSets and collectionIDPrintWriters.
              */
-            HashMap<Short, Set<WIGB_WaAS_ID>> cIDs;
             HashMap<Short, PrintWriter> cPWs;
-            HashMap<Short, File> cFs;
-            cIDs = new HashMap<>();
+            TreeMap<Short, File> cFs;
             cPWs = new HashMap<>();
-            cFs = new HashMap<>();
-            initialiseSetsFilesAndPrintWriters(cIDs, cFs, cPWs, CASEW2IDs,
-                    nOC, cSize, wave, outdir);
-            r[0] = cIDs;
-            r[1] = cFs;
-            /**
-             * Initialise lookup to be used to identify which collection a
-             * person record is in. The key is CASEW1, the value is the
-             * CollectionID.
-             */
-            HashMap<Short, Short> lookup;
-            lookup = new HashMap<>();
-            initialiseLookup(lookup, cIDs);
+            cFs = new TreeMap<>();
+            initialiseFilesAndPrintWriters(cFs, cPWs, nOC, wave, outdir);
             /**
              * Read through the lines and figure out which lines should be put
              * in which collection.
@@ -297,24 +279,20 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
                     .skip(1) // Skip the header.
                     .forEach(line -> {
                         WIGB_WaAS_Wave2_PERSON_Record rec;
-                        short CASEW1;
-                        WIGB_WaAS_ID ID;
                         rec = new WIGB_WaAS_Wave2_PERSON_Record(line);
-                        CASEW1 = rec.getCASEW1();
-                        if (CASEW1 > Short.MIN_VALUE) {
-                            if (lookup.containsKey(CASEW1)) {
-                                short CASEW2;
-                                CASEW2 = rec.getCASEW2();
+                        short CASEW2;
+                        CASEW2 = rec.getCASEW2();
+                        if (CASEW2ToCASEW1.containsKey(CASEW2)) {
+                            short CASEW1;
+                            CASEW1 = CASEW2ToCASEW1.get(CASEW2);
+                            if (CASEW1ToCID.containsKey(CASEW1)) {
+                                WIGB_WaAS_ID ID;
                                 ID = new WIGB_WaAS_ID(CASEW1, CASEW2);
-                                short collectionID;
-                                collectionID = lookup.get(CASEW1);
-                                Set<WIGB_WaAS_ID> set;
-                                set = cIDs.get(collectionID);
-                                if (set.contains(ID)) {
-                                    PrintWriter pw;
-                                    pw = cPWs.get(collectionID);
-                                    pw.println(line);
-                                }
+                                short cID;
+                                cID = CASEW1ToCID.get(CASEW1);
+                                PrintWriter pw;
+                                pw = cPWs.get(cID);
+                                pw.println(line);
                             }
                         }
                     });
@@ -322,9 +300,9 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
             Generic_IO.closeBufferedReader(br);
             // Close the PrintWriters.
             closePrintWriters(cPWs);
-            cache(wave, cf, r);
+            cache(wave, cf, cFs);
+            return cFs;
         }
-        return r;
     }
 
     /**
@@ -346,45 +324,31 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
      * CASEW3IDs.If this data are in a cache then the cache is loaded otherwise
      * the data are selected and the cache is written for next time.
      *
-     * @param CASEW3IDs
      * @param nOC Number of collections.
+     * @param CASEW1ToCID
      * @param wave
      * @param outdir
+     * @param CASEW2ToCASEW1
+     * @param CASEW3ToCASEW2
      * @return
      */
-    public Object[] loadSubsetWave3(Set<WIGB_WaAS_ID> CASEW3IDs, int nOC,
-            byte wave, File outdir) {
-        Object[] r;
-        r = new Object[2];
+    public TreeMap<Short, File> loadSubsetWave3(int nOC,
+            HashMap<Short, Short> CASEW1ToCID, byte wave, File outdir,
+            TreeMap<Short, Short> CASEW2ToCASEW1,
+            TreeMap<Short, Short> CASEW3ToCASEW2) {
         File cf;
         cf = getFile(outdir, wave);
         if (cf.exists()) {
-            r = (Object[]) Generic_IO.readObject(cf);
+            return (TreeMap<Short, File>) Generic_IO.readObject(cf);
         } else {
-            // Get the size of each collection.
-            int cSize;
-            cSize = getCSize(CASEW3IDs, nOC);
             /**
              * Initialise collectionIDSets and collectionIDPrintWriters.
              */
-            HashMap<Short, Set<WIGB_WaAS_ID>> cIDs;
             HashMap<Short, PrintWriter> cPWs;
-            HashMap<Short, File> cFs;
-            cIDs = new HashMap<>();
+            TreeMap<Short, File> cFs;
             cPWs = new HashMap<>();
-            cFs = new HashMap<>();
-            initialiseSetsFilesAndPrintWriters(cIDs, cFs, cPWs, CASEW3IDs,
-                    nOC, cSize, wave, outdir);
-            r[0] = cIDs;
-            r[1] = cFs;
-            /**
-             * Initialise lookup to be used to identify which collection a
-             * person record is in. The key is CASEW1, the value is the
-             * CollectionID.
-             */
-            HashMap<Short, Short> lookup;
-            lookup = new HashMap<>();
-            initialiseLookup(lookup, cIDs);
+            cFs = new TreeMap<>();
+            initialiseFilesAndPrintWriters(cFs, cPWs, nOC, wave, outdir);
             /**
              * Read through the lines and figure out which lines should be put
              * in which collection.
@@ -404,24 +368,22 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
                     .skip(1) // Skip the header.
                     .forEach(line -> {
                         WIGB_WaAS_Wave3_PERSON_Record rec;
-                        short CASEW1;
-                        WIGB_WaAS_ID ID;
                         rec = new WIGB_WaAS_Wave3_PERSON_Record(line);
-                        CASEW1 = rec.getCASEW1();
-                        if (CASEW1 > Short.MIN_VALUE) {
-                            if (lookup.containsKey(CASEW1)) {
-                                short CASEW3;
-                                CASEW3 = rec.getCASEW3();
+                        short CASEW3;
+                        CASEW3 = rec.getCASEW3();
+                        if (CASEW3ToCASEW2.containsKey(CASEW3)) {
+                            short CASEW2;
+                            short CASEW1;
+                            CASEW2 = CASEW3ToCASEW2.get(CASEW3);
+                            CASEW1 = CASEW2ToCASEW1.get(CASEW2);
+                            if (CASEW1ToCID.containsKey(CASEW1)) {
+                                WIGB_WaAS_ID ID;
                                 ID = new WIGB_WaAS_ID(CASEW1, CASEW3);
                                 short collectionID;
-                                collectionID = lookup.get(CASEW1);
-                                Set<WIGB_WaAS_ID> set;
-                                set = cIDs.get(collectionID);
-                                if (set.contains(ID)) {
-                                    PrintWriter pw;
-                                    pw = cPWs.get(collectionID);
-                                    pw.println(line);
-                                }
+                                collectionID = CASEW1ToCID.get(CASEW1);
+                                PrintWriter pw;
+                                pw = cPWs.get(collectionID);
+                                pw.println(line);
                             }
                         }
                     });
@@ -429,9 +391,9 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
             Generic_IO.closeBufferedReader(br);
             // Close the PrintWriters.
             closePrintWriters(cPWs);
-            cache(wave, cf, r);
+            cache(wave, cf, cFs);
+            return cFs;
         }
-        return r;
     }
 
     /**
@@ -439,45 +401,32 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
      * CASEW4IDs.If this data are in a cache then the cache is loaded otherwise
      * the data are selected and the cache is written for next time.
      *
-     * @param CASEW4IDs
      * @param nOC Number of collections.
+     * @param CASEW1ToCID
      * @param wave
      * @param outdir
+     * @param CASEW2ToCASEW1
+     * @param CASEW3ToCASEW2
+     * @param CASEW4ToCASEW3
      * @return
      */
-    public Object[] loadSubsetWave4(Set<WIGB_WaAS_ID> CASEW4IDs, int nOC,
-            byte wave, File outdir) {
-        Object[] r;
-        r = new Object[2];
+    public TreeMap<Short, File> loadSubsetWave4(int nOC, HashMap<Short, Short> CASEW1ToCID,
+            byte wave, File outdir, TreeMap<Short, Short> CASEW2ToCASEW1,
+            TreeMap<Short, Short> CASEW3ToCASEW2,
+            TreeMap<Short, Short> CASEW4ToCASEW3) {
         File cf;
         cf = getFile(outdir, wave);
         if (cf.exists()) {
-            r = (Object[]) Generic_IO.readObject(cf);
+            return (TreeMap<Short, File>) Generic_IO.readObject(cf);
         } else {
-            // Get the size of each collection.
-            int cSize;
-            cSize = getCSize(CASEW4IDs, nOC);
             /**
              * Initialise collectionIDSets and collectionIDPrintWriters.
              */
-            HashMap<Short, Set<WIGB_WaAS_ID>> cIDs;
             HashMap<Short, PrintWriter> cPWs;
-            HashMap<Short, File> cFs;
-            cIDs = new HashMap<>();
+            TreeMap<Short, File> cFs;
             cPWs = new HashMap<>();
-            cFs = new HashMap<>();
-            initialiseSetsFilesAndPrintWriters(cIDs, cFs, cPWs, CASEW4IDs,
-                    nOC, cSize, wave, outdir);
-            r[0] = cIDs;
-            r[1] = cFs;
-            /**
-             * Initialise lookup to be used to identify which collection a
-             * person record is in. The key is CASEW1, the value is the
-             * CollectionID.
-             */
-            HashMap<Short, Short> lookup;
-            lookup = new HashMap<>();
-            initialiseLookup(lookup, cIDs);
+            cFs = new TreeMap<>();
+            initialiseFilesAndPrintWriters(cFs, cPWs, nOC, wave, outdir);
             /**
              * Read through the lines and figure out which lines should be put
              * in which collection.
@@ -497,24 +446,24 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
                     .skip(1) // Skip the header.
                     .forEach(line -> {
                         WIGB_WaAS_Wave4_PERSON_Record rec;
-                        short CASEW1;
-                        WIGB_WaAS_ID ID;
                         rec = new WIGB_WaAS_Wave4_PERSON_Record(line);
-                        CASEW1 = rec.getCASEW1();
-                        if (CASEW1 > Short.MIN_VALUE) {
-                            if (lookup.containsKey(CASEW1)) {
-                                short CASEW4;
-                                CASEW4 = rec.getCASEW4();
+                        short CASEW4;
+                        CASEW4 = rec.getCASEW4();
+                        if (CASEW4ToCASEW3.containsKey(CASEW4)) {
+                            short CASEW3;
+                            short CASEW2;
+                            short CASEW1;
+                            CASEW3 = CASEW4ToCASEW3.get(CASEW4);
+                            CASEW2 = CASEW3ToCASEW2.get(CASEW3);
+                            CASEW1 = CASEW2ToCASEW1.get(CASEW2);
+                            if (CASEW1ToCID.containsKey(CASEW1)) {
+                                WIGB_WaAS_ID ID;
                                 ID = new WIGB_WaAS_ID(CASEW1, CASEW4);
-                                short collectionID;
-                                collectionID = lookup.get(CASEW1);
-                                Set<WIGB_WaAS_ID> set;
-                                set = cIDs.get(collectionID);
-                                if (set.contains(ID)) {
-                                    PrintWriter pw;
-                                    pw = cPWs.get(collectionID);
-                                    pw.println(line);
-                                }
+                                short cID;
+                                cID = CASEW1ToCID.get(CASEW1);
+                                PrintWriter pw;
+                                pw = cPWs.get(cID);
+                                pw.println(line);
                             }
                         }
                     });
@@ -522,9 +471,9 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
             Generic_IO.closeBufferedReader(br);
             // Close the PrintWriters.
             closePrintWriters(cPWs);
-            cache(wave, cf, r);
+            cache(wave, cf, cFs);
+            return cFs;
         }
-        return r;
     }
 
     /**
@@ -532,46 +481,35 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
      * CASEW5IDs.If this data are in a cache then the cache is loaded otherwise
      * the data are selected and the cache is written for next time.
      *
-     * @param CASEW5IDs
      * @param nOC Number of collections.
+     * @param CASEW1ToCID
      * @param wave
      * @param outdir
+     * @param CASEW2ToCASEW1
+     * @param CASEW3ToCASEW2
+     * @param CASEW5ToCASEW4
+     * @param CASEW4ToCASEW3
      * @return
      */
-    public Object[] loadSubsetWave5(Set<WIGB_WaAS_ID> CASEW5IDs, int nOC,
-            byte wave, File outdir) {
-        Object[] r;
-        r = new Object[2];
+    public TreeMap<Short, File> loadSubsetWave5(int nOC, HashMap<Short, Short> CASEW1ToCID,
+            byte wave, File outdir, TreeMap<Short, Short> CASEW2ToCASEW1,
+            TreeMap<Short, Short> CASEW3ToCASEW2,
+            TreeMap<Short, Short> CASEW4ToCASEW3,
+            TreeMap<Short, Short> CASEW5ToCASEW4) {
         File cf;
         cf = getFile(outdir, wave);
         if (cf.exists()) {
-            r = (Object[]) Generic_IO.readObject(cf);
+            return (TreeMap<Short, File>) Generic_IO.readObject(cf);
         } else {
-            // Get the size of each collection.
-            int cSize;
-            cSize = getCSize(CASEW5IDs, nOC);
             /**
              * Initialise collectionIDSets, collectionIDPrintWriters and
              * collectionIDFiles.
              */
-            HashMap<Short, Set<WIGB_WaAS_ID>> cIDs;
             HashMap<Short, PrintWriter> cPWs;
-            HashMap<Short, File> cFs;
-            cIDs = new HashMap<>();
+            TreeMap<Short, File> cFs;
             cPWs = new HashMap<>();
-            cFs = new HashMap<>();
-            initialiseSetsFilesAndPrintWriters(cIDs, cFs, cPWs, CASEW5IDs,
-                    nOC, cSize, wave, outdir);
-            r[0] = cIDs;
-            r[1] = cFs;
-            /**
-             * Initialise lookup to be used to identify which collection a
-             * person record is in. The key is CASEW1, the value is the
-             * CollectionID.
-             */
-            HashMap<Short, Short> lookup;
-            lookup = new HashMap<>();
-            initialiseLookup(lookup, cIDs);
+            cFs = new TreeMap<>();
+            initialiseFilesAndPrintWriters(cFs, cPWs, nOC, wave, outdir);
             /**
              * Read through the lines and figure out which lines should be put
              * in which collection.
@@ -591,24 +529,26 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
                     .skip(1) // Skip the header.
                     .forEach(line -> {
                         WIGB_WaAS_Wave5_PERSON_Record rec;
-                        short CASEW1;
-                        WIGB_WaAS_ID ID;
                         rec = new WIGB_WaAS_Wave5_PERSON_Record(line);
-                        CASEW1 = rec.getCASEW1();
-                        if (CASEW1 > Short.MIN_VALUE) {
-                            if (lookup.containsKey(CASEW1)) {
-                                short CASEW5;
-                                CASEW5 = rec.getCASEW5();
+                        short CASEW5;
+                        CASEW5 = rec.getCASEW5();
+                        if (CASEW5ToCASEW4.containsKey(CASEW5)) {
+                            short CASEW4;
+                            short CASEW3;
+                            short CASEW2;
+                            short CASEW1;
+                            CASEW4 = CASEW5ToCASEW4.get(CASEW5);
+                            CASEW3 = CASEW4ToCASEW3.get(CASEW4);
+                            CASEW2 = CASEW3ToCASEW2.get(CASEW3);
+                            CASEW1 = CASEW2ToCASEW1.get(CASEW2);
+                            WIGB_WaAS_ID ID;
+                            if (CASEW1ToCID.containsKey(CASEW1)) {
                                 ID = new WIGB_WaAS_ID(CASEW1, CASEW5);
-                                short collectionID;
-                                collectionID = lookup.get(CASEW1);
-                                Set<WIGB_WaAS_ID> set;
-                                set = cIDs.get(collectionID);
-                                if (set.contains(ID)) {
-                                    PrintWriter pw;
-                                    pw = cPWs.get(collectionID);
-                                    pw.println(line);
-                                }
+                                short cID;
+                                cID = CASEW1ToCID.get(CASEW1);
+                                PrintWriter pw;
+                                pw = cPWs.get(cID);
+                                pw.println(line);
                             }
                         }
                     });
@@ -616,9 +556,9 @@ public class WIGB_WaAS_PERSON_Handler extends WIGB_WaAS_Handler {
             Generic_IO.closeBufferedReader(br);
             // Close the PrintWriters.
             closePrintWriters(cPWs);
-            cache(wave, cf, r);
+            cache(wave, cf, cFs);
+            return cFs;
         }
-        return r;
     }
 
     /**
