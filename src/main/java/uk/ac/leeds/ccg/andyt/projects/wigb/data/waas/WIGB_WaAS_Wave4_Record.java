@@ -29,15 +29,15 @@ public class WIGB_WaAS_Wave4_Record extends WIGB_WaAS_Record {
     
     private final ArrayList<WIGB_WaAS_Wave4_PERSON_Record> people;
     
-    public WIGB_WaAS_Wave4_Record(short CASEW1){
-        super(CASEW1);
+    public WIGB_WaAS_Wave4_Record(short CASEW4){
+        super(CASEW4);
         hhold = null;
         people = new ArrayList<>();
     }
     
     public WIGB_WaAS_Wave4_Record(WIGB_WaAS_Wave4_HHOLD_Record hhold,
             ArrayList<WIGB_WaAS_Wave4_PERSON_Record> people){
-        super(hhold.getCASEW1());
+        super(hhold.getCASEW4());
         this.hhold = hhold;
         this.people = people;
     }

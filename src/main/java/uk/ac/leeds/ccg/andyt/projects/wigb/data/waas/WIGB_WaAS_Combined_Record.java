@@ -15,24 +15,43 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.wigb.data.waas;
 
+import java.util.HashMap;
+
 /**
  *
  * @author geoagdt
  */
 public class WIGB_WaAS_Combined_Record extends WIGB_WaAS_Record {
-    
+
     public WIGB_WaAS_Wave1_Record w1Record;
-    public WIGB_WaAS_Wave2_Record w2Record;
-    public WIGB_WaAS_Wave3_Record w3Record;
-    public WIGB_WaAS_Wave4_Record w4Record;
-    public WIGB_WaAS_Wave5_Record w5Record;
-    
+
+    /**
+     * Keys are CASEW2
+     */
+    public HashMap<Short, WIGB_WaAS_Wave2_Record> w2Records;
+
+    /**
+     * Keys are CASEW2, values keys are CASEW3.
+     */
+    public HashMap<Short, HashMap<Short, WIGB_WaAS_Wave3_Record>> w3Records;
+
+    /**
+     * Keys are CASEW2, values keys are CASEW3, next value keys are CASEW4.
+     */
+    public HashMap<Short, HashMap<Short, HashMap<Short, WIGB_WaAS_Wave4_Record>>> w4Records;
+
+    /**
+     * Keys are CASEW2, values keys are CASEW3, next value keys are CASEW4, next
+     * value keys are CASEW5.
+     */
+    public HashMap<Short, HashMap<Short, HashMap<Short, HashMap<Short, WIGB_WaAS_Wave5_Record>>>> w5Records;
+
     public WIGB_WaAS_Combined_Record(short CASEW1) {
         super(CASEW1);
         w1Record = new WIGB_WaAS_Wave1_Record(CASEW1);
-        w2Record = new WIGB_WaAS_Wave2_Record(CASEW1);
-        w3Record = new WIGB_WaAS_Wave3_Record(CASEW1);
-        w4Record = new WIGB_WaAS_Wave4_Record(CASEW1);
-        w5Record = new WIGB_WaAS_Wave5_Record(CASEW1);
+        w2Records = new HashMap<>();
+        w3Records = new HashMap<>();
+        w4Records = new HashMap<>();
+        w5Records = new HashMap<>();
     }
 }

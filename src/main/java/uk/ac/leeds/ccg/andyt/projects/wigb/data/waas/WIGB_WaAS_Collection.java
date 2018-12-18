@@ -27,19 +27,12 @@ public class WIGB_WaAS_Collection implements Serializable {
     private final short ID;
 
     /**
-     * The keys are CASEW1 and the values are the collectionID where those data
-     * are stored.
-     */
-    private final HashMap<Short, Short> lookup;
-
-    /**
      * The keys are CASEW1, the values are the respective combined record.
      */
     private final HashMap<Short, WIGB_WaAS_Combined_Record> data;
 
     public WIGB_WaAS_Collection(short ID) {
         this.ID = ID;
-        lookup = new HashMap<>();
         data = new HashMap<>();
     }
 
@@ -48,13 +41,6 @@ public class WIGB_WaAS_Collection implements Serializable {
      */
     public short getID() {
         return ID;
-    }
-
-    /**
-     * @return the lookup
-     */
-    public HashMap<Short, Short> getLookup() {
-        return lookup;
     }
 
     /**

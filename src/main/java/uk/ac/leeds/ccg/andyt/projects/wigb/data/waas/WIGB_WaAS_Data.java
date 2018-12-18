@@ -49,10 +49,9 @@ public class WIGB_WaAS_Data implements Serializable {
     public HashMap<Short, WIGB_WaAS_Collection> data;
 
     /**
-     * Looks up from a CASEW1 to the Collection ID for where the
-     * WIGB_WaAS_Collection_Record is for the CASEW1.
+     * Looks up from a CASEW1 to the Collection ID.
      */
-    public HashMap<Short, Short> lookup;
+    public HashMap<Short, Short> CASEW1ToCID;
 
     public WIGB_WaAS_Collection getCollection(short collectionID) {
         WIGB_WaAS_Collection r;
@@ -73,7 +72,7 @@ public class WIGB_WaAS_Data implements Serializable {
         this.Files = Files;
         this.Strings = Strings;
         data = new HashMap<>();
-        lookup = new HashMap<>();
+        CASEW1ToCID = new HashMap<>();
     }
 
     public boolean clearSomeData() {

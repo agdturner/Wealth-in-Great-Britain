@@ -29,8 +29,8 @@ public class WIGB_WaAS_Wave5_Record extends WIGB_WaAS_Record {
     
     private final ArrayList<WIGB_WaAS_Wave5_PERSON_Record> people;
     
-    public WIGB_WaAS_Wave5_Record(short CASEW1){
-        super(CASEW1);
+    public WIGB_WaAS_Wave5_Record(short CASEW5){
+        super(CASEW5);
         hhold = null;
         people = new ArrayList<>();
     }

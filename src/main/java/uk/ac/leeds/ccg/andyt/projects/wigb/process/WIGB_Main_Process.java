@@ -33,7 +33,10 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_Combined_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_Data;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_HHOLD_Handler;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_PERSON_Handler;
-import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave1Or2Or3Or4Or5_HHOLD_Record;
+import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_Wave2_Record;
+import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_Wave3_Record;
+import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_Wave4_Record;
+import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_Wave5_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave1_HHOLD_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave2_HHOLD_Record;
 import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.hhold.WIGB_WaAS_Wave3_HHOLD_Record;
@@ -103,23 +106,23 @@ public class WIGB_Main_Process extends WIGB_Object {
         int chunkSize;
         chunkSize = 256; //1024; 512; 256;
         //doDataProcessingStep1New(indir, outdir, hholdHandler);
-        doDataProcessingStep2(indir, outdir, hholdHandler, chunkSize);
-        //doDataProcessingStep3(outdir);
+        //doDataProcessingStep2(indir, outdir, hholdHandler, chunkSize);
+        doDataProcessingStep3(outdir);
 
         logPW.close();
     }
 
     /**
      * Go through hholds for all waves and figure which ones have not
-     * significantly changed in terms of hhold composition. Having children
-     * and children leaving home is fine. Anything else is perhaps an issue.
+     * significantly changed in terms of hhold composition. Having children and
+     * children leaving home is fine. Anything else is perhaps an issue.
      *
      * @param outdir
      */
     public void doDataProcessingStep3(File outdir) {
         initlog(3);
-        //log(data.lookup.size());
-        //log(data.data.size());
+        log("Number of combined records " + data.CASEW1ToCID.size());
+        log("Number of collections of combined records " + data.data.size());
 //        /**
 //         * Calculate the number of hholds that have the same number of
 //         * adults throughout.
@@ -153,115 +156,59 @@ public class WIGB_Main_Process extends WIGB_Object {
 //                }).sum();
 //        log("There are " + n + " hholds that contain the "
 //                + "same number of adults throughout.");
-// For brevity/convenience.
+
+        // For brevity/convenience.
         byte W1 = WIGB_WaAS_Data.W1;
         byte W2 = WIGB_WaAS_Data.W2;
         byte W3 = WIGB_WaAS_Data.W3;
         byte W4 = WIGB_WaAS_Data.W4;
         byte W5 = WIGB_WaAS_Data.W5;
-
-        HashSet<Short> s = new HashSet<>();
-        Iterator<Short> ite;
-        Iterator<Short> ite2;
-        short cID;
-        short CASEW1;
         WIGB_WaAS_Wave1_HHOLD_Record w1h;
         WIGB_WaAS_Wave2_HHOLD_Record w2h;
         WIGB_WaAS_Wave3_HHOLD_Record w3h;
         WIGB_WaAS_Wave4_HHOLD_Record w4h;
         WIGB_WaAS_Wave5_HHOLD_Record w5h;
+
+        //HashSet<Short> s = new HashSet<>();
+        Iterator<Short> ite;
+        Iterator<Short> ite2;
+        short cID;
+        short CASEW1;
         WIGB_WaAS_Collection c;
         WIGB_WaAS_Combined_Record cr;
+        HashMap<Short, WIGB_WaAS_Combined_Record> cData;
         String m;
-        // Check w1Records
-        m = "Check w1Records";
+        // Check For Household Records
+        m = "Check For Household Records";
+        boolean check;
+        int count;
+        count = 0;
+        int count2;
+        count2 = 0;
         log("<" + m + ">");
         ite = data.data.keySet().iterator();
         while (ite.hasNext()) {
             cID = ite.next();
             c = data.getCollection(cID);
-            ite2 = c.getData().keySet().iterator();
+            cData = c.getData();
+            ite2 = cData.keySet().iterator();
             while (ite2.hasNext()) {
                 CASEW1 = ite2.next();
-                cr = c.getData().get(CASEW1);
-                c.getData().get(CASEW1);
-                w1h = cr.w1Record.getHhold();
-                process0(W1, CASEW1, w1h);
+                cr = cData.get(CASEW1);
+                check = process0(CASEW1, cr);
+                if (check) {
+                    count++;
+                }
+//                check = process1(CASEW1, cr);
+//                if (check) {
+//                    count2++;
+//                }
             }
             data.clearCollection(cID);
         }
+        log("Total hhold record count in all 5 waves " + count);
+        log("Total hhold that stay as one hhold over all 5 waves " + count2);
         log("</" + m + ">");
-        // Check w2Records
-        m = "Check w2Records";
-        log("<" + m + ">");
-        ite = data.data.keySet().iterator();
-        while (ite.hasNext()) {
-            cID = ite.next();
-            c = data.getCollection(cID);
-            ite2 = c.getData().keySet().iterator();
-            while (ite2.hasNext()) {
-                CASEW1 = ite2.next();
-                cr = c.getData().get(CASEW1);
-                c.getData().get(CASEW1);
-                w2h = cr.w2Record.getHhold();
-                process0(W2, CASEW1, w2h);
-            }
-            data.clearCollection(cID);
-        }
-        log("</" + m + ">");
-        // Check w3Records
-        m = "Check w3Records";
-        log("<" + m + ">");
-        ite = data.data.keySet().iterator();
-        while (ite.hasNext()) {
-            cID = ite.next();
-            c = data.getCollection(cID);
-            ite2 = c.getData().keySet().iterator();
-            while (ite2.hasNext()) {
-                CASEW1 = ite2.next();
-                cr = c.getData().get(CASEW1);
-                c.getData().get(CASEW1);
-                w3h = cr.w3Record.getHhold();
-                process0(W3, CASEW1, w3h);
-            }
-            data.clearCollection(cID);
-        }
-        log("</" + m + ">");
-        // Check w4Records
-        m = "Check w4Records";
-        log("<" + m + ">");
-        ite = data.data.keySet().iterator();
-        while (ite.hasNext()) {
-            cID = ite.next();
-            c = data.getCollection(cID);
-            ite2 = c.getData().keySet().iterator();
-            while (ite2.hasNext()) {
-                CASEW1 = ite2.next();
-                cr = c.getData().get(CASEW1);
-                c.getData().get(CASEW1);
-                w4h = cr.w4Record.getHhold();
-                process0(W4, CASEW1, w4h);
-            }
-            data.clearCollection(cID);
-        }
-        log("</" + m + ">");
-        // Check w5Records
-        m = "Check w5Records";
-        log("<" + m + ">");
-        ite = data.data.keySet().iterator();
-        while (ite.hasNext()) {
-            cID = ite.next();
-            c = data.getCollection(cID);
-            ite2 = c.getData().keySet().iterator();
-            while (ite2.hasNext()) {
-                CASEW1 = ite2.next();
-                cr = c.getData().get(CASEW1);
-                c.getData().get(CASEW1);
-                w5h = cr.w5Record.getHhold();
-                process0(W5, CASEW1, w5h);
-            }
-            data.clearCollection(cID);
-        }
 
 //        /**
 //         * Get the IDs of hholds that have the same number of adults
@@ -385,14 +332,200 @@ public class WIGB_Main_Process extends WIGB_Object {
         logPW.close();
     }
 
-    protected boolean process0(byte wave, short CASEW1,
-            WIGB_WaAS_Wave1Or2Or3Or4Or5_HHOLD_Record wxh) {
-        if (wxh != null) {
-            return true;
-        } else {
-            log("w" + wave + "h == null for CASEW1 " + CASEW1);
-            return false;
+    protected boolean process1(short CASEW1, WIGB_WaAS_Combined_Record cr) {
+        boolean result;
+        result = true;
+        WIGB_WaAS_Wave1_HHOLD_Record w1h;
+        w1h = cr.w1Record.getHhold();
+        if (w1h == null) {
+            log("There is no Wave 1 record for CASEW1 " + CASEW1);
+            result = false;
         }
+        if (cr.w2Records.size() != 1) {
+            log("There are multiple Wave 2 records for CASEW1 " + CASEW1);
+            result = false;
+        }
+        Short CASEW2;
+        WIGB_WaAS_Wave2_Record w2rec;
+        Iterator<Short> ite2;
+        ite2 = cr.w2Records.keySet().iterator();
+        while (ite2.hasNext()) {
+            CASEW2 = ite2.next();
+            //w2rec = cr.w2Records.get(CASEW2);
+            if (cr.w3Records.get(CASEW2).size() != 1) {
+                log("There are multiple Wave 3 records for "
+                        + "CASEW2 " + CASEW2 + " in CASEW1 " + CASEW1);
+                result = false;
+                Short CASEW3;
+                WIGB_WaAS_Wave3_Record w3rec;
+                Iterator<Short> ite3;
+                ite3 = cr.w3Records.keySet().iterator();
+                while (ite3.hasNext()) {
+                    CASEW3 = ite3.next();
+                    //w3rec = cr.w3Records.get(CASEW2).get(CASEW3);
+                    if (cr.w4Records.get(CASEW2).get(CASEW3).size() != 1) {
+                        log("There are multiple Wave 4 records for "
+                                + "CASEW3 " + CASEW3 + " in CASEW2 " + CASEW2
+                                + " in CASEW1 " + CASEW1);
+                        result = false;
+                        Short CASEW4;
+                        WIGB_WaAS_Wave4_Record w4rec;
+                        Iterator<Short> ite4;
+                        ite4 = cr.w4Records.keySet().iterator();
+                        while (ite4.hasNext()) {
+                            CASEW4 = ite4.next();
+                            //w4rec = cr.w4Records.get(CASEW2).get(CASEW3).get(CASEW4);
+                            if (cr.w5Records.get(CASEW2).get(CASEW3).get(CASEW4).size() != 1) {
+                                log("There are multiple Wave 5 records for "
+                                        + "CASEW4 " + CASEW4
+                                        + " in CASEW3 " + CASEW3
+                                        + " in CASEW2 " + CASEW2
+                                        + " in CASEW1 " + CASEW1);
+                                result = false;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return result;
+    }
+
+    protected boolean process0(short CASEW1, WIGB_WaAS_Combined_Record cr) {
+        boolean result;
+        result = true;
+        WIGB_WaAS_Wave1_HHOLD_Record w1h;
+        w1h = cr.w1Record.getHhold();
+        if (w1h == null) {
+            log("There is no Wave 1 record for CASEW1 " + CASEW1);
+            result = false;
+        }
+        if (cr.w2Records.size() != 1) {
+            log("There are no Wave 2 records for CASEW1 " + CASEW1);
+            result = false;
+        }
+        Short CASEW2;
+        Iterator<Short> ite2;
+        ite2 = cr.w2Records.keySet().iterator();
+        while (ite2.hasNext()) {
+            CASEW2 = ite2.next();
+            //WIGB_WaAS_Wave2_Record w2rec;
+            //w2rec = cr.w2Records.get(CASEW2);
+            String m3;
+            m3 = "There are no Wave 3 records for "
+                    + "CASEW2 " + CASEW2 + " in CASEW1 " + CASEW1;
+            if (cr.w3Records.containsKey(CASEW2)) {
+                HashMap<Short, WIGB_WaAS_Wave3_Record> w3_2;
+                w3_2 = cr.w3Records.get(CASEW2);
+                if (w3_2.isEmpty()) {
+                    log(m3);
+                    result = false;
+                } else {
+                    Short CASEW3;
+                    Iterator<Short> ite3;
+                    ite3 = w3_2.keySet().iterator();
+                    while (ite3.hasNext()) {
+                        CASEW3 = ite3.next();
+                        //WIGB_WaAS_Wave3_Record w3rec;
+                        //w3rec = w3_2.get(CASEW3);
+                        String m4;
+                        m4 = "There are no Wave 4 records for "
+                                + "CASEW3 " + CASEW3
+                                + " in CASEW2 " + CASEW2
+                                + " in CASEW1 " + CASEW1;
+                        if (cr.w4Records.containsKey(CASEW2)) {
+                            HashMap<Short, HashMap<Short, WIGB_WaAS_Wave4_Record>> w4_2;
+                            w4_2 = cr.w4Records.get(CASEW2);
+                            if (w4_2.containsKey(CASEW3)) {
+                                if (w4_2.get(CASEW3).isEmpty()) {
+                                    log("w4_2.get(CASEW3).isEmpty() " + m4);
+                                    result = false;
+                                } else {
+                                    HashMap<Short, WIGB_WaAS_Wave4_Record> w4_3;
+                                    w4_3 = w4_2.get(CASEW3);
+                                    Iterator<Short> ite4;
+                                    ite4 = w4_3.keySet().iterator();
+                                    while (ite4.hasNext()) {
+                                        Short CASEW4;
+                                        CASEW4 = ite4.next();
+                                        //WIGB_WaAS_Wave4_Record w4rec;
+                                        //w4rec = w4_3.get(CASEW4);
+                                        String m5;
+                                        m5 = "There are no Wave 5 records for "
+                                                + "CASEW4 " + CASEW4
+                                                + " in CASEW3 " + CASEW3
+                                                + " in CASEW2 " + CASEW2
+                                                + " in CASEW1 " + CASEW1;
+                                        if (cr.w5Records.containsKey(CASEW2)) {
+                                            HashMap<Short, HashMap<Short, HashMap<Short, WIGB_WaAS_Wave5_Record>>> w5_2;
+                                            w5_2 = cr.w5Records.get(CASEW2);
+                                            if (w5_2.containsKey(CASEW3)) {
+                                                HashMap<Short, HashMap<Short, WIGB_WaAS_Wave5_Record>> w5_3;
+                                                w5_3 = w5_2.get(CASEW3);
+                                                if (w5_3.containsKey(CASEW4)) {
+                                                    if (w5_3.get(CASEW4).isEmpty()) {
+                                                        log(m5);
+                                                        result = false;
+                                                    } else {
+                                                        HashMap<Short, WIGB_WaAS_Wave5_Record> w5_4;
+                                                        w5_4 = w5_3.get(CASEW4);
+                                                        if (w5_4.isEmpty()) {
+                                                            result = false;
+                                                        } else {
+//                                                            Iterator<Short> ite5;
+//                                                            ite5 = w5_4.keySet().iterator();
+//                                                            while (ite5.hasNext()) {
+//                                                                Short CASEW5;
+//                                                                CASEW5 = ite5.next();
+//                                                                WIGB_WaAS_Wave5_Record w5rec;
+//                                                                w5rec = w5_4.get(CASEW5);
+//                                                            }
+                                                        }
+                                                    }
+                                                } else {
+                                                    log("!w5_3.containsKey(CASEW4) " + m5);
+                                                }
+                                            } else {
+                                                log("!w5_2.containsKey(CASEW3) " + m5);
+                                                result = false;
+                                            }
+                                        } else {
+                                            log("!cr.w5Records.containsKey(CASEW2) " + m5);
+                                            result = false;
+                                        }
+                                    }
+                                }
+                            } else {
+                                log("!w4_2.containsKey(CASEW3) " + m4);
+                                result = false;
+                            }
+                        } else {
+                            log("!cr.w4Records.containsKey(CASEW2) " + m4);
+                            result = false;
+                        }
+                    }
+                    if (cr.w2Records.isEmpty()) {
+                        log("There are no Wave 2 records for CASEW1 " + CASEW1);
+                        result = false;
+                    }
+                    if (cr.w3Records.isEmpty()) {
+
+                    }
+                    if (cr.w4Records.isEmpty()) {
+                        log("There are no Wave 4 records for CASEW1 " + CASEW1);
+                        result = false;
+                    }
+                    if (cr.w5Records.isEmpty()) {
+                        log("There are no Wave 5 records for CASEW1 " + CASEW1);
+                        result = false;
+                    }
+                    return result;
+                }
+            } else {
+                log(m3);
+            }
+        }
+        return result;
     }
 
     protected void addVariable(String s, TreeMap<Integer, String> vIDToVName,
@@ -471,9 +604,9 @@ public class WIGB_Main_Process extends WIGB_Object {
         CASEW5ToCASEW4 = (TreeMap<Short, Short>) lookups[1];
         doDataProcessingStep2Wave5(data, personHandler, indir, outdir,
                 hholdHandler, nOC, CASEW1ToCID, CIDToCASEW1, CASEW1ToCASEW2,
-                CASEW2ToCASEW1, CASEW2ToCASEW3, CASEW3ToCASEW2, CASEW3ToCASEW4, 
+                CASEW2ToCASEW1, CASEW2ToCASEW3, CASEW3ToCASEW2, CASEW3ToCASEW4,
                 CASEW4ToCASEW3, CASEW4ToCASEW5, CASEW5ToCASEW4);
-        log("data.lookup.size() " + data.lookup.size());
+        log("data.lookup.size() " + data.CASEW1ToCID.size());
         log("data.data.size() " + data.data.size());
         Env.cacheData();
         logPW.close();
@@ -495,7 +628,10 @@ public class WIGB_Main_Process extends WIGB_Object {
             WIGB_WaAS_PERSON_Handler personHandler,
             File indir, File outdir,
             WIGB_WaAS_HHOLD_Handler hholdHandler, int chunkSize) {
-        log("Wave 1");
+        // Wave 1
+        String m0;
+        m0 = "Wave 1";
+        logStart(m0);
         Object[] r;
         r = new Object[3];
         TreeMap<Short, WIGB_WaAS_Wave1_HHOLD_Record> hs;
@@ -517,16 +653,21 @@ public class WIGB_Main_Process extends WIGB_Object {
         r[2] = ps[1];
         CIDToCASEW1.keySet().stream()
                 .forEach(cID -> {
-                    log("collectionID " + cID);
+                    String m1;
+                    m1 = "Collection ID " + cID;
+                    logStart(m1);
                     WIGB_WaAS_Collection c;
                     c = new WIGB_WaAS_Collection(cID);
                     data.data.put(cID, c);
                     // Add hhold records.
+                    String m2;
+                    m2 = "Add hhold records";
+                    logStart(m2);
                     HashSet<Short> s;
                     s = CIDToCASEW1.get(cID);
                     s.stream()
                             .forEach(CASEW1 -> {
-                                data.lookup.put(CASEW1, cID);
+                                data.CASEW1ToCID.put(CASEW1, cID);
                                 HashMap<Short, WIGB_WaAS_Combined_Record> m;
                                 m = c.getData();
                                 WIGB_WaAS_Combined_Record cr;
@@ -537,7 +678,10 @@ public class WIGB_Main_Process extends WIGB_Object {
                                 }
                                 cr.w1Record.setHhold(hs.get(CASEW1));
                             });
+                    logEnd(m2);
                     // Add person records.
+                    m2 = "Add person records";
+                    logStart(m2);
                     File f;
                     BufferedReader br;
                     f = cFs.get(cID);
@@ -555,12 +699,15 @@ public class WIGB_Main_Process extends WIGB_Object {
                                 cr = m.get(CASEW1);
                                 cr.w1Record.getPeople().add(p);
                             });
+                    logEnd(m2);
                     // Close br
                     Generic_IO.closeBufferedReader(br);
                     // Cache and clear collection
                     data.cacheSubsetCollection(cID, c);
                     data.clearCollection(cID);
+                    logEnd(m1);
                 });
+        logEnd(m0);
         return r;
     }
 
@@ -585,7 +732,10 @@ public class WIGB_Main_Process extends WIGB_Object {
             TreeMap<Short, HashSet<Short>> CIDToCASEW1,
             TreeMap<Short, HashSet<Short>> CASEW1ToCASEW2,
             TreeMap<Short, Short> CASEW2ToCASEW1) {
-        log("Wave 2");
+        // Wave 2
+        String m0;
+        m0 = "Wave 2";
+        logStart(m0);
         TreeMap<Short, WIGB_WaAS_Wave2_HHOLD_Record> hs;
         hs = hholdHandler.loadCacheSubsetWave2();
         TreeMap<Short, File> cFs;
@@ -593,15 +743,20 @@ public class WIGB_Main_Process extends WIGB_Object {
                 outdir, CASEW2ToCASEW1);
         cFs.keySet().stream()
                 .forEach(cID -> {
-                    log1("CollectionID " + cID);
+                    String m1;
+                    m1 = "Collection ID " + cID;
+                    logStart(m1);
                     WIGB_WaAS_Collection c;
                     c = data.getCollection(cID);
                     // Add hhold records.
+                    String m2;
+                    m2 = "Add hhold records";
+                    logStart(m2);
                     HashSet<Short> s;
                     s = CIDToCASEW1.get(cID);
                     s.stream()
                             .forEach(CASEW1 -> {
-                                data.lookup.put(CASEW1, cID);
+                                data.CASEW1ToCID.put(CASEW1, cID);
                                 HashMap<Short, WIGB_WaAS_Combined_Record> m;
                                 m = c.getData();
                                 WIGB_WaAS_Combined_Record cr;
@@ -611,10 +766,20 @@ public class WIGB_Main_Process extends WIGB_Object {
                                             + "for CASEW1 " + CASEW1 + "! "
                                             + "This may be a data error?");
                                 } else {
-                                    cr.w2Record.setHhold(hs.get(CASEW1));
+                                    HashSet<Short> CASEW2s;
+                                    CASEW2s = CASEW1ToCASEW2.get(CASEW1);
+                                    CASEW2s.stream().forEach(CASEW2 -> {
+                                        WIGB_WaAS_Wave2_Record w2rec;
+                                        w2rec = new WIGB_WaAS_Wave2_Record(CASEW2);
+                                        w2rec.setHhold(hs.get(CASEW2));
+                                        cr.w2Records.put(CASEW2, w2rec);
+                                    });
                                 }
                             });
+                    logEnd(m2);
                     // Add person records.
+                    m2 = "Add person records";
+                    logStart(m2);
                     File f;
                     BufferedReader br;
                     f = cFs.get(cID);
@@ -643,15 +808,24 @@ public class WIGB_Main_Process extends WIGB_Object {
                                             + "moved from one hhold "
                                             + "to another?");
                                 } else {
-                                    cr.w2Record.getPeople().add(p);
+                                    HashSet<Short> CASEW2s;
+                                    CASEW2s = CASEW1ToCASEW2.get(CASEW1);
+                                    CASEW2s.stream().forEach(k2 -> {
+                                        WIGB_WaAS_Wave2_Record w2rec;
+                                        w2rec = cr.w2Records.get(k2);
+                                        w2rec.getPeople().add(p);
+                                    });
                                 }
                             });
+                    logEnd(m2);
                     // Close br
                     Generic_IO.closeBufferedReader(br);
                     // Cache and clear collection
                     data.cacheSubsetCollection(cID, c);
                     data.clearCollection(cID);
+                    logEnd(m1);
                 });
+        logEnd(m0);
     }
 
     protected static void printCheck(byte wave, short CASEWXCheck,
@@ -698,7 +872,10 @@ public class WIGB_Main_Process extends WIGB_Object {
             TreeMap<Short, Short> CASEW2ToCASEW1,
             TreeMap<Short, HashSet<Short>> CASEW2ToCASEW3,
             TreeMap<Short, Short> CASEW3ToCASEW2) {
-        log("Wave 3");
+        // Wave 3;
+        String m0;
+        m0 = "Wave 3";
+        logStart(m0);
         TreeMap<Short, WIGB_WaAS_Wave3_HHOLD_Record> hs;
         hs = hholdHandler.loadCacheSubsetWave3();
         TreeMap<Short, File> cFs;
@@ -706,15 +883,20 @@ public class WIGB_Main_Process extends WIGB_Object {
                 outdir, CASEW2ToCASEW1, CASEW3ToCASEW2);
         cFs.keySet().stream()
                 .forEach(cID -> {
-                    log("collectionID " + cID);
+                    String m1;
+                    m1 = "Collection ID " + cID;
+                    logStart(m1);
                     WIGB_WaAS_Collection c;
                     c = data.getCollection(cID);
                     // Add hhold records.
+                    String m2;
+                    m2 = "Add hhold records";
+                    logStart(m2);
                     HashSet<Short> s;
                     s = CIDToCASEW1.get(cID);
                     s.stream()
                             .forEach(CASEW1 -> {
-                                data.lookup.put(CASEW1, cID);
+                                data.CASEW1ToCID.put(CASEW1, cID);
                                 HashMap<Short, WIGB_WaAS_Combined_Record> m;
                                 m = c.getData();
                                 WIGB_WaAS_Combined_Record cr;
@@ -724,10 +906,27 @@ public class WIGB_Main_Process extends WIGB_Object {
                                             + "for CASEW1 " + CASEW1 + "! "
                                             + "This may be a data error?");
                                 } else {
-                                    cr.w3Record.setHhold(hs.get(CASEW1));
+                                    HashSet<Short> CASEW2s;
+                                    CASEW2s = CASEW1ToCASEW2.get(CASEW1);
+                                    CASEW2s.stream().forEach(CASEW2 -> {
+                                        HashMap<Short, WIGB_WaAS_Wave3_Record> w3_2;
+                                        w3_2 = new HashMap<>();
+                                        cr.w3Records.put(CASEW2, w3_2);
+                                        HashSet<Short> CASEW3s;
+                                        CASEW3s = CASEW2ToCASEW3.get(CASEW2);
+                                        CASEW3s.stream().forEach(CASEW3 -> {
+                                            WIGB_WaAS_Wave3_Record w3rec;
+                                            w3rec = new WIGB_WaAS_Wave3_Record(CASEW3);
+                                            w3rec.setHhold(hs.get(CASEW3));
+                                            w3_2.put(CASEW3, w3rec);
+                                        });
+                                    });
                                 }
                             });
+                    logEnd(m2);
                     // Add person records.
+                    m2 = "Add person records";
+                    logStart(m2);
                     File f;
                     BufferedReader br;
                     f = cFs.get(cID);
@@ -747,7 +946,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                 CASEW2 = CASEW3ToCASEW2.get(CASEW3);
                                 short CASEW1;
                                 CASEW1 = CASEW2ToCASEW1.get(CASEW2);
-                                printCheck(WIGB_WaAS_Data.W2, CASEW1Check, CASEW1, CASEW1ToCASEW2);
+                                //printCheck(WIGB_WaAS_Data.W2, CASEW1Check, CASEW1, CASEW1ToCASEW2);
                                 printCheck(WIGB_WaAS_Data.W3, CASEW2Check, CASEW2, CASEW2ToCASEW3);
                                 HashMap<Short, WIGB_WaAS_Combined_Record> m;
                                 m = c.getData();
@@ -761,15 +960,35 @@ public class WIGB_Main_Process extends WIGB_Object {
                                             + "moved from one hhold "
                                             + "to another?");
                                 } else {
-                                    cr.w3Record.getPeople().add(p);
+                                    HashSet<Short> CASEW2s;
+                                    CASEW2s = CASEW1ToCASEW2.get(CASEW1);
+                                    CASEW2s.stream().forEach(k2 -> {
+                                        HashSet<Short> CASEW3s;
+                                        CASEW3s = CASEW2ToCASEW3.get(CASEW2);
+                                        CASEW3s.stream().forEach(k3 -> {
+                                            WIGB_WaAS_Wave3_Record w3rec;
+                                            w3rec = cr.w3Records.get(k2).get(k3);
+                                            if (w3rec == null) {
+                                                w3rec = new WIGB_WaAS_Wave3_Record(k3);
+                                                log("Adding people, but there "
+                                                        + "is no hhold record "
+                                                        + "for CASEW3 "
+                                                        + CASEW3 + "!");
+                                            }
+                                            w3rec.getPeople().add(p);
+                                        });
+                                    });
                                 }
                             });
+                    logEnd(m2);
                     // Close br
                     Generic_IO.closeBufferedReader(br);
                     // Cache and clear collection
                     data.cacheSubsetCollection(cID, c);
                     data.clearCollection(cID);
+                    logEnd(m1);
                 });
+        logEnd(m0);
     }
 
     /**
@@ -802,7 +1021,9 @@ public class WIGB_Main_Process extends WIGB_Object {
             TreeMap<Short, HashSet<Short>> CASEW3ToCASEW4,
             TreeMap<Short, Short> CASEW4ToCASEW3) {
         // Wave 4
-        log("Wave 4");
+        String m0;
+        m0 = "Wave 4";
+        logStart(m0);
         TreeMap<Short, WIGB_WaAS_Wave4_HHOLD_Record> hs;
         hs = hholdHandler.loadCacheSubsetWave4();
         TreeMap<Short, File> cFs;
@@ -810,15 +1031,20 @@ public class WIGB_Main_Process extends WIGB_Object {
                 outdir, CASEW2ToCASEW1, CASEW3ToCASEW2, CASEW4ToCASEW3);
         cFs.keySet().stream()
                 .forEach(cID -> {
-                    log("collectionID " + cID);
+                    String m1;
+                    m1 = "Collection ID " + cID;
+                    logStart(m1);
                     WIGB_WaAS_Collection c;
                     c = data.getCollection(cID);
                     // Add hhold records.
+                    String m2;
+                    m2 = "Add hhold records";
+                    logStart(m2);
                     HashSet<Short> s;
                     s = CIDToCASEW1.get(cID);
                     s.stream()
                             .forEach(CASEW1 -> {
-                                data.lookup.put(CASEW1, cID);
+                                data.CASEW1ToCID.put(CASEW1, cID);
                                 HashMap<Short, WIGB_WaAS_Combined_Record> m;
                                 m = c.getData();
                                 WIGB_WaAS_Combined_Record cr;
@@ -828,10 +1054,34 @@ public class WIGB_Main_Process extends WIGB_Object {
                                             + "for CASEW1 " + CASEW1 + "! "
                                             + "This may be a data error?");
                                 } else {
-                                    cr.w4Record.setHhold(hs.get(CASEW1));
+                                    HashSet<Short> CASEW2s;
+                                    CASEW2s = CASEW1ToCASEW2.get(CASEW1);
+                                    CASEW2s.stream().forEach(CASEW2 -> {
+                                        HashMap<Short, HashMap<Short, WIGB_WaAS_Wave4_Record>> w4_2;
+                                        w4_2 = new HashMap<>();
+                                        cr.w4Records.put(CASEW2, w4_2);
+                                        HashSet<Short> CASEW3s;
+                                        CASEW3s = CASEW2ToCASEW3.get(CASEW2);
+                                        CASEW3s.stream().forEach(CASEW3 -> {
+                                            HashMap<Short, WIGB_WaAS_Wave4_Record> w4_3;
+                                            w4_3 = new HashMap<>();
+                                            w4_2.put(CASEW3, w4_3);
+                                            HashSet<Short> CASEW4s;
+                                            CASEW4s = CASEW3ToCASEW4.get(CASEW3);
+                                            CASEW4s.stream().forEach(CASEW4 -> {
+                                                WIGB_WaAS_Wave4_Record w4rec;
+                                                w4rec = new WIGB_WaAS_Wave4_Record(CASEW4);
+                                                w4rec.setHhold(hs.get(CASEW4));
+                                                w4_3.put(CASEW4, w4rec);
+                                            });
+                                        });
+                                    });
                                 }
                             });
+                    logEnd(m2);
                     // Add person records.
+                    m2 = "Add person records";
+                    logStart(m2);
                     File f;
                     BufferedReader br;
                     f = cFs.get(cID);
@@ -855,8 +1105,8 @@ public class WIGB_Main_Process extends WIGB_Object {
                                 CASEW2 = CASEW3ToCASEW2.get(CASEW3);
                                 short CASEW1;
                                 CASEW1 = CASEW2ToCASEW1.get(CASEW2);
-                                printCheck(WIGB_WaAS_Data.W2, CASEW1Check, CASEW1, CASEW1ToCASEW2);
-                                printCheck(WIGB_WaAS_Data.W3, CASEW2Check, CASEW2, CASEW2ToCASEW3);
+                                //printCheck(WIGB_WaAS_Data.W2, CASEW1Check, CASEW1, CASEW1ToCASEW2);
+                                //printCheck(WIGB_WaAS_Data.W3, CASEW2Check, CASEW2, CASEW2ToCASEW3);
                                 printCheck(WIGB_WaAS_Data.W4, CASEW3Check, CASEW3, CASEW3ToCASEW4);
                                 HashMap<Short, WIGB_WaAS_Combined_Record> m;
                                 m = c.getData();
@@ -870,15 +1120,51 @@ public class WIGB_Main_Process extends WIGB_Object {
                                             + "moved from one hhold "
                                             + "to another?");
                                 } else {
-                                    cr.w4Record.getPeople().add(p);
+                                    HashSet<Short> CASEW2s;
+                                    CASEW2s = CASEW1ToCASEW2.get(CASEW1);
+                                    CASEW2s.stream().forEach(k2 -> {
+                                        HashSet<Short> CASEW3s;
+                                        CASEW3s = CASEW2ToCASEW3.get(CASEW2);
+                                        CASEW3s.stream().forEach(k3 -> {
+                                            HashSet<Short> CASEW4s;
+                                            CASEW4s = CASEW3ToCASEW4.get(CASEW3);
+                                            CASEW4s.stream().forEach(k4 -> {
+                                                HashMap<Short, HashMap<Short, WIGB_WaAS_Wave4_Record>> w4_2;
+                                                w4_2 = cr.w4Records.get(k2);
+                                                if (w4_2 == null) {
+                                                    w4_2 = new HashMap<>();
+                                                    cr.w4Records.put(k2, w4_2);
+                                                }
+                                                HashMap<Short, WIGB_WaAS_Wave4_Record> w4_3;
+                                                w4_3 = w4_2.get(k3);
+                                                if (w4_3 == null) {
+                                                    w4_3 = new HashMap<>();
+                                                    w4_2.put(k3, w4_3);
+                                                }
+                                                WIGB_WaAS_Wave4_Record w4rec;
+                                                w4rec = w4_3.get(k4);
+                                                if (w4rec == null) {
+                                                    w4rec = new WIGB_WaAS_Wave4_Record(k4);
+                                                    log("Adding people, but there "
+                                                            + "is no hhold record "
+                                                            + "for CASEW4 "
+                                                            + CASEW4 + "!");
+                                                }
+                                                w4rec.getPeople().add(p);
+                                            });
+                                        });
+                                    });
                                 }
                             });
+                    logEnd(m2);
                     // Close br
                     Generic_IO.closeBufferedReader(br);
                     // Cache and clear collection
                     data.cacheSubsetCollection(cID, c);
                     data.clearCollection(cID);
+                    logEnd(m1);
                 });
+        logEnd(m0);
     }
 
     /**
@@ -914,6 +1200,10 @@ public class WIGB_Main_Process extends WIGB_Object {
             TreeMap<Short, Short> CASEW4ToCASEW3,
             TreeMap<Short, HashSet<Short>> CASEW4ToCASEW5,
             TreeMap<Short, Short> CASEW5ToCASEW4) {
+        // Wave 5
+        String m0;
+        m0 = "Wave 5";
+        logStart(m0);
         TreeMap<Short, WIGB_WaAS_Wave5_HHOLD_Record> hs;
         hs = hholdHandler.loadCacheSubsetWave5();
         TreeMap<Short, File> cFs;
@@ -922,14 +1212,20 @@ public class WIGB_Main_Process extends WIGB_Object {
                 CASEW5ToCASEW4);
         cFs.keySet().stream()
                 .forEach(cID -> {
+                    String m1;
+                    m1 = "Collection ID " + cID;
+                    logStart(m1);
                     WIGB_WaAS_Collection c;
                     c = data.getCollection(cID);
                     // Add hhold records.
+                    String m2;
+                    m2 = "Add hhold records";
+                    logStart(m2);
                     HashSet<Short> s;
                     s = CIDToCASEW1.get(cID);
                     s.stream()
                             .forEach(CASEW1 -> {
-                                data.lookup.put(CASEW1, cID);
+                                data.CASEW1ToCID.put(CASEW1, cID);
                                 HashMap<Short, WIGB_WaAS_Combined_Record> m;
                                 m = c.getData();
                                 WIGB_WaAS_Combined_Record cr;
@@ -939,10 +1235,41 @@ public class WIGB_Main_Process extends WIGB_Object {
                                             + "for CASEW1 " + CASEW1 + "! "
                                             + "This may be a data error?");
                                 } else {
-                                    cr.w5Record.setHhold(hs.get(CASEW1));
+                                    HashSet<Short> CASEW2s;
+                                    CASEW2s = CASEW1ToCASEW2.get(CASEW1);
+                                    CASEW2s.stream().forEach(CASEW2 -> {
+                                        HashMap<Short, HashMap<Short, HashMap<Short, WIGB_WaAS_Wave5_Record>>> w5_2;
+                                        w5_2 = new HashMap<>();
+                                        cr.w5Records.put(CASEW2, w5_2);
+                                        HashSet<Short> CASEW3s;
+                                        CASEW3s = CASEW2ToCASEW3.get(CASEW2);
+                                        CASEW3s.stream().forEach(CASEW3 -> {
+                                            HashMap<Short, HashMap<Short, WIGB_WaAS_Wave5_Record>> w5_3;
+                                            w5_3 = new HashMap<>();
+                                            w5_2.put(CASEW3, w5_3);
+                                            HashSet<Short> CASEW4s;
+                                            CASEW4s = CASEW3ToCASEW4.get(CASEW3);
+                                            CASEW4s.stream().forEach(CASEW4 -> {
+                                                HashMap<Short, WIGB_WaAS_Wave5_Record> w5_4;
+                                                w5_4 = new HashMap<>();
+                                                w5_3.put(CASEW4, w5_4);
+                                                HashSet<Short> CASEW5s;
+                                                CASEW5s = CASEW4ToCASEW5.get(CASEW4);
+                                                CASEW5s.stream().forEach(CASEW5 -> {
+                                                    WIGB_WaAS_Wave5_Record w5rec;
+                                                    w5rec = new WIGB_WaAS_Wave5_Record(CASEW5);
+                                                    w5rec.setHhold(hs.get(CASEW5));
+                                                    w5_4.put(CASEW5, w5rec);
+                                                });
+                                            });
+                                        });
+                                    });
                                 }
                             });
+                    logEnd(m2);
                     // Add person records.
+                    m2 = "Add person records";
+                    logStart(m2);
                     File f;
                     BufferedReader br;
                     f = cFs.get(cID);
@@ -970,9 +1297,9 @@ public class WIGB_Main_Process extends WIGB_Object {
                                 CASEW2 = CASEW3ToCASEW2.get(CASEW3);
                                 short CASEW1;
                                 CASEW1 = CASEW2ToCASEW1.get(CASEW2);
-                                printCheck(WIGB_WaAS_Data.W2, CASEW1Check, CASEW1, CASEW1ToCASEW2);
-                                printCheck(WIGB_WaAS_Data.W3, CASEW2Check, CASEW2, CASEW2ToCASEW3);
-                                printCheck(WIGB_WaAS_Data.W4, CASEW3Check, CASEW3, CASEW3ToCASEW4);
+                                //printCheck(WIGB_WaAS_Data.W2, CASEW1Check, CASEW1, CASEW1ToCASEW2);
+                                //printCheck(WIGB_WaAS_Data.W3, CASEW2Check, CASEW2, CASEW2ToCASEW3);
+                                //printCheck(WIGB_WaAS_Data.W4, CASEW3Check, CASEW3, CASEW3ToCASEW4);
                                 printCheck(WIGB_WaAS_Data.W5, CASEW4Check, CASEW4, CASEW4ToCASEW5);
                                 HashMap<Short, WIGB_WaAS_Combined_Record> m;
                                 m = c.getData();
@@ -986,15 +1313,61 @@ public class WIGB_Main_Process extends WIGB_Object {
                                             + "moved from one hhold "
                                             + "to another?");
                                 } else {
-                                    cr.w5Record.getPeople().add(p);
+                                    HashSet<Short> CASEW2s;
+                                    CASEW2s = CASEW1ToCASEW2.get(CASEW1);
+                                    CASEW2s.stream().forEach(k2 -> {
+                                        HashSet<Short> CASEW3s;
+                                        CASEW3s = CASEW2ToCASEW3.get(CASEW2);
+                                        CASEW3s.stream().forEach(k3 -> {
+                                            HashSet<Short> CASEW4s;
+                                            CASEW4s = CASEW3ToCASEW4.get(CASEW3);
+                                            CASEW4s.stream().forEach(k4 -> {
+                                                HashSet<Short> CASEW5s;
+                                                CASEW5s = CASEW4ToCASEW5.get(CASEW4);
+                                                CASEW5s.stream().forEach(k5 -> {
+                                                    HashMap<Short, HashMap<Short, HashMap<Short, WIGB_WaAS_Wave5_Record>>> w5_2;
+                                                    w5_2 = cr.w5Records.get(k2);
+                                                    if (w5_2 == null) {
+                                                        w5_2 = new HashMap<>();
+                                                        cr.w5Records.put(k2, w5_2);
+                                                    }
+                                                    HashMap<Short, HashMap<Short, WIGB_WaAS_Wave5_Record>> w5_3;
+                                                    w5_3 = w5_2.get(k3);
+                                                    if (w5_3 == null) {
+                                                        w5_3 = new HashMap<>();
+                                                        w5_2.put(k3, w5_3);
+                                                    }
+                                                    HashMap<Short, WIGB_WaAS_Wave5_Record> w5_4;
+                                                    w5_4 = w5_3.get(k4);
+                                                    if (w5_4 == null) {
+                                                        w5_4 = new HashMap<>();
+                                                        w5_3.put(k4, w5_4);
+                                                    }
+                                                    WIGB_WaAS_Wave5_Record w5rec;
+                                                    w5rec = cr.w5Records.get(k2).get(k3).get(k4).get(k5);
+                                                    if (w5rec == null) {
+                                                        w5rec = new WIGB_WaAS_Wave5_Record(k5);
+                                                        log("Adding people, but there "
+                                                                + "is no hhold record "
+                                                                + "for CASEW5 "
+                                                                + CASEW5 + "!");
+                                                    }
+                                                    w5rec.getPeople().add(p);
+                                                });
+                                            });
+                                        });
+                                    });
                                 }
                             });
+                    logEnd(m2);
                     // Close br
                     Generic_IO.closeBufferedReader(br);
                     // Cache and clear collection
                     data.cacheSubsetCollection(cID, c);
                     data.clearCollection(cID);
+                    logEnd(m1);
                 });
+        logEnd(m0);
     }
 
     /**
@@ -1112,6 +1485,18 @@ public class WIGB_Main_Process extends WIGB_Object {
     }
 
     public static void log(String s) {
+        logPW.println(s);
+        System.out.println(s);
+    }
+
+    public static void logStart(String s) {
+        s = "<" + s + ">";
+        logPW.println(s);
+        System.out.println(s);
+    }
+
+    public static void logEnd(String s) {
+        s = "</" + s + ">";
         logPW.println(s);
         System.out.println(s);
     }
