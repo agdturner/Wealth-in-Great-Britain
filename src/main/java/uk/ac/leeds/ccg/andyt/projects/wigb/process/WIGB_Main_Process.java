@@ -392,17 +392,17 @@ public class WIGB_Main_Process extends WIGB_Object {
     }
 
     protected boolean process0(short CASEW1, WIGB_WaAS_Combined_Record cr) {
-        boolean result;
-        result = true;
+        boolean r;
+        r = true;
         WIGB_WaAS_Wave1_HHOLD_Record w1h;
         w1h = cr.w1Record.getHhold();
         if (w1h == null) {
             log("There is no Wave 1 record for CASEW1 " + CASEW1);
-            result = false;
+            r = false;
         }
         if (cr.w2Records.size() != 1) {
             log("There are no Wave 2 records for CASEW1 " + CASEW1);
-            result = false;
+            r = false;
         }
         Short CASEW2;
         Iterator<Short> ite2;
@@ -419,7 +419,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                 w3_2 = cr.w3Records.get(CASEW2);
                 if (w3_2.isEmpty()) {
                     log(m3);
-                    result = false;
+                    r = false;
                 } else {
                     Short CASEW3;
                     Iterator<Short> ite3;
@@ -439,7 +439,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                             if (w4_2.containsKey(CASEW3)) {
                                 if (w4_2.get(CASEW3).isEmpty()) {
                                     log("w4_2.get(CASEW3).isEmpty() " + m4);
-                                    result = false;
+                                    r = false;
                                 } else {
                                     HashMap<Short, WIGB_WaAS_Wave4_Record> w4_3;
                                     w4_3 = w4_2.get(CASEW3);
@@ -464,13 +464,14 @@ public class WIGB_Main_Process extends WIGB_Object {
                                                 w5_3 = w5_2.get(CASEW3);
                                                 if (w5_3.containsKey(CASEW4)) {
                                                     if (w5_3.get(CASEW4).isEmpty()) {
-                                                        log(m5);
-                                                        result = false;
+                                                        log("w5_3.get(CASEW4).isEmpty()" + m5);
+                                                        r = false;
                                                     } else {
                                                         HashMap<Short, WIGB_WaAS_Wave5_Record> w5_4;
                                                         w5_4 = w5_3.get(CASEW4);
                                                         if (w5_4.isEmpty()) {
-                                                            result = false;
+                                                            log("w5_4.isEmpty()" + m5);
+                                                            r = false;
                                                         } else {
 //                                                            Iterator<Short> ite5;
 //                                                            ite5 = w5_4.keySet().iterator();
@@ -487,45 +488,29 @@ public class WIGB_Main_Process extends WIGB_Object {
                                                 }
                                             } else {
                                                 log("!w5_2.containsKey(CASEW3) " + m5);
-                                                result = false;
+                                                r = false;
                                             }
                                         } else {
                                             log("!cr.w5Records.containsKey(CASEW2) " + m5);
-                                            result = false;
+                                            r = false;
                                         }
                                     }
                                 }
                             } else {
                                 log("!w4_2.containsKey(CASEW3) " + m4);
-                                result = false;
+                                r = false;
                             }
                         } else {
                             log("!cr.w4Records.containsKey(CASEW2) " + m4);
-                            result = false;
+                            r = false;
                         }
                     }
-                    if (cr.w2Records.isEmpty()) {
-                        log("There are no Wave 2 records for CASEW1 " + CASEW1);
-                        result = false;
-                    }
-                    if (cr.w3Records.isEmpty()) {
-
-                    }
-                    if (cr.w4Records.isEmpty()) {
-                        log("There are no Wave 4 records for CASEW1 " + CASEW1);
-                        result = false;
-                    }
-                    if (cr.w5Records.isEmpty()) {
-                        log("There are no Wave 5 records for CASEW1 " + CASEW1);
-                        result = false;
-                    }
-                    return result;
                 }
             } else {
                 log(m3);
             }
         }
-        return result;
+        return r;
     }
 
     protected void addVariable(String s, TreeMap<Integer, String> vIDToVName,
