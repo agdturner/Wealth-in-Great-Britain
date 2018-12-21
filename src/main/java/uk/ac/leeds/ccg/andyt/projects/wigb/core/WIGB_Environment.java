@@ -3,9 +3,10 @@ package uk.ac.leeds.ccg.andyt.projects.wigb.core;
 import java.io.File;
 import java.io.Serializable;
 import uk.ac.leeds.ccg.andyt.generic.core.Generic_Environment;
-//import uk.ac.leeds.ccg.andyt.data.postcode.Generic_UKPostcode_Handler;
+import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Strings;
+import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Data;
+import uk.ac.leeds.ccg.andyt.generic.data.waas.io.WaAS_Files;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_IO;
-import uk.ac.leeds.ccg.andyt.projects.wigb.data.waas.WIGB_WaAS_Data;
 import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
 
 /**
@@ -18,11 +19,13 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
     public transient Generic_Environment ge;
     public transient WIGB_Strings Strings;
     public transient WIGB_Files Files;
+    public transient WaAS_Strings wStrings;
+    public transient WaAS_Files wFiles;
     
     /**
      * Data.
      */
-    public WIGB_WaAS_Data data;
+    public WaAS_Data data;
 
     public transient static final String EOL = System.getProperty("line.separator");
 
@@ -30,16 +33,18 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
         //Memory_Threshold = 3000000000L;
         Strings = new WIGB_Strings();
         Files = new WIGB_Files(Strings, Strings.s_data);
+        wStrings = new WaAS_Strings();
+        wFiles = new WaAS_Files(wStrings, wStrings.s_data);
         ge = new Generic_Environment(Files, Strings);
         File f;
         f = Files.getEnvDataFile();
         if (f.exists()) {
-            loadData();
-            data.Files = Files;
-            data.Files.Strings = Strings;
-            data.Strings = Strings;
+            loadWaASData();
+            data.Files = wFiles;
+            data.Files.Strings = wStrings;
+            data.Strings = wStrings;
         } else {
-            data = new WIGB_WaAS_Data(Files, Strings);
+            data = new WaAS_Data(wFiles, wStrings);
         }
     }
 
@@ -118,11 +123,11 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
         System.out.println("</cache data>");
     }
 
-    public final void loadData() {
+    public final void loadWaASData() {
         File f;
-        f = Files.getEnvDataFile();
+        f = wFiles.getEnvDataFile();
         System.out.println("<load data>");
-        data = (WIGB_WaAS_Data) Generic_IO.readObject(f);
+        data = (WaAS_Data) Generic_IO.readObject(f);
         System.out.println("<load data>");
     }
 }
