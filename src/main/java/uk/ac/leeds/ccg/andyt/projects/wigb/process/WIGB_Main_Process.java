@@ -19,6 +19,7 @@ import java.io.File;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.TreeMap;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Strings;
@@ -87,6 +88,22 @@ public class WIGB_Main_Process extends WIGB_Object {
         p.run();
     }
 
+    /**
+     * The aim is to measure: 1) Costs associated with tenure (expenditure on
+     * rent, net of housing benefit, and/or mortgage interest for primary
+     * residences); 2) Net gains associated with property wealth (capital gains
+     * and rental income, net of capital losses, property maintenance costs,
+     * mortgage interest costs associated with investment properties and costs
+     * associated with meeting landlord obligations).
+     *
+     * How does the balance between costs and benefits vary for households in
+     * different tenures and property wealth percentiles, as well as different
+     * regions, income percentiles and age cohorts? Which groups are the biggest
+     * gainers and losers over the period 2006-2016? To what extent are the
+     * costs and benefits affecting households consistent over time? In other
+     * words, how much mobility do households experience between the categories
+     * of ‘winners’ and ‘losers’ over the course of those ten years?      *
+     */
     public void run() {
         logF0 = new File(Files.getOutputDataDir(Strings), "log0.txt");
         logPW0 = Generic_IO.getPrintWriter(logF0, false); // Overwrite log file.
@@ -100,74 +117,111 @@ public class WIGB_Main_Process extends WIGB_Object {
         outdir = new File(generateddir, "Subsets");
         outdir.mkdirs();
 
-        doDataProcessingStep3(outdir);
+        boolean doLoadSubset;
+//        doLoadSubset = true;
+        doLoadSubset = false;
 
-        logPW.close();
-    }
-    
-    protected void initlog(int i) {
-        logF = new File(Files.getOutputDataDir(Strings), "log" + i + ".txt");
-        logPW = Generic_IO.getPrintWriter(logF, true); // Append to log file.
-    }
+        HashSet<Short> subset;
+        File subsetF;
+        subsetF = new File(outdir, "SameCompositionHashSet_CASEW1.dat");
+        if (doLoadSubset) {
+            subset = doDataProcessingStep3(outdir);
+            Generic_IO.writeObject(subset, subsetF);
+        } else {
+            subset = (HashSet<Short>) Generic_IO.readObject(subsetF);
+        }
 
-    
-
-    /**
-     * Go through hholds for all waves and figure which ones have not
-     * significantly changed in terms of hhold composition. Having children and
-     * children leaving home is fine. Anything else is perhaps an issue.
-     *
-     * @param outdir
-     */
-    public void doDataProcessingStep3(File outdir) {
-        initlog(3);
-        log("Number of combined records " + data.CASEW1ToCID.size());
-        log("Number of collections of combined records " + data.data.size());
-//        /**
-//         * Calculate the number of hholds that have the same number of
-//         * adults throughout.
-//         */
-//        long n = data.data.keySet().stream()
-//                .mapToLong(cID -> {
-//                    WaAS_Collection c;
-//                    c = data.getCollection(cID);
-//                    long nc = c.getData().keySet().stream()
-//                            .mapToLong(CASEW1 -> {
-//                                WaAS_Combined_Record cr;
-//                                cr = c.getData().get(CASEW1);
-//                                c.getData().get(CASEW1);
-//                                try {
-//                                    byte w1 = cr.w1Record.getHhold().getNUMADULT();
-//                                    byte w2 = cr.w2Record.getHhold().getNUMADULT();
-//                                    byte w3 = cr.w3Record.getHhold().getNUMADULT();
-//                                    byte w4 = cr.w4Record.getHhold().getNUMADULT();
-//                                    byte w5 = cr.w5Record.getHhold().getNUMADULT();
-//                                    if (w1 == w2 && w2 == w3 && w3 == w4 && w4 == w5) {
-//                                        return 1;
-//                                    } else {
-//                                        return 0;
-//                                    }
-//                                } catch (NullPointerException e) {
-//                                    return 0;
-//                                }
-//                            }).sum();
-//                    data.clearCollection(cID);
-//                    return nc;
-//                }).sum();
-//        log("There are " + n + " hholds that contain the "
-//                + "same number of adults throughout.");
-
-        // For brevity/convenience.
         byte W1 = WaAS_Data.W1;
         byte W2 = WaAS_Data.W2;
         byte W3 = WaAS_Data.W3;
         byte W4 = WaAS_Data.W4;
         byte W5 = WaAS_Data.W5;
-        WaAS_Wave1_HHOLD_Record w1h;
-        WaAS_Wave2_HHOLD_Record w2h;
-        WaAS_Wave3_HHOLD_Record w3h;
-        WaAS_Wave4_HHOLD_Record w4h;
-        WaAS_Wave5_HHOLD_Record w5h;
+        initlog(4);
+
+        // Get tenures.
+        getHPROP(subset, W1);
+//        Value label information for HPROPWW3
+//	Value = -9.0	Label = Does not know
+//	Value = -8.0	Label = Refusal
+//	Value = -7.0	Label = Not applicable
+//	Value = -6.0	Label = Error / partial
+
+        getTenures(subset, W1);        
+//      Value label information for Ten1W1W2W3W4W5
+//	Value = 1.0	Label = Own it outright
+//	Value = 2.0	Label = mortgage
+//	Value = 3.0	Label = part rent-part mortgage
+//	Value = 4.0	Label = Rent it
+//	Value = 5.0	Label = Rent-free
+//	Value = 6.0	Label = Squatting
+//	Value = -9.0	Label = Don t know
+//	Value = -8.0	Label = Refused
+//	Value = -7.0	Label = Does not apply
+//	Value = -6.0	Label = Error partial
+
+
+
+        
+        long DVLUKVAL1 = getDVLUKVAL(subset, W1);
+        long DVLUKVAL2 = getDVLUKVAL(subset, W2);
+        long DVLUKVAL3 = getDVLUKVAL(subset, W3);
+        long DVLUKVAL4 = getDVLUKVAL(subset, W4);
+        long DVLUKVAL5 = getDVLUKVAL(subset, W5);
+
+        long FINCVB1 = getFINCVB(subset, W1);
+        long FINCVB2 = getFINCVB(subset, W2);
+        long FINCVB3 = getFINCVB(subset, W3);
+        long FINCVB4 = getFINCVB(subset, W4);
+        long FINCVB5 = getFINCVB(subset, W5);
+
+        long HPRICEB1 = getHPRICEB(subset, W1);
+        long HPRICEB2 = getHPRICEB(subset, W2);
+        long HPRICEB3 = getHPRICEB(subset, W3);
+        long HPRICEB4 = getHPRICEB(subset, W4);
+        long HPRICEB5 = getHPRICEB(subset, W5);
+
+        // DVLUKDEBT Debt on UK Land
+        // DVOPRDEBT Debt on other property
+        // DVOPRVAL Value of other property
+        log("Total (Hhold aggregate) DVLUKVAL in Wave 1 " + DVLUKVAL1);
+        log("Total (Hhold aggregate) DVLUKVAL in Wave 2 " + DVLUKVAL2);
+        log("Total (Hhold aggregate) DVLUKVAL in Wave 3 " + DVLUKVAL3);
+        log("Total (Hhold aggregate) DVLUKVAL in Wave 4 " + DVLUKVAL4);
+        log("Total (Hhold aggregate) DVLUKVAL in Wave 5 " + DVLUKVAL5);
+
+        log("Total (Person aggregate) FINCVB1 in Wave 1 " + FINCVB1);
+        log("Total (Person aggregate) FINCVB1 in Wave 2 " + FINCVB2);
+        log("Total (Person aggregate) FINCVB1 in Wave 3 " + FINCVB3);
+        log("Total (Person aggregate) FINCVB1 in Wave 4 " + FINCVB4);
+        log("Total (Person aggregate) FINCVB1 in Wave 5 " + FINCVB5);
+
+        log("Total (Hhold aggregate) HPRICEB Wave 1 " + HPRICEB1);
+        log("Total (Hhold aggregate) HPRICEB Wave 2 " + HPRICEB2);
+        log("Total (Hhold aggregate) HPRICEB Wave 3 " + HPRICEB3);
+        log("Total (Hhold aggregate) HPRICEB Wave 4 " + HPRICEB4);
+        log("Total (Hhold aggregate) HPRICEB Wave 5 " + HPRICEB5);
+        logPW.close();
+    }
+
+    protected void initlog(int i) {
+        logF = new File(Files.getOutputDataDir(Strings), "log" + i + ".txt");
+        logPW = Generic_IO.getPrintWriter(logF, true); // Append to log file.
+    }
+
+    /**
+     * Go through hholds for all waves and figure which ones have not
+     * significantly changed in terms of hhold composition. Having children and
+     * children leaving home is fine. Anything else is perhaps an issue...
+     *
+     * @param outdir
+     * @return
+     */
+    public HashSet<Short> doDataProcessingStep3(File outdir) {
+        HashSet<Short> r;
+        r = new HashSet<>();
+        initlog(3);
+        log("Number of combined records " + data.CASEW1ToCID.size());
+        log("Number of collections of combined records " + data.data.size());
 
         //HashSet<Short> s = new HashSet<>();
         Iterator<Short> ite;
@@ -214,136 +268,21 @@ public class WIGB_Main_Process extends WIGB_Object {
                 check = process3(CASEW1, cr);
                 if (check) {
                     count3++;
+                    r.add(CASEW1);
                 }
             }
             data.clearCollection(cID);
         }
         log("" + count0 + " Total hholds in all 5 waves.");
-        log("" + count1 + " Total hholds that are a single hhold over all 5 waves.");
-        log("" + count2 + " Total hholds that are a single hhold over all 5 waves and have same number of adults in all 5 waves.");
-        log("" + count3 + " Total hholds that are a single hhold over all 5 waves and have the same basic adult household composition over all 5 waves.");
+        log("" + count1 + " Total hholds that are a single hhold over all 5 "
+                + "waves.");
+        log("" + count2 + " Total hholds that are a single hhold over all 5 "
+                + "waves and have same number of adults in all 5 waves.");
+        log("" + count3 + " Total hholds that are a single hhold over all 5 "
+                + "waves and have the same basic adult household composition "
+                + "over all 5 waves.");
         log("</" + m + ">");
-
-//        /**
-//         * Get the IDs of hholds that have the same number of adults
-//         * throughout.
-//         */
-//        ite = data.data.keySet().iterator();
-//        while (ite.hasNext()) {
-//            cID = ite.next();
-//            log1("Processing collection " + cID);
-//            c = data.getCollection(cID);
-//            ite2 = c.getData().keySet().iterator();
-//            while (ite2.hasNext()) {
-//                CASEW1 = ite2.next();
-//                cr = c.getData().get(CASEW1);
-//                c.getData().get(CASEW1);
-//                w1h = cr.w1Record.getHhold();
-//                w2h = cr.w2Record.getHhold();
-//                w3h = cr.w3Record.getHhold();
-//                w4h = cr.w4Record.getHhold();
-//                w5h = cr.w5Record.getHhold();
-//                if (process0(W1, CASEW1, w1h)) {
-//                    if (process0(W2, CASEW1, w2h)) {
-//                        if (process0(W3, CASEW1, w3h)) {
-//                            if (process0(W4, CASEW1, w4h)) {
-//                                if (process0(W5, CASEW1, w5h)) {
-//                                    s.add(CASEW1);
-//                                }
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//            data.clearCollection(cID);
-//        }
-//        log("Number of combined records with all hhold records "
-//                + "for each wave " + s.size() + ".");
-//        /**
-//         * Stream through the data and calculate the total value of UK Land in
-//         * Wave 1 hholds. This value is an aggregate of numerical class
-//         * values.
-//         */
-//        long tDVLUKVAL = data.data.keySet().stream()
-//                .mapToLong(cID -> {
-//                    WaAS_Collection c;
-//                    c = data.getCollection(cID);
-//                    long cDVLUKVAL = c.getData().keySet().stream()
-//                            .mapToLong(CASEW1 -> {
-//                                WaAS_Combined_Record cr;
-//                                cr = c.getData().get(CASEW1);
-//                                int DVLUKVAL;
-//                                DVLUKVAL = cr.w1Record.getHhold().getDVLUKVAL();
-//                                if (DVLUKVAL == Integer.MIN_VALUE) {
-//                                    DVLUKVAL = 0;
-//                                }
-//                                return DVLUKVAL;
-//                            }).sum();
-//                    data.clearCollection(cID);
-//                    return cDVLUKVAL;  // Total value of UK Land in c.
-//                }).sum();
-//        log("Total value of UK Land in Wave 1 " + tDVLUKVAL);
-        //
-//        /**
-//         * Stream through the data and calculate the total income in the last 12
-//         * months of all individual people. This value is an aggregate of
-//         * numerical class values.
-//         */
-//        long tFINCVB = data.data.keySet().stream()
-//                .mapToLong(cID -> {
-//                    WaAS_Collection c;
-//                    c = data.getCollection(cID);
-//                    long cFINCVB = c.getData().keySet().stream()
-//                            .mapToLong(CASEW1 -> {
-//                                WaAS_Combined_Record cr;
-//                                cr = c.getData().get(CASEW1);
-//                                long hFINCVB = cr.w1Record.getPeople().stream()
-//                                        .mapToLong(p -> {
-//                                            byte FINCVB;
-//                                            FINCVB = p.getFINCVB();
-//                                            //if (FINCVB == Byte.MIN_VALUE) {
-//                                            if (FINCVB < 0) {
-//                                                FINCVB = 0;
-//                                            }
-//                                            return FINCVB;
-//                                        }).sum();
-//                                return hFINCVB;
-//                            }).sum();
-//                    data.clearCollection(cID);
-//                    return cFINCVB;  // Total income in the last 12 months.
-//                }).sum();
-//        log("Total income in the last 12 months " + tFINCVB);
-        /**
-         * The main WaAS data store. Keys are Collection IDs.
-         */
-        TreeMap<Integer, String> vIDToVName;
-        TreeMap<String, Integer> vNameToVID;
-        vIDToVName = new TreeMap<>();
-        vNameToVID = new TreeMap<>();
-        String sDVLUKDEBT = "DVLUKDEBT";
-        addVariable(sDVLUKDEBT, vIDToVName, vNameToVID);
-        String sDVLUKVAL = "DVLUKVAL";
-        addVariable(sDVLUKVAL, vIDToVName, vNameToVID);
-
-//                    WaAS_Combined_Record cr;
-//                    cr = c.getData().get(CASEW1);
-//                    //cr.w1Record.getHhold().getDVLUKDEBT(); // Debt on UK Land
-//                    tDVLUKVAL += cr.w1Record.getHhold().getDVLUKVAL();  // Value of UK Land
-//                    //cr.w1Record.getHhold().getDVOPRDEBT(); // Debt on other property
-//                    //cr.w1Record.getHhold().getDVOPRVAL();  // Value of other property
-//                    //cr.w1Record.getHhold().getHPROPW(); // Total property wealth
-//                    //cr.w1Record.getHhold().getGOR(); // Government Office Region Code
-//                    cr.w2Record.getHhold().getDVLUKVAL();  // Value of UK Land
-//                    cr.w3Record.getHhold().getDVLUKVAL_SUM();  // Value of UK Land
-//                    cr.w4Record.getHhold().getDVLUKVAL_SUM();  // Value of UK Land
-//                    cr.w5Record.getHhold().getDVLUKVAL_SUM();  // Value of UK Land
-//                    cr.w1Record.getPeople().stream()
-//                            .forEach(w1person -> {
-//                                w1person.getDVLUKDEBT(); // Derived - Total land uk debt
-//                                w1person.getDVLUKV(); // Derived - Total land uk value
-//                            });
-//                });
-        logPW.close();
+        return r;
     }
 
     /**
@@ -951,6 +890,711 @@ public class WIGB_Main_Process extends WIGB_Object {
             TreeMap<String, Integer> vNameToVID) {
         vIDToVName.put(0, s);
         vNameToVID.put(s, 0);
+    }
+
+    /**
+     * Get the total value of UK Land in subset.
+     *
+     * @param subset
+     * @param wave
+     * @return
+     */
+    public long getDVLUKVAL(HashSet<Short> subset, byte wave) {
+        // For brevity/convenience.
+        byte W1 = WaAS_Data.W1;
+        byte W2 = WaAS_Data.W2;
+        byte W3 = WaAS_Data.W3;
+        byte W4 = WaAS_Data.W4;
+        byte W5 = WaAS_Data.W5;
+        long tDVLUKVAL;
+        if (wave == W1) {
+//            	Value label information for DVLUKValW1
+//	Value = -9.0	Label = Don t know
+//	Value = -8.0	Label = Refused
+//	Value = -7.0	Label = Does not apply
+//	Value = -6.0	Label = Error Partial
+
+            tDVLUKVAL = data.data.keySet().stream().mapToLong(cID -> {
+                WaAS_Collection c;
+                c = data.getCollection(cID);
+                long cDVLUKVAL = c.getData().keySet().stream().mapToLong(CASEW1 -> {
+                    int DVLUKVAL = 0;
+                    if (subset.contains(CASEW1)) {
+                        WaAS_Combined_Record cr;
+                        cr = c.getData().get(CASEW1);
+                        DVLUKVAL = cr.w1Record.getHhold().getDVLUKVAL();
+                        if (DVLUKVAL == Integer.MIN_VALUE) {
+                            DVLUKVAL = 0;
+                        }
+                    }
+                    return DVLUKVAL;
+                }).sum();
+                data.clearCollection(cID);
+                return cDVLUKVAL;  // Total value of UK Land in c.
+            }).sum();
+        } else if (wave == W2) {
+            tDVLUKVAL = data.data.keySet().stream().mapToLong(cID -> {
+                WaAS_Collection c;
+                c = data.getCollection(cID);
+                long cDVLUKVAL = c.getData().keySet().stream().mapToLong(CASEW1 -> {
+                    int DVLUKVAL = 0;
+                    if (subset.contains(CASEW1)) {
+                        WaAS_Combined_Record cr;
+                        cr = c.getData().get(CASEW1);
+                        HashMap<Short, WaAS_Wave2_Record> w2Records;
+                        w2Records = cr.w2Records;
+                        Short CASEW2;
+                        Iterator<Short> ite;
+                        ite = w2Records.keySet().iterator();
+                        while (ite.hasNext()) {
+                            CASEW2 = ite.next();
+                            int DVLUKVALW2 = w2Records.get(CASEW2).getHhold().getDVLUKVAL();
+                            if (DVLUKVALW2 != Integer.MIN_VALUE) {
+                                DVLUKVAL += DVLUKVALW2;
+                            }
+                        }
+                    }
+                    return DVLUKVAL;
+                }).sum();
+                data.clearCollection(cID);
+                return cDVLUKVAL;  // Total value of UK Land in c.
+            }).sum();
+        } else if (wave == W3) {
+            tDVLUKVAL = data.data.keySet().stream().mapToLong(cID -> {
+                WaAS_Collection c;
+                c = data.getCollection(cID);
+                long cDVLUKVAL = c.getData().keySet().stream().mapToLong(CASEW1 -> {
+                    int DVLUKVAL = 0;
+                    if (subset.contains(CASEW1)) {
+                        WaAS_Combined_Record cr;
+                        cr = c.getData().get(CASEW1);
+                        HashMap<Short, HashMap<Short, WaAS_Wave3_Record>> w3Records;
+                        w3Records = cr.w3Records;
+                        Short CASEW2;
+                        Short CASEW3;
+                        Iterator<Short> ite;
+                        ite = w3Records.keySet().iterator();
+                        while (ite.hasNext()) {
+                            CASEW2 = ite.next();
+                            HashMap<Short, WaAS_Wave3_Record> w3_2;
+                            w3_2 = w3Records.get(CASEW2);
+                            Iterator<Short> ite2;
+                            ite2 = w3_2.keySet().iterator();
+                            while (ite2.hasNext()) {
+                                CASEW3 = ite2.next();
+                                int DVLUKVALW3 = w3_2.get(CASEW3).getHhold().getDVLUKVAL_SUM();
+                                if (DVLUKVALW3 != Integer.MIN_VALUE) {
+                                    DVLUKVAL += DVLUKVALW3;
+                                }
+                            }
+                        }
+                    }
+                    return DVLUKVAL;
+                }).sum();
+                data.clearCollection(cID);
+                return cDVLUKVAL;  // Total value of UK Land in c.
+            }).sum();
+        } else if (wave == W4) {
+            tDVLUKVAL = data.data.keySet().stream().mapToLong(cID -> {
+                WaAS_Collection c;
+                c = data.getCollection(cID);
+                long cDVLUKVAL = c.getData().keySet().stream().mapToLong(CASEW1 -> {
+                    int DVLUKVAL = 0;
+                    if (subset.contains(CASEW1)) {
+                        WaAS_Combined_Record cr;
+                        cr = c.getData().get(CASEW1);
+                        HashMap<Short, HashMap<Short, HashMap<Short, WaAS_Wave4_Record>>> w4Records;
+                        w4Records = cr.w4Records;
+                        Short CASEW2;
+                        Short CASEW3;
+                        Short CASEW4;
+                        Iterator<Short> ite;
+                        ite = w4Records.keySet().iterator();
+                        while (ite.hasNext()) {
+                            CASEW2 = ite.next();
+                            HashMap<Short, HashMap<Short, WaAS_Wave4_Record>> w4_2;
+                            w4_2 = w4Records.get(CASEW2);
+                            Iterator<Short> ite2;
+                            ite2 = w4_2.keySet().iterator();
+                            while (ite2.hasNext()) {
+                                CASEW3 = ite2.next();
+                                HashMap<Short, WaAS_Wave4_Record> w4_3;
+                                w4_3 = w4_2.get(CASEW3);
+                                Iterator<Short> ite3;
+                                ite3 = w4_3.keySet().iterator();
+                                while (ite3.hasNext()) {
+                                    CASEW4 = ite3.next();
+                                    int DVLUKVALW4 = w4_3.get(CASEW4).getHhold().getDVLUKVAL_SUM();
+                                    if (DVLUKVALW4 != Integer.MIN_VALUE) {
+                                        DVLUKVAL += DVLUKVALW4;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    return DVLUKVAL;
+                }).sum();
+                data.clearCollection(cID);
+                return cDVLUKVAL;  // Total value of UK Land in c.
+            }).sum();
+        } else if (wave == W5) {
+            tDVLUKVAL = data.data.keySet().stream().mapToLong(cID -> {
+                WaAS_Collection c;
+                c = data.getCollection(cID);
+                long cDVLUKVAL = c.getData().keySet().stream().mapToLong(CASEW1 -> {
+                    int DVLUKVAL = 0;
+                    if (subset.contains(CASEW1)) {
+                        WaAS_Combined_Record cr;
+                        cr = c.getData().get(CASEW1);
+                        HashMap<Short, HashMap<Short, HashMap<Short, HashMap<Short, WaAS_Wave5_Record>>>> w5Records;
+                        w5Records = cr.w5Records;
+                        Short CASEW2;
+                        Short CASEW3;
+                        Short CASEW4;
+                        Short CASEW5;
+                        Iterator<Short> ite;
+                        ite = w5Records.keySet().iterator();
+                        while (ite.hasNext()) {
+                            CASEW2 = ite.next();
+                            HashMap<Short, HashMap<Short, HashMap<Short, WaAS_Wave5_Record>>> w5_2;
+                            w5_2 = w5Records.get(CASEW2);
+                            Iterator<Short> ite2;
+                            ite2 = w5_2.keySet().iterator();
+                            while (ite2.hasNext()) {
+                                CASEW3 = ite2.next();
+                                HashMap<Short, HashMap<Short, WaAS_Wave5_Record>> w5_3;
+                                w5_3 = w5_2.get(CASEW3);
+                                Iterator<Short> ite3;
+                                ite3 = w5_3.keySet().iterator();
+                                while (ite3.hasNext()) {
+                                    CASEW4 = ite3.next();
+                                    HashMap<Short, WaAS_Wave5_Record> w5_4;
+                                    w5_4 = w5_3.get(CASEW4);
+                                    Iterator<Short> ite4;
+                                    ite4 = w5_4.keySet().iterator();
+                                    while (ite4.hasNext()) {
+                                        CASEW5 = ite4.next();
+                                        int DVLUKVALW5 = w5_4.get(CASEW5).getHhold().getDVLUKVAL_SUM();
+                                        if (DVLUKVALW5 != Integer.MIN_VALUE) {
+                                            DVLUKVAL += DVLUKVALW5;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    return DVLUKVAL;
+                }).sum();
+                data.clearCollection(cID);
+                return cDVLUKVAL;  // Total value of UK Land in c.
+            }).sum();
+        } else {
+            tDVLUKVAL = 0;
+        }
+        log("Total (Hhold aggregate) DVLUKVAL in Wave " + wave + " " + tDVLUKVAL);
+        return tDVLUKVAL;
+    }
+
+    /**
+     * Get FINCVB.
+     *
+     * @param subset
+     * @param wave
+     * @return
+     */
+    public long getFINCVB(HashSet<Short> subset, byte wave) {
+        // For brevity/convenience.
+        byte W1 = WaAS_Data.W1;
+        byte W2 = WaAS_Data.W2;
+        byte W3 = WaAS_Data.W3;
+        byte W4 = WaAS_Data.W4;
+        byte W5 = WaAS_Data.W5;
+        long tFINCVB;
+        if (wave == W1) {
+            tFINCVB = data.data.keySet().stream().mapToLong(cID -> {
+                WaAS_Collection c;
+                c = data.getCollection(cID);
+                long cFINCVB = c.getData().keySet().stream().mapToLong(CASEW1 -> {
+                    byte FINCVB = 0;
+                    if (subset.contains(CASEW1)) {
+                        WaAS_Combined_Record cr;
+                        cr = c.getData().get(CASEW1);
+                        ArrayList<WaAS_Wave1_PERSON_Record> w1p;
+                        w1p = cr.w1Record.getPeople();
+                        Iterator<WaAS_Wave1_PERSON_Record> ite;
+                        ite = w1p.iterator();
+                        while (ite.hasNext()) {
+                            FINCVB = ite.next().getFINCVB();
+                            if (FINCVB == Byte.MIN_VALUE) {
+                                FINCVB = 0;
+                            }
+                        }
+                    }
+                    return FINCVB;
+                }).sum();
+                data.clearCollection(cID);
+                return cFINCVB;  // Total value of UK Land in c.
+            }).sum();
+        } else if (wave == W2) {
+            tFINCVB = data.data.keySet().stream().mapToLong(cID -> {
+                WaAS_Collection c;
+                c = data.getCollection(cID);
+                long cFINCVB = c.getData().keySet().stream().mapToLong(CASEW1 -> {
+                    byte FINCVB = 0;
+                    if (subset.contains(CASEW1)) {
+                        WaAS_Combined_Record cr;
+                        cr = c.getData().get(CASEW1);
+                        HashMap<Short, WaAS_Wave2_Record> w2Records;
+                        w2Records = cr.w2Records;
+                        Short CASEW2;
+                        Iterator<Short> ite;
+                        ite = w2Records.keySet().iterator();
+                        while (ite.hasNext()) {
+                            CASEW2 = ite.next();
+                            ArrayList<WaAS_Wave2_PERSON_Record> w2p;
+                            w2p = w2Records.get(CASEW2).getPeople();
+                            Iterator<WaAS_Wave2_PERSON_Record> ite2;
+                            ite2 = w2p.iterator();
+                            while (ite2.hasNext()) {
+                                FINCVB = ite2.next().getFINCVB();
+                                if (FINCVB == Byte.MIN_VALUE) {
+                                    FINCVB = 0;
+                                }
+                            }
+                        }
+                    }
+                    return FINCVB;
+                }).sum();
+                data.clearCollection(cID);
+                return cFINCVB;  // Total value of UK Land in c.
+            }).sum();
+        } else if (wave == W3) {
+            tFINCVB = data.data.keySet().stream().mapToLong(cID -> {
+                WaAS_Collection c;
+                c = data.getCollection(cID);
+                long cFINCVB = c.getData().keySet().stream().mapToLong(CASEW1 -> {
+                    byte FINCVB = 0;
+                    if (subset.contains(CASEW1)) {
+                        WaAS_Combined_Record cr;
+                        cr = c.getData().get(CASEW1);
+                        HashMap<Short, HashMap<Short, WaAS_Wave3_Record>> w3Records;
+                        w3Records = cr.w3Records;
+                        Short CASEW2;
+                        Short CASEW3;
+                        Iterator<Short> ite;
+                        ite = w3Records.keySet().iterator();
+                        while (ite.hasNext()) {
+                            CASEW2 = ite.next();
+                            HashMap<Short, WaAS_Wave3_Record> w3_2;
+                            w3_2 = w3Records.get(CASEW2);
+                            Iterator<Short> ite2;
+                            ite2 = w3_2.keySet().iterator();
+                            while (ite2.hasNext()) {
+                                CASEW3 = ite2.next();
+                                ArrayList<WaAS_Wave3_PERSON_Record> w3p;
+                                w3p = w3_2.get(CASEW3).getPeople();
+                                Iterator<WaAS_Wave3_PERSON_Record> ite3;
+                                ite3 = w3p.iterator();
+                                while (ite3.hasNext()) {
+                                    FINCVB = ite3.next().getFINCVB();
+                                    if (FINCVB == Byte.MIN_VALUE) {
+                                        FINCVB = 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    return FINCVB;
+                }).sum();
+                data.clearCollection(cID);
+                return cFINCVB;  // Total value of UK Land in c.
+            }).sum();
+        } else if (wave == W4) {
+            tFINCVB = data.data.keySet().stream().mapToLong(cID -> {
+                WaAS_Collection c;
+                c = data.getCollection(cID);
+                long cFINCVB = c.getData().keySet().stream().mapToLong(CASEW1 -> {
+                    byte FINCVB = 0;
+                    if (subset.contains(CASEW1)) {
+                        WaAS_Combined_Record cr;
+                        cr = c.getData().get(CASEW1);
+                        HashMap<Short, HashMap<Short, HashMap<Short, WaAS_Wave4_Record>>> w4Records;
+                        w4Records = cr.w4Records;
+                        Short CASEW2;
+                        Short CASEW3;
+                        Short CASEW4;
+                        Iterator<Short> ite;
+                        ite = w4Records.keySet().iterator();
+                        while (ite.hasNext()) {
+                            CASEW2 = ite.next();
+                            HashMap<Short, HashMap<Short, WaAS_Wave4_Record>> w4_2;
+                            w4_2 = w4Records.get(CASEW2);
+                            Iterator<Short> ite2;
+                            ite2 = w4_2.keySet().iterator();
+                            while (ite2.hasNext()) {
+                                CASEW3 = ite2.next();
+                                HashMap<Short, WaAS_Wave4_Record> w4_3;
+                                w4_3 = w4_2.get(CASEW3);
+                                Iterator<Short> ite3;
+                                ite3 = w4_3.keySet().iterator();
+                                while (ite3.hasNext()) {
+                                    CASEW4 = ite3.next();
+                                    ArrayList<WaAS_Wave4_PERSON_Record> w4p;
+                                    w4p = w4_3.get(CASEW4).getPeople();
+                                    Iterator<WaAS_Wave4_PERSON_Record> ite4;
+                                    ite4 = w4p.iterator();
+                                    while (ite4.hasNext()) {
+                                        FINCVB = ite4.next().getFINCVB();
+                                        if (FINCVB == Byte.MIN_VALUE) {
+                                            FINCVB = 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    return FINCVB;
+                }).sum();
+                data.clearCollection(cID);
+                return cFINCVB;  // Total value of UK Land in c.
+            }).sum();
+        } else if (wave == W5) {
+            tFINCVB = data.data.keySet().stream().mapToLong(cID -> {
+                WaAS_Collection c;
+                c = data.getCollection(cID);
+                long cFINCVB = c.getData().keySet().stream().mapToLong(CASEW1 -> {
+                    byte FINCVB = 0;
+                    if (subset.contains(CASEW1)) {
+                        WaAS_Combined_Record cr;
+                        cr = c.getData().get(CASEW1);
+                        HashMap<Short, HashMap<Short, HashMap<Short, HashMap<Short, WaAS_Wave5_Record>>>> w5Records;
+                        w5Records = cr.w5Records;
+                        Short CASEW2;
+                        Short CASEW3;
+                        Short CASEW4;
+                        Short CASEW5;
+                        Iterator<Short> ite;
+                        ite = w5Records.keySet().iterator();
+                        while (ite.hasNext()) {
+                            CASEW2 = ite.next();
+                            HashMap<Short, HashMap<Short, HashMap<Short, WaAS_Wave5_Record>>> w5_2;
+                            w5_2 = w5Records.get(CASEW2);
+                            Iterator<Short> ite2;
+                            ite2 = w5_2.keySet().iterator();
+                            while (ite2.hasNext()) {
+                                CASEW3 = ite2.next();
+                                HashMap<Short, HashMap<Short, WaAS_Wave5_Record>> w5_3;
+                                w5_3 = w5_2.get(CASEW3);
+                                Iterator<Short> ite3;
+                                ite3 = w5_3.keySet().iterator();
+                                while (ite3.hasNext()) {
+                                    CASEW4 = ite3.next();
+                                    HashMap<Short, WaAS_Wave5_Record> w5_4;
+                                    w5_4 = w5_3.get(CASEW4);
+                                    Iterator<Short> ite4;
+                                    ite4 = w5_4.keySet().iterator();
+                                    while (ite4.hasNext()) {
+                                        CASEW5 = ite4.next();
+                                        ArrayList<WaAS_Wave5_PERSON_Record> w5p;
+                                        w5p = w5_4.get(CASEW5).getPeople();
+                                        Iterator<WaAS_Wave5_PERSON_Record> ite5;
+                                        ite5 = w5p.iterator();
+                                        while (ite5.hasNext()) {
+                                            FINCVB = ite5.next().getFINCVB();
+                                            if (FINCVB == Byte.MIN_VALUE) {
+                                                FINCVB = 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    return FINCVB;
+                }).sum();
+                data.clearCollection(cID);
+                return cFINCVB;  // Total value of UK Land in c.
+            }).sum();
+        } else {
+            tFINCVB = 0;
+        }
+        log("Total (Person aggregate) FINCVB in Wave " + wave + " " + tFINCVB);
+        return tFINCVB;
+    }
+
+    /**
+     * Get the total HPRICEB in subset.
+     *
+     * @param subset
+     * @param wave
+     * @return
+     */
+    public long getHPRICEB(HashSet<Short> subset, byte wave) {
+        // For brevity/convenience.
+        byte W1 = WaAS_Data.W1;
+        byte W2 = WaAS_Data.W2;
+        byte W3 = WaAS_Data.W3;
+        byte W4 = WaAS_Data.W4;
+        byte W5 = WaAS_Data.W5;
+        long tHPRICEB;
+        if (wave == W1) {
+//            Value label information for HPriceBW1
+//            Value = 1.0	Label = Less than £20,000
+//            Value = 2.0	Label = £20,000 to £39,999
+//            Value = 3.0	Label = £40,000 to £59,999
+//            Value = 4.0	Label = £60,000 to £99,999
+//            Value = 5.0	Label = £100,000 to £149,999
+//            Value = 6.0	Label = £150,000 to £199,999
+//            Value = 7.0	Label = £200,000 to £249,999
+//            Value = 8.0	Label = £250,000 to £299,999
+//            Value = 9.0	Label = £300,000 to £499,999
+//            Value = 10.0	Label = £500,000 or more
+//            Value = -9.0	Label = Don t know
+            tHPRICEB = data.data.keySet().stream().mapToLong(cID -> {
+                WaAS_Collection c;
+                c = data.getCollection(cID);
+                long cHPRICEB = c.getData().keySet().stream().mapToLong(CASEW1 -> {
+                    int HPRICEB = 0;
+                    if (subset.contains(CASEW1)) {
+                        WaAS_Combined_Record cr;
+                        cr = c.getData().get(CASEW1);
+                        HPRICEB = cr.w1Record.getHhold().getHPRICEB();
+                        if (HPRICEB == Integer.MIN_VALUE) {
+                            HPRICEB = 0;
+                        }
+                    }
+                    return HPRICEB;
+                }).sum();
+                data.clearCollection(cID);
+                return cHPRICEB;  // Total value of UK Land in c.
+            }).sum();
+        } else if (wave == W2) {
+//            Value label information for HPriceBW2
+//            Value = 1.0	Label = Less than £20,000
+//            Value = 2.0	Label = £20,000 to £39,999
+//            Value = 3.0	Label = £40,000 to £59,999
+//            Value = 4.0	Label = £60,000 to £99,999
+//            Value = 5.0	Label = £100,000 to £149,999
+//            Value = 6.0	Label = £150,000 to £199,999
+//            Value = 7.0	Label = £200,000 to £249,999
+//            Value = 8.0	Label = £250,000 to £299,999
+//            Value = 9.0	Label = £300,000 to £499,999
+//            Value = 10.0	Label = £500,000 or more
+//            Value = -9.0	Label = Don t know
+//            Value = -8.0	Label = Refused
+//            Value = -7.0	Label = Does not apply
+//            Value = -6.0	Label = Error partial
+            tHPRICEB = data.data.keySet().stream().mapToLong(cID -> {
+                WaAS_Collection c;
+                c = data.getCollection(cID);
+                long cHPRICEB = c.getData().keySet().stream().mapToLong(CASEW1 -> {
+                    int HPRICEB = 0;
+                    if (subset.contains(CASEW1)) {
+                        WaAS_Combined_Record cr;
+                        cr = c.getData().get(CASEW1);
+                        HashMap<Short, WaAS_Wave2_Record> w2Records;
+                        w2Records = cr.w2Records;
+                        Short CASEW2;
+                        Iterator<Short> ite;
+                        ite = w2Records.keySet().iterator();
+                        while (ite.hasNext()) {
+                            CASEW2 = ite.next();
+                            int HPRICEBW2 = w2Records.get(CASEW2).getHhold().getHPRICEB();
+                            if (HPRICEBW2 != Integer.MIN_VALUE) {
+                                HPRICEB += HPRICEBW2;
+                            }
+                        }
+                    }
+                    return HPRICEB;
+                }).sum();
+                data.clearCollection(cID);
+                return cHPRICEB;  // Total value of UK Land in c.
+            }).sum();
+        } else if (wave == W3) {
+//            	  Value label information for HPriceBW3
+//                Value = 1.0	Label = Less than £60,000
+//                Value = 2.0	Label = 60,000 to 99,999
+//                Value = 3.0	Label = £100,000 to 149,999
+//                Value = 4.0	Label = £150,000 to 199,999
+//                Value = 5.0	Label = £200,000 to 249,999
+//                Value = 6.0	Label = £250,000 to 299,999
+//                Value = 7.0	Label = £300,000 to 349,999
+//                Value = 8.0	Label = £350,000 to 399,999
+//                Value = 9.0	Label = £400,000 to 499,999
+//                Value = 10.0	Label = £500,000 to 749,999
+//                Value = 11.0	Label = £750,000 to 999,999
+//                Value = 12.0	Label = £1 million or more
+//                Value = -9.0	Label = Does not know
+//                Value = -8.0	Label = Refusal
+//                Value = -7.0	Label = Not applicable
+//                Value = -6.0	Label = Error / partial
+            tHPRICEB = data.data.keySet().stream().mapToLong(cID -> {
+                WaAS_Collection c;
+                c = data.getCollection(cID);
+                long cHPRICEB = c.getData().keySet().stream().mapToLong(CASEW1 -> {
+                    int HPRICEB = 0;
+                    if (subset.contains(CASEW1)) {
+                        WaAS_Combined_Record cr;
+                        cr = c.getData().get(CASEW1);
+                        HashMap<Short, HashMap<Short, WaAS_Wave3_Record>> w3Records;
+                        w3Records = cr.w3Records;
+                        Short CASEW2;
+                        Short CASEW3;
+                        Iterator<Short> ite;
+                        ite = w3Records.keySet().iterator();
+                        while (ite.hasNext()) {
+                            CASEW2 = ite.next();
+                            HashMap<Short, WaAS_Wave3_Record> w3_2;
+                            w3_2 = w3Records.get(CASEW2);
+                            Iterator<Short> ite2;
+                            ite2 = w3_2.keySet().iterator();
+                            while (ite2.hasNext()) {
+                                CASEW3 = ite2.next();
+                                int HPRICEBW3 = w3_2.get(CASEW3).getHhold().getHPRICEB();
+                                if (HPRICEBW3 != Integer.MIN_VALUE) {
+                                    HPRICEB += HPRICEBW3;
+                                }
+                            }
+                        }
+                    }
+                    return HPRICEB;
+                }).sum();
+                data.clearCollection(cID);
+                return cHPRICEB;  // Total value of UK Land in c.
+            }).sum();
+        } else if (wave == W4) {
+//      Value label information for HPriceBW4
+//	Value = 1.0	Label = Less than £60,000
+//	Value = 2.0	Label = £60,000 to £99,999
+//	Value = 3.0	Label = £100,000 to £149,999
+//	Value = 4.0	Label = £150,000 to £199,999
+//	Value = 5.0	Label = £200,000 to £249,999
+//	Value = 6.0	Label = £250,000 to £299,999
+//      Value = 7.0	Label = £300,000 to £349,999
+//	Value = 8.0	Label = £350,000 to £399,999
+//	Value = 9.0	Label = £400,000 to £499,999
+//	Value = 10.0	Label = £500,000 to £749,999
+//	Value = 11.0	Label = £750,000 to £999,999
+//	Value = 12.0	Label = £1 million or more
+//	Value = -9.0	Label = Do not know
+//	Value = -8.0	Label = Refusal
+//	Value = -7.0	Label = Not applicable
+//	Value = -6.0	Label = “Error partial”
+            tHPRICEB = data.data.keySet().stream().mapToLong(cID -> {
+                WaAS_Collection c;
+                c = data.getCollection(cID);
+                long cHPRICEB = c.getData().keySet().stream().mapToLong(CASEW1 -> {
+                    int HPRICEB = 0;
+                    if (subset.contains(CASEW1)) {
+                        WaAS_Combined_Record cr;
+                        cr = c.getData().get(CASEW1);
+                        HashMap<Short, HashMap<Short, HashMap<Short, WaAS_Wave4_Record>>> w4Records;
+                        w4Records = cr.w4Records;
+                        Short CASEW2;
+                        Short CASEW3;
+                        Short CASEW4;
+                        Iterator<Short> ite;
+                        ite = w4Records.keySet().iterator();
+                        while (ite.hasNext()) {
+                            CASEW2 = ite.next();
+                            HashMap<Short, HashMap<Short, WaAS_Wave4_Record>> w4_2;
+                            w4_2 = w4Records.get(CASEW2);
+                            Iterator<Short> ite2;
+                            ite2 = w4_2.keySet().iterator();
+                            while (ite2.hasNext()) {
+                                CASEW3 = ite2.next();
+                                HashMap<Short, WaAS_Wave4_Record> w4_3;
+                                w4_3 = w4_2.get(CASEW3);
+                                Iterator<Short> ite3;
+                                ite3 = w4_3.keySet().iterator();
+                                while (ite3.hasNext()) {
+                                    CASEW4 = ite3.next();
+                                    int HPRICEBW4 = w4_3.get(CASEW4).getHhold().getHPRICEB();
+                                    if (HPRICEBW4 != Integer.MIN_VALUE) {
+                                        HPRICEB += HPRICEBW4;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    return HPRICEB;
+                }).sum();
+                data.clearCollection(cID);
+                return cHPRICEB;  // Total value of UK Land in c.
+            }).sum();
+        } else if (wave == W5) {
+//        Value label information for HPriceBW5
+//	Value = 1.0	Label = Less than £60,000
+//	Value = 2.0	Label = £60,000 to £99,999
+//	Value = 3.0	Label = £100,000 to £149,999
+//	Value = 4.0	Label = £150,000 to £199,999
+//	Value = 5.0	Label = £200,000 to £249,999
+//	Value = 6.0	Label = £250,000 to £299,999
+//	Value = 7.0	Label = £300,000 to £349,999
+//	Value = 8.0	Label = £350,000 to £399,999
+//	Value = 9.0	Label = £400,000 to £499,999
+//	Value = 10.0	Label = £500,000 to £749,999
+//	Value = 11.0	Label = £750,000 to £999,999
+//	Value = 12.0	Label = £1 million or more
+//	Value = -9.0	Label = Does not know
+//	Value = -8.0	Label = No answer
+//	Value = -7.0	Label = Does not apply
+//	Value = -6.0	Label = Error/Partial
+            tHPRICEB = data.data.keySet().stream().mapToLong(cID -> {
+                WaAS_Collection c;
+                c = data.getCollection(cID);
+                long cHPRICEB = c.getData().keySet().stream().mapToLong(CASEW1 -> {
+                    int HPRICEB = 0;
+                    if (subset.contains(CASEW1)) {
+                        WaAS_Combined_Record cr;
+                        cr = c.getData().get(CASEW1);
+                        HashMap<Short, HashMap<Short, HashMap<Short, HashMap<Short, WaAS_Wave5_Record>>>> w5Records;
+                        w5Records = cr.w5Records;
+                        Short CASEW2;
+                        Short CASEW3;
+                        Short CASEW4;
+                        Short CASEW5;
+                        Iterator<Short> ite;
+                        ite = w5Records.keySet().iterator();
+                        while (ite.hasNext()) {
+                            CASEW2 = ite.next();
+                            HashMap<Short, HashMap<Short, HashMap<Short, WaAS_Wave5_Record>>> w5_2;
+                            w5_2 = w5Records.get(CASEW2);
+                            Iterator<Short> ite2;
+                            ite2 = w5_2.keySet().iterator();
+                            while (ite2.hasNext()) {
+                                CASEW3 = ite2.next();
+                                HashMap<Short, HashMap<Short, WaAS_Wave5_Record>> w5_3;
+                                w5_3 = w5_2.get(CASEW3);
+                                Iterator<Short> ite3;
+                                ite3 = w5_3.keySet().iterator();
+                                while (ite3.hasNext()) {
+                                    CASEW4 = ite3.next();
+                                    HashMap<Short, WaAS_Wave5_Record> w5_4;
+                                    w5_4 = w5_3.get(CASEW4);
+                                    Iterator<Short> ite4;
+                                    ite4 = w5_4.keySet().iterator();
+                                    while (ite4.hasNext()) {
+                                        CASEW5 = ite4.next();
+                                        int HPRICEBW5 = w5_4.get(CASEW5).getHhold().getHPRICEB();
+                                        if (HPRICEBW5 != Integer.MIN_VALUE) {
+                                            HPRICEB += HPRICEBW5;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    return HPRICEB;
+                }).sum();
+                data.clearCollection(cID);
+                return cHPRICEB;  // Total value of UK Land in c.
+            }).sum();
+        } else {
+            tHPRICEB = 0;
+        }
+        log("Total (Hhold aggregate) HPRICEB Wave " + wave + " " + tHPRICEB);
+        return tHPRICEB;
     }
 
     public static void log0(String s) {
