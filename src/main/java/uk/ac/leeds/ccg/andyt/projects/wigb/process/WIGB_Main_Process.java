@@ -18,6 +18,8 @@ package uk.ac.leeds.ccg.andyt.projects.wigb.process;
 import java.io.File;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.DoubleSummaryStatistics;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.IntSummaryStatistics;
@@ -137,19 +139,11 @@ public class WIGB_Main_Process extends WIGB_Object {
         byte W4 = WaAS_Data.W4;
         byte W5 = WaAS_Data.W5;
 
-        // Value label information for GOR
-//	Value = 1.0	Label = North East
-//	Value = 2.0	Label = North West
-//	Value = 3.0	Label = The Wirral
-//	Value = 4.0	Label = Yorkshire & Humber
-//	Value = 5.0	Label = East Midlands
-//	Value = 6.0	Label = West Midlands
-//	Value = 7.0	Label = East of England
-//	Value = 8.0	Label = London
-//	Value = 9.0	Label = South East
-//	Value = 10.0	Label = South West
-//	Value = 11.0	Label = Wales
-//	Value = 12.0	Label = Scotland
+        byte NGORS = 13; // Move to WaAS_Data
+
+        TreeMap<Byte, String> GORNameLookup;
+        GORNameLookup = getGORNameLookup();
+        
 //	Value = -9.0	Label = Don't know
 //	Value = -8.0	Label = Refused
 //	Value = -7.0	Label = Does not apply
@@ -171,21 +165,41 @@ public class WIGB_Main_Process extends WIGB_Object {
         for (byte w = 0; w < WaAS_Data.NWAVES; w++) {
             log("Wave " + (w + 1));
             totals[w] = 0;
-            for (byte b = 1; b < 13; b++) {
+            for (byte b = 1; b < NGORS; b++) {
                 HashSet<Short> GORSubset;
                 GORSubset = GORSubsets[w].get(b);
                 totals[w] += GORSubset.size();
-                log("GOR " + b + " size " + GORSubset.size());
+                log("N=" + GORSubset.size() + " for GOR " + b + " " + GORNameLookup.get(b));
             }
-            log("Total all GORs " + totals[w]);
+            log("N=" + totals[w] + " for all GORs" );
         }
 
 //        // HPROPW Total Household Property Wealth.
+        HashMap<Byte, HashMap<Short, Double>> HPROPW1 = getHPROPW(subset, GORSubsets, GORLookups, W1);
+        HashMap<Byte, HashMap<Short, Double>> HPROPW2 = getHPROPW(subset, GORSubsets, GORLookups, W2);
+        HashMap<Byte, HashMap<Short, Double>> HPROPW3 = getHPROPW(subset, GORSubsets, GORLookups, W3);
+        HashMap<Byte, HashMap<Short, Double>> HPROPW4 = getHPROPW(subset, GORSubsets, GORLookups, W4);
+        HashMap<Byte, HashMap<Short, Double>> HPROPW5 = getHPROPW(subset, GORSubsets, GORLookups, W5);
 //        double HPROPW1 = getHPROPW(subset, W1);
 //        double HPROPW2 = getHPROPW(subset, W2);
 //        double HPROPW3 = getHPROPW(subset, W3);
 //        double HPROPW4 = getHPROPW(subset, W4);
 //        double HPROPW5 = getHPROPW(subset, W5);
+
+for (byte gor = 1; gor < NGORS; gor++) {
+            log("GOR " + gor + " " + GORNameLookup.get(gor));
+            log("HPROPW1 SummaryStatistics");
+            logSummaryStatistics(HPROPW1.get(gor).values());
+            log("HPROPW2 SummaryStatistics");
+            logSummaryStatistics(HPROPW2.get(gor).values());
+            log("HPROPW3 SummaryStatistics");
+            logSummaryStatistics(HPROPW3.get(gor).values());
+            log("HPROPW4 SummaryStatistics");
+            logSummaryStatistics(HPROPW4.get(gor).values());
+            log("HPROPW5 SummaryStatistics");
+            logSummaryStatistics(HPROPW5.get(gor).values());
+        }
+
 //        Value label information for HPROPWW3
 //	Value = -9.0	Label = Does not know
 //	Value = -8.0	Label = Refusal
@@ -229,17 +243,16 @@ public class WIGB_Main_Process extends WIGB_Object {
         for (byte w = 0; w < WaAS_Data.NWAVES; w++) {
             log("Wave " + (w + 1));
             totals[w] = 0;
-            for (byte b = 1; b < 13; b++) {
+            for (byte b = 1; b < NGORS; b++) {
                 HashSet<Short> GORSubset;
                 GORSubset = GORSubsets[w].get(b);
                 totals[w] += GORSubset.size();
-                log("GOR " + b + " size " + GORSubset.size());
+                log("N=" + GORSubset.size() + " for GOR " + b + " " + GORNameLookup.get(b));
             }
-            Generic_IO.writeObject(GORSubsets, GORSubsetsAndLookupF);
-            log("Total all GORs " + totals[w]);
+            log("N=" + totals[w] + " for all GORs" );
         }
-        for (byte gor = 1; gor < 14; gor++) {
-            log("GOR " + gor);
+        for (byte gor = 1; gor < NGORS; gor++) {
+            log("GOR " + gor + " " + GORNameLookup.get(gor));
             log("HPRICEW1 SummaryStatistics");
             logSummaryStatistics(HPRICEW1.get(gor));
             log("HPRICEW2 SummaryStatistics");
@@ -285,8 +298,21 @@ public class WIGB_Main_Process extends WIGB_Object {
 
     protected void logSummaryStatistics(HashMap<?, Integer> m) {
         IntSummaryStatistics stats = m.values().stream().
-                collect(IntSummaryStatistics::new, IntSummaryStatistics::accept,
+                collect(IntSummaryStatistics::new,
+                        IntSummaryStatistics::accept,
                         IntSummaryStatistics::combine);
+        log("Max " + stats.getMax());
+        log("Min " + stats.getMin());
+        log("Count " + stats.getCount());
+        log("Sum " + stats.getSum());
+        log("Average " + stats.getAverage());
+    }
+
+    protected void logSummaryStatistics(Collection<Double> c) {
+        DoubleSummaryStatistics stats = c.stream().
+                collect(DoubleSummaryStatistics::new,
+                        DoubleSummaryStatistics::accept,
+                        DoubleSummaryStatistics::combine);
         log("Max " + stats.getMax());
         log("Min " + stats.getMin());
         log("Count " + stats.getCount());
@@ -1189,74 +1215,77 @@ public class WIGB_Main_Process extends WIGB_Object {
      * Get the total HPROPW in subset.
      *
      * @param subset
+     * @param GORSubsets
+     * @param GORLookups
      * @param wave
-     * @return
+     * @return Map with keys as GOR and Values as map with keys as CASEWX and
+     * values as HPROPW.
      */
-    public double getHPROPW(HashSet<Short> subset, byte wave) {
-//	Value label information for HPROPW
-//	Value = -9.0	Label = Do not know
-//	Value = -8.0	Label = Refusal
-//	Value = -7.0	Label = Not applicable
-//	Value = -6.0	Label = Error_partial
+    public HashMap<Byte, HashMap<Short, Double>> getHPROPW(
+            HashSet<Short> subset,
+            HashMap<Byte, HashSet<Short>>[] GORSubsets,
+            HashMap<Short, Byte>[] GORLookups, byte wave) {
+        // Initialise result
+        HashMap<Byte, HashMap<Short, Double>> r;
+        r = new HashMap<>();
+        Iterator<Byte> ite;
+        ite = GORSubsets[wave - 1].keySet().iterator();
+        while (ite.hasNext()) {
+            Byte GOR;
+            GOR = ite.next();
+            r.put(GOR, new HashMap<>());
+        }
         // For brevity/convenience.
         byte W1 = WaAS_Data.W1;
         byte W2 = WaAS_Data.W2;
         byte W3 = WaAS_Data.W3;
         byte W4 = WaAS_Data.W4;
         byte W5 = WaAS_Data.W5;
-        double tHPROPW;
         if (wave == W1) {
-            tHPROPW = data.data.keySet().stream().mapToDouble(cID -> {
+            data.data.keySet().stream().forEach(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
-                double cHPROPW = c.getData().keySet().stream().mapToDouble(CASEW1 -> {
-                    double HPROPW = 0;
+                c.getData().keySet().stream().forEach(CASEW1 -> {
                     if (subset.contains(CASEW1)) {
                         WaAS_Combined_Record cr;
                         cr = c.getData().get(CASEW1);
-                        HPROPW = cr.w1Record.getHhold().getHPROPW();
-                        if (HPROPW < 0) {
-                            HPROPW = 0;
-                        }
+                        WaAS_Wave1_HHOLD_Record w1;
+                        w1 = cr.w1Record.getHhold();
+                        Byte GOR = GORLookups[wave - 1].get(CASEW1);
+                        Generic_Collections.addToMap(r, GOR, CASEW1, w1.getHPROPW());
                     }
-                    return HPROPW;
-                }).sum();
+                });
                 data.clearCollection(cID);
-                return cHPROPW;
-            }).sum();
+            });
         } else if (wave == W2) {
-            tHPROPW = data.data.keySet().stream().mapToDouble(cID -> {
+            data.data.keySet().stream().forEach(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
-                double cHPROPW = c.getData().keySet().stream().mapToDouble(CASEW1 -> {
-                    double HPROPW = 0;
+                c.getData().keySet().stream().forEach(CASEW1 -> {
                     if (subset.contains(CASEW1)) {
                         WaAS_Combined_Record cr;
                         cr = c.getData().get(CASEW1);
                         HashMap<Short, WaAS_Wave2_Record> w2Records;
                         w2Records = cr.w2Records;
                         Short CASEW2;
-                        Iterator<Short> ite;
-                        ite = w2Records.keySet().iterator();
-                        while (ite.hasNext()) {
-                            CASEW2 = ite.next();
-                            double HPROPWW2 = w2Records.get(CASEW2).getHhold().getHPROPW();
-                            if (HPROPWW2 > 0) {
-                                HPROPW += HPROPWW2;
-                            }
+                        Iterator<Short> ite2;
+                        ite2 = w2Records.keySet().iterator();
+                        while (ite2.hasNext()) {
+                            CASEW2 = ite2.next();
+                            Byte GOR = GORLookups[wave - 1].get(CASEW2);
+                            WaAS_Wave2_HHOLD_Record w2;
+                            w2 = w2Records.get(CASEW2).getHhold();
+                            Generic_Collections.addToMap(r, GOR, CASEW2, w2.getHPROPW());
                         }
                     }
-                    return HPROPW;
-                }).sum();
+                });
                 data.clearCollection(cID);
-                return cHPROPW;
-            }).sum();
+            });
         } else if (wave == W3) {
-            tHPROPW = data.data.keySet().stream().mapToDouble(cID -> {
+            data.data.keySet().stream().forEach(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
-                double cHPROPW = c.getData().keySet().stream().mapToDouble(CASEW1 -> {
-                    double HPROPW = 0;
+                c.getData().keySet().stream().forEach(CASEW1 -> {
                     if (subset.contains(CASEW1)) {
                         WaAS_Combined_Record cr;
                         cr = c.getData().get(CASEW1);
@@ -1264,34 +1293,31 @@ public class WIGB_Main_Process extends WIGB_Object {
                         w3Records = cr.w3Records;
                         Short CASEW2;
                         Short CASEW3;
-                        Iterator<Short> ite;
-                        ite = w3Records.keySet().iterator();
-                        while (ite.hasNext()) {
-                            CASEW2 = ite.next();
+                        Iterator<Short> ite1;
+                        ite1 = w3Records.keySet().iterator();
+                        while (ite1.hasNext()) {
+                            CASEW2 = ite1.next();
                             HashMap<Short, WaAS_Wave3_Record> w3_2;
                             w3_2 = w3Records.get(CASEW2);
                             Iterator<Short> ite2;
                             ite2 = w3_2.keySet().iterator();
                             while (ite2.hasNext()) {
                                 CASEW3 = ite2.next();
-                                double HPROPWW3 = w3_2.get(CASEW3).getHhold().getHPROPW();
-                                if (HPROPWW3 > 0) {
-                                    HPROPW += HPROPWW3;
-                                }
+                                Byte GOR = GORLookups[wave - 1].get(CASEW3);
+                                WaAS_Wave3_HHOLD_Record w3;
+                                w3 = w3_2.get(CASEW3).getHhold();
+                                Generic_Collections.addToMap(r, GOR, CASEW3, w3.getHPROPW());
                             }
                         }
                     }
-                    return HPROPW;
-                }).sum();
+                });
                 data.clearCollection(cID);
-                return cHPROPW;
-            }).sum();
+            });
         } else if (wave == W4) {
-            tHPROPW = data.data.keySet().stream().mapToDouble(cID -> {
+            data.data.keySet().stream().forEach(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
-                double cHPROPW = c.getData().keySet().stream().mapToDouble(CASEW1 -> {
-                    double HPROPW = 0;
+                c.getData().keySet().stream().forEach(CASEW1 -> {
                     if (subset.contains(CASEW1)) {
                         WaAS_Combined_Record cr;
                         cr = c.getData().get(CASEW1);
@@ -1300,10 +1326,10 @@ public class WIGB_Main_Process extends WIGB_Object {
                         Short CASEW2;
                         Short CASEW3;
                         Short CASEW4;
-                        Iterator<Short> ite;
-                        ite = w4Records.keySet().iterator();
-                        while (ite.hasNext()) {
-                            CASEW2 = ite.next();
+                        Iterator<Short> ite1;
+                        ite1 = w4Records.keySet().iterator();
+                        while (ite1.hasNext()) {
+                            CASEW2 = ite1.next();
                             HashMap<Short, HashMap<Short, WaAS_Wave4_Record>> w4_2;
                             w4_2 = w4Records.get(CASEW2);
                             Iterator<Short> ite2;
@@ -1316,25 +1342,22 @@ public class WIGB_Main_Process extends WIGB_Object {
                                 ite3 = w4_3.keySet().iterator();
                                 while (ite3.hasNext()) {
                                     CASEW4 = ite3.next();
-                                    double HPROPWW4 = w4_3.get(CASEW4).getHhold().getHPROPW();
-                                    if (HPROPWW4 > 0) {
-                                        HPROPW += HPROPWW4;
-                                    }
+                                    Byte GOR = GORLookups[wave - 1].get(CASEW4);
+                                    WaAS_Wave4_HHOLD_Record w4;
+                                    w4 = w4_3.get(CASEW4).getHhold();
+                                    Generic_Collections.addToMap(r, GOR, CASEW4, w4.getHPROPW());
                                 }
                             }
                         }
                     }
-                    return HPROPW;
-                }).sum();
+                });
                 data.clearCollection(cID);
-                return cHPROPW;
-            }).sum();
+            });
         } else if (wave == W5) {
-            tHPROPW = data.data.keySet().stream().mapToDouble(cID -> {
+            data.data.keySet().stream().forEach(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
-                double cHPROPW = c.getData().keySet().stream().mapToDouble(CASEW1 -> {
-                    double HPROPW = 0;
+                c.getData().keySet().stream().forEach(CASEW1 -> {
                     if (subset.contains(CASEW1)) {
                         WaAS_Combined_Record cr;
                         cr = c.getData().get(CASEW1);
@@ -1344,10 +1367,10 @@ public class WIGB_Main_Process extends WIGB_Object {
                         Short CASEW3;
                         Short CASEW4;
                         Short CASEW5;
-                        Iterator<Short> ite;
-                        ite = w5Records.keySet().iterator();
-                        while (ite.hasNext()) {
-                            CASEW2 = ite.next();
+                        Iterator<Short> ite1;
+                        ite1 = w5Records.keySet().iterator();
+                        while (ite1.hasNext()) {
+                            CASEW2 = ite1.next();
                             HashMap<Short, HashMap<Short, HashMap<Short, WaAS_Wave5_Record>>> w5_2;
                             w5_2 = w5Records.get(CASEW2);
                             Iterator<Short> ite2;
@@ -1366,26 +1389,217 @@ public class WIGB_Main_Process extends WIGB_Object {
                                     ite4 = w5_4.keySet().iterator();
                                     while (ite4.hasNext()) {
                                         CASEW5 = ite4.next();
-                                        double HPROPWW5 = w5_4.get(CASEW5).getHhold().getHPROPW();
-                                        if (HPROPWW5 > 0) {
-                                            HPROPW += HPROPWW5;
-                                        }
+                                        Byte GOR = GORLookups[wave - 1].get(CASEW5);
+                                        WaAS_Wave5_HHOLD_Record w5;
+                                        w5 = w5_4.get(CASEW5).getHhold();
+                                        Generic_Collections.addToMap(r, GOR, CASEW5, w5.getHPROPW());
                                     }
                                 }
                             }
                         }
                     }
-                    return HPROPW;
-                }).sum();
+                });
                 data.clearCollection(cID);
-                return cHPROPW;
-            }).sum();
-        } else {
-            tHPROPW = 0;
+            });
         }
-        log("Total (Hhold aggregate) HPROPW in Wave " + wave + " " + tHPROPW);
-        return tHPROPW;
+        return r;
     }
+//    /**
+//     * Get the total HPROPW in subset.
+//     *
+//     * @param subset
+//     * @param wave
+//     * @return
+//     */
+//    public double getHPROPW(HashSet<Short> subset, byte wave) {
+//        // For brevity/convenience.
+//        byte W1 = WaAS_Data.W1;
+//        byte W2 = WaAS_Data.W2;
+//        byte W3 = WaAS_Data.W3;
+//        byte W4 = WaAS_Data.W4;
+//        byte W5 = WaAS_Data.W5;
+//        double tHPROPW;
+//        if (wave == W1) {
+//            tHPROPW = data.data.keySet().stream().mapToDouble(cID -> {
+//                WaAS_Collection c;
+//                c = data.getCollection(cID);
+//                double cHPROPW = c.getData().keySet().stream().mapToDouble(CASEW1 -> {
+//                    double HPROPW = 0;
+//                    if (subset.contains(CASEW1)) {
+//                        WaAS_Combined_Record cr;
+//                        cr = c.getData().get(CASEW1);
+//                        HPROPW = cr.w1Record.getHhold().getHPROPW();
+//                        if (HPROPW < 0) {
+//                            HPROPW = 0;
+//                        }
+//                    }
+//                    return HPROPW;
+//                }).sum();
+//                data.clearCollection(cID);
+//                return cHPROPW;
+//            }).sum();
+//        } else if (wave == W2) {
+//            tHPROPW = data.data.keySet().stream().mapToDouble(cID -> {
+//                WaAS_Collection c;
+//                c = data.getCollection(cID);
+//                double cHPROPW = c.getData().keySet().stream().mapToDouble(CASEW1 -> {
+//                    double HPROPW = 0;
+//                    if (subset.contains(CASEW1)) {
+//                        WaAS_Combined_Record cr;
+//                        cr = c.getData().get(CASEW1);
+//                        HashMap<Short, WaAS_Wave2_Record> w2Records;
+//                        w2Records = cr.w2Records;
+//                        Short CASEW2;
+//                        Iterator<Short> ite;
+//                        ite = w2Records.keySet().iterator();
+//                        while (ite.hasNext()) {
+//                            CASEW2 = ite.next();
+//                            double HPROPWW2 = w2Records.get(CASEW2).getHhold().getHPROPW();
+//                            if (HPROPWW2 > 0) {
+//                                HPROPW += HPROPWW2;
+//                            }
+//                        }
+//                    }
+//                    return HPROPW;
+//                }).sum();
+//                data.clearCollection(cID);
+//                return cHPROPW;
+//            }).sum();
+//        } else if (wave == W3) {
+//            tHPROPW = data.data.keySet().stream().mapToDouble(cID -> {
+//                WaAS_Collection c;
+//                c = data.getCollection(cID);
+//                double cHPROPW = c.getData().keySet().stream().mapToDouble(CASEW1 -> {
+//                    double HPROPW = 0;
+//                    if (subset.contains(CASEW1)) {
+//                        WaAS_Combined_Record cr;
+//                        cr = c.getData().get(CASEW1);
+//                        HashMap<Short, HashMap<Short, WaAS_Wave3_Record>> w3Records;
+//                        w3Records = cr.w3Records;
+//                        Short CASEW2;
+//                        Short CASEW3;
+//                        Iterator<Short> ite;
+//                        ite = w3Records.keySet().iterator();
+//                        while (ite.hasNext()) {
+//                            CASEW2 = ite.next();
+//                            HashMap<Short, WaAS_Wave3_Record> w3_2;
+//                            w3_2 = w3Records.get(CASEW2);
+//                            Iterator<Short> ite2;
+//                            ite2 = w3_2.keySet().iterator();
+//                            while (ite2.hasNext()) {
+//                                CASEW3 = ite2.next();
+//                                double HPROPWW3 = w3_2.get(CASEW3).getHhold().getHPROPW();
+//                                if (HPROPWW3 > 0) {
+//                                    HPROPW += HPROPWW3;
+//                                }
+//                            }
+//                        }
+//                    }
+//                    return HPROPW;
+//                }).sum();
+//                data.clearCollection(cID);
+//                return cHPROPW;
+//            }).sum();
+//        } else if (wave == W4) {
+//            tHPROPW = data.data.keySet().stream().mapToDouble(cID -> {
+//                WaAS_Collection c;
+//                c = data.getCollection(cID);
+//                double cHPROPW = c.getData().keySet().stream().mapToDouble(CASEW1 -> {
+//                    double HPROPW = 0;
+//                    if (subset.contains(CASEW1)) {
+//                        WaAS_Combined_Record cr;
+//                        cr = c.getData().get(CASEW1);
+//                        HashMap<Short, HashMap<Short, HashMap<Short, WaAS_Wave4_Record>>> w4Records;
+//                        w4Records = cr.w4Records;
+//                        Short CASEW2;
+//                        Short CASEW3;
+//                        Short CASEW4;
+//                        Iterator<Short> ite;
+//                        ite = w4Records.keySet().iterator();
+//                        while (ite.hasNext()) {
+//                            CASEW2 = ite.next();
+//                            HashMap<Short, HashMap<Short, WaAS_Wave4_Record>> w4_2;
+//                            w4_2 = w4Records.get(CASEW2);
+//                            Iterator<Short> ite2;
+//                            ite2 = w4_2.keySet().iterator();
+//                            while (ite2.hasNext()) {
+//                                CASEW3 = ite2.next();
+//                                HashMap<Short, WaAS_Wave4_Record> w4_3;
+//                                w4_3 = w4_2.get(CASEW3);
+//                                Iterator<Short> ite3;
+//                                ite3 = w4_3.keySet().iterator();
+//                                while (ite3.hasNext()) {
+//                                    CASEW4 = ite3.next();
+//                                    double HPROPWW4 = w4_3.get(CASEW4).getHhold().getHPROPW();
+//                                    if (HPROPWW4 > 0) {
+//                                        HPROPW += HPROPWW4;
+//                                    }
+//                                }
+//                            }
+//                        }
+//                    }
+//                    return HPROPW;
+//                }).sum();
+//                data.clearCollection(cID);
+//                return cHPROPW;
+//            }).sum();
+//        } else if (wave == W5) {
+//            tHPROPW = data.data.keySet().stream().mapToDouble(cID -> {
+//                WaAS_Collection c;
+//                c = data.getCollection(cID);
+//                double cHPROPW = c.getData().keySet().stream().mapToDouble(CASEW1 -> {
+//                    double HPROPW = 0;
+//                    if (subset.contains(CASEW1)) {
+//                        WaAS_Combined_Record cr;
+//                        cr = c.getData().get(CASEW1);
+//                        HashMap<Short, HashMap<Short, HashMap<Short, HashMap<Short, WaAS_Wave5_Record>>>> w5Records;
+//                        w5Records = cr.w5Records;
+//                        Short CASEW2;
+//                        Short CASEW3;
+//                        Short CASEW4;
+//                        Short CASEW5;
+//                        Iterator<Short> ite;
+//                        ite = w5Records.keySet().iterator();
+//                        while (ite.hasNext()) {
+//                            CASEW2 = ite.next();
+//                            HashMap<Short, HashMap<Short, HashMap<Short, WaAS_Wave5_Record>>> w5_2;
+//                            w5_2 = w5Records.get(CASEW2);
+//                            Iterator<Short> ite2;
+//                            ite2 = w5_2.keySet().iterator();
+//                            while (ite2.hasNext()) {
+//                                CASEW3 = ite2.next();
+//                                HashMap<Short, HashMap<Short, WaAS_Wave5_Record>> w5_3;
+//                                w5_3 = w5_2.get(CASEW3);
+//                                Iterator<Short> ite3;
+//                                ite3 = w5_3.keySet().iterator();
+//                                while (ite3.hasNext()) {
+//                                    CASEW4 = ite3.next();
+//                                    HashMap<Short, WaAS_Wave5_Record> w5_4;
+//                                    w5_4 = w5_3.get(CASEW4);
+//                                    Iterator<Short> ite4;
+//                                    ite4 = w5_4.keySet().iterator();
+//                                    while (ite4.hasNext()) {
+//                                        CASEW5 = ite4.next();
+//                                        double HPROPWW5 = w5_4.get(CASEW5).getHhold().getHPROPW();
+//                                        if (HPROPWW5 > 0) {
+//                                            HPROPW += HPROPWW5;
+//                                        }
+//                                    }
+//                                }
+//                            }
+//                        }
+//                    }
+//                    return HPROPW;
+//                }).sum();
+//                data.clearCollection(cID);
+//                return cHPROPW;
+//            }).sum();
+//        } else {
+//            tHPROPW = 0;
+//        }
+//        log("Total (Hhold aggregate) HPROPW in Wave " + wave + " " + tHPROPW);
+//        return tHPROPW;
+//    }
 
     /**
      * Get FINCVB.
@@ -1855,17 +2069,23 @@ public class WIGB_Main_Process extends WIGB_Object {
 
     HashMap<Byte, Integer> Wave1Or2HPRICEBLookup;
 
+    /**
+     * <ul>
+     * <li>Value = 1.0	Label = Less than £20,000</li>
+     * <li>Value = 2.0	Label = £20,000 to £39,999</li>
+     * <li>Value = 3.0	Label = £40,000 to £59,999</li>
+     * <li>Value = 4.0	Label = £60,000 to £99,999</li>
+     * <li>Value = 5.0	Label = £100,000 to £149,999</li>
+     * <li>Value = 6.0	Label = £150,000 to £199,999</li>
+     * <li>Value = 7.0	Label = £200,000 to £249,999</li>
+     * <li>Value = 8.0	Label = £250,000 to £299,999</li>
+     * <li>Value = 9.0	Label = £300,000 to £499,999</li>
+     * <li>Value = 10.0	Label = £500,000 or more</li>
+     * </ul>
+     *
+     * @return
+     */
     public HashMap<Byte, Integer> getWave1Or2HPRICEBLookup() {
-//            Value = 1.0	Label = Less than £20,000
-//            Value = 2.0	Label = £20,000 to £39,999
-//            Value = 3.0	Label = £40,000 to £59,999
-//            Value = 4.0	Label = £60,000 to £99,999
-//            Value = 5.0	Label = £100,000 to £149,999
-//            Value = 6.0	Label = £150,000 to £199,999
-//            Value = 7.0	Label = £200,000 to £249,999
-//            Value = 8.0	Label = £250,000 to £299,999
-//            Value = 9.0	Label = £300,000 to £499,999
-//            Value = 10.0	Label = £500,000 or more
         if (Wave1Or2HPRICEBLookup == null) {
             Wave1Or2HPRICEBLookup = new HashMap<>();
             Wave1Or2HPRICEBLookup.put((byte) 1, 10000);
@@ -1884,23 +2104,30 @@ public class WIGB_Main_Process extends WIGB_Object {
 
     HashMap<Byte, Integer> Wave3Or4Or5HPRICEBLookup;
 
+    /**
+     * <ul>
+     * <li>Value = 1.0	Label = Less than £60,000</li>
+     * <li>Value = 2.0	Label = £60,000 to £99,999</li>
+     * <li>Value = 3.0	Label = £100,000 to £149,999</li>
+     * <li>Value = 4.0	Label = £150,000 to £199,999</li>
+     * <li>Value = 5.0	Label = £200,000 to £249,999</li>
+     * <li>Value = 6.0	Label = £250,000 to £299,999</li>
+     * <li>Value = 7.0	Label = £300,000 to £349,999</li>
+     * <li>Value = 8.0	Label = £350,000 to £399,999</li>
+     * <li>Value = 9.0	Label = £400,000 to £499,999</li>
+     * <li>Value = 10.0	Label = £500,000 to £749,999</li>
+     * <li>Value = 11.0	Label = £750,000 to £999,999</li>
+     * <li>Value = 12.0	Label = £1 million or more</li>
+     * <li>Value = -9.0	Label = Does not know</li>
+     * <li>Value = -8.0	Label = No answer</li>
+     * <li>Value = -7.0	Label = Does not apply</li>
+     * <li>Value = -6.0	Label = Error/Partial</li>
+     * </ul>
+     *
+     * @return
+     */
     public HashMap<Byte, Integer> getWave3Or4Or5HPRICEBLookup() {
-//	Value = 1.0	Label = Less than £60,000
-//	Value = 2.0	Label = £60,000 to £99,999
-//	Value = 3.0	Label = £100,000 to £149,999
-//	Value = 4.0	Label = £150,000 to £199,999
-//	Value = 5.0	Label = £200,000 to £249,999
-//	Value = 6.0	Label = £250,000 to £299,999
-//	Value = 7.0	Label = £300,000 to £349,999
-//	Value = 8.0	Label = £350,000 to £399,999
-//	Value = 9.0	Label = £400,000 to £499,999
-//	Value = 10.0	Label = £500,000 to £749,999
-//	Value = 11.0	Label = £750,000 to £999,999
-//	Value = 12.0	Label = £1 million or more
-//	Value = -9.0	Label = Does not know
-//	Value = -8.0	Label = No answer
-//	Value = -7.0	Label = Does not apply
-//	Value = -6.0	Label = Error/Partial
+
         if (Wave3Or4Or5HPRICEBLookup == null) {
             Wave3Or4Or5HPRICEBLookup = new HashMap<>();
             Wave3Or4Or5HPRICEBLookup.put((byte) 1, 30000);
@@ -1917,6 +2144,29 @@ public class WIGB_Main_Process extends WIGB_Object {
             Wave3Or4Or5HPRICEBLookup.put((byte) 12, 1500000);
         }
         return Wave3Or4Or5HPRICEBLookup;
+    }
+
+    /**
+     * Value label information for Government Office Regions
+     *
+     * @return
+     */
+    public TreeMap<Byte, String> getGORNameLookup() {
+        TreeMap<Byte, String> r;
+        r = new TreeMap<>();
+        r.put((byte) 1, "North East");
+        r.put((byte) 2, "North West");
+        r.put((byte) 3, "The Wirral");
+        r.put((byte) 4, "Yorkshire & Humber");
+        r.put((byte) 5, "East Midlands");
+        r.put((byte) 6, "West Midlands");
+        r.put((byte) 7, "East of England");
+        r.put((byte) 8, "London");
+        r.put((byte) 9, "South East");
+        r.put((byte) 10, "South West");
+        r.put((byte) 11, "Wales");
+        r.put((byte) 12, "Scotland");
+        return r;
     }
 
     /**
