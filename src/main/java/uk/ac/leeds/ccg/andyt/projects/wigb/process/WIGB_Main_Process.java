@@ -163,6 +163,7 @@ public class WIGB_Main_Process extends WIGB_Object {
             GORSubsetsAndLookups = (Object[]) Generic_IO.readObject(GORSubsetsAndLookupF);
         } else {
             GORSubsetsAndLookups = getGORSubsetsAndLookup(subset);
+            Generic_IO.writeObject(GORSubsetsAndLookups, GORSubsetsAndLookupF);
         }
         GORSubsets = (HashMap<Byte, HashSet<Short>>[]) GORSubsetsAndLookups[0];
         GORLookups = (HashMap<Short, Byte>[]) GORSubsetsAndLookups[1];
@@ -176,22 +177,20 @@ public class WIGB_Main_Process extends WIGB_Object {
                 totals[w] += GORSubset.size();
                 log("GOR " + b + " size " + GORSubset.size());
             }
-            Generic_IO.writeObject(GORSubsets, GORSubsetsAndLookupF);
             log("Total all GORs " + totals[w]);
         }
 
-        // HPROPW Total Household Property Wealth.
-        double HPROPW1 = getHPROPW(subset, W1);
-        double HPROPW2 = getHPROPW(subset, W2);
-        double HPROPW3 = getHPROPW(subset, W3);
-        double HPROPW4 = getHPROPW(subset, W4);
-        double HPROPW5 = getHPROPW(subset, W5);
+//        // HPROPW Total Household Property Wealth.
+//        double HPROPW1 = getHPROPW(subset, W1);
+//        double HPROPW2 = getHPROPW(subset, W2);
+//        double HPROPW3 = getHPROPW(subset, W3);
+//        double HPROPW4 = getHPROPW(subset, W4);
+//        double HPROPW5 = getHPROPW(subset, W5);
 //        Value label information for HPROPWW3
 //	Value = -9.0	Label = Does not know
 //	Value = -8.0	Label = Refusal
 //	Value = -7.0	Label = Not applicable
 //	Value = -6.0	Label = Error / partial
-
         // DVTotGIRW5	Variable label = Household Gross Annual (regular) income  - (rounded to 3 significant figures)
         //getTenures(subset, W1);        
 //      Value label information for Ten1W1W2W3W4W5
@@ -205,38 +204,27 @@ public class WIGB_Main_Process extends WIGB_Object {
 //	Value = -8.0	Label = Refused
 //	Value = -7.0	Label = Does not apply
 //	Value = -6.0	Label = Error partial
-        long DVLUKVAL1 = getDVLUKVAL(subset, W1);
-        long DVLUKVAL2 = getDVLUKVAL(subset, W2);
-        long DVLUKVAL3 = getDVLUKVAL(subset, W3);
-        long DVLUKVAL4 = getDVLUKVAL(subset, W4);
-        long DVLUKVAL5 = getDVLUKVAL(subset, W5);
-
-        long FINCVB1 = getFINCVB(subset, W1);
-        long FINCVB2 = getFINCVB(subset, W2);
-        long FINCVB3 = getFINCVB(subset, W3);
-        long FINCVB4 = getFINCVB(subset, W4);
-        long FINCVB5 = getFINCVB(subset, W5);
-
+//        long DVLUKVAL1 = getDVLUKVAL(subset, W1);
+//        long DVLUKVAL2 = getDVLUKVAL(subset, W2);
+//        long DVLUKVAL3 = getDVLUKVAL(subset, W3);
+//        long DVLUKVAL4 = getDVLUKVAL(subset, W4);
+//        long DVLUKVAL5 = getDVLUKVAL(subset, W5);
+//
+//        long FINCVB1 = getFINCVB(subset, W1);
+//        long FINCVB2 = getFINCVB(subset, W2);
+//        long FINCVB3 = getFINCVB(subset, W3);
+//        long FINCVB4 = getFINCVB(subset, W4);
+//        long FINCVB5 = getFINCVB(subset, W5);
         getWave1Or2HPRICEBLookup();
         getWave3Or4Or5HPRICEBLookup();
 
         // Map with keys as GOR and Values as map with keys as CASEWX and 
         // values as Houseprices.  
         HashMap<Byte, HashMap<Short, Integer>> HPRICEW1 = getHPRICE(subset, GORSubsets, GORLookups, W1);
-        log("HPRICEW1 SummaryStatistics");
-        logSummaryStatistics(HPRICEW1.get(W1));
         HashMap<Byte, HashMap<Short, Integer>> HPRICEW2 = getHPRICE(subset, GORSubsets, GORLookups, W2);
-        log("HPRICEW2 SummaryStatistics");
-        logSummaryStatistics(HPRICEW2.get(W2));
         HashMap<Byte, HashMap<Short, Integer>> HPRICEW3 = getHPRICE(subset, GORSubsets, GORLookups, W3);
-        log("HPRICEW3 SummaryStatistics");
-        logSummaryStatistics(HPRICEW3.get(W3));
         HashMap<Byte, HashMap<Short, Integer>> HPRICEW4 = getHPRICE(subset, GORSubsets, GORLookups, W4);
-        log("HPRICEW4 SummaryStatistics");
-        logSummaryStatistics(HPRICEW4.get(W4));
         HashMap<Byte, HashMap<Short, Integer>> HPRICEW5 = getHPRICE(subset, GORSubsets, GORLookups, W5);
-        log("HPRICEW5 SummaryStatistics");
-        logSummaryStatistics(HPRICEW5.get(W5));
 
         for (byte w = 0; w < WaAS_Data.NWAVES; w++) {
             log("Wave " + (w + 1));
@@ -250,6 +238,19 @@ public class WIGB_Main_Process extends WIGB_Object {
             Generic_IO.writeObject(GORSubsets, GORSubsetsAndLookupF);
             log("Total all GORs " + totals[w]);
         }
+        for (byte gor = 1; gor < 14; gor++) {
+            log("GOR " + gor);
+            log("HPRICEW1 SummaryStatistics");
+            logSummaryStatistics(HPRICEW1.get(gor));
+            log("HPRICEW2 SummaryStatistics");
+            logSummaryStatistics(HPRICEW2.get(gor));
+            log("HPRICEW3 SummaryStatistics");
+            logSummaryStatistics(HPRICEW3.get(gor));
+            log("HPRICEW4 SummaryStatistics");
+            logSummaryStatistics(HPRICEW4.get(gor));
+            log("HPRICEW5 SummaryStatistics");
+            logSummaryStatistics(HPRICEW5.get(gor));
+        }
 
         // DVLUKDEBT Debt on UK Land
         // DVOPRDEBT Debt on other property
@@ -257,24 +258,23 @@ public class WIGB_Main_Process extends WIGB_Object {
         // DVGrsRentAmtAnnualw5_aggr	Variable label = Household Gross annual income from rent  - (rounded to 3 significant figures)
         // Pos. = 32	Variable = HValueW4	Variable label = Expected current value of main residence (£)
         // Pos. = 33	Variable = HValBW4	Variable label = Estimate of main residence value 
-        log("Total (Hhold aggregate) HPROPW in Wave 1 " + HPROPW1);
-        log("Total (Hhold aggregate) HPROPW in Wave 2 " + HPROPW2);
-        log("Total (Hhold aggregate) HPROPW in Wave 3 " + HPROPW3);
-        log("Total (Hhold aggregate) HPROPW in Wave 4 " + HPROPW4);
-        log("Total (Hhold aggregate) HPROPW in Wave 5 " + HPROPW5);
-
-        log("Total (Hhold aggregate) DVLUKVAL in Wave 1 " + DVLUKVAL1);
-        log("Total (Hhold aggregate) DVLUKVAL in Wave 2 " + DVLUKVAL2);
-        log("Total (Hhold aggregate) DVLUKVAL in Wave 3 " + DVLUKVAL3);
-        log("Total (Hhold aggregate) DVLUKVAL in Wave 4 " + DVLUKVAL4);
-        log("Total (Hhold aggregate) DVLUKVAL in Wave 5 " + DVLUKVAL5);
-
-        log("Total (Person aggregate) FINCVB1 in Wave 1 " + FINCVB1);
-        log("Total (Person aggregate) FINCVB1 in Wave 2 " + FINCVB2);
-        log("Total (Person aggregate) FINCVB1 in Wave 3 " + FINCVB3);
-        log("Total (Person aggregate) FINCVB1 in Wave 4 " + FINCVB4);
-        log("Total (Person aggregate) FINCVB1 in Wave 5 " + FINCVB5);
-
+//        log("Total (Hhold aggregate) HPROPW in Wave 1 " + HPROPW1);
+//        log("Total (Hhold aggregate) HPROPW in Wave 2 " + HPROPW2);
+//        log("Total (Hhold aggregate) HPROPW in Wave 3 " + HPROPW3);
+//        log("Total (Hhold aggregate) HPROPW in Wave 4 " + HPROPW4);
+//        log("Total (Hhold aggregate) HPROPW in Wave 5 " + HPROPW5);
+//
+//        log("Total (Hhold aggregate) DVLUKVAL in Wave 1 " + DVLUKVAL1);
+//        log("Total (Hhold aggregate) DVLUKVAL in Wave 2 " + DVLUKVAL2);
+//        log("Total (Hhold aggregate) DVLUKVAL in Wave 3 " + DVLUKVAL3);
+//        log("Total (Hhold aggregate) DVLUKVAL in Wave 4 " + DVLUKVAL4);
+//        log("Total (Hhold aggregate) DVLUKVAL in Wave 5 " + DVLUKVAL5);
+//
+//        log("Total (Person aggregate) FINCVB1 in Wave 1 " + FINCVB1);
+//        log("Total (Person aggregate) FINCVB1 in Wave 2 " + FINCVB2);
+//        log("Total (Person aggregate) FINCVB1 in Wave 3 " + FINCVB3);
+//        log("Total (Person aggregate) FINCVB1 in Wave 4 " + FINCVB4);
+//        log("Total (Person aggregate) FINCVB1 in Wave 5 " + FINCVB5);
 //        log("Total (Hhold aggregate) HPRICEB Wave 1 " + HPRICEB1);
 //        log("Total (Hhold aggregate) HPRICEB Wave 2 " + HPRICEB2);
 //        log("Total (Hhold aggregate) HPRICEB Wave 3 " + HPRICEB3);
@@ -293,7 +293,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         log("Sum " + stats.getSum());
         log("Average " + stats.getAverage());
     }
-    
+
     protected void initlog(int i) {
         logF = new File(Files.getOutputDataDir(Strings), "log" + i + ".txt");
         logPW = Generic_IO.getPrintWriter(logF, true); // Append to log file.
@@ -1649,7 +1649,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
                 c.getData().keySet().stream().forEach(CASEW1 -> {
-                    if (GORLookups[0].keySet().contains(CASEW1)) {
+                    if (subset.contains(CASEW1)) {
                         WaAS_Combined_Record cr;
                         cr = c.getData().get(CASEW1);
                         WaAS_Wave1_HHOLD_Record w1;
@@ -1923,7 +1923,6 @@ public class WIGB_Main_Process extends WIGB_Object {
      * Get the GOR Subsets for subset.
      *
      * @param subset
-     * @param wave
      * @return
      */
     public Object[] getGORSubsetsAndLookup(HashSet<Short> subset) {
@@ -1934,6 +1933,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         r[0] = r0;
         HashMap<Short, Byte>[] r1;
         r1 = new HashMap[WaAS_Data.NWAVES];
+        r[1] = r1;
         for (byte w = 0; w < WaAS_Data.NWAVES; w++) {
             r0[w] = new HashMap<>();
             for (byte b = 1; b < 13; b++) {
