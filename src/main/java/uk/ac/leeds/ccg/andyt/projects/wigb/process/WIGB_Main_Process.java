@@ -20,6 +20,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.IntSummaryStatistics;
 import java.util.Iterator;
 import java.util.TreeMap;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Strings;
@@ -216,11 +217,26 @@ public class WIGB_Main_Process extends WIGB_Object {
         long FINCVB4 = getFINCVB(subset, W4);
         long FINCVB5 = getFINCVB(subset, W5);
 
-        //long HPRICEB1 = getHPRICEB(subsets, W1);
-//        long HPRICEB2 = getHPRICEB(subset, W2);
-//        long HPRICEB3 = getHPRICEB(subset, W3);
-//        long HPRICEB4 = getHPRICEB(subset, W4);
-//        long HPRICEB5 = getHPRICEB(subset, W5);
+        getWave1Or2HPRICEBLookup();
+        getWave3Or4Or5HPRICEBLookup();
+
+        // Map with keys as GOR and Values as map with keys as CASEWX and 
+        // values as Houseprices.  
+        HashMap<Byte, HashMap<Short, Integer>> HPRICEW1 = getHPRICE(subset, GORSubsets, GORLookups, W1);
+        log("HPRICEW1 SummaryStatistics");
+        logSummaryStatistics(HPRICEW1.get(W1));
+        HashMap<Byte, HashMap<Short, Integer>> HPRICEW2 = getHPRICE(subset, GORSubsets, GORLookups, W2);
+        log("HPRICEW2 SummaryStatistics");
+        logSummaryStatistics(HPRICEW2.get(W2));
+        HashMap<Byte, HashMap<Short, Integer>> HPRICEW3 = getHPRICE(subset, GORSubsets, GORLookups, W3);
+        log("HPRICEW3 SummaryStatistics");
+        logSummaryStatistics(HPRICEW3.get(W3));
+        HashMap<Byte, HashMap<Short, Integer>> HPRICEW4 = getHPRICE(subset, GORSubsets, GORLookups, W4);
+        log("HPRICEW4 SummaryStatistics");
+        logSummaryStatistics(HPRICEW4.get(W4));
+        HashMap<Byte, HashMap<Short, Integer>> HPRICEW5 = getHPRICE(subset, GORSubsets, GORLookups, W5);
+        log("HPRICEW5 SummaryStatistics");
+        logSummaryStatistics(HPRICEW5.get(W5));
 
         for (byte w = 0; w < WaAS_Data.NWAVES; w++) {
             log("Wave " + (w + 1));
@@ -238,6 +254,9 @@ public class WIGB_Main_Process extends WIGB_Object {
         // DVLUKDEBT Debt on UK Land
         // DVOPRDEBT Debt on other property
         // DVOPRVAL Value of other property
+        // DVGrsRentAmtAnnualw5_aggr	Variable label = Household Gross annual income from rent  - (rounded to 3 significant figures)
+        // Pos. = 32	Variable = HValueW4	Variable label = Expected current value of main residence (£)
+        // Pos. = 33	Variable = HValBW4	Variable label = Estimate of main residence value 
         log("Total (Hhold aggregate) HPROPW in Wave 1 " + HPROPW1);
         log("Total (Hhold aggregate) HPROPW in Wave 2 " + HPROPW2);
         log("Total (Hhold aggregate) HPROPW in Wave 3 " + HPROPW3);
@@ -264,6 +283,17 @@ public class WIGB_Main_Process extends WIGB_Object {
         logPW.close();
     }
 
+    protected void logSummaryStatistics(HashMap<?, Integer> m) {
+        IntSummaryStatistics stats = m.values().stream().
+                collect(IntSummaryStatistics::new, IntSummaryStatistics::accept,
+                        IntSummaryStatistics::combine);
+        log("Max " + stats.getMax());
+        log("Min " + stats.getMin());
+        log("Count " + stats.getCount());
+        log("Sum " + stats.getSum());
+        log("Average " + stats.getAverage());
+    }
+    
     protected void initlog(int i) {
         logF = new File(Files.getOutputDataDir(Strings), "log" + i + ".txt");
         logPW = Generic_IO.getPrintWriter(logF, true); // Append to log file.
@@ -1587,64 +1617,245 @@ public class WIGB_Main_Process extends WIGB_Object {
     /**
      * Get the total HPRICEB in subset.
      *
-     * @param subsets
+     * @param subset
+     * @param GORSubsets
+     * @param GORLookups
      * @param wave
-     * @return
+     * @return Map with keys as GOR and Values as map with keys as CASEWX and
+     * values as Houseprices.
      */
-    public HashMap<Byte, HashMap<Short, Byte>> getHPRICEB(
-            HashMap<Byte, HashSet<Short>> GORSubsets,
-            HashMap<Short, Byte> GORLookup, byte wave) {
+    public HashMap<Byte, HashMap<Short, Integer>> getHPRICE(
+            HashSet<Short> subset,
+            HashMap<Byte, HashSet<Short>>[] GORSubsets,
+            HashMap<Short, Byte>[] GORLookups, byte wave) {
         // Initialise result
-        HashMap<Byte, HashMap<Short, Byte>> r;
+        HashMap<Byte, HashMap<Short, Integer>> r;
         r = new HashMap<>();
         Iterator<Byte> ite;
-        ite = GORSubsets.keySet().iterator();
+        ite = GORSubsets[wave - 1].keySet().iterator();
         while (ite.hasNext()) {
             Byte GOR;
             GOR = ite.next();
             r.put(GOR, new HashMap<>());
         }
-
         // For brevity/convenience.
         byte W1 = WaAS_Data.W1;
         byte W2 = WaAS_Data.W2;
         byte W3 = WaAS_Data.W3;
         byte W4 = WaAS_Data.W4;
         byte W5 = WaAS_Data.W5;
-        long tHPRICEB;
         if (wave == W1) {
-//            Value label information for HPriceBW1
-//            Value = 1.0	Label = Less than £20,000
-//            Value = 2.0	Label = £20,000 to £39,999
-//            Value = 3.0	Label = £40,000 to £59,999
-//            Value = 4.0	Label = £60,000 to £99,999
-//            Value = 5.0	Label = £100,000 to £149,999
-//            Value = 6.0	Label = £150,000 to £199,999
-//            Value = 7.0	Label = £200,000 to £249,999
-//            Value = 8.0	Label = £250,000 to £299,999
-//            Value = 9.0	Label = £300,000 to £499,999
-//            Value = 10.0	Label = £500,000 or more
-//            Value = -9.0	Label = Don t know
             data.data.keySet().stream().forEach(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
                 c.getData().keySet().stream().forEach(CASEW1 -> {
-                    byte HPRICEB = 0;
-                    if (GORLookup.keySet().contains(CASEW1)) {
+                    if (GORLookups[0].keySet().contains(CASEW1)) {
                         WaAS_Combined_Record cr;
                         cr = c.getData().get(CASEW1);
-                        HPRICEB = cr.w1Record.getHhold().getHPRICEB();
-                        Byte GOR = GORLookup.get(CASEW1);
-                        if (HPRICEB > 0) {
-                            Generic_Collections.addToMap(r, GOR, CASEW1, HPRICEB);
+                        WaAS_Wave1_HHOLD_Record w1;
+                        w1 = cr.w1Record.getHhold();
+                        Byte GOR = GORLookups[wave - 1].get(CASEW1);
+                        int HPRICE = w1.getHPRICE();
+                        if (HPRICE < 0) {
+                            byte HPRICEB = w1.getHPRICEB();
+                            if (HPRICEB > 0) {
+                                HPRICE = Wave1Or2HPRICEBLookup.get(HPRICEB);
+                                Generic_Collections.addToMap(r, GOR, CASEW1, HPRICE);
+                            }
+                        } else {
+                            Generic_Collections.addToMap(r, GOR, CASEW1, HPRICE);
+                        }
+                    }
+                });
+                data.clearCollection(cID);
+            });
+        } else if (wave == W2) {
+            data.data.keySet().stream().forEach(cID -> {
+                WaAS_Collection c;
+                c = data.getCollection(cID);
+                c.getData().keySet().stream().forEach(CASEW1 -> {
+                    if (subset.contains(CASEW1)) {
+                        WaAS_Combined_Record cr;
+                        cr = c.getData().get(CASEW1);
+                        HashMap<Short, WaAS_Wave2_Record> w2Records;
+                        w2Records = cr.w2Records;
+                        Short CASEW2;
+                        Iterator<Short> ite2;
+                        ite2 = w2Records.keySet().iterator();
+                        while (ite2.hasNext()) {
+                            CASEW2 = ite2.next();
+                            Byte GOR = GORLookups[wave - 1].get(CASEW2);
+                            WaAS_Wave2_HHOLD_Record w2;
+                            w2 = w2Records.get(CASEW2).getHhold();
+                            int HPRICE = w2.getHPRICE();
+                            if (HPRICE < 0) {
+                                byte HPRICEB = w2.getHPRICEB();
+                                if (HPRICEB > 0) {
+                                    HPRICE = Wave1Or2HPRICEBLookup.get(HPRICEB);
+                                    Generic_Collections.addToMap(r, GOR, CASEW2, HPRICE);
+                                }
+                            } else {
+                                Generic_Collections.addToMap(r, GOR, CASEW2, HPRICE);
+                            }
+                        }
+                    }
+                });
+                data.clearCollection(cID);
+            });
+        } else if (wave == W3) {
+            data.data.keySet().stream().forEach(cID -> {
+                WaAS_Collection c;
+                c = data.getCollection(cID);
+                c.getData().keySet().stream().forEach(CASEW1 -> {
+                    if (subset.contains(CASEW1)) {
+                        WaAS_Combined_Record cr;
+                        cr = c.getData().get(CASEW1);
+                        HashMap<Short, HashMap<Short, WaAS_Wave3_Record>> w3Records;
+                        w3Records = cr.w3Records;
+                        Short CASEW2;
+                        Short CASEW3;
+                        Iterator<Short> ite1;
+                        ite1 = w3Records.keySet().iterator();
+                        while (ite1.hasNext()) {
+                            CASEW2 = ite1.next();
+                            HashMap<Short, WaAS_Wave3_Record> w3_2;
+                            w3_2 = w3Records.get(CASEW2);
+                            Iterator<Short> ite2;
+                            ite2 = w3_2.keySet().iterator();
+                            while (ite2.hasNext()) {
+                                CASEW3 = ite2.next();
+                                Byte GOR = GORLookups[wave - 1].get(CASEW3);
+                                WaAS_Wave3_HHOLD_Record w3;
+                                w3 = w3_2.get(CASEW3).getHhold();
+                                int HPRICE = w3.getHPRICE();
+                                if (HPRICE < 0) {
+                                    byte HPRICEB = w3.getHPRICEB();
+                                    if (HPRICEB > 0) {
+                                        HPRICE = Wave3Or4Or5HPRICEBLookup.get(HPRICEB);
+                                        Generic_Collections.addToMap(r, GOR, CASEW3, HPRICE);
+                                    }
+                                } else {
+                                    Generic_Collections.addToMap(r, GOR, CASEW3, HPRICE);
+                                }
+                            }
+                        }
+                    }
+                });
+                data.clearCollection(cID);
+            });
+        } else if (wave == W4) {
+            data.data.keySet().stream().forEach(cID -> {
+                WaAS_Collection c;
+                c = data.getCollection(cID);
+                c.getData().keySet().stream().forEach(CASEW1 -> {
+                    if (subset.contains(CASEW1)) {
+                        WaAS_Combined_Record cr;
+                        cr = c.getData().get(CASEW1);
+                        HashMap<Short, HashMap<Short, HashMap<Short, WaAS_Wave4_Record>>> w4Records;
+                        w4Records = cr.w4Records;
+                        Short CASEW2;
+                        Short CASEW3;
+                        Short CASEW4;
+                        Iterator<Short> ite1;
+                        ite1 = w4Records.keySet().iterator();
+                        while (ite1.hasNext()) {
+                            CASEW2 = ite1.next();
+                            HashMap<Short, HashMap<Short, WaAS_Wave4_Record>> w4_2;
+                            w4_2 = w4Records.get(CASEW2);
+                            Iterator<Short> ite2;
+                            ite2 = w4_2.keySet().iterator();
+                            while (ite2.hasNext()) {
+                                CASEW3 = ite2.next();
+                                HashMap<Short, WaAS_Wave4_Record> w4_3;
+                                w4_3 = w4_2.get(CASEW3);
+                                Iterator<Short> ite3;
+                                ite3 = w4_3.keySet().iterator();
+                                while (ite3.hasNext()) {
+                                    CASEW4 = ite3.next();
+                                    Byte GOR = GORLookups[wave - 1].get(CASEW4);
+                                    WaAS_Wave4_HHOLD_Record w4;
+                                    w4 = w4_3.get(CASEW4).getHhold();
+                                    int HPRICE = w4.getHPRICE();
+                                    if (HPRICE < 0) {
+                                        byte HPRICEB = w4.getHPRICEB();
+                                        if (HPRICEB > 0) {
+                                            HPRICE = Wave3Or4Or5HPRICEBLookup.get(HPRICEB);
+                                            Generic_Collections.addToMap(r, GOR, CASEW4, HPRICE);
+                                        }
+                                    } else {
+                                        Generic_Collections.addToMap(r, GOR, CASEW4, HPRICE);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+                data.clearCollection(cID);
+            });
+        } else if (wave == W5) {
+            data.data.keySet().stream().forEach(cID -> {
+                WaAS_Collection c;
+                c = data.getCollection(cID);
+                c.getData().keySet().stream().forEach(CASEW1 -> {
+                    if (subset.contains(CASEW1)) {
+                        WaAS_Combined_Record cr;
+                        cr = c.getData().get(CASEW1);
+                        HashMap<Short, HashMap<Short, HashMap<Short, HashMap<Short, WaAS_Wave5_Record>>>> w5Records;
+                        w5Records = cr.w5Records;
+                        Short CASEW2;
+                        Short CASEW3;
+                        Short CASEW4;
+                        Short CASEW5;
+                        Iterator<Short> ite1;
+                        ite1 = w5Records.keySet().iterator();
+                        while (ite1.hasNext()) {
+                            CASEW2 = ite1.next();
+                            HashMap<Short, HashMap<Short, HashMap<Short, WaAS_Wave5_Record>>> w5_2;
+                            w5_2 = w5Records.get(CASEW2);
+                            Iterator<Short> ite2;
+                            ite2 = w5_2.keySet().iterator();
+                            while (ite2.hasNext()) {
+                                CASEW3 = ite2.next();
+                                HashMap<Short, HashMap<Short, WaAS_Wave5_Record>> w5_3;
+                                w5_3 = w5_2.get(CASEW3);
+                                Iterator<Short> ite3;
+                                ite3 = w5_3.keySet().iterator();
+                                while (ite3.hasNext()) {
+                                    CASEW4 = ite3.next();
+                                    HashMap<Short, WaAS_Wave5_Record> w5_4;
+                                    w5_4 = w5_3.get(CASEW4);
+                                    Iterator<Short> ite4;
+                                    ite4 = w5_4.keySet().iterator();
+                                    while (ite4.hasNext()) {
+                                        CASEW5 = ite4.next();
+                                        Byte GOR = GORLookups[wave - 1].get(CASEW5);
+                                        WaAS_Wave5_HHOLD_Record w5;
+                                        w5 = w5_4.get(CASEW5).getHhold();
+                                        int HPRICE = w5.getHPRICE();
+                                        if (HPRICE < 0) {
+                                            byte HPRICEB = w5.getHPRICEB();
+                                            if (HPRICEB > 0) {
+                                                HPRICE = Wave3Or4Or5HPRICEBLookup.get(HPRICEB);
+                                                Generic_Collections.addToMap(r, GOR, CASEW5, HPRICE);
+                                            }
+                                        } else {
+                                            Generic_Collections.addToMap(r, GOR, CASEW5, HPRICE);
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 });
                 data.clearCollection(cID);
             });
         }
-//        } else if (wave == W2) {
-//            Value label information for HPriceBW2
+        return r;
+    }
+
+    HashMap<Byte, Integer> Wave1Or2HPRICEBLookup;
+
+    public HashMap<Byte, Integer> getWave1Or2HPRICEBLookup() {
 //            Value = 1.0	Label = Less than £20,000
 //            Value = 2.0	Label = £20,000 to £39,999
 //            Value = 3.0	Label = £40,000 to £59,999
@@ -1655,221 +1866,57 @@ public class WIGB_Main_Process extends WIGB_Object {
 //            Value = 8.0	Label = £250,000 to £299,999
 //            Value = 9.0	Label = £300,000 to £499,999
 //            Value = 10.0	Label = £500,000 or more
-//            Value = -9.0	Label = Don t know
-//            Value = -8.0	Label = Refused
-//            Value = -7.0	Label = Does not apply
-//            Value = -6.0	Label = Error partial
-//            tHPRICEB = data.data.keySet().stream().mapToLong(cID -> {
-//                WaAS_Collection c;
-//                c = data.getCollection(cID);
-//                long cHPRICEB = c.getData().keySet().stream().mapToLong(CASEW1 -> {
-//                    int HPRICEB = 0;
-//                    if (subset.contains(CASEW1)) {
-//                        WaAS_Combined_Record cr;
-//                        cr = c.getData().get(CASEW1);
-//                        HashMap<Short, WaAS_Wave2_Record> w2Records;
-//                        w2Records = cr.w2Records;
-//                        Short CASEW2;
-//                        Iterator<Short> ite;
-//                        ite = w2Records.keySet().iterator();
-//                        while (ite.hasNext()) {
-//                            CASEW2 = ite.next();
-//                            int HPRICEBW2 = w2Records.get(CASEW2).getHhold().getHPRICEB();
-//                            if (HPRICEBW2 != Integer.MIN_VALUE) {
-//                                HPRICEB += HPRICEBW2;
-//                            }
-//                        }
-//                    }
-//                    return HPRICEB;
-//                }).sum();
-//                data.clearCollection(cID);
-//                return cHPRICEB;
-//            }).sum();
-//        } else if (wave == W3) {
-////            	  Value label information for HPriceBW3
-////                Value = 1.0	Label = Less than £60,000
-////                Value = 2.0	Label = 60,000 to 99,999
-////                Value = 3.0	Label = £100,000 to 149,999
-////                Value = 4.0	Label = £150,000 to 199,999
-////                Value = 5.0	Label = £200,000 to 249,999
-////                Value = 6.0	Label = £250,000 to 299,999
-////                Value = 7.0	Label = £300,000 to 349,999
-////                Value = 8.0	Label = £350,000 to 399,999
-////                Value = 9.0	Label = £400,000 to 499,999
-////                Value = 10.0	Label = £500,000 to 749,999
-////                Value = 11.0	Label = £750,000 to 999,999
-////                Value = 12.0	Label = £1 million or more
-////                Value = -9.0	Label = Does not know
-////                Value = -8.0	Label = Refusal
-////                Value = -7.0	Label = Not applicable
-////                Value = -6.0	Label = Error / partial
-//            tHPRICEB = data.data.keySet().stream().mapToLong(cID -> {
-//                WaAS_Collection c;
-//                c = data.getCollection(cID);
-//                long cHPRICEB = c.getData().keySet().stream().mapToLong(CASEW1 -> {
-//                    int HPRICEB = 0;
-//                    if (subset.contains(CASEW1)) {
-//                        WaAS_Combined_Record cr;
-//                        cr = c.getData().get(CASEW1);
-//                        HashMap<Short, HashMap<Short, WaAS_Wave3_Record>> w3Records;
-//                        w3Records = cr.w3Records;
-//                        Short CASEW2;
-//                        Short CASEW3;
-//                        Iterator<Short> ite;
-//                        ite = w3Records.keySet().iterator();
-//                        while (ite.hasNext()) {
-//                            CASEW2 = ite.next();
-//                            HashMap<Short, WaAS_Wave3_Record> w3_2;
-//                            w3_2 = w3Records.get(CASEW2);
-//                            Iterator<Short> ite2;
-//                            ite2 = w3_2.keySet().iterator();
-//                            while (ite2.hasNext()) {
-//                                CASEW3 = ite2.next();
-//                                int HPRICEBW3 = w3_2.get(CASEW3).getHhold().getHPRICEB();
-//                                if (HPRICEBW3 != Integer.MIN_VALUE) {
-//                                    HPRICEB += HPRICEBW3;
-//                                }
-//                            }
-//                        }
-//                    }
-//                    return HPRICEB;
-//                }).sum();
-//                data.clearCollection(cID);
-//                return cHPRICEB;
-//            }).sum();
-//        } else if (wave == W4) {
-////      Value label information for HPriceBW4
-////	Value = 1.0	Label = Less than £60,000
-////	Value = 2.0	Label = £60,000 to £99,999
-////	Value = 3.0	Label = £100,000 to £149,999
-////	Value = 4.0	Label = £150,000 to £199,999
-////	Value = 5.0	Label = £200,000 to £249,999
-////	Value = 6.0	Label = £250,000 to £299,999
-////      Value = 7.0	Label = £300,000 to £349,999
-////	Value = 8.0	Label = £350,000 to £399,999
-////	Value = 9.0	Label = £400,000 to £499,999
-////	Value = 10.0	Label = £500,000 to £749,999
-////	Value = 11.0	Label = £750,000 to £999,999
-////	Value = 12.0	Label = £1 million or more
-////	Value = -9.0	Label = Do not know
-////	Value = -8.0	Label = Refusal
-////	Value = -7.0	Label = Not applicable
-////	Value = -6.0	Label = “Error partial”
-//            tHPRICEB = data.data.keySet().stream().mapToLong(cID -> {
-//                WaAS_Collection c;
-//                c = data.getCollection(cID);
-//                long cHPRICEB = c.getData().keySet().stream().mapToLong(CASEW1 -> {
-//                    int HPRICEB = 0;
-//                    if (subset.contains(CASEW1)) {
-//                        WaAS_Combined_Record cr;
-//                        cr = c.getData().get(CASEW1);
-//                        HashMap<Short, HashMap<Short, HashMap<Short, WaAS_Wave4_Record>>> w4Records;
-//                        w4Records = cr.w4Records;
-//                        Short CASEW2;
-//                        Short CASEW3;
-//                        Short CASEW4;
-//                        Iterator<Short> ite;
-//                        ite = w4Records.keySet().iterator();
-//                        while (ite.hasNext()) {
-//                            CASEW2 = ite.next();
-//                            HashMap<Short, HashMap<Short, WaAS_Wave4_Record>> w4_2;
-//                            w4_2 = w4Records.get(CASEW2);
-//                            Iterator<Short> ite2;
-//                            ite2 = w4_2.keySet().iterator();
-//                            while (ite2.hasNext()) {
-//                                CASEW3 = ite2.next();
-//                                HashMap<Short, WaAS_Wave4_Record> w4_3;
-//                                w4_3 = w4_2.get(CASEW3);
-//                                Iterator<Short> ite3;
-//                                ite3 = w4_3.keySet().iterator();
-//                                while (ite3.hasNext()) {
-//                                    CASEW4 = ite3.next();
-//                                    int HPRICEBW4 = w4_3.get(CASEW4).getHhold().getHPRICEB();
-//                                    if (HPRICEBW4 != Integer.MIN_VALUE) {
-//                                        HPRICEB += HPRICEBW4;
-//                                    }
-//                                }
-//                            }
-//                        }
-//                    }
-//                    return HPRICEB;
-//                }).sum();
-//                data.clearCollection(cID);
-//                return cHPRICEB;
-//            }).sum();
-//        } else if (wave == W5) {
-////        Value label information for HPriceBW5
-////	Value = 1.0	Label = Less than £60,000
-////	Value = 2.0	Label = £60,000 to £99,999
-////	Value = 3.0	Label = £100,000 to £149,999
-////	Value = 4.0	Label = £150,000 to £199,999
-////	Value = 5.0	Label = £200,000 to £249,999
-////	Value = 6.0	Label = £250,000 to £299,999
-////	Value = 7.0	Label = £300,000 to £349,999
-////	Value = 8.0	Label = £350,000 to £399,999
-////	Value = 9.0	Label = £400,000 to £499,999
-////	Value = 10.0	Label = £500,000 to £749,999
-////	Value = 11.0	Label = £750,000 to £999,999
-////	Value = 12.0	Label = £1 million or more
-////	Value = -9.0	Label = Does not know
-////	Value = -8.0	Label = No answer
-////	Value = -7.0	Label = Does not apply
-////	Value = -6.0	Label = Error/Partial
-//            tHPRICEB = data.data.keySet().stream().mapToLong(cID -> {
-//                WaAS_Collection c;
-//                c = data.getCollection(cID);
-//                long cHPRICEB = c.getData().keySet().stream().mapToLong(CASEW1 -> {
-//                    int HPRICEB = 0;
-//                    if (subset.contains(CASEW1)) {
-//                        WaAS_Combined_Record cr;
-//                        cr = c.getData().get(CASEW1);
-//                        HashMap<Short, HashMap<Short, HashMap<Short, HashMap<Short, WaAS_Wave5_Record>>>> w5Records;
-//                        w5Records = cr.w5Records;
-//                        Short CASEW2;
-//                        Short CASEW3;
-//                        Short CASEW4;
-//                        Short CASEW5;
-//                        Iterator<Short> ite;
-//                        ite = w5Records.keySet().iterator();
-//                        while (ite.hasNext()) {
-//                            CASEW2 = ite.next();
-//                            HashMap<Short, HashMap<Short, HashMap<Short, WaAS_Wave5_Record>>> w5_2;
-//                            w5_2 = w5Records.get(CASEW2);
-//                            Iterator<Short> ite2;
-//                            ite2 = w5_2.keySet().iterator();
-//                            while (ite2.hasNext()) {
-//                                CASEW3 = ite2.next();
-//                                HashMap<Short, HashMap<Short, WaAS_Wave5_Record>> w5_3;
-//                                w5_3 = w5_2.get(CASEW3);
-//                                Iterator<Short> ite3;
-//                                ite3 = w5_3.keySet().iterator();
-//                                while (ite3.hasNext()) {
-//                                    CASEW4 = ite3.next();
-//                                    HashMap<Short, WaAS_Wave5_Record> w5_4;
-//                                    w5_4 = w5_3.get(CASEW4);
-//                                    Iterator<Short> ite4;
-//                                    ite4 = w5_4.keySet().iterator();
-//                                    while (ite4.hasNext()) {
-//                                        CASEW5 = ite4.next();
-//                                        int HPRICEBW5 = w5_4.get(CASEW5).getHhold().getHPRICEB();
-//                                        if (HPRICEBW5 != Integer.MIN_VALUE) {
-//                                            HPRICEB += HPRICEBW5;
-//                                        }
-//                                    }
-//                                }
-//                            }
-//                        }
-//                    }
-//                    return HPRICEB;
-//                }).sum();
-//                data.clearCollection(cID);
-//                return cHPRICEB;
-//            }).sum();
-//        } else {
-//            tHPRICEB = 0;
-//        }
-//        log("Total (Hhold aggregate) HPRICEB Wave " + wave + " " + tHPRICEB);
-        return r;
+        if (Wave1Or2HPRICEBLookup == null) {
+            Wave1Or2HPRICEBLookup = new HashMap<>();
+            Wave1Or2HPRICEBLookup.put((byte) 1, 10000);
+            Wave1Or2HPRICEBLookup.put((byte) 2, 30000);
+            Wave1Or2HPRICEBLookup.put((byte) 3, 55000);
+            Wave1Or2HPRICEBLookup.put((byte) 4, 80000);
+            Wave1Or2HPRICEBLookup.put((byte) 5, 125000);
+            Wave1Or2HPRICEBLookup.put((byte) 6, 175000);
+            Wave1Or2HPRICEBLookup.put((byte) 7, 225000);
+            Wave1Or2HPRICEBLookup.put((byte) 8, 275000);
+            Wave1Or2HPRICEBLookup.put((byte) 9, 400000);
+            Wave1Or2HPRICEBLookup.put((byte) 10, 600000);
+        }
+        return Wave1Or2HPRICEBLookup;
+    }
+
+    HashMap<Byte, Integer> Wave3Or4Or5HPRICEBLookup;
+
+    public HashMap<Byte, Integer> getWave3Or4Or5HPRICEBLookup() {
+//	Value = 1.0	Label = Less than £60,000
+//	Value = 2.0	Label = £60,000 to £99,999
+//	Value = 3.0	Label = £100,000 to £149,999
+//	Value = 4.0	Label = £150,000 to £199,999
+//	Value = 5.0	Label = £200,000 to £249,999
+//	Value = 6.0	Label = £250,000 to £299,999
+//	Value = 7.0	Label = £300,000 to £349,999
+//	Value = 8.0	Label = £350,000 to £399,999
+//	Value = 9.0	Label = £400,000 to £499,999
+//	Value = 10.0	Label = £500,000 to £749,999
+//	Value = 11.0	Label = £750,000 to £999,999
+//	Value = 12.0	Label = £1 million or more
+//	Value = -9.0	Label = Does not know
+//	Value = -8.0	Label = No answer
+//	Value = -7.0	Label = Does not apply
+//	Value = -6.0	Label = Error/Partial
+        if (Wave3Or4Or5HPRICEBLookup == null) {
+            Wave3Or4Or5HPRICEBLookup = new HashMap<>();
+            Wave3Or4Or5HPRICEBLookup.put((byte) 1, 30000);
+            Wave3Or4Or5HPRICEBLookup.put((byte) 2, 80000);
+            Wave3Or4Or5HPRICEBLookup.put((byte) 3, 125000);
+            Wave3Or4Or5HPRICEBLookup.put((byte) 4, 175000);
+            Wave3Or4Or5HPRICEBLookup.put((byte) 5, 225000);
+            Wave3Or4Or5HPRICEBLookup.put((byte) 6, 275000);
+            Wave3Or4Or5HPRICEBLookup.put((byte) 7, 325000);
+            Wave3Or4Or5HPRICEBLookup.put((byte) 8, 375000);
+            Wave3Or4Or5HPRICEBLookup.put((byte) 9, 450000);
+            Wave3Or4Or5HPRICEBLookup.put((byte) 10, 625000);
+            Wave3Or4Or5HPRICEBLookup.put((byte) 11, 875000);
+            Wave3Or4Or5HPRICEBLookup.put((byte) 12, 1500000);
+        }
+        return Wave3Or4Or5HPRICEBLookup;
     }
 
     /**
