@@ -1,0 +1,1262 @@
+Number of combined records 0
+Number of collections of combined records 0
+<Check For Household Records>
+0 Total hholds in all 5 waves.
+0 Total hholds that are a single hhold over all 5 waves.
+0 Total hholds that are a single hhold over all 5 waves and have same number of adults in all 5 waves.
+0 Total hholds that are a single hhold over all 5 waves and have the same basic adult household composition over all 5 waves.
+</Check For Household Records>
+Number of combined records 7331
+Number of collections of combined records 29
+<Check For Household Records>
+There are multiple Wave 5 records for CASEW4 17913 in CASEW3 15005 in CASEW2 17223 in CASEW1 88
+There are multiple Wave 5 records for CASEW4 17913 in CASEW3 15005 in CASEW2 17223 in CASEW1 88
+There are multiple Wave 5 records for CASEW4 17913 in CASEW3 15005 in CASEW2 17223 in CASEW1 88
+There are multiple Wave 3 records for CASEW2 2674 in CASEW1 391
+There are multiple Wave 3 records for CASEW2 2674 in CASEW1 391
+There are multiple Wave 3 records for CASEW2 2674 in CASEW1 391
+There are multiple Wave 4 records for CASEW3 19034 in CASEW2 3480 in CASEW1 960
+There are multiple Wave 4 records for CASEW3 19034 in CASEW2 3480 in CASEW1 960
+There are multiple Wave 4 records for CASEW3 19034 in CASEW2 3480 in CASEW1 960
+There are multiple Wave 2 records for CASEW1 1604
+There are multiple Wave 2 records for CASEW1 1604
+There are multiple Wave 2 records for CASEW1 1604
+There are multiple Wave 3 records for CASEW2 11059 in CASEW1 1782
+There are multiple Wave 3 records for CASEW2 11059 in CASEW1 1782
+There are multiple Wave 3 records for CASEW2 11059 in CASEW1 1782
+There are multiple Wave 5 records for CASEW4 11639 in CASEW3 8189 in CASEW2 16437 in CASEW1 1887
+There are multiple Wave 5 records for CASEW4 11639 in CASEW3 8189 in CASEW2 16437 in CASEW1 1887
+There are multiple Wave 5 records for CASEW4 11639 in CASEW3 8189 in CASEW2 16437 in CASEW1 1887
+There are multiple Wave 5 records for CASEW4 9588 in CASEW3 6172 in CASEW2 9194 in CASEW1 1432
+There are multiple Wave 5 records for CASEW4 9588 in CASEW3 6172 in CASEW2 9194 in CASEW1 1432
+There are multiple Wave 5 records for CASEW4 9588 in CASEW3 6172 in CASEW2 9194 in CASEW1 1432
+There are multiple Wave 5 records for CASEW4 2277 in CASEW3 14963 in CASEW2 7674 in CASEW1 3148
+There are multiple Wave 5 records for CASEW4 2277 in CASEW3 14963 in CASEW2 7674 in CASEW1 3148
+There are multiple Wave 5 records for CASEW4 2277 in CASEW3 14963 in CASEW2 7674 in CASEW1 3148
+There are multiple Wave 2 records for CASEW1 2649
+There are multiple Wave 2 records for CASEW1 2649
+There are multiple Wave 2 records for CASEW1 2649
+There are multiple Wave 3 records for CASEW2 18029 in CASEW1 3218
+There are multiple Wave 3 records for CASEW2 18029 in CASEW1 3218
+There are multiple Wave 3 records for CASEW2 18029 in CASEW1 3218
+There are multiple Wave 2 records for CASEW1 3296
+There are multiple Wave 2 records for CASEW1 3296
+There are multiple Wave 2 records for CASEW1 3296
+There are multiple Wave 3 records for CASEW2 2170 in CASEW1 2274
+There are multiple Wave 3 records for CASEW2 2170 in CASEW1 2274
+There are multiple Wave 3 records for CASEW2 2170 in CASEW1 2274
+There are multiple Wave 2 records for CASEW1 2846
+There are multiple Wave 2 records for CASEW1 2846
+There are multiple Wave 2 records for CASEW1 2846
+There are multiple Wave 5 records for CASEW4 19897 in CASEW3 518 in CASEW2 660 in CASEW1 3390
+There are multiple Wave 5 records for CASEW4 19897 in CASEW3 518 in CASEW2 660 in CASEW1 3390
+There are multiple Wave 5 records for CASEW4 19897 in CASEW3 518 in CASEW2 660 in CASEW1 3390
+There are multiple Wave 5 records for CASEW4 6528 in CASEW3 18588 in CASEW2 11183 in CASEW1 2542
+There are multiple Wave 5 records for CASEW4 6528 in CASEW3 18588 in CASEW2 11183 in CASEW1 2542
+There are multiple Wave 5 records for CASEW4 6528 in CASEW3 18588 in CASEW2 11183 in CASEW1 2542
+There are multiple Wave 2 records for CASEW1 3715
+There are multiple Wave 2 records for CASEW1 3715
+There are multiple Wave 2 records for CASEW1 3715
+There are multiple Wave 5 records for CASEW4 8546 in CASEW3 14996 in CASEW2 12443 in CASEW1 3724
+There are multiple Wave 5 records for CASEW4 8546 in CASEW3 14996 in CASEW2 12443 in CASEW1 3724
+There are multiple Wave 5 records for CASEW4 8546 in CASEW3 14996 in CASEW2 12443 in CASEW1 3724
+There are multiple Wave 3 records for CASEW2 6441 in CASEW1 3727
+There are multiple Wave 3 records for CASEW2 6441 in CASEW1 3727
+There are multiple Wave 3 records for CASEW2 6441 in CASEW1 3727
+There are multiple Wave 5 records for CASEW4 8813 in CASEW3 8753 in CASEW2 19463 in CASEW1 4351
+There are multiple Wave 5 records for CASEW4 8813 in CASEW3 8753 in CASEW2 19463 in CASEW1 4351
+There are multiple Wave 5 records for CASEW4 8813 in CASEW3 8753 in CASEW2 19463 in CASEW1 4351
+There are multiple Wave 3 records for CASEW2 11910 in CASEW1 4416
+There are multiple Wave 3 records for CASEW2 11910 in CASEW1 4416
+There are multiple Wave 3 records for CASEW2 11910 in CASEW1 4416
+There are multiple Wave 4 records for CASEW3 5008 in CASEW2 1639 in CASEW1 4622
+There are multiple Wave 4 records for CASEW3 5008 in CASEW2 1639 in CASEW1 4622
+There are multiple Wave 4 records for CASEW3 5008 in CASEW2 1639 in CASEW1 4622
+There are multiple Wave 4 records for CASEW3 17977 in CASEW2 12023 in CASEW1 5354
+There are multiple Wave 4 records for CASEW3 17977 in CASEW2 12023 in CASEW1 5354
+There are multiple Wave 4 records for CASEW3 17977 in CASEW2 12023 in CASEW1 5354
+There are multiple Wave 3 records for CASEW2 14468 in CASEW1 4843
+There are multiple Wave 3 records for CASEW2 14468 in CASEW1 4843
+There are multiple Wave 3 records for CASEW2 14468 in CASEW1 4843
+There are multiple Wave 5 records for CASEW4 3735 in CASEW3 6108 in CASEW2 7576 in CASEW1 4855
+There are multiple Wave 5 records for CASEW4 3735 in CASEW3 6108 in CASEW2 7576 in CASEW1 4855
+There are multiple Wave 5 records for CASEW4 3735 in CASEW3 6108 in CASEW2 7576 in CASEW1 4855
+There are multiple Wave 3 records for CASEW2 15117 in CASEW1 5410
+There are multiple Wave 3 records for CASEW2 15117 in CASEW1 5410
+There are multiple Wave 3 records for CASEW2 15117 in CASEW1 5410
+There are multiple Wave 4 records for CASEW3 4879 in CASEW2 287 in CASEW1 5066
+There are multiple Wave 4 records for CASEW3 4879 in CASEW2 287 in CASEW1 5066
+There are multiple Wave 4 records for CASEW3 4879 in CASEW2 287 in CASEW1 5066
+There are multiple Wave 3 records for CASEW2 13936 in CASEW1 5592
+There are multiple Wave 3 records for CASEW2 13936 in CASEW1 5592
+There are multiple Wave 3 records for CASEW2 13936 in CASEW1 5592
+There are multiple Wave 4 records for CASEW3 19663 in CASEW2 820 in CASEW1 6323
+There are multiple Wave 4 records for CASEW3 19663 in CASEW2 820 in CASEW1 6323
+There are multiple Wave 4 records for CASEW3 19663 in CASEW2 820 in CASEW1 6323
+There are multiple Wave 5 records for CASEW4 19614 in CASEW3 19859 in CASEW2 18361 in CASEW1 6361
+There are multiple Wave 5 records for CASEW4 19614 in CASEW3 19859 in CASEW2 18361 in CASEW1 6361
+There are multiple Wave 5 records for CASEW4 19614 in CASEW3 19859 in CASEW2 18361 in CASEW1 6361
+There are multiple Wave 4 records for CASEW3 11612 in CASEW2 18063 in CASEW1 5940
+There are multiple Wave 4 records for CASEW3 11612 in CASEW2 18063 in CASEW1 5940
+There are multiple Wave 4 records for CASEW3 11612 in CASEW2 18063 in CASEW1 5940
+There are multiple Wave 5 records for CASEW4 10232 in CASEW3 3004 in CASEW2 14307 in CASEW1 6454
+There are multiple Wave 5 records for CASEW4 10232 in CASEW3 3004 in CASEW2 14307 in CASEW1 6454
+There are multiple Wave 5 records for CASEW4 10232 in CASEW3 3004 in CASEW2 14307 in CASEW1 6454
+There are multiple Wave 5 records for CASEW4 2161 in CASEW3 1595 in CASEW2 1500 in CASEW1 5608
+There are multiple Wave 5 records for CASEW4 2161 in CASEW3 1595 in CASEW2 1500 in CASEW1 5608
+There are multiple Wave 5 records for CASEW4 2161 in CASEW3 1595 in CASEW2 1500 in CASEW1 5608
+There are multiple Wave 4 records for CASEW3 15626 in CASEW2 18832 in CASEW1 6714
+There are multiple Wave 4 records for CASEW3 15626 in CASEW2 18832 in CASEW1 6714
+There are multiple Wave 4 records for CASEW3 15626 in CASEW2 18832 in CASEW1 6714
+There are multiple Wave 4 records for CASEW3 16176 in CASEW2 9515 in CASEW1 7239
+There are multiple Wave 4 records for CASEW3 16176 in CASEW2 9515 in CASEW1 7239
+There are multiple Wave 4 records for CASEW3 16176 in CASEW2 9515 in CASEW1 7239
+There are multiple Wave 2 records for CASEW1 7607
+There are multiple Wave 2 records for CASEW1 7607
+There are multiple Wave 2 records for CASEW1 7607
+There are multiple Wave 2 records for CASEW1 7127
+There are multiple Wave 2 records for CASEW1 7127
+There are multiple Wave 2 records for CASEW1 7127
+There are multiple Wave 3 records for CASEW2 16320 in CASEW1 6653
+There are multiple Wave 3 records for CASEW2 16320 in CASEW1 6653
+There are multiple Wave 3 records for CASEW2 16320 in CASEW1 6653
+There are multiple Wave 3 records for CASEW2 2043 in CASEW1 7818
+There are multiple Wave 3 records for CASEW2 2043 in CASEW1 7818
+There are multiple Wave 3 records for CASEW2 2043 in CASEW1 7818
+There are multiple Wave 5 records for CASEW4 18661 in CASEW3 6517 in CASEW2 17605 in CASEW1 8486
+There are multiple Wave 5 records for CASEW4 18661 in CASEW3 6517 in CASEW2 17605 in CASEW1 8486
+There are multiple Wave 5 records for CASEW4 18661 in CASEW3 6517 in CASEW2 17605 in CASEW1 8486
+There are multiple Wave 3 records for CASEW2 12598 in CASEW1 8664
+There are multiple Wave 3 records for CASEW2 12598 in CASEW1 8664
+There are multiple Wave 3 records for CASEW2 12598 in CASEW1 8664
+There are multiple Wave 3 records for CASEW2 12439 in CASEW1 8860
+There are multiple Wave 3 records for CASEW2 12439 in CASEW1 8860
+There are multiple Wave 3 records for CASEW2 12439 in CASEW1 8860
+There are multiple Wave 2 records for CASEW1 8952
+There are multiple Wave 2 records for CASEW1 8952
+There are multiple Wave 2 records for CASEW1 8952
+There are multiple Wave 2 records for CASEW1 9697
+There are multiple Wave 2 records for CASEW1 9697
+There are multiple Wave 2 records for CASEW1 9697
+There are multiple Wave 2 records for CASEW1 9811
+There are multiple Wave 2 records for CASEW1 9811
+There are multiple Wave 2 records for CASEW1 9811
+There are multiple Wave 2 records for CASEW1 10172
+There are multiple Wave 2 records for CASEW1 10172
+There are multiple Wave 2 records for CASEW1 10172
+There are multiple Wave 5 records for CASEW4 11105 in CASEW3 13346 in CASEW2 12559 in CASEW1 10179
+There are multiple Wave 5 records for CASEW4 11105 in CASEW3 13346 in CASEW2 12559 in CASEW1 10179
+There are multiple Wave 5 records for CASEW4 11105 in CASEW3 13346 in CASEW2 12559 in CASEW1 10179
+There are multiple Wave 4 records for CASEW3 11121 in CASEW2 7245 in CASEW1 10700
+There are multiple Wave 4 records for CASEW3 11121 in CASEW2 7245 in CASEW1 10700
+There are multiple Wave 4 records for CASEW3 11121 in CASEW2 7245 in CASEW1 10700
+There are multiple Wave 3 records for CASEW2 3 in CASEW1 11276
+There are multiple Wave 3 records for CASEW2 3 in CASEW1 11276
+There are multiple Wave 3 records for CASEW2 3 in CASEW1 11276
+There are multiple Wave 2 records for CASEW1 10775
+There are multiple Wave 2 records for CASEW1 10775
+There are multiple Wave 2 records for CASEW1 10775
+There are multiple Wave 5 records for CASEW4 13540 in CASEW3 307 in CASEW2 12956 in CASEW1 11389
+There are multiple Wave 5 records for CASEW4 13540 in CASEW3 307 in CASEW2 12956 in CASEW1 11389
+There are multiple Wave 5 records for CASEW4 13540 in CASEW3 307 in CASEW2 12956 in CASEW1 11389
+There are multiple Wave 3 records for CASEW2 246 in CASEW1 11512
+There are multiple Wave 3 records for CASEW2 246 in CASEW1 11512
+There are multiple Wave 3 records for CASEW2 246 in CASEW1 11512
+There are multiple Wave 5 records for CASEW4 10586 in CASEW3 3535 in CASEW2 1152 in CASEW1 11519
+There are multiple Wave 5 records for CASEW4 10586 in CASEW3 3535 in CASEW2 1152 in CASEW1 11519
+There are multiple Wave 5 records for CASEW4 10586 in CASEW3 3535 in CASEW2 1152 in CASEW1 11519
+There are multiple Wave 3 records for CASEW2 7288 in CASEW1 11025
+There are multiple Wave 3 records for CASEW2 7288 in CASEW1 11025
+There are multiple Wave 3 records for CASEW2 7288 in CASEW1 11025
+There are multiple Wave 3 records for CASEW2 1078 in CASEW1 11072
+There are multiple Wave 3 records for CASEW2 1078 in CASEW1 11072
+There are multiple Wave 3 records for CASEW2 1078 in CASEW1 11072
+There are multiple Wave 5 records for CASEW4 13729 in CASEW3 8983 in CASEW2 9524 in CASEW1 11125
+There are multiple Wave 5 records for CASEW4 13729 in CASEW3 8983 in CASEW2 9524 in CASEW1 11125
+There are multiple Wave 5 records for CASEW4 13729 in CASEW3 8983 in CASEW2 9524 in CASEW1 11125
+There are multiple Wave 3 records for CASEW2 13651 in CASEW1 11715
+There are multiple Wave 3 records for CASEW2 13651 in CASEW1 11715
+There are multiple Wave 3 records for CASEW2 13651 in CASEW1 11715
+There are multiple Wave 2 records for CASEW1 11866
+There are multiple Wave 2 records for CASEW1 11866
+There are multiple Wave 2 records for CASEW1 11866
+There are multiple Wave 4 records for CASEW3 9683 in CASEW2 15592 in CASEW1 13980
+There are multiple Wave 4 records for CASEW3 9683 in CASEW2 15592 in CASEW1 13980
+There are multiple Wave 4 records for CASEW3 9683 in CASEW2 15592 in CASEW1 13980
+There are multiple Wave 5 records for CASEW4 6687 in CASEW3 13190 in CASEW2 18570 in CASEW1 13519
+There are multiple Wave 5 records for CASEW4 6687 in CASEW3 13190 in CASEW2 18570 in CASEW1 13519
+There are multiple Wave 5 records for CASEW4 6687 in CASEW3 13190 in CASEW2 18570 in CASEW1 13519
+There are multiple Wave 4 records for CASEW3 18619 in CASEW2 8448 in CASEW1 13535
+There are multiple Wave 4 records for CASEW3 18619 in CASEW2 8448 in CASEW1 13535
+There are multiple Wave 4 records for CASEW3 18619 in CASEW2 8448 in CASEW1 13535
+There are multiple Wave 5 records for CASEW4 5194 in CASEW3 3183 in CASEW2 7655 in CASEW1 13555
+There are multiple Wave 5 records for CASEW4 5194 in CASEW3 3183 in CASEW2 7655 in CASEW1 13555
+There are multiple Wave 5 records for CASEW4 5194 in CASEW3 3183 in CASEW2 7655 in CASEW1 13555
+There are multiple Wave 2 records for CASEW1 13205
+There are multiple Wave 2 records for CASEW1 13205
+There are multiple Wave 2 records for CASEW1 13205
+There are multiple Wave 3 records for CASEW2 12658 in CASEW1 14857
+There are multiple Wave 3 records for CASEW2 12658 in CASEW1 14857
+There are multiple Wave 3 records for CASEW2 12658 in CASEW1 14857
+There are multiple Wave 2 records for CASEW1 14467
+There are multiple Wave 2 records for CASEW1 14467
+There are multiple Wave 2 records for CASEW1 14467
+There are multiple Wave 5 records for CASEW4 10361 in CASEW3 4003 in CASEW2 6214 in CASEW1 14516
+There are multiple Wave 5 records for CASEW4 10361 in CASEW3 4003 in CASEW2 6214 in CASEW1 14516
+There are multiple Wave 5 records for CASEW4 10361 in CASEW3 4003 in CASEW2 6214 in CASEW1 14516
+There are multiple Wave 4 records for CASEW3 18771 in CASEW2 12719 in CASEW1 15044
+There are multiple Wave 4 records for CASEW3 18771 in CASEW2 12719 in CASEW1 15044
+There are multiple Wave 4 records for CASEW3 18771 in CASEW2 12719 in CASEW1 15044
+There are multiple Wave 3 records for CASEW2 2839 in CASEW1 15064
+There are multiple Wave 3 records for CASEW2 2839 in CASEW1 15064
+There are multiple Wave 3 records for CASEW2 2839 in CASEW1 15064
+There are multiple Wave 4 records for CASEW3 12095 in CASEW2 19562 in CASEW1 14299
+There are multiple Wave 4 records for CASEW3 12095 in CASEW2 19562 in CASEW1 14299
+There are multiple Wave 4 records for CASEW3 12095 in CASEW2 19562 in CASEW1 14299
+There are multiple Wave 2 records for CASEW1 15876
+There are multiple Wave 2 records for CASEW1 15876
+There are multiple Wave 2 records for CASEW1 15876
+There are multiple Wave 2 records for CASEW1 15366
+There are multiple Wave 2 records for CASEW1 15366
+There are multiple Wave 2 records for CASEW1 15366
+There are multiple Wave 2 records for CASEW1 15379
+There are multiple Wave 2 records for CASEW1 15379
+There are multiple Wave 2 records for CASEW1 15379
+There are multiple Wave 4 records for CASEW3 16859 in CASEW2 15616 in CASEW1 15402
+There are multiple Wave 4 records for CASEW3 16859 in CASEW2 15616 in CASEW1 15402
+There are multiple Wave 4 records for CASEW3 16859 in CASEW2 15616 in CASEW1 15402
+There are multiple Wave 3 records for CASEW2 16576 in CASEW1 15184
+There are multiple Wave 3 records for CASEW2 16576 in CASEW1 15184
+There are multiple Wave 3 records for CASEW2 16576 in CASEW1 15184
+There are multiple Wave 2 records for CASEW1 15731
+There are multiple Wave 2 records for CASEW1 15731
+There are multiple Wave 2 records for CASEW1 15731
+There are multiple Wave 3 records for CASEW2 16419 in CASEW1 15259
+There are multiple Wave 3 records for CASEW2 16419 in CASEW1 15259
+There are multiple Wave 3 records for CASEW2 16419 in CASEW1 15259
+There are multiple Wave 2 records for CASEW1 15857
+There are multiple Wave 2 records for CASEW1 15857
+There are multiple Wave 2 records for CASEW1 15857
+There are multiple Wave 5 records for CASEW4 1749 in CASEW3 16885 in CASEW2 365 in CASEW1 16438
+There are multiple Wave 5 records for CASEW4 1749 in CASEW3 16885 in CASEW2 365 in CASEW1 16438
+There are multiple Wave 5 records for CASEW4 1749 in CASEW3 16885 in CASEW2 365 in CASEW1 16438
+There are multiple Wave 5 records for CASEW4 7759 in CASEW3 16484 in CASEW2 11992 in CASEW1 16952
+There are multiple Wave 5 records for CASEW4 7759 in CASEW3 16484 in CASEW2 11992 in CASEW1 16952
+There are multiple Wave 5 records for CASEW4 7759 in CASEW3 16484 in CASEW2 11992 in CASEW1 16952
+There are multiple Wave 3 records for CASEW2 18230 in CASEW1 17012
+There are multiple Wave 3 records for CASEW2 18230 in CASEW1 17012
+There are multiple Wave 3 records for CASEW2 18230 in CASEW1 17012
+There are multiple Wave 4 records for CASEW3 15653 in CASEW2 10618 in CASEW1 16059
+There are multiple Wave 4 records for CASEW3 15653 in CASEW2 10618 in CASEW1 16059
+There are multiple Wave 4 records for CASEW3 15653 in CASEW2 10618 in CASEW1 16059
+There are multiple Wave 2 records for CASEW1 16147
+There are multiple Wave 2 records for CASEW1 16147
+There are multiple Wave 2 records for CASEW1 16147
+There are multiple Wave 2 records for CASEW1 16737
+There are multiple Wave 2 records for CASEW1 16737
+There are multiple Wave 2 records for CASEW1 16737
+There are multiple Wave 4 records for CASEW3 20416 in CASEW2 17366 in CASEW1 16868
+There are multiple Wave 4 records for CASEW3 20416 in CASEW2 17366 in CASEW1 16868
+There are multiple Wave 4 records for CASEW3 20416 in CASEW2 17366 in CASEW1 16868
+There are multiple Wave 4 records for CASEW3 4280 in CASEW2 2231 in CASEW1 16891
+There are multiple Wave 4 records for CASEW3 4280 in CASEW2 2231 in CASEW1 16891
+There are multiple Wave 4 records for CASEW3 4280 in CASEW2 2231 in CASEW1 16891
+There are multiple Wave 2 records for CASEW1 17449
+There are multiple Wave 2 records for CASEW1 17449
+There are multiple Wave 2 records for CASEW1 17449
+There are multiple Wave 4 records for CASEW3 18132 in CASEW2 16643 in CASEW1 18008
+There are multiple Wave 4 records for CASEW3 18132 in CASEW2 16643 in CASEW1 18008
+There are multiple Wave 4 records for CASEW3 18132 in CASEW2 16643 in CASEW1 18008
+There are multiple Wave 4 records for CASEW3 15967 in CASEW2 11372 in CASEW1 18051
+There are multiple Wave 4 records for CASEW3 15967 in CASEW2 11372 in CASEW1 18051
+There are multiple Wave 4 records for CASEW3 15967 in CASEW2 11372 in CASEW1 18051
+There are multiple Wave 5 records for CASEW4 5066 in CASEW3 16787 in CASEW2 16158 in CASEW1 18085
+There are multiple Wave 5 records for CASEW4 5066 in CASEW3 16787 in CASEW2 16158 in CASEW1 18085
+There are multiple Wave 5 records for CASEW4 5066 in CASEW3 16787 in CASEW2 16158 in CASEW1 18085
+There are multiple Wave 5 records for CASEW4 15829 in CASEW3 6667 in CASEW2 17541 in CASEW1 18132
+There are multiple Wave 5 records for CASEW4 15829 in CASEW3 6667 in CASEW2 17541 in CASEW1 18132
+There are multiple Wave 5 records for CASEW4 15829 in CASEW3 6667 in CASEW2 17541 in CASEW1 18132
+There are multiple Wave 3 records for CASEW2 4843 in CASEW1 17390
+There are multiple Wave 3 records for CASEW2 4843 in CASEW1 17390
+There are multiple Wave 3 records for CASEW2 4843 in CASEW1 17390
+There are multiple Wave 5 records for CASEW4 19272 in CASEW3 17100 in CASEW2 2184 in CASEW1 18616
+There are multiple Wave 5 records for CASEW4 19272 in CASEW3 17100 in CASEW2 2184 in CASEW1 18616
+There are multiple Wave 5 records for CASEW4 19272 in CASEW3 17100 in CASEW2 2184 in CASEW1 18616
+There are multiple Wave 5 records for CASEW4 10553 in CASEW3 142 in CASEW2 4129 in CASEW1 18237
+There are multiple Wave 5 records for CASEW4 10553 in CASEW3 142 in CASEW2 4129 in CASEW1 18237
+There are multiple Wave 5 records for CASEW4 10553 in CASEW3 142 in CASEW2 4129 in CASEW1 18237
+There are multiple Wave 4 records for CASEW3 17608 in CASEW2 2856 in CASEW1 18266
+There are multiple Wave 4 records for CASEW3 17608 in CASEW2 2856 in CASEW1 18266
+There are multiple Wave 4 records for CASEW3 17608 in CASEW2 2856 in CASEW1 18266
+There are multiple Wave 4 records for CASEW3 13686 in CASEW2 12009 in CASEW1 18309
+There are multiple Wave 4 records for CASEW3 13686 in CASEW2 12009 in CASEW1 18309
+There are multiple Wave 4 records for CASEW3 13686 in CASEW2 12009 in CASEW1 18309
+There are multiple Wave 5 records for CASEW4 16509 in CASEW3 19831 in CASEW2 8493 in CASEW1 18887
+There are multiple Wave 5 records for CASEW4 16509 in CASEW3 19831 in CASEW2 8493 in CASEW1 18887
+There are multiple Wave 5 records for CASEW4 16509 in CASEW3 19831 in CASEW2 8493 in CASEW1 18887
+There are multiple Wave 3 records for CASEW2 12266 in CASEW1 19694
+There are multiple Wave 3 records for CASEW2 12266 in CASEW1 19694
+There are multiple Wave 3 records for CASEW2 12266 in CASEW1 19694
+There are multiple Wave 5 records for CASEW4 8627 in CASEW3 66 in CASEW2 15293 in CASEW1 19762
+There are multiple Wave 5 records for CASEW4 8627 in CASEW3 66 in CASEW2 15293 in CASEW1 19762
+There are multiple Wave 5 records for CASEW4 8627 in CASEW3 66 in CASEW2 15293 in CASEW1 19762
+There are multiple Wave 2 records for CASEW1 19785
+There are multiple Wave 2 records for CASEW1 19785
+There are multiple Wave 2 records for CASEW1 19785
+There are multiple Wave 5 records for CASEW4 11120 in CASEW3 15127 in CASEW2 12480 in CASEW1 19857
+There are multiple Wave 5 records for CASEW4 11120 in CASEW3 15127 in CASEW2 12480 in CASEW1 19857
+There are multiple Wave 5 records for CASEW4 11120 in CASEW3 15127 in CASEW2 12480 in CASEW1 19857
+There are multiple Wave 3 records for CASEW2 19136 in CASEW1 21159
+There are multiple Wave 3 records for CASEW2 19136 in CASEW1 21159
+There are multiple Wave 3 records for CASEW2 19136 in CASEW1 21159
+There are multiple Wave 2 records for CASEW1 20664
+There are multiple Wave 2 records for CASEW1 20664
+There are multiple Wave 2 records for CASEW1 20664
+There are multiple Wave 5 records for CASEW4 11241 in CASEW3 19538 in CASEW2 1436 in CASEW1 21223
+There are multiple Wave 5 records for CASEW4 11241 in CASEW3 19538 in CASEW2 1436 in CASEW1 21223
+There are multiple Wave 5 records for CASEW4 11241 in CASEW3 19538 in CASEW2 1436 in CASEW1 21223
+There are multiple Wave 4 records for CASEW3 16999 in CASEW2 14160 in CASEW1 20376
+There are multiple Wave 4 records for CASEW3 16999 in CASEW2 14160 in CASEW1 20376
+There are multiple Wave 4 records for CASEW3 16999 in CASEW2 14160 in CASEW1 20376
+There are multiple Wave 5 records for CASEW4 16167 in CASEW3 12094 in CASEW2 14568 in CASEW1 20903
+There are multiple Wave 5 records for CASEW4 16167 in CASEW3 12094 in CASEW2 14568 in CASEW1 20903
+There are multiple Wave 5 records for CASEW4 16167 in CASEW3 12094 in CASEW2 14568 in CASEW1 20903
+There are multiple Wave 4 records for CASEW3 16933 in CASEW2 13073 in CASEW1 20976
+There are multiple Wave 4 records for CASEW3 16933 in CASEW2 13073 in CASEW1 20976
+There are multiple Wave 4 records for CASEW3 16933 in CASEW2 13073 in CASEW1 20976
+There are multiple Wave 5 records for CASEW4 14528 in CASEW3 7956 in CASEW2 7039 in CASEW1 22085
+There are multiple Wave 5 records for CASEW4 14528 in CASEW3 7956 in CASEW2 7039 in CASEW1 22085
+There are multiple Wave 5 records for CASEW4 14528 in CASEW3 7956 in CASEW2 7039 in CASEW1 22085
+There are multiple Wave 2 records for CASEW1 22114
+There are multiple Wave 2 records for CASEW1 22114
+There are multiple Wave 2 records for CASEW1 22114
+There are multiple Wave 2 records for CASEW1 22226
+There are multiple Wave 2 records for CASEW1 22226
+There are multiple Wave 2 records for CASEW1 22226
+There are multiple Wave 2 records for CASEW1 22245
+There are multiple Wave 2 records for CASEW1 22245
+There are multiple Wave 2 records for CASEW1 22245
+There are multiple Wave 3 records for CASEW2 17101 in CASEW1 21303
+There are multiple Wave 3 records for CASEW2 17101 in CASEW1 21303
+There are multiple Wave 3 records for CASEW2 17101 in CASEW1 21303
+There are multiple Wave 3 records for CASEW2 19698 in CASEW1 21446
+There are multiple Wave 3 records for CASEW2 19698 in CASEW1 21446
+There are multiple Wave 3 records for CASEW2 19698 in CASEW1 21446
+There are multiple Wave 3 records for CASEW2 8887 in CASEW1 21971
+There are multiple Wave 3 records for CASEW2 8887 in CASEW1 21971
+There are multiple Wave 3 records for CASEW2 8887 in CASEW1 21971
+There are multiple Wave 3 records for CASEW2 18675 in CASEW1 23226
+There are multiple Wave 3 records for CASEW2 18675 in CASEW1 23226
+There are multiple Wave 3 records for CASEW2 18675 in CASEW1 23226
+There are multiple Wave 2 records for CASEW1 23327
+There are multiple Wave 2 records for CASEW1 23327
+There are multiple Wave 2 records for CASEW1 23327
+There are multiple Wave 2 records for CASEW1 23037
+There are multiple Wave 2 records for CASEW1 23037
+There are multiple Wave 2 records for CASEW1 23037
+There are multiple Wave 5 records for CASEW4 10730 in CASEW3 13797 in CASEW2 1520 in CASEW1 23672
+There are multiple Wave 5 records for CASEW4 10730 in CASEW3 13797 in CASEW2 1520 in CASEW1 23672
+There are multiple Wave 5 records for CASEW4 10730 in CASEW3 13797 in CASEW2 1520 in CASEW1 23672
+There are multiple Wave 3 records for CASEW2 17504 in CASEW1 24272
+There are multiple Wave 3 records for CASEW2 17504 in CASEW1 24272
+There are multiple Wave 3 records for CASEW2 17504 in CASEW1 24272
+There are multiple Wave 2 records for CASEW1 24351
+There are multiple Wave 2 records for CASEW1 24351
+There are multiple Wave 2 records for CASEW1 24351
+There are multiple Wave 5 records for CASEW4 7257 in CASEW3 2817 in CASEW2 2185 in CASEW1 24371
+There are multiple Wave 5 records for CASEW4 7257 in CASEW3 2817 in CASEW2 2185 in CASEW1 24371
+There are multiple Wave 5 records for CASEW4 7257 in CASEW3 2817 in CASEW2 2185 in CASEW1 24371
+There are multiple Wave 5 records for CASEW4 8151 in CASEW3 18014 in CASEW2 16447 in CASEW1 24384
+There are multiple Wave 5 records for CASEW4 8151 in CASEW3 18014 in CASEW2 16447 in CASEW1 24384
+There are multiple Wave 5 records for CASEW4 8151 in CASEW3 18014 in CASEW2 16447 in CASEW1 24384
+There are multiple Wave 2 records for CASEW1 23894
+There are multiple Wave 2 records for CASEW1 23894
+There are multiple Wave 2 records for CASEW1 23894
+There are multiple Wave 4 records for CASEW3 5973 in CASEW2 7975 in CASEW1 23925
+There are multiple Wave 4 records for CASEW3 5973 in CASEW2 7975 in CASEW1 23925
+There are multiple Wave 4 records for CASEW3 5973 in CASEW2 7975 in CASEW1 23925
+There are multiple Wave 4 records for CASEW3 8729 in CASEW2 19263 in CASEW1 25142
+There are multiple Wave 4 records for CASEW3 8729 in CASEW2 19263 in CASEW1 25142
+There are multiple Wave 4 records for CASEW3 8729 in CASEW2 19263 in CASEW1 25142
+There are multiple Wave 5 records for CASEW4 12693 in CASEW3 356 in CASEW2 3798 in CASEW1 24692
+There are multiple Wave 5 records for CASEW4 12693 in CASEW3 356 in CASEW2 3798 in CASEW1 24692
+There are multiple Wave 5 records for CASEW4 12693 in CASEW3 356 in CASEW2 3798 in CASEW1 24692
+There are multiple Wave 5 records for CASEW4 11040 in CASEW3 13590 in CASEW2 18887 in CASEW1 25234
+There are multiple Wave 5 records for CASEW4 11040 in CASEW3 13590 in CASEW2 18887 in CASEW1 25234
+There are multiple Wave 5 records for CASEW4 11040 in CASEW3 13590 in CASEW2 18887 in CASEW1 25234
+There are multiple Wave 5 records for CASEW4 3588 in CASEW3 3002 in CASEW2 16006 in CASEW1 24854
+There are multiple Wave 5 records for CASEW4 3588 in CASEW3 3002 in CASEW2 16006 in CASEW1 24854
+There are multiple Wave 5 records for CASEW4 3588 in CASEW3 3002 in CASEW2 16006 in CASEW1 24854
+There are multiple Wave 3 records for CASEW2 5558 in CASEW1 24960
+There are multiple Wave 3 records for CASEW2 5558 in CASEW1 24960
+There are multiple Wave 3 records for CASEW2 5558 in CASEW1 24960
+There are multiple Wave 3 records for CASEW2 1034 in CASEW1 25983
+There are multiple Wave 3 records for CASEW2 1034 in CASEW1 25983
+There are multiple Wave 3 records for CASEW2 1034 in CASEW1 25983
+There are multiple Wave 5 records for CASEW4 18023 in CASEW3 17247 in CASEW2 15143 in CASEW1 25488
+There are multiple Wave 5 records for CASEW4 18023 in CASEW3 17247 in CASEW2 15143 in CASEW1 25488
+There are multiple Wave 5 records for CASEW4 18023 in CASEW3 17247 in CASEW2 15143 in CASEW1 25488
+There are multiple Wave 2 records for CASEW1 25537
+There are multiple Wave 2 records for CASEW1 25537
+There are multiple Wave 2 records for CASEW1 25537
+There are multiple Wave 3 records for CASEW2 4351 in CASEW1 25579
+There are multiple Wave 3 records for CASEW2 4351 in CASEW1 25579
+There are multiple Wave 3 records for CASEW2 4351 in CASEW1 25579
+There are multiple Wave 4 records for CASEW3 3828 in CASEW2 17432 in CASEW1 26752
+There are multiple Wave 4 records for CASEW3 3828 in CASEW2 17432 in CASEW1 26752
+There are multiple Wave 4 records for CASEW3 3828 in CASEW2 17432 in CASEW1 26752
+There are multiple Wave 4 records for CASEW3 16565 in CASEW2 10306 in CASEW1 27014
+There are multiple Wave 4 records for CASEW3 16565 in CASEW2 10306 in CASEW1 27014
+There are multiple Wave 4 records for CASEW3 16565 in CASEW2 10306 in CASEW1 27014
+There are multiple Wave 4 records for CASEW3 8933 in CASEW2 9423 in CASEW1 26508
+There are multiple Wave 4 records for CASEW3 8933 in CASEW2 9423 in CASEW1 26508
+There are multiple Wave 4 records for CASEW3 8933 in CASEW2 9423 in CASEW1 26508
+There are multiple Wave 4 records for CASEW3 14563 in CASEW2 13241 in CASEW1 26529
+There are multiple Wave 4 records for CASEW3 14563 in CASEW2 13241 in CASEW1 26529
+There are multiple Wave 4 records for CASEW3 14563 in CASEW2 13241 in CASEW1 26529
+There are multiple Wave 5 records for CASEW4 4653 in CASEW3 6232 in CASEW2 15381 in CASEW1 27809
+There are multiple Wave 5 records for CASEW4 4653 in CASEW3 6232 in CASEW2 15381 in CASEW1 27809
+There are multiple Wave 5 records for CASEW4 4653 in CASEW3 6232 in CASEW2 15381 in CASEW1 27809
+There are multiple Wave 5 records for CASEW4 2900 in CASEW3 4605 in CASEW2 15256 in CASEW1 28386
+There are multiple Wave 5 records for CASEW4 2900 in CASEW3 4605 in CASEW2 15256 in CASEW1 28386
+There are multiple Wave 5 records for CASEW4 2900 in CASEW3 4605 in CASEW2 15256 in CASEW1 28386
+There are multiple Wave 5 records for CASEW4 18 in CASEW3 20546 in CASEW2 19257 in CASEW1 27960
+There are multiple Wave 5 records for CASEW4 18 in CASEW3 20546 in CASEW2 19257 in CASEW1 27960
+There are multiple Wave 5 records for CASEW4 18 in CASEW3 20546 in CASEW2 19257 in CASEW1 27960
+There are multiple Wave 3 records for CASEW2 17813 in CASEW1 28061
+There are multiple Wave 3 records for CASEW2 17813 in CASEW1 28061
+There are multiple Wave 3 records for CASEW2 17813 in CASEW1 28061
+There are multiple Wave 3 records for CASEW2 5192 in CASEW1 27635
+There are multiple Wave 3 records for CASEW2 5192 in CASEW1 27635
+There are multiple Wave 3 records for CASEW2 5192 in CASEW1 27635
+There are multiple Wave 5 records for CASEW4 843 in CASEW3 16887 in CASEW2 7916 in CASEW1 29275
+There are multiple Wave 5 records for CASEW4 843 in CASEW3 16887 in CASEW2 7916 in CASEW1 29275
+There are multiple Wave 5 records for CASEW4 843 in CASEW3 16887 in CASEW2 7916 in CASEW1 29275
+There are multiple Wave 4 records for CASEW3 4150 in CASEW2 19711 in CASEW1 28886
+There are multiple Wave 4 records for CASEW3 4150 in CASEW2 19711 in CASEW1 28886
+There are multiple Wave 4 records for CASEW3 4150 in CASEW2 19711 in CASEW1 28886
+There are multiple Wave 2 records for CASEW1 28959
+There are multiple Wave 2 records for CASEW1 28959
+There are multiple Wave 2 records for CASEW1 28959
+There are multiple Wave 3 records for CASEW2 5470 in CASEW1 29498
+There are multiple Wave 3 records for CASEW2 5470 in CASEW1 29498
+There are multiple Wave 3 records for CASEW2 5470 in CASEW1 29498
+There are multiple Wave 3 records for CASEW2 3155 in CASEW1 29520
+There are multiple Wave 3 records for CASEW2 3155 in CASEW1 29520
+There are multiple Wave 3 records for CASEW2 3155 in CASEW1 29520
+There are multiple Wave 4 records for CASEW3 2214 in CASEW2 9912 in CASEW1 29125
+There are multiple Wave 4 records for CASEW3 2214 in CASEW2 9912 in CASEW1 29125
+There are multiple Wave 4 records for CASEW3 2214 in CASEW2 9912 in CASEW1 29125
+There are multiple Wave 5 records for CASEW4 3828 in CASEW3 7461 in CASEW2 2753 in CASEW1 30304
+There are multiple Wave 5 records for CASEW4 3828 in CASEW3 7461 in CASEW2 2753 in CASEW1 30304
+There are multiple Wave 5 records for CASEW4 3828 in CASEW3 7461 in CASEW2 2753 in CASEW1 30304
+There are multiple Wave 5 records for CASEW4 17496 in CASEW3 21006 in CASEW2 19184 in CASEW1 30373
+There are multiple Wave 5 records for CASEW4 17496 in CASEW3 21006 in CASEW2 19184 in CASEW1 30373
+There are multiple Wave 5 records for CASEW4 17496 in CASEW3 21006 in CASEW2 19184 in CASEW1 30373
+There are multiple Wave 3 records for CASEW2 11872 in CASEW1 29868
+There are multiple Wave 3 records for CASEW2 11872 in CASEW1 29868
+There are multiple Wave 3 records for CASEW2 11872 in CASEW1 29868
+There are multiple Wave 4 records for CASEW3 19729 in CASEW2 14925 in CASEW1 29875
+There are multiple Wave 4 records for CASEW3 19729 in CASEW2 14925 in CASEW1 29875
+There are multiple Wave 4 records for CASEW3 19729 in CASEW2 14925 in CASEW1 29875
+There are multiple Wave 3 records for CASEW2 6091 in CASEW1 30584
+There are multiple Wave 3 records for CASEW2 6091 in CASEW1 30584
+There are multiple Wave 3 records for CASEW2 6091 in CASEW1 30584
+There are multiple Wave 5 records for CASEW4 12430 in CASEW3 891 in CASEW2 19376 in CASEW1 30205
+There are multiple Wave 5 records for CASEW4 12430 in CASEW3 891 in CASEW2 19376 in CASEW1 30205
+There are multiple Wave 5 records for CASEW4 12430 in CASEW3 891 in CASEW2 19376 in CASEW1 30205
+7331 Total hholds in all 5 waves.
+7179 Total hholds that are a single hhold over all 5 waves.
+2113 Total hholds that are a single hhold over all 5 waves and have same number of adults in all 5 waves.
+6990 Total hholds that are a single hhold over all 5 waves and have the same basic adult household composition over all 5 waves.
+</Check For Household Records>
+Number of combined records 7331
+Number of collections of combined records 29
+<Check For Household Records>
+There are multiple Wave 5 records for CASEW4 17913 in CASEW3 15005 in CASEW2 17223 in CASEW1 88
+There are multiple Wave 5 records for CASEW4 17913 in CASEW3 15005 in CASEW2 17223 in CASEW1 88
+There are multiple Wave 5 records for CASEW4 17913 in CASEW3 15005 in CASEW2 17223 in CASEW1 88
+There are multiple Wave 3 records for CASEW2 2674 in CASEW1 391
+There are multiple Wave 3 records for CASEW2 2674 in CASEW1 391
+There are multiple Wave 3 records for CASEW2 2674 in CASEW1 391
+There are multiple Wave 4 records for CASEW3 19034 in CASEW2 3480 in CASEW1 960
+There are multiple Wave 4 records for CASEW3 19034 in CASEW2 3480 in CASEW1 960
+There are multiple Wave 4 records for CASEW3 19034 in CASEW2 3480 in CASEW1 960
+There are multiple Wave 2 records for CASEW1 1604
+There are multiple Wave 2 records for CASEW1 1604
+There are multiple Wave 2 records for CASEW1 1604
+There are multiple Wave 3 records for CASEW2 11059 in CASEW1 1782
+There are multiple Wave 3 records for CASEW2 11059 in CASEW1 1782
+There are multiple Wave 3 records for CASEW2 11059 in CASEW1 1782
+There are multiple Wave 5 records for CASEW4 11639 in CASEW3 8189 in CASEW2 16437 in CASEW1 1887
+There are multiple Wave 5 records for CASEW4 11639 in CASEW3 8189 in CASEW2 16437 in CASEW1 1887
+There are multiple Wave 5 records for CASEW4 11639 in CASEW3 8189 in CASEW2 16437 in CASEW1 1887
+There are multiple Wave 5 records for CASEW4 9588 in CASEW3 6172 in CASEW2 9194 in CASEW1 1432
+There are multiple Wave 5 records for CASEW4 9588 in CASEW3 6172 in CASEW2 9194 in CASEW1 1432
+There are multiple Wave 5 records for CASEW4 9588 in CASEW3 6172 in CASEW2 9194 in CASEW1 1432
+There are multiple Wave 5 records for CASEW4 2277 in CASEW3 14963 in CASEW2 7674 in CASEW1 3148
+There are multiple Wave 5 records for CASEW4 2277 in CASEW3 14963 in CASEW2 7674 in CASEW1 3148
+There are multiple Wave 5 records for CASEW4 2277 in CASEW3 14963 in CASEW2 7674 in CASEW1 3148
+There are multiple Wave 2 records for CASEW1 2649
+There are multiple Wave 2 records for CASEW1 2649
+There are multiple Wave 2 records for CASEW1 2649
+There are multiple Wave 3 records for CASEW2 18029 in CASEW1 3218
+There are multiple Wave 3 records for CASEW2 18029 in CASEW1 3218
+There are multiple Wave 3 records for CASEW2 18029 in CASEW1 3218
+There are multiple Wave 2 records for CASEW1 3296
+There are multiple Wave 2 records for CASEW1 3296
+There are multiple Wave 2 records for CASEW1 3296
+There are multiple Wave 3 records for CASEW2 2170 in CASEW1 2274
+There are multiple Wave 3 records for CASEW2 2170 in CASEW1 2274
+There are multiple Wave 3 records for CASEW2 2170 in CASEW1 2274
+There are multiple Wave 2 records for CASEW1 2846
+There are multiple Wave 2 records for CASEW1 2846
+There are multiple Wave 2 records for CASEW1 2846
+There are multiple Wave 5 records for CASEW4 19897 in CASEW3 518 in CASEW2 660 in CASEW1 3390
+There are multiple Wave 5 records for CASEW4 19897 in CASEW3 518 in CASEW2 660 in CASEW1 3390
+There are multiple Wave 5 records for CASEW4 19897 in CASEW3 518 in CASEW2 660 in CASEW1 3390
+There are multiple Wave 5 records for CASEW4 6528 in CASEW3 18588 in CASEW2 11183 in CASEW1 2542
+There are multiple Wave 5 records for CASEW4 6528 in CASEW3 18588 in CASEW2 11183 in CASEW1 2542
+There are multiple Wave 5 records for CASEW4 6528 in CASEW3 18588 in CASEW2 11183 in CASEW1 2542
+There are multiple Wave 2 records for CASEW1 3715
+There are multiple Wave 2 records for CASEW1 3715
+There are multiple Wave 2 records for CASEW1 3715
+There are multiple Wave 5 records for CASEW4 8546 in CASEW3 14996 in CASEW2 12443 in CASEW1 3724
+There are multiple Wave 5 records for CASEW4 8546 in CASEW3 14996 in CASEW2 12443 in CASEW1 3724
+There are multiple Wave 5 records for CASEW4 8546 in CASEW3 14996 in CASEW2 12443 in CASEW1 3724
+There are multiple Wave 3 records for CASEW2 6441 in CASEW1 3727
+There are multiple Wave 3 records for CASEW2 6441 in CASEW1 3727
+There are multiple Wave 3 records for CASEW2 6441 in CASEW1 3727
+There are multiple Wave 5 records for CASEW4 8813 in CASEW3 8753 in CASEW2 19463 in CASEW1 4351
+There are multiple Wave 5 records for CASEW4 8813 in CASEW3 8753 in CASEW2 19463 in CASEW1 4351
+There are multiple Wave 5 records for CASEW4 8813 in CASEW3 8753 in CASEW2 19463 in CASEW1 4351
+There are multiple Wave 3 records for CASEW2 11910 in CASEW1 4416
+There are multiple Wave 3 records for CASEW2 11910 in CASEW1 4416
+There are multiple Wave 3 records for CASEW2 11910 in CASEW1 4416
+There are multiple Wave 4 records for CASEW3 5008 in CASEW2 1639 in CASEW1 4622
+There are multiple Wave 4 records for CASEW3 5008 in CASEW2 1639 in CASEW1 4622
+There are multiple Wave 4 records for CASEW3 5008 in CASEW2 1639 in CASEW1 4622
+There are multiple Wave 4 records for CASEW3 17977 in CASEW2 12023 in CASEW1 5354
+There are multiple Wave 4 records for CASEW3 17977 in CASEW2 12023 in CASEW1 5354
+There are multiple Wave 4 records for CASEW3 17977 in CASEW2 12023 in CASEW1 5354
+There are multiple Wave 3 records for CASEW2 14468 in CASEW1 4843
+There are multiple Wave 3 records for CASEW2 14468 in CASEW1 4843
+There are multiple Wave 3 records for CASEW2 14468 in CASEW1 4843
+There are multiple Wave 5 records for CASEW4 3735 in CASEW3 6108 in CASEW2 7576 in CASEW1 4855
+There are multiple Wave 5 records for CASEW4 3735 in CASEW3 6108 in CASEW2 7576 in CASEW1 4855
+There are multiple Wave 5 records for CASEW4 3735 in CASEW3 6108 in CASEW2 7576 in CASEW1 4855
+There are multiple Wave 3 records for CASEW2 15117 in CASEW1 5410
+There are multiple Wave 3 records for CASEW2 15117 in CASEW1 5410
+There are multiple Wave 3 records for CASEW2 15117 in CASEW1 5410
+There are multiple Wave 4 records for CASEW3 4879 in CASEW2 287 in CASEW1 5066
+There are multiple Wave 4 records for CASEW3 4879 in CASEW2 287 in CASEW1 5066
+There are multiple Wave 4 records for CASEW3 4879 in CASEW2 287 in CASEW1 5066
+There are multiple Wave 3 records for CASEW2 13936 in CASEW1 5592
+There are multiple Wave 3 records for CASEW2 13936 in CASEW1 5592
+There are multiple Wave 3 records for CASEW2 13936 in CASEW1 5592
+There are multiple Wave 4 records for CASEW3 19663 in CASEW2 820 in CASEW1 6323
+There are multiple Wave 4 records for CASEW3 19663 in CASEW2 820 in CASEW1 6323
+There are multiple Wave 4 records for CASEW3 19663 in CASEW2 820 in CASEW1 6323
+There are multiple Wave 5 records for CASEW4 19614 in CASEW3 19859 in CASEW2 18361 in CASEW1 6361
+There are multiple Wave 5 records for CASEW4 19614 in CASEW3 19859 in CASEW2 18361 in CASEW1 6361
+There are multiple Wave 5 records for CASEW4 19614 in CASEW3 19859 in CASEW2 18361 in CASEW1 6361
+There are multiple Wave 4 records for CASEW3 11612 in CASEW2 18063 in CASEW1 5940
+There are multiple Wave 4 records for CASEW3 11612 in CASEW2 18063 in CASEW1 5940
+There are multiple Wave 4 records for CASEW3 11612 in CASEW2 18063 in CASEW1 5940
+There are multiple Wave 5 records for CASEW4 10232 in CASEW3 3004 in CASEW2 14307 in CASEW1 6454
+There are multiple Wave 5 records for CASEW4 10232 in CASEW3 3004 in CASEW2 14307 in CASEW1 6454
+There are multiple Wave 5 records for CASEW4 10232 in CASEW3 3004 in CASEW2 14307 in CASEW1 6454
+There are multiple Wave 5 records for CASEW4 2161 in CASEW3 1595 in CASEW2 1500 in CASEW1 5608
+There are multiple Wave 5 records for CASEW4 2161 in CASEW3 1595 in CASEW2 1500 in CASEW1 5608
+There are multiple Wave 5 records for CASEW4 2161 in CASEW3 1595 in CASEW2 1500 in CASEW1 5608
+There are multiple Wave 4 records for CASEW3 15626 in CASEW2 18832 in CASEW1 6714
+There are multiple Wave 4 records for CASEW3 15626 in CASEW2 18832 in CASEW1 6714
+There are multiple Wave 4 records for CASEW3 15626 in CASEW2 18832 in CASEW1 6714
+There are multiple Wave 4 records for CASEW3 16176 in CASEW2 9515 in CASEW1 7239
+There are multiple Wave 4 records for CASEW3 16176 in CASEW2 9515 in CASEW1 7239
+There are multiple Wave 4 records for CASEW3 16176 in CASEW2 9515 in CASEW1 7239
+There are multiple Wave 2 records for CASEW1 7607
+There are multiple Wave 2 records for CASEW1 7607
+There are multiple Wave 2 records for CASEW1 7607
+There are multiple Wave 2 records for CASEW1 7127
+There are multiple Wave 2 records for CASEW1 7127
+There are multiple Wave 2 records for CASEW1 7127
+There are multiple Wave 3 records for CASEW2 16320 in CASEW1 6653
+There are multiple Wave 3 records for CASEW2 16320 in CASEW1 6653
+There are multiple Wave 3 records for CASEW2 16320 in CASEW1 6653
+There are multiple Wave 3 records for CASEW2 2043 in CASEW1 7818
+There are multiple Wave 3 records for CASEW2 2043 in CASEW1 7818
+There are multiple Wave 3 records for CASEW2 2043 in CASEW1 7818
+There are multiple Wave 5 records for CASEW4 18661 in CASEW3 6517 in CASEW2 17605 in CASEW1 8486
+There are multiple Wave 5 records for CASEW4 18661 in CASEW3 6517 in CASEW2 17605 in CASEW1 8486
+There are multiple Wave 5 records for CASEW4 18661 in CASEW3 6517 in CASEW2 17605 in CASEW1 8486
+There are multiple Wave 3 records for CASEW2 12598 in CASEW1 8664
+There are multiple Wave 3 records for CASEW2 12598 in CASEW1 8664
+There are multiple Wave 3 records for CASEW2 12598 in CASEW1 8664
+There are multiple Wave 3 records for CASEW2 12439 in CASEW1 8860
+There are multiple Wave 3 records for CASEW2 12439 in CASEW1 8860
+There are multiple Wave 3 records for CASEW2 12439 in CASEW1 8860
+There are multiple Wave 2 records for CASEW1 8952
+There are multiple Wave 2 records for CASEW1 8952
+There are multiple Wave 2 records for CASEW1 8952
+There are multiple Wave 2 records for CASEW1 9697
+There are multiple Wave 2 records for CASEW1 9697
+There are multiple Wave 2 records for CASEW1 9697
+There are multiple Wave 2 records for CASEW1 9811
+There are multiple Wave 2 records for CASEW1 9811
+There are multiple Wave 2 records for CASEW1 9811
+There are multiple Wave 2 records for CASEW1 10172
+There are multiple Wave 2 records for CASEW1 10172
+There are multiple Wave 2 records for CASEW1 10172
+There are multiple Wave 5 records for CASEW4 11105 in CASEW3 13346 in CASEW2 12559 in CASEW1 10179
+There are multiple Wave 5 records for CASEW4 11105 in CASEW3 13346 in CASEW2 12559 in CASEW1 10179
+There are multiple Wave 5 records for CASEW4 11105 in CASEW3 13346 in CASEW2 12559 in CASEW1 10179
+There are multiple Wave 4 records for CASEW3 11121 in CASEW2 7245 in CASEW1 10700
+There are multiple Wave 4 records for CASEW3 11121 in CASEW2 7245 in CASEW1 10700
+There are multiple Wave 4 records for CASEW3 11121 in CASEW2 7245 in CASEW1 10700
+There are multiple Wave 3 records for CASEW2 3 in CASEW1 11276
+There are multiple Wave 3 records for CASEW2 3 in CASEW1 11276
+There are multiple Wave 3 records for CASEW2 3 in CASEW1 11276
+There are multiple Wave 2 records for CASEW1 10775
+There are multiple Wave 2 records for CASEW1 10775
+There are multiple Wave 2 records for CASEW1 10775
+There are multiple Wave 5 records for CASEW4 13540 in CASEW3 307 in CASEW2 12956 in CASEW1 11389
+There are multiple Wave 5 records for CASEW4 13540 in CASEW3 307 in CASEW2 12956 in CASEW1 11389
+There are multiple Wave 5 records for CASEW4 13540 in CASEW3 307 in CASEW2 12956 in CASEW1 11389
+There are multiple Wave 3 records for CASEW2 246 in CASEW1 11512
+There are multiple Wave 3 records for CASEW2 246 in CASEW1 11512
+There are multiple Wave 3 records for CASEW2 246 in CASEW1 11512
+There are multiple Wave 5 records for CASEW4 10586 in CASEW3 3535 in CASEW2 1152 in CASEW1 11519
+There are multiple Wave 5 records for CASEW4 10586 in CASEW3 3535 in CASEW2 1152 in CASEW1 11519
+There are multiple Wave 5 records for CASEW4 10586 in CASEW3 3535 in CASEW2 1152 in CASEW1 11519
+There are multiple Wave 3 records for CASEW2 7288 in CASEW1 11025
+There are multiple Wave 3 records for CASEW2 7288 in CASEW1 11025
+There are multiple Wave 3 records for CASEW2 7288 in CASEW1 11025
+There are multiple Wave 3 records for CASEW2 1078 in CASEW1 11072
+There are multiple Wave 3 records for CASEW2 1078 in CASEW1 11072
+There are multiple Wave 3 records for CASEW2 1078 in CASEW1 11072
+There are multiple Wave 5 records for CASEW4 13729 in CASEW3 8983 in CASEW2 9524 in CASEW1 11125
+There are multiple Wave 5 records for CASEW4 13729 in CASEW3 8983 in CASEW2 9524 in CASEW1 11125
+There are multiple Wave 5 records for CASEW4 13729 in CASEW3 8983 in CASEW2 9524 in CASEW1 11125
+There are multiple Wave 3 records for CASEW2 13651 in CASEW1 11715
+There are multiple Wave 3 records for CASEW2 13651 in CASEW1 11715
+There are multiple Wave 3 records for CASEW2 13651 in CASEW1 11715
+There are multiple Wave 2 records for CASEW1 11866
+There are multiple Wave 2 records for CASEW1 11866
+There are multiple Wave 2 records for CASEW1 11866
+There are multiple Wave 4 records for CASEW3 9683 in CASEW2 15592 in CASEW1 13980
+There are multiple Wave 4 records for CASEW3 9683 in CASEW2 15592 in CASEW1 13980
+There are multiple Wave 4 records for CASEW3 9683 in CASEW2 15592 in CASEW1 13980
+There are multiple Wave 5 records for CASEW4 6687 in CASEW3 13190 in CASEW2 18570 in CASEW1 13519
+There are multiple Wave 5 records for CASEW4 6687 in CASEW3 13190 in CASEW2 18570 in CASEW1 13519
+There are multiple Wave 5 records for CASEW4 6687 in CASEW3 13190 in CASEW2 18570 in CASEW1 13519
+There are multiple Wave 4 records for CASEW3 18619 in CASEW2 8448 in CASEW1 13535
+There are multiple Wave 4 records for CASEW3 18619 in CASEW2 8448 in CASEW1 13535
+There are multiple Wave 4 records for CASEW3 18619 in CASEW2 8448 in CASEW1 13535
+There are multiple Wave 5 records for CASEW4 5194 in CASEW3 3183 in CASEW2 7655 in CASEW1 13555
+There are multiple Wave 5 records for CASEW4 5194 in CASEW3 3183 in CASEW2 7655 in CASEW1 13555
+There are multiple Wave 5 records for CASEW4 5194 in CASEW3 3183 in CASEW2 7655 in CASEW1 13555
+There are multiple Wave 2 records for CASEW1 13205
+There are multiple Wave 2 records for CASEW1 13205
+There are multiple Wave 2 records for CASEW1 13205
+There are multiple Wave 3 records for CASEW2 12658 in CASEW1 14857
+There are multiple Wave 3 records for CASEW2 12658 in CASEW1 14857
+There are multiple Wave 3 records for CASEW2 12658 in CASEW1 14857
+There are multiple Wave 2 records for CASEW1 14467
+There are multiple Wave 2 records for CASEW1 14467
+There are multiple Wave 2 records for CASEW1 14467
+There are multiple Wave 5 records for CASEW4 10361 in CASEW3 4003 in CASEW2 6214 in CASEW1 14516
+There are multiple Wave 5 records for CASEW4 10361 in CASEW3 4003 in CASEW2 6214 in CASEW1 14516
+There are multiple Wave 5 records for CASEW4 10361 in CASEW3 4003 in CASEW2 6214 in CASEW1 14516
+There are multiple Wave 4 records for CASEW3 18771 in CASEW2 12719 in CASEW1 15044
+There are multiple Wave 4 records for CASEW3 18771 in CASEW2 12719 in CASEW1 15044
+There are multiple Wave 4 records for CASEW3 18771 in CASEW2 12719 in CASEW1 15044
+There are multiple Wave 3 records for CASEW2 2839 in CASEW1 15064
+There are multiple Wave 3 records for CASEW2 2839 in CASEW1 15064
+There are multiple Wave 3 records for CASEW2 2839 in CASEW1 15064
+There are multiple Wave 4 records for CASEW3 12095 in CASEW2 19562 in CASEW1 14299
+There are multiple Wave 4 records for CASEW3 12095 in CASEW2 19562 in CASEW1 14299
+There are multiple Wave 4 records for CASEW3 12095 in CASEW2 19562 in CASEW1 14299
+There are multiple Wave 2 records for CASEW1 15876
+There are multiple Wave 2 records for CASEW1 15876
+There are multiple Wave 2 records for CASEW1 15876
+There are multiple Wave 2 records for CASEW1 15366
+There are multiple Wave 2 records for CASEW1 15366
+There are multiple Wave 2 records for CASEW1 15366
+There are multiple Wave 2 records for CASEW1 15379
+There are multiple Wave 2 records for CASEW1 15379
+There are multiple Wave 2 records for CASEW1 15379
+There are multiple Wave 4 records for CASEW3 16859 in CASEW2 15616 in CASEW1 15402
+There are multiple Wave 4 records for CASEW3 16859 in CASEW2 15616 in CASEW1 15402
+There are multiple Wave 4 records for CASEW3 16859 in CASEW2 15616 in CASEW1 15402
+There are multiple Wave 3 records for CASEW2 16576 in CASEW1 15184
+There are multiple Wave 3 records for CASEW2 16576 in CASEW1 15184
+There are multiple Wave 3 records for CASEW2 16576 in CASEW1 15184
+There are multiple Wave 2 records for CASEW1 15731
+There are multiple Wave 2 records for CASEW1 15731
+There are multiple Wave 2 records for CASEW1 15731
+There are multiple Wave 3 records for CASEW2 16419 in CASEW1 15259
+There are multiple Wave 3 records for CASEW2 16419 in CASEW1 15259
+There are multiple Wave 3 records for CASEW2 16419 in CASEW1 15259
+There are multiple Wave 2 records for CASEW1 15857
+There are multiple Wave 2 records for CASEW1 15857
+There are multiple Wave 2 records for CASEW1 15857
+There are multiple Wave 5 records for CASEW4 1749 in CASEW3 16885 in CASEW2 365 in CASEW1 16438
+There are multiple Wave 5 records for CASEW4 1749 in CASEW3 16885 in CASEW2 365 in CASEW1 16438
+There are multiple Wave 5 records for CASEW4 1749 in CASEW3 16885 in CASEW2 365 in CASEW1 16438
+There are multiple Wave 5 records for CASEW4 7759 in CASEW3 16484 in CASEW2 11992 in CASEW1 16952
+There are multiple Wave 5 records for CASEW4 7759 in CASEW3 16484 in CASEW2 11992 in CASEW1 16952
+There are multiple Wave 5 records for CASEW4 7759 in CASEW3 16484 in CASEW2 11992 in CASEW1 16952
+There are multiple Wave 3 records for CASEW2 18230 in CASEW1 17012
+There are multiple Wave 3 records for CASEW2 18230 in CASEW1 17012
+There are multiple Wave 3 records for CASEW2 18230 in CASEW1 17012
+There are multiple Wave 4 records for CASEW3 15653 in CASEW2 10618 in CASEW1 16059
+There are multiple Wave 4 records for CASEW3 15653 in CASEW2 10618 in CASEW1 16059
+There are multiple Wave 4 records for CASEW3 15653 in CASEW2 10618 in CASEW1 16059
+There are multiple Wave 2 records for CASEW1 16147
+There are multiple Wave 2 records for CASEW1 16147
+There are multiple Wave 2 records for CASEW1 16147
+There are multiple Wave 2 records for CASEW1 16737
+There are multiple Wave 2 records for CASEW1 16737
+There are multiple Wave 2 records for CASEW1 16737
+There are multiple Wave 4 records for CASEW3 20416 in CASEW2 17366 in CASEW1 16868
+There are multiple Wave 4 records for CASEW3 20416 in CASEW2 17366 in CASEW1 16868
+There are multiple Wave 4 records for CASEW3 20416 in CASEW2 17366 in CASEW1 16868
+There are multiple Wave 4 records for CASEW3 4280 in CASEW2 2231 in CASEW1 16891
+There are multiple Wave 4 records for CASEW3 4280 in CASEW2 2231 in CASEW1 16891
+There are multiple Wave 4 records for CASEW3 4280 in CASEW2 2231 in CASEW1 16891
+There are multiple Wave 2 records for CASEW1 17449
+There are multiple Wave 2 records for CASEW1 17449
+There are multiple Wave 2 records for CASEW1 17449
+There are multiple Wave 4 records for CASEW3 18132 in CASEW2 16643 in CASEW1 18008
+There are multiple Wave 4 records for CASEW3 18132 in CASEW2 16643 in CASEW1 18008
+There are multiple Wave 4 records for CASEW3 18132 in CASEW2 16643 in CASEW1 18008
+There are multiple Wave 4 records for CASEW3 15967 in CASEW2 11372 in CASEW1 18051
+There are multiple Wave 4 records for CASEW3 15967 in CASEW2 11372 in CASEW1 18051
+There are multiple Wave 4 records for CASEW3 15967 in CASEW2 11372 in CASEW1 18051
+There are multiple Wave 5 records for CASEW4 5066 in CASEW3 16787 in CASEW2 16158 in CASEW1 18085
+There are multiple Wave 5 records for CASEW4 5066 in CASEW3 16787 in CASEW2 16158 in CASEW1 18085
+There are multiple Wave 5 records for CASEW4 5066 in CASEW3 16787 in CASEW2 16158 in CASEW1 18085
+There are multiple Wave 5 records for CASEW4 15829 in CASEW3 6667 in CASEW2 17541 in CASEW1 18132
+There are multiple Wave 5 records for CASEW4 15829 in CASEW3 6667 in CASEW2 17541 in CASEW1 18132
+There are multiple Wave 5 records for CASEW4 15829 in CASEW3 6667 in CASEW2 17541 in CASEW1 18132
+There are multiple Wave 3 records for CASEW2 4843 in CASEW1 17390
+There are multiple Wave 3 records for CASEW2 4843 in CASEW1 17390
+There are multiple Wave 3 records for CASEW2 4843 in CASEW1 17390
+There are multiple Wave 5 records for CASEW4 19272 in CASEW3 17100 in CASEW2 2184 in CASEW1 18616
+There are multiple Wave 5 records for CASEW4 19272 in CASEW3 17100 in CASEW2 2184 in CASEW1 18616
+There are multiple Wave 5 records for CASEW4 19272 in CASEW3 17100 in CASEW2 2184 in CASEW1 18616
+There are multiple Wave 5 records for CASEW4 10553 in CASEW3 142 in CASEW2 4129 in CASEW1 18237
+There are multiple Wave 5 records for CASEW4 10553 in CASEW3 142 in CASEW2 4129 in CASEW1 18237
+There are multiple Wave 5 records for CASEW4 10553 in CASEW3 142 in CASEW2 4129 in CASEW1 18237
+There are multiple Wave 4 records for CASEW3 17608 in CASEW2 2856 in CASEW1 18266
+There are multiple Wave 4 records for CASEW3 17608 in CASEW2 2856 in CASEW1 18266
+There are multiple Wave 4 records for CASEW3 17608 in CASEW2 2856 in CASEW1 18266
+There are multiple Wave 4 records for CASEW3 13686 in CASEW2 12009 in CASEW1 18309
+There are multiple Wave 4 records for CASEW3 13686 in CASEW2 12009 in CASEW1 18309
+There are multiple Wave 4 records for CASEW3 13686 in CASEW2 12009 in CASEW1 18309
+There are multiple Wave 5 records for CASEW4 16509 in CASEW3 19831 in CASEW2 8493 in CASEW1 18887
+There are multiple Wave 5 records for CASEW4 16509 in CASEW3 19831 in CASEW2 8493 in CASEW1 18887
+There are multiple Wave 5 records for CASEW4 16509 in CASEW3 19831 in CASEW2 8493 in CASEW1 18887
+There are multiple Wave 3 records for CASEW2 12266 in CASEW1 19694
+There are multiple Wave 3 records for CASEW2 12266 in CASEW1 19694
+There are multiple Wave 3 records for CASEW2 12266 in CASEW1 19694
+There are multiple Wave 5 records for CASEW4 8627 in CASEW3 66 in CASEW2 15293 in CASEW1 19762
+There are multiple Wave 5 records for CASEW4 8627 in CASEW3 66 in CASEW2 15293 in CASEW1 19762
+There are multiple Wave 5 records for CASEW4 8627 in CASEW3 66 in CASEW2 15293 in CASEW1 19762
+There are multiple Wave 2 records for CASEW1 19785
+There are multiple Wave 2 records for CASEW1 19785
+There are multiple Wave 2 records for CASEW1 19785
+There are multiple Wave 5 records for CASEW4 11120 in CASEW3 15127 in CASEW2 12480 in CASEW1 19857
+There are multiple Wave 5 records for CASEW4 11120 in CASEW3 15127 in CASEW2 12480 in CASEW1 19857
+There are multiple Wave 5 records for CASEW4 11120 in CASEW3 15127 in CASEW2 12480 in CASEW1 19857
+There are multiple Wave 3 records for CASEW2 19136 in CASEW1 21159
+There are multiple Wave 3 records for CASEW2 19136 in CASEW1 21159
+There are multiple Wave 3 records for CASEW2 19136 in CASEW1 21159
+There are multiple Wave 2 records for CASEW1 20664
+There are multiple Wave 2 records for CASEW1 20664
+There are multiple Wave 2 records for CASEW1 20664
+There are multiple Wave 5 records for CASEW4 11241 in CASEW3 19538 in CASEW2 1436 in CASEW1 21223
+There are multiple Wave 5 records for CASEW4 11241 in CASEW3 19538 in CASEW2 1436 in CASEW1 21223
+There are multiple Wave 5 records for CASEW4 11241 in CASEW3 19538 in CASEW2 1436 in CASEW1 21223
+There are multiple Wave 4 records for CASEW3 16999 in CASEW2 14160 in CASEW1 20376
+There are multiple Wave 4 records for CASEW3 16999 in CASEW2 14160 in CASEW1 20376
+There are multiple Wave 4 records for CASEW3 16999 in CASEW2 14160 in CASEW1 20376
+There are multiple Wave 5 records for CASEW4 16167 in CASEW3 12094 in CASEW2 14568 in CASEW1 20903
+There are multiple Wave 5 records for CASEW4 16167 in CASEW3 12094 in CASEW2 14568 in CASEW1 20903
+There are multiple Wave 5 records for CASEW4 16167 in CASEW3 12094 in CASEW2 14568 in CASEW1 20903
+There are multiple Wave 4 records for CASEW3 16933 in CASEW2 13073 in CASEW1 20976
+There are multiple Wave 4 records for CASEW3 16933 in CASEW2 13073 in CASEW1 20976
+There are multiple Wave 4 records for CASEW3 16933 in CASEW2 13073 in CASEW1 20976
+There are multiple Wave 5 records for CASEW4 14528 in CASEW3 7956 in CASEW2 7039 in CASEW1 22085
+There are multiple Wave 5 records for CASEW4 14528 in CASEW3 7956 in CASEW2 7039 in CASEW1 22085
+There are multiple Wave 5 records for CASEW4 14528 in CASEW3 7956 in CASEW2 7039 in CASEW1 22085
+There are multiple Wave 2 records for CASEW1 22114
+There are multiple Wave 2 records for CASEW1 22114
+There are multiple Wave 2 records for CASEW1 22114
+There are multiple Wave 2 records for CASEW1 22226
+There are multiple Wave 2 records for CASEW1 22226
+There are multiple Wave 2 records for CASEW1 22226
+There are multiple Wave 2 records for CASEW1 22245
+There are multiple Wave 2 records for CASEW1 22245
+There are multiple Wave 2 records for CASEW1 22245
+There are multiple Wave 3 records for CASEW2 17101 in CASEW1 21303
+There are multiple Wave 3 records for CASEW2 17101 in CASEW1 21303
+There are multiple Wave 3 records for CASEW2 17101 in CASEW1 21303
+There are multiple Wave 3 records for CASEW2 19698 in CASEW1 21446
+There are multiple Wave 3 records for CASEW2 19698 in CASEW1 21446
+There are multiple Wave 3 records for CASEW2 19698 in CASEW1 21446
+There are multiple Wave 3 records for CASEW2 8887 in CASEW1 21971
+There are multiple Wave 3 records for CASEW2 8887 in CASEW1 21971
+There are multiple Wave 3 records for CASEW2 8887 in CASEW1 21971
+There are multiple Wave 3 records for CASEW2 18675 in CASEW1 23226
+There are multiple Wave 3 records for CASEW2 18675 in CASEW1 23226
+There are multiple Wave 3 records for CASEW2 18675 in CASEW1 23226
+There are multiple Wave 2 records for CASEW1 23327
+There are multiple Wave 2 records for CASEW1 23327
+There are multiple Wave 2 records for CASEW1 23327
+There are multiple Wave 2 records for CASEW1 23037
+There are multiple Wave 2 records for CASEW1 23037
+There are multiple Wave 2 records for CASEW1 23037
+There are multiple Wave 5 records for CASEW4 10730 in CASEW3 13797 in CASEW2 1520 in CASEW1 23672
+There are multiple Wave 5 records for CASEW4 10730 in CASEW3 13797 in CASEW2 1520 in CASEW1 23672
+There are multiple Wave 5 records for CASEW4 10730 in CASEW3 13797 in CASEW2 1520 in CASEW1 23672
+There are multiple Wave 3 records for CASEW2 17504 in CASEW1 24272
+There are multiple Wave 3 records for CASEW2 17504 in CASEW1 24272
+There are multiple Wave 3 records for CASEW2 17504 in CASEW1 24272
+There are multiple Wave 2 records for CASEW1 24351
+There are multiple Wave 2 records for CASEW1 24351
+There are multiple Wave 2 records for CASEW1 24351
+There are multiple Wave 5 records for CASEW4 7257 in CASEW3 2817 in CASEW2 2185 in CASEW1 24371
+There are multiple Wave 5 records for CASEW4 7257 in CASEW3 2817 in CASEW2 2185 in CASEW1 24371
+There are multiple Wave 5 records for CASEW4 7257 in CASEW3 2817 in CASEW2 2185 in CASEW1 24371
+There are multiple Wave 5 records for CASEW4 8151 in CASEW3 18014 in CASEW2 16447 in CASEW1 24384
+There are multiple Wave 5 records for CASEW4 8151 in CASEW3 18014 in CASEW2 16447 in CASEW1 24384
+There are multiple Wave 5 records for CASEW4 8151 in CASEW3 18014 in CASEW2 16447 in CASEW1 24384
+There are multiple Wave 2 records for CASEW1 23894
+There are multiple Wave 2 records for CASEW1 23894
+There are multiple Wave 2 records for CASEW1 23894
+There are multiple Wave 4 records for CASEW3 5973 in CASEW2 7975 in CASEW1 23925
+There are multiple Wave 4 records for CASEW3 5973 in CASEW2 7975 in CASEW1 23925
+There are multiple Wave 4 records for CASEW3 5973 in CASEW2 7975 in CASEW1 23925
+There are multiple Wave 4 records for CASEW3 8729 in CASEW2 19263 in CASEW1 25142
+There are multiple Wave 4 records for CASEW3 8729 in CASEW2 19263 in CASEW1 25142
+There are multiple Wave 4 records for CASEW3 8729 in CASEW2 19263 in CASEW1 25142
+There are multiple Wave 5 records for CASEW4 12693 in CASEW3 356 in CASEW2 3798 in CASEW1 24692
+There are multiple Wave 5 records for CASEW4 12693 in CASEW3 356 in CASEW2 3798 in CASEW1 24692
+There are multiple Wave 5 records for CASEW4 12693 in CASEW3 356 in CASEW2 3798 in CASEW1 24692
+There are multiple Wave 5 records for CASEW4 11040 in CASEW3 13590 in CASEW2 18887 in CASEW1 25234
+There are multiple Wave 5 records for CASEW4 11040 in CASEW3 13590 in CASEW2 18887 in CASEW1 25234
+There are multiple Wave 5 records for CASEW4 11040 in CASEW3 13590 in CASEW2 18887 in CASEW1 25234
+There are multiple Wave 5 records for CASEW4 3588 in CASEW3 3002 in CASEW2 16006 in CASEW1 24854
+There are multiple Wave 5 records for CASEW4 3588 in CASEW3 3002 in CASEW2 16006 in CASEW1 24854
+There are multiple Wave 5 records for CASEW4 3588 in CASEW3 3002 in CASEW2 16006 in CASEW1 24854
+There are multiple Wave 3 records for CASEW2 5558 in CASEW1 24960
+There are multiple Wave 3 records for CASEW2 5558 in CASEW1 24960
+There are multiple Wave 3 records for CASEW2 5558 in CASEW1 24960
+There are multiple Wave 3 records for CASEW2 1034 in CASEW1 25983
+There are multiple Wave 3 records for CASEW2 1034 in CASEW1 25983
+There are multiple Wave 3 records for CASEW2 1034 in CASEW1 25983
+There are multiple Wave 5 records for CASEW4 18023 in CASEW3 17247 in CASEW2 15143 in CASEW1 25488
+There are multiple Wave 5 records for CASEW4 18023 in CASEW3 17247 in CASEW2 15143 in CASEW1 25488
+There are multiple Wave 5 records for CASEW4 18023 in CASEW3 17247 in CASEW2 15143 in CASEW1 25488
+There are multiple Wave 2 records for CASEW1 25537
+There are multiple Wave 2 records for CASEW1 25537
+There are multiple Wave 2 records for CASEW1 25537
+There are multiple Wave 3 records for CASEW2 4351 in CASEW1 25579
+There are multiple Wave 3 records for CASEW2 4351 in CASEW1 25579
+There are multiple Wave 3 records for CASEW2 4351 in CASEW1 25579
+There are multiple Wave 4 records for CASEW3 3828 in CASEW2 17432 in CASEW1 26752
+There are multiple Wave 4 records for CASEW3 3828 in CASEW2 17432 in CASEW1 26752
+There are multiple Wave 4 records for CASEW3 3828 in CASEW2 17432 in CASEW1 26752
+There are multiple Wave 4 records for CASEW3 16565 in CASEW2 10306 in CASEW1 27014
+There are multiple Wave 4 records for CASEW3 16565 in CASEW2 10306 in CASEW1 27014
+There are multiple Wave 4 records for CASEW3 16565 in CASEW2 10306 in CASEW1 27014
+There are multiple Wave 4 records for CASEW3 8933 in CASEW2 9423 in CASEW1 26508
+There are multiple Wave 4 records for CASEW3 8933 in CASEW2 9423 in CASEW1 26508
+There are multiple Wave 4 records for CASEW3 8933 in CASEW2 9423 in CASEW1 26508
+There are multiple Wave 4 records for CASEW3 14563 in CASEW2 13241 in CASEW1 26529
+There are multiple Wave 4 records for CASEW3 14563 in CASEW2 13241 in CASEW1 26529
+There are multiple Wave 4 records for CASEW3 14563 in CASEW2 13241 in CASEW1 26529
+There are multiple Wave 5 records for CASEW4 4653 in CASEW3 6232 in CASEW2 15381 in CASEW1 27809
+There are multiple Wave 5 records for CASEW4 4653 in CASEW3 6232 in CASEW2 15381 in CASEW1 27809
+There are multiple Wave 5 records for CASEW4 4653 in CASEW3 6232 in CASEW2 15381 in CASEW1 27809
+There are multiple Wave 5 records for CASEW4 2900 in CASEW3 4605 in CASEW2 15256 in CASEW1 28386
+There are multiple Wave 5 records for CASEW4 2900 in CASEW3 4605 in CASEW2 15256 in CASEW1 28386
+There are multiple Wave 5 records for CASEW4 2900 in CASEW3 4605 in CASEW2 15256 in CASEW1 28386
+There are multiple Wave 5 records for CASEW4 18 in CASEW3 20546 in CASEW2 19257 in CASEW1 27960
+There are multiple Wave 5 records for CASEW4 18 in CASEW3 20546 in CASEW2 19257 in CASEW1 27960
+There are multiple Wave 5 records for CASEW4 18 in CASEW3 20546 in CASEW2 19257 in CASEW1 27960
+There are multiple Wave 3 records for CASEW2 17813 in CASEW1 28061
+There are multiple Wave 3 records for CASEW2 17813 in CASEW1 28061
+There are multiple Wave 3 records for CASEW2 17813 in CASEW1 28061
+There are multiple Wave 3 records for CASEW2 5192 in CASEW1 27635
+There are multiple Wave 3 records for CASEW2 5192 in CASEW1 27635
+There are multiple Wave 3 records for CASEW2 5192 in CASEW1 27635
+There are multiple Wave 5 records for CASEW4 843 in CASEW3 16887 in CASEW2 7916 in CASEW1 29275
+There are multiple Wave 5 records for CASEW4 843 in CASEW3 16887 in CASEW2 7916 in CASEW1 29275
+There are multiple Wave 5 records for CASEW4 843 in CASEW3 16887 in CASEW2 7916 in CASEW1 29275
+There are multiple Wave 4 records for CASEW3 4150 in CASEW2 19711 in CASEW1 28886
+There are multiple Wave 4 records for CASEW3 4150 in CASEW2 19711 in CASEW1 28886
+There are multiple Wave 4 records for CASEW3 4150 in CASEW2 19711 in CASEW1 28886
+There are multiple Wave 2 records for CASEW1 28959
+There are multiple Wave 2 records for CASEW1 28959
+There are multiple Wave 2 records for CASEW1 28959
+There are multiple Wave 3 records for CASEW2 5470 in CASEW1 29498
+There are multiple Wave 3 records for CASEW2 5470 in CASEW1 29498
+There are multiple Wave 3 records for CASEW2 5470 in CASEW1 29498
+There are multiple Wave 3 records for CASEW2 3155 in CASEW1 29520
+There are multiple Wave 3 records for CASEW2 3155 in CASEW1 29520
+There are multiple Wave 3 records for CASEW2 3155 in CASEW1 29520
+There are multiple Wave 4 records for CASEW3 2214 in CASEW2 9912 in CASEW1 29125
+There are multiple Wave 4 records for CASEW3 2214 in CASEW2 9912 in CASEW1 29125
+There are multiple Wave 4 records for CASEW3 2214 in CASEW2 9912 in CASEW1 29125
+There are multiple Wave 5 records for CASEW4 3828 in CASEW3 7461 in CASEW2 2753 in CASEW1 30304
+There are multiple Wave 5 records for CASEW4 3828 in CASEW3 7461 in CASEW2 2753 in CASEW1 30304
+There are multiple Wave 5 records for CASEW4 3828 in CASEW3 7461 in CASEW2 2753 in CASEW1 30304
+There are multiple Wave 5 records for CASEW4 17496 in CASEW3 21006 in CASEW2 19184 in CASEW1 30373
+There are multiple Wave 5 records for CASEW4 17496 in CASEW3 21006 in CASEW2 19184 in CASEW1 30373
+There are multiple Wave 5 records for CASEW4 17496 in CASEW3 21006 in CASEW2 19184 in CASEW1 30373
+There are multiple Wave 3 records for CASEW2 11872 in CASEW1 29868
+There are multiple Wave 3 records for CASEW2 11872 in CASEW1 29868
+There are multiple Wave 3 records for CASEW2 11872 in CASEW1 29868
+There are multiple Wave 4 records for CASEW3 19729 in CASEW2 14925 in CASEW1 29875
+There are multiple Wave 4 records for CASEW3 19729 in CASEW2 14925 in CASEW1 29875
+There are multiple Wave 4 records for CASEW3 19729 in CASEW2 14925 in CASEW1 29875
+There are multiple Wave 3 records for CASEW2 6091 in CASEW1 30584
+There are multiple Wave 3 records for CASEW2 6091 in CASEW1 30584
+There are multiple Wave 3 records for CASEW2 6091 in CASEW1 30584
+There are multiple Wave 5 records for CASEW4 12430 in CASEW3 891 in CASEW2 19376 in CASEW1 30205
+There are multiple Wave 5 records for CASEW4 12430 in CASEW3 891 in CASEW2 19376 in CASEW1 30205
+There are multiple Wave 5 records for CASEW4 12430 in CASEW3 891 in CASEW2 19376 in CASEW1 30205
+7331 Total hholds in all 5 waves.
+7179 Total hholds that are a single hhold over all 5 waves.
+2113 Total hholds that are a single hhold over all 5 waves and have same number of adults in all 5 waves.
+6990 Total hholds that are a single hhold over all 5 waves and have the same basic adult household composition over all 5 waves.
+</Check For Household Records>
+Number of combined records 7331
+Number of collections of combined records 29
+<Check For Household Records>
+There are multiple Wave 5 records for CASEW4 17913 in CASEW3 15005 in CASEW2 17223 in CASEW1 88
+There are multiple Wave 5 records for CASEW4 17913 in CASEW3 15005 in CASEW2 17223 in CASEW1 88
+There are multiple Wave 5 records for CASEW4 17913 in CASEW3 15005 in CASEW2 17223 in CASEW1 88
+There are multiple Wave 3 records for CASEW2 2674 in CASEW1 391
+There are multiple Wave 3 records for CASEW2 2674 in CASEW1 391
+There are multiple Wave 3 records for CASEW2 2674 in CASEW1 391
+There are multiple Wave 4 records for CASEW3 19034 in CASEW2 3480 in CASEW1 960
+There are multiple Wave 4 records for CASEW3 19034 in CASEW2 3480 in CASEW1 960
+There are multiple Wave 4 records for CASEW3 19034 in CASEW2 3480 in CASEW1 960
+There are multiple Wave 2 records for CASEW1 1604
+There are multiple Wave 2 records for CASEW1 1604
+There are multiple Wave 2 records for CASEW1 1604
+There are multiple Wave 3 records for CASEW2 11059 in CASEW1 1782
+There are multiple Wave 3 records for CASEW2 11059 in CASEW1 1782
+There are multiple Wave 3 records for CASEW2 11059 in CASEW1 1782
+There are multiple Wave 5 records for CASEW4 11639 in CASEW3 8189 in CASEW2 16437 in CASEW1 1887
+There are multiple Wave 5 records for CASEW4 11639 in CASEW3 8189 in CASEW2 16437 in CASEW1 1887
+There are multiple Wave 5 records for CASEW4 11639 in CASEW3 8189 in CASEW2 16437 in CASEW1 1887
+There are multiple Wave 5 records for CASEW4 9588 in CASEW3 6172 in CASEW2 9194 in CASEW1 1432
+There are multiple Wave 5 records for CASEW4 9588 in CASEW3 6172 in CASEW2 9194 in CASEW1 1432
+There are multiple Wave 5 records for CASEW4 9588 in CASEW3 6172 in CASEW2 9194 in CASEW1 1432
+There are multiple Wave 5 records for CASEW4 2277 in CASEW3 14963 in CASEW2 7674 in CASEW1 3148
+There are multiple Wave 5 records for CASEW4 2277 in CASEW3 14963 in CASEW2 7674 in CASEW1 3148
+There are multiple Wave 5 records for CASEW4 2277 in CASEW3 14963 in CASEW2 7674 in CASEW1 3148
+There are multiple Wave 2 records for CASEW1 2649
+There are multiple Wave 2 records for CASEW1 2649
+There are multiple Wave 2 records for CASEW1 2649
+There are multiple Wave 3 records for CASEW2 18029 in CASEW1 3218
+There are multiple Wave 3 records for CASEW2 18029 in CASEW1 3218
+There are multiple Wave 3 records for CASEW2 18029 in CASEW1 3218
+There are multiple Wave 2 records for CASEW1 3296
+There are multiple Wave 2 records for CASEW1 3296
+There are multiple Wave 2 records for CASEW1 3296
+There are multiple Wave 3 records for CASEW2 2170 in CASEW1 2274
+There are multiple Wave 3 records for CASEW2 2170 in CASEW1 2274
+There are multiple Wave 3 records for CASEW2 2170 in CASEW1 2274
+There are multiple Wave 2 records for CASEW1 2846
+There are multiple Wave 2 records for CASEW1 2846
+There are multiple Wave 2 records for CASEW1 2846
+There are multiple Wave 5 records for CASEW4 19897 in CASEW3 518 in CASEW2 660 in CASEW1 3390
+There are multiple Wave 5 records for CASEW4 19897 in CASEW3 518 in CASEW2 660 in CASEW1 3390
+There are multiple Wave 5 records for CASEW4 19897 in CASEW3 518 in CASEW2 660 in CASEW1 3390
+There are multiple Wave 5 records for CASEW4 6528 in CASEW3 18588 in CASEW2 11183 in CASEW1 2542
+There are multiple Wave 5 records for CASEW4 6528 in CASEW3 18588 in CASEW2 11183 in CASEW1 2542
+There are multiple Wave 5 records for CASEW4 6528 in CASEW3 18588 in CASEW2 11183 in CASEW1 2542
+There are multiple Wave 2 records for CASEW1 3715
+There are multiple Wave 2 records for CASEW1 3715
+There are multiple Wave 2 records for CASEW1 3715
+There are multiple Wave 5 records for CASEW4 8546 in CASEW3 14996 in CASEW2 12443 in CASEW1 3724
+There are multiple Wave 5 records for CASEW4 8546 in CASEW3 14996 in CASEW2 12443 in CASEW1 3724
+There are multiple Wave 5 records for CASEW4 8546 in CASEW3 14996 in CASEW2 12443 in CASEW1 3724
+There are multiple Wave 3 records for CASEW2 6441 in CASEW1 3727
+There are multiple Wave 3 records for CASEW2 6441 in CASEW1 3727
+There are multiple Wave 3 records for CASEW2 6441 in CASEW1 3727
+There are multiple Wave 5 records for CASEW4 8813 in CASEW3 8753 in CASEW2 19463 in CASEW1 4351
+There are multiple Wave 5 records for CASEW4 8813 in CASEW3 8753 in CASEW2 19463 in CASEW1 4351
+There are multiple Wave 5 records for CASEW4 8813 in CASEW3 8753 in CASEW2 19463 in CASEW1 4351
+There are multiple Wave 3 records for CASEW2 11910 in CASEW1 4416
+There are multiple Wave 3 records for CASEW2 11910 in CASEW1 4416
+There are multiple Wave 3 records for CASEW2 11910 in CASEW1 4416
+There are multiple Wave 4 records for CASEW3 5008 in CASEW2 1639 in CASEW1 4622
+There are multiple Wave 4 records for CASEW3 5008 in CASEW2 1639 in CASEW1 4622
+There are multiple Wave 4 records for CASEW3 5008 in CASEW2 1639 in CASEW1 4622
+There are multiple Wave 4 records for CASEW3 17977 in CASEW2 12023 in CASEW1 5354
+There are multiple Wave 4 records for CASEW3 17977 in CASEW2 12023 in CASEW1 5354
+There are multiple Wave 4 records for CASEW3 17977 in CASEW2 12023 in CASEW1 5354
+There are multiple Wave 3 records for CASEW2 14468 in CASEW1 4843
+There are multiple Wave 3 records for CASEW2 14468 in CASEW1 4843
+There are multiple Wave 3 records for CASEW2 14468 in CASEW1 4843
+There are multiple Wave 5 records for CASEW4 3735 in CASEW3 6108 in CASEW2 7576 in CASEW1 4855
+There are multiple Wave 5 records for CASEW4 3735 in CASEW3 6108 in CASEW2 7576 in CASEW1 4855
+There are multiple Wave 5 records for CASEW4 3735 in CASEW3 6108 in CASEW2 7576 in CASEW1 4855
+There are multiple Wave 3 records for CASEW2 15117 in CASEW1 5410
+There are multiple Wave 3 records for CASEW2 15117 in CASEW1 5410
+There are multiple Wave 3 records for CASEW2 15117 in CASEW1 5410
+There are multiple Wave 4 records for CASEW3 4879 in CASEW2 287 in CASEW1 5066
+There are multiple Wave 4 records for CASEW3 4879 in CASEW2 287 in CASEW1 5066
+There are multiple Wave 4 records for CASEW3 4879 in CASEW2 287 in CASEW1 5066
+There are multiple Wave 3 records for CASEW2 13936 in CASEW1 5592
+There are multiple Wave 3 records for CASEW2 13936 in CASEW1 5592
+There are multiple Wave 3 records for CASEW2 13936 in CASEW1 5592
+There are multiple Wave 4 records for CASEW3 19663 in CASEW2 820 in CASEW1 6323
+There are multiple Wave 4 records for CASEW3 19663 in CASEW2 820 in CASEW1 6323
+There are multiple Wave 4 records for CASEW3 19663 in CASEW2 820 in CASEW1 6323
+There are multiple Wave 5 records for CASEW4 19614 in CASEW3 19859 in CASEW2 18361 in CASEW1 6361
+There are multiple Wave 5 records for CASEW4 19614 in CASEW3 19859 in CASEW2 18361 in CASEW1 6361
+There are multiple Wave 5 records for CASEW4 19614 in CASEW3 19859 in CASEW2 18361 in CASEW1 6361
+There are multiple Wave 4 records for CASEW3 11612 in CASEW2 18063 in CASEW1 5940
+There are multiple Wave 4 records for CASEW3 11612 in CASEW2 18063 in CASEW1 5940
+There are multiple Wave 4 records for CASEW3 11612 in CASEW2 18063 in CASEW1 5940
+There are multiple Wave 5 records for CASEW4 10232 in CASEW3 3004 in CASEW2 14307 in CASEW1 6454
+There are multiple Wave 5 records for CASEW4 10232 in CASEW3 3004 in CASEW2 14307 in CASEW1 6454
+There are multiple Wave 5 records for CASEW4 10232 in CASEW3 3004 in CASEW2 14307 in CASEW1 6454
+There are multiple Wave 5 records for CASEW4 2161 in CASEW3 1595 in CASEW2 1500 in CASEW1 5608
+There are multiple Wave 5 records for CASEW4 2161 in CASEW3 1595 in CASEW2 1500 in CASEW1 5608
+There are multiple Wave 5 records for CASEW4 2161 in CASEW3 1595 in CASEW2 1500 in CASEW1 5608
+There are multiple Wave 4 records for CASEW3 15626 in CASEW2 18832 in CASEW1 6714
+There are multiple Wave 4 records for CASEW3 15626 in CASEW2 18832 in CASEW1 6714
+There are multiple Wave 4 records for CASEW3 15626 in CASEW2 18832 in CASEW1 6714
+There are multiple Wave 4 records for CASEW3 16176 in CASEW2 9515 in CASEW1 7239
+There are multiple Wave 4 records for CASEW3 16176 in CASEW2 9515 in CASEW1 7239
+There are multiple Wave 4 records for CASEW3 16176 in CASEW2 9515 in CASEW1 7239
+There are multiple Wave 2 records for CASEW1 7607
+There are multiple Wave 2 records for CASEW1 7607
+There are multiple Wave 2 records for CASEW1 7607
+There are multiple Wave 2 records for CASEW1 7127
+There are multiple Wave 2 records for CASEW1 7127
+There are multiple Wave 2 records for CASEW1 7127
+There are multiple Wave 3 records for CASEW2 16320 in CASEW1 6653
+There are multiple Wave 3 records for CASEW2 16320 in CASEW1 6653
+There are multiple Wave 3 records for CASEW2 16320 in CASEW1 6653
+There are multiple Wave 3 records for CASEW2 2043 in CASEW1 7818
+There are multiple Wave 3 records for CASEW2 2043 in CASEW1 7818
+There are multiple Wave 3 records for CASEW2 2043 in CASEW1 7818
+There are multiple Wave 5 records for CASEW4 18661 in CASEW3 6517 in CASEW2 17605 in CASEW1 8486
+There are multiple Wave 5 records for CASEW4 18661 in CASEW3 6517 in CASEW2 17605 in CASEW1 8486
+There are multiple Wave 5 records for CASEW4 18661 in CASEW3 6517 in CASEW2 17605 in CASEW1 8486
+There are multiple Wave 3 records for CASEW2 12598 in CASEW1 8664
+There are multiple Wave 3 records for CASEW2 12598 in CASEW1 8664
+There are multiple Wave 3 records for CASEW2 12598 in CASEW1 8664
+There are multiple Wave 3 records for CASEW2 12439 in CASEW1 8860
+There are multiple Wave 3 records for CASEW2 12439 in CASEW1 8860
+There are multiple Wave 3 records for CASEW2 12439 in CASEW1 8860
+There are multiple Wave 2 records for CASEW1 8952
+There are multiple Wave 2 records for CASEW1 8952
+There are multiple Wave 2 records for CASEW1 8952
+There are multiple Wave 2 records for CASEW1 9697
+There are multiple Wave 2 records for CASEW1 9697
+There are multiple Wave 2 records for CASEW1 9697
+There are multiple Wave 2 records for CASEW1 9811
+There are multiple Wave 2 records for CASEW1 9811
+There are multiple Wave 2 records for CASEW1 9811
+There are multiple Wave 2 records for CASEW1 10172
+There are multiple Wave 2 records for CASEW1 10172
+There are multiple Wave 2 records for CASEW1 10172
+There are multiple Wave 5 records for CASEW4 11105 in CASEW3 13346 in CASEW2 12559 in CASEW1 10179
+There are multiple Wave 5 records for CASEW4 11105 in CASEW3 13346 in CASEW2 12559 in CASEW1 10179
+There are multiple Wave 5 records for CASEW4 11105 in CASEW3 13346 in CASEW2 12559 in CASEW1 10179
+There are multiple Wave 4 records for CASEW3 11121 in CASEW2 7245 in CASEW1 10700
+There are multiple Wave 4 records for CASEW3 11121 in CASEW2 7245 in CASEW1 10700
+There are multiple Wave 4 records for CASEW3 11121 in CASEW2 7245 in CASEW1 10700
+There are multiple Wave 3 records for CASEW2 3 in CASEW1 11276
+There are multiple Wave 3 records for CASEW2 3 in CASEW1 11276
+There are multiple Wave 3 records for CASEW2 3 in CASEW1 11276
+There are multiple Wave 2 records for CASEW1 10775
+There are multiple Wave 2 records for CASEW1 10775
+There are multiple Wave 2 records for CASEW1 10775
+There are multiple Wave 5 records for CASEW4 13540 in CASEW3 307 in CASEW2 12956 in CASEW1 11389
+There are multiple Wave 5 records for CASEW4 13540 in CASEW3 307 in CASEW2 12956 in CASEW1 11389
+There are multiple Wave 5 records for CASEW4 13540 in CASEW3 307 in CASEW2 12956 in CASEW1 11389
+There are multiple Wave 3 records for CASEW2 246 in CASEW1 11512
+There are multiple Wave 3 records for CASEW2 246 in CASEW1 11512
+There are multiple Wave 3 records for CASEW2 246 in CASEW1 11512
+There are multiple Wave 5 records for CASEW4 10586 in CASEW3 3535 in CASEW2 1152 in CASEW1 11519
+There are multiple Wave 5 records for CASEW4 10586 in CASEW3 3535 in CASEW2 1152 in CASEW1 11519
+There are multiple Wave 5 records for CASEW4 10586 in CASEW3 3535 in CASEW2 1152 in CASEW1 11519
+There are multiple Wave 3 records for CASEW2 7288 in CASEW1 11025
+There are multiple Wave 3 records for CASEW2 7288 in CASEW1 11025
+There are multiple Wave 3 records for CASEW2 7288 in CASEW1 11025
+There are multiple Wave 3 records for CASEW2 1078 in CASEW1 11072
+There are multiple Wave 3 records for CASEW2 1078 in CASEW1 11072
+There are multiple Wave 3 records for CASEW2 1078 in CASEW1 11072
+There are multiple Wave 5 records for CASEW4 13729 in CASEW3 8983 in CASEW2 9524 in CASEW1 11125
+There are multiple Wave 5 records for CASEW4 13729 in CASEW3 8983 in CASEW2 9524 in CASEW1 11125
+There are multiple Wave 5 records for CASEW4 13729 in CASEW3 8983 in CASEW2 9524 in CASEW1 11125
+There are multiple Wave 3 records for CASEW2 13651 in CASEW1 11715
+There are multiple Wave 3 records for CASEW2 13651 in CASEW1 11715
+There are multiple Wave 3 records for CASEW2 13651 in CASEW1 11715
+There are multiple Wave 2 records for CASEW1 11866
+There are multiple Wave 2 records for CASEW1 11866
+There are multiple Wave 2 records for CASEW1 11866
+There are multiple Wave 4 records for CASEW3 9683 in CASEW2 15592 in CASEW1 13980
+There are multiple Wave 4 records for CASEW3 9683 in CASEW2 15592 in CASEW1 13980
+There are multiple Wave 4 records for CASEW3 9683 in CASEW2 15592 in CASEW1 13980
+There are multiple Wave 5 records for CASEW4 6687 in CASEW3 13190 in CASEW2 18570 in CASEW1 13519
+There are multiple Wave 5 records for CASEW4 6687 in CASEW3 13190 in CASEW2 18570 in CASEW1 13519
+There are multiple Wave 5 records for CASEW4 6687 in CASEW3 13190 in CASEW2 18570 in CASEW1 13519
+There are multiple Wave 4 records for CASEW3 18619 in CASEW2 8448 in CASEW1 13535
+There are multiple Wave 4 records for CASEW3 18619 in CASEW2 8448 in CASEW1 13535
+There are multiple Wave 4 records for CASEW3 18619 in CASEW2 8448 in CASEW1 13535
+There are multiple Wave 5 records for CASEW4 5194 in CASEW3 3183 in CASEW2 7655 in CASEW1 13555
+There are multiple Wave 5 records for CASEW4 5194 in CASEW3 3183 in CASEW2 7655 in CASEW1 13555
+There are multiple Wave 5 records for CASEW4 5194 in CASEW3 3183 in CASEW2 7655 in CASEW1 13555
+There are multiple Wave 2 records for CASEW1 13205
+There are multiple Wave 2 records for CASEW1 13205
+There are multiple Wave 2 records for CASEW1 13205
+There are multiple Wave 3 records for CASEW2 12658 in CASEW1 14857
+There are multiple Wave 3 records for CASEW2 12658 in CASEW1 14857
+There are multiple Wave 3 records for CASEW2 12658 in CASEW1 14857
+There are multiple Wave 2 records for CASEW1 14467
+There are multiple Wave 2 records for CASEW1 14467
+There are multiple Wave 2 records for CASEW1 14467
+There are multiple Wave 5 records for CASEW4 10361 in CASEW3 4003 in CASEW2 6214 in CASEW1 14516
+There are multiple Wave 5 records for CASEW4 10361 in CASEW3 4003 in CASEW2 6214 in CASEW1 14516
+There are multiple Wave 5 records for CASEW4 10361 in CASEW3 4003 in CASEW2 6214 in CASEW1 14516
+There are multiple Wave 4 records for CASEW3 18771 in CASEW2 12719 in CASEW1 15044
+There are multiple Wave 4 records for CASEW3 18771 in CASEW2 12719 in CASEW1 15044
+There are multiple Wave 4 records for CASEW3 18771 in CASEW2 12719 in CASEW1 15044
+There are multiple Wave 3 records for CASEW2 2839 in CASEW1 15064
+There are multiple Wave 3 records for CASEW2 2839 in CASEW1 15064
+There are multiple Wave 3 records for CASEW2 2839 in CASEW1 15064
+There are multiple Wave 4 records for CASEW3 12095 in CASEW2 19562 in CASEW1 14299
+There are multiple Wave 4 records for CASEW3 12095 in CASEW2 19562 in CASEW1 14299
+There are multiple Wave 4 records for CASEW3 12095 in CASEW2 19562 in CASEW1 14299
+There are multiple Wave 2 records for CASEW1 15876
+There are multiple Wave 2 records for CASEW1 15876
+There are multiple Wave 2 records for CASEW1 15876
+There are multiple Wave 2 records for CASEW1 15366
+There are multiple Wave 2 records for CASEW1 15366
+There are multiple Wave 2 records for CASEW1 15366
+There are multiple Wave 2 records for CASEW1 15379
+There are multiple Wave 2 records for CASEW1 15379
+There are multiple Wave 2 records for CASEW1 15379
+There are multiple Wave 4 records for CASEW3 16859 in CASEW2 15616 in CASEW1 15402
+There are multiple Wave 4 records for CASEW3 16859 in CASEW2 15616 in CASEW1 15402
+There are multiple Wave 4 records for CASEW3 16859 in CASEW2 15616 in CASEW1 15402
+There are multiple Wave 3 records for CASEW2 16576 in CASEW1 15184
+There are multiple Wave 3 records for CASEW2 16576 in CASEW1 15184
+There are multiple Wave 3 records for CASEW2 16576 in CASEW1 15184
+There are multiple Wave 2 records for CASEW1 15731
+There are multiple Wave 2 records for CASEW1 15731
+There are multiple Wave 2 records for CASEW1 15731
+There are multiple Wave 3 records for CASEW2 16419 in CASEW1 15259
+There are multiple Wave 3 records for CASEW2 16419 in CASEW1 15259
+There are multiple Wave 3 records for CASEW2 16419 in CASEW1 15259
+There are multiple Wave 2 records for CASEW1 15857
+There are multiple Wave 2 records for CASEW1 15857
+There are multiple Wave 2 records for CASEW1 15857
+There are multiple Wave 5 records for CASEW4 1749 in CASEW3 16885 in CASEW2 365 in CASEW1 16438
+There are multiple Wave 5 records for CASEW4 1749 in CASEW3 16885 in CASEW2 365 in CASEW1 16438
+There are multiple Wave 5 records for CASEW4 1749 in CASEW3 16885 in CASEW2 365 in CASEW1 16438
+There are multiple Wave 5 records for CASEW4 7759 in CASEW3 16484 in CASEW2 11992 in CASEW1 16952
+There are multiple Wave 5 records for CASEW4 7759 in CASEW3 16484 in CASEW2 11992 in CASEW1 16952
+There are multiple Wave 5 records for CASEW4 7759 in CASEW3 16484 in CASEW2 11992 in CASEW1 16952
+There are multiple Wave 3 records for CASEW2 18230 in CASEW1 17012
+There are multiple Wave 3 records for CASEW2 18230 in CASEW1 17012
+There are multiple Wave 3 records for CASEW2 18230 in CASEW1 17012
+There are multiple Wave 4 records for CASEW3 15653 in CASEW2 10618 in CASEW1 16059
+There are multiple Wave 4 records for CASEW3 15653 in CASEW2 10618 in CASEW1 16059
+There are multiple Wave 4 records for CASEW3 15653 in CASEW2 10618 in CASEW1 16059
+There are multiple Wave 2 records for CASEW1 16147
+There are multiple Wave 2 records for CASEW1 16147
+There are multiple Wave 2 records for CASEW1 16147
+There are multiple Wave 2 records for CASEW1 16737
+There are multiple Wave 2 records for CASEW1 16737
+There are multiple Wave 2 records for CASEW1 16737
+There are multiple Wave 4 records for CASEW3 20416 in CASEW2 17366 in CASEW1 16868
+There are multiple Wave 4 records for CASEW3 20416 in CASEW2 17366 in CASEW1 16868
+There are multiple Wave 4 records for CASEW3 20416 in CASEW2 17366 in CASEW1 16868
+There are multiple Wave 4 records for CASEW3 4280 in CASEW2 2231 in CASEW1 16891
+There are multiple Wave 4 records for CASEW3 4280 in CASEW2 2231 in CASEW1 16891
+There are multiple Wave 4 records for CASEW3 4280 in CASEW2 2231 in CASEW1 16891
+There are multiple Wave 2 records for CASEW1 17449
+There are multiple Wave 2 records for CASEW1 17449
+There are multiple Wave 2 records for CASEW1 17449
+There are multiple Wave 4 records for CASEW3 18132 in CASEW2 16643 in CASEW1 18008
+There are multiple Wave 4 records for CASEW3 18132 in CASEW2 16643 in CASEW1 18008
+There are multiple Wave 4 records for CASEW3 18132 in CASEW2 16643 in CASEW1 18008
+There are multiple Wave 4 records for CASEW3 15967 in CASEW2 11372 in CASEW1 18051
+There are multiple Wave 4 records for CASEW3 15967 in CASEW2 11372 in CASEW1 18051
+There are multiple Wave 4 records for CASEW3 15967 in CASEW2 11372 in CASEW1 18051
+There are multiple Wave 5 records for CASEW4 5066 in CASEW3 16787 in CASEW2 16158 in CASEW1 18085
+There are multiple Wave 5 records for CASEW4 5066 in CASEW3 16787 in CASEW2 16158 in CASEW1 18085
+There are multiple Wave 5 records for CASEW4 5066 in CASEW3 16787 in CASEW2 16158 in CASEW1 18085
+There are multiple Wave 5 records for CASEW4 15829 in CASEW3 6667 in CASEW2 17541 in CASEW1 18132
+There are multiple Wave 5 records for CASEW4 15829 in CASEW3 6667 in CASEW2 17541 in CASEW1 18132
+There are multiple Wave 5 records for CASEW4 15829 in CASEW3 6667 in CASEW2 17541 in CASEW1 18132
+There are multiple Wave 3 records for CASEW2 4843 in CASEW1 17390
+There are multiple Wave 3 records for CASEW2 4843 in CASEW1 17390
+There are multiple Wave 3 records for CASEW2 4843 in CASEW1 17390
+There are multiple Wave 5 records for CASEW4 19272 in CASEW3 17100 in CASEW2 2184 in CASEW1 18616
+There are multiple Wave 5 records for CASEW4 19272 in CASEW3 17100 in CASEW2 2184 in CASEW1 18616
+There are multiple Wave 5 records for CASEW4 19272 in CASEW3 17100 in CASEW2 2184 in CASEW1 18616
+There are multiple Wave 5 records for CASEW4 10553 in CASEW3 142 in CASEW2 4129 in CASEW1 18237
+There are multiple Wave 5 records for CASEW4 10553 in CASEW3 142 in CASEW2 4129 in CASEW1 18237
+There are multiple Wave 5 records for CASEW4 10553 in CASEW3 142 in CASEW2 4129 in CASEW1 18237
+There are multiple Wave 4 records for CASEW3 17608 in CASEW2 2856 in CASEW1 18266
+There are multiple Wave 4 records for CASEW3 17608 in CASEW2 2856 in CASEW1 18266
+There are multiple Wave 4 records for CASEW3 17608 in CASEW2 2856 in CASEW1 18266
+There are multiple Wave 4 records for CASEW3 13686 in CASEW2 12009 in CASEW1 18309
+There are multiple Wave 4 records for CASEW3 13686 in CASEW2 12009 in CASEW1 18309
+There are multiple Wave 4 records for CASEW3 13686 in CASEW2 12009 in CASEW1 18309
+There are multiple Wave 5 records for CASEW4 16509 in CASEW3 19831 in CASEW2 8493 in CASEW1 18887
+There are multiple Wave 5 records for CASEW4 16509 in CASEW3 19831 in CASEW2 8493 in CASEW1 18887
+There are multiple Wave 5 records for CASEW4 16509 in CASEW3 19831 in CASEW2 8493 in CASEW1 18887
+There are multiple Wave 3 records for CASEW2 12266 in CASEW1 19694
+There are multiple Wave 3 records for CASEW2 12266 in CASEW1 19694
+There are multiple Wave 3 records for CASEW2 12266 in CASEW1 19694
+There are multiple Wave 5 records for CASEW4 8627 in CASEW3 66 in CASEW2 15293 in CASEW1 19762
+There are multiple Wave 5 records for CASEW4 8627 in CASEW3 66 in CASEW2 15293 in CASEW1 19762
+There are multiple Wave 5 records for CASEW4 8627 in CASEW3 66 in CASEW2 15293 in CASEW1 19762
+There are multiple Wave 2 records for CASEW1 19785
+There are multiple Wave 2 records for CASEW1 19785
+There are multiple Wave 2 records for CASEW1 19785
+There are multiple Wave 5 records for CASEW4 11120 in CASEW3 15127 in CASEW2 12480 in CASEW1 19857
+There are multiple Wave 5 records for CASEW4 11120 in CASEW3 15127 in CASEW2 12480 in CASEW1 19857
+There are multiple Wave 5 records for CASEW4 11120 in CASEW3 15127 in CASEW2 12480 in CASEW1 19857
+There are multiple Wave 3 records for CASEW2 19136 in CASEW1 21159
+There are multiple Wave 3 records for CASEW2 19136 in CASEW1 21159
+There are multiple Wave 3 records for CASEW2 19136 in CASEW1 21159
+There are multiple Wave 2 records for CASEW1 20664
+There are multiple Wave 2 records for CASEW1 20664
+There are multiple Wave 2 records for CASEW1 20664
+There are multiple Wave 5 records for CASEW4 11241 in CASEW3 19538 in CASEW2 1436 in CASEW1 21223
+There are multiple Wave 5 records for CASEW4 11241 in CASEW3 19538 in CASEW2 1436 in CASEW1 21223
+There are multiple Wave 5 records for CASEW4 11241 in CASEW3 19538 in CASEW2 1436 in CASEW1 21223
+There are multiple Wave 4 records for CASEW3 16999 in CASEW2 14160 in CASEW1 20376
+There are multiple Wave 4 records for CASEW3 16999 in CASEW2 14160 in CASEW1 20376
+There are multiple Wave 4 records for CASEW3 16999 in CASEW2 14160 in CASEW1 20376
+There are multiple Wave 5 records for CASEW4 16167 in CASEW3 12094 in CASEW2 14568 in CASEW1 20903
+There are multiple Wave 5 records for CASEW4 16167 in CASEW3 12094 in CASEW2 14568 in CASEW1 20903
+There are multiple Wave 5 records for CASEW4 16167 in CASEW3 12094 in CASEW2 14568 in CASEW1 20903
+There are multiple Wave 4 records for CASEW3 16933 in CASEW2 13073 in CASEW1 20976
+There are multiple Wave 4 records for CASEW3 16933 in CASEW2 13073 in CASEW1 20976
+There are multiple Wave 4 records for CASEW3 16933 in CASEW2 13073 in CASEW1 20976
+There are multiple Wave 5 records for CASEW4 14528 in CASEW3 7956 in CASEW2 7039 in CASEW1 22085
+There are multiple Wave 5 records for CASEW4 14528 in CASEW3 7956 in CASEW2 7039 in CASEW1 22085
+There are multiple Wave 5 records for CASEW4 14528 in CASEW3 7956 in CASEW2 7039 in CASEW1 22085
+There are multiple Wave 2 records for CASEW1 22114
+There are multiple Wave 2 records for CASEW1 22114
+There are multiple Wave 2 records for CASEW1 22114
+There are multiple Wave 2 records for CASEW1 22226
+There are multiple Wave 2 records for CASEW1 

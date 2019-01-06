@@ -1,0 +1,2888 @@
+Total value of UK Land in Wave 1 15207625
+Total value of UK Land in Wave 1 15207625
+Total value of UK Land in Wave 1 15207625
+Total value of UK Land in Wave 2 16347000
+Total value of UK Land in Wave 3 24644608
+Total value of UK Land in Wave 4 27290400
+Total value of UK Land in Wave 5 30250794
+Total value of UK Land in Wave 1 -39842
+Total value of UK Land in Wave 2 -40048
+Total value of UK Land in Wave 3 -40391
+Total value of UK Land in Wave 4 -40140
+Total value of UK Land in Wave 5 -39808
+Total value of UK Land in Wave 1 15207625
+Total value of UK Land in Wave 2 16347000
+Total value of UK Land in Wave 3 24644608
+Total value of UK Land in Wave 4 27290400
+Total value of UK Land in Wave 5 30250794
+Total FINCVB1 in Wave 1 -39842
+Total FINCVB1 in Wave 2 -40048
+Total FINCVB1 in Wave 3 -40391
+Total FINCVB1 in Wave 4 -40140
+Total FINCVB1 in Wave 5 -39808
+Total (Hhold aggregate) HPROPW in Wave 1 0.0
+Total (Hhold aggregate) HPROPW in Wave 2 0.0
+Total (Hhold aggregate) HPROPW in Wave 3 0.0
+Total (Hhold aggregate) HPROPW in Wave 4 0.0
+Total (Hhold aggregate) HPROPW in Wave 5 0.0
+Total (Hhold aggregate) DVLUKVAL in Wave 1 0
+Total (Hhold aggregate) DVLUKVAL in Wave 2 0
+Total (Hhold aggregate) DVLUKVAL in Wave 3 0
+Total (Hhold aggregate) DVLUKVAL in Wave 4 0
+Total (Hhold aggregate) DVLUKVAL in Wave 5 0
+Total (Person aggregate) FINCVB in Wave 1 0
+Total (Person aggregate) FINCVB in Wave 2 0
+Total (Person aggregate) FINCVB in Wave 3 0
+Total (Person aggregate) FINCVB in Wave 4 0
+Total (Person aggregate) FINCVB in Wave 5 0
+Total (Hhold aggregate) HPRICEB Wave 1 0
+Total (Hhold aggregate) HPRICEB Wave 2 0
+Total (Hhold aggregate) HPRICEB Wave 3 0
+Total (Hhold aggregate) HPRICEB Wave 4 0
+Total (Hhold aggregate) HPRICEB Wave 5 0
+Total (Hhold aggregate) HPROPW in Wave 1 0.0
+Total (Hhold aggregate) HPROPW in Wave 2 0.0
+Total (Hhold aggregate) HPROPW in Wave 3 0.0
+Total (Hhold aggregate) HPROPW in Wave 4 0.0
+Total (Hhold aggregate) HPROPW in Wave 5 0.0
+Total (Hhold aggregate) DVLUKVAL in Wave 1 0
+Total (Hhold aggregate) DVLUKVAL in Wave 2 0
+Total (Hhold aggregate) DVLUKVAL in Wave 3 0
+Total (Hhold aggregate) DVLUKVAL in Wave 4 0
+Total (Hhold aggregate) DVLUKVAL in Wave 5 0
+Total (Person aggregate) FINCVB1 in Wave 1 0
+Total (Person aggregate) FINCVB1 in Wave 2 0
+Total (Person aggregate) FINCVB1 in Wave 3 0
+Total (Person aggregate) FINCVB1 in Wave 4 0
+Total (Person aggregate) FINCVB1 in Wave 5 0
+Total (Hhold aggregate) HPRICEB Wave 1 0
+Total (Hhold aggregate) HPRICEB Wave 2 0
+Total (Hhold aggregate) HPRICEB Wave 3 0
+Total (Hhold aggregate) HPRICEB Wave 4 0
+Total (Hhold aggregate) HPRICEB Wave 5 0
+Total number of initial households in wave 1 6990
+Wave 1
+GOR 1 size 323
+GOR 2 size 830
+GOR 3 size 0
+GOR 4 size 643
+GOR 5 size 581
+GOR 6 size 652
+GOR 7 size 717
+GOR 8 size 614
+GOR 9 size 980
+GOR 10 size 584
+GOR 11 size 374
+GOR 12 size 692
+Total all GORs 6990
+Wave 2
+GOR 1 size 324
+GOR 2 size 829
+GOR 3 size 0
+GOR 4 size 637
+GOR 5 size 580
+GOR 6 size 654
+GOR 7 size 719
+GOR 8 size 614
+GOR 9 size 980
+GOR 10 size 583
+GOR 11 size 374
+GOR 12 size 696
+Total all GORs 6990
+Wave 3
+GOR 1 size 319
+GOR 2 size 845
+GOR 3 size 0
+GOR 4 size 717
+GOR 5 size 607
+GOR 6 size 628
+GOR 7 size 730
+GOR 8 size 497
+GOR 9 size 970
+GOR 10 size 608
+GOR 11 size 354
+GOR 12 size 715
+Total all GORs 6990
+Wave 4
+GOR 1 size 321
+GOR 2 size 842
+GOR 3 size 0
+GOR 4 size 715
+GOR 5 size 607
+GOR 6 size 625
+GOR 7 size 735
+GOR 8 size 488
+GOR 9 size 974
+GOR 10 size 618
+GOR 11 size 349
+GOR 12 size 716
+Total all GORs 6990
+Wave 5
+GOR 1 size 321
+GOR 2 size 841
+GOR 3 size 0
+GOR 4 size 719
+GOR 5 size 610
+GOR 6 size 622
+GOR 7 size 736
+GOR 8 size 480
+GOR 9 size 968
+GOR 10 size 621
+GOR 11 size 352
+GOR 12 size 720
+Total all GORs 6990
+HPRICEW1 SummaryStatistics
+Max 700000
+Min 0
+Count 204
+Sum 13634934
+Average 66837.91176470589
+HPRICEW2 SummaryStatistics
+Max 372500
+Min 0
+Count 12
+Sum 1827500
+Average 152291.66666666666
+HPRICEW3 SummaryStatistics
+Max -2147483648
+Min 2147483647
+Count 0
+Sum 0
+Average 0.0
+HPRICEW4 SummaryStatistics
+Max 338100
+Min 0
+Count 9
+Sum 1185600
+Average 131733.33333333334
+HPRICEW5 SummaryStatistics
+Max 550000
+Min 0
+Count 484
+Sum 49209378
+Average 101672.26859504133
+Wave 1
+GOR 1 size 323
+GOR 2 size 830
+GOR 3 size 0
+GOR 4 size 643
+GOR 5 size 581
+GOR 6 size 652
+GOR 7 size 717
+GOR 8 size 614
+GOR 9 size 980
+GOR 10 size 584
+GOR 11 size 374
+GOR 12 size 692
+Total all GORs 6990
+Wave 2
+GOR 1 size 324
+GOR 2 size 829
+GOR 3 size 0
+GOR 4 size 637
+GOR 5 size 580
+GOR 6 size 654
+GOR 7 size 719
+GOR 8 size 614
+GOR 9 size 980
+GOR 10 size 583
+GOR 11 size 374
+GOR 12 size 696
+Total all GORs 6990
+Wave 3
+GOR 1 size 319
+GOR 2 size 845
+GOR 3 size 0
+GOR 4 size 717
+GOR 5 size 607
+GOR 6 size 628
+GOR 7 size 730
+GOR 8 size 497
+GOR 9 size 970
+GOR 10 size 608
+GOR 11 size 354
+GOR 12 size 715
+Total all GORs 6990
+Wave 4
+GOR 1 size 321
+GOR 2 size 842
+GOR 3 size 0
+GOR 4 size 715
+GOR 5 size 607
+GOR 6 size 625
+GOR 7 size 735
+GOR 8 size 488
+GOR 9 size 974
+GOR 10 size 618
+GOR 11 size 349
+GOR 12 size 716
+Total all GORs 6990
+Wave 5
+GOR 1 size 321
+GOR 2 size 841
+GOR 3 size 0
+GOR 4 size 719
+GOR 5 size 610
+GOR 6 size 622
+GOR 7 size 736
+GOR 8 size 480
+GOR 9 size 968
+GOR 10 size 621
+GOR 11 size 352
+GOR 12 size 720
+Total all GORs 6990
+Total number of initial households in wave 1 6990
+Wave 1
+N=323 for GOR 1 North East
+N=830 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=643 for GOR 4 Yorkshire & Humber
+N=581 for GOR 5 East Midlands
+N=652 for GOR 6 West Midlands
+N=717 for GOR 7 East of England
+N=614 for GOR 8 London
+N=980 for GOR 9 South East
+N=584 for GOR 10 South West
+N=374 for GOR 11 Wales
+N=692 for GOR 12 Scotland
+N=6990 for all GORs
+Wave 2
+N=324 for GOR 1 North East
+N=829 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=637 for GOR 4 Yorkshire & Humber
+N=580 for GOR 5 East Midlands
+N=654 for GOR 6 West Midlands
+N=719 for GOR 7 East of England
+N=614 for GOR 8 London
+N=980 for GOR 9 South East
+N=583 for GOR 10 South West
+N=374 for GOR 11 Wales
+N=696 for GOR 12 Scotland
+N=6990 for all GORs
+Wave 3
+N=319 for GOR 1 North East
+N=845 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=717 for GOR 4 Yorkshire & Humber
+N=607 for GOR 5 East Midlands
+N=628 for GOR 6 West Midlands
+N=730 for GOR 7 East of England
+N=497 for GOR 8 London
+N=970 for GOR 9 South East
+N=608 for GOR 10 South West
+N=354 for GOR 11 Wales
+N=715 for GOR 12 Scotland
+N=6990 for all GORs
+Wave 4
+N=321 for GOR 1 North East
+N=842 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=715 for GOR 4 Yorkshire & Humber
+N=607 for GOR 5 East Midlands
+N=625 for GOR 6 West Midlands
+N=735 for GOR 7 East of England
+N=488 for GOR 8 London
+N=974 for GOR 9 South East
+N=618 for GOR 10 South West
+N=349 for GOR 11 Wales
+N=716 for GOR 12 Scotland
+N=6990 for all GORs
+Wave 5
+N=321 for GOR 1 North East
+N=841 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=719 for GOR 4 Yorkshire & Humber
+N=610 for GOR 5 East Midlands
+N=622 for GOR 6 West Midlands
+N=736 for GOR 7 East of England
+N=480 for GOR 8 London
+N=968 for GOR 9 South East
+N=621 for GOR 10 South West
+N=352 for GOR 11 Wales
+N=720 for GOR 12 Scotland
+N=6990 for all GORs
+GOR 1 North East
+HPROPW1 SummaryStatistics
+Max 1715000.0
+Min -37500.0
+Count 323
+Sum 3.3474096E7
+Average 103634.97213622292
+HPROPW2 SummaryStatistics
+Max 800000.0
+Min -100000.0
+Count 324
+Sum 3.208514944E7
+Average 99028.23901234569
+HPROPW3 SummaryStatistics
+Max 1450000.0
+Min -14000.0
+Count 319
+Sum 3.802121E7
+Average 119188.74608150471
+HPROPW4 SummaryStatistics
+Max 1400000.0
+Min -16000.0
+Count 321
+Sum 3.8518737E7
+Average 119996.06542056074
+HPROPW5 SummaryStatistics
+Max 1000000.0
+Min 0.0
+Count 321
+Sum 3.8256359E7
+Average 119178.68847352025
+GOR 2 North West
+HPROPW1 SummaryStatistics
+Max 5142000.0
+Min -9000.0
+Count 830
+Sum 1.2197584092208E8
+Average 146958.84448443374
+HPROPW2 SummaryStatistics
+Max 1800000.0
+Min -95000.0
+Count 829
+Sum 1.1067241127504043E8
+Average 133501.09924612837
+HPROPW3 SummaryStatistics
+Max 1775000.0
+Min -110000.0
+Count 845
+Sum 1.37009497E8
+Average 162141.41656804734
+HPROPW4 SummaryStatistics
+Max 2400000.0
+Min -77500.0
+Count 842
+Sum 1.32174092E8
+Average 156976.35629453682
+HPROPW5 SummaryStatistics
+Max 2425000.0
+Min -105000.0
+Count 841
+Sum 1.44653617E8
+Average 172001.92271105826
+GOR 3 The Wirral
+HPROPW1 SummaryStatistics
+Max -Infinity
+Min Infinity
+Count 0
+Sum 0.0
+Average 0.0
+HPROPW2 SummaryStatistics
+Max -Infinity
+Min Infinity
+Count 0
+Sum 0.0
+Average 0.0
+HPROPW3 SummaryStatistics
+Max -Infinity
+Min Infinity
+Count 0
+Sum 0.0
+Average 0.0
+HPROPW4 SummaryStatistics
+Max -Infinity
+Min Infinity
+Count 0
+Sum 0.0
+Average 0.0
+HPROPW5 SummaryStatistics
+Max -Infinity
+Min Infinity
+Count 0
+Sum 0.0
+Average 0.0
+GOR 4 Yorkshire & Humber
+HPROPW1 SummaryStatistics
+Max 1450000.0
+Min -20500.0
+Count 643
+Sum 8.0469321E7
+Average 125146.68895800933
+HPROPW2 SummaryStatistics
+Max 2235932.0
+Min -40000.0
+Count 637
+Sum 7.997058263E7
+Average 125542.51590266875
+HPROPW3 SummaryStatistics
+Max 2953000.0
+Min -26000.0
+Count 717
+Sum 1.11935299E8
+Average 156116.17712691773
+HPROPW4 SummaryStatistics
+Max 8737000.0
+Min -66200.0
+Count 715
+Sum 1.20682055E8
+Average 168786.0909090909
+HPROPW5 SummaryStatistics
+Max 5785000.0
+Min -48500.0
+Count 719
+Sum 1.2759601E8
+Average 177463.157162726
+GOR 5 East Midlands
+HPROPW1 SummaryStatistics
+Max 1806919.0
+Min -158000.0
+Count 581
+Sum 9.4354668324E7
+Average 162400.46183132532
+HPROPW2 SummaryStatistics
+Max 2410000.0
+Min -129000.0
+Count 580
+Sum 9.26237695E7
+Average 159696.15431034483
+HPROPW3 SummaryStatistics
+Max 1360000.0
+Min -66250.0
+Count 607
+Sum 1.01596715E8
+Average 167375.1482701812
+HPROPW4 SummaryStatistics
+Max 1650000.0
+Min -50000.0
+Count 607
+Sum 1.04837643E8
+Average 172714.40362438222
+HPROPW5 SummaryStatistics
+Max 1650000.0
+Min -55000.0
+Count 610
+Sum 1.14412641E8
+Average 187561.70655737704
+GOR 6 West Midlands
+HPROPW1 SummaryStatistics
+Max 1160000.0
+Min -46500.0
+Count 652
+Sum 1.02761024E8
+Average 157608.93251533742
+HPROPW2 SummaryStatistics
+Max 2400000.0
+Min -294397.0
+Count 654
+Sum 9.777381397E7
+Average 149501.24460244647
+HPROPW3 SummaryStatistics
+Max 2130000.0
+Min -5000.0
+Count 628
+Sum 1.06251875E8
+Average 169190.8837579618
+HPROPW4 SummaryStatistics
+Max 1510010.0
+Min -505997.0
+Count 625
+Sum 1.07560011E8
+Average 172096.0176
+HPROPW5 SummaryStatistics
+Max 1962000.0
+Min -190349.0
+Count 622
+Sum 1.15737354E8
+Average 186072.91639871383
+GOR 7 East of England
+HPROPW1 SummaryStatistics
+Max 4950000.0
+Min -83000.0
+Count 717
+Sum 1.69196682E8
+Average 235978.6359832636
+HPROPW2 SummaryStatistics
+Max 2800000.0
+Min -53000.0
+Count 719
+Sum 1.5188340783E8
+Average 211242.57
+HPROPW3 SummaryStatistics
+Max 1900000.0
+Min -44095.0
+Count 730
+Sum 1.58225044E8
+Average 216746.63561643835
+HPROPW4 SummaryStatistics
+Max 3490000.0
+Min 0.0
+Count 735
+Sum 1.72837328E8
+Average 235152.82721088437
+HPROPW5 SummaryStatistics
+Max 2835000.0
+Min 0.0
+Count 736
+Sum 2.05665088E8
+Average 279436.26086956525
+GOR 8 London
+HPROPW1 SummaryStatistics
+Max 6997990.0
+Min -21000.0
+Count 614
+Sum 1.582368E8
+Average 257714.65798045602
+HPROPW2 SummaryStatistics
+Max 5450000.0
+Min -85000.0
+Count 614
+Sum 1.6184139405E8
+Average 263585.3323289903
+HPROPW3 SummaryStatistics
+Max 4090000.0
+Min -19000.0
+Count 497
+Sum 1.57663143E8
+Average 317229.6639839034
+HPROPW4 SummaryStatistics
+Max 6600000.0
+Min 0.0
+Count 488
+Sum 1.83627207E8
+Average 376285.26024590165
+HPROPW5 SummaryStatistics
+Max 7300000.0
+Min 0.0
+Count 480
+Sum 2.28280838E8
+Average 475585.07916666666
+GOR 9 South East
+HPROPW1 SummaryStatistics
+Max 1.0199997E7
+Min -264000.0
+Count 980
+Sum 2.6448982425E8
+Average 269887.57576530613
+HPROPW2 SummaryStatistics
+Max 3961999.0
+Min -127500.2
+Count 980
+Sum 2.4953675154E8
+Average 254629.33830612243
+HPROPW3 SummaryStatistics
+Max 9900000.0
+Min -86500.0
+Count 970
+Sum 2.97459491E8
+Average 306659.26907216496
+HPROPW4 SummaryStatistics
+Max 1.06E7
+Min -45000.0
+Count 974
+Sum 3.16176875E8
+Average 324616.91478439426
+HPROPW5 SummaryStatistics
+Max 1.38E7
+Min -27500.0
+Count 968
+Sum 3.64725435E8
+Average 376782.4741735537
+GOR 10 South West
+HPROPW1 SummaryStatistics
+Max 2932000.0
+Min -400000.0
+Count 584
+Sum 1.3750438472E8
+Average 235452.71356164385
+HPROPW2 SummaryStatistics
+Max 4949999.0
+Min -146000.0
+Count 583
+Sum 1.3328584075E8
+Average 228620.65308747857
+HPROPW3 SummaryStatistics
+Max 4000000.0
+Min -35000.0
+Count 608
+Sum 1.45080282E8
+Average 238618.88486842104
+HPROPW4 SummaryStatistics
+Max 3077653.0
+Min -35000.0
+Count 618
+Sum 1.55460007E8
+Average 251553.40938511328
+HPROPW5 SummaryStatistics
+Max 4760000.0
+Min -5000.0
+Count 621
+Sum 1.74438545E8
+Average 280899.42834138486
+GOR 11 Wales
+HPROPW1 SummaryStatistics
+Max 3000000.0
+Min -185000.0
+Count 374
+Sum 5.9442051E7
+Average 158935.9652406417
+HPROPW2 SummaryStatistics
+Max 1499999.0
+Min -6910.0
+Count 374
+Sum 5.79371165E7
+Average 154912.07620320856
+HPROPW3 SummaryStatistics
+Max 1614000.0
+Min -29000.0
+Count 354
+Sum 5.4590673E7
+Average 154210.9406779661
+HPROPW4 SummaryStatistics
+Max 1529000.0
+Min -166200.0
+Count 349
+Sum 5.6260424E7
+Average 161204.65329512893
+HPROPW5 SummaryStatistics
+Max 1630000.0
+Min -11000.0
+Count 352
+Sum 6.0441883E7
+Average 171709.89488636365
+GOR 12 Scotland
+HPROPW1 SummaryStatistics
+Max 2050100.0
+Min -60000.0
+Count 692
+Sum 8.835266656256025E7
+Average 127677.26381872868
+HPROPW2 SummaryStatistics
+Max 3632499.0
+Min -65000.5
+Count 696
+Sum 9.03471339E7
+Average 129809.10043103449
+HPROPW3 SummaryStatistics
+Max 2750000.0
+Min -176000.0
+Count 715
+Sum 1.1006039E8
+Average 153930.61538461538
+HPROPW4 SummaryStatistics
+Max 2300000.0
+Min -40000.0
+Count 716
+Sum 1.06460528E8
+Average 148687.8882681564
+HPROPW5 SummaryStatistics
+Max 6820000.0
+Min -160000.0
+Count 720
+Sum 1.2587981E8
+Average 174833.06944444444
+Wave 1
+N=323 for GOR 1 North East
+N=830 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=643 for GOR 4 Yorkshire & Humber
+N=581 for GOR 5 East Midlands
+N=652 for GOR 6 West Midlands
+N=717 for GOR 7 East of England
+N=614 for GOR 8 London
+N=980 for GOR 9 South East
+N=584 for GOR 10 South West
+N=374 for GOR 11 Wales
+N=692 for GOR 12 Scotland
+N=6990 for all GORs
+Wave 2
+N=324 for GOR 1 North East
+N=829 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=637 for GOR 4 Yorkshire & Humber
+N=580 for GOR 5 East Midlands
+N=654 for GOR 6 West Midlands
+N=719 for GOR 7 East of England
+N=614 for GOR 8 London
+N=980 for GOR 9 South East
+N=583 for GOR 10 South West
+N=374 for GOR 11 Wales
+N=696 for GOR 12 Scotland
+N=6990 for all GORs
+Wave 3
+N=319 for GOR 1 North East
+N=845 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=717 for GOR 4 Yorkshire & Humber
+N=607 for GOR 5 East Midlands
+N=628 for GOR 6 West Midlands
+N=730 for GOR 7 East of England
+N=497 for GOR 8 London
+N=970 for GOR 9 South East
+N=608 for GOR 10 South West
+N=354 for GOR 11 Wales
+N=715 for GOR 12 Scotland
+N=6990 for all GORs
+Wave 4
+N=321 for GOR 1 North East
+N=842 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=715 for GOR 4 Yorkshire & Humber
+N=607 for GOR 5 East Midlands
+N=625 for GOR 6 West Midlands
+N=735 for GOR 7 East of England
+N=488 for GOR 8 London
+N=974 for GOR 9 South East
+N=618 for GOR 10 South West
+N=349 for GOR 11 Wales
+N=716 for GOR 12 Scotland
+N=6990 for all GORs
+Wave 5
+N=321 for GOR 1 North East
+N=841 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=719 for GOR 4 Yorkshire & Humber
+N=610 for GOR 5 East Midlands
+N=622 for GOR 6 West Midlands
+N=736 for GOR 7 East of England
+N=480 for GOR 8 London
+N=968 for GOR 9 South East
+N=621 for GOR 10 South West
+N=352 for GOR 11 Wales
+N=720 for GOR 12 Scotland
+N=6990 for all GORs
+GOR 1 North East
+HPRICEW1 SummaryStatistics
+Max 700000
+Min 0
+Count 204
+Sum 13634934
+Average 66837.91176470589
+HPRICEW2 SummaryStatistics
+Max 109000
+Min 0
+Count 5
+Sum 240000
+Average 48000.0
+HPRICEW3 SummaryStatistics
+Max 275000
+Min 50000
+Count 5
+Sum 905000
+Average 181000.0
+HPRICEW4 SummaryStatistics
+Max 105000
+Min 105000
+Count 1
+Sum 105000
+Average 105000.0
+HPRICEW5 SummaryStatistics
+Max 500000
+Min 0
+Count 232
+Sum 16544500
+Average 71312.5
+GOR 2 North West
+HPRICEW1 SummaryStatistics
+Max 1400000
+Min 0
+Count 596
+Sum 41034610
+Average 68850.0167785235
+HPRICEW2 SummaryStatistics
+Max 372500
+Min 0
+Count 12
+Sum 1827500
+Average 152291.66666666666
+HPRICEW3 SummaryStatistics
+Max 695000
+Min 0
+Count 8
+Sum 1364000
+Average 170500.0
+HPRICEW4 SummaryStatistics
+Max 440000
+Min 30000
+Count 9
+Sum 1926905
+Average 214100.55555555556
+HPRICEW5 SummaryStatistics
+Max 1500000
+Min 0
+Count 643
+Sum 53147933
+Average 82656.19440124417
+GOR 3 The Wirral
+HPRICEW1 SummaryStatistics
+Max -2147483648
+Min 2147483647
+Count 0
+Sum 0
+Average 0.0
+HPRICEW2 SummaryStatistics
+Max -2147483648
+Min 2147483647
+Count 0
+Sum 0
+Average 0.0
+HPRICEW3 SummaryStatistics
+Max -2147483648
+Min 2147483647
+Count 0
+Sum 0
+Average 0.0
+HPRICEW4 SummaryStatistics
+Max -2147483648
+Min 2147483647
+Count 0
+Sum 0
+Average 0.0
+HPRICEW5 SummaryStatistics
+Max -2147483648
+Min 2147483647
+Count 0
+Sum 0
+Average 0.0
+GOR 4 Yorkshire & Humber
+HPRICEW1 SummaryStatistics
+Max 755000
+Min 300
+Count 437
+Sum 32033028
+Average 73302.12356979406
+HPRICEW2 SummaryStatistics
+Max 185000
+Min 78000
+Count 6
+Sum 696500
+Average 116083.33333333333
+HPRICEW3 SummaryStatistics
+Max 205000
+Min 0
+Count 7
+Sum 962500
+Average 137500.0
+HPRICEW4 SummaryStatistics
+Max 338100
+Min 0
+Count 9
+Sum 1185600
+Average 131733.33333333334
+HPRICEW5 SummaryStatistics
+Max 1650000
+Min 0
+Count 542
+Sum 46303393
+Average 85430.61439114391
+GOR 5 East Midlands
+HPRICEW1 SummaryStatistics
+Max 550000
+Min 725
+Count 437
+Sum 37851464
+Average 86616.62242562929
+HPRICEW2 SummaryStatistics
+Max 550000
+Min 68000
+Count 11
+Sum 2285000
+Average 207727.27272727274
+HPRICEW3 SummaryStatistics
+Max 395000
+Min 30000
+Count 10
+Sum 1669000
+Average 166900.0
+HPRICEW4 SummaryStatistics
+Max 445000
+Min 30000
+Count 14
+Sum 2164950
+Average 154639.2857142857
+HPRICEW5 SummaryStatistics
+Max 550000
+Min 0
+Count 484
+Sum 49209378
+Average 101672.26859504133
+GOR 6 West Midlands
+HPRICEW1 SummaryStatistics
+Max 675000
+Min 0
+Count 484
+Sum 36225980
+Average 74847.06611570247
+HPRICEW2 SummaryStatistics
+Max 340000
+Min 45000
+Count 10
+Sum 1515450
+Average 151545.0
+HPRICEW3 SummaryStatistics
+Max 366000
+Min 0
+Count 9
+Sum 1252000
+Average 139111.11111111112
+HPRICEW4 SummaryStatistics
+Max 700000
+Min 12300
+Count 12
+Sum 2091800
+Average 174316.66666666666
+HPRICEW5 SummaryStatistics
+Max 700000
+Min 0
+Count 498
+Sum 45004094
+Average 90369.66666666667
+GOR 7 East of England
+HPRICEW1 SummaryStatistics
+Max 1200000
+Min 0
+Count 553
+Sum 61300479
+Average 110850.77576853526
+HPRICEW2 SummaryStatistics
+Max 600000
+Min 133000
+Count 11
+Sum 2972000
+Average 270181.8181818182
+HPRICEW3 SummaryStatistics
+Max 325000
+Min 37000
+Count 9
+Sum 1725000
+Average 191666.66666666666
+HPRICEW4 SummaryStatistics
+Max 275000
+Min 126500
+Count 6
+Sum 1150500
+Average 191750.0
+HPRICEW5 SummaryStatistics
+Max 9000000
+Min 0
+Count 618
+Sum 86101722
+Average 139323.17475728155
+GOR 8 London
+HPRICEW1 SummaryStatistics
+Max 5000000
+Min 750
+Count 396
+Sum 73373555
+Average 185286.75505050505
+HPRICEW2 SummaryStatistics
+Max 441000
+Min 135000
+Count 9
+Sum 2386000
+Average 265111.1111111111
+HPRICEW3 SummaryStatistics
+Max 397000
+Min 185000
+Count 4
+Sum 986000
+Average 246500.0
+HPRICEW4 SummaryStatistics
+Max 410000
+Min 250000
+Count 3
+Sum 1030000
+Average 343333.3333333333
+HPRICEW5 SummaryStatistics
+Max 4300000
+Min 0
+Count 351
+Sum 60249119
+Average 171649.91168091167
+GOR 9 South East
+HPRICEW1 SummaryStatistics
+Max 850000
+Min 0
+Count 758
+Sum 101300789
+Average 133642.2018469657
+HPRICEW2 SummaryStatistics
+Max 390000
+Min 3500
+Count 14
+Sum 2729500
+Average 194964.2857142857
+HPRICEW3 SummaryStatistics
+Max 710000
+Min 12000
+Count 14
+Sum 2997000
+Average 214071.42857142858
+HPRICEW4 SummaryStatistics
+Max 600000
+Min 55000
+Count 15
+Sum 3234500
+Average 215633.33333333334
+HPRICEW5 SummaryStatistics
+Max 3950000
+Min 0
+Count 814
+Sum 132601917
+Average 162901.61793611792
+GOR 10 South West
+HPRICEW1 SummaryStatistics
+Max 700000
+Min 0
+Count 456
+Sum 48250069
+Average 105811.5548245614
+HPRICEW2 SummaryStatistics
+Max 250000
+Min 102000
+Count 7
+Sum 1215000
+Average 173571.42857142858
+HPRICEW3 SummaryStatistics
+Max 1560000
+Min 30500
+Count 11
+Sum 3945000
+Average 358636.36363636365
+HPRICEW4 SummaryStatistics
+Max 277500
+Min 33000
+Count 6
+Sum 826500
+Average 137750.0
+HPRICEW5 SummaryStatistics
+Max 1280000
+Min 0
+Count 509
+Sum 65540660
+Average 128763.57563850688
+GOR 11 Wales
+HPRICEW1 SummaryStatistics
+Max 425000
+Min 0
+Count 273
+Sum 18911219
+Average 69271.86446886447
+HPRICEW2 SummaryStatistics
+Max 174000
+Min 0
+Count 2
+Sum 174000
+Average 87000.0
+HPRICEW3 SummaryStatistics
+Max 365000
+Min 365000
+Count 1
+Sum 365000
+Average 365000.0
+HPRICEW4 SummaryStatistics
+Max 164000
+Min 163000
+Count 2
+Sum 327000
+Average 163500.0
+HPRICEW5 SummaryStatistics
+Max 1790000
+Min 0
+Count 270
+Sum 21177881
+Average 78436.5962962963
+GOR 12 Scotland
+HPRICEW1 SummaryStatistics
+Max 1175000
+Min 400
+Count 473
+Sum 35091231
+Average 74188.6490486258
+HPRICEW2 SummaryStatistics
+Max 255000
+Min 0
+Count 16
+Sum 1165920
+Average 72870.0
+HPRICEW3 SummaryStatistics
+Max 405000
+Min 19000
+Count 8
+Sum 1091000
+Average 136375.0
+HPRICEW4 SummaryStatistics
+Max 142000
+Min 32500
+Count 3
+Sum 309500
+Average 103166.66666666667
+HPRICEW5 SummaryStatistics
+Max 600000
+Min 0
+Count 532
+Sum 44381570
+Average 83424.0037593985
+Total number of initial households in wave 1 6990
+Wave 1
+N=323 for GOR 1 North East
+N=830 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=643 for GOR 4 Yorkshire & Humber
+N=581 for GOR 5 East Midlands
+N=652 for GOR 6 West Midlands
+N=717 for GOR 7 East of England
+N=614 for GOR 8 London
+N=980 for GOR 9 South East
+N=584 for GOR 10 South West
+N=374 for GOR 11 Wales
+N=692 for GOR 12 Scotland
+N=6990 for all GORs
+Wave 2
+N=324 for GOR 1 North East
+N=829 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=637 for GOR 4 Yorkshire & Humber
+N=580 for GOR 5 East Midlands
+N=654 for GOR 6 West Midlands
+N=719 for GOR 7 East of England
+N=614 for GOR 8 London
+N=980 for GOR 9 South East
+N=583 for GOR 10 South West
+N=374 for GOR 11 Wales
+N=696 for GOR 12 Scotland
+N=6990 for all GORs
+Wave 3
+N=319 for GOR 1 North East
+N=845 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=717 for GOR 4 Yorkshire & Humber
+N=607 for GOR 5 East Midlands
+N=628 for GOR 6 West Midlands
+N=730 for GOR 7 East of England
+N=497 for GOR 8 London
+N=970 for GOR 9 South East
+N=608 for GOR 10 South West
+N=354 for GOR 11 Wales
+N=715 for GOR 12 Scotland
+N=6990 for all GORs
+Wave 4
+N=321 for GOR 1 North East
+N=842 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=715 for GOR 4 Yorkshire & Humber
+N=607 for GOR 5 East Midlands
+N=625 for GOR 6 West Midlands
+N=735 for GOR 7 East of England
+N=488 for GOR 8 London
+N=974 for GOR 9 South East
+N=618 for GOR 10 South West
+N=349 for GOR 11 Wales
+N=716 for GOR 12 Scotland
+N=6990 for all GORs
+Wave 5
+N=321 for GOR 1 North East
+N=841 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=719 for GOR 4 Yorkshire & Humber
+N=610 for GOR 5 East Midlands
+N=622 for GOR 6 West Midlands
+N=736 for GOR 7 East of England
+N=480 for GOR 8 London
+N=968 for GOR 9 South East
+N=621 for GOR 10 South West
+N=352 for GOR 11 Wales
+N=720 for GOR 12 Scotland
+N=6990 for all GORs
+GOR 1 North East
+HPROPW1 SummaryStatistics
+Max 1715000.0
+Min -37500.0
+Count 323
+Sum 3.3474096E7
+Average 103634.97213622292
+HPROPW2 SummaryStatistics
+Max 800000.0
+Min -100000.0
+Count 324
+Sum 3.208514944E7
+Average 99028.23901234569
+HPROPW3 SummaryStatistics
+Max 1450000.0
+Min -14000.0
+Count 319
+Sum 3.802121E7
+Average 119188.74608150471
+HPROPW4 SummaryStatistics
+Max 1400000.0
+Min -16000.0
+Count 321
+Sum 3.8518737E7
+Average 119996.06542056074
+HPROPW5 SummaryStatistics
+Max 1000000.0
+Min 0.0
+Count 321
+Sum 3.8256359E7
+Average 119178.68847352025
+GOR 2 North West
+HPROPW1 SummaryStatistics
+Max 5142000.0
+Min -9000.0
+Count 830
+Sum 1.2197584092208E8
+Average 146958.84448443374
+HPROPW2 SummaryStatistics
+Max 1800000.0
+Min -95000.0
+Count 829
+Sum 1.1067241127504043E8
+Average 133501.09924612837
+HPROPW3 SummaryStatistics
+Max 1775000.0
+Min -110000.0
+Count 845
+Sum 1.37009497E8
+Average 162141.41656804734
+HPROPW4 SummaryStatistics
+Max 2400000.0
+Min -77500.0
+Count 842
+Sum 1.32174092E8
+Average 156976.35629453682
+HPROPW5 SummaryStatistics
+Max 2425000.0
+Min -105000.0
+Count 841
+Sum 1.44653617E8
+Average 172001.92271105826
+GOR 3 The Wirral
+HPROPW1 SummaryStatistics
+Max -Infinity
+Min Infinity
+Count 0
+Sum 0.0
+Average 0.0
+HPROPW2 SummaryStatistics
+Max -Infinity
+Min Infinity
+Count 0
+Sum 0.0
+Average 0.0
+HPROPW3 SummaryStatistics
+Max -Infinity
+Min Infinity
+Count 0
+Sum 0.0
+Average 0.0
+HPROPW4 SummaryStatistics
+Max -Infinity
+Min Infinity
+Count 0
+Sum 0.0
+Average 0.0
+HPROPW5 SummaryStatistics
+Max -Infinity
+Min Infinity
+Count 0
+Sum 0.0
+Average 0.0
+GOR 4 Yorkshire & Humber
+HPROPW1 SummaryStatistics
+Max 1450000.0
+Min -20500.0
+Count 643
+Sum 8.0469321E7
+Average 125146.68895800933
+HPROPW2 SummaryStatistics
+Max 2235932.0
+Min -40000.0
+Count 637
+Sum 7.997058263E7
+Average 125542.51590266875
+HPROPW3 SummaryStatistics
+Max 2953000.0
+Min -26000.0
+Count 717
+Sum 1.11935299E8
+Average 156116.17712691773
+HPROPW4 SummaryStatistics
+Max 8737000.0
+Min -66200.0
+Count 715
+Sum 1.20682055E8
+Average 168786.0909090909
+HPROPW5 SummaryStatistics
+Max 5785000.0
+Min -48500.0
+Count 719
+Sum 1.2759601E8
+Average 177463.157162726
+GOR 5 East Midlands
+HPROPW1 SummaryStatistics
+Max 1806919.0
+Min -158000.0
+Count 581
+Sum 9.4354668324E7
+Average 162400.46183132532
+HPROPW2 SummaryStatistics
+Max 2410000.0
+Min -129000.0
+Count 580
+Sum 9.26237695E7
+Average 159696.15431034483
+HPROPW3 SummaryStatistics
+Max 1360000.0
+Min -66250.0
+Count 607
+Sum 1.01596715E8
+Average 167375.1482701812
+HPROPW4 SummaryStatistics
+Max 1650000.0
+Min -50000.0
+Count 607
+Sum 1.04837643E8
+Average 172714.40362438222
+HPROPW5 SummaryStatistics
+Max 1650000.0
+Min -55000.0
+Count 610
+Sum 1.14412641E8
+Average 187561.70655737704
+GOR 6 West Midlands
+HPROPW1 SummaryStatistics
+Max 1160000.0
+Min -46500.0
+Count 652
+Sum 1.02761024E8
+Average 157608.93251533742
+HPROPW2 SummaryStatistics
+Max 2400000.0
+Min -294397.0
+Count 654
+Sum 9.777381397E7
+Average 149501.24460244647
+HPROPW3 SummaryStatistics
+Max 2130000.0
+Min -5000.0
+Count 628
+Sum 1.06251875E8
+Average 169190.8837579618
+HPROPW4 SummaryStatistics
+Max 1510010.0
+Min -505997.0
+Count 625
+Sum 1.07560011E8
+Average 172096.0176
+HPROPW5 SummaryStatistics
+Max 1962000.0
+Min -190349.0
+Count 622
+Sum 1.15737354E8
+Average 186072.91639871383
+GOR 7 East of England
+HPROPW1 SummaryStatistics
+Max 4950000.0
+Min -83000.0
+Count 717
+Sum 1.69196682E8
+Average 235978.6359832636
+HPROPW2 SummaryStatistics
+Max 2800000.0
+Min -53000.0
+Count 719
+Sum 1.5188340783E8
+Average 211242.57
+HPROPW3 SummaryStatistics
+Max 1900000.0
+Min -44095.0
+Count 730
+Sum 1.58225044E8
+Average 216746.63561643835
+HPROPW4 SummaryStatistics
+Max 3490000.0
+Min 0.0
+Count 735
+Sum 1.72837328E8
+Average 235152.82721088437
+HPROPW5 SummaryStatistics
+Max 2835000.0
+Min 0.0
+Count 736
+Sum 2.05665088E8
+Average 279436.26086956525
+GOR 8 London
+HPROPW1 SummaryStatistics
+Max 6997990.0
+Min -21000.0
+Count 614
+Sum 1.582368E8
+Average 257714.65798045602
+HPROPW2 SummaryStatistics
+Max 5450000.0
+Min -85000.0
+Count 614
+Sum 1.6184139405E8
+Average 263585.3323289903
+HPROPW3 SummaryStatistics
+Max 4090000.0
+Min -19000.0
+Count 497
+Sum 1.57663143E8
+Average 317229.6639839034
+HPROPW4 SummaryStatistics
+Max 6600000.0
+Min 0.0
+Count 488
+Sum 1.83627207E8
+Average 376285.26024590165
+HPROPW5 SummaryStatistics
+Max 7300000.0
+Min 0.0
+Count 480
+Sum 2.28280838E8
+Average 475585.07916666666
+GOR 9 South East
+HPROPW1 SummaryStatistics
+Max 1.0199997E7
+Min -264000.0
+Count 980
+Sum 2.6448982425E8
+Average 269887.57576530613
+HPROPW2 SummaryStatistics
+Max 3961999.0
+Min -127500.2
+Count 980
+Sum 2.4953675154E8
+Average 254629.33830612243
+HPROPW3 SummaryStatistics
+Max 9900000.0
+Min -86500.0
+Count 970
+Sum 2.97459491E8
+Average 306659.26907216496
+HPROPW4 SummaryStatistics
+Max 1.06E7
+Min -45000.0
+Count 974
+Sum 3.16176875E8
+Average 324616.91478439426
+HPROPW5 SummaryStatistics
+Max 1.38E7
+Min -27500.0
+Count 968
+Sum 3.64725435E8
+Average 376782.4741735537
+GOR 10 South West
+HPROPW1 SummaryStatistics
+Max 2932000.0
+Min -400000.0
+Count 584
+Sum 1.3750438472E8
+Average 235452.71356164385
+HPROPW2 SummaryStatistics
+Max 4949999.0
+Min -146000.0
+Count 583
+Sum 1.3328584075E8
+Average 228620.65308747857
+HPROPW3 SummaryStatistics
+Max 4000000.0
+Min -35000.0
+Count 608
+Sum 1.45080282E8
+Average 238618.88486842104
+HPROPW4 SummaryStatistics
+Max 3077653.0
+Min -35000.0
+Count 618
+Sum 1.55460007E8
+Average 251553.40938511328
+HPROPW5 SummaryStatistics
+Max 4760000.0
+Min -5000.0
+Count 621
+Sum 1.74438545E8
+Average 280899.42834138486
+GOR 11 Wales
+HPROPW1 SummaryStatistics
+Max 3000000.0
+Min -185000.0
+Count 374
+Sum 5.9442051E7
+Average 158935.9652406417
+HPROPW2 SummaryStatistics
+Max 1499999.0
+Min -6910.0
+Count 374
+Sum 5.79371165E7
+Average 154912.07620320856
+HPROPW3 SummaryStatistics
+Max 1614000.0
+Min -29000.0
+Count 354
+Sum 5.4590673E7
+Average 154210.9406779661
+HPROPW4 SummaryStatistics
+Max 1529000.0
+Min -166200.0
+Count 349
+Sum 5.6260424E7
+Average 161204.65329512893
+HPROPW5 SummaryStatistics
+Max 1630000.0
+Min -11000.0
+Count 352
+Sum 6.0441883E7
+Average 171709.89488636365
+GOR 12 Scotland
+HPROPW1 SummaryStatistics
+Max 2050100.0
+Min -60000.0
+Count 692
+Sum 8.835266656256025E7
+Average 127677.26381872868
+HPROPW2 SummaryStatistics
+Max 3632499.0
+Min -65000.5
+Count 696
+Sum 9.03471339E7
+Average 129809.10043103449
+HPROPW3 SummaryStatistics
+Max 2750000.0
+Min -176000.0
+Count 715
+Sum 1.1006039E8
+Average 153930.61538461538
+HPROPW4 SummaryStatistics
+Max 2300000.0
+Min -40000.0
+Count 716
+Sum 1.06460528E8
+Average 148687.8882681564
+HPROPW5 SummaryStatistics
+Max 6820000.0
+Min -160000.0
+Count 720
+Sum 1.2587981E8
+Average 174833.06944444444
+Wave 1
+N=323 for GOR 1 North East
+N=830 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=643 for GOR 4 Yorkshire & Humber
+N=581 for GOR 5 East Midlands
+N=652 for GOR 6 West Midlands
+N=717 for GOR 7 East of England
+N=614 for GOR 8 London
+N=980 for GOR 9 South East
+N=584 for GOR 10 South West
+N=374 for GOR 11 Wales
+N=692 for GOR 12 Scotland
+N=6990 for all GORs
+Wave 2
+N=324 for GOR 1 North East
+N=829 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=637 for GOR 4 Yorkshire & Humber
+N=580 for GOR 5 East Midlands
+N=654 for GOR 6 West Midlands
+N=719 for GOR 7 East of England
+N=614 for GOR 8 London
+N=980 for GOR 9 South East
+N=583 for GOR 10 South West
+N=374 for GOR 11 Wales
+N=696 for GOR 12 Scotland
+N=6990 for all GORs
+Wave 3
+N=319 for GOR 1 North East
+N=845 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=717 for GOR 4 Yorkshire & Humber
+N=607 for GOR 5 East Midlands
+N=628 for GOR 6 West Midlands
+N=730 for GOR 7 East of England
+N=497 for GOR 8 London
+N=970 for GOR 9 South East
+N=608 for GOR 10 South West
+N=354 for GOR 11 Wales
+N=715 for GOR 12 Scotland
+N=6990 for all GORs
+Wave 4
+N=321 for GOR 1 North East
+N=842 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=715 for GOR 4 Yorkshire & Humber
+N=607 for GOR 5 East Midlands
+N=625 for GOR 6 West Midlands
+N=735 for GOR 7 East of England
+N=488 for GOR 8 London
+N=974 for GOR 9 South East
+N=618 for GOR 10 South West
+N=349 for GOR 11 Wales
+N=716 for GOR 12 Scotland
+N=6990 for all GORs
+Wave 5
+N=321 for GOR 1 North East
+N=841 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=719 for GOR 4 Yorkshire & Humber
+N=610 for GOR 5 East Midlands
+N=622 for GOR 6 West Midlands
+N=736 for GOR 7 East of England
+N=480 for GOR 8 London
+N=968 for GOR 9 South East
+N=621 for GOR 10 South West
+N=352 for GOR 11 Wales
+N=720 for GOR 12 Scotland
+N=6990 for all GORs
+GOR 1 North East
+HPRICEW1 SummaryStatistics
+Max 700000
+Min 0
+Count 204
+Sum 13634934
+Average 66837.91176470589
+HPRICEW2 SummaryStatistics
+Max 109000
+Min 0
+Count 5
+Sum 240000
+Average 48000.0
+HPRICEW3 SummaryStatistics
+Max 275000
+Min 50000
+Count 5
+Sum 905000
+Average 181000.0
+HPRICEW4 SummaryStatistics
+Max 105000
+Min 105000
+Count 1
+Sum 105000
+Average 105000.0
+HPRICEW5 SummaryStatistics
+Max 500000
+Min 0
+Count 232
+Sum 16544500
+Average 71312.5
+GOR 2 North West
+HPRICEW1 SummaryStatistics
+Max 1400000
+Min 0
+Count 596
+Sum 41034610
+Average 68850.0167785235
+HPRICEW2 SummaryStatistics
+Max 372500
+Min 0
+Count 12
+Sum 1827500
+Average 152291.66666666666
+HPRICEW3 SummaryStatistics
+Max 695000
+Min 0
+Count 8
+Sum 1364000
+Average 170500.0
+HPRICEW4 SummaryStatistics
+Max 440000
+Min 30000
+Count 9
+Sum 1926905
+Average 214100.55555555556
+HPRICEW5 SummaryStatistics
+Max 1500000
+Min 0
+Count 643
+Sum 53147933
+Average 82656.19440124417
+GOR 3 The Wirral
+HPRICEW1 SummaryStatistics
+Max -2147483648
+Min 2147483647
+Count 0
+Sum 0
+Average 0.0
+HPRICEW2 SummaryStatistics
+Max -2147483648
+Min 2147483647
+Count 0
+Sum 0
+Average 0.0
+HPRICEW3 SummaryStatistics
+Max -2147483648
+Min 2147483647
+Count 0
+Sum 0
+Average 0.0
+HPRICEW4 SummaryStatistics
+Max -2147483648
+Min 2147483647
+Count 0
+Sum 0
+Average 0.0
+HPRICEW5 SummaryStatistics
+Max -2147483648
+Min 2147483647
+Count 0
+Sum 0
+Average 0.0
+GOR 4 Yorkshire & Humber
+HPRICEW1 SummaryStatistics
+Max 755000
+Min 300
+Count 437
+Sum 32033028
+Average 73302.12356979406
+HPRICEW2 SummaryStatistics
+Max 185000
+Min 78000
+Count 6
+Sum 696500
+Average 116083.33333333333
+HPRICEW3 SummaryStatistics
+Max 205000
+Min 0
+Count 7
+Sum 962500
+Average 137500.0
+HPRICEW4 SummaryStatistics
+Max 338100
+Min 0
+Count 9
+Sum 1185600
+Average 131733.33333333334
+HPRICEW5 SummaryStatistics
+Max 1650000
+Min 0
+Count 542
+Sum 46303393
+Average 85430.61439114391
+GOR 5 East Midlands
+HPRICEW1 SummaryStatistics
+Max 550000
+Min 725
+Count 437
+Sum 37851464
+Average 86616.62242562929
+HPRICEW2 SummaryStatistics
+Max 550000
+Min 68000
+Count 11
+Sum 2285000
+Average 207727.27272727274
+HPRICEW3 SummaryStatistics
+Max 395000
+Min 30000
+Count 10
+Sum 1669000
+Average 166900.0
+HPRICEW4 SummaryStatistics
+Max 445000
+Min 30000
+Count 14
+Sum 2164950
+Average 154639.2857142857
+HPRICEW5 SummaryStatistics
+Max 550000
+Min 0
+Count 484
+Sum 49209378
+Average 101672.26859504133
+GOR 6 West Midlands
+HPRICEW1 SummaryStatistics
+Max 675000
+Min 0
+Count 484
+Sum 36225980
+Average 74847.06611570247
+HPRICEW2 SummaryStatistics
+Max 340000
+Min 45000
+Count 10
+Sum 1515450
+Average 151545.0
+HPRICEW3 SummaryStatistics
+Max 366000
+Min 0
+Count 9
+Sum 1252000
+Average 139111.11111111112
+HPRICEW4 SummaryStatistics
+Max 700000
+Min 12300
+Count 12
+Sum 2091800
+Average 174316.66666666666
+HPRICEW5 SummaryStatistics
+Max 700000
+Min 0
+Count 498
+Sum 45004094
+Average 90369.66666666667
+GOR 7 East of England
+HPRICEW1 SummaryStatistics
+Max 1200000
+Min 0
+Count 553
+Sum 61300479
+Average 110850.77576853526
+HPRICEW2 SummaryStatistics
+Max 600000
+Min 133000
+Count 11
+Sum 2972000
+Average 270181.8181818182
+HPRICEW3 SummaryStatistics
+Max 325000
+Min 37000
+Count 9
+Sum 1725000
+Average 191666.66666666666
+HPRICEW4 SummaryStatistics
+Max 275000
+Min 126500
+Count 6
+Sum 1150500
+Average 191750.0
+HPRICEW5 SummaryStatistics
+Max 9000000
+Min 0
+Count 618
+Sum 86101722
+Average 139323.17475728155
+GOR 8 London
+HPRICEW1 SummaryStatistics
+Max 5000000
+Min 750
+Count 396
+Sum 73373555
+Average 185286.75505050505
+HPRICEW2 SummaryStatistics
+Max 441000
+Min 135000
+Count 9
+Sum 2386000
+Average 265111.1111111111
+HPRICEW3 SummaryStatistics
+Max 397000
+Min 185000
+Count 4
+Sum 986000
+Average 246500.0
+HPRICEW4 SummaryStatistics
+Max 410000
+Min 250000
+Count 3
+Sum 1030000
+Average 343333.3333333333
+HPRICEW5 SummaryStatistics
+Max 4300000
+Min 0
+Count 351
+Sum 60249119
+Average 171649.91168091167
+GOR 9 South East
+HPRICEW1 SummaryStatistics
+Max 850000
+Min 0
+Count 758
+Sum 101300789
+Average 133642.2018469657
+HPRICEW2 SummaryStatistics
+Max 390000
+Min 3500
+Count 14
+Sum 2729500
+Average 194964.2857142857
+HPRICEW3 SummaryStatistics
+Max 710000
+Min 12000
+Count 14
+Sum 2997000
+Average 214071.42857142858
+HPRICEW4 SummaryStatistics
+Max 600000
+Min 55000
+Count 15
+Sum 3234500
+Average 215633.33333333334
+HPRICEW5 SummaryStatistics
+Max 3950000
+Min 0
+Count 814
+Sum 132601917
+Average 162901.61793611792
+GOR 10 South West
+HPRICEW1 SummaryStatistics
+Max 700000
+Min 0
+Count 456
+Sum 48250069
+Average 105811.5548245614
+HPRICEW2 SummaryStatistics
+Max 250000
+Min 102000
+Count 7
+Sum 1215000
+Average 173571.42857142858
+HPRICEW3 SummaryStatistics
+Max 1560000
+Min 30500
+Count 11
+Sum 3945000
+Average 358636.36363636365
+HPRICEW4 SummaryStatistics
+Max 277500
+Min 33000
+Count 6
+Sum 826500
+Average 137750.0
+HPRICEW5 SummaryStatistics
+Max 1280000
+Min 0
+Count 509
+Sum 65540660
+Average 128763.57563850688
+GOR 11 Wales
+HPRICEW1 SummaryStatistics
+Max 425000
+Min 0
+Count 273
+Sum 18911219
+Average 69271.86446886447
+HPRICEW2 SummaryStatistics
+Max 174000
+Min 0
+Count 2
+Sum 174000
+Average 87000.0
+HPRICEW3 SummaryStatistics
+Max 365000
+Min 365000
+Count 1
+Sum 365000
+Average 365000.0
+HPRICEW4 SummaryStatistics
+Max 164000
+Min 163000
+Count 2
+Sum 327000
+Average 163500.0
+HPRICEW5 SummaryStatistics
+Max 1790000
+Min 0
+Count 270
+Sum 21177881
+Average 78436.5962962963
+GOR 12 Scotland
+HPRICEW1 SummaryStatistics
+Max 1175000
+Min 400
+Count 473
+Sum 35091231
+Average 74188.6490486258
+HPRICEW2 SummaryStatistics
+Max 255000
+Min 0
+Count 16
+Sum 1165920
+Average 72870.0
+HPRICEW3 SummaryStatistics
+Max 405000
+Min 19000
+Count 8
+Sum 1091000
+Average 136375.0
+HPRICEW4 SummaryStatistics
+Max 142000
+Min 32500
+Count 3
+Sum 309500
+Average 103166.66666666667
+HPRICEW5 SummaryStatistics
+Max 600000
+Min 0
+Count 532
+Sum 44381570
+Average 83424.0037593985
+Total number of initial households in wave 1 6990
+Wave 1
+N=323 for GOR 1 North East
+N=830 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=643 for GOR 4 Yorkshire & Humber
+N=581 for GOR 5 East Midlands
+N=652 for GOR 6 West Midlands
+N=717 for GOR 7 East of England
+N=614 for GOR 8 London
+N=980 for GOR 9 South East
+N=584 for GOR 10 South West
+N=374 for GOR 11 Wales
+N=692 for GOR 12 Scotland
+N=6990 for all GORs
+Wave 2
+N=324 for GOR 1 North East
+N=829 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=637 for GOR 4 Yorkshire & Humber
+N=580 for GOR 5 East Midlands
+N=654 for GOR 6 West Midlands
+N=719 for GOR 7 East of England
+N=614 for GOR 8 London
+N=980 for GOR 9 South East
+N=583 for GOR 10 South West
+N=374 for GOR 11 Wales
+N=696 for GOR 12 Scotland
+N=6990 for all GORs
+Wave 3
+N=319 for GOR 1 North East
+N=845 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=717 for GOR 4 Yorkshire & Humber
+N=607 for GOR 5 East Midlands
+N=628 for GOR 6 West Midlands
+N=730 for GOR 7 East of England
+N=497 for GOR 8 London
+N=970 for GOR 9 South East
+N=608 for GOR 10 South West
+N=354 for GOR 11 Wales
+N=715 for GOR 12 Scotland
+N=6990 for all GORs
+Wave 4
+N=321 for GOR 1 North East
+N=842 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=715 for GOR 4 Yorkshire & Humber
+N=607 for GOR 5 East Midlands
+N=625 for GOR 6 West Midlands
+N=735 for GOR 7 East of England
+N=488 for GOR 8 London
+N=974 for GOR 9 South East
+N=618 for GOR 10 South West
+N=349 for GOR 11 Wales
+N=716 for GOR 12 Scotland
+N=6990 for all GORs
+Wave 5
+N=321 for GOR 1 North East
+N=841 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=719 for GOR 4 Yorkshire & Humber
+N=610 for GOR 5 East Midlands
+N=622 for GOR 6 West Midlands
+N=736 for GOR 7 East of England
+N=480 for GOR 8 London
+N=968 for GOR 9 South East
+N=621 for GOR 10 South West
+N=352 for GOR 11 Wales
+N=720 for GOR 12 Scotland
+N=6990 for all GORs
+GOR 1 North East
+HPROPW1 SummaryStatistics
+Max 1715000.0
+Min -37500.0
+Count 323
+Sum 3.3474096E7
+Average 103634.97213622292
+HPROPW2 SummaryStatistics
+Max 800000.0
+Min -100000.0
+Count 324
+Sum 3.208514944E7
+Average 99028.23901234569
+HPROPW3 SummaryStatistics
+Max 1450000.0
+Min -14000.0
+Count 319
+Sum 3.802121E7
+Average 119188.74608150471
+HPROPW4 SummaryStatistics
+Max 1400000.0
+Min -16000.0
+Count 321
+Sum 3.8518737E7
+Average 119996.06542056074
+HPROPW5 SummaryStatistics
+Max 1000000.0
+Min 0.0
+Count 321
+Sum 3.8256359E7
+Average 119178.68847352025
+GOR 2 North West
+HPROPW1 SummaryStatistics
+Max 5142000.0
+Min -9000.0
+Count 830
+Sum 1.2197584092208E8
+Average 146958.84448443374
+HPROPW2 SummaryStatistics
+Max 1800000.0
+Min -95000.0
+Count 829
+Sum 1.1067241127504043E8
+Average 133501.09924612837
+HPROPW3 SummaryStatistics
+Max 1775000.0
+Min -110000.0
+Count 845
+Sum 1.37009497E8
+Average 162141.41656804734
+HPROPW4 SummaryStatistics
+Max 2400000.0
+Min -77500.0
+Count 842
+Sum 1.32174092E8
+Average 156976.35629453682
+HPROPW5 SummaryStatistics
+Max 2425000.0
+Min -105000.0
+Count 841
+Sum 1.44653617E8
+Average 172001.92271105826
+GOR 3 The Wirral
+HPROPW1 SummaryStatistics
+Max -Infinity
+Min Infinity
+Count 0
+Sum 0.0
+Average 0.0
+HPROPW2 SummaryStatistics
+Max -Infinity
+Min Infinity
+Count 0
+Sum 0.0
+Average 0.0
+HPROPW3 SummaryStatistics
+Max -Infinity
+Min Infinity
+Count 0
+Sum 0.0
+Average 0.0
+HPROPW4 SummaryStatistics
+Max -Infinity
+Min Infinity
+Count 0
+Sum 0.0
+Average 0.0
+HPROPW5 SummaryStatistics
+Max -Infinity
+Min Infinity
+Count 0
+Sum 0.0
+Average 0.0
+GOR 4 Yorkshire & Humber
+HPROPW1 SummaryStatistics
+Max 1450000.0
+Min -20500.0
+Count 643
+Sum 8.0469321E7
+Average 125146.68895800933
+HPROPW2 SummaryStatistics
+Max 2235932.0
+Min -40000.0
+Count 637
+Sum 7.997058263E7
+Average 125542.51590266875
+HPROPW3 SummaryStatistics
+Max 2953000.0
+Min -26000.0
+Count 717
+Sum 1.11935299E8
+Average 156116.17712691773
+HPROPW4 SummaryStatistics
+Max 8737000.0
+Min -66200.0
+Count 715
+Sum 1.20682055E8
+Average 168786.0909090909
+HPROPW5 SummaryStatistics
+Max 5785000.0
+Min -48500.0
+Count 719
+Sum 1.2759601E8
+Average 177463.157162726
+GOR 5 East Midlands
+HPROPW1 SummaryStatistics
+Max 1806919.0
+Min -158000.0
+Count 581
+Sum 9.4354668324E7
+Average 162400.46183132532
+HPROPW2 SummaryStatistics
+Max 2410000.0
+Min -129000.0
+Count 580
+Sum 9.26237695E7
+Average 159696.15431034483
+HPROPW3 SummaryStatistics
+Max 1360000.0
+Min -66250.0
+Count 607
+Sum 1.01596715E8
+Average 167375.1482701812
+HPROPW4 SummaryStatistics
+Max 1650000.0
+Min -50000.0
+Count 607
+Sum 1.04837643E8
+Average 172714.40362438222
+HPROPW5 SummaryStatistics
+Max 1650000.0
+Min -55000.0
+Count 610
+Sum 1.14412641E8
+Average 187561.70655737704
+GOR 6 West Midlands
+HPROPW1 SummaryStatistics
+Max 1160000.0
+Min -46500.0
+Count 652
+Sum 1.02761024E8
+Average 157608.93251533742
+HPROPW2 SummaryStatistics
+Max 2400000.0
+Min -294397.0
+Count 654
+Sum 9.777381397E7
+Average 149501.24460244647
+HPROPW3 SummaryStatistics
+Max 2130000.0
+Min -5000.0
+Count 628
+Sum 1.06251875E8
+Average 169190.8837579618
+HPROPW4 SummaryStatistics
+Max 1510010.0
+Min -505997.0
+Count 625
+Sum 1.07560011E8
+Average 172096.0176
+HPROPW5 SummaryStatistics
+Max 1962000.0
+Min -190349.0
+Count 622
+Sum 1.15737354E8
+Average 186072.91639871383
+GOR 7 East of England
+HPROPW1 SummaryStatistics
+Max 4950000.0
+Min -83000.0
+Count 717
+Sum 1.69196682E8
+Average 235978.6359832636
+HPROPW2 SummaryStatistics
+Max 2800000.0
+Min -53000.0
+Count 719
+Sum 1.5188340783E8
+Average 211242.57
+HPROPW3 SummaryStatistics
+Max 1900000.0
+Min -44095.0
+Count 730
+Sum 1.58225044E8
+Average 216746.63561643835
+HPROPW4 SummaryStatistics
+Max 3490000.0
+Min 0.0
+Count 735
+Sum 1.72837328E8
+Average 235152.82721088437
+HPROPW5 SummaryStatistics
+Max 2835000.0
+Min 0.0
+Count 736
+Sum 2.05665088E8
+Average 279436.26086956525
+GOR 8 London
+HPROPW1 SummaryStatistics
+Max 6997990.0
+Min -21000.0
+Count 614
+Sum 1.582368E8
+Average 257714.65798045602
+HPROPW2 SummaryStatistics
+Max 5450000.0
+Min -85000.0
+Count 614
+Sum 1.6184139405E8
+Average 263585.3323289903
+HPROPW3 SummaryStatistics
+Max 4090000.0
+Min -19000.0
+Count 497
+Sum 1.57663143E8
+Average 317229.6639839034
+HPROPW4 SummaryStatistics
+Max 6600000.0
+Min 0.0
+Count 488
+Sum 1.83627207E8
+Average 376285.26024590165
+HPROPW5 SummaryStatistics
+Max 7300000.0
+Min 0.0
+Count 480
+Sum 2.28280838E8
+Average 475585.07916666666
+GOR 9 South East
+HPROPW1 SummaryStatistics
+Max 1.0199997E7
+Min -264000.0
+Count 980
+Sum 2.6448982425E8
+Average 269887.57576530613
+HPROPW2 SummaryStatistics
+Max 3961999.0
+Min -127500.2
+Count 980
+Sum 2.4953675154E8
+Average 254629.33830612243
+HPROPW3 SummaryStatistics
+Max 9900000.0
+Min -86500.0
+Count 970
+Sum 2.97459491E8
+Average 306659.26907216496
+HPROPW4 SummaryStatistics
+Max 1.06E7
+Min -45000.0
+Count 974
+Sum 3.16176875E8
+Average 324616.91478439426
+HPROPW5 SummaryStatistics
+Max 1.38E7
+Min -27500.0
+Count 968
+Sum 3.64725435E8
+Average 376782.4741735537
+GOR 10 South West
+HPROPW1 SummaryStatistics
+Max 2932000.0
+Min -400000.0
+Count 584
+Sum 1.3750438472E8
+Average 235452.71356164385
+HPROPW2 SummaryStatistics
+Max 4949999.0
+Min -146000.0
+Count 583
+Sum 1.3328584075E8
+Average 228620.65308747857
+HPROPW3 SummaryStatistics
+Max 4000000.0
+Min -35000.0
+Count 608
+Sum 1.45080282E8
+Average 238618.88486842104
+HPROPW4 SummaryStatistics
+Max 3077653.0
+Min -35000.0
+Count 618
+Sum 1.55460007E8
+Average 251553.40938511328
+HPROPW5 SummaryStatistics
+Max 4760000.0
+Min -5000.0
+Count 621
+Sum 1.74438545E8
+Average 280899.42834138486
+GOR 11 Wales
+HPROPW1 SummaryStatistics
+Max 3000000.0
+Min -185000.0
+Count 374
+Sum 5.9442051E7
+Average 158935.9652406417
+HPROPW2 SummaryStatistics
+Max 1499999.0
+Min -6910.0
+Count 374
+Sum 5.79371165E7
+Average 154912.07620320856
+HPROPW3 SummaryStatistics
+Max 1614000.0
+Min -29000.0
+Count 354
+Sum 5.4590673E7
+Average 154210.9406779661
+HPROPW4 SummaryStatistics
+Max 1529000.0
+Min -166200.0
+Count 349
+Sum 5.6260424E7
+Average 161204.65329512893
+HPROPW5 SummaryStatistics
+Max 1630000.0
+Min -11000.0
+Count 352
+Sum 6.0441883E7
+Average 171709.89488636365
+GOR 12 Scotland
+HPROPW1 SummaryStatistics
+Max 2050100.0
+Min -60000.0
+Count 692
+Sum 8.835266656256025E7
+Average 127677.26381872868
+HPROPW2 SummaryStatistics
+Max 3632499.0
+Min -65000.5
+Count 696
+Sum 9.03471339E7
+Average 129809.10043103449
+HPROPW3 SummaryStatistics
+Max 2750000.0
+Min -176000.0
+Count 715
+Sum 1.1006039E8
+Average 153930.61538461538
+HPROPW4 SummaryStatistics
+Max 2300000.0
+Min -40000.0
+Count 716
+Sum 1.06460528E8
+Average 148687.8882681564
+HPROPW5 SummaryStatistics
+Max 6820000.0
+Min -160000.0
+Count 720
+Sum 1.2587981E8
+Average 174833.06944444444
+Wave 1
+N=323 for GOR 1 North East
+N=830 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=643 for GOR 4 Yorkshire & Humber
+N=581 for GOR 5 East Midlands
+N=652 for GOR 6 West Midlands
+N=717 for GOR 7 East of England
+N=614 for GOR 8 London
+N=980 for GOR 9 South East
+N=584 for GOR 10 South West
+N=374 for GOR 11 Wales
+N=692 for GOR 12 Scotland
+N=6990 for all GORs
+Wave 2
+N=324 for GOR 1 North East
+N=829 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=637 for GOR 4 Yorkshire & Humber
+N=580 for GOR 5 East Midlands
+N=654 for GOR 6 West Midlands
+N=719 for GOR 7 East of England
+N=614 for GOR 8 London
+N=980 for GOR 9 South East
+N=583 for GOR 10 South West
+N=374 for GOR 11 Wales
+N=696 for GOR 12 Scotland
+N=6990 for all GORs
+Wave 3
+N=319 for GOR 1 North East
+N=845 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=717 for GOR 4 Yorkshire & Humber
+N=607 for GOR 5 East Midlands
+N=628 for GOR 6 West Midlands
+N=730 for GOR 7 East of England
+N=497 for GOR 8 London
+N=970 for GOR 9 South East
+N=608 for GOR 10 South West
+N=354 for GOR 11 Wales
+N=715 for GOR 12 Scotland
+N=6990 for all GORs
+Wave 4
+N=321 for GOR 1 North East
+N=842 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=715 for GOR 4 Yorkshire & Humber
+N=607 for GOR 5 East Midlands
+N=625 for GOR 6 West Midlands
+N=735 for GOR 7 East of England
+N=488 for GOR 8 London
+N=974 for GOR 9 South East
+N=618 for GOR 10 South West
+N=349 for GOR 11 Wales
+N=716 for GOR 12 Scotland
+N=6990 for all GORs
+Wave 5
+N=321 for GOR 1 North East
+N=841 for GOR 2 North West
+N=0 for GOR 3 The Wirral
+N=719 for GOR 4 Yorkshire & Humber
+N=610 for GOR 5 East Midlands
+N=622 for GOR 6 West Midlands
+N=736 for GOR 7 East of England
+N=480 for GOR 8 London
+N=968 for GOR 9 South East
+N=621 for GOR 10 South West
+N=352 for GOR 11 Wales
+N=720 for GOR 12 Scotland
+N=6990 for all GORs
+GOR 1 North East
+HPRICEW1 SummaryStatistics
+Max 700000
+Min 0
+Count 204
+Sum 13634934
+Average 66837.91176470589
+HPRICEW2 SummaryStatistics
+Max 109000
+Min 0
+Count 5
+Sum 240000
+Average 48000.0
+HPRICEW3 SummaryStatistics
+Max 275000
+Min 50000
+Count 5
+Sum 905000
+Average 181000.0
+HPRICEW4 SummaryStatistics
+Max 105000
+Min 105000
+Count 1
+Sum 105000
+Average 105000.0
+HPRICEW5 SummaryStatistics
+Max 500000
+Min 0
+Count 232
+Sum 16544500
+Average 71312.5
+GOR 2 North West
+HPRICEW1 SummaryStatistics
+Max 1400000
+Min 0
+Count 596
+Sum 41034610
+Average 68850.0167785235
+HPRICEW2 SummaryStatistics
+Max 372500
+Min 0
+Count 12
+Sum 1827500
+Average 152291.66666666666
+HPRICEW3 SummaryStatistics
+Max 695000
+Min 0
+Count 8
+Sum 1364000
+Average 170500.0
+HPRICEW4 SummaryStatistics
+Max 440000
+Min 30000
+Count 9
+Sum 1926905
+Average 214100.55555555556
+HPRICEW5 SummaryStatistics
+Max 1500000
+Min 0
+Count 643
+Sum 53147933
+Average 82656.19440124417
+GOR 3 The Wirral
+HPRICEW1 SummaryStatistics
+Max -2147483648
+Min 2147483647
+Count 0
+Sum 0
+Average 0.0
+HPRICEW2 SummaryStatistics
+Max -2147483648
+Min 2147483647
+Count 0
+Sum 0
+Average 0.0
+HPRICEW3 SummaryStatistics
+Max -2147483648
+Min 2147483647
+Count 0
+Sum 0
+Average 0.0
+HPRICEW4 SummaryStatistics
+Max -2147483648
+Min 2147483647
+Count 0
+Sum 0
+Average 0.0
+HPRICEW5 SummaryStatistics
+Max -2147483648
+Min 2147483647
+Count 0
+Sum 0
+Average 0.0
+GOR 4 Yorkshire & Humber
+HPRICEW1 SummaryStatistics
+Max 755000
+Min 300
+Count 437
+Sum 32033028
+Average 73302.12356979406
+HPRICEW2 SummaryStatistics
+Max 185000
+Min 78000
+Count 6
+Sum 696500
+Average 116083.33333333333
+HPRICEW3 SummaryStatistics
+Max 205000
+Min 0
+Count 7
+Sum 962500
+Average 137500.0
+HPRICEW4 SummaryStatistics
+Max 338100
+Min 0
+Count 9
+Sum 1185600
+Average 131733.33333333334
+HPRICEW5 SummaryStatistics
+Max 1650000
+Min 0
+Count 542
+Sum 46303393
+Average 85430.61439114391
+GOR 5 East Midlands
+HPRICEW1 SummaryStatistics
+Max 550000
+Min 725
+Count 437
+Sum 37851464
+Average 86616.62242562929
+HPRICEW2 SummaryStatistics
+Max 550000
+Min 68000
+Count 11
+Sum 2285000
+Average 207727.27272727274
+HPRICEW3 SummaryStatistics
+Max 395000
+Min 30000
+Count 10
+Sum 1669000
+Average 166900.0
+HPRICEW4 SummaryStatistics
+Max 445000
+Min 30000
+Count 14
+Sum 2164950
+Average 154639.2857142857
+HPRICEW5 SummaryStatistics
+Max 550000
+Min 0
+Count 484
+Sum 49209378
+Average 101672.26859504133
+GOR 6 West Midlands
+HPRICEW1 SummaryStatistics
+Max 675000
+Min 0
+Count 484
+Sum 36225980
+Average 74847.06611570247
+HPRICEW2 SummaryStatistics
+Max 340000
+Min 45000
+Count 10
+Sum 1515450
+Average 151545.0
+HPRICEW3 SummaryStatistics
+Max 366000
+Min 0
+Count 9
+Sum 1252000
+Average 139111.11111111112
+HPRICEW4 SummaryStatistics
+Max 700000
+Min 12300
+Count 12
+Sum 2091800
+Average 174316.66666666666
+HPRICEW5 SummaryStatistics
+Max 700000
+Min 0
+Count 498
+Sum 45004094
+Average 90369.66666666667
+GOR 7 East of England
+HPRICEW1 SummaryStatistics
+Max 1200000
+Min 0
+Count 553
+Sum 61300479
+Average 110850.77576853526
+HPRICEW2 SummaryStatistics
+Max 600000
+Min 133000
+Count 11
+Sum 2972000
+Average 270181.8181818182
+HPRICEW3 SummaryStatistics
+Max 325000
+Min 37000
+Count 9
+Sum 1725000
+Average 191666.66666666666
+HPRICEW4 SummaryStatistics
+Max 275000
+Min 126500
+Count 6
+Sum 1150500
+Average 191750.0
+HPRICEW5 SummaryStatistics
+Max 9000000
+Min 0
+Count 618
+Sum 86101722
+Average 139323.17475728155
+GOR 8 London
+HPRICEW1 SummaryStatistics
+Max 5000000
+Min 750
+Count 396
+Sum 73373555
+Average 185286.75505050505
+HPRICEW2 SummaryStatistics
+Max 441000
+Min 135000
+Count 9
+Sum 2386000
+Average 265111.1111111111
+HPRICEW3 SummaryStatistics
+Max 397000
+Min 185000
+Count 4
+Sum 986000
+Average 246500.0
+HPRICEW4 SummaryStatistics
+Max 410000
+Min 250000
+Count 3
+Sum 1030000
+Average 343333.3333333333
+HPRICEW5 SummaryStatistics
+Max 4300000
+Min 0
+Count 351
+Sum 60249119
+Average 171649.91168091167
+GOR 9 South East
+HPRICEW1 SummaryStatistics
+Max 850000
+Min 0
+Count 758
+Sum 101300789
+Average 133642.2018469657
+HPRICEW2 SummaryStatistics
+Max 390000
+Min 3500
+Count 14
+Sum 2729500
+Average 194964.2857142857
+HPRICEW3 SummaryStatistics
+Max 710000
+Min 12000
+Count 14
+Sum 2997000
+Average 214071.42857142858
+HPRICEW4 SummaryStatistics
+Max 600000
+Min 55000
+Count 15
+Sum 3234500
+Average 215633.33333333334
+HPRICEW5 SummaryStatistics
+Max 3950000
+Min 0
+Count 814
+Sum 132601917
+Average 162901.61793611792
+GOR 10 South West
+HPRICEW1 SummaryStatistics
+Max 700000
+Min 0
+Count 456
+Sum 48250069
+Average 105811.5548245614
+HPRICEW2 SummaryStatistics
+Max 250000
+Min 102000
+Count 7
+Sum 1215000
+Average 173571.42857142858
+HPRICEW3 SummaryStatistics
+Max 1560000
+Min 30500
+Count 11
+Sum 3945000
+Average 358636.36363636365
+HPRICEW4 SummaryStatistics
+Max 277500
+Min 33000
+Count 6
+Sum 826500
+Average 137750.0
+HPRICEW5 SummaryStatistics
+Max 1280000
+Min 0
+Count 509
+Sum 65540660
+Average 128763.57563850688
+GOR 11 Wales
+HPRICEW1 SummaryStatistics
+Max 425000
+Min 0
+Count 273
+Sum 18911219
+Average 69271.86446886447
+HPRICEW2 SummaryStatistics
+Max 174000
+Min 0
+Count 2
+Sum 174000
+Average 87000.0
+HPRICEW3 SummaryStatistics
+Max 365000
+Min 365000
+Count 1
+Sum 365000
+Average 365000.0
+HPRICEW4 SummaryStatistics
+Max 164000
+Min 163000
+Count 2
+Sum 327000
+Average 163500.0
+HPRICEW5 SummaryStatistics
+Max 1790000
+Min 0
+Count 270
+Sum 21177881
+Average 78436.5962962963
+GOR 12 Scotland
+HPRICEW1 SummaryStatistics
+Max 1175000
+Min 400
+Count 473
+Sum 35091231
+Average 74188.6490486258
+HPRICEW2 SummaryStatistics
+Max 255000
+Min 0
+Count 16
+Sum 1165920
+Average 72870.0
+HPRICEW3 SummaryStatistics
+Max 405000
+Min 19000
+Count 8
+Sum 1091000
+Average 136375.0
+HPRICEW4 SummaryStatistics
+Max 142000
+Min 32500
+Count 3
+Sum 309500
+Average 103166.66666666667
+HPRICEW5 SummaryStatistics
+Max 600000
+Min 0
+Count 532
+Sum 44381570
+Average 83424.0037593985
