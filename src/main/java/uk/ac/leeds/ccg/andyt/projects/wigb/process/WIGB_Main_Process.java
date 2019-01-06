@@ -17,6 +17,8 @@ package uk.ac.leeds.ccg.andyt.projects.wigb.process;
 
 import java.io.File;
 import java.io.PrintWriter;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.DoubleSummaryStatistics;
@@ -25,6 +27,10 @@ import java.util.HashSet;
 import java.util.IntSummaryStatistics;
 import java.util.Iterator;
 import java.util.TreeMap;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import uk.ac.leeds.ccg.andyt.generic.core.Generic_Strings;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Strings;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_IO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
@@ -48,7 +54,11 @@ import uk.ac.leeds.ccg.andyt.generic.data.waas.data.person.WaAS_Wave3_PERSON_Rec
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.person.WaAS_Wave4_PERSON_Record;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.person.WaAS_Wave5_PERSON_Record;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.io.WaAS_Files;
+import uk.ac.leeds.ccg.andyt.generic.execution.Generic_Execution;
+import uk.ac.leeds.ccg.andyt.generic.io.Generic_Files;
 import uk.ac.leeds.ccg.andyt.generic.util.Generic_Collections;
+import uk.ac.leeds.ccg.andyt.generic.visualisation.Generic_Visualisation;
+import uk.ac.leeds.ccg.andyt.projects.wigb.chart.WIGB_LineGraph;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Strings;
 import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
 
@@ -143,11 +153,7 @@ public class WIGB_Main_Process extends WIGB_Object {
 
         TreeMap<Byte, String> GORNameLookup;
         GORNameLookup = getGORNameLookup();
-        
-//	Value = -9.0	Label = Don't know
-//	Value = -8.0	Label = Refused
-//	Value = -7.0	Label = Does not apply
-//	Value = -6.0	Label = Error/partial
+
         Object[] GORSubsetsAndLookups;
         File GORSubsetsAndLookupF;
         GORSubsetsAndLookupF = new File(outdir, "GORSubsetsAndLookups.dat");
@@ -171,7 +177,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                 totals[w] += GORSubset.size();
                 log("N=" + GORSubset.size() + " for GOR " + b + " " + GORNameLookup.get(b));
             }
-            log("N=" + totals[w] + " for all GORs" );
+            log("N=" + totals[w] + " for all GORs");
         }
 
 //        // HPROPW Total Household Property Wealth.
@@ -186,20 +192,32 @@ public class WIGB_Main_Process extends WIGB_Object {
 //        double HPROPW4 = getHPROPW(subset, W4);
 //        double HPROPW5 = getHPROPW(subset, W5);
 
-for (byte gor = 1; gor < NGORS; gor++) {
+        TreeMap<Byte, Double> changeHPROPW;
+        changeHPROPW = new TreeMap<>();
+        for (byte gor = 1; gor < NGORS; gor++) {
             log("GOR " + gor + " " + GORNameLookup.get(gor));
             log("HPROPW1 SummaryStatistics");
-            logSummaryStatistics(HPROPW1.get(gor).values());
+            double aHPROPW1 = logSummaryStatisticsAndGetAverage(HPROPW1.get(gor).values());
             log("HPROPW2 SummaryStatistics");
-            logSummaryStatistics(HPROPW2.get(gor).values());
+            double aHPROPW2 = logSummaryStatisticsAndGetAverage(HPROPW2.get(gor).values());
             log("HPROPW3 SummaryStatistics");
-            logSummaryStatistics(HPROPW3.get(gor).values());
+            double aHPROPW3 = logSummaryStatisticsAndGetAverage(HPROPW3.get(gor).values());
             log("HPROPW4 SummaryStatistics");
-            logSummaryStatistics(HPROPW4.get(gor).values());
+            double aHPROPW4 = logSummaryStatisticsAndGetAverage(HPROPW4.get(gor).values());
             log("HPROPW5 SummaryStatistics");
-            logSummaryStatistics(HPROPW5.get(gor).values());
+            double aHPROPW5 = logSummaryStatisticsAndGetAverage(HPROPW5.get(gor).values());
+            changeHPROPW.put(gor, aHPROPW5 - aHPROPW1);
         }
 
+        String title;
+        String xAxisLabel;
+        String yAxisLabel;
+        title = "Average change in HPROPW Between Wave 1 and Wave 5";
+        xAxisLabel = "Government Office Region";
+        yAxisLabel = "£";
+
+        createLineGraph(title, xAxisLabel, yAxisLabel, GORNameLookup, changeHPROPW);
+        
 //        Value label information for HPROPWW3
 //	Value = -9.0	Label = Does not know
 //	Value = -8.0	Label = Refusal
@@ -249,7 +267,7 @@ for (byte gor = 1; gor < NGORS; gor++) {
                 totals[w] += GORSubset.size();
                 log("N=" + GORSubset.size() + " for GOR " + b + " " + GORNameLookup.get(b));
             }
-            log("N=" + totals[w] + " for all GORs" );
+            log("N=" + totals[w] + " for all GORs");
         }
         for (byte gor = 1; gor < NGORS; gor++) {
             log("GOR " + gor + " " + GORNameLookup.get(gor));
@@ -296,7 +314,8 @@ for (byte gor = 1; gor < NGORS; gor++) {
         logPW.close();
     }
 
-    protected void logSummaryStatistics(HashMap<?, Integer> m) {
+    protected double logSummaryStatistics(HashMap<?, Integer> m) {
+        double r;
         IntSummaryStatistics stats = m.values().stream().
                 collect(IntSummaryStatistics::new,
                         IntSummaryStatistics::accept,
@@ -305,19 +324,29 @@ for (byte gor = 1; gor < NGORS; gor++) {
         log("Min " + stats.getMin());
         log("Count " + stats.getCount());
         log("Sum " + stats.getSum());
-        log("Average " + stats.getAverage());
+        r = stats.getAverage();
+        log("Average " + r);
+        return r;
     }
 
-    protected void logSummaryStatistics(Collection<Double> c) {
+    /**
+     *
+     * @param c
+     * @return
+     */
+    protected double logSummaryStatisticsAndGetAverage(Collection<Double> c) {
         DoubleSummaryStatistics stats = c.stream().
                 collect(DoubleSummaryStatistics::new,
                         DoubleSummaryStatistics::accept,
                         DoubleSummaryStatistics::combine);
+        double r;
+        r = stats.getAverage();
         log("Max " + stats.getMax());
         log("Min " + stats.getMin());
         log("Count " + stats.getCount());
         log("Sum " + stats.getSum());
-        log("Average " + stats.getAverage());
+        log("Average " + r);
+        return r;
     }
 
     protected void initlog(int i) {
@@ -2372,4 +2401,52 @@ for (byte gor = 1; gor < NGORS; gor++) {
     boolean doJavaCodeGeneration = false;
     boolean doLoadDataIntoCaches = false;
 
+    /**
+     *
+     * @param title
+     * @param GORNameLookup
+     * @param changeHPROPW
+     */
+    public void createLineGraph(
+            String title, String xAxisLabel, String yAxisLabel,
+            TreeMap<Byte, String> GORNameLookup,
+            TreeMap<Byte, Double> changeHPROPW) {
+        Generic_Visualisation.getHeadlessEnvironment();
+        /*
+         * Initialise title and File to write image to
+         */
+        File file;
+        String format = "PNG";
+        System.out.println("Title: " + title);
+        Generic_Strings strings = new Generic_Strings();
+        Generic_Files files = new Generic_Files("data");
+        File outdir;
+        outdir = files.getOutputDataDir(strings);
+        file = new File(outdir, title.replace(" ", "_") + "." + format);
+        System.out.println("File: " + file.toString());
+        int dataWidth = 500;
+        int dataHeight = 250;
+        boolean drawOriginLinesOnPlot = true;
+        int barGap = 1;
+        int xIncrement = 1;
+        int numberOfYAxisTicks = 11;
+        BigDecimal yMax;
+        yMax = null;
+        BigDecimal yPin = BigDecimal.ZERO;
+        BigDecimal yIncrement = BigDecimal.ONE;
+        //int yAxisStartOfEndInterval = 60;
+        int decimalPlacePrecisionForCalculations = 10;
+        int decimalPlacePrecisionForDisplay = 3;
+        RoundingMode roundingMode = RoundingMode.HALF_UP;
+        ExecutorService es = Executors.newSingleThreadExecutor();
+        WIGB_LineGraph chart = new WIGB_LineGraph(es, file, format, title,
+                dataWidth, dataHeight, xAxisLabel, yAxisLabel,
+                yMax, yPin, yIncrement, numberOfYAxisTicks,
+                decimalPlacePrecisionForCalculations,
+                decimalPlacePrecisionForDisplay, roundingMode);
+        chart.setData(GORNameLookup, changeHPROPW);
+        chart.run();
+        Future future = chart.future;
+        Generic_Execution.shutdownExecutorService(es, future, chart);
+    }
 }
