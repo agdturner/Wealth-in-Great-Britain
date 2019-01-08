@@ -147,7 +147,8 @@ public class WIGB_LineGraph extends Generic_LineGraph {
     }
 
     public void setData(TreeMap<Byte, String> GORNameLookup,
-            TreeMap<Byte, Double> changeHPROPW) {
+            TreeMap<Byte, Double> changeHPROPWSubset,
+            TreeMap<Byte, Double> changeHPROPWAll) {
         Object[] data;
         data = new Object[7];
 
@@ -155,31 +156,40 @@ public class WIGB_LineGraph extends Generic_LineGraph {
 
         TreeMap<String, TreeMap<BigDecimal, BigDecimal>> maps;
         maps = new TreeMap<>();
+        
         TreeMap<BigDecimal, BigDecimal> map;
         map = new TreeMap<>();
         for (byte gor = 1; gor <= NGORS; gor++) {
-            map.put(new BigDecimal(gor), new BigDecimal(changeHPROPW.get(gor)));
-            maps.put("Change in HPROPW", map);
+            map.put(new BigDecimal(gor), new BigDecimal(changeHPROPWSubset.get(gor)));
+            maps.put("Change in HPROPW Subset", map);
         }
+
+        TreeMap<BigDecimal, BigDecimal> map2;
+        map2 = new TreeMap<>();
+        for (byte gor = 1; gor <= NGORS; gor++) {
+            map2.put(new BigDecimal(gor), new BigDecimal(changeHPROPWAll.get(gor)));
+            maps.put("Change in HPROPW All", map2);
+        }
+
         BigDecimal[] minMaxBigDecimal;
         minMaxBigDecimal = Generic_Collections.getMinMaxBigDecimal(map);
         BigDecimal minY = minMaxBigDecimal[0];
         BigDecimal maxY = minMaxBigDecimal[1];
         BigDecimal minX = map.firstKey();
         BigDecimal maxX = map.lastKey();
-//        minMaxBigDecimal = Generic_Collections.getMinMaxBigDecimal(map2);
-//        if (minY.compareTo(minMaxBigDecimal[0]) == 1) {
-//            minY = minMaxBigDecimal[0];
-//        }
-//        if (maxY.compareTo(minMaxBigDecimal[1]) == -1) {
-//            maxY = minMaxBigDecimal[1];
-//        }
-//        if (minX.compareTo(map2.firstKey()) == 1) {
-//            minX = map2.firstKey();
-//        }
-//        if (maxX.compareTo(map2.lastKey()) == -1) {
-//            maxX = map2.lastKey();
-//        }
+        minMaxBigDecimal = Generic_Collections.getMinMaxBigDecimal(map2);
+        if (minY.compareTo(minMaxBigDecimal[0]) == 1) {
+            minY = minMaxBigDecimal[0];
+        }
+        if (maxY.compareTo(minMaxBigDecimal[1]) == -1) {
+            maxY = minMaxBigDecimal[1];
+        }
+        if (minX.compareTo(map2.firstKey()) == 1) {
+            minX = map2.firstKey();
+        }
+        if (maxX.compareTo(map2.lastKey()) == -1) {
+            maxX = map2.lastKey();
+        }
         data[0] = maps;
         data[1] = minY;
         data[2] = maxY;

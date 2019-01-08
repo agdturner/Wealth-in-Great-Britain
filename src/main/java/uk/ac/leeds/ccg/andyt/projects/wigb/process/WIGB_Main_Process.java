@@ -38,6 +38,7 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Object;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Collection;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Combined_Record;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Data;
+import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_HHOLD_Handler;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Wave2_Record;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Wave3_Record;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Wave4_Record;
@@ -180,33 +181,80 @@ public class WIGB_Main_Process extends WIGB_Object {
             log("N=" + totals[w] + " for all GORs");
         }
 
-//        // HPROPW Total Household Property Wealth.
-        HashMap<Byte, HashMap<Short, Double>> HPROPW1 = getHPROPW(subset, GORSubsets, GORLookups, W1);
-        HashMap<Byte, HashMap<Short, Double>> HPROPW2 = getHPROPW(subset, GORSubsets, GORLookups, W2);
-        HashMap<Byte, HashMap<Short, Double>> HPROPW3 = getHPROPW(subset, GORSubsets, GORLookups, W3);
-        HashMap<Byte, HashMap<Short, Double>> HPROPW4 = getHPROPW(subset, GORSubsets, GORLookups, W4);
-        HashMap<Byte, HashMap<Short, Double>> HPROPW5 = getHPROPW(subset, GORSubsets, GORLookups, W5);
-//        double HPROPW1 = getHPROPW(subset, W1);
-//        double HPROPW2 = getHPROPW(subset, W2);
-//        double HPROPW3 = getHPROPW(subset, W3);
-//        double HPROPW4 = getHPROPW(subset, W4);
-//        double HPROPW5 = getHPROPW(subset, W5);
-
-        TreeMap<Byte, Double> changeHPROPW;
-        changeHPROPW = new TreeMap<>();
+        /**
+         * Get HPROPW Total Household Property Wealth for each wave in the
+         * subsets.
+         */
+        log("Get HPROPW Total Household Property Wealth for each wave in the subsets.");
+        HashMap<Byte, HashMap<Short, Double>> HPROPW1Subset;
+        HashMap<Byte, HashMap<Short, Double>> HPROPW2Subset;
+        HashMap<Byte, HashMap<Short, Double>> HPROPW3Subset;
+        HashMap<Byte, HashMap<Short, Double>> HPROPW4Subset;
+        HashMap<Byte, HashMap<Short, Double>> HPROPW5Subset;
+        HPROPW1Subset = getHPROPWForGORSubsets(subset, GORSubsets, GORLookups, W1);
+        HPROPW2Subset = getHPROPWForGORSubsets(subset, GORSubsets, GORLookups, W2);
+        HPROPW3Subset = getHPROPWForGORSubsets(subset, GORSubsets, GORLookups, W3);
+        HPROPW4Subset = getHPROPWForGORSubsets(subset, GORSubsets, GORLookups, W4);
+        HPROPW5Subset = getHPROPWForGORSubsets(subset, GORSubsets, GORLookups, W5);
+        TreeMap<Byte, Double> changeHPROPWSubset;
+        changeHPROPWSubset = new TreeMap<>();
         for (byte gor = 1; gor < NGORS; gor++) {
             log("GOR " + gor + " " + GORNameLookup.get(gor));
             log("HPROPW1 SummaryStatistics");
-            double aHPROPW1 = logSummaryStatisticsAndGetAverage(HPROPW1.get(gor).values());
+            double aHPROPW1 = logSummaryStatisticsAndGetAverage(HPROPW1Subset.get(gor).values());
             log("HPROPW2 SummaryStatistics");
-            double aHPROPW2 = logSummaryStatisticsAndGetAverage(HPROPW2.get(gor).values());
+            double aHPROPW2 = logSummaryStatisticsAndGetAverage(HPROPW2Subset.get(gor).values());
             log("HPROPW3 SummaryStatistics");
-            double aHPROPW3 = logSummaryStatisticsAndGetAverage(HPROPW3.get(gor).values());
+            double aHPROPW3 = logSummaryStatisticsAndGetAverage(HPROPW3Subset.get(gor).values());
             log("HPROPW4 SummaryStatistics");
-            double aHPROPW4 = logSummaryStatisticsAndGetAverage(HPROPW4.get(gor).values());
+            double aHPROPW4 = logSummaryStatisticsAndGetAverage(HPROPW4Subset.get(gor).values());
             log("HPROPW5 SummaryStatistics");
-            double aHPROPW5 = logSummaryStatisticsAndGetAverage(HPROPW5.get(gor).values());
-            changeHPROPW.put(gor, aHPROPW5 - aHPROPW1);
+            double aHPROPW5 = logSummaryStatisticsAndGetAverage(HPROPW5Subset.get(gor).values());
+            double diff = aHPROPW5 - aHPROPW1;
+            log("aHPROPW5 - aHPROPW1 " + diff);
+            changeHPROPWSubset.put(gor, diff);
+        }
+
+        /**
+         * Get HPROPW Total Household Property Wealth for each wave for all
+         * records.
+         */
+        log("Get HPROPW Total Household Property Wealth for each wave for all records.");
+        TreeMap<Byte, Double> changeHPROPWAll;
+        changeHPROPWAll = new TreeMap<>();
+        WaAS_Strings tWaAS_Strings;
+        tWaAS_Strings = new WaAS_Strings();
+        WaAS_Files tWaAS_Files;
+        tWaAS_Files = new WaAS_Files(tWaAS_Strings, "data");
+        WaAS_HHOLD_Handler h;
+        File inDir = Files.getGeneratedWaASDir();
+        h = new WaAS_HHOLD_Handler(tWaAS_Files, tWaAS_Strings, inDir);
+        HashMap<Byte, HashMap<Short, Double>> HPROPW1All;
+        HashMap<Byte, HashMap<Short, Double>> HPROPW2;
+        HashMap<Byte, HashMap<Short, Double>> HPROPW3;
+        HashMap<Byte, HashMap<Short, Double>> HPROPW4;
+        HashMap<Byte, HashMap<Short, Double>> HPROPW5All;
+        TreeMap<Short, WaAS_Wave1_HHOLD_Record> allW1 = h.loadAllWave1(WaAS_Data.W1);
+        HPROPW1All = getHPROPWForGORW1(allW1, GORSubsets, GORLookups, W1);
+        allW1 = null; // To free memory.
+        TreeMap<Short, WaAS_Wave5_HHOLD_Record> allW5 = h.loadAllWave5(WaAS_Data.W5);
+        HPROPW5All = getHPROPWForGORW5(allW5, GORSubsets, GORLookups, W5);
+        allW5 = null; // To free memory.
+        for (byte gor = 1; gor < NGORS; gor++) {
+            log("GOR " + gor + " " + GORNameLookup.get(gor));
+            log("HPROPW1 SummaryStatistics");
+            double aHPROPW1All = logSummaryStatisticsAndGetAverage(HPROPW1All.get(gor).values());
+//            log("HPROPW2 SummaryStatistics");
+//            double aHPROPW2 = logSummaryStatisticsAndGetAverage(HPROPW2Subset.get(gor).values());
+//            log("HPROPW3 SummaryStatistics");
+//            double aHPROPW3 = logSummaryStatisticsAndGetAverage(HPROPW3Subset.get(gor).values());
+//            log("HPROPW4 SummaryStatistics");
+//            double aHPROPW4 = logSummaryStatisticsAndGetAverage(HPROPW4Subset.get(gor).values());
+            log("HPROPW5 SummaryStatistics");
+            double aHPROPW5All = logSummaryStatisticsAndGetAverage(HPROPW5All.get(gor).values());
+            double diff = aHPROPW5All - aHPROPW1All;
+            log("aHPROPW5All - aHPROPW1All " + diff);
+            changeHPROPWAll.put(gor, diff);
         }
 
         String title;
@@ -216,8 +264,8 @@ public class WIGB_Main_Process extends WIGB_Object {
         xAxisLabel = "Government Office Region";
         yAxisLabel = "£";
 
-        createLineGraph(title, xAxisLabel, yAxisLabel, GORNameLookup, changeHPROPW);
-        
+        createLineGraph(title, xAxisLabel, yAxisLabel, GORNameLookup, changeHPROPWAll, changeHPROPWSubset);
+
 //        Value label information for HPROPWW3
 //	Value = -9.0	Label = Does not know
 //	Value = -8.0	Label = Refusal
@@ -1250,7 +1298,7 @@ public class WIGB_Main_Process extends WIGB_Object {
      * @return Map with keys as GOR and Values as map with keys as CASEWX and
      * values as HPROPW.
      */
-    public HashMap<Byte, HashMap<Short, Double>> getHPROPW(
+    public HashMap<Byte, HashMap<Short, Double>> getHPROPWForGORSubsets(
             HashSet<Short> subset,
             HashMap<Byte, HashSet<Short>>[] GORSubsets,
             HashMap<Short, Byte>[] GORLookups, byte wave) {
@@ -1433,6 +1481,73 @@ public class WIGB_Main_Process extends WIGB_Object {
         }
         return r;
     }
+
+    /**
+     * Get the HPROPW.
+     *
+     * @param w1All
+     * @param GORSubsets
+     * @param GORLookups
+     * @param wave
+     * @return Map with keys as GOR and Values as map with keys as CASEWX and
+     * values as HPROPW.
+     */
+    public HashMap<Byte, HashMap<Short, Double>> getHPROPWForGORW1(
+            TreeMap<Short, WaAS_Wave1_HHOLD_Record> w1All,
+            HashMap<Byte, HashSet<Short>>[] GORSubsets,
+            HashMap<Short, Byte>[] GORLookups, byte wave) {
+        // Initialise result
+        HashMap<Byte, HashMap<Short, Double>> r;
+        r = new HashMap<>();
+        Iterator<Byte> ite;
+        ite = GORSubsets[wave - 1].keySet().iterator();
+        while (ite.hasNext()) {
+            Byte GOR;
+            GOR = ite.next();
+            r.put(GOR, new HashMap<>());
+        }
+        w1All.keySet().stream().forEach(CASEW1 -> {
+            WaAS_Wave1_HHOLD_Record w1;
+            w1 = w1All.get(CASEW1);
+            Byte GOR = GORLookups[wave - 1].get(CASEW1);
+            Generic_Collections.addToMap(r, GOR, CASEW1, w1.getHPROPW());
+        });
+        return r;
+    }
+
+    /**
+     * Get the HPROPW.
+     *
+     * @param w5All
+     * @param GORSubsets
+     * @param GORLookups
+     * @param wave
+     * @return Map with keys as GOR and Values as map with keys as CASEWX and
+     * values as HPROPW.
+     */
+    public HashMap<Byte, HashMap<Short, Double>> getHPROPWForGORW5(
+            TreeMap<Short, WaAS_Wave5_HHOLD_Record> w5All,
+            HashMap<Byte, HashSet<Short>>[] GORSubsets,
+            HashMap<Short, Byte>[] GORLookups, byte wave) {
+        // Initialise result
+        HashMap<Byte, HashMap<Short, Double>> r;
+        r = new HashMap<>();
+        Iterator<Byte> ite;
+        ite = GORSubsets[wave - 1].keySet().iterator();
+        while (ite.hasNext()) {
+            Byte GOR;
+            GOR = ite.next();
+            r.put(GOR, new HashMap<>());
+        }
+        w5All.keySet().stream().forEach(CASEW5 -> {
+            WaAS_Wave5_HHOLD_Record w5;
+            w5 = w5All.get(CASEW5);
+            Byte GOR = GORLookups[wave - 1].get(CASEW5);
+            Generic_Collections.addToMap(r, GOR, CASEW5, w5.getHPROPW());
+        });
+        return r;
+    }
+
 //    /**
 //     * Get the total HPROPW in subset.
 //     *
@@ -1440,7 +1555,7 @@ public class WIGB_Main_Process extends WIGB_Object {
 //     * @param wave
 //     * @return
 //     */
-//    public double getHPROPW(HashSet<Short> subset, byte wave) {
+//    public double getHPROPWForGORSubsets(HashSet<Short> subset, byte wave) {
 //        // For brevity/convenience.
 //        byte W1 = WaAS_Data.W1;
 //        byte W2 = WaAS_Data.W2;
@@ -1457,7 +1572,7 @@ public class WIGB_Main_Process extends WIGB_Object {
 //                    if (subset.contains(CASEW1)) {
 //                        WaAS_Combined_Record cr;
 //                        cr = c.getData().get(CASEW1);
-//                        HPROPW = cr.w1Record.getHhold().getHPROPW();
+//                        HPROPW = cr.w1Record.getHhold().getHPROPWForGORSubsets();
 //                        if (HPROPW < 0) {
 //                            HPROPW = 0;
 //                        }
@@ -1483,7 +1598,7 @@ public class WIGB_Main_Process extends WIGB_Object {
 //                        ite = w2Records.keySet().iterator();
 //                        while (ite.hasNext()) {
 //                            CASEW2 = ite.next();
-//                            double HPROPWW2 = w2Records.get(CASEW2).getHhold().getHPROPW();
+//                            double HPROPWW2 = w2Records.get(CASEW2).getHhold().getHPROPWForGORSubsets();
 //                            if (HPROPWW2 > 0) {
 //                                HPROPW += HPROPWW2;
 //                            }
@@ -1517,7 +1632,7 @@ public class WIGB_Main_Process extends WIGB_Object {
 //                            ite2 = w3_2.keySet().iterator();
 //                            while (ite2.hasNext()) {
 //                                CASEW3 = ite2.next();
-//                                double HPROPWW3 = w3_2.get(CASEW3).getHhold().getHPROPW();
+//                                double HPROPWW3 = w3_2.get(CASEW3).getHhold().getHPROPWForGORSubsets();
 //                                if (HPROPWW3 > 0) {
 //                                    HPROPW += HPROPWW3;
 //                                }
@@ -1559,7 +1674,7 @@ public class WIGB_Main_Process extends WIGB_Object {
 //                                ite3 = w4_3.keySet().iterator();
 //                                while (ite3.hasNext()) {
 //                                    CASEW4 = ite3.next();
-//                                    double HPROPWW4 = w4_3.get(CASEW4).getHhold().getHPROPW();
+//                                    double HPROPWW4 = w4_3.get(CASEW4).getHhold().getHPROPWForGORSubsets();
 //                                    if (HPROPWW4 > 0) {
 //                                        HPROPW += HPROPWW4;
 //                                    }
@@ -1609,7 +1724,7 @@ public class WIGB_Main_Process extends WIGB_Object {
 //                                    ite4 = w5_4.keySet().iterator();
 //                                    while (ite4.hasNext()) {
 //                                        CASEW5 = ite4.next();
-//                                        double HPROPWW5 = w5_4.get(CASEW5).getHhold().getHPROPW();
+//                                        double HPROPWW5 = w5_4.get(CASEW5).getHhold().getHPROPWForGORSubsets();
 //                                        if (HPROPWW5 > 0) {
 //                                            HPROPW += HPROPWW5;
 //                                        }
@@ -1629,7 +1744,6 @@ public class WIGB_Main_Process extends WIGB_Object {
 //        log("Total (Hhold aggregate) HPROPW in Wave " + wave + " " + tHPROPW);
 //        return tHPROPW;
 //    }
-
     /**
      * Get FINCVB.
      *
@@ -2405,12 +2519,13 @@ public class WIGB_Main_Process extends WIGB_Object {
      *
      * @param title
      * @param GORNameLookup
-     * @param changeHPROPW
+     * @param changeHPROPWSubset
      */
     public void createLineGraph(
             String title, String xAxisLabel, String yAxisLabel,
             TreeMap<Byte, String> GORNameLookup,
-            TreeMap<Byte, Double> changeHPROPW) {
+            TreeMap<Byte, Double> changeHPROPWSubset,
+            TreeMap<Byte, Double> changeHPROPWAll) {
         Generic_Visualisation.getHeadlessEnvironment();
         /*
          * Initialise title and File to write image to
@@ -2444,7 +2559,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                 yMax, yPin, yIncrement, numberOfYAxisTicks,
                 decimalPlacePrecisionForCalculations,
                 decimalPlacePrecisionForDisplay, roundingMode);
-        chart.setData(GORNameLookup, changeHPROPW);
+        chart.setData(GORNameLookup, changeHPROPWSubset, changeHPROPWAll);
         chart.run();
         Future future = chart.future;
         Generic_Execution.shutdownExecutorService(es, future, chart);
