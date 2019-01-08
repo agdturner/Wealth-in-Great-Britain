@@ -236,10 +236,10 @@ public class WIGB_Main_Process extends WIGB_Object {
         HashMap<Byte, HashMap<Short, Double>> HPROPW5All;
         TreeMap<Short, WaAS_Wave1_HHOLD_Record> allW1 = h.loadAllWave1(WaAS_Data.W1);
         HPROPW1All = getHPROPWForGORW1(allW1, W1);
-        allW1 = null; // To free memory.
+        allW1 = null; // Set to null to free memory.
         TreeMap<Short, WaAS_Wave5_HHOLD_Record> allW5 = h.loadAllWave5(WaAS_Data.W5);
         HPROPW5All = getHPROPWForGORW5(allW5, W5);
-        allW5 = null; // To free memory.
+        allW5 = null; // Set to null to free memory.
         for (byte gor = 1; gor < NGORS; gor++) {
             log("GOR " + gor + " " + GORNameLookup.get(gor));
             log("HPROPW1 SummaryStatistics");
@@ -256,13 +256,13 @@ public class WIGB_Main_Process extends WIGB_Object {
             log("aHPROPW5All - aHPROPW1All " + diff);
             changeHPROPWAll.put(gor, diff);
         }
-        
+
         // Data to graph.
         log("GOR,GORName,changeHPROPWSubset,changeHPROPWAll");
         for (byte gor = 1; gor < NGORS; gor++) {
             log("" + gor + "," + GORNameLookup.get(gor) + "," + changeHPROPWSubset.get(gor) + "," + changeHPROPWAll.get(gor));
         }
-        
+
         String title;
         String xAxisLabel;
         String yAxisLabel;
@@ -1503,15 +1503,32 @@ public class WIGB_Main_Process extends WIGB_Object {
         // Initialise result
         HashMap<Byte, HashMap<Short, Double>> r;
         r = new HashMap<>();
-        for (byte gor = 1; gor < 13; gor ++) {
+        for (byte gor = 1; gor < 13; gor++) {
             r.put(gor, new HashMap<>());
         }
-        w1All.keySet().stream().forEach(CASEW1 -> {
-            WaAS_Wave1_HHOLD_Record w1;
+        int countNegative = 0;
+        int countZero = 0;
+        Iterator<Short> ite = w1All.keySet().iterator();
+        Short CASEW1;
+        WaAS_Wave1_HHOLD_Record w1;
+        Byte GOR;
+        double HPROPW;
+        while (ite.hasNext()) {
+            CASEW1 = ite.next();
             w1 = w1All.get(CASEW1);
-            Byte GOR = w1.getGOR();
-            Generic_Collections.addToMap(r, GOR, CASEW1, w1.getHPROPW());
-        });
+            GOR = w1.getGOR();
+            HPROPW = w1.getHPROPW();
+            if (HPROPW == 0.0d) {
+                countZero++;
+            } else if (HPROPW < 0.0d) {
+                countNegative++;
+            }
+            Generic_Collections.addToMap(r, GOR, CASEW1, HPROPW);
+        }
+        log("getHPROPWForGORW1");
+        log("count " + w1All.size());
+        log("countZero " + countZero);
+        log("countNegative " + countNegative);
         return r;
     }
 
@@ -1528,15 +1545,32 @@ public class WIGB_Main_Process extends WIGB_Object {
         // Initialise result
         HashMap<Byte, HashMap<Short, Double>> r;
         r = new HashMap<>();
-        for (byte gor = 1; gor < 13; gor ++) {
+        for (byte gor = 1; gor < 13; gor++) {
             r.put(gor, new HashMap<>());
         }
-        w5All.keySet().stream().forEach(CASEW5 -> {
-            WaAS_Wave5_HHOLD_Record w5;
+        int countNegative = 0;
+        int countZero = 0;
+        Iterator<Short> ite = w5All.keySet().iterator();
+        Short CASEW5;
+        WaAS_Wave5_HHOLD_Record w5;
+        Byte GOR;
+        double HPROPW;
+        while (ite.hasNext()) {
+            CASEW5 = ite.next();
             w5 = w5All.get(CASEW5);
-            Byte GOR = w5.getGOR();
-            Generic_Collections.addToMap(r, GOR, CASEW5, w5.getHPROPW());
-        });
+            GOR = w5.getGOR();
+            HPROPW = w5.getHPROPW();
+            if (HPROPW == 0.0d) {
+                countZero++;
+            } else if (HPROPW < 0.0d) {
+                countNegative++;
+            }
+            Generic_Collections.addToMap(r, GOR, CASEW5, HPROPW);
+        }
+        log("getHPROPWForGORW5");
+        log("count " + w5All.size());
+        log("countZero " + countZero);
+        log("countNegative " + countNegative);
         return r;
     }
 
