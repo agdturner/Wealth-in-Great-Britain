@@ -235,10 +235,10 @@ public class WIGB_Main_Process extends WIGB_Object {
         HashMap<Byte, HashMap<Short, Double>> HPROPW4;
         HashMap<Byte, HashMap<Short, Double>> HPROPW5All;
         TreeMap<Short, WaAS_Wave1_HHOLD_Record> allW1 = h.loadAllWave1(WaAS_Data.W1);
-        HPROPW1All = getHPROPWForGORW1(allW1, GORSubsets, GORLookups, W1);
+        HPROPW1All = getHPROPWForGORW1(allW1, W1);
         allW1 = null; // To free memory.
         TreeMap<Short, WaAS_Wave5_HHOLD_Record> allW5 = h.loadAllWave5(WaAS_Data.W5);
-        HPROPW5All = getHPROPWForGORW5(allW5, GORSubsets, GORLookups, W5);
+        HPROPW5All = getHPROPWForGORW5(allW5, W5);
         allW5 = null; // To free memory.
         for (byte gor = 1; gor < NGORS; gor++) {
             log("GOR " + gor + " " + GORNameLookup.get(gor));
@@ -256,7 +256,13 @@ public class WIGB_Main_Process extends WIGB_Object {
             log("aHPROPW5All - aHPROPW1All " + diff);
             changeHPROPWAll.put(gor, diff);
         }
-
+        
+        // Data to graph.
+        log("GOR,GORName,changeHPROPWSubset,changeHPROPWAll");
+        for (byte gor = 1; gor < NGORS; gor++) {
+            log("" + gor + "," + GORNameLookup.get(gor) + "," + changeHPROPWSubset.get(gor) + "," + changeHPROPWAll.get(gor));
+        }
+        
         String title;
         String xAxisLabel;
         String yAxisLabel;
@@ -264,7 +270,9 @@ public class WIGB_Main_Process extends WIGB_Object {
         xAxisLabel = "Government Office Region";
         yAxisLabel = "£";
 
-        createLineGraph(title, xAxisLabel, yAxisLabel, GORNameLookup, changeHPROPWAll, changeHPROPWSubset);
+        //createLineGraph(title, xAxisLabel, yAxisLabel, GORNameLookup, changeHPROPWSubset);
+        //createLineGraph(title, xAxisLabel, yAxisLabel, GORNameLookup, changeHPROPWAll);
+        createLineGraph(title, xAxisLabel, yAxisLabel, GORNameLookup, changeHPROPWSubset, changeHPROPWAll);
 
 //        Value label information for HPROPWW3
 //	Value = -9.0	Label = Does not know
@@ -1486,30 +1494,22 @@ public class WIGB_Main_Process extends WIGB_Object {
      * Get the HPROPW.
      *
      * @param w1All
-     * @param GORSubsets
-     * @param GORLookups
      * @param wave
      * @return Map with keys as GOR and Values as map with keys as CASEWX and
      * values as HPROPW.
      */
     public HashMap<Byte, HashMap<Short, Double>> getHPROPWForGORW1(
-            TreeMap<Short, WaAS_Wave1_HHOLD_Record> w1All,
-            HashMap<Byte, HashSet<Short>>[] GORSubsets,
-            HashMap<Short, Byte>[] GORLookups, byte wave) {
+            TreeMap<Short, WaAS_Wave1_HHOLD_Record> w1All, byte wave) {
         // Initialise result
         HashMap<Byte, HashMap<Short, Double>> r;
         r = new HashMap<>();
-        Iterator<Byte> ite;
-        ite = GORSubsets[wave - 1].keySet().iterator();
-        while (ite.hasNext()) {
-            Byte GOR;
-            GOR = ite.next();
-            r.put(GOR, new HashMap<>());
+        for (byte gor = 1; gor < 13; gor ++) {
+            r.put(gor, new HashMap<>());
         }
         w1All.keySet().stream().forEach(CASEW1 -> {
             WaAS_Wave1_HHOLD_Record w1;
             w1 = w1All.get(CASEW1);
-            Byte GOR = GORLookups[wave - 1].get(CASEW1);
+            Byte GOR = w1.getGOR();
             Generic_Collections.addToMap(r, GOR, CASEW1, w1.getHPROPW());
         });
         return r;
@@ -1519,30 +1519,22 @@ public class WIGB_Main_Process extends WIGB_Object {
      * Get the HPROPW.
      *
      * @param w5All
-     * @param GORSubsets
-     * @param GORLookups
      * @param wave
      * @return Map with keys as GOR and Values as map with keys as CASEWX and
      * values as HPROPW.
      */
     public HashMap<Byte, HashMap<Short, Double>> getHPROPWForGORW5(
-            TreeMap<Short, WaAS_Wave5_HHOLD_Record> w5All,
-            HashMap<Byte, HashSet<Short>>[] GORSubsets,
-            HashMap<Short, Byte>[] GORLookups, byte wave) {
+            TreeMap<Short, WaAS_Wave5_HHOLD_Record> w5All, byte wave) {
         // Initialise result
         HashMap<Byte, HashMap<Short, Double>> r;
         r = new HashMap<>();
-        Iterator<Byte> ite;
-        ite = GORSubsets[wave - 1].keySet().iterator();
-        while (ite.hasNext()) {
-            Byte GOR;
-            GOR = ite.next();
-            r.put(GOR, new HashMap<>());
+        for (byte gor = 1; gor < 13; gor ++) {
+            r.put(gor, new HashMap<>());
         }
         w5All.keySet().stream().forEach(CASEW5 -> {
             WaAS_Wave5_HHOLD_Record w5;
             w5 = w5All.get(CASEW5);
-            Byte GOR = GORLookups[wave - 1].get(CASEW5);
+            Byte GOR = w5.getGOR();
             Generic_Collections.addToMap(r, GOR, CASEW5, w5.getHPROPW());
         });
         return r;
