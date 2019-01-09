@@ -198,22 +198,47 @@ public class WIGB_Main_Process extends WIGB_Object {
         HPROPW5Subset = getHPROPWForGORSubsets(subset, GORSubsets, GORLookups, W5);
         TreeMap<Byte, Double> changeHPROPWSubset;
         changeHPROPWSubset = new TreeMap<>();
+        double countW1 = 0;
+        double countZeroW1 = 0;
+        double countNegativeW1 = 0;
+        double countW5 = 0;
+        double countZeroW5 = 0;
+        double countNegativeW5 = 0;
         for (byte gor = 1; gor < NGORS; gor++) {
             log("GOR " + gor + " " + GORNameLookup.get(gor));
             log("HPROPW1 SummaryStatistics");
-            double aHPROPW1 = logSummaryStatisticsAndGetAverage(HPROPW1Subset.get(gor).values());
+            double[] aHPROPW1 = logSummaryStatisticsAndGetAverage(
+                    HPROPW1Subset.get(gor).values(), W1);
             log("HPROPW2 SummaryStatistics");
-            double aHPROPW2 = logSummaryStatisticsAndGetAverage(HPROPW2Subset.get(gor).values());
+            double[] aHPROPW2 = logSummaryStatisticsAndGetAverage(
+                    HPROPW2Subset.get(gor).values(), W2);
             log("HPROPW3 SummaryStatistics");
-            double aHPROPW3 = logSummaryStatisticsAndGetAverage(HPROPW3Subset.get(gor).values());
+            double[] aHPROPW3 = logSummaryStatisticsAndGetAverage(
+                    HPROPW3Subset.get(gor).values(), W3);
             log("HPROPW4 SummaryStatistics");
-            double aHPROPW4 = logSummaryStatisticsAndGetAverage(HPROPW4Subset.get(gor).values());
+            double[] aHPROPW4 = logSummaryStatisticsAndGetAverage(
+                    HPROPW4Subset.get(gor).values(), W4);
             log("HPROPW5 SummaryStatistics");
-            double aHPROPW5 = logSummaryStatisticsAndGetAverage(HPROPW5Subset.get(gor).values());
-            double diff = aHPROPW5 - aHPROPW1;
+            double[] aHPROPW5 = logSummaryStatisticsAndGetAverage(
+                    HPROPW5Subset.get(gor).values(), W5);
+            countW1 += aHPROPW1[1];
+            countZeroW1 += aHPROPW1[2];
+            countNegativeW1 += aHPROPW1[3];
+            countW5 += aHPROPW5[1];
+            countZeroW5 += aHPROPW5[2];
+            countNegativeW5 += aHPROPW5[3];
+            double diff = aHPROPW5[0] - aHPROPW1[0];
             log("aHPROPW5 - aHPROPW1 " + diff);
             changeHPROPWSubset.put(gor, diff);
         }
+        log("HPROPW For Wave 1 Subset");
+        log("" + countW1 + "\t Count");
+        log("" + countZeroW1 + "\t Zero");
+        log("" + countNegativeW1 + "\t Negative");
+        log("HPROPW For Wave 5 Subset");
+        log("" + countW5 + "\t Count");
+        log("" + countZeroW5 + "\t Zero");
+        log("" + countNegativeW5 + "\t Negative");
 
         /**
          * Get HPROPW Total Household Property Wealth for each wave for all
@@ -243,16 +268,18 @@ public class WIGB_Main_Process extends WIGB_Object {
         for (byte gor = 1; gor < NGORS; gor++) {
             log("GOR " + gor + " " + GORNameLookup.get(gor));
             log("HPROPW1 SummaryStatistics");
-            double aHPROPW1All = logSummaryStatisticsAndGetAverage(HPROPW1All.get(gor).values());
+            double[] aHPROPW1All = logSummaryStatisticsAndGetAverage(
+                    HPROPW1All.get(gor).values(), W1);
 //            log("HPROPW2 SummaryStatistics");
-//            double aHPROPW2 = logSummaryStatisticsAndGetAverage(HPROPW2Subset.get(gor).values());
+//            double aHPROPW2 = logSummaryStatisticsAndGetAverage(HPROPW2Subset.get(gor).values(), W2);
 //            log("HPROPW3 SummaryStatistics");
-//            double aHPROPW3 = logSummaryStatisticsAndGetAverage(HPROPW3Subset.get(gor).values());
+//            double aHPROPW3 = logSummaryStatisticsAndGetAverage(HPROPW3Subset.get(gor).values(), W3);
 //            log("HPROPW4 SummaryStatistics");
-//            double aHPROPW4 = logSummaryStatisticsAndGetAverage(HPROPW4Subset.get(gor).values());
+//            double aHPROPW4 = logSummaryStatisticsAndGetAverage(HPROPW4Subset.get(gor).values(), W4);
             log("HPROPW5 SummaryStatistics");
-            double aHPROPW5All = logSummaryStatisticsAndGetAverage(HPROPW5All.get(gor).values());
-            double diff = aHPROPW5All - aHPROPW1All;
+            double[] aHPROPW5All = logSummaryStatisticsAndGetAverage(
+                    HPROPW5All.get(gor).values(), W5);
+            double diff = aHPROPW5All[0] - aHPROPW1All[0];
             log("aHPROPW5All - aHPROPW1All " + diff);
             changeHPROPWAll.put(gor, diff);
         }
@@ -266,7 +293,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         String title;
         String xAxisLabel;
         String yAxisLabel;
-        title = "Average change in HPROPW Between Wave 1 and Wave 5";
+        title = "Average change in HPROPW (Wave 5 minus Wave 1)";
         xAxisLabel = "Government Office Region";
         yAxisLabel = "£";
 
@@ -390,18 +417,40 @@ public class WIGB_Main_Process extends WIGB_Object {
      * @param c
      * @return
      */
-    protected double logSummaryStatisticsAndGetAverage(Collection<Double> c) {
+    protected double[] logSummaryStatisticsAndGetAverage(Collection<Double> c,
+            byte wave) {
         DoubleSummaryStatistics stats = c.stream().
                 collect(DoubleSummaryStatistics::new,
                         DoubleSummaryStatistics::accept,
                         DoubleSummaryStatistics::combine);
-        double r;
-        r = stats.getAverage();
+        double[] r = new double[4];
+        r[0] = stats.getAverage();
         log("Max " + stats.getMax());
         log("Min " + stats.getMin());
         log("Count " + stats.getCount());
         log("Sum " + stats.getSum());
-        log("Average " + r);
+        log("Average " + r[0]);
+        int countNegative = 0;
+        int countZero = 0;
+        Iterator<Double> ite;
+        ite = c.iterator();
+        double HPROPW;
+        while (ite.hasNext()) {
+            HPROPW = ite.next();
+            if (HPROPW == 0.0d) {
+                countZero++;
+            } else if (HPROPW < 0.0d) {
+                countNegative++;
+                System.out.println("" + HPROPW + " Negative HPROPW");
+            }
+        }
+        r[1] = c.size();
+        r[2] = countZero;
+        r[3] = countNegative;
+        log("HPROPW For Wave " + wave + " Subset");
+        log("" + r[1] + "\t Count");
+        log("" + r[2] + "\t Zero");
+        log("" + r[3] + "\t Negative");
         return r;
     }
 
@@ -1522,6 +1571,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                 countZero++;
             } else if (HPROPW < 0.0d) {
                 countNegative++;
+                System.out.println("" + HPROPW + " Negative HPROPW");
             }
             Generic_Collections.addToMap(r, GOR, CASEW1, HPROPW);
         }
@@ -2567,14 +2617,12 @@ public class WIGB_Main_Process extends WIGB_Object {
         System.out.println("File: " + file.toString());
         int dataWidth = 500;
         int dataHeight = 250;
-        boolean drawOriginLinesOnPlot = true;
-        int barGap = 1;
-        int xIncrement = 1;
-        int numberOfYAxisTicks = 11;
+        int numberOfYAxisTicks = 10;
         BigDecimal yMax;
         yMax = null;
         BigDecimal yPin = BigDecimal.ZERO;
-        BigDecimal yIncrement = BigDecimal.ONE;
+        //BigDecimal yIncrement = BigDecimal.ONE;
+        BigDecimal yIncrement = null; // Setting this to null means that numberOfYAxisTicks is used.
         //int yAxisStartOfEndInterval = 60;
         int decimalPlacePrecisionForCalculations = 10;
         int decimalPlacePrecisionForDisplay = 3;
