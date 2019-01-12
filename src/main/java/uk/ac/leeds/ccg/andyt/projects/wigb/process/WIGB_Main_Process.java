@@ -117,22 +117,28 @@ public class WIGB_Main_Process extends WIGB_Object {
      * gainers and losers over the period 2006-2016? To what extent are the
      * costs and benefits affecting households consistent over time? In other
      * words, how much mobility do households experience between the categories
-     * of ‘winners’ and ‘losers’ over the course of those ten years? *
+     * of ‘winners’ and ‘losers’ over the course of those ten years?
      */
     public void run() {
         logF0 = new File(Files.getOutputDataDir(Strings), "log0.txt");
         logPW0 = Generic_IO.getPrintWriter(logF0, false); // Overwrite log file.
         initlog(4);
 
+        /**
+         * Set up input and output directories.
+         */
         File indir;
         File outdir;
         File generateddir;
-
         indir = Files.getWaASInputDir();
         generateddir = Files.getGeneratedWaASDir();
         outdir = new File(generateddir, "Subsets");
         outdir.mkdirs();
 
+        /**
+         * Get the subset of all records that have the same household
+         * composition.
+         */
         HashSet<Short> subset;
         File subsetF;
         subsetF = new File(outdir, "SameCompositionHashSet_CASEW1.dat");
@@ -144,17 +150,31 @@ public class WIGB_Main_Process extends WIGB_Object {
         }
         log("Total number of initial households in wave 1 " + subset.size());
 
+        /**
+         * Initialise commonly used variables.
+         */
         byte W1 = WaAS_Data.W1;
         byte W2 = WaAS_Data.W2;
         byte W3 = WaAS_Data.W3;
         byte W4 = WaAS_Data.W4;
         byte W5 = WaAS_Data.W5;
-
-        byte NGORS = 13; // Move to WaAS_Data
-
+        // <Move to WaAS_Data or WaAS_Handler>
+        byte NGORS = 13;
+        ArrayList<Byte> gors;
+        gors = new ArrayList<>();
+        for (byte gor = 1; gor <= NGORS; gor++) {
+            if (gor != 3) {
+                gors.add(gor);
+            }
+        }
+        // </Move to WaAS_Data>
+        // Government Office Region (GOR) name lookup looks up the name from the numerical code.
         TreeMap<Byte, String> GORNameLookup;
         GORNameLookup = getGORNameLookup();
 
+        /**
+         * Initialise GOR Subsets and Lookups
+         */
         Object[] GORSubsetsAndLookups;
         File GORSubsetsAndLookupF;
         GORSubsetsAndLookupF = new File(outdir, "GORSubsetsAndLookups.dat");
@@ -169,23 +189,24 @@ public class WIGB_Main_Process extends WIGB_Object {
         GORSubsets = (HashMap<Byte, HashSet<Short>>[]) GORSubsetsAndLookups[0];
         GORLookups = (HashMap<Short, Byte>[]) GORSubsetsAndLookups[1];
         int[] totals = new int[WaAS_Data.NWAVES];
+        log("GOR Subsets");
         for (byte w = 0; w < WaAS_Data.NWAVES; w++) {
             log("Wave " + (w + 1));
+            log("N,GORNumber,GORName");
             totals[w] = 0;
             for (byte b = 1; b < NGORS; b++) {
                 HashSet<Short> GORSubset;
                 GORSubset = GORSubsets[w].get(b);
                 totals[w] += GORSubset.size();
-                log("N=" + GORSubset.size() + " for GOR " + b + " " + GORNameLookup.get(b));
+                log("" + GORSubset.size() + "," + b + "," + GORNameLookup.get(b));
             }
-            log("N=" + totals[w] + " for all GORs");
+            log("" + totals[w] + "1 to 12,All");
         }
 
         /**
          * Get HPROPW Total Household Property Wealth for each wave in the
          * subsets.
          */
-        log("Get HPROPW Total Household Property Wealth for each wave in the subsets.");
         HashMap<Byte, HashMap<Short, Double>> HPROPW1Subset;
         HashMap<Byte, HashMap<Short, Double>> HPROPW2Subset;
         HashMap<Byte, HashMap<Short, Double>> HPROPW3Subset;
@@ -204,23 +225,22 @@ public class WIGB_Main_Process extends WIGB_Object {
         double countW5 = 0;
         double countZeroW5 = 0;
         double countNegativeW5 = 0;
-        for (byte gor = 1; gor < NGORS; gor++) {
-            log("GOR " + gor + " " + GORNameLookup.get(gor));
-            log("HPROPW1 SummaryStatistics");
-            double[] aHPROPW1 = logSummaryStatisticsAndGetAverage(
-                    HPROPW1Subset.get(gor).values(), W1);
-            log("HPROPW2 SummaryStatistics");
-            double[] aHPROPW2 = logSummaryStatisticsAndGetAverage(
-                    HPROPW2Subset.get(gor).values(), W2);
-            log("HPROPW3 SummaryStatistics");
-            double[] aHPROPW3 = logSummaryStatisticsAndGetAverage(
-                    HPROPW3Subset.get(gor).values(), W3);
-            log("HPROPW4 SummaryStatistics");
-            double[] aHPROPW4 = logSummaryStatisticsAndGetAverage(
-                    HPROPW4Subset.get(gor).values(), W4);
-            log("HPROPW5 SummaryStatistics");
-            double[] aHPROPW5 = logSummaryStatisticsAndGetAverage(
-                    HPROPW5Subset.get(gor).values(), W5);
+        log("HPROPW Total Household Property Wealth for each wave in the subsets.");
+        log("GORNumber,GORName,HPROPW5_Average-HPROPW1_Average,"
+                + ",HPROPW1_Count,HPROPW1_ZeroCount,HPROPW1_NegativeCount,HPROPW1_Average"
+                + ",HPROPW2_Count,HPROPW2_ZeroCount,HPROPW2_NegativeCount,HPROPW2_Average"
+                + ",HPROPW3_Count,HPROPW3_ZeroCount,HPROPW3_NegativeCount,HPROPW3_Average"
+                + ",HPROPW4_Count,HPROPW4_ZeroCount,HPROPW4_NegativeCount,HPROPW4_Average"
+                + ",HPROPW5_Count,HPROPW5_ZeroCount,HPROPW5_NegativeCount,HPROPW5_Average");
+        Iterator<Byte> ite;
+        ite = gors.iterator();
+        while (ite.hasNext()) {
+            byte gor = ite.next();
+            double[] aHPROPW1 = getSummaryStatistics(HPROPW1Subset.get(gor).values());
+            double[] aHPROPW2 = getSummaryStatistics(HPROPW2Subset.get(gor).values());
+            double[] aHPROPW3 = getSummaryStatistics(HPROPW3Subset.get(gor).values());
+            double[] aHPROPW4 = getSummaryStatistics(HPROPW4Subset.get(gor).values());
+            double[] aHPROPW5 = getSummaryStatistics(HPROPW5Subset.get(gor).values());
             countW1 += aHPROPW1[1];
             countZeroW1 += aHPROPW1[2];
             countNegativeW1 += aHPROPW1[3];
@@ -228,7 +248,12 @@ public class WIGB_Main_Process extends WIGB_Object {
             countZeroW5 += aHPROPW5[2];
             countNegativeW5 += aHPROPW5[3];
             double diff = aHPROPW5[0] - aHPROPW1[0];
-            log("aHPROPW5 - aHPROPW1 " + diff);
+            log("" + gor + "," + GORNameLookup.get(gor) + "," + diff
+                    + "," + aHPROPW1[4] + "," + aHPROPW1[5] + "," + aHPROPW1[6] + "," + aHPROPW1[7]
+                    + "," + aHPROPW2[4] + "," + aHPROPW2[5] + "," + aHPROPW2[6] + "," + aHPROPW2[7]
+                    + "," + aHPROPW3[4] + "," + aHPROPW3[5] + "," + aHPROPW3[6] + "," + aHPROPW3[7]
+                    + "," + aHPROPW4[4] + "," + aHPROPW4[5] + "," + aHPROPW4[6] + "," + aHPROPW4[7]
+                    + "," + aHPROPW5[4] + "," + aHPROPW5[5] + "," + aHPROPW5[6] + "," + aHPROPW5[7]);
             changeHPROPWSubset.put(gor, diff);
         }
         log("HPROPW For Wave 1 Subset");
@@ -244,7 +269,6 @@ public class WIGB_Main_Process extends WIGB_Object {
          * Get HPROPW Total Household Property Wealth for each wave for all
          * records.
          */
-        log("Get HPROPW Total Household Property Wealth for each wave for all records.");
         TreeMap<Byte, Double> changeHPROPWAll;
         changeHPROPWAll = new TreeMap<>();
         WaAS_Strings tWaAS_Strings;
@@ -265,151 +289,145 @@ public class WIGB_Main_Process extends WIGB_Object {
         TreeMap<Short, WaAS_Wave5_HHOLD_Record> allW5 = h.loadAllWave5(WaAS_Data.W5);
         HPROPW5All = getHPROPWForGORW5(allW5, W5);
         allW5 = null; // Set to null to free memory.
-        for (byte gor = 1; gor < NGORS; gor++) {
-            log("GOR " + gor + " " + GORNameLookup.get(gor));
-            log("HPROPW1 SummaryStatistics");
-            double[] aHPROPW1All = logSummaryStatisticsAndGetAverage(
-                    HPROPW1All.get(gor).values(), W1);
-//            log("HPROPW2 SummaryStatistics");
-//            double aHPROPW2 = logSummaryStatisticsAndGetAverage(HPROPW2Subset.get(gor).values(), W2);
-//            log("HPROPW3 SummaryStatistics");
-//            double aHPROPW3 = logSummaryStatisticsAndGetAverage(HPROPW3Subset.get(gor).values(), W3);
-//            log("HPROPW4 SummaryStatistics");
-//            double aHPROPW4 = logSummaryStatisticsAndGetAverage(HPROPW4Subset.get(gor).values(), W4);
-            log("HPROPW5 SummaryStatistics");
-            double[] aHPROPW5All = logSummaryStatisticsAndGetAverage(
-                    HPROPW5All.get(gor).values(), W5);
-            double diff = aHPROPW5All[0] - aHPROPW1All[0];
-            log("aHPROPW5All - aHPROPW1All " + diff);
+        log("HPROPW Total Household Property Wealth for each wave for all records.");
+        log("GORNumber,GORName,HPROPW5_Average-HPROPW1_Average,"
+                + ",HPROPW1_Count,HPROPW1_ZeroCount,HPROPW1_NegativeCount,HPROPW1_Average"
+                //                + ",HPROPW2_Count,HPROPW2_ZeroCount,HPROPW2_NegativeCount,HPROPW2_Average"
+                //                + ",HPROPW3_Count,HPROPW3_ZeroCount,HPROPW3_NegativeCount,HPROPW3_Average"
+                //                + ",HPROPW4_Count,HPROPW4_ZeroCount,HPROPW4_NegativeCount,HPROPW4_Average"
+                + ",HPROPW5_Count,HPROPW5_ZeroCount,HPROPW5_NegativeCount,HPROPW5_Average");
+        ite = gors.iterator();
+        while (ite.hasNext()) {
+            byte gor = ite.next();
+            double[] aHPROPW1 = getSummaryStatistics(HPROPW1All.get(gor).values());
+//            double aHPROPW2 = getSummaryStatistics(HPROPW2Subset.get(gor).values());
+//            double aHPROPW3 = getSummaryStatistics(HPROPW3Subset.get(gor).values());
+//            double aHPROPW4 = getSummaryStatistics(HPROPW4Subset.get(gor).values());
+            double[] aHPROPW5 = getSummaryStatistics(HPROPW5All.get(gor).values());
+            double diff = aHPROPW5[4] - aHPROPW1[4];
+            log("" + gor + "," + GORNameLookup.get(gor) + "," + diff
+                    + "," + aHPROPW1[4] + "," + aHPROPW1[5] + "," + aHPROPW1[6] + "," + aHPROPW1[7]
+                    //                    + "," + aHPROPW2[4] + "," + aHPROPW2[5] + "," + aHPROPW2[6] + "," + aHPROPW2[7]
+                    //                    + "," + aHPROPW3[4] + "," + aHPROPW3[5] + "," + aHPROPW3[6] + "," + aHPROPW3[7]
+                    //                    + "," + aHPROPW4[4] + "," + aHPROPW4[5] + "," + aHPROPW4[6] + "," + aHPROPW4[7]
+                    + "," + aHPROPW5[4] + "," + aHPROPW5[5] + "," + aHPROPW5[6] + "," + aHPROPW5[7]);
             changeHPROPWAll.put(gor, diff);
         }
 
         // Data to graph.
+        log("Data to graph");
         log("GOR,GORName,changeHPROPWSubset,changeHPROPWAll");
-        for (byte gor = 1; gor < NGORS; gor++) {
-            log("" + gor + "," + GORNameLookup.get(gor) + "," + changeHPROPWSubset.get(gor) + "," + changeHPROPWAll.get(gor));
+        ite = gors.iterator();
+        while (ite.hasNext()) {
+            byte gor = ite.next();
+            if (gor != 3) {
+                log("" + gor + "," + GORNameLookup.get(gor) + "," + changeHPROPWSubset.get(gor) + "," + changeHPROPWAll.get(gor));
+            }
         }
 
+        // Graph data
         String title;
         String xAxisLabel;
         String yAxisLabel;
         title = "Average change in HPROPW (Wave 5 minus Wave 1)";
         xAxisLabel = "Government Office Region";
         yAxisLabel = "£";
-
-        //createLineGraph(title, xAxisLabel, yAxisLabel, GORNameLookup, changeHPROPWSubset);
-        //createLineGraph(title, xAxisLabel, yAxisLabel, GORNameLookup, changeHPROPWAll);
         createLineGraph(title, xAxisLabel, yAxisLabel, GORNameLookup, changeHPROPWSubset, changeHPROPWAll);
 
-//        Value label information for HPROPWW3
-//	Value = -9.0	Label = Does not know
-//	Value = -8.0	Label = Refusal
-//	Value = -7.0	Label = Not applicable
-//	Value = -6.0	Label = Error / partial
-        // DVTotGIRW5	Variable label = Household Gross Annual (regular) income  - (rounded to 3 significant figures)
-        //getTenures(subset, W1);        
-//      Value label information for Ten1W1W2W3W4W5
-//	Value = 1.0	Label = Own it outright
-//	Value = 2.0	Label = mortgage
-//	Value = 3.0	Label = part rent-part mortgage
-//	Value = 4.0	Label = Rent it
-//	Value = 5.0	Label = Rent-free
-//	Value = 6.0	Label = Squatting
-//	Value = -9.0	Label = Don t know
-//	Value = -8.0	Label = Refused
-//	Value = -7.0	Label = Does not apply
-//	Value = -6.0	Label = Error partial
-//        long DVLUKVAL1 = getDVLUKVAL(subset, W1);
-//        long DVLUKVAL2 = getDVLUKVAL(subset, W2);
-//        long DVLUKVAL3 = getDVLUKVAL(subset, W3);
-//        long DVLUKVAL4 = getDVLUKVAL(subset, W4);
-//        long DVLUKVAL5 = getDVLUKVAL(subset, W5);
+////        Value label information for HPROPWW3
+////	Value = -9.0	Label = Does not know
+////	Value = -8.0	Label = Refusal
+////	Value = -7.0	Label = Not applicable
+////	Value = -6.0	Label = Error / partial
+//        // DVTotGIRW5	Variable label = Household Gross Annual (regular) income  - (rounded to 3 significant figures)
+//        //getTenures(subset, W1);        
+////      Value label information for Ten1W1W2W3W4W5
+////	Value = 1.0	Label = Own it outright
+////	Value = 2.0	Label = mortgage
+////	Value = 3.0	Label = part rent-part mortgage
+////	Value = 4.0	Label = Rent it
+////	Value = 5.0	Label = Rent-free
+////	Value = 6.0	Label = Squatting
+////	Value = -9.0	Label = Don t know
+////	Value = -8.0	Label = Refused
+////	Value = -7.0	Label = Does not apply
+////	Value = -6.0	Label = Error partial
+////        long DVLUKVAL1 = getDVLUKVAL(subset, W1);
+////        long DVLUKVAL2 = getDVLUKVAL(subset, W2);
+////        long DVLUKVAL3 = getDVLUKVAL(subset, W3);
+////        long DVLUKVAL4 = getDVLUKVAL(subset, W4);
+////        long DVLUKVAL5 = getDVLUKVAL(subset, W5);
+////
+////        long FINCVB1 = getFINCVB(subset, W1);
+////        long FINCVB2 = getFINCVB(subset, W2);
+////        long FINCVB3 = getFINCVB(subset, W3);
+////        long FINCVB4 = getFINCVB(subset, W4);
+////        long FINCVB5 = getFINCVB(subset, W5);
+//        getWave1Or2HPRICEBLookup();
+//        getWave3Or4Or5HPRICEBLookup();
 //
-//        long FINCVB1 = getFINCVB(subset, W1);
-//        long FINCVB2 = getFINCVB(subset, W2);
-//        long FINCVB3 = getFINCVB(subset, W3);
-//        long FINCVB4 = getFINCVB(subset, W4);
-//        long FINCVB5 = getFINCVB(subset, W5);
-        getWave1Or2HPRICEBLookup();
-        getWave3Or4Or5HPRICEBLookup();
-
-        // Map with keys as GOR and Values as map with keys as CASEWX and 
-        // values as Houseprices.  
-        HashMap<Byte, HashMap<Short, Integer>> HPRICEW1 = getHPRICE(subset, GORSubsets, GORLookups, W1);
-        HashMap<Byte, HashMap<Short, Integer>> HPRICEW2 = getHPRICE(subset, GORSubsets, GORLookups, W2);
-        HashMap<Byte, HashMap<Short, Integer>> HPRICEW3 = getHPRICE(subset, GORSubsets, GORLookups, W3);
-        HashMap<Byte, HashMap<Short, Integer>> HPRICEW4 = getHPRICE(subset, GORSubsets, GORLookups, W4);
-        HashMap<Byte, HashMap<Short, Integer>> HPRICEW5 = getHPRICE(subset, GORSubsets, GORLookups, W5);
-
-        for (byte w = 0; w < WaAS_Data.NWAVES; w++) {
-            log("Wave " + (w + 1));
-            totals[w] = 0;
-            for (byte b = 1; b < NGORS; b++) {
-                HashSet<Short> GORSubset;
-                GORSubset = GORSubsets[w].get(b);
-                totals[w] += GORSubset.size();
-                log("N=" + GORSubset.size() + " for GOR " + b + " " + GORNameLookup.get(b));
-            }
-            log("N=" + totals[w] + " for all GORs");
-        }
-        for (byte gor = 1; gor < NGORS; gor++) {
-            log("GOR " + gor + " " + GORNameLookup.get(gor));
-            log("HPRICEW1 SummaryStatistics");
-            logSummaryStatistics(HPRICEW1.get(gor));
-            log("HPRICEW2 SummaryStatistics");
-            logSummaryStatistics(HPRICEW2.get(gor));
-            log("HPRICEW3 SummaryStatistics");
-            logSummaryStatistics(HPRICEW3.get(gor));
-            log("HPRICEW4 SummaryStatistics");
-            logSummaryStatistics(HPRICEW4.get(gor));
-            log("HPRICEW5 SummaryStatistics");
-            logSummaryStatistics(HPRICEW5.get(gor));
-        }
-
-        // DVLUKDEBT Debt on UK Land
-        // DVOPRDEBT Debt on other property
-        // DVOPRVAL Value of other property
-        // DVGrsRentAmtAnnualw5_aggr	Variable label = Household Gross annual income from rent  - (rounded to 3 significant figures)
-        // Pos. = 32	Variable = HValueW4	Variable label = Expected current value of main residence (£)
-        // Pos. = 33	Variable = HValBW4	Variable label = Estimate of main residence value 
-//        log("Total (Hhold aggregate) HPROPW in Wave 1 " + HPROPW1);
-//        log("Total (Hhold aggregate) HPROPW in Wave 2 " + HPROPW2);
-//        log("Total (Hhold aggregate) HPROPW in Wave 3 " + HPROPW3);
-//        log("Total (Hhold aggregate) HPROPW in Wave 4 " + HPROPW4);
-//        log("Total (Hhold aggregate) HPROPW in Wave 5 " + HPROPW5);
+//        // Map with keys as GOR and Values as map with keys as CASEWX and 
+//        // values as Houseprices.  
+//        HashMap<Byte, HashMap<Short, Integer>> HPRICEW1 = getHPRICE(subset, GORSubsets, GORLookups, W1);
+//        HashMap<Byte, HashMap<Short, Integer>> HPRICEW2 = getHPRICE(subset, GORSubsets, GORLookups, W2);
+//        HashMap<Byte, HashMap<Short, Integer>> HPRICEW3 = getHPRICE(subset, GORSubsets, GORLookups, W3);
+//        HashMap<Byte, HashMap<Short, Integer>> HPRICEW4 = getHPRICE(subset, GORSubsets, GORLookups, W4);
+//        HashMap<Byte, HashMap<Short, Integer>> HPRICEW5 = getHPRICE(subset, GORSubsets, GORLookups, W5);
 //
-//        log("Total (Hhold aggregate) DVLUKVAL in Wave 1 " + DVLUKVAL1);
-//        log("Total (Hhold aggregate) DVLUKVAL in Wave 2 " + DVLUKVAL2);
-//        log("Total (Hhold aggregate) DVLUKVAL in Wave 3 " + DVLUKVAL3);
-//        log("Total (Hhold aggregate) DVLUKVAL in Wave 4 " + DVLUKVAL4);
-//        log("Total (Hhold aggregate) DVLUKVAL in Wave 5 " + DVLUKVAL5);
+//        for (byte w = 0; w < WaAS_Data.NWAVES; w++) {
+//            log("Wave " + (w + 1));
+//            totals[w] = 0;
+//            for (byte b = 1; b < NGORS; b++) {
+//                HashSet<Short> GORSubset;
+//                GORSubset = GORSubsets[w].get(b);
+//                totals[w] += GORSubset.size();
+//                log("N=" + GORSubset.size() + " for GOR " + b + " " + GORNameLookup.get(b));
+//            }
+//            log("N=" + totals[w] + " for all GORs");
+//        }
+//        for (byte gor = 1; gor < NGORS; gor++) {
+//            log("GOR " + gor + " " + GORNameLookup.get(gor));
+//            log("HPRICEW1 SummaryStatistics");
+//            logSummaryStatistics(HPRICEW1.get(gor));
+//            log("HPRICEW2 SummaryStatistics");
+//            logSummaryStatistics(HPRICEW2.get(gor));
+//            log("HPRICEW3 SummaryStatistics");
+//            logSummaryStatistics(HPRICEW3.get(gor));
+//            log("HPRICEW4 SummaryStatistics");
+//            logSummaryStatistics(HPRICEW4.get(gor));
+//            log("HPRICEW5 SummaryStatistics");
+//            logSummaryStatistics(HPRICEW5.get(gor));
+//        }
 //
-//        log("Total (Person aggregate) FINCVB1 in Wave 1 " + FINCVB1);
-//        log("Total (Person aggregate) FINCVB1 in Wave 2 " + FINCVB2);
-//        log("Total (Person aggregate) FINCVB1 in Wave 3 " + FINCVB3);
-//        log("Total (Person aggregate) FINCVB1 in Wave 4 " + FINCVB4);
-//        log("Total (Person aggregate) FINCVB1 in Wave 5 " + FINCVB5);
-//        log("Total (Hhold aggregate) HPRICEB Wave 1 " + HPRICEB1);
-//        log("Total (Hhold aggregate) HPRICEB Wave 2 " + HPRICEB2);
-//        log("Total (Hhold aggregate) HPRICEB Wave 3 " + HPRICEB3);
-//        log("Total (Hhold aggregate) HPRICEB Wave 4 " + HPRICEB4);
-//        log("Total (Hhold aggregate) HPRICEB Wave 5 " + HPRICEB5);
+//        // DVLUKDEBT Debt on UK Land
+//        // DVOPRDEBT Debt on other property
+//        // DVOPRVAL Value of other property
+//        // DVGrsRentAmtAnnualw5_aggr	Variable label = Household Gross annual income from rent  - (rounded to 3 significant figures)
+//        // Pos. = 32	Variable = HValueW4	Variable label = Expected current value of main residence (£)
+//        // Pos. = 33	Variable = HValBW4	Variable label = Estimate of main residence value 
+////        log("Total (Hhold aggregate) HPROPW in Wave 1 " + HPROPW1);
+////        log("Total (Hhold aggregate) HPROPW in Wave 2 " + HPROPW2);
+////        log("Total (Hhold aggregate) HPROPW in Wave 3 " + HPROPW3);
+////        log("Total (Hhold aggregate) HPROPW in Wave 4 " + HPROPW4);
+////        log("Total (Hhold aggregate) HPROPW in Wave 5 " + HPROPW5);
+////
+////        log("Total (Hhold aggregate) DVLUKVAL in Wave 1 " + DVLUKVAL1);
+////        log("Total (Hhold aggregate) DVLUKVAL in Wave 2 " + DVLUKVAL2);
+////        log("Total (Hhold aggregate) DVLUKVAL in Wave 3 " + DVLUKVAL3);
+////        log("Total (Hhold aggregate) DVLUKVAL in Wave 4 " + DVLUKVAL4);
+////        log("Total (Hhold aggregate) DVLUKVAL in Wave 5 " + DVLUKVAL5);
+////
+////        log("Total (Person aggregate) FINCVB1 in Wave 1 " + FINCVB1);
+////        log("Total (Person aggregate) FINCVB1 in Wave 2 " + FINCVB2);
+////        log("Total (Person aggregate) FINCVB1 in Wave 3 " + FINCVB3);
+////        log("Total (Person aggregate) FINCVB1 in Wave 4 " + FINCVB4);
+////        log("Total (Person aggregate) FINCVB1 in Wave 5 " + FINCVB5);
+////        log("Total (Hhold aggregate) HPRICEB Wave 1 " + HPRICEB1);
+////        log("Total (Hhold aggregate) HPRICEB Wave 2 " + HPRICEB2);
+////        log("Total (Hhold aggregate) HPRICEB Wave 3 " + HPRICEB3);
+////        log("Total (Hhold aggregate) HPRICEB Wave 4 " + HPRICEB4);
+////        log("Total (Hhold aggregate) HPRICEB Wave 5 " + HPRICEB5);
         logPW.close();
-    }
-
-    protected double logSummaryStatistics(HashMap<?, Integer> m) {
-        double r;
-        IntSummaryStatistics stats = m.values().stream().
-                collect(IntSummaryStatistics::new,
-                        IntSummaryStatistics::accept,
-                        IntSummaryStatistics::combine);
-        log("Max " + stats.getMax());
-        log("Min " + stats.getMin());
-        log("Count " + stats.getCount());
-        log("Sum " + stats.getSum());
-        r = stats.getAverage();
-        log("Average " + r);
-        return r;
     }
 
     /**
@@ -417,19 +435,17 @@ public class WIGB_Main_Process extends WIGB_Object {
      * @param c
      * @return
      */
-    protected double[] logSummaryStatisticsAndGetAverage(Collection<Double> c,
-            byte wave) {
+    protected double[] getSummaryStatistics(Collection<Double> c) {
         DoubleSummaryStatistics stats = c.stream().
                 collect(DoubleSummaryStatistics::new,
                         DoubleSummaryStatistics::accept,
                         DoubleSummaryStatistics::combine);
-        double[] r = new double[4];
-        r[0] = stats.getAverage();
-        log("Max " + stats.getMax());
-        log("Min " + stats.getMin());
-        log("Count " + stats.getCount());
-        log("Sum " + stats.getSum());
-        log("Average " + r[0]);
+        double[] r = new double[8];
+        r[0] = stats.getMax();
+        r[1] = stats.getMin();
+        r[2] = stats.getCount();
+        r[3] = stats.getSum();
+        r[4] = stats.getAverage();
         int countNegative = 0;
         int countZero = 0;
         Iterator<Double> ite;
@@ -441,16 +457,12 @@ public class WIGB_Main_Process extends WIGB_Object {
                 countZero++;
             } else if (HPROPW < 0.0d) {
                 countNegative++;
-                System.out.println("" + HPROPW + " Negative HPROPW");
+                //System.out.println("" + HPROPW + " Negative HPROPW");
             }
         }
-        r[1] = c.size();
-        r[2] = countZero;
-        r[3] = countNegative;
-        log("HPROPW For Wave " + wave + " Subset");
-        log("" + r[1] + "\t Count");
-        log("" + r[2] + "\t Zero");
-        log("" + r[3] + "\t Negative");
+        r[5] = c.size();
+        r[6] = countZero;
+        r[7] = countNegative;
         return r;
     }
 
