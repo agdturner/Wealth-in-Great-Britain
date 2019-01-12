@@ -120,7 +120,7 @@ public class WIGB_Main_Process extends WIGB_Object {
      * of ‘winners’ and ‘losers’ over the course of those ten years?
      */
     public void run() {
-        logF0 = new File(Files.getOutputDataDir(Strings), "log0.txt");
+        logF0 = new File(Files.getOutputDataDir(), "log0.txt");
         logPW0 = Generic_IO.getPrintWriter(logF0, false); // Overwrite log file.
         initlog(4);
 
@@ -274,7 +274,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         WaAS_Strings tWaAS_Strings;
         tWaAS_Strings = new WaAS_Strings();
         WaAS_Files tWaAS_Files;
-        tWaAS_Files = new WaAS_Files(tWaAS_Strings, "data");
+        tWaAS_Files = new WaAS_Files(tWaAS_Strings);
         WaAS_HHOLD_Handler h;
         File inDir = Files.getGeneratedWaASDir();
         h = new WaAS_HHOLD_Handler(tWaAS_Files, tWaAS_Strings, inDir);
@@ -467,7 +467,7 @@ public class WIGB_Main_Process extends WIGB_Object {
     }
 
     protected void initlog(int i) {
-        logF = new File(Files.getOutputDataDir(Strings), "log" + i + ".txt");
+        logF = new File(Files.getOutputDataDir(), "log" + i + ".txt");
         logPW = Generic_IO.getPrintWriter(logF, true); // Append to log file.
     }
 
@@ -2621,10 +2621,9 @@ public class WIGB_Main_Process extends WIGB_Object {
         File file;
         String format = "PNG";
         System.out.println("Title: " + title);
-        Generic_Strings strings = new Generic_Strings();
-        Generic_Files files = new Generic_Files("data");
+        Generic_Files gf = new Generic_Files(new Generic_Strings());
         File outdir;
-        outdir = files.getOutputDataDir(strings);
+        outdir = gf.getOutputDataDir();
         file = new File(outdir, title.replace(" ", "_") + "." + format);
         System.out.println("File: " + file.toString());
         int dataWidth = 500;

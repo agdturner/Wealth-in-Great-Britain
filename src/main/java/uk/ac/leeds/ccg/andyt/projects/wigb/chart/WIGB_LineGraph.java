@@ -95,10 +95,10 @@ public class WIGB_LineGraph extends Generic_LineGraph {
             // Use defaults
             title = "Example Line Graph";
             System.out.println("Use default title: " + title);
-            Generic_Strings strings = new Generic_Strings();
-            Generic_Files files = new Generic_Files("data");
+            Generic_Strings s = new Generic_Strings();
+            Generic_Files files = new Generic_Files(s);
             File outdir;
-            outdir = files.getOutputDataDir(strings);
+            outdir = files.getOutputDataDir();
             file = new File(outdir,
                     title.replace(" ", "_") + "." + format);
             System.out.println("Use default File: " + file.toString());

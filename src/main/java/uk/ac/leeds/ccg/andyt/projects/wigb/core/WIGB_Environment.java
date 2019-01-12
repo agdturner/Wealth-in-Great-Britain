@@ -32,16 +32,15 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
     public WIGB_Environment() {
         //Memory_Threshold = 3000000000L;
         Strings = new WIGB_Strings();
-        Files = new WIGB_Files(Strings, Strings.s_data);
+        Files = new WIGB_Files(Strings);
         wStrings = new WaAS_Strings();
-        wFiles = new WaAS_Files(wStrings, wStrings.s_data);
+        wFiles = new WaAS_Files(wStrings);
         ge = new Generic_Environment(Files, Strings);
         File f;
         f = Files.getEnvDataFile();
         if (f.exists()) {
             loadWaASData();
             data.Files = wFiles;
-            data.Files.Strings = wStrings;
             data.Strings = wStrings;
         } else {
             data = new WaAS_Data(wFiles, wStrings);
