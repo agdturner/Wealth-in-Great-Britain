@@ -19,6 +19,7 @@ import java.io.File;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.TreeMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -146,31 +147,38 @@ public class WIGB_LineGraph extends Generic_LineGraph {
                 executorService, future, chart);
     }
 
-    public void setData(TreeMap<Byte, String> GORNameLookup,
+    public void setData(ArrayList<Byte> gors, 
+            TreeMap<Byte, String> GORNameLookup,
             TreeMap<Byte, Double> changeHPROPWSubset,
             TreeMap<Byte, Double> changeHPROPWAll) {
         Object[] data;
         data = new Object[7];
-
-        byte NGORS = (byte) GORNameLookup.size();
 
         TreeMap<String, TreeMap<BigDecimal, BigDecimal>> maps;
         maps = new TreeMap<>();
         
         TreeMap<BigDecimal, BigDecimal> map;
         map = new TreeMap<>();
-        for (byte gor = 1; gor <= NGORS; gor++) {
-            map.put(new BigDecimal(gor), new BigDecimal(changeHPROPWSubset.get(gor)));
+        int x;
+        x = 1;
+        Iterator<Byte> ite;
+        ite = gors.iterator();
+        while (ite.hasNext()) {
+            byte gor = ite.next();
+            map.put(new BigDecimal(x), new BigDecimal(changeHPROPWSubset.get(gor)));
             maps.put("Change in HPROPW Subset", map);
+            x ++;
         }
-
         TreeMap<BigDecimal, BigDecimal> map2;
         map2 = new TreeMap<>();
-        for (byte gor = 1; gor <= NGORS; gor++) {
-            map2.put(new BigDecimal(gor), new BigDecimal(changeHPROPWAll.get(gor)));
+        x = 1;
+        ite = gors.iterator();
+        while (ite.hasNext()) {
+            byte gor = ite.next();
+            map2.put(new BigDecimal(x), new BigDecimal(changeHPROPWAll.get(gor)));
             maps.put("Change in HPROPW All", map2);
+            x ++;
         }
-
         BigDecimal[] minMaxBigDecimal;
         minMaxBigDecimal = Generic_Collections.getMinMaxBigDecimal(map);
         BigDecimal minY = minMaxBigDecimal[0];
@@ -203,8 +211,12 @@ public class WIGB_LineGraph extends Generic_LineGraph {
         // Comment out the following section to have a normal axis instead of labels.
         TreeMap<BigDecimal, String> xAxisLabels;
         xAxisLabels = new TreeMap<>();
-        for (byte gor = 1; gor <= NGORS; gor++) {
-            xAxisLabels.put(new BigDecimal(gor), GORNameLookup.get(gor));
+        x = 1;
+        ite = gors.iterator();
+        while (ite.hasNext()) {
+            byte gor = ite.next();
+            xAxisLabels.put(new BigDecimal(x), GORNameLookup.get(gor));
+            x ++;
         }
         data[6] = xAxisLabels;
         setData(data);

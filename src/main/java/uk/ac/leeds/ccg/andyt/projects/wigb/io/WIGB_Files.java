@@ -45,17 +45,6 @@ public class WIGB_Files extends Generic_Files implements Serializable {
         super(s, dataDir);
     }
 
-    public File getInputDataDir() {
-        if (InputDataDir == null) {
-            InputDataDir = new File(getDataDir(), Strings.s_input);
-        }
-        return InputDataDir;
-    }
-
-    public File getInputDataDir(String s) {
-        return new File(getInputDataDir(), s);
-    }
-
     public File getWaASInputDir() {
         File r;
         r = new File(getInputDataDir(), "WaAS");
