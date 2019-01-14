@@ -162,6 +162,12 @@ public class WIGB_Main_Process extends WIGB_Object {
         logPW0 = Generic_IO.getPrintWriter(logF0, false); // Overwrite log file.
         initlog(4);
 
+        //Get Non-zero and zero counts for:
+//        MIntRate1W5 (Interest rate on mortgage 1) 
+//        MVal1W5 (Amount still outstanding mortgageloan) 
+//        MValB1W5 (Banded amount outstanding on mortgageloan)
+//        MNumbNW5 (Number of mortgages)
+
         /**
          * Set up input and output directories.
          */
