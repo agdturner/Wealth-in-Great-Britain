@@ -27,7 +27,6 @@ import uk.ac.leeds.ccg.andyt.generic.data.waas.data.hhold.WaAS_Wave4_HHOLD_Recor
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.hhold.WaAS_Wave5_HHOLD_Record;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.io.WaAS_Files;
 import uk.ac.leeds.ccg.andyt.generic.util.Generic_Collections;
-import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
 import static uk.ac.leeds.ccg.andyt.projects.wigb.process.WIGB_Main_Process.log;
 
 /**
@@ -41,15 +40,28 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
     }
 
     /**
-     * 
+     *
      */
     public void createGraph() {
-    /**
+
+        /**
          * Get HVALUE Total Household Property Wealth for each wave in the
          * subsets.
          */
         TreeMap<Byte, Double> changeHVALUESubset;
         changeHVALUESubset = getChangeHVALUESubset();
+//        changeHVALUESubset = new TreeMap<>();
+//        changeHVALUESubset.put((byte) 1, 18783.080794344292);
+//        changeHVALUESubset.put((byte) 2, 31422.89858602066);
+//        changeHVALUESubset.put((byte) 4, 37033.93366888953);
+//        changeHVALUESubset.put((byte) 5, 31309.95230665049);
+//        changeHVALUESubset.put((byte) 6, 23092.340505592496);
+//        changeHVALUESubset.put((byte) 7, 40828.75264348736);
+//        changeHVALUESubset.put((byte) 8, 199981.6611156352);
+//        changeHVALUESubset.put((byte) 9, 106084.6388429752);
+//        changeHVALUESubset.put((byte) 10, 43699.888348443725);
+//        changeHVALUESubset.put((byte) 11, 7046.695521390357);
+//        changeHVALUESubset.put((byte) 12, 47581.911239563255);
 
         /**
          * Get HVALUE Total Household Property Wealth for each wave for all
@@ -57,6 +69,18 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
          */
         TreeMap<Byte, Double> changeHVALUEAll;
         changeHVALUEAll = getChangeHVALUEAll();
+//        changeHVALUEAll = new TreeMap<>();
+//        changeHVALUEAll.put((byte) 1, 8205.087170241168);
+//        changeHVALUEAll.put((byte) 2, 19961.039231688454);
+//        changeHVALUEAll.put((byte) 4, 30446.793232431926);
+//        changeHVALUEAll.put((byte) 5, 27533.2284276828);
+//        changeHVALUEAll.put((byte) 6, 28296.789723345108);
+//        changeHVALUEAll.put((byte) 7, 54166.46835776328);
+//        changeHVALUEAll.put((byte) 8, 158700.90905907305);
+//        changeHVALUEAll.put((byte) 9, 87343.95985063427);
+//        changeHVALUEAll.put((byte) 10, 53206.957541575975);
+//        changeHVALUEAll.put((byte) 11, 26843.193725923193);
+//        changeHVALUEAll.put((byte) 12, 39896.735828757795);
 
         // Data to graph.
         log("Data to graph");
@@ -66,8 +90,8 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
         while (ite.hasNext()) {
             byte gor = ite.next();
             if (gor != 3) {
-                log("" + gor + "," + GORNameLookup.get(gor) + "," 
-                        + changeHVALUESubset.get(gor) + "," 
+                log("" + gor + "," + GORNameLookup.get(gor) + ","
+                        + changeHVALUESubset.get(gor) + ","
                         + changeHVALUEAll.get(gor));
             }
         }
@@ -79,10 +103,11 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
         title = "Average change in HVALUE (Wave 5 minus Wave 1)";
         xAxisLabel = "Government Office Region";
         yAxisLabel = "£";
-        createLineGraph(title, xAxisLabel, yAxisLabel, gors, GORNameLookup,
+
+        createLineGraph(title, xAxisLabel, yAxisLabel, "HVALUE",
                 changeHVALUESubset, changeHVALUEAll);
     }
-        
+
     /**
      * Get HVALUE Total Household Property Wealth for each wave in the subsets.
      *
@@ -176,7 +201,7 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
                         WaAS_Wave1_HHOLD_Record w1;
                         w1 = cr.w1Record.getHhold();
                         Byte GOR = GORLookups[wave - 1].get(CASEW1);
-                        Generic_Collections.addToMap(r, GOR, CASEW1, 
+                        Generic_Collections.addToMap(r, GOR, CASEW1,
                                 w1.getHVALUE());
                     }
                 });
@@ -200,7 +225,7 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
                             Byte GOR = GORLookups[wave - 1].get(CASEW2);
                             WaAS_Wave2_HHOLD_Record w2;
                             w2 = w2Records.get(CASEW2).getHhold();
-                            Generic_Collections.addToMap(r, GOR, CASEW2, 
+                            Generic_Collections.addToMap(r, GOR, CASEW2,
                                     w2.getHVALUE());
                         }
                     }
@@ -232,7 +257,7 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
                                 Byte GOR = GORLookups[wave - 1].get(CASEW3);
                                 WaAS_Wave3_HHOLD_Record w3;
                                 w3 = w3_2.get(CASEW3).getHhold();
-                                Generic_Collections.addToMap(r, GOR, CASEW3, 
+                                Generic_Collections.addToMap(r, GOR, CASEW3,
                                         w3.getHVALUE());
                             }
                         }

@@ -22,14 +22,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.TreeMap;
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
 import uk.ac.leeds.ccg.andyt.chart.Generic_LineGraph;
-import uk.ac.leeds.ccg.andyt.generic.core.Generic_Strings;
-import uk.ac.leeds.ccg.andyt.generic.execution.Generic_Execution;
-import uk.ac.leeds.ccg.andyt.generic.io.Generic_Files;
 import uk.ac.leeds.ccg.andyt.generic.util.Generic_Collections;
-import uk.ac.leeds.ccg.andyt.generic.visualisation.Generic_Visualisation;
 
 /**
  * An implementation of <code>Generic_AbstractLineGraph</code> to generate a
@@ -70,84 +64,17 @@ public class WIGB_LineGraph extends Generic_LineGraph {
             int decimalPlacePrecisionForCalculations,
             int decimalPlacePrecisionForDisplay,
             RoundingMode r) {
-        setyMax(yMax);
-        setyPin(yPin);
-        setyIncrement(yIncrement);
-        setNumberOfYAxisTicks(numberOfYAxisTicks);
+        this.yMax = yMax;
+        this.yPin = yPin;
+        this.yIncrement = yIncrement;
+        this.numberOfYAxisTicks = numberOfYAxisTicks;
         init(es, file, format, title, dataWidth, dataHeight, xAxisLabel,
                 yAxisLabel, false, decimalPlacePrecisionForCalculations,
                 decimalPlacePrecisionForDisplay, r);
     }
 
-    public static void main(String[] args) {
-        Generic_Visualisation.getHeadlessEnvironment();
-        /*
-         * Initialise title and File to write image to
-         */
-        String title;
-        File file;
-        String format = "PNG";
-        if (args.length != 2) {
-            System.out.println(
-                    "Expected 2 args:"
-                    + " args[0] title;"
-                    + " args[1] File."
-                    + " Recieved " + args.length + " args.");
-            // Use defaults
-            title = "Example Line Graph";
-            System.out.println("Use default title: " + title);
-            Generic_Strings s = new Generic_Strings();
-            Generic_Files files = new Generic_Files(s);
-            File outdir;
-            outdir = files.getOutputDataDir();
-            file = new File(outdir,
-                    title.replace(" ", "_") + "." + format);
-            System.out.println("Use default File: " + file.toString());
-        } else {
-            title = args[0];
-            file = new File(args[1]);
-        }
-        int dataWidth = 500;
-        int dataHeight = 250;
-        String xAxisLabel = "X";
-        String yAxisLabel = "Y";
-        boolean drawOriginLinesOnPlot = true;
-        int barGap = 1;
-        int xIncrement = 1;
-        int numberOfYAxisTicks = 11;
-        BigDecimal yMax;
-        yMax = null;
-        BigDecimal yPin = BigDecimal.ZERO;
-        BigDecimal yIncrement = BigDecimal.ONE;
-        //int yAxisStartOfEndInterval = 60;
-        int decimalPlacePrecisionForCalculations = 10;
-        int decimalPlacePrecisionForDisplay = 3;
-        RoundingMode roundingMode = RoundingMode.HALF_UP;
-        ExecutorService executorService = Executors.newSingleThreadExecutor();
-        WIGB_LineGraph chart = new WIGB_LineGraph(
-                executorService,
-                file,
-                format,
-                title,
-                dataWidth,
-                dataHeight,
-                xAxisLabel,
-                yAxisLabel,
-                yMax,
-                yPin,
-                yIncrement,
-                numberOfYAxisTicks,
-                decimalPlacePrecisionForCalculations,
-                decimalPlacePrecisionForDisplay,
-                roundingMode);
-        chart.setData(chart.getDefaultData());
-        chart.run();
-        Future future = chart.future;
-        Generic_Execution.shutdownExecutorService(
-                executorService, future, chart);
-    }
-
-    public void setData(ArrayList<Byte> gors, 
+    public void setData(
+            String variableName, ArrayList<Byte> gors,
             TreeMap<Byte, String> GORNameLookup,
             TreeMap<Byte, Double> changeHPROPWSubset,
             TreeMap<Byte, Double> changeHPROPWAll) {
@@ -156,7 +83,7 @@ public class WIGB_LineGraph extends Generic_LineGraph {
 
         TreeMap<String, TreeMap<BigDecimal, BigDecimal>> maps;
         maps = new TreeMap<>();
-        
+
         TreeMap<BigDecimal, BigDecimal> map;
         map = new TreeMap<>();
         int x;
@@ -166,8 +93,8 @@ public class WIGB_LineGraph extends Generic_LineGraph {
         while (ite.hasNext()) {
             byte gor = ite.next();
             map.put(new BigDecimal(x), new BigDecimal(changeHPROPWSubset.get(gor)));
-            maps.put("Change in HPROPW Subset", map);
-            x ++;
+            maps.put("Change in " + variableName + " Subset", map);
+            x++;
         }
         TreeMap<BigDecimal, BigDecimal> map2;
         map2 = new TreeMap<>();
@@ -176,8 +103,8 @@ public class WIGB_LineGraph extends Generic_LineGraph {
         while (ite.hasNext()) {
             byte gor = ite.next();
             map2.put(new BigDecimal(x), new BigDecimal(changeHPROPWAll.get(gor)));
-            maps.put("Change in HPROPW All", map2);
-            x ++;
+            maps.put("Change in " + variableName + " All", map2);
+            x++;
         }
         BigDecimal[] minMaxBigDecimal;
         minMaxBigDecimal = Generic_Collections.getMinMaxBigDecimal(map);
@@ -216,7 +143,7 @@ public class WIGB_LineGraph extends Generic_LineGraph {
         while (ite.hasNext()) {
             byte gor = ite.next();
             xAxisLabels.put(new BigDecimal(x), GORNameLookup.get(gor));
-            x ++;
+            x++;
         }
         data[6] = xAxisLabels;
         setData(data);

@@ -37,7 +37,6 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Object;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Collection;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Combined_Record;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Data;
-import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_HHOLD_Handler;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Handler;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Wave2_Record;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Wave3_Record;
@@ -247,7 +246,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         hp.createGraph();
 
         /**
-         * HPROPW
+         * HVALUE
          */
         WIGB_Process_HVALUE hv;
         hv = new WIGB_Process_HVALUE(this);
@@ -1000,11 +999,6 @@ public class WIGB_Main_Process extends WIGB_Object {
 //	Value = -7.0	Label = Does not apply
 //	Value = -6.0	Label = Error Partial
         // For brevity/convenience.
-        byte W1 = WaAS_Data.W1;
-        byte W2 = WaAS_Data.W2;
-        byte W3 = WaAS_Data.W3;
-        byte W4 = WaAS_Data.W4;
-        byte W5 = WaAS_Data.W5;
         long tDVLUKVAL;
         if (wave == W1) {
             tDVLUKVAL = data.data.keySet().stream().mapToLong(cID -> {
@@ -1197,11 +1191,6 @@ public class WIGB_Main_Process extends WIGB_Object {
      */
     public long getFINCVB(HashSet<Short> subset, byte wave) {
         // For brevity/convenience.
-        byte W1 = WaAS_Data.W1;
-        byte W2 = WaAS_Data.W2;
-        byte W3 = WaAS_Data.W3;
-        byte W4 = WaAS_Data.W4;
-        byte W5 = WaAS_Data.W5;
         long tFINCVB;
         if (wave == W1) {
             tFINCVB = data.data.keySet().stream().mapToLong(cID -> {
@@ -1440,11 +1429,6 @@ public class WIGB_Main_Process extends WIGB_Object {
             r.put(GOR, new HashMap<>());
         }
         // For brevity/convenience.
-        byte W1 = WaAS_Data.W1;
-        byte W2 = WaAS_Data.W2;
-        byte W3 = WaAS_Data.W3;
-        byte W4 = WaAS_Data.W4;
-        byte W5 = WaAS_Data.W5;
         if (wave == W1) {
             data.data.keySet().stream().forEach(cID -> {
                 WaAS_Collection c;
@@ -1765,14 +1749,12 @@ public class WIGB_Main_Process extends WIGB_Object {
      * @param title
      * @param xAxisLabel
      * @param yAxisLabel
-     * @param gors
-     * @param GORNameLookup
+     * @param variableName
      * @param changeSubset
      * @param changeAll
      */
-    public void createLineGraph(
-            String title, String xAxisLabel, String yAxisLabel,
-            ArrayList<Byte> gors, TreeMap<Byte, String> GORNameLookup,
+    public void createLineGraph(String title, String xAxisLabel,
+            String yAxisLabel, String variableName, 
             TreeMap<Byte, Double> changeSubset,
             TreeMap<Byte, Double> changeAll) {
         Generic_Visualisation.getHeadlessEnvironment();
@@ -1794,7 +1776,8 @@ public class WIGB_Main_Process extends WIGB_Object {
         yMax = null;
         BigDecimal yPin = BigDecimal.ZERO;
         //BigDecimal yIncrement = BigDecimal.ONE;
-        BigDecimal yIncrement = null; // Setting this to null means that numberOfYAxisTicks is used.
+        //BigDecimal yIncrement = null; // Setting this to null means that numberOfYAxisTicks is used.
+        BigDecimal yIncrement = new BigDecimal("20000");
         //int yAxisStartOfEndInterval = 60;
         int decimalPlacePrecisionForCalculations = 10;
         int decimalPlacePrecisionForDisplay = 3;
@@ -1805,7 +1788,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                 yMax, yPin, yIncrement, numberOfYAxisTicks,
                 decimalPlacePrecisionForCalculations,
                 decimalPlacePrecisionForDisplay, roundingMode);
-        chart.setData(gors, GORNameLookup, changeSubset, changeAll);
+        chart.setData(variableName, gors, GORNameLookup, changeSubset, changeAll);
         chart.run();
 
         Future future = chart.future;
