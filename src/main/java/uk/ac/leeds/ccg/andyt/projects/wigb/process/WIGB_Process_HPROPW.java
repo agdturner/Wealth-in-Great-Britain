@@ -48,37 +48,37 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
          * subsets.
          */
         TreeMap<Byte, Double> changeHPROPWSubset;
-        //changeHPROPWSubset = getChangeHPROPWSubset();
-        changeHPROPWSubset = new TreeMap<>();
-        changeHPROPWSubset.put((byte) 1, 15543.71633729733);
-        changeHPROPWSubset.put((byte) 2, 25043.078226624522);
-        changeHPROPWSubset.put((byte) 4, 52316.468204716686);
-        changeHPROPWSubset.put((byte) 5, 25161.244726051722);
-        changeHPROPWSubset.put((byte) 6, 28463.983883376408);
-        changeHPROPWSubset.put((byte) 7, 43457.62488630164);
-        changeHPROPWSubset.put((byte) 8, 217870.42118621065);
-        changeHPROPWSubset.put((byte) 9, 106894.89840824757);
-        changeHPROPWSubset.put((byte) 10, 45446.714779741014);
-        changeHPROPWSubset.put((byte) 11, 12773.929645721946);
-        changeHPROPWSubset.put((byte) 12, 47155.80562571576);
+        changeHPROPWSubset = getChangeHPROPWSubset();
+//        changeHPROPWSubset = new TreeMap<>();
+//        changeHPROPWSubset.put((byte) 1, 15543.71633729733);
+//        changeHPROPWSubset.put((byte) 2, 25043.078226624522);
+//        changeHPROPWSubset.put((byte) 4, 52316.468204716686);
+//        changeHPROPWSubset.put((byte) 5, 25161.244726051722);
+//        changeHPROPWSubset.put((byte) 6, 28463.983883376408);
+//        changeHPROPWSubset.put((byte) 7, 43457.62488630164);
+//        changeHPROPWSubset.put((byte) 8, 217870.42118621065);
+//        changeHPROPWSubset.put((byte) 9, 106894.89840824757);
+//        changeHPROPWSubset.put((byte) 10, 45446.714779741014);
+//        changeHPROPWSubset.put((byte) 11, 12773.929645721946);
+//        changeHPROPWSubset.put((byte) 12, 47155.80562571576);
         /**
          * Get HPROPW Total Household Property Wealth for each wave for all
          * records.
          */
         TreeMap<Byte, Double> changeHPROPWAll;
-        //changeHPROPWAll = getChangeHPROPWAll();
-        changeHPROPWAll = new TreeMap<>();
-        changeHPROPWAll.put((byte) 1, 1356.6025079350366);
-        changeHPROPWAll.put((byte) 2, 21243.045817762642);
-        changeHPROPWAll.put((byte) 4, 31114.669464522856);
-        changeHPROPWAll.put((byte) 5, 34598.05717948475);
-        changeHPROPWAll.put((byte) 6, 17621.49991544307);
-        changeHPROPWAll.put((byte) 7, 62317.38477178279);
-        changeHPROPWAll.put((byte) 8, 188232.2675591018);
-        changeHPROPWAll.put((byte) 9, 90111.07547487883);
-        changeHPROPWAll.put((byte) 10, 68052.50996744036);
-        changeHPROPWAll.put((byte) 11, 33259.53730763032);
-        changeHPROPWAll.put((byte) 12, 38072.805181146614);
+        changeHPROPWAll = getChangeHPROPWAll();
+//        changeHPROPWAll = new TreeMap<>();
+//        changeHPROPWAll.put((byte) 1, 1356.6025079350366);
+//        changeHPROPWAll.put((byte) 2, 21243.045817762642);
+//        changeHPROPWAll.put((byte) 4, 31114.669464522856);
+//        changeHPROPWAll.put((byte) 5, 34598.05717948475);
+//        changeHPROPWAll.put((byte) 6, 17621.49991544307);
+//        changeHPROPWAll.put((byte) 7, 62317.38477178279);
+//        changeHPROPWAll.put((byte) 8, 188232.2675591018);
+//        changeHPROPWAll.put((byte) 9, 90111.07547487883);
+//        changeHPROPWAll.put((byte) 10, 68052.50996744036);
+//        changeHPROPWAll.put((byte) 11, 33259.53730763032);
+//        changeHPROPWAll.put((byte) 12, 38072.805181146614);
         // Data to graph.
         log("Data to graph");
         log("GOR,GORName,changeHPROPWSubset,changeHPROPWAll");
