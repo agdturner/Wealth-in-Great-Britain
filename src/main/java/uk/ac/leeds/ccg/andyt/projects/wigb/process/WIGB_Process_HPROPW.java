@@ -413,7 +413,7 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
         tWaAS_Files = new WaAS_Files(tWaAS_Strings);
         WaAS_HHOLD_Handler handler;
         File inDir = Files.getGeneratedWaASDir();
-        handler = new WaAS_HHOLD_Handler(tWaAS_Files, tWaAS_Strings, inDir);
+        handler = new WaAS_HHOLD_Handler(we, inDir);
         HashMap<Byte, HashMap<Short, Double>>[] HPROPWAll;
         HPROPWAll = new HashMap[WaAS_Data.NWAVES];
         TreeMap<Short, WaAS_Wave1_HHOLD_Record> allW1 = handler.loadAllWave1(WaAS_Data.W1);

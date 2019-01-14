@@ -30,6 +30,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import uk.ac.leeds.ccg.andyt.generic.core.Generic_Strings;
+import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Environment;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Strings;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_IO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
@@ -37,6 +38,7 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Object;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Collection;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Combined_Record;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Data;
+import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_HHOLD_Handler;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Handler;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Wave2_Record;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Wave3_Record;
@@ -69,11 +71,10 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
 public class WIGB_Main_Process extends WIGB_Object {
 
     // For convenience
-    protected final WaAS_Data data;
     protected final WIGB_Strings Strings;
     protected final WIGB_Files Files;
-    protected final WaAS_Strings wStrings;
-    protected final WaAS_Files wFiles;
+    protected final WaAS_Data data;
+    protected final WaAS_Environment we;
 
     // For logging.
     File logF;
@@ -105,18 +106,14 @@ public class WIGB_Main_Process extends WIGB_Object {
         data = env.data;
         Strings = env.Strings;
         Files = env.Files;
-        wStrings = env.wStrings;
-        wFiles = env.wFiles;
+        we = env.we;
     }
 
     public WIGB_Main_Process(WIGB_Main_Process p) {
         data = p.data;
         Strings = p.Strings;
         Files = p.Files;
-        wStrings = p.wStrings;
-        wFiles = p.wFiles;
-//        logF = p.logF;
-//        logF0 = p.logF0;
+        we = p.we;
         W1 = p.W1;
         W2 = p.W2;
         W3 = p.W3;
@@ -161,12 +158,6 @@ public class WIGB_Main_Process extends WIGB_Object {
         logF0 = new File(Files.getOutputDataDir(), "log0.txt");
         logPW0 = Generic_IO.getPrintWriter(logF0, false); // Overwrite log file.
         initlog(4);
-
-        //Get Non-zero and zero counts for:
-//        MIntRate1W5 (Interest rate on mortgage 1) 
-//        MVal1W5 (Amount still outstanding mortgageloan) 
-//        MValB1W5 (Banded amount outstanding on mortgageloan)
-//        MNumbNW5 (Number of mortgages)
 
         /**
          * Set up input and output directories.
@@ -257,7 +248,77 @@ public class WIGB_Main_Process extends WIGB_Object {
         WIGB_Process_HVALUE hv;
         hv = new WIGB_Process_HVALUE(this);
         hv.createGraph();
-
+        
+        // Check some counts
+        WaAS_HHOLD_Handler hhandler;
+        hhandler = new WaAS_HHOLD_Handler(we, indir);
+        Object[] w5 = hhandler.loadWave5(WaAS_Data.W5);
+        TreeMap<Short, WaAS_Wave5_HHOLD_Record> w5recs;
+        w5recs = (TreeMap<Short, WaAS_Wave5_HHOLD_Record>) w5[0];
+        Iterator<Short> ites;
+        ites = w5recs.keySet().iterator();
+        int countMortgage = 0;
+        int countNonMortgage = 0;
+        int countBuyWithMortgage = 0;
+        int countPartBuyWithMortgage = 0;
+        int countZeroMIntRate1W5 = 0;
+        int countNonZeroMIntRate1W5 = 0;
+        int countZeroMVal1W5 = 0;
+        int countNonZeroMVal1W5 = 0;
+        int countZeroMNumbNW5 = 0;
+        int countNonZeroMNumbNW5 = 0;
+        while (ites.hasNext()) {
+            short CASEW5 = ites.next();
+            WaAS_Wave5_HHOLD_Record w5rec = w5recs.get(CASEW5);
+            byte ten1 = w5rec.getTEN1();
+            if (ten1 == 2 || ten1 == 3) {
+                countMortgage++;
+                if (ten1 == 2) {
+                    countBuyWithMortgage++;
+                }
+                if (ten1 == 3) {
+                    countPartBuyWithMortgage++;
+                }
+                double MIntRate1W5 = w5rec.getMINTRATE1();
+                if (MIntRate1W5 == 0.0d) {
+                    countZeroMIntRate1W5++;
+                } else {
+                    countNonZeroMIntRate1W5++;
+                }
+                int MVal1W5 = w5rec.getMVAL1();
+                if (MVal1W5 == 0) {
+                    countZeroMVal1W5++;
+                } else {
+                    countNonZeroMVal1W5++;
+                }
+                int MNumbNW5 = w5rec.getMNUMB();
+                if (MNumbNW5 == 0) {
+                    countZeroMNumbNW5++;
+                } else {
+                    countNonZeroMNumbNW5++;
+                }
+            } else {
+                countNonMortgage++;
+            }
+        }
+        log("" + w5recs.size() + "\t countAllW5withW4");
+        log("" + countMortgage + "\t countMortgage");
+        log("" + countNonMortgage + "\t countNonMortgage");
+        log("" + countBuyWithMortgage + "\t countBuyWithMortgage");
+        log("" + countPartBuyWithMortgage + "\t countPartBuyWithMortgage");
+        log("" + countZeroMIntRate1W5 + "\t countZeroMIntRate1W5");
+        log("" + countNonZeroMIntRate1W5 + "\t countNonZeroMIntRate1W5");
+        log("" + countZeroMVal1W5 + "\t countZeroMVal1W5");
+        log("" + countNonZeroMVal1W5 + "\t countNonZeroMVal1W5");
+        log("" + countZeroMNumbNW5 + "\t countZeroMNumbNW5");
+        log("" + countNonZeroMNumbNW5 + "\t countNonZeroMNumbNW5");
+        //TreeMap<Short, HashSet<Short>> CASEW4ToCASEW5;
+        //CASEW4ToCASEW5 = (TreeMap<Short, HashSet<Short>>) ((Object[]) w5[4])[3];
+        //Get Non-zero and zero counts for:
+//        MIntRate1W5 (Interest rate on mortgage 1) 
+//        MVal1W5 (Amount still outstanding mortgageloan) 
+//        MValB1W5 (Banded amount outstanding on mortgageloan)
+//        MNumbNW5 (Number of mortgages)
         // DVTotGIRW5	Variable label = Household Gross Annual (regular) income  - (rounded to 3 significant figures)
         // DVLUKVAL5
         // FINCVB5
@@ -1760,7 +1821,7 @@ public class WIGB_Main_Process extends WIGB_Object {
      * @param changeAll
      */
     public void createLineGraph(String title, String xAxisLabel,
-            String yAxisLabel, String variableName, 
+            String yAxisLabel, String variableName,
             TreeMap<Byte, Double> changeSubset,
             TreeMap<Byte, Double> changeAll) {
         Generic_Visualisation.getHeadlessEnvironment();
