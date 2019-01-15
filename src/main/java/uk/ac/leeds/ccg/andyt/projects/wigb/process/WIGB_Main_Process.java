@@ -31,7 +31,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import uk.ac.leeds.ccg.andyt.generic.core.Generic_Strings;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Environment;
-import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Strings;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_IO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Object;
@@ -55,7 +54,6 @@ import uk.ac.leeds.ccg.andyt.generic.data.waas.data.person.WaAS_Wave2_PERSON_Rec
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.person.WaAS_Wave3_PERSON_Record;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.person.WaAS_Wave4_PERSON_Record;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.person.WaAS_Wave5_PERSON_Record;
-import uk.ac.leeds.ccg.andyt.generic.data.waas.io.WaAS_Files;
 import uk.ac.leeds.ccg.andyt.generic.execution.Generic_Execution;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_Files;
 import uk.ac.leeds.ccg.andyt.generic.util.Generic_Collections;
@@ -234,21 +232,26 @@ public class WIGB_Main_Process extends WIGB_Object {
         }
         s += "0,All";
         log(s);
-
         /**
-         * HPROPW
+         * TENURE
          */
-        WIGB_Process_HPROPW hp;
-        hp = new WIGB_Process_HPROPW(this);
-        hp.createGraph();
+        WIGB_Process_TENURE tp;
+        tp = new WIGB_Process_TENURE(this);
+        tp.createGraph();
+//        /**
+//         * HPROPW
+//         */
+//        WIGB_Process_HPROPW hp;
+//        hp = new WIGB_Process_HPROPW(this);
+//        hp.createGraph();
+//
+//        /**
+//         * HVALUE
+//         */
+//        WIGB_Process_HVALUE hv;
+//        hv = new WIGB_Process_HVALUE(this);
+//        hv.createGraph();
 
-        /**
-         * HVALUE
-         */
-        WIGB_Process_HVALUE hv;
-        hv = new WIGB_Process_HVALUE(this);
-        hv.createGraph();
-        
         // Check some counts
         WaAS_HHOLD_Handler hhandler;
         hhandler = new WaAS_HHOLD_Handler(we, indir);
@@ -262,11 +265,12 @@ public class WIGB_Main_Process extends WIGB_Object {
         int countBuyWithMortgage = 0;
         int countPartBuyWithMortgage = 0;
         int countZeroMIntRate1W5 = 0;
-        int countNonZeroMIntRate1W5 = 0;
+        int countPositiveMIntRate1W5 = 0;
         int countZeroMVal1W5 = 0;
-        int countNonZeroMVal1W5 = 0;
+        int countPositiveMVal1W5 = 0;
         int countZeroMNumbNW5 = 0;
-        int countNonZeroMNumbNW5 = 0;
+        int countPositiveMNumbNW5 = 0;
+        int countGT1MNumbNW5 = 0;
         while (ites.hasNext()) {
             short CASEW5 = ites.next();
             WaAS_Wave5_HHOLD_Record w5rec = w5recs.get(CASEW5);
@@ -283,19 +287,28 @@ public class WIGB_Main_Process extends WIGB_Object {
                 if (MIntRate1W5 == 0.0d) {
                     countZeroMIntRate1W5++;
                 } else {
-                    countNonZeroMIntRate1W5++;
+                    if (MIntRate1W5 > 0) {
+                        countPositiveMIntRate1W5++;
+                    }
                 }
                 int MVal1W5 = w5rec.getMVAL1();
                 if (MVal1W5 == 0) {
                     countZeroMVal1W5++;
                 } else {
-                    countNonZeroMVal1W5++;
+                    if (MVal1W5 > 0) {
+                        countPositiveMVal1W5++;
+                    }
                 }
                 int MNumbNW5 = w5rec.getMNUMB();
                 if (MNumbNW5 == 0) {
                     countZeroMNumbNW5++;
                 } else {
-                    countNonZeroMNumbNW5++;
+                    if (MNumbNW5 > 0) {
+                        countPositiveMNumbNW5++;
+                        if (MNumbNW5 > 1) {
+                            countGT1MNumbNW5++;
+                        }
+                    }
                 }
             } else {
                 countNonMortgage++;
@@ -307,11 +320,13 @@ public class WIGB_Main_Process extends WIGB_Object {
         log("" + countBuyWithMortgage + "\t countBuyWithMortgage");
         log("" + countPartBuyWithMortgage + "\t countPartBuyWithMortgage");
         log("" + countZeroMIntRate1W5 + "\t countZeroMIntRate1W5");
-        log("" + countNonZeroMIntRate1W5 + "\t countNonZeroMIntRate1W5");
+        log("" + countPositiveMIntRate1W5 + "\t countPositiveMIntRate1W5");
         log("" + countZeroMVal1W5 + "\t countZeroMVal1W5");
-        log("" + countNonZeroMVal1W5 + "\t countNonZeroMVal1W5");
+        log("" + countPositiveMVal1W5 + "\t countPositiveMVal1W5");
         log("" + countZeroMNumbNW5 + "\t countZeroMNumbNW5");
-        log("" + countNonZeroMNumbNW5 + "\t countNonZeroMNumbNW5");
+        log("" + countPositiveMNumbNW5 + "\t countPositiveMNumbNW5");
+        log("" + countGT1MNumbNW5 + "\t countGT1MNumbNW5");
+
         //TreeMap<Short, HashSet<Short>> CASEW4ToCASEW5;
         //CASEW4ToCASEW5 = (TreeMap<Short, HashSet<Short>>) ((Object[]) w5[4])[3];
         //Get Non-zero and zero counts for:
@@ -1823,7 +1838,8 @@ public class WIGB_Main_Process extends WIGB_Object {
     public void createLineGraph(String title, String xAxisLabel,
             String yAxisLabel, String variableName,
             TreeMap<Byte, Double> changeSubset,
-            TreeMap<Byte, Double> changeAll) {
+            TreeMap<Byte, Double> changeAll, int numberOfYAxisTicks,
+            BigDecimal yIncrement) {
         Generic_Visualisation.getHeadlessEnvironment();
         /*
          * Initialise title and File to write image to
@@ -1838,13 +1854,13 @@ public class WIGB_Main_Process extends WIGB_Object {
         System.out.println("File: " + file.toString());
         int dataWidth = 500;
         int dataHeight = 250;
-        int numberOfYAxisTicks = 10;
+        //int numberOfYAxisTicks = 10;
         BigDecimal yMax;
         yMax = null;
         BigDecimal yPin = BigDecimal.ZERO;
         //BigDecimal yIncrement = BigDecimal.ONE;
         //BigDecimal yIncrement = null; // Setting this to null means that numberOfYAxisTicks is used.
-        BigDecimal yIncrement = new BigDecimal("20000");
+        //BigDecimal yIncrement = new BigDecimal("20000");
         //int yAxisStartOfEndInterval = 60;
         int decimalPlacePrecisionForCalculations = 10;
         int decimalPlacePrecisionForDisplay = 3;

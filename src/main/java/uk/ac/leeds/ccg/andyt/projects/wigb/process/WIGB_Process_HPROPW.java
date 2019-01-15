@@ -6,6 +6,7 @@
 package uk.ac.leeds.ccg.andyt.projects.wigb.process;
 
 import java.io.File;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -100,8 +101,11 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
         title = "Average change in HPROPW (Wave 5 minus Wave 1)";
         xAxisLabel = "Government Office Region";
         yAxisLabel = "£";
+        BigDecimal yIncrement = new BigDecimal("20000");
+        int numberOfYAxisTicks = 10;
         createLineGraph(title, xAxisLabel, yAxisLabel, "HPROPW",
-                changeHPROPWSubset, changeHPROPWAll);
+                changeHPROPWSubset, changeHPROPWAll, numberOfYAxisTicks, 
+                yIncrement);
     }
 
     /**
@@ -407,10 +411,6 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
     public TreeMap<Byte, Double> getChangeHPROPWAll() {
         TreeMap<Byte, Double> r;
         r = new TreeMap<>();
-        WaAS_Strings tWaAS_Strings;
-        tWaAS_Strings = new WaAS_Strings();
-        WaAS_Files tWaAS_Files;
-        tWaAS_Files = new WaAS_Files(tWaAS_Strings);
         WaAS_HHOLD_Handler handler;
         File inDir = Files.getGeneratedWaASDir();
         handler = new WaAS_HHOLD_Handler(we, inDir);

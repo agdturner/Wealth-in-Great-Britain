@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.TreeMap;
-import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Strings;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Collection;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Combined_Record;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Data;
@@ -26,7 +25,6 @@ import uk.ac.leeds.ccg.andyt.generic.data.waas.data.hhold.WaAS_Wave2_HHOLD_Recor
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.hhold.WaAS_Wave3_HHOLD_Record;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.hhold.WaAS_Wave4_HHOLD_Record;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.hhold.WaAS_Wave5_HHOLD_Record;
-import uk.ac.leeds.ccg.andyt.generic.data.waas.io.WaAS_Files;
 import uk.ac.leeds.ccg.andyt.generic.util.Generic_Collections;
 import static uk.ac.leeds.ccg.andyt.projects.wigb.process.WIGB_Main_Process.log;
 
@@ -34,66 +32,137 @@ import static uk.ac.leeds.ccg.andyt.projects.wigb.process.WIGB_Main_Process.log;
  *
  * @author Andy Turner
  */
-public class WIGB_Process_HVALUE extends WIGB_Main_Process {
+public class WIGB_Process_TENURE extends WIGB_Main_Process {
 
-    public WIGB_Process_HVALUE(WIGB_Main_Process p) {
+    /**
+     * Value label information for Ten1W5
+     * <ul>
+     * <li>Value = 1.0	Label = Own it outright</li>
+     * <li>Value = 2.0	Label = Buying it with the help of a mortgage or
+     * loan</li>
+     * <li>Value = 3.0	Label = Pay part rent and part mortgage (shared
+     * ownership)</li>
+     * <li>Value = 4.0	Label = Rent it</li>
+     * <li>Value = 5.0	Label = Live here rent-free (including rent-free in
+     * relatives friend</li>
+     * <li>Value = 6.0	Label = Squatting</li>
+     * <li>Value = -9.0	Label = Does not know</li>
+     * <li>Value = -8.0	Label = No answer</li>
+     * <li>Value = -7.0	Label = Does not apply</li>
+     * <li>Value = -6.0	Label = Error/Partial</li>
+     * </ul>
+     */
+    public TreeMap<Byte, String> TenureNameMap;
+
+    // Tenure Counts for each Wave, GOR, and Tenure
+    public TreeMap<Byte, TreeMap<Byte, TreeMap<Byte, Integer>>> TenureCountsWaveGORSubsets;
+    public TreeMap<Byte, TreeMap<Byte, TreeMap<Byte, Integer>>> TenureCountsWaveGOR;
+
+    public WIGB_Process_TENURE(WIGB_Main_Process p) {
         super(p);
+        TenureNameMap = p.Env.we.hh.getTenureNameMap();
+        TenureCountsWaveGORSubsets = new TreeMap<>();
+        TenureCountsWaveGOR = new TreeMap<>();
+        /**
+         * Initialise TenureCountsWaveGORSubsets and TenureCountsWaveGOR
+         */
+        for (byte w = 1; w <= WaAS_Data.NWAVES; w++) {
+            TreeMap<Byte, TreeMap<Byte, Integer>> TenureCountsGORSubsets;
+            TreeMap<Byte, TreeMap<Byte, Integer>> TenureCountsGOR;
+            TenureCountsGORSubsets = new TreeMap<>();
+            TenureCountsGOR = new TreeMap<>();
+            TenureCountsWaveGORSubsets.put(w, TenureCountsGORSubsets);
+            TenureCountsWaveGOR.put(w, TenureCountsGOR);
+            Iterator<Byte> ite;
+            ite = gors.iterator();
+            while (ite.hasNext()) {
+                byte gor = ite.next();
+                if (gor != 3) {
+                    TreeMap<Byte, Integer> TenureCountsSubset;
+                    TreeMap<Byte, Integer> TenureCounts;
+                    TenureCountsSubset = new TreeMap<>();
+                    TenureCounts = new TreeMap<>();
+                    TenureCountsGORSubsets.put(gor, TenureCounts);
+                    TenureCountsGOR.put(gor, TenureCounts);
+                    TenureNameMap.keySet().stream().forEach(tenure -> {
+                        TenureCountsSubset.put(tenure, 0);
+                        TenureCounts.put(tenure, 0);
+                    });
+                }
+            }
+        }
     }
 
     /**
      *
      */
     public void createGraph() {
+//        for (byte w = 1; w <= WaAS_Data.NWAVES; w++) {
+//            getTenureCountsForGORSubsets(w);
+//        }
 
-        /**
-         * Get HVALUE Total Household Property Wealth for each wave in the
-         * subsets.
-         */
-        TreeMap<Byte, Double> changeHVALUESubset;
-        changeHVALUESubset = getChangeHVALUESubset();
-//        changeHVALUESubset = new TreeMap<>();
-//        changeHVALUESubset.put((byte) 1, 18783.080794344292);
-//        changeHVALUESubset.put((byte) 2, 31422.89858602066);
-//        changeHVALUESubset.put((byte) 4, 37033.93366888953);
-//        changeHVALUESubset.put((byte) 5, 31309.95230665049);
-//        changeHVALUESubset.put((byte) 6, 23092.340505592496);
-//        changeHVALUESubset.put((byte) 7, 40828.75264348736);
-//        changeHVALUESubset.put((byte) 8, 199981.6611156352);
-//        changeHVALUESubset.put((byte) 9, 106084.6388429752);
-//        changeHVALUESubset.put((byte) 10, 43699.888348443725);
-//        changeHVALUESubset.put((byte) 11, 7046.695521390357);
-//        changeHVALUESubset.put((byte) 12, 47581.911239563255);
+        byte tenure = 1;
 
-        /**
-         * Get HVALUE Total Household Property Wealth for each wave for all
-         * records.
-         */
-        TreeMap<Byte, Double> changeHVALUEAll;
-        changeHVALUEAll = getChangeHVALUEAll();
-//        changeHVALUEAll = new TreeMap<>();
-//        changeHVALUEAll.put((byte) 1, 8205.087170241168);
-//        changeHVALUEAll.put((byte) 2, 19961.039231688454);
-//        changeHVALUEAll.put((byte) 4, 30446.793232431926);
-//        changeHVALUEAll.put((byte) 5, 27533.2284276828);
-//        changeHVALUEAll.put((byte) 6, 28296.789723345108);
-//        changeHVALUEAll.put((byte) 7, 54166.46835776328);
-//        changeHVALUEAll.put((byte) 8, 158700.90905907305);
-//        changeHVALUEAll.put((byte) 9, 87343.95985063427);
-//        changeHVALUEAll.put((byte) 10, 53206.957541575975);
-//        changeHVALUEAll.put((byte) 11, 26843.193725923193);
-//        changeHVALUEAll.put((byte) 12, 39896.735828757795);
+        // Get tenure counts for subsets.
+        getTenureCountsForGORSubsets(W1);
+        getTenureCountsForGORSubsets(W5);
+        TreeMap<Byte, TreeMap<Byte, Integer>> TenureCountsGORW1Subsets;
+        TenureCountsGORW1Subsets = TenureCountsWaveGORSubsets.get(W1);
+        TreeMap<Byte, TreeMap<Byte, Integer>> TenureCountsGORW5Subsets;
+        TenureCountsGORW5Subsets = TenureCountsWaveGORSubsets.get(W5);
+
+        // Calculate differences in Tenure tenure for subsets
+        TreeMap<Byte, Double> changeTenure1Subset;
+        changeTenure1Subset = new TreeMap<>();
+        Iterator<Byte> ite;
+        ite = TenureCountsGORW1Subsets.keySet().iterator();
+        while (ite.hasNext()) {
+            byte gor = ite.next();
+            TreeMap<Byte, Integer> TenureCountsW1;
+            TenureCountsW1 = TenureCountsGORW1Subsets.get(gor);
+            TreeMap<Byte, Integer> TenureCountsW5;
+            TenureCountsW5 = TenureCountsGORW5Subsets.get(gor);
+            double diff = TenureCountsW5.get((byte) tenure) - TenureCountsW1.get((byte) tenure);
+            changeTenure1Subset.put(gor, 100.0d * diff / (double) data.data.size());
+        }
+
+        // Get tenure counts for all.
+        WaAS_HHOLD_Handler handler;
+        File inDir = Files.getWaASInputDir();
+        handler = new WaAS_HHOLD_Handler(we, inDir);
+        TreeMap<Short, WaAS_Wave1_HHOLD_Record> allW1 = handler.loadAllWave1(W1);
+        TreeMap<Byte, TreeMap<Byte, Integer>> TenureCountsGORW1 = getTenureCountsForGOR(gors, allW1, W1);
+        int allW1size = allW1.size();
+        allW1 = null; // Set to null to free memory.
+        TreeMap<Short, WaAS_Wave5_HHOLD_Record> allW5 = handler.loadAllWave5(W5);
+        TreeMap<Byte, TreeMap<Byte, Integer>> TenureCountsGORW5 = getTenureCountsForGOR(gors, allW5, W5);
+        int allW5size = allW5.size();
+        allW5 = null; // Set to null to free memory.
+
+        // Calculate differences in Tenure 1 for all
+        TreeMap<Byte, Double> changeTenure1;
+        changeTenure1 = new TreeMap<>();
+        ite = TenureCountsGORW1.keySet().iterator();
+        while (ite.hasNext()) {
+            byte gor = ite.next();
+            TreeMap<Byte, Integer> TenureCountsW1;
+            TenureCountsW1 = TenureCountsGORW1.get(gor);
+            TreeMap<Byte, Integer> TenureCountsW5;
+            TenureCountsW5 = TenureCountsGORW5.get(gor);
+            double diff = (100.0d * TenureCountsW5.get((byte) tenure) / (double) allW5size) - (100.0d * TenureCountsW1.get((byte) tenure) / (double) allW1size);
+            changeTenure1Subset.put(gor, diff);
+        }
 
         // Data to graph.
         log("Data to graph");
-        log("GOR,GORName,changeHVALUESubset,changeHVALUEAll");
-        Iterator<Byte> ite;
+        log("GOR,GORName,changeTenure1,changeTenure2");
         ite = gors.iterator();
         while (ite.hasNext()) {
             byte gor = ite.next();
             if (gor != 3) {
                 log("" + gor + "," + GORNameLookup.get(gor) + ","
-                        + changeHVALUESubset.get(gor) + ","
-                        + changeHVALUEAll.get(gor));
+                        + changeTenure1Subset.get(gor) + ","
+                        + changeTenure1.get(gor));
             }
         }
 
@@ -101,98 +170,26 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
         String title;
         String xAxisLabel;
         String yAxisLabel;
-        title = "Average change in HVALUE (Wave 5 minus Wave 1)";
+        title = "Average change in Tenure (Wave 5 minus Wave 1)";
         xAxisLabel = "Government Office Region";
         yAxisLabel = "£";
-        BigDecimal yIncrement = new BigDecimal("20000");
+        BigDecimal yIncrement = new BigDecimal("1");
         int numberOfYAxisTicks = 10;
-        createLineGraph(title, xAxisLabel, yAxisLabel, "HVALUE",
-                changeHVALUESubset, changeHVALUEAll,numberOfYAxisTicks, 
+        createLineGraph(title, xAxisLabel, yAxisLabel,
+                "Tenure" + TenureNameMap.get(tenure),
+                changeTenure1Subset, changeTenure1, numberOfYAxisTicks,
                 yIncrement);
     }
 
     /**
-     * Get HVALUE Total Household Property Wealth for each wave in the subsets.
-     *
-     * @return
-     */
-    public TreeMap<Byte, Double> getChangeHVALUESubset() {
-        TreeMap<Byte, Double> r;
-        HashMap<Byte, HashMap<Short, Double>>[] HVALUESubsets;
-        HVALUESubsets = new HashMap[WaAS_Data.NWAVES];
-        byte w;
-        for (w = 0; w < WaAS_Data.NWAVES; w++) {
-            HVALUESubsets[w] = getHVALUEForGORSubsets((byte) (w + 1));
-        }
-        r = new TreeMap<>();
-        double countW1 = 0;
-        double countZeroW1 = 0;
-        double countNegativeW1 = 0;
-        double countW5 = 0;
-        double countZeroW5 = 0;
-        double countNegativeW5 = 0;
-        log("HVALUE for each wave in the subsets.");
-        String h = "GORNumber,GORName,HVALUE5_Average-HVALUE1_Average";
-        for (w = 1; w < WaAS_Data.NWAVES + 1; w++) {
-            h += ",HVALUEW" + w + "_Count,HVALUEW" + w + "_ZeroCount,HVALUEW"
-                    + w + "_NegativeCount,HVALUEW" + w + "_Average";
-        }
-        log(h);
-        Iterator<Byte> ite;
-        ite = gors.iterator();
-        while (ite.hasNext()) {
-            byte gor = ite.next();
-            double[][] aHVALUE = new double[WaAS_Data.NWAVES][];
-            for (w = 0; w < WaAS_Data.NWAVES; w++) {
-                aHVALUE[w] = getSummaryStatistics(
-                        HVALUESubsets[w].get(gor).values());
-            }
-            countW1 += aHVALUE[0][5];
-            countZeroW1 += aHVALUE[0][6];
-            countNegativeW1 += aHVALUE[0][7];
-            countW5 += aHVALUE[4][5];
-            countZeroW5 += aHVALUE[4][6];
-            countNegativeW5 += aHVALUE[4][7];
-            double diff = aHVALUE[4][4] - aHVALUE[0][4];
-            String s;
-            s = "" + gor + "," + GORNameLookup.get(gor) + "," + diff;
-            for (w = 0; w < WaAS_Data.NWAVES; w++) {
-                s += "," + aHVALUE[w][4] + "," + aHVALUE[w][5] + ","
-                        + aHVALUE[w][6] + "," + aHVALUE[w][7];
-            }
-            log(s);
-            r.put(gor, diff);
-        }
-        log("HVALUE For Wave 1 Subset");
-        log("" + countW1 + "\t Count");
-        log("" + countZeroW1 + "\t Zero");
-        log("" + countNegativeW1 + "\t Negative");
-        log("HVALUE For Wave 5 Subset");
-        log("" + countW5 + "\t Count");
-        log("" + countZeroW5 + "\t Zero");
-        log("" + countNegativeW5 + "\t Negative");
-        return r;
-    }
-
-    /**
-     * Get the total HVALUE in subset.
+     * Get the total HPROPW in subset.
      *
      * @param wave
-     * @return Map with keys as GOR and Values as map with keys as CASEWX and
-     * values as HVALUE.
      */
-    public HashMap<Byte, HashMap<Short, Double>> getHVALUEForGORSubsets(
+    public void getTenureCountsForGORSubsets(
             byte wave) {
-        // Initialise result
-        HashMap<Byte, HashMap<Short, Double>> r;
-        r = new HashMap<>();
-        Iterator<Byte> ite;
-        ite = GORSubsets[wave - 1].keySet().iterator();
-        while (ite.hasNext()) {
-            Byte GOR;
-            GOR = ite.next();
-            r.put(GOR, new HashMap<>());
-        }
+        TreeMap<Byte, TreeMap<Byte, Integer>> TenureCountsGOR;
+        TenureCountsGOR = TenureCountsWaveGORSubsets.get(wave);
         if (wave == W1) {
             data.data.keySet().stream().forEach(cID -> {
                 WaAS_Collection c;
@@ -204,8 +201,10 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
                         WaAS_Wave1_HHOLD_Record w1;
                         w1 = cr.w1Record.getHhold();
                         Byte GOR = GORLookups[wave - 1].get(CASEW1);
-                        Generic_Collections.addToMap(r, GOR, CASEW1,
-                                w1.getHVALUE());
+                        TreeMap<Byte, Integer> TenureCounts;
+                        TenureCounts = TenureCountsGOR.get(GOR);
+                        byte TEN1 = w1.getTEN1();
+                        Generic_Collections.addToMap(TenureCounts, TEN1, 1);
                     }
                 });
                 data.clearCollection(cID);
@@ -228,8 +227,10 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
                             Byte GOR = GORLookups[wave - 1].get(CASEW2);
                             WaAS_Wave2_HHOLD_Record w2;
                             w2 = w2Records.get(CASEW2).getHhold();
-                            Generic_Collections.addToMap(r, GOR, CASEW2,
-                                    w2.getHVALUE());
+                            TreeMap<Byte, Integer> TenureCounts;
+                            TenureCounts = TenureCountsGOR.get(GOR);
+                            byte TEN1 = w2.getTEN1();
+                            Generic_Collections.addToMap(TenureCounts, TEN1, 1);
                         }
                     }
                 });
@@ -260,8 +261,10 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
                                 Byte GOR = GORLookups[wave - 1].get(CASEW3);
                                 WaAS_Wave3_HHOLD_Record w3;
                                 w3 = w3_2.get(CASEW3).getHhold();
-                                Generic_Collections.addToMap(r, GOR, CASEW3,
-                                        w3.getHVALUE());
+                                TreeMap<Byte, Integer> TenureCounts;
+                                TenureCounts = TenureCountsGOR.get(GOR);
+                                byte TEN1 = w3.getTEN1();
+                                Generic_Collections.addToMap(TenureCounts, TEN1, 1);
                             }
                         }
                     }
@@ -300,7 +303,10 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
                                     Byte GOR = GORLookups[wave - 1].get(CASEW4);
                                     WaAS_Wave4_HHOLD_Record w4;
                                     w4 = w4_3.get(CASEW4).getHhold();
-                                    Generic_Collections.addToMap(r, GOR, CASEW4, w4.getHVALUE());
+                                    TreeMap<Byte, Integer> TenureCounts;
+                                    TenureCounts = TenureCountsGOR.get(GOR);
+                                    byte TEN1 = w4.getTEN1();
+                                    Generic_Collections.addToMap(TenureCounts, TEN1, 1);
                                 }
                             }
                         }
@@ -347,7 +353,10 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
                                         Byte GOR = GORLookups[wave - 1].get(CASEW5);
                                         WaAS_Wave5_HHOLD_Record w5;
                                         w5 = w5_4.get(CASEW5).getHhold();
-                                        Generic_Collections.addToMap(r, GOR, CASEW5, w5.getHVALUE());
+                                        TreeMap<Byte, Integer> TenureCounts;
+                                        TenureCounts = TenureCountsGOR.get(GOR);
+                                        byte TEN1 = w5.getTEN1();
+                                        Generic_Collections.addToMap(TenureCounts, TEN1, 1);
                                     }
                                 }
                             }
@@ -357,108 +366,42 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
                 data.clearCollection(cID);
             });
         }
-        return r;
     }
 
     /**
-     * Get the HVALUE.
      *
      * @param gors
-     * @param w5All
+     * @param wAll
      * @param wave
-     * @return Map with keys as GOR and Values as map with keys as CASEWX and
-     * values as HVALUE.
      */
-    public HashMap<Byte, HashMap<Short, Double>> getHVALUEForGOR(
+    public TreeMap<Byte, TreeMap<Byte, Integer>> getTenureCountsForGOR(
             ArrayList<Byte> gors,
-            TreeMap<Short, ?> w5All,
-            //TreeMap<Short, WaAS_Wave1Or2Or3Or4Or5_HHOLD_Record> w5All, 
+            TreeMap<Short, ?> wAll,
             byte wave) {
-        // Initialise result
+        TreeMap<Byte, TreeMap<Byte, Integer>> TenureCountsGOR;
+        TenureCountsGOR = TenureCountsWaveGOR.get(wave);
         HashMap<Byte, HashMap<Short, Double>> r;
         r = new HashMap<>();
         gors.stream().forEach(gor -> {
             r.put(gor, new HashMap<>());
         });
-        int countNegative = 0;
-        int countZero = 0;
-        Iterator<Short> ite = w5All.keySet().iterator();
+        Iterator<Short> ite = wAll.keySet().iterator();
         Short CASEWX;
         WaAS_Wave1Or2Or3Or4Or5_HHOLD_Record rec;
         Byte GOR;
-        double HVALUE;
         while (ite.hasNext()) {
             CASEWX = ite.next();
-            rec = (WaAS_Wave1Or2Or3Or4Or5_HHOLD_Record) w5All.get(CASEWX);
+            rec = (WaAS_Wave1Or2Or3Or4Or5_HHOLD_Record) wAll.get(CASEWX);
             GOR = rec.getGOR();
-            HVALUE = rec.getHVALUE();
-            if (HVALUE == 0.0d) {
-                countZero++;
-            } else if (HVALUE < 0.0d) {
-                countNegative++;
-            }
-            Generic_Collections.addToMap(r, GOR, CASEWX, HVALUE);
-        }
-        log("HVALUE for GOR W" + wave);
-        log("count " + w5All.size());
-        log("countZero " + countZero);
-        log("countNegative " + countNegative);
-        return r;
-    }
-
-    /**
-     * Get HVALUE Total Household Property Wealth for each wave for all records.
-     *
-     * @return
-     */
-    public TreeMap<Byte, Double> getChangeHVALUEAll() {
-        TreeMap<Byte, Double> r;
-        r = new TreeMap<>();
-        WaAS_HHOLD_Handler handler;
-        File inDir = Files.getGeneratedWaASDir();
-        handler = new WaAS_HHOLD_Handler(we, inDir);
-        HashMap<Byte, HashMap<Short, Double>>[] HVALUEAll;
-        HVALUEAll = new HashMap[WaAS_Data.NWAVES];
-        TreeMap<Short, WaAS_Wave1_HHOLD_Record> allW1 = handler.loadAllWave1(WaAS_Data.W1);
-        HVALUEAll[0] = getHVALUEForGOR(gors, allW1, (byte) 1);
-        allW1 = null; // Set to null to free memory.
-        TreeMap<Short, WaAS_Wave5_HHOLD_Record> allW5 = handler.loadAllWave5(WaAS_Data.W5);
-        HVALUEAll[4] = getHVALUEForGOR(gors, allW5, (byte) 5);
-        allW5 = null; // Set to null to free memory.
-        log("HVALUE Total Household Property Wealth for each wave for all records.");
-        String h;
-        h = "GORNumber,GORName,HVALUE5_Average-HVALUE1_Average";
-        byte w;
-        for (w = 1; w < WaAS_Data.NWAVES + 1; w++) {
-            if (w == 1 || w == 5) {
-                h += ",HVALUEW" + w + "_Count,HVALUEW" + w + "_ZeroCount,HVALUEW"
-                        + w + "_NegativeCount,HVALUEW" + w + "_Average";
+            TreeMap<Byte, Integer> TenureCounts;
+            TenureCounts = TenureCountsGOR.get(GOR);
+            if (TenureCounts == null) {
+                System.out.println("Tenure Counts is null for GOR " + GOR);
+            } else {
+                byte TEN1 = rec.getTEN1();
+                Generic_Collections.addToMap(TenureCounts, TEN1, 1);
             }
         }
-        log(h);
-        Iterator<Byte> ite;
-        ite = gors.iterator();
-        while (ite.hasNext()) {
-            byte gor = ite.next();
-            double[][] aHVALUE = new double[WaAS_Data.NWAVES][];
-            for (w = 0; w < WaAS_Data.NWAVES; w++) {
-                if (w == 0 || w == 4) {
-                    aHVALUE[w] = getSummaryStatistics(
-                            HVALUEAll[w].get(gor).values());
-                }
-            }
-            double diff = aHVALUE[4][4] - aHVALUE[0][4];
-            String s;
-            s = "" + gor + "," + GORNameLookup.get(gor) + "," + diff;
-            for (w = 0; w < WaAS_Data.NWAVES; w++) {
-                if (w == 0 || w == 4) {
-                    s += "," + aHVALUE[w][4] + "," + aHVALUE[w][5] + ","
-                            + aHVALUE[w][6] + "," + aHVALUE[w][7];
-                }
-            }
-            log(s);
-            r.put(gor, diff);
-        }
-        return r;
+        return TenureCountsGOR;
     }
 }
