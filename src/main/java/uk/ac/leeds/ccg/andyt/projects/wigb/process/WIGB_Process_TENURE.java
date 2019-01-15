@@ -150,7 +150,7 @@ public class WIGB_Process_TENURE extends WIGB_Main_Process {
             TreeMap<Byte, Integer> TenureCountsW5;
             TenureCountsW5 = TenureCountsGORW5.get(gor);
             double diff = (100.0d * TenureCountsW5.get((byte) tenure) / (double) allW5size) - (100.0d * TenureCountsW1.get((byte) tenure) / (double) allW1size);
-            changeTenure1Subset.put(gor, diff);
+            changeTenure1.put(gor, diff);
         }
 
         // Data to graph.
