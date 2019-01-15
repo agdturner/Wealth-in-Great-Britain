@@ -122,8 +122,9 @@ public class WIGB_Process_TENURE extends WIGB_Main_Process {
             TenureCountsW1 = TenureCountsGORW1Subsets.get(gor);
             TreeMap<Byte, Integer> TenureCountsW5;
             TenureCountsW5 = TenureCountsGORW5Subsets.get(gor);
-            double diff = TenureCountsW5.get((byte) tenure) - TenureCountsW1.get((byte) tenure);
-            changeTenure1Subset.put(gor, 100.0d * diff / (double) data.data.size());
+            double diff = (100.0d * TenureCountsW5.get((byte) tenure) / (double) 6990)
+                    - 100.0d * (TenureCountsW1.get((byte) tenure) / (double) 6990);
+            changeTenure1Subset.put(gor, diff);
         }
 
         // Get tenure counts for all.
@@ -149,7 +150,8 @@ public class WIGB_Process_TENURE extends WIGB_Main_Process {
             TenureCountsW1 = TenureCountsGORW1.get(gor);
             TreeMap<Byte, Integer> TenureCountsW5;
             TenureCountsW5 = TenureCountsGORW5.get(gor);
-            double diff = (100.0d * TenureCountsW5.get((byte) tenure) / (double) allW5size) - (100.0d * TenureCountsW1.get((byte) tenure) / (double) allW1size);
+            double diff = (100.0d * TenureCountsW5.get((byte) tenure) / (double) allW5size) 
+                    - (100.0d * TenureCountsW1.get((byte) tenure) / (double) allW1size);
             changeTenure1.put(gor, diff);
         }
 
