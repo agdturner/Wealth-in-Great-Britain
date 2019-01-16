@@ -58,7 +58,7 @@ public class WIGB_LineGraph extends Generic_LineGraph {
             int dataWidth, int dataHeight,
             String xAxisLabel, String yAxisLabel,
             BigDecimal yMax,
-            BigDecimal yPin,
+            ArrayList<BigDecimal> yPin,
             BigDecimal yIncrement,
             int numberOfYAxisTicks,
             int decimalPlacePrecisionForCalculations,

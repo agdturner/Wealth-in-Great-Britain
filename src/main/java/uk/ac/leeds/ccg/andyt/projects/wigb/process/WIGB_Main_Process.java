@@ -1834,6 +1834,8 @@ public class WIGB_Main_Process extends WIGB_Object {
      * @param variableName
      * @param changeSubset
      * @param changeAll
+     * @param numberOfYAxisTicks
+     * @param yIncrement
      */
     public void createLineGraph(String title, String xAxisLabel,
             String yAxisLabel, String variableName,
@@ -1850,7 +1852,9 @@ public class WIGB_Main_Process extends WIGB_Object {
         Generic_Files gf = new Generic_Files(new Generic_Strings());
         File outdir;
         outdir = gf.getOutputDataDir();
-        file = new File(outdir, title.replace(" ", "_") + "." + format);
+        String filename;
+        filename = title.replace(" ", "_");
+        file = new File(outdir, filename + "." + format);
         System.out.println("File: " + file.toString());
         int dataWidth = 500;
         int dataHeight = 250;

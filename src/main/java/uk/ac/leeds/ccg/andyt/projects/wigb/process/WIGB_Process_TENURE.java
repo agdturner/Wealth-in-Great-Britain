@@ -97,11 +97,7 @@ public class WIGB_Process_TENURE extends WIGB_Main_Process {
      *
      */
     public void createGraph() {
-//        for (byte w = 1; w <= WaAS_Data.NWAVES; w++) {
-//            getTenureCountsForGORSubsets(w);
-//        }
-
-        byte tenure = 1;
+        for (byte tenure = 1; tenure <= 6; tenure ++) {
 
         // Get tenure counts for subsets.
         getTenureCountsForGORSubsets(W1);
@@ -123,7 +119,7 @@ public class WIGB_Process_TENURE extends WIGB_Main_Process {
             TreeMap<Byte, Integer> TenureCountsW5;
             TenureCountsW5 = TenureCountsGORW5Subsets.get(gor);
             double diff = (100.0d * TenureCountsW5.get((byte) tenure) / (double) 6990)
-                    - 100.0d * (TenureCountsW1.get((byte) tenure) / (double) 6990);
+                    - (100.0d * TenureCountsW1.get((byte) tenure) / (double) 6990);
             changeTenure1Subset.put(gor, diff);
         }
 
@@ -172,15 +168,17 @@ public class WIGB_Process_TENURE extends WIGB_Main_Process {
         String title;
         String xAxisLabel;
         String yAxisLabel;
-        title = "Average change in Tenure (Wave 5 minus Wave 1)";
+        String variableName = "Tenure " + TenureNameMap.get(tenure);
+        title = "Average change in " + variableName + " (Wave 5 minus Wave 1)";
         xAxisLabel = "Government Office Region";
-        yAxisLabel = "£";
-        BigDecimal yIncrement = new BigDecimal("1");
+        yAxisLabel = "%";
+        //BigDecimal yIncrement = new BigDecimal("1");
+        BigDecimal yIncrement = null;
         int numberOfYAxisTicks = 10;
-        createLineGraph(title, xAxisLabel, yAxisLabel,
-                "Tenure" + TenureNameMap.get(tenure),
+        createLineGraph(title, xAxisLabel, yAxisLabel, variableName,
                 changeTenure1Subset, changeTenure1, numberOfYAxisTicks,
                 yIncrement);
+        }
     }
 
     /**
