@@ -1861,7 +1861,9 @@ public class WIGB_Main_Process extends WIGB_Object {
         //int numberOfYAxisTicks = 10;
         BigDecimal yMax;
         yMax = null;
-        BigDecimal yPin = BigDecimal.ZERO;
+        ArrayList<BigDecimal> yPin;
+        yPin = new ArrayList<>();
+        yPin.add(BigDecimal.ZERO);
         //BigDecimal yIncrement = BigDecimal.ONE;
         //BigDecimal yIncrement = null; // Setting this to null means that numberOfYAxisTicks is used.
         //BigDecimal yIncrement = new BigDecimal("20000");

@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.TreeMap;
 import java.util.concurrent.ExecutorService;
-import uk.ac.leeds.ccg.andyt.chart.Generic_LineGraph;
+import uk.ac.leeds.ccg.andyt.chart.examples.Generic_LineGraph;
 import uk.ac.leeds.ccg.andyt.generic.util.Generic_Collections;
 
 /**
@@ -78,7 +78,6 @@ public class WIGB_LineGraph extends Generic_LineGraph {
             TreeMap<Byte, String> GORNameLookup,
             TreeMap<Byte, Double> changeHPROPWSubset,
             TreeMap<Byte, Double> changeHPROPWAll) {
-        Object[] data;
         data = new Object[7];
 
         TreeMap<String, TreeMap<BigDecimal, BigDecimal>> maps;
@@ -108,10 +107,10 @@ public class WIGB_LineGraph extends Generic_LineGraph {
         }
         BigDecimal[] minMaxBigDecimal;
         minMaxBigDecimal = Generic_Collections.getMinMaxBigDecimal(map);
-        BigDecimal minY = minMaxBigDecimal[0];
-        BigDecimal maxY = minMaxBigDecimal[1];
-        BigDecimal minX = map.firstKey();
-        BigDecimal maxX = map.lastKey();
+        minY = minMaxBigDecimal[0];
+         maxY = minMaxBigDecimal[1];
+         minX = map.firstKey();
+         maxX = map.lastKey();
         minMaxBigDecimal = Generic_Collections.getMinMaxBigDecimal(map2);
         if (minY.compareTo(minMaxBigDecimal[0]) == 1) {
             minY = minMaxBigDecimal[0];

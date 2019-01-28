@@ -4,9 +4,7 @@ import java.io.File;
 import java.io.Serializable;
 import uk.ac.leeds.ccg.andyt.generic.core.Generic_Environment;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Environment;
-import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Strings;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Data;
-import uk.ac.leeds.ccg.andyt.generic.data.waas.io.WaAS_Files;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_IO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
 
@@ -34,7 +32,7 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
         Strings = new WIGB_Strings();
         Files = new WIGB_Files(Strings);
         we = new WaAS_Environment(Files.getDataDir());
-        ge = new Generic_Environment(Files, Strings);
+        ge = new Generic_Environment(Files);
         File f;
         f = Files.getEnvDataFile();
         if (f.exists()) {
