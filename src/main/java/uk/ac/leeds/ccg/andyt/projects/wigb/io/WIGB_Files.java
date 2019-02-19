@@ -26,8 +26,6 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Strings;
  */
 public class WIGB_Files extends Generic_Files implements Serializable {
 
-    public transient WIGB_Strings Strings;
-
     /**
      *
      * @param s

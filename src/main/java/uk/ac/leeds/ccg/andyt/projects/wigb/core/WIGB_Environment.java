@@ -2,6 +2,7 @@ package uk.ac.leeds.ccg.andyt.projects.wigb.core;
 
 import java.io.File;
 import java.io.Serializable;
+import java.util.logging.Level;
 import uk.ac.leeds.ccg.andyt.generic.core.Generic_Environment;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Environment;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Data;
@@ -15,8 +16,8 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
 public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
         implements Serializable {
 
-    public transient WIGB_Strings Strings;
-    public transient WIGB_Files Files;
+    public transient WIGB_Strings strings;
+    public transient WIGB_Files files;
     public transient Generic_Environment ge;
     public transient WaAS_Environment we;
     
@@ -29,16 +30,14 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
 
     public WIGB_Environment() {
         //Memory_Threshold = 3000000000L;
-        Strings = new WIGB_Strings();
-        Files = new WIGB_Files(Strings);
-        we = new WaAS_Environment(Files.getDataDir());
-        ge = new Generic_Environment(Files);
+        strings = new WIGB_Strings();
+        files = new WIGB_Files(strings);
+        Generic_Environment ge = new Generic_Environment(files, Level.FINE, 1);
+        we = new WaAS_Environment(ge);
         File f;
-        f = Files.getEnvDataFile();
+        f = files.getEnvDataFile();
         if (f.exists()) {
             loadWaASData();
-            data.Files = we.Files;
-            data.Strings = we.Strings;
         } else {
             data = new WaAS_Data(we);
         }
@@ -113,7 +112,7 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
     
     public void cacheData() {
         File f;
-        f = Files.getEnvDataFile();
+        f = files.getEnvDataFile();
         System.out.println("<cache data>");
         Generic_IO.writeObject(data, f);
         System.out.println("</cache data>");
@@ -121,7 +120,7 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
 
     public final void loadWaASData() {
         File f;
-        f = we.Files.getEnvDataFile();
+        f = we.files.getEnvDataFile();
         System.out.println("<load data>");
         data = (WaAS_Data) Generic_IO.readObject(f);
         System.out.println("<load data>");

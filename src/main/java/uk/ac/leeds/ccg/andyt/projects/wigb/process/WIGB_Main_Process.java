@@ -102,8 +102,8 @@ public class WIGB_Main_Process extends WIGB_Object {
     public WIGB_Main_Process(WIGB_Environment env) {
         super(env);
         data = env.data;
-        Strings = env.Strings;
-        Files = env.Files;
+        Strings = env.strings;
+        Files = env.files;
         we = env.we;
     }
 
