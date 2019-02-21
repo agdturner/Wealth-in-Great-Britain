@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.TreeMap;
 import java.util.concurrent.ExecutorService;
-import uk.ac.leeds.ccg.andyt.chart.examples.Generic_LineGraph;
+import uk.ac.leeds.ccg.andyt.chart.examples.Chart_Line;
 import uk.ac.leeds.ccg.andyt.generic.util.Generic_Collections;
 
 /**
@@ -30,7 +30,7 @@ import uk.ac.leeds.ccg.andyt.generic.util.Generic_Collections;
  * Line Chart Visualization of some default data and write it out to file as a
  * PNG.
  */
-public class WIGB_LineGraph extends Generic_LineGraph {
+public class WIGB_LineGraph extends Chart_Line {
 
     public WIGB_LineGraph() {
     }
