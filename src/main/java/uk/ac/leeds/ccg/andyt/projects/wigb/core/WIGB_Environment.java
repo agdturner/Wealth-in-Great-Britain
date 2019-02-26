@@ -16,7 +16,6 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
 public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
         implements Serializable {
 
-    public transient WIGB_Strings strings;
     public transient WIGB_Files files;
     public transient Generic_Environment ge;
     public transient WaAS_Environment we;
@@ -30,8 +29,7 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
 
     public WIGB_Environment() {
         //Memory_Threshold = 3000000000L;
-        strings = new WIGB_Strings();
-        files = new WIGB_Files(strings);
+        files = new WIGB_Files();
         Generic_Environment ge = new Generic_Environment(files, Level.FINE, 1);
         we = new WaAS_Environment(ge);
         File f;

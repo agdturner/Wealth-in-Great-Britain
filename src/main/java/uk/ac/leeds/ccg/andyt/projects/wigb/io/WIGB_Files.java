@@ -16,7 +16,6 @@
 package uk.ac.leeds.ccg.andyt.projects.wigb.io;
 
 import java.io.File;
-import java.io.Serializable;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_Files;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Strings;
 
@@ -24,23 +23,19 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Strings;
  *
  * @author geoagdt
  */
-public class WIGB_Files extends Generic_Files implements Serializable {
+public class WIGB_Files extends Generic_Files {
 
     /**
-     *
-     * @param s
      */
-    public WIGB_Files(WIGB_Strings s){
-        super(s);
+    public WIGB_Files(){
+        super();
     }
 
     /**
-     *
-     * @param s
      * @param dataDir
      */
-    public WIGB_Files(WIGB_Strings s, File dataDir) {
-        super(s, dataDir);
+    public WIGB_Files(File dataDir) {
+        super(dataDir);
     }
 
     public File getWaASInputDir() {

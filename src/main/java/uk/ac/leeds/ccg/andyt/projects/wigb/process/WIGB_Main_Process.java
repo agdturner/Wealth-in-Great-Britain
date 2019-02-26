@@ -1849,7 +1849,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         File file;
         String format = "PNG";
         System.out.println("Title: " + title);
-        Generic_Files gf = new Generic_Files(new Generic_Strings());
+        Generic_Files gf = new Generic_Files();
         File outdir;
         outdir = gf.getOutputDataDir();
         String filename;
