@@ -29,7 +29,6 @@ import java.util.TreeMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-import uk.ac.leeds.ccg.andyt.generic.core.Generic_Strings;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Environment;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_IO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
@@ -59,7 +58,6 @@ import uk.ac.leeds.ccg.andyt.generic.io.Generic_Files;
 import uk.ac.leeds.ccg.andyt.generic.util.Generic_Collections;
 import uk.ac.leeds.ccg.andyt.generic.visualisation.Generic_Visualisation;
 import uk.ac.leeds.ccg.andyt.projects.wigb.chart.WIGB_LineGraph;
-import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Strings;
 import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
 
 /**
@@ -69,8 +67,7 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
 public class WIGB_Main_Process extends WIGB_Object {
 
     // For convenience
-    protected final WIGB_Strings Strings;
-    protected final WIGB_Files Files;
+    protected final WIGB_Files files;
     protected final WaAS_Data data;
     protected final WaAS_Environment we;
 
@@ -102,15 +99,13 @@ public class WIGB_Main_Process extends WIGB_Object {
     public WIGB_Main_Process(WIGB_Environment env) {
         super(env);
         data = env.data;
-        Strings = env.strings;
-        Files = env.files;
+        files = env.files;
         we = env.we;
     }
 
     public WIGB_Main_Process(WIGB_Main_Process p) {
         data = p.data;
-        Strings = p.Strings;
-        Files = p.Files;
+        files = p.files;
         we = p.we;
         W1 = p.W1;
         W2 = p.W2;
@@ -129,7 +124,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         WIGB_Environment env;
         env = new WIGB_Environment();
         p = new WIGB_Main_Process(env);
-        p.Files.setDataDirectory(new File(System.getProperty("user.dir"), "data"));
+        p.files.setDataDirectory(new File(System.getProperty("user.dir"), "data"));
         // Main switches
         //p.doJavaCodeGeneration = true;
         p.doLoadDataIntoCaches = true; // rename/reuse just left here for convenience...
@@ -153,7 +148,7 @@ public class WIGB_Main_Process extends WIGB_Object {
      * of ‘winners’ and ‘losers’ over the course of those ten years?
      */
     public void run() {
-        logF0 = new File(Files.getOutputDataDir(), "log0.txt");
+        logF0 = new File(files.getOutputDataDir(), "log0.txt");
         logPW0 = Generic_IO.getPrintWriter(logF0, false); // Overwrite log file.
         initlog(4);
 
@@ -163,8 +158,8 @@ public class WIGB_Main_Process extends WIGB_Object {
         File indir;
         File outdir;
         File generateddir;
-        indir = Files.getWaASInputDir();
-        generateddir = Files.getGeneratedWaASDir();
+        indir = files.getWaASInputDir();
+        generateddir = files.getGeneratedWaASDir();
         outdir = new File(generateddir, "Subsets");
         outdir.mkdirs();
 
@@ -379,7 +374,7 @@ public class WIGB_Main_Process extends WIGB_Object {
     }
 
     protected void initlog(int i) {
-        logF = new File(Files.getOutputDataDir(), "log" + i + ".txt");
+        logF = new File(files.getOutputDataDir(), "log" + i + ".txt");
         logPW = Generic_IO.getPrintWriter(logF, true); // Append to log file.
     }
 

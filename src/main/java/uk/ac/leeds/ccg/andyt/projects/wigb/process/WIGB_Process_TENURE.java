@@ -125,7 +125,7 @@ public class WIGB_Process_TENURE extends WIGB_Main_Process {
 
         // Get tenure counts for all.
         WaAS_HHOLD_Handler handler;
-        File inDir = Files.getWaASInputDir();
+        File inDir = files.getWaASInputDir();
         handler = new WaAS_HHOLD_Handler(we, inDir);
         TreeMap<Short, WaAS_Wave1_HHOLD_Record> allW1 = handler.loadAllWave1(W1);
         TreeMap<Byte, TreeMap<Byte, Integer>> TenureCountsGORW1 = getTenureCountsForGOR(gors, allW1, W1);

@@ -415,7 +415,7 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
         TreeMap<Byte, Double> r;
         r = new TreeMap<>();
         WaAS_HHOLD_Handler handler;
-        File inDir = Files.getGeneratedWaASDir();
+        File inDir = files.getGeneratedWaASDir();
         handler = new WaAS_HHOLD_Handler(we, inDir);
         HashMap<Byte, HashMap<Short, Double>>[] HVALUEAll;
         HVALUEAll = new HashMap[WaAS_Data.NWAVES];
