@@ -16,7 +16,6 @@
 package uk.ac.leeds.ccg.andyt.projects.wigb.process;
 
 import java.io.File;
-import java.io.PrintWriter;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
@@ -29,7 +28,6 @@ import java.util.TreeMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Environment;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_IO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Object;
@@ -69,49 +67,30 @@ public class WIGB_Main_Process extends WIGB_Object {
     // For convenience
     protected final WIGB_Files files;
     protected final WaAS_Data data;
-    protected final WaAS_Environment we;
-
-    // For logging.
-    File logF;
-    public static transient PrintWriter logPW;
-    File logF0;
-    public static transient PrintWriter logPW0;
-
-    /**
-     * Initialise commonly used variables.
-     */
-    byte W1 = WaAS_Data.W1;
-    byte W2 = WaAS_Data.W2;
-    byte W3 = WaAS_Data.W3;
-    byte W4 = WaAS_Data.W4;
-    byte W5 = WaAS_Data.W5;
-
+    
+    protected int logID; 
+    
     /**
      * Subset of all records that have the same household composition.
      */
     HashSet<Short> subset;
-
+    
     ArrayList<Byte> gors;
     TreeMap<Byte, String> GORNameLookup;
     HashMap<Byte, HashSet<Short>>[] GORSubsets;
     HashMap<Short, Byte>[] GORLookups;
+    
 
     public WIGB_Main_Process(WIGB_Environment env) {
         super(env);
-        data = env.data;
         files = env.files;
-        we = env.we;
+        this.data = env.data;
     }
 
     public WIGB_Main_Process(WIGB_Main_Process p) {
         data = p.data;
         files = p.files;
-        we = p.we;
-        W1 = p.W1;
-        W2 = p.W2;
-        W3 = p.W3;
-        W4 = p.W4;
-        W5 = p.W5;
+        env = p.env;
         subset = p.subset;
         gors = p.gors;
         GORNameLookup = p.GORNameLookup;
@@ -131,6 +110,24 @@ public class WIGB_Main_Process extends WIGB_Object {
         p.run();
     }
 
+    
+    /**
+     * Convenience method for logging. {@code log(s, {@link #logID});}
+     * @param s The message to be logged.
+     */
+    protected void log(String s) {
+        env.ge.log(s, logID);
+    }
+    
+    /**
+     * Convenience method for logging.{@code log(s, logID);}
+     * @param s The message to be logged.
+     * @param logID The id of the log to write to.
+     */
+    protected void log(String s, int logID) {
+        env.ge.log(s, logID);
+    }
+    
     /**
      * The aim is to measure: 1) Costs associated with tenure (expenditure on
      * rent, net of housing benefit, and/or mortgage interest for primary
@@ -148,10 +145,7 @@ public class WIGB_Main_Process extends WIGB_Object {
      * of ‘winners’ and ‘losers’ over the course of those ten years?
      */
     public void run() {
-        logF0 = new File(files.getOutputDataDir(), "log0.txt");
-        logPW0 = Generic_IO.getPrintWriter(logF0, false); // Overwrite log file.
-        initlog(4);
-
+        int mainLogID = env.ge.initLog("WIGB_Main_process");
         /**
          * Set up input and output directories.
          */
@@ -175,7 +169,7 @@ public class WIGB_Main_Process extends WIGB_Object {
             subset = doDataProcessingStep3(outdir);
             Generic_IO.writeObject(subset, subsetF);
         }
-        log("Total number of initial households in wave 1 " + subset.size());
+        log("Total number of initial households in wave 1 " + subset.size(), mainLogID);
 
         /**
          * Init gors and GORNameLookup.
@@ -202,31 +196,31 @@ public class WIGB_Main_Process extends WIGB_Object {
         byte w;
         String s;
         int[] totals;
-        int[] ttotals = new int[WaAS_Data.NWAVES];
-        log("GOR Subsets");
-        log("NW1,NW2,NW3,NW4,NW5,GORNumber,GORName");
+        int[] ttotals = new int[env.NWAVES];
+        log("GOR Subsets", mainLogID);
+        log("NW1,NW2,NW3,NW4,NW5,GORNumber,GORName", mainLogID);
         ite = gors.iterator();
         while (ite.hasNext()) {
             s = "";
-            totals = new int[WaAS_Data.NWAVES];
+            totals = new int[env.NWAVES];
             byte gor = ite.next();
             HashSet<Short> GORSubset;
-            for (w = 0; w < WaAS_Data.NWAVES; w++) {
+            for (w = 0; w < env.NWAVES; w++) {
                 GORSubset = GORSubsets[w].get(gor);
                 totals[w] += GORSubset.size();
                 s += totals[w] + ",";
                 ttotals[w] += totals[w];
             }
             s += gor + "," + GORNameLookup.get(gor);
-            log(s);
+            log(s, mainLogID);
         }
         // Totals
         s = "";
-        for (w = 0; w < WaAS_Data.NWAVES; w++) {
+        for (w = 0; w < env.NWAVES; w++) {
             s += ttotals[w] + ",";
         }
         s += "0,All";
-        log(s);
+        log(s, mainLogID);
         /**
          * TENURE
          */
@@ -248,9 +242,8 @@ public class WIGB_Main_Process extends WIGB_Object {
 //        hv.createGraph();
 
         // Check some counts
-        WaAS_HHOLD_Handler hhandler;
-        hhandler = new WaAS_HHOLD_Handler(we, indir);
-        Object[] w5 = hhandler.loadWave5(WaAS_Data.W5);
+        WaAS_HHOLD_Handler hH = new WaAS_HHOLD_Handler(env.we, indir);
+        Object[] w5 = hH.loadW5();
         TreeMap<Short, WaAS_Wave5_HHOLD_Record> w5recs;
         w5recs = (TreeMap<Short, WaAS_Wave5_HHOLD_Record>) w5[0];
         Iterator<Short> ites;
@@ -309,18 +302,18 @@ public class WIGB_Main_Process extends WIGB_Object {
                 countNonMortgage++;
             }
         }
-        log("" + w5recs.size() + "\t countAllW5withW4");
-        log("" + countMortgage + "\t countMortgage");
-        log("" + countNonMortgage + "\t countNonMortgage");
-        log("" + countBuyWithMortgage + "\t countBuyWithMortgage");
-        log("" + countPartBuyWithMortgage + "\t countPartBuyWithMortgage");
-        log("" + countZeroMIntRate1W5 + "\t countZeroMIntRate1W5");
-        log("" + countPositiveMIntRate1W5 + "\t countPositiveMIntRate1W5");
-        log("" + countZeroMVal1W5 + "\t countZeroMVal1W5");
-        log("" + countPositiveMVal1W5 + "\t countPositiveMVal1W5");
-        log("" + countZeroMNumbNW5 + "\t countZeroMNumbNW5");
-        log("" + countPositiveMNumbNW5 + "\t countPositiveMNumbNW5");
-        log("" + countGT1MNumbNW5 + "\t countGT1MNumbNW5");
+        log("" + w5recs.size() + "\t countAllW5withW4", mainLogID);
+        log("" + countMortgage + "\t countMortgage", mainLogID);
+        log("" + countNonMortgage + "\t countNonMortgage", mainLogID);
+        log("" + countBuyWithMortgage + "\t countBuyWithMortgage", mainLogID);
+        log("" + countPartBuyWithMortgage + "\t countPartBuyWithMortgage", mainLogID);
+        log("" + countZeroMIntRate1W5 + "\t countZeroMIntRate1W5", mainLogID);
+        log("" + countPositiveMIntRate1W5 + "\t countPositiveMIntRate1W5", mainLogID);
+        log("" + countZeroMVal1W5 + "\t countZeroMVal1W5", mainLogID);
+        log("" + countPositiveMVal1W5 + "\t countPositiveMVal1W5", mainLogID);
+        log("" + countZeroMNumbNW5 + "\t countZeroMNumbNW5", mainLogID);
+        log("" + countPositiveMNumbNW5 + "\t countPositiveMNumbNW5", mainLogID);
+        log("" + countGT1MNumbNW5 + "\t countGT1MNumbNW5", mainLogID);
 
         //TreeMap<Short, HashSet<Short>> CASEW4ToCASEW5;
         //CASEW4ToCASEW5 = (TreeMap<Short, HashSet<Short>>) ((Object[]) w5[4])[3];
@@ -334,7 +327,6 @@ public class WIGB_Main_Process extends WIGB_Object {
         // FINCVB5
         //getWave1Or2HPRICEBLookup();
         //getWave3Or4Or5HPRICEBLookup();
-        logPW.close();
     }
 
     /**
@@ -373,11 +365,8 @@ public class WIGB_Main_Process extends WIGB_Object {
         return r;
     }
 
-    protected void initlog(int i) {
-        logF = new File(files.getOutputDataDir(), "log" + i + ".txt");
-        logPW = Generic_IO.getPrintWriter(logF, true); // Append to log file.
-    }
-
+    
+    
     /**
      * Go through hholds for all waves and figure which ones have not
      * significantly changed in terms of hhold composition. Having children and
@@ -389,7 +378,7 @@ public class WIGB_Main_Process extends WIGB_Object {
     public HashSet<Short> doDataProcessingStep3(File outdir) {
         HashSet<Short> r;
         r = new HashSet<>();
-        initlog(3);
+        logID = env.ge.initLog("DataProcessingStep3");
         log("Number of combined records " + data.CASEW1ToCID.size());
         log("Number of collections of combined records " + data.data.size());
 
@@ -1077,7 +1066,7 @@ public class WIGB_Main_Process extends WIGB_Object {
 //	Value = -6.0	Label = Error Partial
         // For brevity/convenience.
         long tDVLUKVAL;
-        if (wave == W1) {
+        if (wave == env.W1) {
             tDVLUKVAL = data.data.keySet().stream().mapToLong(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
@@ -1096,7 +1085,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                 data.clearCollection(cID);
                 return cDVLUKVAL;
             }).sum();
-        } else if (wave == W2) {
+        } else if (wave == env.W2) {
             tDVLUKVAL = data.data.keySet().stream().mapToLong(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
@@ -1123,7 +1112,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                 data.clearCollection(cID);
                 return cDVLUKVAL;
             }).sum();
-        } else if (wave == W3) {
+        } else if (wave == env.W3) {
             tDVLUKVAL = data.data.keySet().stream().mapToLong(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
@@ -1158,7 +1147,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                 data.clearCollection(cID);
                 return cDVLUKVAL;
             }).sum();
-        } else if (wave == W4) {
+        } else if (wave == env.W4) {
             tDVLUKVAL = data.data.keySet().stream().mapToLong(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
@@ -1201,7 +1190,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                 data.clearCollection(cID);
                 return cDVLUKVAL;
             }).sum();
-        } else if (wave == W5) {
+        } else if (wave == env.W5) {
             tDVLUKVAL = data.data.keySet().stream().mapToLong(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
@@ -1269,7 +1258,7 @@ public class WIGB_Main_Process extends WIGB_Object {
     public long getFINCVB(HashSet<Short> subset, byte wave) {
         // For brevity/convenience.
         long tFINCVB;
-        if (wave == W1) {
+        if (wave == env.W1) {
             tFINCVB = data.data.keySet().stream().mapToLong(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
@@ -1294,7 +1283,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                 data.clearCollection(cID);
                 return cFINCVB;
             }).sum();
-        } else if (wave == W2) {
+        } else if (wave == env.W2) {
             tFINCVB = data.data.keySet().stream().mapToLong(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
@@ -1327,7 +1316,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                 data.clearCollection(cID);
                 return cFINCVB;
             }).sum();
-        } else if (wave == W3) {
+        } else if (wave == env.W3) {
             tFINCVB = data.data.keySet().stream().mapToLong(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
@@ -1368,7 +1357,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                 data.clearCollection(cID);
                 return cFINCVB;
             }).sum();
-        } else if (wave == W4) {
+        } else if (wave == env.W4) {
             tFINCVB = data.data.keySet().stream().mapToLong(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
@@ -1417,7 +1406,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                 data.clearCollection(cID);
                 return cFINCVB;
             }).sum();
-        } else if (wave == W5) {
+        } else if (wave == env.W5) {
             tFINCVB = data.data.keySet().stream().mapToLong(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
@@ -1506,7 +1495,7 @@ public class WIGB_Main_Process extends WIGB_Object {
             r.put(GOR, new HashMap<>());
         }
         // For brevity/convenience.
-        if (wave == W1) {
+        if (wave == env.W1) {
             data.data.keySet().stream().forEach(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
@@ -1531,7 +1520,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                 });
                 data.clearCollection(cID);
             });
-        } else if (wave == W2) {
+        } else if (wave == env.W2) {
             data.data.keySet().stream().forEach(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
@@ -1564,7 +1553,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                 });
                 data.clearCollection(cID);
             });
-        } else if (wave == W3) {
+        } else if (wave == env.W3) {
             data.data.keySet().stream().forEach(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
@@ -1605,7 +1594,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                 });
                 data.clearCollection(cID);
             });
-        } else if (wave == W4) {
+        } else if (wave == env.W4) {
             data.data.keySet().stream().forEach(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
@@ -1654,7 +1643,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                 });
                 data.clearCollection(cID);
             });
-        } else if (wave == W5) {
+        } else if (wave == env.W5) {
             data.data.keySet().stream().forEach(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
@@ -1791,31 +1780,6 @@ public class WIGB_Main_Process extends WIGB_Object {
             Wave3Or4Or5HPRICEBLookup.put((byte) 12, 1500000);
         }
         return Wave3Or4Or5HPRICEBLookup;
-    }
-
-    public static void log0(String s) {
-        logPW.println(s);
-    }
-
-    public static void log1(String s) {
-        System.out.println(s);
-    }
-
-    public static void log(String s) {
-        logPW.println(s);
-        System.out.println(s);
-    }
-
-    public static void logStart(String s) {
-        s = "<" + s + ">";
-        logPW.println(s);
-        System.out.println(s);
-    }
-
-    public static void logEnd(String s) {
-        s = "</" + s + ">";
-        logPW.println(s);
-        System.out.println(s);
     }
 
     boolean doJavaCodeGeneration = false;

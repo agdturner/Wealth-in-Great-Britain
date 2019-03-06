@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.TreeMap;
-import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Strings;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Collection;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Combined_Record;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Data;
@@ -26,9 +25,7 @@ import uk.ac.leeds.ccg.andyt.generic.data.waas.data.hhold.WaAS_Wave2_HHOLD_Recor
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.hhold.WaAS_Wave3_HHOLD_Record;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.hhold.WaAS_Wave4_HHOLD_Record;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.hhold.WaAS_Wave5_HHOLD_Record;
-import uk.ac.leeds.ccg.andyt.generic.data.waas.io.WaAS_Files;
 import uk.ac.leeds.ccg.andyt.generic.util.Generic_Collections;
-import static uk.ac.leeds.ccg.andyt.projects.wigb.process.WIGB_Main_Process.log;
 
 /**
  *
@@ -193,7 +190,7 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
             GOR = ite.next();
             r.put(GOR, new HashMap<>());
         }
-        if (wave == W1) {
+        if (wave == WaAS_Data.W1) {
             data.data.keySet().stream().forEach(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
@@ -210,7 +207,7 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
                 });
                 data.clearCollection(cID);
             });
-        } else if (wave == W2) {
+        } else if (wave == WaAS_Data.W2) {
             data.data.keySet().stream().forEach(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
@@ -235,7 +232,7 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
                 });
                 data.clearCollection(cID);
             });
-        } else if (wave == W3) {
+        } else if (wave == WaAS_Data.W3) {
             data.data.keySet().stream().forEach(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
@@ -268,7 +265,7 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
                 });
                 data.clearCollection(cID);
             });
-        } else if (wave == W4) {
+        } else if (wave == WaAS_Data.W4) {
             data.data.keySet().stream().forEach(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
@@ -308,7 +305,7 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
                 });
                 data.clearCollection(cID);
             });
-        } else if (wave == W5) {
+        } else if (wave == WaAS_Data.W5) {
             data.data.keySet().stream().forEach(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
@@ -416,13 +413,13 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
         r = new TreeMap<>();
         WaAS_HHOLD_Handler handler;
         File inDir = files.getGeneratedWaASDir();
-        handler = new WaAS_HHOLD_Handler(we, inDir);
+        handler = new WaAS_HHOLD_Handler(env.we, inDir);
         HashMap<Byte, HashMap<Short, Double>>[] HVALUEAll;
         HVALUEAll = new HashMap[WaAS_Data.NWAVES];
-        TreeMap<Short, WaAS_Wave1_HHOLD_Record> allW1 = handler.loadAllWave1(WaAS_Data.W1);
+        TreeMap<Short, WaAS_Wave1_HHOLD_Record> allW1 = handler.loadAllW1();
         HVALUEAll[0] = getHVALUEForGOR(gors, allW1, (byte) 1);
         allW1 = null; // Set to null to free memory.
-        TreeMap<Short, WaAS_Wave5_HHOLD_Record> allW5 = handler.loadAllWave5(WaAS_Data.W5);
+        TreeMap<Short, WaAS_Wave5_HHOLD_Record> allW5 = handler.loadAllW5();
         HVALUEAll[4] = getHVALUEForGOR(gors, allW5, (byte) 5);
         allW5 = null; // Set to null to free memory.
         log("HVALUE Total Household Property Wealth for each wave for all records.");

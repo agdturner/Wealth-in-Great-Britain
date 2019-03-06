@@ -26,7 +26,6 @@ import uk.ac.leeds.ccg.andyt.generic.data.waas.data.hhold.WaAS_Wave3_HHOLD_Recor
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.hhold.WaAS_Wave4_HHOLD_Record;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.hhold.WaAS_Wave5_HHOLD_Record;
 import uk.ac.leeds.ccg.andyt.generic.util.Generic_Collections;
-import static uk.ac.leeds.ccg.andyt.projects.wigb.process.WIGB_Main_Process.log;
 
 /**
  *
@@ -60,7 +59,7 @@ public class WIGB_Process_TENURE extends WIGB_Main_Process {
 
     public WIGB_Process_TENURE(WIGB_Main_Process p) {
         super(p);
-        TenureNameMap = p.Env.we.hh.getTenureNameMap();
+        TenureNameMap = p.env.we.hh.getTenureNameMap();
         TenureCountsWaveGORSubsets = new TreeMap<>();
         TenureCountsWaveGOR = new TreeMap<>();
         /**
@@ -100,12 +99,12 @@ public class WIGB_Process_TENURE extends WIGB_Main_Process {
         for (byte tenure = 1; tenure <= 6; tenure ++) {
 
         // Get tenure counts for subsets.
-        getTenureCountsForGORSubsets(W1);
-        getTenureCountsForGORSubsets(W5);
+        getTenureCountsForGORSubsets(WaAS_Data.W1);
+        getTenureCountsForGORSubsets(WaAS_Data.W5);
         TreeMap<Byte, TreeMap<Byte, Integer>> TenureCountsGORW1Subsets;
-        TenureCountsGORW1Subsets = TenureCountsWaveGORSubsets.get(W1);
+        TenureCountsGORW1Subsets = TenureCountsWaveGORSubsets.get(WaAS_Data.W1);
         TreeMap<Byte, TreeMap<Byte, Integer>> TenureCountsGORW5Subsets;
-        TenureCountsGORW5Subsets = TenureCountsWaveGORSubsets.get(W5);
+        TenureCountsGORW5Subsets = TenureCountsWaveGORSubsets.get(WaAS_Data.W5);
 
         // Calculate differences in Tenure tenure for subsets
         TreeMap<Byte, Double> changeTenure1Subset;
@@ -126,13 +125,15 @@ public class WIGB_Process_TENURE extends WIGB_Main_Process {
         // Get tenure counts for all.
         WaAS_HHOLD_Handler handler;
         File inDir = files.getWaASInputDir();
-        handler = new WaAS_HHOLD_Handler(we, inDir);
-        TreeMap<Short, WaAS_Wave1_HHOLD_Record> allW1 = handler.loadAllWave1(W1);
-        TreeMap<Byte, TreeMap<Byte, Integer>> TenureCountsGORW1 = getTenureCountsForGOR(gors, allW1, W1);
+        handler = new WaAS_HHOLD_Handler(env.we, inDir);
+        TreeMap<Short, WaAS_Wave1_HHOLD_Record> allW1 = handler.loadAllW1();
+        TreeMap<Byte, TreeMap<Byte, Integer>> TenureCountsGORW1;
+        TenureCountsGORW1 = getTenureCountsForGOR(gors, allW1, WaAS_Data.W1);
         int allW1size = allW1.size();
         allW1 = null; // Set to null to free memory.
-        TreeMap<Short, WaAS_Wave5_HHOLD_Record> allW5 = handler.loadAllWave5(W5);
-        TreeMap<Byte, TreeMap<Byte, Integer>> TenureCountsGORW5 = getTenureCountsForGOR(gors, allW5, W5);
+        TreeMap<Short, WaAS_Wave5_HHOLD_Record> allW5 = handler.loadAllW5();
+        TreeMap<Byte, TreeMap<Byte, Integer>> TenureCountsGORW5;
+        TenureCountsGORW5 = getTenureCountsForGOR(gors, allW5, WaAS_Data.W5);
         int allW5size = allW5.size();
         allW5 = null; // Set to null to free memory.
 
@@ -186,14 +187,12 @@ public class WIGB_Process_TENURE extends WIGB_Main_Process {
      *
      * @param wave
      */
-    public void getTenureCountsForGORSubsets(
-            byte wave) {
+    public void getTenureCountsForGORSubsets(byte wave) {
         TreeMap<Byte, TreeMap<Byte, Integer>> TenureCountsGOR;
         TenureCountsGOR = TenureCountsWaveGORSubsets.get(wave);
-        if (wave == W1) {
+        if (wave == WaAS_Data.W1) {
             data.data.keySet().stream().forEach(cID -> {
-                WaAS_Collection c;
-                c = data.getCollection(cID);
+                WaAS_Collection c = data.getCollection(cID);
                 c.getData().keySet().stream().forEach(CASEW1 -> {
                     if (subset.contains(CASEW1)) {
                         WaAS_Combined_Record cr;
@@ -209,21 +208,17 @@ public class WIGB_Process_TENURE extends WIGB_Main_Process {
                 });
                 data.clearCollection(cID);
             });
-        } else if (wave == W2) {
+        } else if (wave == WaAS_Data.W2) {
             data.data.keySet().stream().forEach(cID -> {
-                WaAS_Collection c;
-                c = data.getCollection(cID);
+                WaAS_Collection c = data.getCollection(cID);
                 c.getData().keySet().stream().forEach(CASEW1 -> {
                     if (subset.contains(CASEW1)) {
-                        WaAS_Combined_Record cr;
-                        cr = c.getData().get(CASEW1);
+                        WaAS_Combined_Record cr = c.getData().get(CASEW1);
                         HashMap<Short, WaAS_Wave2_Record> w2Records;
                         w2Records = cr.w2Records;
-                        Short CASEW2;
-                        Iterator<Short> ite2;
-                        ite2 = w2Records.keySet().iterator();
+                        Iterator<Short> ite2 = w2Records.keySet().iterator();
                         while (ite2.hasNext()) {
-                            CASEW2 = ite2.next();
+                            Short CASEW2 = ite2.next();
                             Byte GOR = GORLookups[wave - 1].get(CASEW2);
                             WaAS_Wave2_HHOLD_Record w2;
                             w2 = w2Records.get(CASEW2).getHhold();
@@ -236,28 +231,22 @@ public class WIGB_Process_TENURE extends WIGB_Main_Process {
                 });
                 data.clearCollection(cID);
             });
-        } else if (wave == W3) {
+        } else if (wave == WaAS_Data.W3) {
             data.data.keySet().stream().forEach(cID -> {
-                WaAS_Collection c;
-                c = data.getCollection(cID);
+                WaAS_Collection c = data.getCollection(cID);
                 c.getData().keySet().stream().forEach(CASEW1 -> {
                     if (subset.contains(CASEW1)) {
-                        WaAS_Combined_Record cr;
-                        cr = c.getData().get(CASEW1);
+                        WaAS_Combined_Record cr = c.getData().get(CASEW1);
                         HashMap<Short, HashMap<Short, WaAS_Wave3_Record>> w3Records;
                         w3Records = cr.w3Records;
-                        Short CASEW2;
-                        Short CASEW3;
-                        Iterator<Short> ite1;
-                        ite1 = w3Records.keySet().iterator();
+                        Iterator<Short> ite1 = w3Records.keySet().iterator();
                         while (ite1.hasNext()) {
-                            CASEW2 = ite1.next();
+                            Short CASEW2 = ite1.next();
                             HashMap<Short, WaAS_Wave3_Record> w3_2;
                             w3_2 = w3Records.get(CASEW2);
-                            Iterator<Short> ite2;
-                            ite2 = w3_2.keySet().iterator();
+                            Iterator<Short> ite2 = w3_2.keySet().iterator();
                             while (ite2.hasNext()) {
-                                CASEW3 = ite2.next();
+                                Short CASEW3 = ite2.next();
                                 Byte GOR = GORLookups[wave - 1].get(CASEW3);
                                 WaAS_Wave3_HHOLD_Record w3;
                                 w3 = w3_2.get(CASEW3).getHhold();
@@ -271,7 +260,7 @@ public class WIGB_Process_TENURE extends WIGB_Main_Process {
                 });
                 data.clearCollection(cID);
             });
-        } else if (wave == W4) {
+        } else if (wave == WaAS_Data.W4) {
             data.data.keySet().stream().forEach(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
@@ -281,25 +270,19 @@ public class WIGB_Process_TENURE extends WIGB_Main_Process {
                         cr = c.getData().get(CASEW1);
                         HashMap<Short, HashMap<Short, HashMap<Short, WaAS_Wave4_Record>>> w4Records;
                         w4Records = cr.w4Records;
-                        Short CASEW2;
-                        Short CASEW3;
-                        Short CASEW4;
-                        Iterator<Short> ite1;
-                        ite1 = w4Records.keySet().iterator();
+                        Iterator<Short> ite1 = w4Records.keySet().iterator();
                         while (ite1.hasNext()) {
-                            CASEW2 = ite1.next();
+                            Short CASEW2 = ite1.next();
                             HashMap<Short, HashMap<Short, WaAS_Wave4_Record>> w4_2;
                             w4_2 = w4Records.get(CASEW2);
-                            Iterator<Short> ite2;
-                            ite2 = w4_2.keySet().iterator();
+                            Iterator<Short> ite2 = w4_2.keySet().iterator();
                             while (ite2.hasNext()) {
-                                CASEW3 = ite2.next();
+                                Short CASEW3 = ite2.next();
                                 HashMap<Short, WaAS_Wave4_Record> w4_3;
                                 w4_3 = w4_2.get(CASEW3);
-                                Iterator<Short> ite3;
-                                ite3 = w4_3.keySet().iterator();
+                                Iterator<Short> ite3 = w4_3.keySet().iterator();
                                 while (ite3.hasNext()) {
-                                    CASEW4 = ite3.next();
+                                    Short CASEW4 = ite3.next();
                                     Byte GOR = GORLookups[wave - 1].get(CASEW4);
                                     WaAS_Wave4_HHOLD_Record w4;
                                     w4 = w4_3.get(CASEW4).getHhold();
@@ -314,7 +297,7 @@ public class WIGB_Process_TENURE extends WIGB_Main_Process {
                 });
                 data.clearCollection(cID);
             });
-        } else if (wave == W5) {
+        } else if (wave == WaAS_Data.W5) {
             data.data.keySet().stream().forEach(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);

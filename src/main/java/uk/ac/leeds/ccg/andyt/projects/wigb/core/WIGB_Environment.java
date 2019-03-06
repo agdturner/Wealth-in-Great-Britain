@@ -23,7 +23,13 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
     /**
      * Data.
      */
-    public WaAS_Data data;
+    public final WaAS_Data data;
+    public transient final byte NWAVES;
+    public transient final byte W1;
+    public transient final byte W2;
+    public transient final byte W3;
+    public transient final byte W4;
+    public transient final byte W5;
 
     public transient static final String EOL = System.getProperty("line.separator");
 
@@ -32,13 +38,18 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
         files = new WIGB_Files();
         Generic_Environment ge = new Generic_Environment(files, Level.FINE, 1);
         we = new WaAS_Environment(ge);
-        File f;
-        f = files.getEnvDataFile();
+        File f = files.getEnvDataFile();
         if (f.exists()) {
-            loadWaASData();
+            data = (WaAS_Data) Generic_IO.readObject(we.files.getEnvDataFile());
         } else {
             data = new WaAS_Data(we);
         }
+        NWAVES = WaAS_Data.NWAVES;
+        W1 = WaAS_Data.W1;
+        W2 = WaAS_Data.W2;
+        W3 = WaAS_Data.W3;
+        W4 = WaAS_Data.W4;
+        W5 = WaAS_Data.W5;
     }
 
     /**
@@ -116,11 +127,5 @@ public class WIGB_Environment extends WIGB_OutOfMemoryErrorHandler
         System.out.println("</cache data>");
     }
 
-    public final void loadWaASData() {
-        File f;
-        f = we.files.getEnvDataFile();
-        System.out.println("<load data>");
-        data = (WaAS_Data) Generic_IO.readObject(f);
-        System.out.println("<load data>");
-    }
+        
 }
