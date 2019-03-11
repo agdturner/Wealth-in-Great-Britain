@@ -101,7 +101,7 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
         BigDecimal yIncrement = new BigDecimal("20000");
         int numberOfYAxisTicks = 10;
         createLineGraph(title, xAxisLabel, yAxisLabel, "HPROPW",
-                changeHPROPWSubset, changeHPROPWAll, numberOfYAxisTicks, 
+                changeHPROPWSubset, changeHPROPWAll, numberOfYAxisTicks,
                 yIncrement);
     }
 
@@ -114,8 +114,7 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
         TreeMap<Byte, Double> r;
         HashMap<Byte, HashMap<Short, Double>>[] HPROPWSubsets;
         HPROPWSubsets = new HashMap[WaAS_Data.NWAVES];
-        byte w;
-        for (w = 0; w < WaAS_Data.NWAVES; w++) {
+        for (byte w = 0; w < WaAS_Data.NWAVES; w++) {
             HPROPWSubsets[w] = getHPROPWForGORSubsets((byte) (w + 1));
         }
         r = new TreeMap<>();
@@ -127,7 +126,7 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
         double countNegativeW5 = 0;
         log("HPROPW for each wave in the subsets.");
         String h = "GORNumber,GORName,HPROPW5_Average-HPROPW1_Average";
-        for (w = 1; w < WaAS_Data.NWAVES + 1; w++) {
+        for (byte w = 1; w < WaAS_Data.NWAVES + 1; w++) {
             h += ",HPROPWW" + w + "_Count,HPROPWW" + w + "_ZeroCount,HPROPWW"
                     + w + "_NegativeCount,HPROPWW" + w + "_Average";
         }
@@ -137,7 +136,7 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
         while (ite.hasNext()) {
             byte gor = ite.next();
             double[][] aHPROPW = new double[WaAS_Data.NWAVES][];
-            for (w = 0; w < WaAS_Data.NWAVES; w++) {
+            for (byte w = 0; w < WaAS_Data.NWAVES; w++) {
                 aHPROPW[w] = getSummaryStatistics(
                         HPROPWSubsets[w].get(gor).values());
             }
@@ -150,7 +149,7 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
             double diff = aHPROPW[4][4] - aHPROPW[0][4];
             String s;
             s = "" + gor + "," + GORNameLookup.get(gor) + "," + diff;
-            for (w = 0; w < WaAS_Data.NWAVES; w++) {
+            for (byte w = 0; w < WaAS_Data.NWAVES; w++) {
                 s += "," + aHPROPW[w][4] + "," + aHPROPW[w][5] + ","
                         + aHPROPW[w][6] + "," + aHPROPW[w][7];
             }
@@ -178,25 +177,19 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
     public HashMap<Byte, HashMap<Short, Double>> getHPROPWForGORSubsets(
             byte wave) {
         // Initialise result
-        HashMap<Byte, HashMap<Short, Double>> r;
-        r = new HashMap<>();
-        Iterator<Byte> ite;
-        ite = GORSubsets[wave - 1].keySet().iterator();
+        HashMap<Byte, HashMap<Short, Double>> r = new HashMap<>();
+        Iterator<Byte> ite = GORSubsets[wave - 1].keySet().iterator();
         while (ite.hasNext()) {
-            Byte GOR;
-            GOR = ite.next();
+            Byte GOR = ite.next();
             r.put(GOR, new HashMap<>());
         }
-        if (wave == WaAS_Data.W1) {
+        if (wave == env.W1) {
             data.data.keySet().stream().forEach(cID -> {
-                WaAS_Collection c;
-                c = data.getCollection(cID);
+                WaAS_Collection c = data.getCollection(cID);
                 c.getData().keySet().stream().forEach(CASEW1 -> {
                     if (subset.contains(CASEW1)) {
-                        WaAS_Combined_Record cr;
-                        cr = c.getData().get(CASEW1);
-                        WaAS_Wave1_HHOLD_Record w1;
-                        w1 = cr.w1Record.getHhold();
+                        WaAS_Combined_Record cr = c.getData().get(CASEW1);
+                        WaAS_Wave1_HHOLD_Record w1 = cr.w1Record.getHhold();
                         Byte GOR = GORLookups[wave - 1].get(CASEW1);
                         Generic_Collections.addToMap(r, GOR, CASEW1,
                                 w1.getHPROPW());
@@ -204,21 +197,17 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
                 });
                 data.clearCollection(cID);
             });
-        } else if (wave == WaAS_Data.W2) {
+        } else if (wave == env.W2) {
             data.data.keySet().stream().forEach(cID -> {
-                WaAS_Collection c;
-                c = data.getCollection(cID);
+                WaAS_Collection c = data.getCollection(cID);
                 c.getData().keySet().stream().forEach(CASEW1 -> {
                     if (subset.contains(CASEW1)) {
-                        WaAS_Combined_Record cr;
-                        cr = c.getData().get(CASEW1);
+                        WaAS_Combined_Record cr = c.getData().get(CASEW1);
                         HashMap<Short, WaAS_Wave2_Record> w2Records;
                         w2Records = cr.w2Records;
-                        Short CASEW2;
-                        Iterator<Short> ite2;
-                        ite2 = w2Records.keySet().iterator();
+                        Iterator<Short> ite2 = w2Records.keySet().iterator();
                         while (ite2.hasNext()) {
-                            CASEW2 = ite2.next();
+                            Short CASEW2 = ite2.next();
                             Byte GOR = GORLookups[wave - 1].get(CASEW2);
                             WaAS_Wave2_HHOLD_Record w2;
                             w2 = w2Records.get(CASEW2).getHhold();
@@ -229,28 +218,22 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
                 });
                 data.clearCollection(cID);
             });
-        } else if (wave == WaAS_Data.W3) {
+        } else if (wave == env.W3) {
             data.data.keySet().stream().forEach(cID -> {
-                WaAS_Collection c;
-                c = data.getCollection(cID);
+                WaAS_Collection c = data.getCollection(cID);
                 c.getData().keySet().stream().forEach(CASEW1 -> {
                     if (subset.contains(CASEW1)) {
-                        WaAS_Combined_Record cr;
-                        cr = c.getData().get(CASEW1);
+                        WaAS_Combined_Record cr = c.getData().get(CASEW1);
                         HashMap<Short, HashMap<Short, WaAS_Wave3_Record>> w3Records;
                         w3Records = cr.w3Records;
-                        Short CASEW2;
-                        Short CASEW3;
-                        Iterator<Short> ite1;
-                        ite1 = w3Records.keySet().iterator();
+                        Iterator<Short> ite1 = w3Records.keySet().iterator();
                         while (ite1.hasNext()) {
-                            CASEW2 = ite1.next();
+                            Short CASEW2 = ite1.next();
                             HashMap<Short, WaAS_Wave3_Record> w3_2;
                             w3_2 = w3Records.get(CASEW2);
-                            Iterator<Short> ite2;
-                            ite2 = w3_2.keySet().iterator();
+                            Iterator<Short> ite2 = w3_2.keySet().iterator();
                             while (ite2.hasNext()) {
-                                CASEW3 = ite2.next();
+                                Short CASEW3 = ite2.next();
                                 Byte GOR = GORLookups[wave - 1].get(CASEW3);
                                 WaAS_Wave3_HHOLD_Record w3;
                                 w3 = w3_2.get(CASEW3).getHhold();
@@ -262,35 +245,27 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
                 });
                 data.clearCollection(cID);
             });
-        } else if (wave == WaAS_Data.W4) {
+        } else if (wave == env.W4) {
             data.data.keySet().stream().forEach(cID -> {
-                WaAS_Collection c;
-                c = data.getCollection(cID);
+                WaAS_Collection c = data.getCollection(cID);
                 c.getData().keySet().stream().forEach(CASEW1 -> {
                     if (subset.contains(CASEW1)) {
-                        WaAS_Combined_Record cr;
-                        cr = c.getData().get(CASEW1);
+                        WaAS_Combined_Record cr = c.getData().get(CASEW1);
                         HashMap<Short, HashMap<Short, HashMap<Short, WaAS_Wave4_Record>>> w4Records;
                         w4Records = cr.w4Records;
-                        Short CASEW2;
-                        Short CASEW3;
-                        Short CASEW4;
-                        Iterator<Short> ite1;
-                        ite1 = w4Records.keySet().iterator();
+                        Iterator<Short> ite1 = w4Records.keySet().iterator();
                         while (ite1.hasNext()) {
-                            CASEW2 = ite1.next();
+                            Short CASEW2 = ite1.next();
                             HashMap<Short, HashMap<Short, WaAS_Wave4_Record>> w4_2;
                             w4_2 = w4Records.get(CASEW2);
-                            Iterator<Short> ite2;
-                            ite2 = w4_2.keySet().iterator();
+                            Iterator<Short> ite2 = w4_2.keySet().iterator();
                             while (ite2.hasNext()) {
-                                CASEW3 = ite2.next();
+                                Short CASEW3 = ite2.next();
                                 HashMap<Short, WaAS_Wave4_Record> w4_3;
                                 w4_3 = w4_2.get(CASEW3);
-                                Iterator<Short> ite3;
-                                ite3 = w4_3.keySet().iterator();
+                                Iterator<Short> ite3 = w4_3.keySet().iterator();
                                 while (ite3.hasNext()) {
-                                    CASEW4 = ite3.next();
+                                    Short CASEW4 = ite3.next();
                                     Byte GOR = GORLookups[wave - 1].get(CASEW4);
                                     WaAS_Wave4_HHOLD_Record w4;
                                     w4 = w4_3.get(CASEW4).getHhold();
@@ -302,7 +277,7 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
                 });
                 data.clearCollection(cID);
             });
-        } else if (wave == WaAS_Data.W5) {
+        } else if (wave == env.W5) {
             data.data.keySet().stream().forEach(cID -> {
                 WaAS_Collection c;
                 c = data.getCollection(cID);
@@ -312,32 +287,24 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
                         cr = c.getData().get(CASEW1);
                         HashMap<Short, HashMap<Short, HashMap<Short, HashMap<Short, WaAS_Wave5_Record>>>> w5Records;
                         w5Records = cr.w5Records;
-                        Short CASEW2;
-                        Short CASEW3;
-                        Short CASEW4;
-                        Short CASEW5;
-                        Iterator<Short> ite1;
-                        ite1 = w5Records.keySet().iterator();
+                        Iterator<Short> ite1  = w5Records.keySet().iterator();
                         while (ite1.hasNext()) {
-                            CASEW2 = ite1.next();
+                            Short CASEW2 = ite1.next();
                             HashMap<Short, HashMap<Short, HashMap<Short, WaAS_Wave5_Record>>> w5_2;
                             w5_2 = w5Records.get(CASEW2);
-                            Iterator<Short> ite2;
-                            ite2 = w5_2.keySet().iterator();
+                            Iterator<Short> ite2 = w5_2.keySet().iterator();
                             while (ite2.hasNext()) {
-                                CASEW3 = ite2.next();
+                                Short CASEW3 = ite2.next();
                                 HashMap<Short, HashMap<Short, WaAS_Wave5_Record>> w5_3;
                                 w5_3 = w5_2.get(CASEW3);
-                                Iterator<Short> ite3;
-                                ite3 = w5_3.keySet().iterator();
+                                Iterator<Short> ite3  = w5_3.keySet().iterator();
                                 while (ite3.hasNext()) {
-                                    CASEW4 = ite3.next();
+                                    Short CASEW4 = ite3.next();
                                     HashMap<Short, WaAS_Wave5_Record> w5_4;
                                     w5_4 = w5_3.get(CASEW4);
-                                    Iterator<Short> ite4;
-                                    ite4 = w5_4.keySet().iterator();
+                                    Iterator<Short> ite4  = w5_4.keySet().iterator();
                                     while (ite4.hasNext()) {
-                                        CASEW5 = ite4.next();
+                                        Short CASEW5 = ite4.next();
                                         Byte GOR = GORLookups[wave - 1].get(CASEW5);
                                         WaAS_Wave5_HHOLD_Record w5;
                                         w5 = w5_4.get(CASEW5).getHhold();
@@ -364,28 +331,23 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
      * values as HPROPW.
      */
     public HashMap<Byte, HashMap<Short, Double>> getHPROPWForGOR(
-            ArrayList<Byte> gors,
-            TreeMap<Short, ?> w5All,
+            ArrayList<Byte> gors,            TreeMap<Short, ?> w5All,
             //TreeMap<Short, WaAS_Wave1Or2Or3Or4Or5_HHOLD_Record> w5All, 
             byte wave) {
         // Initialise result
-        HashMap<Byte, HashMap<Short, Double>> r;
-        r = new HashMap<>();
+        HashMap<Byte, HashMap<Short, Double>> r  = new HashMap<>();
         gors.stream().forEach(gor -> {
             r.put(gor, new HashMap<>());
         });
         int countNegative = 0;
         int countZero = 0;
         Iterator<Short> ite = w5All.keySet().iterator();
-        Short CASEWX;
-        WaAS_Wave1Or2Or3Or4Or5_HHOLD_Record rec;
-        Byte GOR;
-        double HPROPW;
         while (ite.hasNext()) {
-            CASEWX = ite.next();
+            Short CASEWX = ite.next();
+            WaAS_Wave1Or2Or3Or4Or5_HHOLD_Record rec;
             rec = (WaAS_Wave1Or2Or3Or4Or5_HHOLD_Record) w5All.get(CASEWX);
-            GOR = rec.getGOR();
-            HPROPW = rec.getHPROPW();
+            Byte GOR = rec.getGOR();
+            double HPROPW = rec.getHPROPW();
             if (HPROPW == 0.0d) {
                 countZero++;
             } else if (HPROPW < 0.0d) {
@@ -406,24 +368,20 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
      * @return
      */
     public TreeMap<Byte, Double> getChangeHPROPWAll() {
-        TreeMap<Byte, Double> r;
-        r = new TreeMap<>();
-        WaAS_HHOLD_Handler handler;
+        TreeMap<Byte, Double> r  = new TreeMap<>();
         File inDir = files.getGeneratedWaASDir();
-        handler = new WaAS_HHOLD_Handler(env.we, inDir);
+        WaAS_HHOLD_Handler hH = new WaAS_HHOLD_Handler(env.we, inDir);
         HashMap<Byte, HashMap<Short, Double>>[] HPROPWAll;
-        HPROPWAll = new HashMap[WaAS_Data.NWAVES];
-        TreeMap<Short, WaAS_Wave1_HHOLD_Record> allW1 = handler.loadAllW1();
+        HPROPWAll = new HashMap[env.NWAVES];
+        TreeMap<Short, WaAS_Wave1_HHOLD_Record> allW1 = hH.loadAllW1();
         HPROPWAll[0] = getHPROPWForGOR(gors, allW1, (byte) 1);
         allW1 = null; // Set to null to free memory.
-        TreeMap<Short, WaAS_Wave5_HHOLD_Record> allW5 = handler.loadAllW5();
+        TreeMap<Short, WaAS_Wave5_HHOLD_Record> allW5 = hH.loadAllW5();
         HPROPWAll[4] = getHPROPWForGOR(gors, allW5, (byte) 5);
         allW5 = null; // Set to null to free memory.
         log("HPROPW Total Household Property Wealth for each wave for all records.");
-        String h;
-        h = "GORNumber,GORName,HPROPW5_Average-HPROPW1_Average";
-        byte w;
-        for (w = 1; w < WaAS_Data.NWAVES + 1; w++) {
+        String h  = "GORNumber,GORName,HPROPW5_Average-HPROPW1_Average";
+        for (byte w = 1; w < WaAS_Data.NWAVES + 1; w++) {
             if (w == 1 || w == 5) {
                 h += ",HPROPWW" + w + "_Count,HPROPWW" + w + "_ZeroCount,HPROPWW"
                         + w + "_NegativeCount,HPROPWW" + w + "_Average";
@@ -434,17 +392,16 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
         ite = gors.iterator();
         while (ite.hasNext()) {
             byte gor = ite.next();
-            double[][] aHPROPW = new double[WaAS_Data.NWAVES][];
-            for (w = 0; w < WaAS_Data.NWAVES; w++) {
+            double[][] aHPROPW = new double[env.NWAVES][];
+            for (byte w = 0; w < env.NWAVES; w++) {
                 if (w == 0 || w == 4) {
                     aHPROPW[w] = getSummaryStatistics(
                             HPROPWAll[w].get(gor).values());
                 }
             }
             double diff = aHPROPW[4][4] - aHPROPW[0][4];
-            String s;
-            s = "" + gor + "," + GORNameLookup.get(gor) + "," + diff;
-            for (w = 0; w < WaAS_Data.NWAVES; w++) {
+            String s  = "" + gor + "," + GORNameLookup.get(gor) + "," + diff;
+            for (byte w = 0; w < env.NWAVES; w++) {
                 if (w == 0 || w == 4) {
                     s += "," + aHPROPW[w][4] + "," + aHPROPW[w][5] + ","
                             + aHPROPW[w][6] + "," + aHPROPW[w][7];

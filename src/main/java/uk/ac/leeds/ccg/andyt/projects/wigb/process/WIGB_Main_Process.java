@@ -28,6 +28,7 @@ import java.util.TreeMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Strings;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_IO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Object;
@@ -154,7 +155,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         File generateddir;
         indir = files.getWaASInputDir();
         generateddir = files.getGeneratedWaASDir();
-        outdir = new File(generateddir, "Subsets");
+        outdir = new File(generateddir, WaAS_Strings.s_Subsets);
         outdir.mkdirs();
 
         /**
