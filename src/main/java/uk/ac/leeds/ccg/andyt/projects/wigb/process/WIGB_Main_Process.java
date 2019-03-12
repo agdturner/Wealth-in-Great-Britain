@@ -150,20 +150,16 @@ public class WIGB_Main_Process extends WIGB_Object {
         /**
          * Set up input and output directories.
          */
-        File indir;
-        File outdir;
-        File generateddir;
-        indir = files.getWaASInputDir();
-        generateddir = files.getGeneratedWaASDir();
-        outdir = new File(generateddir, WaAS_Strings.s_Subsets);
+        File indir= files.getWaASInputDir();
+        File generateddir  = files.getGeneratedWaASDir();
+        File outdir = new File(generateddir, WaAS_Strings.s_Subsets);
         outdir.mkdirs();
 
         /**
          * Init the subset of all records that have the same household
          * composition.
          */
-        File subsetF;
-        subsetF = new File(outdir, "SameCompositionHashSet_CASEW1.dat");
+        File subsetF = new File(outdir, "SameCompositionHashSet_CASEW1.dat");
         if (subsetF.exists()) {
             subset = (HashSet<Short>) Generic_IO.readObject(subsetF);
         } else {
