@@ -17,7 +17,7 @@ package uk.ac.leeds.ccg.andyt.projects.wigb.io;
 
 import java.io.File;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_Files;
-import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Strings;
+import uk.ac.leeds.ccg.andyt.projects.wigb.core.UKHI_Strings;
 
 /**
  *

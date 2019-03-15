@@ -30,7 +30,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Strings;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_IO;
-import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Environment;
+import uk.ac.leeds.ccg.andyt.projects.wigb.core.UKHI_Environment;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Object;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Collection;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Combined_Record;
@@ -82,7 +82,7 @@ public class WIGB_Main_Process extends WIGB_Object {
     HashMap<Short, Byte>[] GORLookups;
     
 
-    public WIGB_Main_Process(WIGB_Environment env) {
+    public WIGB_Main_Process(UKHI_Environment env) {
         super(env);
         files = env.files;
         this.data = env.data;
@@ -100,11 +100,9 @@ public class WIGB_Main_Process extends WIGB_Object {
     }
 
     public static void main(String[] args) {
-        WIGB_Main_Process p;
-        WIGB_Environment env;
-        env = new WIGB_Environment();
-        p = new WIGB_Main_Process(env);
-        p.files.setDataDirectory(new File(System.getProperty("user.dir"), "data"));
+        UKHI_Environment env  = new UKHI_Environment();
+        WIGB_Main_Process p = new WIGB_Main_Process(env);
+        p.files.setDataDirectory(WIGB_Files.getDefaultDataDir());
         // Main switches
         //p.doJavaCodeGeneration = true;
         p.doLoadDataIntoCaches = true; // rename/reuse just left here for convenience...

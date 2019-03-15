@@ -7,12 +7,12 @@ import java.io.Serializable;
  */
 public abstract class WIGB_Object implements Serializable {
 
-    public transient WIGB_Environment env;
+    public transient UKHI_Environment env;
     
     protected WIGB_Object() {
     }
 
-    public WIGB_Object(WIGB_Environment env) {
+    public WIGB_Object(UKHI_Environment env) {
         this.env = env;
     }
 }
