@@ -148,7 +148,6 @@ public class WIGB_Main_Process extends WIGB_Object {
         /**
          * Set up input and output directories.
          */
-        File indir= files.getWaASInputDir();
         File generateddir  = files.getGeneratedWaASDir();
         File outdir = new File(generateddir, WaAS_Strings.s_Subsets);
         outdir.mkdirs();
@@ -219,8 +218,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         /**
          * TENURE
          */
-        WIGB_Process_TENURE tp;
-        tp = new WIGB_Process_TENURE(this);
+        WIGB_Process_TENURE tp = new WIGB_Process_TENURE(this);
         tp.createGraph();
 //        /**
 //         * HPROPW
@@ -237,7 +235,7 @@ public class WIGB_Main_Process extends WIGB_Object {
 //        hv.createGraph();
 
         // Check some counts
-        WaAS_HHOLD_Handler hH = new WaAS_HHOLD_Handler(env.we, indir);
+        WaAS_HHOLD_Handler hH = new WaAS_HHOLD_Handler(env.we);
         Object[] w5 = hH.loadW5();
         TreeMap<Short, WaAS_Wave5_HHOLD_Record> w5recs;
         w5recs = (TreeMap<Short, WaAS_Wave5_HHOLD_Record>) w5[0];

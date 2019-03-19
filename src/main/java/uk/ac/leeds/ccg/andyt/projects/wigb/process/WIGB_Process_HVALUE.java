@@ -104,7 +104,7 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
         BigDecimal yIncrement = new BigDecimal("20000");
         int numberOfYAxisTicks = 10;
         createLineGraph(title, xAxisLabel, yAxisLabel, "HVALUE",
-                changeHVALUESubset, changeHVALUEAll,numberOfYAxisTicks, 
+                changeHVALUESubset, changeHVALUEAll, numberOfYAxisTicks,
                 yIncrement);
     }
 
@@ -409,24 +409,19 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
      * @return
      */
     public TreeMap<Byte, Double> getChangeHVALUEAll() {
-        TreeMap<Byte, Double> r;
-        r = new TreeMap<>();
-        WaAS_HHOLD_Handler handler;
-        File inDir = files.getGeneratedWaASDir();
-        handler = new WaAS_HHOLD_Handler(env.we, inDir);
+        TreeMap<Byte, Double> r = new TreeMap<>();
+        WaAS_HHOLD_Handler hH = new WaAS_HHOLD_Handler(env.we);
         HashMap<Byte, HashMap<Short, Double>>[] HVALUEAll;
         HVALUEAll = new HashMap[WaAS_Data.NWAVES];
-        TreeMap<Short, WaAS_Wave1_HHOLD_Record> allW1 = handler.loadAllW1();
+        TreeMap<Short, WaAS_Wave1_HHOLD_Record> allW1 = hH.loadAllW1();
         HVALUEAll[0] = getHVALUEForGOR(gors, allW1, (byte) 1);
         allW1 = null; // Set to null to free memory.
-        TreeMap<Short, WaAS_Wave5_HHOLD_Record> allW5 = handler.loadAllW5();
+        TreeMap<Short, WaAS_Wave5_HHOLD_Record> allW5 = hH.loadAllW5();
         HVALUEAll[4] = getHVALUEForGOR(gors, allW5, (byte) 5);
         allW5 = null; // Set to null to free memory.
         log("HVALUE Total Household Property Wealth for each wave for all records.");
-        String h;
-        h = "GORNumber,GORName,HVALUE5_Average-HVALUE1_Average";
-        byte w;
-        for (w = 1; w < WaAS_Data.NWAVES + 1; w++) {
+        String h = "GORNumber,GORName,HVALUE5_Average-HVALUE1_Average";
+        for (byte w = 1; w < WaAS_Data.NWAVES + 1; w++) {
             if (w == 1 || w == 5) {
                 h += ",HVALUEW" + w + "_Count,HVALUEW" + w + "_ZeroCount,HVALUEW"
                         + w + "_NegativeCount,HVALUEW" + w + "_Average";
@@ -438,16 +433,15 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
         while (ite.hasNext()) {
             byte gor = ite.next();
             double[][] aHVALUE = new double[WaAS_Data.NWAVES][];
-            for (w = 0; w < WaAS_Data.NWAVES; w++) {
+            for (byte w = 0; w < WaAS_Data.NWAVES; w++) {
                 if (w == 0 || w == 4) {
                     aHVALUE[w] = getSummaryStatistics(
                             HVALUEAll[w].get(gor).values());
                 }
             }
             double diff = aHVALUE[4][4] - aHVALUE[0][4];
-            String s;
-            s = "" + gor + "," + GORNameLookup.get(gor) + "," + diff;
-            for (w = 0; w < WaAS_Data.NWAVES; w++) {
+            String s  = "" + gor + "," + GORNameLookup.get(gor) + "," + diff;
+            for (byte w = 0; w < WaAS_Data.NWAVES; w++) {
                 if (w == 0 || w == 4) {
                     s += "," + aHVALUE[w][4] + "," + aHVALUE[w][5] + ","
                             + aHVALUE[w][6] + "," + aHVALUE[w][7];
