@@ -81,14 +81,14 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
 //        changeHVALUEAll.put((byte) 12, 39896.735828757795);
 
         // Data to graph.
-        log("Data to graph");
-        log("GOR,GORName,changeHVALUESubset,changeHVALUEAll");
+        env.log("Data to graph");
+        env.log("GOR,GORName,changeHVALUESubset,changeHVALUEAll");
         Iterator<Byte> ite;
         ite = gors.iterator();
         while (ite.hasNext()) {
             byte gor = ite.next();
             if (gor != 3) {
-                log("" + gor + "," + GORNameLookup.get(gor) + ","
+                env.log("" + gor + "," + GORNameLookup.get(gor) + ","
                         + changeHVALUESubset.get(gor) + ","
                         + changeHVALUEAll.get(gor));
             }
@@ -128,13 +128,13 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
         double countW5 = 0;
         double countZeroW5 = 0;
         double countNegativeW5 = 0;
-        log("HVALUE for each wave in the subsets.");
+        env.log("HVALUE for each wave in the subsets.");
         String h = "GORNumber,GORName,HVALUE5_Average-HVALUE1_Average";
         for (w = 1; w < WaAS_Data.NWAVES + 1; w++) {
             h += ",HVALUEW" + w + "_Count,HVALUEW" + w + "_ZeroCount,HVALUEW"
                     + w + "_NegativeCount,HVALUEW" + w + "_Average";
         }
-        log(h);
+        env.log(h);
         Iterator<Byte> ite;
         ite = gors.iterator();
         while (ite.hasNext()) {
@@ -157,17 +157,17 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
                 s += "," + aHVALUE[w][4] + "," + aHVALUE[w][5] + ","
                         + aHVALUE[w][6] + "," + aHVALUE[w][7];
             }
-            log(s);
+            env.log(s);
             r.put(gor, diff);
         }
-        log("HVALUE For Wave 1 Subset");
-        log("" + countW1 + "\t Count");
-        log("" + countZeroW1 + "\t Zero");
-        log("" + countNegativeW1 + "\t Negative");
-        log("HVALUE For Wave 5 Subset");
-        log("" + countW5 + "\t Count");
-        log("" + countZeroW5 + "\t Zero");
-        log("" + countNegativeW5 + "\t Negative");
+        env.log("HVALUE For Wave 1 Subset");
+        env.log("" + countW1 + "\t Count");
+        env.log("" + countZeroW1 + "\t Zero");
+        env.log("" + countNegativeW1 + "\t Negative");
+        env.log("HVALUE For Wave 5 Subset");
+        env.log("" + countW5 + "\t Count");
+        env.log("" + countZeroW5 + "\t Zero");
+        env.log("" + countNegativeW5 + "\t Negative");
         return r;
     }
 
@@ -396,10 +396,10 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
             }
             Generic_Collections.addToMap(r, GOR, CASEWX, HVALUE);
         }
-        log("HVALUE for GOR W" + wave);
-        log("count " + w5All.size());
-        log("countZero " + countZero);
-        log("countNegative " + countNegative);
+        env.log("HVALUE for GOR W" + wave);
+        env.log("count " + w5All.size());
+        env.log("countZero " + countZero);
+        env.log("countNegative " + countNegative);
         return r;
     }
 
@@ -419,7 +419,7 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
         TreeMap<Short, WaAS_Wave5_HHOLD_Record> allW5 = hH.loadAllW5();
         HVALUEAll[4] = getHVALUEForGOR(gors, allW5, (byte) 5);
         allW5 = null; // Set to null to free memory.
-        log("HVALUE Total Household Property Wealth for each wave for all records.");
+        env.log("HVALUE Total Household Property Wealth for each wave for all records.");
         String h = "GORNumber,GORName,HVALUE5_Average-HVALUE1_Average";
         for (byte w = 1; w < WaAS_Data.NWAVES + 1; w++) {
             if (w == 1 || w == 5) {
@@ -427,7 +427,7 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
                         + w + "_NegativeCount,HVALUEW" + w + "_Average";
             }
         }
-        log(h);
+        env.log(h);
         Iterator<Byte> ite;
         ite = gors.iterator();
         while (ite.hasNext()) {
@@ -447,7 +447,7 @@ public class WIGB_Process_HVALUE extends WIGB_Main_Process {
                             + aHVALUE[w][6] + "," + aHVALUE[w][7];
                 }
             }
-            log(s);
+            env.log(s);
             r.put(gor, diff);
         }
         return r;

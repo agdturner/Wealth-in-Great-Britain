@@ -78,14 +78,14 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
 //        changeHPROPWAll.put((byte) 11, 33259.53730763032);
 //        changeHPROPWAll.put((byte) 12, 38072.805181146614);
         // Data to graph.
-        log("Data to graph");
-        log("GOR,GORName,changeHPROPWSubset,changeHPROPWAll");
+        env.log("Data to graph");
+        env.log("GOR,GORName,changeHPROPWSubset,changeHPROPWAll");
         Iterator<Byte> ite;
         ite = gors.iterator();
         while (ite.hasNext()) {
             byte gor = ite.next();
             if (gor != 3) {
-                log("" + gor + "," + GORNameLookup.get(gor) + ","
+                env.log("" + gor + "," + GORNameLookup.get(gor) + ","
                         + changeHPROPWSubset.get(gor) + ","
                         + changeHPROPWAll.get(gor));
             }
@@ -124,13 +124,13 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
         double countW5 = 0;
         double countZeroW5 = 0;
         double countNegativeW5 = 0;
-        log("HPROPW for each wave in the subsets.");
+        env.log("HPROPW for each wave in the subsets.");
         String h = "GORNumber,GORName,HPROPW5_Average-HPROPW1_Average";
         for (byte w = 1; w < WaAS_Data.NWAVES + 1; w++) {
             h += ",HPROPWW" + w + "_Count,HPROPWW" + w + "_ZeroCount,HPROPWW"
                     + w + "_NegativeCount,HPROPWW" + w + "_Average";
         }
-        log(h);
+        env.log(h);
         Iterator<Byte> ite;
         ite = gors.iterator();
         while (ite.hasNext()) {
@@ -153,17 +153,17 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
                 s += "," + aHPROPW[w][4] + "," + aHPROPW[w][5] + ","
                         + aHPROPW[w][6] + "," + aHPROPW[w][7];
             }
-            log(s);
+            env.log(s);
             r.put(gor, diff);
         }
-        log("HPROPW For Wave 1 Subset");
-        log("" + countW1 + "\t Count");
-        log("" + countZeroW1 + "\t Zero");
-        log("" + countNegativeW1 + "\t Negative");
-        log("HPROPW For Wave 5 Subset");
-        log("" + countW5 + "\t Count");
-        log("" + countZeroW5 + "\t Zero");
-        log("" + countNegativeW5 + "\t Negative");
+        env.log("HPROPW For Wave 1 Subset");
+        env.log("" + countW1 + "\t Count");
+        env.log("" + countZeroW1 + "\t Zero");
+        env.log("" + countNegativeW1 + "\t Negative");
+        env.log("HPROPW For Wave 5 Subset");
+        env.log("" + countW5 + "\t Count");
+        env.log("" + countZeroW5 + "\t Zero");
+        env.log("" + countNegativeW5 + "\t Negative");
         return r;
     }
 
@@ -355,10 +355,10 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
             }
             Generic_Collections.addToMap(r, GOR, CASEWX, HPROPW);
         }
-        log("HPROPW for GOR W" + wave);
-        log("count " + w5All.size());
-        log("countZero " + countZero);
-        log("countNegative " + countNegative);
+        env.log("HPROPW for GOR W" + wave);
+        env.log("count " + w5All.size());
+        env.log("countZero " + countZero);
+        env.log("countNegative " + countNegative);
         return r;
     }
 
@@ -378,7 +378,7 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
         TreeMap<Short, WaAS_Wave5_HHOLD_Record> allW5 = hH.loadAllW5();
         HPROPWAll[4] = getHPROPWForGOR(gors, allW5, (byte) 5);
         allW5 = null; // Set to null to free memory.
-        log("HPROPW Total Household Property Wealth for each wave for all records.");
+        env.log("HPROPW Total Household Property Wealth for each wave for all records.");
         String h  = "GORNumber,GORName,HPROPW5_Average-HPROPW1_Average";
         for (byte w = 1; w < WaAS_Data.NWAVES + 1; w++) {
             if (w == 1 || w == 5) {
@@ -386,7 +386,7 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
                         + w + "_NegativeCount,HPROPWW" + w + "_Average";
             }
         }
-        log(h);
+        env.log(h);
         Iterator<Byte> ite;
         ite = gors.iterator();
         while (ite.hasNext()) {
@@ -406,7 +406,7 @@ public class WIGB_Process_HPROPW extends WIGB_Main_Process {
                             + aHPROPW[w][6] + "," + aHPROPW[w][7];
                 }
             }
-            log(s);
+            env.log(s);
             r.put(gor, diff);
         }
         return r;

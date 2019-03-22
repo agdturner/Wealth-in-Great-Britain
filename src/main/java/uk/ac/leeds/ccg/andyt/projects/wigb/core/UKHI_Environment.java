@@ -18,7 +18,20 @@ public class UKHI_Environment extends WIGB_OutOfMemoryErrorHandler  {
     public transient Generic_Environment ge;
     public transient WaAS_Environment we;
     
-    public transient final int logID;
+    /**
+     * This is the active log ID.
+     */
+    public int logID;
+    
+    /**
+     * This is the main log ID.
+     */
+    public transient final int logIDMain;
+
+    /**
+     * This is the sub log ID.
+     */
+    public int logIDSub;
     
     public final WaAS_Data data;
     public transient final byte NWAVES;
@@ -30,14 +43,20 @@ public class UKHI_Environment extends WIGB_OutOfMemoryErrorHandler  {
 
     public transient static final String EOL = System.getProperty("line.separator");
 
-    public UKHI_Environment() {
+    /**
+     * 
+     * @param ge
+     * @param wasDataDir 
+     */
+    public UKHI_Environment(Generic_Environment ge, File wasDataDir) {
         //Memory_Threshold = 3000000000L;
         files = new WIGB_Files();
-        ge = new Generic_Environment(files, Level.FINE, 1);
-        we = new WaAS_Environment(ge);
-        File f = files.getEnvDataFile();
+        this.ge = ge;
+        we = new WaAS_Environment(wasDataDir);
+        File f = we.files.getEnvDataFile();
         if (f.exists()) {
-            data = (WaAS_Data) Generic_IO.readObject(we.files.getEnvDataFile());
+            data = (WaAS_Data) Generic_IO.readObject(f);
+            data.env = we;
         } else {
             data = new WaAS_Data(we);
         }
@@ -48,6 +67,7 @@ public class UKHI_Environment extends WIGB_OutOfMemoryErrorHandler  {
         W4 = WaAS_Data.W4;
         W5 = WaAS_Data.W5;
         logID = ge.initLog(UKHI_Strings.s_UKHI);
+        logIDMain = logID;
     }
 
     /**

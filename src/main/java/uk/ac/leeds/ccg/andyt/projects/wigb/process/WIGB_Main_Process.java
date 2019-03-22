@@ -28,6 +28,8 @@ import java.util.TreeMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import uk.ac.leeds.ccg.andyt.generic.core.Generic_Environment;
+import uk.ac.leeds.ccg.andyt.generic.core.Generic_Strings;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Strings;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_IO;
 import uk.ac.leeds.ccg.andyt.projects.wigb.core.UKHI_Environment;
@@ -68,19 +70,16 @@ public class WIGB_Main_Process extends WIGB_Object {
     // For convenience
     protected final WIGB_Files files;
     protected final WaAS_Data data;
-    
-    protected int logID; 
-    
+
     /**
      * Subset of all records that have the same household composition.
      */
     HashSet<Short> subset;
-    
+
     ArrayList<Byte> gors;
     TreeMap<Byte, String> GORNameLookup;
     HashMap<Byte, HashSet<Short>>[] GORSubsets;
     HashMap<Short, Byte>[] GORLookups;
-    
 
     public WIGB_Main_Process(UKHI_Environment env) {
         super(env);
@@ -100,7 +99,14 @@ public class WIGB_Main_Process extends WIGB_Object {
     }
 
     public static void main(String[] args) {
-        UKHI_Environment env  = new UKHI_Environment();
+                Generic_Environment ge = new Generic_Environment();
+        File wasDataDir = new File(
+                ge.getFiles().getDataDir().getParentFile().getParentFile().getParentFile(),
+                WaAS_Strings.s_generic);
+        wasDataDir = new File(wasDataDir, Generic_Strings.s_data);
+        wasDataDir = new File(wasDataDir, WaAS_Strings.PROJECT_NAME);
+        wasDataDir = new File(wasDataDir, Generic_Strings.s_data);
+        UKHI_Environment env = new UKHI_Environment(ge, wasDataDir);
         WIGB_Main_Process p = new WIGB_Main_Process(env);
         p.files.setDataDirectory(WIGB_Files.getDefaultDataDir());
         // Main switches
@@ -109,24 +115,6 @@ public class WIGB_Main_Process extends WIGB_Object {
         p.run();
     }
 
-    
-    /**
-     * Convenience method for logging. {@code log(s, {@link #logID});}
-     * @param s The message to be logged.
-     */
-    protected void log(String s) {
-        env.ge.log(s, logID);
-    }
-    
-    /**
-     * Convenience method for logging.{@code log(s, logID);}
-     * @param s The message to be logged.
-     * @param logID The id of the log to write to.
-     */
-    protected void log(String s, int logID) {
-        env.ge.log(s, logID);
-    }
-    
     /**
      * The aim is to measure: 1) Costs associated with tenure (expenditure on
      * rent, net of housing benefit, and/or mortgage interest for primary
@@ -144,27 +132,9 @@ public class WIGB_Main_Process extends WIGB_Object {
      * of ‘winners’ and ‘losers’ over the course of those ten years?
      */
     public void run() {
-        int mainLogID = env.ge.initLog("WIGB_Main_process");
-        /**
-         * Set up input and output directories.
-         */
-        File generateddir  = files.getGeneratedWaASDir();
-        File outdir = new File(generateddir, WaAS_Strings.s_Subsets);
-        outdir.mkdirs();
-
-        /**
-         * Init the subset of all records that have the same household
-         * composition.
-         */
-        File subsetF = new File(outdir, "SameCompositionHashSet_CASEW1.dat");
-        if (subsetF.exists()) {
-            subset = (HashSet<Short>) Generic_IO.readObject(subsetF);
-        } else {
-            subset = doDataProcessingStep3(outdir);
-            Generic_IO.writeObject(subset, subsetF);
-        }
-        log("Total number of initial households in wave 1 " + subset.size(), mainLogID);
-
+        String m = this.getClass().getName() + ".run()";
+        env.logStartTag(m);
+        initSubset();
         /**
          * Init gors and GORNameLookup.
          */
@@ -176,49 +146,36 @@ public class WIGB_Main_Process extends WIGB_Object {
         /**
          * Init GORSubsets and GORLookups
          */
-        Object[] GORSubsetsAndLookups;
-        File GORSubsetsAndLookupF;
-        GORSubsetsAndLookupF = new File(outdir, "GORSubsetsAndLookups.dat");
-        if (GORSubsetsAndLookupF.exists()) {
-            GORSubsetsAndLookups = (Object[]) Generic_IO.readObject(GORSubsetsAndLookupF);
-        } else {
-            GORSubsetsAndLookups = WaAS_Handler.getGORSubsetsAndLookup(data, gors, subset);
-            Generic_IO.writeObject(GORSubsetsAndLookups, GORSubsetsAndLookupF);
-        }
-        GORSubsets = (HashMap<Byte, HashSet<Short>>[]) GORSubsetsAndLookups[0];
-        GORLookups = (HashMap<Short, Byte>[]) GORSubsetsAndLookups[1];
-        byte w;
-        String s;
-        int[] totals;
+        initGORSubsetsAndLookups();
         int[] ttotals = new int[env.NWAVES];
-        log("GOR Subsets", mainLogID);
-        log("NW1,NW2,NW3,NW4,NW5,GORNumber,GORName", mainLogID);
+        env.log("GOR Subsets");
+        env.log("NW1,NW2,NW3,NW4,NW5,GORNumber,GORName");
         ite = gors.iterator();
         while (ite.hasNext()) {
-            s = "";
-            totals = new int[env.NWAVES];
+            String s = "";
+            int[] totals = new int[env.NWAVES];
             byte gor = ite.next();
             HashSet<Short> GORSubset;
-            for (w = 0; w < env.NWAVES; w++) {
+            for (byte w = 0; w < env.NWAVES; w++) {
                 GORSubset = GORSubsets[w].get(gor);
                 totals[w] += GORSubset.size();
                 s += totals[w] + ",";
                 ttotals[w] += totals[w];
             }
             s += gor + "," + GORNameLookup.get(gor);
-            log(s, mainLogID);
+            env.log(s);
         }
         // Totals
-        s = "";
-        for (w = 0; w < env.NWAVES; w++) {
+        String s = "";
+        for (byte w = 0; w < env.NWAVES; w++) {
             s += ttotals[w] + ",";
         }
         s += "0,All";
-        log(s, mainLogID);
+        env.log(s);
         /**
          * TENURE
          */
-        WIGB_Process_TENURE tp = new WIGB_Process_TENURE(this);
+        WIGB_Process_TENURE tp  = new WIGB_Process_TENURE(this);
         tp.createGraph();
 //        /**
 //         * HPROPW
@@ -239,8 +196,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         Object[] w5 = hH.loadW5();
         TreeMap<Short, WaAS_Wave5_HHOLD_Record> w5recs;
         w5recs = (TreeMap<Short, WaAS_Wave5_HHOLD_Record>) w5[0];
-        Iterator<Short> ites;
-        ites = w5recs.keySet().iterator();
+        Iterator<Short> ites  = w5recs.keySet().iterator();
         int countMortgage = 0;
         int countNonMortgage = 0;
         int countBuyWithMortgage = 0;
@@ -295,18 +251,18 @@ public class WIGB_Main_Process extends WIGB_Object {
                 countNonMortgage++;
             }
         }
-        log("" + w5recs.size() + "\t countAllW5withW4", mainLogID);
-        log("" + countMortgage + "\t countMortgage", mainLogID);
-        log("" + countNonMortgage + "\t countNonMortgage", mainLogID);
-        log("" + countBuyWithMortgage + "\t countBuyWithMortgage", mainLogID);
-        log("" + countPartBuyWithMortgage + "\t countPartBuyWithMortgage", mainLogID);
-        log("" + countZeroMIntRate1W5 + "\t countZeroMIntRate1W5", mainLogID);
-        log("" + countPositiveMIntRate1W5 + "\t countPositiveMIntRate1W5", mainLogID);
-        log("" + countZeroMVal1W5 + "\t countZeroMVal1W5", mainLogID);
-        log("" + countPositiveMVal1W5 + "\t countPositiveMVal1W5", mainLogID);
-        log("" + countZeroMNumbNW5 + "\t countZeroMNumbNW5", mainLogID);
-        log("" + countPositiveMNumbNW5 + "\t countPositiveMNumbNW5", mainLogID);
-        log("" + countGT1MNumbNW5 + "\t countGT1MNumbNW5", mainLogID);
+        env.log("" + w5recs.size() + "\t countAllW5withW4");
+        env.log("" + countMortgage + "\t countMortgage");
+        env.log("" + countNonMortgage + "\t countNonMortgage");
+        env.log("" + countBuyWithMortgage + "\t countBuyWithMortgage");
+        env.log("" + countPartBuyWithMortgage + "\t countPartBuyWithMortgage");
+        env.log("" + countZeroMIntRate1W5 + "\t countZeroMIntRate1W5");
+        env.log("" + countPositiveMIntRate1W5 + "\t countPositiveMIntRate1W5");
+        env.log("" + countZeroMVal1W5 + "\t countZeroMVal1W5");
+        env.log("" + countPositiveMVal1W5 + "\t countPositiveMVal1W5");
+        env.log("" + countZeroMNumbNW5 + "\t countZeroMNumbNW5");
+        env.log("" + countPositiveMNumbNW5 + "\t countPositiveMNumbNW5");
+        env.log("" + countGT1MNumbNW5 + "\t countGT1MNumbNW5");
 
         //TreeMap<Short, HashSet<Short>> CASEW4ToCASEW5;
         //CASEW4ToCASEW5 = (TreeMap<Short, HashSet<Short>>) ((Object[]) w5[4])[3];
@@ -320,6 +276,42 @@ public class WIGB_Main_Process extends WIGB_Object {
         // FINCVB5
         //getWave1Or2HPRICEBLookup();
         //getWave3Or4Or5HPRICEBLookup();
+        env.logEndTag(m);
+    }
+
+    /**
+     * Initialises {@link #subset} to be the set of all records that have a
+     * "stable" household composition.
+     */
+    public void initSubset() {
+        String m = "initSubset()";
+        env.logStartTag(m);
+        String fn = "SameCompositionHashSet_CASEW1.dat";
+        File f = new File(files.getOutputDataDir(), fn);
+        if (f.exists()) {
+            subset = (HashSet<Short>) Generic_IO.readObject(f);
+        } else {
+            subset = getStableHouseholdComposition();
+            Generic_IO.writeObject(subset, f);
+        }
+        env.log("Total number of initial households in wave 1 " + subset.size());
+        env.logEndTag(m);
+    }
+
+    /**
+     * Init GORSubsets and GORLookups
+     */
+    public void initGORSubsetsAndLookups() {
+        Object[] o;
+        File f = new File(files.getOutputDataDir(), "GORSubsetsAndLookups.dat");
+        if (f.exists()) {
+            o = (Object[]) Generic_IO.readObject(f);
+        } else {
+            o = WaAS_Handler.getGORSubsetsAndLookup(data, gors, subset);
+            Generic_IO.writeObject(o, f);
+        }
+        GORSubsets = (HashMap<Byte, HashSet<Short>>[]) o[0];
+        GORLookups = (HashMap<Short, Byte>[]) o[1];
     }
 
     /**
@@ -358,54 +350,37 @@ public class WIGB_Main_Process extends WIGB_Object {
         return r;
     }
 
-    
-    
     /**
      * Go through hholds for all waves and figure which ones have not
      * significantly changed in terms of hhold composition. Having children and
      * children leaving home is fine. Anything else is perhaps an issue...
      *
-     * @param outdir
      * @return
      */
-    public HashSet<Short> doDataProcessingStep3(File outdir) {
-        HashSet<Short> r;
-        r = new HashSet<>();
-        logID = env.ge.initLog("DataProcessingStep3");
-        log("Number of combined records " + data.CASEW1ToCID.size());
-        log("Number of collections of combined records " + data.data.size());
-
-        //HashSet<Short> s = new HashSet<>();
-        Iterator<Short> ite;
-        Iterator<Short> ite2;
-        short cID;
-        short CASEW1;
-        WaAS_Collection c;
-        WaAS_Combined_Record cr;
-        HashMap<Short, WaAS_Combined_Record> cData;
-        String m;
+    public HashSet<Short> getStableHouseholdComposition() {
+        String m = "getStableHouseholdComposition";
+        env.logIDSub = env.ge.initLog(m);
+        env.logID = env.logIDSub;
+        HashSet<Short> r = new HashSet<>();
+        env.log("Number of combined records " + data.CASEW1ToCID.size());
+        env.log("Number of collections of combined records " + data.data.size());
+        int count0 = 0;
+        int count1 = 0;
+        int count2 = 0;
+        int count3 = 0;
         // Check For Household Records
-        m = "Check For Household Records";
-        boolean check;
-        int count0;
-        count0 = 0;
-        int count1;
-        count1 = 0;
-        int count2;
-        count2 = 0;
-        int count3;
-        count3 = 0;
-        log("<" + m + ">");
-        ite = data.data.keySet().iterator();
+        String m1 = "Check For Household Records";
+        env.logStartTag(m1);
+        Iterator<Short> ite = data.data.keySet().iterator();
         while (ite.hasNext()) {
-            cID = ite.next();
-            c = data.getCollection(cID);
-            cData = c.getData();
-            ite2 = cData.keySet().iterator();
+            short cID = ite.next();
+            WaAS_Collection c = data.getCollection(cID);
+            HashMap<Short, WaAS_Combined_Record> cData = c.getData();
+            Iterator<Short> ite2 = cData.keySet().iterator();
             while (ite2.hasNext()) {
-                CASEW1 = ite2.next();
-                cr = cData.get(CASEW1);
-                check = process0(CASEW1, cr);
+                short CASEW1 = ite2.next();
+                WaAS_Combined_Record cr = cData.get(CASEW1);
+                boolean check = process0(CASEW1, cr);
                 if (check) {
                     count0++;
                 }
@@ -425,15 +400,17 @@ public class WIGB_Main_Process extends WIGB_Object {
             }
             data.clearCollection(cID);
         }
-        log("" + count0 + " Total hholds in all 5 waves.");
-        log("" + count1 + " Total hholds that are a single hhold over all 5 "
+        env.log("" + count0 + " Total hholds in all 5 waves.");
+        env.log("" + count1 + " Total hholds that are a single hhold over all 5 "
                 + "waves.");
-        log("" + count2 + " Total hholds that are a single hhold over all 5 "
+        env.log("" + count2 + " Total hholds that are a single hhold over all 5 "
                 + "waves and have same number of adults in all 5 waves.");
-        log("" + count3 + " Total hholds that are a single hhold over all 5 "
+        env.log("" + count3 + " Total hholds that are a single hhold over all 5 "
                 + "waves and have the same basic adult household composition "
                 + "over all 5 waves.");
-        log("</" + m + ">");
+        env.logEndTag(m1);
+        env.logEndTag(m);
+        env.logID = env.logIDMain;
         return r;
     }
 
@@ -455,7 +432,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         boolean r;
         r = true;
         if (cr.w2Records.size() > 1) {
-            log("There are multiple Wave 2 records for CASEW1 " + CASEW1);
+            env.log("There are multiple Wave 2 records for CASEW1 " + CASEW1);
             r = false;
         }
         Short CASEW2;
@@ -472,7 +449,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                 HashMap<Short, WaAS_Wave3_Record> w3_2;
                 w3_2 = cr.w3Records.get(CASEW2);
                 if (w3_2.size() > 1) {
-                    log(m3);
+                    env.log(m3);
                     r = false;
                 } else {
                     Short CASEW3;
@@ -494,7 +471,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                 HashMap<Short, WaAS_Wave4_Record> w4_3;
                                 w4_3 = w4_2.get(CASEW3);
                                 if (w4_3.size() > 1) {
-                                    log(m4);
+                                    env.log(m4);
                                     r = false;
                                 } else {
                                     Iterator<Short> ite4;
@@ -520,7 +497,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                                     HashMap<Short, WaAS_Wave5_Record> w5_4;
                                                     w5_4 = w5_3.get(CASEW4);
                                                     if (w5_4.size() > 1) {
-                                                        log(m5);
+                                                        env.log(m5);
                                                         r = false;
                                                     } else {
                                                         Iterator<Short> ite5;
@@ -631,30 +608,30 @@ public class WIGB_Main_Process extends WIGB_Object {
                                                         }
                                                     }
                                                 } else {
-                                                    log("!w5_3.containsKey(CASEW4) " + m5);
+                                                    env.log("!w5_3.containsKey(CASEW4) " + m5);
                                                 }
                                             } else {
-                                                log("!w5_2.containsKey(CASEW3) " + m5);
+                                                env.log("!w5_2.containsKey(CASEW3) " + m5);
                                                 r = false;
                                             }
                                         } else {
-                                            log("!cr.w5Records.containsKey(CASEW2) " + m5);
+                                            env.log("!cr.w5Records.containsKey(CASEW2) " + m5);
                                             r = false;
                                         }
                                     }
                                 }
                             } else {
-                                log("!w4_2.containsKey(CASEW3) " + m4);
+                                env.log("!w4_2.containsKey(CASEW3) " + m4);
                                 r = false;
                             }
                         } else {
-                            log("!cr.w4Records.containsKey(CASEW2) " + m4);
+                            env.log("!cr.w4Records.containsKey(CASEW2) " + m4);
                             r = false;
                         }
                     }
                 }
             } else {
-                log(m3);
+                env.log(m3);
             }
         }
         return r;
@@ -697,7 +674,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         boolean r;
         r = true;
         if (cr.w2Records.size() > 1) {
-            log("There are multiple Wave 2 records for CASEW1 " + CASEW1);
+            env.log("There are multiple Wave 2 records for CASEW1 " + CASEW1);
             r = false;
         }
         Short CASEW2;
@@ -714,7 +691,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                 HashMap<Short, WaAS_Wave3_Record> w3_2;
                 w3_2 = cr.w3Records.get(CASEW2);
                 if (w3_2.size() > 1) {
-                    log(m3);
+                    env.log(m3);
                     r = false;
                 } else {
                     Short CASEW3;
@@ -736,7 +713,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                 HashMap<Short, WaAS_Wave4_Record> w4_3;
                                 w4_3 = w4_2.get(CASEW3);
                                 if (w4_3.size() > 1) {
-                                    log(m4);
+                                    env.log(m4);
                                     r = false;
                                 } else {
                                     Iterator<Short> ite4;
@@ -762,7 +739,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                                     HashMap<Short, WaAS_Wave5_Record> w5_4;
                                                     w5_4 = w5_3.get(CASEW4);
                                                     if (w5_4.size() > 1) {
-                                                        log(m5);
+                                                        env.log(m5);
                                                         r = false;
                                                     } else {
                                                         Iterator<Short> ite5;
@@ -783,30 +760,30 @@ public class WIGB_Main_Process extends WIGB_Object {
                                                         }
                                                     }
                                                 } else {
-                                                    log("!w5_3.containsKey(CASEW4) " + m5);
+                                                    env.log("!w5_3.containsKey(CASEW4) " + m5);
                                                 }
                                             } else {
-                                                log("!w5_2.containsKey(CASEW3) " + m5);
+                                                env.log("!w5_2.containsKey(CASEW3) " + m5);
                                                 r = false;
                                             }
                                         } else {
-                                            log("!cr.w5Records.containsKey(CASEW2) " + m5);
+                                            env.log("!cr.w5Records.containsKey(CASEW2) " + m5);
                                             r = false;
                                         }
                                     }
                                 }
                             } else {
-                                log("!w4_2.containsKey(CASEW3) " + m4);
+                                env.log("!w4_2.containsKey(CASEW3) " + m4);
                                 r = false;
                             }
                         } else {
-                            log("!cr.w4Records.containsKey(CASEW2) " + m4);
+                            env.log("!cr.w4Records.containsKey(CASEW2) " + m4);
                             r = false;
                         }
                     }
                 }
             } else {
-                log(m3);
+                env.log(m3);
             }
         }
         return r;
@@ -823,7 +800,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         boolean r;
         r = true;
         if (cr.w2Records.size() > 1) {
-            log("There are multiple Wave 2 records for CASEW1 " + CASEW1);
+            env.log("There are multiple Wave 2 records for CASEW1 " + CASEW1);
             r = false;
         }
         Short CASEW2;
@@ -840,7 +817,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                 HashMap<Short, WaAS_Wave3_Record> w3_2;
                 w3_2 = cr.w3Records.get(CASEW2);
                 if (w3_2.size() > 1) {
-                    log(m3);
+                    env.log(m3);
                     r = false;
                 } else {
                     Short CASEW3;
@@ -862,7 +839,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                 HashMap<Short, WaAS_Wave4_Record> w4_3;
                                 w4_3 = w4_2.get(CASEW3);
                                 if (w4_3.size() > 1) {
-                                    log(m4);
+                                    env.log(m4);
                                     r = false;
                                 } else {
                                     Iterator<Short> ite4;
@@ -888,7 +865,7 @@ public class WIGB_Main_Process extends WIGB_Object {
                                                     HashMap<Short, WaAS_Wave5_Record> w5_4;
                                                     w5_4 = w5_3.get(CASEW4);
                                                     if (w5_4.size() > 1) {
-                                                        log(m5);
+                                                        env.log(m5);
                                                         r = false;
                                                     } else {
 //                                                        Iterator<Short> ite5;
@@ -901,30 +878,30 @@ public class WIGB_Main_Process extends WIGB_Object {
 //                                                        }
                                                     }
                                                 } else {
-                                                    log("!w5_3.containsKey(CASEW4) " + m5);
+                                                    env.log("!w5_3.containsKey(CASEW4) " + m5);
                                                 }
                                             } else {
-                                                log("!w5_2.containsKey(CASEW3) " + m5);
+                                                env.log("!w5_2.containsKey(CASEW3) " + m5);
                                                 r = false;
                                             }
                                         } else {
-                                            log("!cr.w5Records.containsKey(CASEW2) " + m5);
+                                            env.log("!cr.w5Records.containsKey(CASEW2) " + m5);
                                             r = false;
                                         }
                                     }
                                 }
                             } else {
-                                log("!w4_2.containsKey(CASEW3) " + m4);
+                                env.log("!w4_2.containsKey(CASEW3) " + m4);
                                 r = false;
                             }
                         } else {
-                            log("!cr.w4Records.containsKey(CASEW2) " + m4);
+                            env.log("!cr.w4Records.containsKey(CASEW2) " + m4);
                             r = false;
                         }
                     }
                 }
             } else {
-                log(m3);
+                env.log(m3);
             }
         }
         return r;
@@ -941,11 +918,11 @@ public class WIGB_Main_Process extends WIGB_Object {
         boolean r;
         r = true;
         if (cr.w1Record == null) {
-            log("There is no Wave 1 record for CASEW1 " + CASEW1);
+            env.log("There is no Wave 1 record for CASEW1 " + CASEW1);
             r = false;
         }
         if (cr.w2Records.isEmpty()) {
-            log("There are no Wave 2 records for CASEW1 " + CASEW1);
+            env.log("There are no Wave 2 records for CASEW1 " + CASEW1);
             r = false;
         }
         Short CASEW2;
@@ -1010,28 +987,28 @@ public class WIGB_Main_Process extends WIGB_Object {
 //                                                w5rec = w5_4.get(CASEW5);
 //                                            }
                                         } else {
-                                            log("!w5_3.containsKey(CASEW4) " + m5);
+                                            env.log("!w5_3.containsKey(CASEW4) " + m5);
                                         }
                                     } else {
-                                        log("!w5_2.containsKey(CASEW3) " + m5);
+                                        env.log("!w5_2.containsKey(CASEW3) " + m5);
                                         r = false;
                                     }
                                 } else {
-                                    log("!cr.w5Records.containsKey(CASEW2) " + m5);
+                                    env.log("!cr.w5Records.containsKey(CASEW2) " + m5);
                                     r = false;
                                 }
                             }
                         } else {
-                            log("!w4_2.containsKey(CASEW3) " + m4);
+                            env.log("!w4_2.containsKey(CASEW3) " + m4);
                             r = false;
                         }
                     } else {
-                        log("!cr.w4Records.containsKey(CASEW2) " + m4);
+                        env.log("!cr.w4Records.containsKey(CASEW2) " + m4);
                         r = false;
                     }
                 }
             } else {
-                log("!cr.w3Records.containsKey(CASEW2) " + m3);
+                env.log("!cr.w3Records.containsKey(CASEW2) " + m3);
                 r = false;
             }
         }
@@ -1237,7 +1214,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         } else {
             tDVLUKVAL = 0;
         }
-        log("Total (Hhold aggregate) DVLUKVAL in Wave " + wave + " " + tDVLUKVAL);
+        env.log("Total (Hhold aggregate) DVLUKVAL in Wave " + wave + " " + tDVLUKVAL);
         return tDVLUKVAL;
     }
 
@@ -1459,7 +1436,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         } else {
             tFINCVB = 0;
         }
-        log("Total (Person aggregate) FINCVB in Wave " + wave + " " + tFINCVB);
+        env.log("Total (Person aggregate) FINCVB in Wave " + wave + " " + tFINCVB);
         return tFINCVB;
     }
 

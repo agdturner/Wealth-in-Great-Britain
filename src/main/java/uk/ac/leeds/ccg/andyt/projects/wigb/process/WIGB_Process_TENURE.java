@@ -150,13 +150,13 @@ public class WIGB_Process_TENURE extends WIGB_Main_Process {
         }
 
         // Data to graph.
-        log("Data to graph");
-        log("GOR,GORName,changeTenure1,changeTenure2");
+        env.log("Data to graph");
+        env.log("GOR,GORName,changeTenure1,changeTenure2");
         ite = gors.iterator();
         while (ite.hasNext()) {
             byte gor = ite.next();
             if (gor != 3) {
-                log("" + gor + "," + GORNameLookup.get(gor) + ","
+                env.log("" + gor + "," + GORNameLookup.get(gor) + ","
                         + changeTenure1Subset.get(gor) + ","
                         + changeTenure1.get(gor));
             }
