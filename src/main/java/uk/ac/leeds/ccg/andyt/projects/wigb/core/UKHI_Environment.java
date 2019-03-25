@@ -1,7 +1,6 @@
 package uk.ac.leeds.ccg.andyt.projects.wigb.core;
 
 import java.io.File;
-import java.util.logging.Level;
 import uk.ac.leeds.ccg.andyt.generic.core.Generic_Environment;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Environment;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Data;
