@@ -19,8 +19,6 @@ import java.io.File;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.DoubleSummaryStatistics;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -63,7 +61,7 @@ import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
  *
  * @author geoagdt
  */
-public class WIGB_Main_Process extends WIGB_Object {
+public class UKHI_Main_Process extends WIGB_Object {
 
     // For convenience
     protected final WIGB_Files files;
@@ -71,7 +69,7 @@ public class WIGB_Main_Process extends WIGB_Object {
     protected final WaAS_HHOLD_Handler hh;
 
     /**
-     * Subset of all records that have the same household composition.
+     * Subset of CASEW1 for all records that have the same household composition.
      */
     HashSet<Short> subset;
 
@@ -84,14 +82,14 @@ public class WIGB_Main_Process extends WIGB_Object {
     HashMap<Byte, HashSet<Short>>[] GORSubsets;
     HashMap<Short, Byte>[] GORLookups;
 
-    public WIGB_Main_Process(UKHI_Environment env) {
+    public UKHI_Main_Process(UKHI_Environment env) {
         super(env);
         files = env.files;
         this.data = env.data;
         hh = env.we.hh;
     }
 
-    public WIGB_Main_Process(WIGB_Main_Process p) {
+    public UKHI_Main_Process(UKHI_Main_Process p) {
         data = p.data;
         files = p.files;
         env = p.env;
@@ -112,7 +110,7 @@ public class WIGB_Main_Process extends WIGB_Object {
         wasDataDir = new File(wasDataDir, WaAS_Strings.PROJECT_NAME);
         wasDataDir = new File(wasDataDir, Generic_Strings.s_data);
         UKHI_Environment env = new UKHI_Environment(ge, wasDataDir);
-        WIGB_Main_Process p = new WIGB_Main_Process(env);
+        UKHI_Main_Process p = new UKHI_Main_Process(env);
         p.files.setDataDirectory(WIGB_Files.getDefaultDataDir());
         // Main switches
         //p.doJavaCodeGeneration = true;
@@ -181,19 +179,14 @@ public class WIGB_Main_Process extends WIGB_Object {
          */
         WIGB_Process_TENURE tp  = new WIGB_Process_TENURE(this);
         tp.createGraph();
-//        /**
-//         * HPROPW
-//         */
-//        WIGB_Process_HPROPW hp;
-//        hp = new WIGB_Process_HPROPW(this);
-//        hp.createGraph();
-//
-//        /**
-//         * HVALUE
-//         */
-//        WIGB_Process_HVALUE hv;
-//        hv = new WIGB_Process_HVALUE(this);
-//        hv.createGraph();
+        
+        /**
+         * HVALUE, HPROPW
+         */
+        UKHI_Process_Variable hv  = new UKHI_Process_Variable(this);
+        hv.createGraph(new BigDecimal("20000"), "HVALUE");
+        hv.createGraph(new BigDecimal("20000"), "HPROPW");
+
 
         // Check some counts
         WaAS_HHOLD_Handler hH = new WaAS_HHOLD_Handler(env.we);
@@ -281,42 +274,6 @@ public class WIGB_Main_Process extends WIGB_Object {
         //getWave1Or2HPRICEBLookup();
         //getWave3Or4Or5HPRICEBLookup();
         env.logEndTag(m);
-    }
-    
-    /**
-     *
-     * @param c
-     * @return
-     */
-    protected double[] getSummaryStatistics(Collection<Double> c) {
-        DoubleSummaryStatistics stats = c.stream().
-                collect(DoubleSummaryStatistics::new,
-                        DoubleSummaryStatistics::accept,
-                        DoubleSummaryStatistics::combine);
-        double[] r = new double[8];
-        r[0] = stats.getMax();
-        r[1] = stats.getMin();
-        r[2] = stats.getCount();
-        r[3] = stats.getSum();
-        r[4] = stats.getAverage();
-        int countNegative = 0;
-        int countZero = 0;
-        Iterator<Double> ite;
-        ite = c.iterator();
-        double HPROPW;
-        while (ite.hasNext()) {
-            HPROPW = ite.next();
-            if (HPROPW == 0.0d) {
-                countZero++;
-            } else if (HPROPW < 0.0d) {
-                countNegative++;
-                //System.out.println("" + HPROPW + " Negative HPROPW");
-            }
-        }
-        r[5] = c.size();
-        r[6] = countZero;
-        r[7] = countNegative;
-        return r;
     }
     
     /**

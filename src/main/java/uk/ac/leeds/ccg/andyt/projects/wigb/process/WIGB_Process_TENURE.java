@@ -30,7 +30,7 @@ import uk.ac.leeds.ccg.andyt.generic.util.Generic_Collections;
  *
  * @author Andy Turner
  */
-public class WIGB_Process_TENURE extends WIGB_Main_Process {
+public class WIGB_Process_TENURE extends UKHI_Main_Process {
 
     /**
      * Value label information for Ten1W5
@@ -56,7 +56,7 @@ public class WIGB_Process_TENURE extends WIGB_Main_Process {
     public TreeMap<Byte, TreeMap<Byte, TreeMap<Byte, Integer>>> TenureCountsWaveGORSubsets;
     public TreeMap<Byte, TreeMap<Byte, TreeMap<Byte, Integer>>> TenureCountsWaveGOR;
 
-    public WIGB_Process_TENURE(WIGB_Main_Process p) {
+    public WIGB_Process_TENURE(UKHI_Main_Process p) {
         super(p);
         TenureNameMap = p.env.we.hh.getTenureNameMap();
         TenureCountsWaveGORSubsets = new TreeMap<>();
