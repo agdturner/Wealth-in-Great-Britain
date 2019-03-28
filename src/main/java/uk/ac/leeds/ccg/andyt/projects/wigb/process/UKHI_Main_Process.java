@@ -144,7 +144,7 @@ public class UKHI_Main_Process extends WIGB_Object {
         if (true) {
             gors = WaAS_Handler.getGORs();
             GORNameLookup = WaAS_Handler.getGORNameLookup();
-            Object[] o = hh.getGORSubsetsAndLookup(data, gors, subset);
+            Object[] o = hh.getGORSubsetsAndLookup("", data, gors, subset);
             GORSubsets = (HashMap<Byte, HashSet<Short>>[]) o[0];
             GORLookups = (HashMap<Short, Byte>[]) o[1];
         }
@@ -183,9 +183,9 @@ public class UKHI_Main_Process extends WIGB_Object {
         /**
          * HVALUE, HPROPW
          */
-        UKHI_Process_Variable hv  = new UKHI_Process_Variable(this);
-        hv.createGraph(new BigDecimal("20000"), "HVALUE");
-        hv.createGraph(new BigDecimal("20000"), "HPROPW");
+        UKHI_Process_Variable p  = new UKHI_Process_Variable(this);
+        p.createGraph(new BigDecimal("20000"), WaAS_Strings.s_HVALUE);
+        p.createGraph(new BigDecimal("20000"), WaAS_Strings.s_HPROPW);
 
 
         // Check some counts
