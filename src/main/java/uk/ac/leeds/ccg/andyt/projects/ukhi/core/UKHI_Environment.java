@@ -1,19 +1,19 @@
-package uk.ac.leeds.ccg.andyt.projects.wigb.core;
+package uk.ac.leeds.ccg.andyt.projects.ukhi.core;
 
 import java.io.File;
 import uk.ac.leeds.ccg.andyt.generic.core.Generic_Environment;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Environment;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Data;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_IO;
-import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
+import uk.ac.leeds.ccg.andyt.projects.ukhi.io.UKHI_Files;
 
 /**
  *
  * @author geoagdt
  */
-public class UKHI_Environment extends WIGB_OutOfMemoryErrorHandler  {
+public class UKHI_Environment extends UKHI_OutOfMemoryErrorHandler  {
 
-    public transient WIGB_Files files;
+    public transient UKHI_Files files;
     public transient Generic_Environment ge;
     public transient WaAS_Environment we;
     
@@ -49,7 +49,7 @@ public class UKHI_Environment extends WIGB_OutOfMemoryErrorHandler  {
      */
     public UKHI_Environment(Generic_Environment ge, File wasDataDir) {
         //Memory_Threshold = 3000000000L;
-        files = new WIGB_Files();
+        files = new UKHI_Files();
         this.ge = ge;
         we = new WaAS_Environment(wasDataDir);
         File f = we.files.getEnvDataFile();

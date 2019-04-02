@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package uk.ac.leeds.ccg.andyt.projects.wigb.core;
+package uk.ac.leeds.ccg.andyt.projects.ukhi.core;
 
 import uk.ac.leeds.ccg.andyt.generic.core.Generic_Strings;
 

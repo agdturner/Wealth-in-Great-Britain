@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package uk.ac.leeds.ccg.andyt.projects.wigb.process;
+package uk.ac.leeds.ccg.andyt.projects.ukhi.process;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -30,7 +30,7 @@ import uk.ac.leeds.ccg.andyt.generic.util.Generic_Collections;
  *
  * @author Andy Turner
  */
-public class WIGB_Process_TENURE extends UKHI_Main_Process {
+public class UKHI_Process_TENURE extends UKHI_Main_Process {
 
     /**
      * Value label information for Ten1W5
@@ -56,7 +56,7 @@ public class WIGB_Process_TENURE extends UKHI_Main_Process {
     public TreeMap<Byte, TreeMap<Byte, TreeMap<Byte, Integer>>> TenureCountsWaveGORSubsets;
     public TreeMap<Byte, TreeMap<Byte, TreeMap<Byte, Integer>>> TenureCountsWaveGOR;
 
-    public WIGB_Process_TENURE(UKHI_Main_Process p) {
+    public UKHI_Process_TENURE(UKHI_Main_Process p) {
         super(p);
         TenureNameMap = p.env.we.hh.getTenureNameMap();
         TenureCountsWaveGORSubsets = new TreeMap<>();

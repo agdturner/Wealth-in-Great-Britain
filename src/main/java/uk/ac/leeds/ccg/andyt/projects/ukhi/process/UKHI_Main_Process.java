@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package uk.ac.leeds.ccg.andyt.projects.wigb.process;
+package uk.ac.leeds.ccg.andyt.projects.ukhi.process;
 
 import java.io.File;
 import java.math.BigDecimal;
@@ -29,8 +29,8 @@ import java.util.concurrent.Future;
 import uk.ac.leeds.ccg.andyt.generic.core.Generic_Environment;
 import uk.ac.leeds.ccg.andyt.generic.core.Generic_Strings;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Strings;
-import uk.ac.leeds.ccg.andyt.projects.wigb.core.UKHI_Environment;
-import uk.ac.leeds.ccg.andyt.projects.wigb.core.WIGB_Object;
+import uk.ac.leeds.ccg.andyt.projects.ukhi.core.UKHI_Environment;
+import uk.ac.leeds.ccg.andyt.projects.ukhi.core.UKHI_Object;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Collection;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Combined_Record;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Data;
@@ -54,22 +54,23 @@ import uk.ac.leeds.ccg.andyt.generic.execution.Generic_Execution;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_Files;
 import uk.ac.leeds.ccg.andyt.generic.util.Generic_Collections;
 import uk.ac.leeds.ccg.andyt.generic.visualisation.Generic_Visualisation;
-import uk.ac.leeds.ccg.andyt.projects.wigb.chart.WIGB_LineGraph;
-import uk.ac.leeds.ccg.andyt.projects.wigb.io.WIGB_Files;
+import uk.ac.leeds.ccg.andyt.projects.ukhi.chart.UKHI_LineGraph;
+import uk.ac.leeds.ccg.andyt.projects.ukhi.io.UKHI_Files;
 
 /**
  *
  * @author geoagdt
  */
-public class UKHI_Main_Process extends WIGB_Object {
+public class UKHI_Main_Process extends UKHI_Object {
 
     // For convenience
-    protected final WIGB_Files files;
+    protected final UKHI_Files files;
     protected final WaAS_Data data;
     protected final WaAS_HHOLD_Handler hh;
 
     /**
-     * Subset of CASEW1 for all records that have the same household composition.
+     * Subset of CASEW1 for all records that have the same household
+     * composition.
      */
     HashSet<Short> subset;
 
@@ -102,7 +103,7 @@ public class UKHI_Main_Process extends WIGB_Object {
     }
 
     public static void main(String[] args) {
-                Generic_Environment ge = new Generic_Environment();
+        Generic_Environment ge = new Generic_Environment();
         File wasDataDir = new File(
                 ge.getFiles().getDataDir().getParentFile().getParentFile().getParentFile(),
                 WaAS_Strings.s_generic);
@@ -111,7 +112,7 @@ public class UKHI_Main_Process extends WIGB_Object {
         wasDataDir = new File(wasDataDir, Generic_Strings.s_data);
         UKHI_Environment env = new UKHI_Environment(ge, wasDataDir);
         UKHI_Main_Process p = new UKHI_Main_Process(env);
-        p.files.setDataDirectory(WIGB_Files.getDefaultDataDir());
+        p.files.setDataDirectory(UKHI_Files.getDefaultDataDir());
         // Main switches
         //p.doJavaCodeGeneration = true;
         p.doLoadDataIntoCaches = true; // rename/reuse just left here for convenience...
@@ -177,23 +178,22 @@ public class UKHI_Main_Process extends WIGB_Object {
         /**
          * TENURE
          */
-        WIGB_Process_TENURE tp  = new WIGB_Process_TENURE(this);
+        UKHI_Process_TENURE tp = new UKHI_Process_TENURE(this);
         tp.createGraph();
-        
+
         /**
          * HVALUE, HPROPW
          */
-        UKHI_Process_Variable p  = new UKHI_Process_Variable(this);
+        UKHI_Process_Variable p = new UKHI_Process_Variable(this);
         p.createGraph(new BigDecimal("20000"), WaAS_Strings.s_HVALUE);
         p.createGraph(new BigDecimal("20000"), WaAS_Strings.s_HPROPW);
-
 
         // Check some counts
         WaAS_HHOLD_Handler hH = new WaAS_HHOLD_Handler(env.we);
         Object[] w5 = hH.loadW5();
         TreeMap<Short, WaAS_Wave5_HHOLD_Record> w5recs;
         w5recs = (TreeMap<Short, WaAS_Wave5_HHOLD_Record>) w5[0];
-        Iterator<Short> ites  = w5recs.keySet().iterator();
+        Iterator<Short> ites = w5recs.keySet().iterator();
         int countMortgage = 0;
         int countNonMortgage = 0;
         int countBuyWithMortgage = 0;
@@ -275,7 +275,7 @@ public class UKHI_Main_Process extends WIGB_Object {
         //getWave3Or4Or5HPRICEBLookup();
         env.logEndTag(m);
     }
-    
+
     /**
      * Get the total DVLUKVAL in subset.
      *
@@ -1056,7 +1056,7 @@ public class UKHI_Main_Process extends WIGB_Object {
         int decimalPlacePrecisionForDisplay = 3;
         RoundingMode roundingMode = RoundingMode.HALF_UP;
         ExecutorService es = Executors.newSingleThreadExecutor();
-        WIGB_LineGraph chart = new WIGB_LineGraph(es, file, format, title,
+        UKHI_LineGraph chart = new UKHI_LineGraph(es, file, format, title,
                 dataWidth, dataHeight, xAxisLabel, yAxisLabel,
                 yMax, yPin, yIncrement, numberOfYAxisTicks,
                 decimalPlacePrecisionForCalculations,

@@ -1,16 +1,12 @@
-package uk.ac.leeds.ccg.andyt.projects.wigb.core;
+package uk.ac.leeds.ccg.andyt.projects.ukhi.core;
 
-import java.io.Serializable;
 import uk.ac.leeds.ccg.andyt.generic.memory.Generic_OutOfMemoryErrorHandler;
-import uk.ac.leeds.ccg.andyt.generic.memory.Generic_OutOfMemoryErrorHandlerInterface;
 
 /**
  *
  * @author Andy Turner
  */
-public abstract class WIGB_OutOfMemoryErrorHandler
-        extends Generic_OutOfMemoryErrorHandler
-        implements Serializable, Generic_OutOfMemoryErrorHandlerInterface {
+public abstract class UKHI_OutOfMemoryErrorHandler extends Generic_OutOfMemoryErrorHandler {
 
     //static final long serialVersionUID = 1L;
     //public static long Memory_Threshold = 3000000000L;

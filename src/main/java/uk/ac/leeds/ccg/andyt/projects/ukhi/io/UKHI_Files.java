@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package uk.ac.leeds.ccg.andyt.projects.wigb.io;
+package uk.ac.leeds.ccg.andyt.projects.ukhi.io;
 
 import java.io.File;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_Files;
-import uk.ac.leeds.ccg.andyt.projects.wigb.core.UKHI_Strings;
+import uk.ac.leeds.ccg.andyt.projects.ukhi.core.UKHI_Strings;
 
 /**
  *
  * @author geoagdt
  */
-public class WIGB_Files extends Generic_Files {
+public class UKHI_Files extends Generic_Files {
 
     /**
      */
-    public WIGB_Files(){
+    public UKHI_Files(){
         super();
     }
 
     /**
      * @param dataDir
      */
-    public WIGB_Files(File dataDir) {
+    public UKHI_Files(File dataDir) {
         super(dataDir);
     }
 

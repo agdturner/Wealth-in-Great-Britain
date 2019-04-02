@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package uk.ac.leeds.ccg.andyt.projects.wigb.chart;
+package uk.ac.leeds.ccg.andyt.projects.ukhi.chart;
 
 import java.io.File;
 import java.math.BigDecimal;
@@ -30,9 +30,9 @@ import uk.ac.leeds.ccg.andyt.generic.util.Generic_Collections;
  * Line Chart Visualization of some default data and write it out to file as a
  * PNG.
  */
-public class WIGB_LineGraph extends Chart_Line {
+public class UKHI_LineGraph extends Chart_Line {
 
-    public WIGB_LineGraph() {
+    public UKHI_LineGraph() {
     }
 
     /**
@@ -53,7 +53,7 @@ public class WIGB_LineGraph extends Chart_Line {
      * @param decimalPlacePrecisionForDisplay
      * @param r
      */
-    public WIGB_LineGraph(
+    public UKHI_LineGraph(
             ExecutorService es, File file, String format, String title,
             int dataWidth, int dataHeight,
             String xAxisLabel, String yAxisLabel,
