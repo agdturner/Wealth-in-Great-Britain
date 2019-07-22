@@ -26,16 +26,18 @@ import uk.ac.leeds.ccg.andyt.projects.ukhi.core.UKHI_Strings;
 public class UKHI_Files extends Generic_Files {
 
     /**
+     * @param s
      */
-    public UKHI_Files(){
-        super();
+    public UKHI_Files(UKHI_Strings s){
+        super(s);
     }
 
     /**
+     * @param s
      * @param dataDir
      */
-    public UKHI_Files(File dataDir) {
-        super(dataDir);
+    public UKHI_Files(UKHI_Strings s, File dataDir) {
+        super(s, dataDir);
     }
 
     public File getWaASInputDir() {

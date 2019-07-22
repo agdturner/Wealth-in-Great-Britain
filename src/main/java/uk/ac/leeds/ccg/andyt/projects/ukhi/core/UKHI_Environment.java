@@ -4,7 +4,6 @@ import java.io.File;
 import uk.ac.leeds.ccg.andyt.generic.core.Generic_Environment;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Environment;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Data;
-import uk.ac.leeds.ccg.andyt.generic.io.Generic_IO;
 import uk.ac.leeds.ccg.andyt.projects.ukhi.io.UKHI_Files;
 
 /**
@@ -13,6 +12,7 @@ import uk.ac.leeds.ccg.andyt.projects.ukhi.io.UKHI_Files;
  */
 public class UKHI_Environment extends UKHI_OutOfMemoryErrorHandler  {
 
+    public transient UKHI_Strings strings;
     public transient UKHI_Files files;
     public transient Generic_Environment ge;
     public transient WaAS_Environment we;
@@ -32,14 +32,6 @@ public class UKHI_Environment extends UKHI_OutOfMemoryErrorHandler  {
      */
     public int logIDSub;
     
-    public final WaAS_Data data;
-    public transient final byte NWAVES;
-    public transient final byte W1;
-    public transient final byte W2;
-    public transient final byte W3;
-    public transient final byte W4;
-    public transient final byte W5;
-
     public transient static final String EOL = System.getProperty("line.separator");
 
     /**
@@ -49,22 +41,17 @@ public class UKHI_Environment extends UKHI_OutOfMemoryErrorHandler  {
      */
     public UKHI_Environment(Generic_Environment ge, File wasDataDir) {
         //Memory_Threshold = 3000000000L;
-        files = new UKHI_Files();
+        strings = new UKHI_Strings();
+        files = new UKHI_Files(strings);
         this.ge = ge;
         we = new WaAS_Environment(wasDataDir);
         File f = we.files.getEnvDataFile();
         if (f.exists()) {
-            data = (WaAS_Data) Generic_IO.readObject(f);
-            data.env = we;
+            we.data = (WaAS_Data) ge.io.readObject(f);
+            we.data.env = we;
         } else {
-            data = new WaAS_Data(we);
+            we.data = new WaAS_Data(we);
         }
-        NWAVES = WaAS_Data.NWAVES;
-        W1 = WaAS_Data.W1;
-        W2 = WaAS_Data.W2;
-        W3 = WaAS_Data.W3;
-        W4 = WaAS_Data.W4;
-        W5 = WaAS_Data.W5;
         logID = ge.initLog(UKHI_Strings.s_UKHI);
         logIDMain = logID;
     }
@@ -98,7 +85,7 @@ public class UKHI_Environment extends UKHI_OutOfMemoryErrorHandler  {
      * @return See {@link WaAS_Environment#cacheData()}.
      */
     public boolean clearSomeData() {
-        return data.clearSomeData();
+        return we.data.clearSomeData();
     }
 
     /**

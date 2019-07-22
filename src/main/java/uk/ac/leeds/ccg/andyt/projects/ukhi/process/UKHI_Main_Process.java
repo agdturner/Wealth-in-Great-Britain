@@ -28,26 +28,25 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import uk.ac.leeds.ccg.andyt.generic.core.Generic_Environment;
 import uk.ac.leeds.ccg.andyt.generic.core.Generic_Strings;
+import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Environment;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Strings;
 import uk.ac.leeds.ccg.andyt.projects.ukhi.core.UKHI_Environment;
 import uk.ac.leeds.ccg.andyt.projects.ukhi.core.UKHI_Object;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Collection;
-import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_CombinedRecord;
-import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Data;
+import uk.ac.leeds.ccg.andyt.generic.data.waas.data.records.WaAS_CombinedRecord;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_GORSubsetsAndLookups;
-import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_HHOLD_Handler;
-import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_Handler;
-import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_ID;
-import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_W1ID;
-import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_W2ID;
-import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_W2Record;
-import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_W3ID;
-import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_W3Record;
-import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_W4ID;
-import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_W4Record;
+import uk.ac.leeds.ccg.andyt.generic.data.waas.data.handlers.WaAS_HHOLD_Handler;
+import uk.ac.leeds.ccg.andyt.generic.data.waas.data.handlers.WaAS_Handler;
+import uk.ac.leeds.ccg.andyt.generic.data.waas.data.id.WaAS_ID;
+import uk.ac.leeds.ccg.andyt.generic.data.waas.data.id.WaAS_W1ID;
+import uk.ac.leeds.ccg.andyt.generic.data.waas.data.id.WaAS_W2ID;
+import uk.ac.leeds.ccg.andyt.generic.data.waas.data.id.WaAS_W3ID;
+import uk.ac.leeds.ccg.andyt.generic.data.waas.data.records.WaAS_W3Record;
+import uk.ac.leeds.ccg.andyt.generic.data.waas.data.id.WaAS_W4ID;
+import uk.ac.leeds.ccg.andyt.generic.data.waas.data.records.WaAS_W4Record;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_W5Data;
-import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_W5ID;
-import uk.ac.leeds.ccg.andyt.generic.data.waas.data.WaAS_W5Record;
+import uk.ac.leeds.ccg.andyt.generic.data.waas.data.id.WaAS_W5ID;
+import uk.ac.leeds.ccg.andyt.generic.data.waas.data.records.WaAS_W5Record;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.hhold.WaAS_W1HRecord;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.hhold.WaAS_W2HRecord;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.data.hhold.WaAS_W3HRecord;
@@ -73,8 +72,7 @@ public class UKHI_Main_Process extends UKHI_Object {
 
     // For convenience
     protected final UKHI_Files files;
-    protected final WaAS_Data data;
-    protected final WaAS_HHOLD_Handler hh;
+    protected final WaAS_Environment we;
 
     /**
      * Subset of CASEW1 for all records that have the same household
@@ -93,29 +91,28 @@ public class UKHI_Main_Process extends UKHI_Object {
     public UKHI_Main_Process(UKHI_Environment env) {
         super(env);
         files = env.files;
-        this.data = env.data;
-        hh = env.we.hh;
+        we = env.we;
     }
 
     public UKHI_Main_Process(UKHI_Main_Process p) {
-        data = p.data;
         files = p.files;
         env = p.env;
         subset = p.subset;
         gors = p.gors;
         GORNameLookup = p.GORNameLookup;
         GORSubsetsAndLookups = p.GORSubsetsAndLookups;
-        hh = env.we.hh;
+        we = env.we;
     }
 
     public static void main(String[] args) {
         Generic_Environment ge = new Generic_Environment();
+        WaAS_Strings ws = new WaAS_Strings();
         File wasDataDir = new File(
-                ge.getFiles().getDataDir().getParentFile().getParentFile().getParentFile(),
-                WaAS_Strings.s_generic);
-        wasDataDir = new File(wasDataDir, Generic_Strings.s_data);
-        wasDataDir = new File(wasDataDir, WaAS_Strings.PROJECT_NAME);
-        wasDataDir = new File(wasDataDir, Generic_Strings.s_data);
+                ge.files.getDataDir().getParentFile().getParentFile().getParentFile(),
+                ws.s_generic);
+        wasDataDir = new File(wasDataDir, ge.strings.s_data);
+        wasDataDir = new File(wasDataDir, ws.PROJECT_NAME);
+        wasDataDir = new File(wasDataDir, ge.strings.s_data);
         UKHI_Environment env = new UKHI_Environment(ge, wasDataDir);
         UKHI_Main_Process p = new UKHI_Main_Process(env);
         p.files.setDataDirectory(UKHI_Files.getDefaultDataDir());
@@ -144,47 +141,47 @@ public class UKHI_Main_Process extends UKHI_Object {
     public void run() {
         String m = this.getClass().getName() + ".run()";
         env.logStartTag(m);
-        subset = hh.getSubset(data, 4);
+        subset = env.we.hh.getSubset(4);
         /**
          * Init gors, GORNameLookup, GORSubsets and GORLookups.
          */
         if (true) {
             gors = WaAS_Handler.getGORs();
             GORNameLookup = WaAS_Handler.getGORNameLookup();
-            GORSubsetsAndLookups = hh.getGORSubsetsAndLookups("", data, gors, subset);
+            GORSubsetsAndLookups = env.we.hh.getGORSubsetsAndLookups("", gors, subset);
         }
 
-        int[] ttotals = new int[env.NWAVES];
+        int[] ttotals = new int[we.NWAVES];
         env.log("GOR Subsets");
         env.log("NW1,NW2,NW3,NW4,NW5,GORNumber,GORName");
         Iterator<Byte> ite = gors.iterator();
         while (ite.hasNext()) {
             String s = "";
-            int[] totals = new int[env.NWAVES];
+            int[] totals = new int[we.NWAVES];
             byte gor = ite.next();
             int size;
             // W1
-            size = GORSubsetsAndLookups.GOR2W1IDSet.get(gor).size();
+            size = GORSubsetsAndLookups.gor_To_w1.get(gor).size();
             totals[0] += size;
             s += totals[0] + ",";
             ttotals[0] += totals[0];
             // W2
-            size = GORSubsetsAndLookups.GOR2W2IDSet.get(gor).size();
+            size = GORSubsetsAndLookups.gor_To_w2.get(gor).size();
             totals[0] += size;
             s += totals[0] + ",";
             ttotals[0] += totals[0];
             // W3
-            size = GORSubsetsAndLookups.GOR2W3IDSet.get(gor).size();
+            size = GORSubsetsAndLookups.gor_To_w3.get(gor).size();
             totals[0] += size;
             s += totals[0] + ",";
             ttotals[0] += totals[0];
             // W4
-            size = GORSubsetsAndLookups.GOR2W4IDSet.get(gor).size();
+            size = GORSubsetsAndLookups.gor_To_w4.get(gor).size();
             totals[0] += size;
             s += totals[0] + ",";
             ttotals[0] += totals[0];
             // W5
-            size = GORSubsetsAndLookups.GOR2W5IDSet.get(gor).size();
+            size = GORSubsetsAndLookups.gor_to_w5.get(gor).size();
             totals[0] += size;
             s += totals[0] + ",";
             ttotals[0] += totals[0];
@@ -194,7 +191,7 @@ public class UKHI_Main_Process extends UKHI_Object {
         }
         // Totals
         String s = "";
-        for (byte w = 0; w < env.NWAVES; w++) {
+        for (byte w = 0; w < we.NWAVES; w++) {
             s += ttotals[w] + ",";
         }
         s += "0,All";
@@ -209,13 +206,13 @@ public class UKHI_Main_Process extends UKHI_Object {
          * HVALUE, HPROPW
          */
         UKHI_Process_Variable p = new UKHI_Process_Variable(this);
-        p.createGraph(new BigDecimal("20000"), WaAS_Strings.s_HVALUE);
-        p.createGraph(new BigDecimal("20000"), WaAS_Strings.s_HPROPW);
+        p.createGraph(new BigDecimal("20000"),  env.we.strings.s_HVALUE);
+        p.createGraph(new BigDecimal("20000"), env.we.strings.s_HPROPW);
 
         // Check some counts
         WaAS_HHOLD_Handler hH = new WaAS_HHOLD_Handler(env.we);
-        WaAS_W5Data w5 = hH.loadW5();
-        TreeMap<WaAS_W5ID, WaAS_W5HRecord> w5recs = w5.lookup;
+        WaAS_W5Data w5 = hH.loadW5InW4();
+        TreeMap<WaAS_W5ID, WaAS_W5Record> w5recs = w5.lookup;
         Iterator<WaAS_W5ID> ites = w5recs.keySet().iterator();
         int countMortgage = 0;
         int countNonMortgage = 0;
@@ -230,7 +227,7 @@ public class UKHI_Main_Process extends UKHI_Object {
         int countGT1MNumbNW5 = 0;
         while (ites.hasNext()) {
             WaAS_W5ID w5ID = ites.next();
-            WaAS_W5HRecord w5rec = w5recs.get(w5ID);
+            WaAS_W5HRecord w5rec = w5recs.get(w5ID).getHr();
             byte ten1 = w5rec.getTEN1();
             if (ten1 == 2 || ten1 == 3) {
                 countMortgage++;
@@ -314,26 +311,26 @@ public class UKHI_Main_Process extends UKHI_Object {
 //	Value = -6.0	Label = Error Partial
         // For brevity/convenience.
         long tDVLUKVAL;
-        if (wave == env.W1) {
-            tDVLUKVAL = data.data.keySet().stream().mapToLong(cID -> {
-                WaAS_Collection c = data.getCollection(cID);
+        if (wave == we.W1) {
+            tDVLUKVAL = env.we.data.collections.keySet().stream().mapToLong(cID -> {
+                WaAS_Collection c = env.we.data.getCollection(cID);
                 long cDVLUKVAL = c.getData().keySet().stream().mapToLong(w1ID -> {
                     int DVLUKVAL = 0;
                     if (subset.contains(w1ID)) {
                         WaAS_CombinedRecord cr = c.getData().get(w1ID);
-                        DVLUKVAL = cr.w1Rec.getHhold().getDVLUKVAL();
+                        DVLUKVAL = cr.w1Rec.getHr().getDVLUKVAL();
                         if (DVLUKVAL == Integer.MIN_VALUE) {
                             DVLUKVAL = 0;
                         }
                     }
                     return DVLUKVAL;
                 }).sum();
-                data.clearCollection(cID);
+                env.we.data.clearCollection(cID);
                 return cDVLUKVAL;
             }).sum();
-        } else if (wave == env.W2) {
-            tDVLUKVAL = data.data.keySet().stream().mapToLong(cID -> {
-                WaAS_Collection c = data.getCollection(cID);
+        } else if (wave == we.W2) {
+            tDVLUKVAL = env.we.data.collections.keySet().stream().mapToLong(cID -> {
+                WaAS_Collection c = env.we.data.getCollection(cID);
                 long cDVLUKVAL = c.getData().keySet().stream().mapToLong(w1ID -> {
                     int DVLUKVAL = 0;
                     if (subset.contains(w1ID)) {
@@ -341,7 +338,7 @@ public class UKHI_Main_Process extends UKHI_Object {
                         Iterator<WaAS_W2ID> ite = cr.w2Recs.keySet().iterator();
                         while (ite.hasNext()) {
                             WaAS_W2ID w2ID = ite.next();
-                            int DVLUKVALW2 = cr.w2Recs.get(w2ID).getHhold().getDVLUKVAL();
+                            int DVLUKVALW2 = cr.w2Recs.get(w2ID).getHr().getDVLUKVAL();
                             if (DVLUKVALW2 != Integer.MIN_VALUE) {
                                 DVLUKVAL += DVLUKVALW2;
                             }
@@ -349,12 +346,12 @@ public class UKHI_Main_Process extends UKHI_Object {
                     }
                     return DVLUKVAL;
                 }).sum();
-                data.clearCollection(cID);
+                env.we.data.clearCollection(cID);
                 return cDVLUKVAL;
             }).sum();
-        } else if (wave == env.W3) {
-            tDVLUKVAL = data.data.keySet().stream().mapToLong(cID -> {
-                WaAS_Collection c = data.getCollection(cID);
+        } else if (wave == we.W3) {
+            tDVLUKVAL = env.we.data.collections.keySet().stream().mapToLong(cID -> {
+                WaAS_Collection c = env.we.data.getCollection(cID);
                 long cDVLUKVAL = c.getData().keySet().stream().mapToLong(w3ID -> {
                     int DVLUKVAL = 0;
                     if (subset.contains(w3ID)) {
@@ -366,7 +363,7 @@ public class UKHI_Main_Process extends UKHI_Object {
                             Iterator<WaAS_W3ID> ite2 = w3_2.keySet().iterator();
                             while (ite2.hasNext()) {
                                 WaAS_W3ID w3ID2 = ite2.next();
-                                int DVLUKVALW3 = w3_2.get(w3ID2).getHhold().getDVLUKVAL_SUM();
+                                int DVLUKVALW3 = w3_2.get(w3ID2).getHr().getDVLUKVAL_SUM();
                                 if (DVLUKVALW3 != Integer.MIN_VALUE) {
                                     DVLUKVAL += DVLUKVALW3;
                                 }
@@ -375,12 +372,12 @@ public class UKHI_Main_Process extends UKHI_Object {
                     }
                     return DVLUKVAL;
                 }).sum();
-                data.clearCollection(cID);
+                env.we.data.clearCollection(cID);
                 return cDVLUKVAL;
             }).sum();
-        } else if (wave == env.W4) {
-            tDVLUKVAL = data.data.keySet().stream().mapToLong(cID -> {
-                WaAS_Collection c = data.getCollection(cID);
+        } else if (wave == we.W4) {
+            tDVLUKVAL = env.we.data.collections.keySet().stream().mapToLong(cID -> {
+                WaAS_Collection c = env.we.data.getCollection(cID);
                 long cDVLUKVAL = c.getData().keySet().stream().mapToLong(w1ID -> {
                     int DVLUKVAL = 0;
                     if (subset.contains(w1ID)) {
@@ -397,7 +394,7 @@ public class UKHI_Main_Process extends UKHI_Object {
                                 Iterator<WaAS_W4ID> ite3 = w4_3.keySet().iterator();
                                 while (ite3.hasNext()) {
                                     WaAS_W4ID w4ID = ite3.next();
-                                    int DVLUKVALW4 = w4_3.get(w4ID).getHhold().getDVLUKVAL_SUM();
+                                    int DVLUKVALW4 = w4_3.get(w4ID).getHr().getDVLUKVAL_SUM();
                                     if (DVLUKVALW4 != Integer.MIN_VALUE) {
                                         DVLUKVAL += DVLUKVALW4;
                                     }
@@ -407,12 +404,12 @@ public class UKHI_Main_Process extends UKHI_Object {
                     }
                     return DVLUKVAL;
                 }).sum();
-                data.clearCollection(cID);
+                env.we.data.clearCollection(cID);
                 return cDVLUKVAL;
             }).sum();
-        } else if (wave == env.W5) {
-            tDVLUKVAL = data.data.keySet().stream().mapToLong(cID -> {
-                WaAS_Collection c = data.getCollection(cID);
+        } else if (wave == we.W5) {
+            tDVLUKVAL = env.we.data.collections.keySet().stream().mapToLong(cID -> {
+                WaAS_Collection c = env.we.data.getCollection(cID);
                 long cDVLUKVAL = c.getData().keySet().stream().mapToLong(w1ID -> {
                     int DVLUKVAL = 0;
                     if (subset.contains(w1ID)) {
@@ -434,7 +431,7 @@ public class UKHI_Main_Process extends UKHI_Object {
                                     Iterator<WaAS_W5ID> ite4 = w5_4.keySet().iterator();
                                     while (ite4.hasNext()) {
                                         WaAS_W5ID w5ID = ite4.next();
-                                        int DVLUKVALW5 = w5_4.get(w5ID).getHhold().getDVLUKVAL_SUM();
+                                        int DVLUKVALW5 = w5_4.get(w5ID).getHr().getDVLUKVAL_SUM();
                                         if (DVLUKVALW5 != Integer.MIN_VALUE) {
                                             DVLUKVAL += DVLUKVALW5;
                                         }
@@ -445,7 +442,7 @@ public class UKHI_Main_Process extends UKHI_Object {
                     }
                     return DVLUKVAL;
                 }).sum();
-                data.clearCollection(cID);
+                env.we.data.clearCollection(cID);
                 return cDVLUKVAL;
             }).sum();
         } else {
@@ -464,15 +461,15 @@ public class UKHI_Main_Process extends UKHI_Object {
      */
     public long getFINCVB(HashSet<WaAS_W1ID> subset, byte wave) {
         long tFINCVB;
-        if (wave == env.W1) {
-            tFINCVB = data.data.keySet().stream().mapToLong(cID -> {
+        if (wave == we.W1) {
+            tFINCVB = env.we.data.collections.keySet().stream().mapToLong(cID -> {
                 WaAS_Collection c;
-                c = data.getCollection(cID);
+                c = env.we.data.getCollection(cID);
                 long cFINCVB = c.getData().keySet().stream().mapToLong(w1ID -> {
                     byte FINCVB = 0;
                     if (subset.contains(w1ID)) {
                         WaAS_CombinedRecord cr = c.getData().get(w1ID);
-                        ArrayList<WaAS_W1PRecord> w1p = cr.w1Rec.getPeople();
+                        ArrayList<WaAS_W1PRecord> w1p = cr.w1Rec.getPrs();
                         Iterator<WaAS_W1PRecord> ite = w1p.iterator();
                         while (ite.hasNext()) {
                             FINCVB = ite.next().getFINCVB();
@@ -483,12 +480,12 @@ public class UKHI_Main_Process extends UKHI_Object {
                     }
                     return FINCVB;
                 }).sum();
-                data.clearCollection(cID);
+                env.we.data.clearCollection(cID);
                 return cFINCVB;
             }).sum();
-        } else if (wave == env.W2) {
-            tFINCVB = data.data.keySet().stream().mapToLong(cID -> {
-                WaAS_Collection c = data.getCollection(cID);
+        } else if (wave == we.W2) {
+            tFINCVB = env.we.data.collections.keySet().stream().mapToLong(cID -> {
+                WaAS_Collection c = env.we.data.getCollection(cID);
                 long cFINCVB = c.getData().keySet().stream().mapToLong(w1ID -> {
                     byte FINCVB = 0;
                     if (subset.contains(w1ID)) {
@@ -496,7 +493,7 @@ public class UKHI_Main_Process extends UKHI_Object {
                         Iterator<WaAS_W2ID> ite = cr.w2Recs.keySet().iterator();
                         while (ite.hasNext()) {
                             WaAS_W2ID w2ID = ite.next();
-                            ArrayList<WaAS_W2PRecord> w2p = cr.w2Recs.get(w2ID).getPeople();
+                            ArrayList<WaAS_W2PRecord> w2p = cr.w2Recs.get(w2ID).getPrs();
                             Iterator<WaAS_W2PRecord> ite2 = w2p.iterator();
                             while (ite2.hasNext()) {
                                 FINCVB = ite2.next().getFINCVB();
@@ -508,12 +505,12 @@ public class UKHI_Main_Process extends UKHI_Object {
                     }
                     return FINCVB;
                 }).sum();
-                data.clearCollection(cID);
+                env.we.data.clearCollection(cID);
                 return cFINCVB;
             }).sum();
-        } else if (wave == env.W3) {
-            tFINCVB = data.data.keySet().stream().mapToLong(cID -> {
-                WaAS_Collection c = data.getCollection(cID);
+        } else if (wave == we.W3) {
+            tFINCVB = env.we.data.collections.keySet().stream().mapToLong(cID -> {
+                WaAS_Collection c = env.we.data.getCollection(cID);
                 long cFINCVB = c.getData().keySet().stream().mapToLong(w1ID -> {
                     byte FINCVB = 0;
                     if (subset.contains(w1ID)) {
@@ -525,7 +522,7 @@ public class UKHI_Main_Process extends UKHI_Object {
                             Iterator<WaAS_W3ID> ite2 = w3_2.keySet().iterator();
                             while (ite2.hasNext()) {
                                 WaAS_W3ID w3ID = ite2.next();
-                                ArrayList<WaAS_W3PRecord> w3p = w3_2.get(w3ID).getPeople();
+                                ArrayList<WaAS_W3PRecord> w3p = w3_2.get(w3ID).getPrs();
                                 Iterator<WaAS_W3PRecord> ite3 = w3p.iterator();
                                 while (ite3.hasNext()) {
                                     FINCVB = ite3.next().getFINCVB();
@@ -538,12 +535,12 @@ public class UKHI_Main_Process extends UKHI_Object {
                     }
                     return FINCVB;
                 }).sum();
-                data.clearCollection(cID);
+                env.we.data.clearCollection(cID);
                 return cFINCVB;
             }).sum();
-        } else if (wave == env.W4) {
-            tFINCVB = data.data.keySet().stream().mapToLong(cID -> {
-                WaAS_Collection c = data.getCollection(cID);
+        } else if (wave == we.W4) {
+            tFINCVB = env.we.data.collections.keySet().stream().mapToLong(cID -> {
+                WaAS_Collection c = env.we.data.getCollection(cID);
                 long cFINCVB = c.getData().keySet().stream().mapToLong(w1ID -> {
                     byte FINCVB = 0;
                     if (subset.contains(w1ID)) {
@@ -561,7 +558,7 @@ public class UKHI_Main_Process extends UKHI_Object {
                                 while (ite3.hasNext()) {
                                     WaAS_W4ID w4ID = ite3.next();
                                     ArrayList<WaAS_W4PRecord> w4p;
-                                    w4p = w4_3.get(w4ID).getPeople();
+                                    w4p = w4_3.get(w4ID).getPrs();
                                     Iterator<WaAS_W4PRecord> ite4 = w4p.iterator();
                                     while (ite4.hasNext()) {
                                         FINCVB = ite4.next().getFINCVB();
@@ -575,12 +572,12 @@ public class UKHI_Main_Process extends UKHI_Object {
                     }
                     return FINCVB;
                 }).sum();
-                data.clearCollection(cID);
+                env.we.data.clearCollection(cID);
                 return cFINCVB;
             }).sum();
-        } else if (wave == env.W5) {
-            tFINCVB = data.data.keySet().stream().mapToLong(cID -> {
-                WaAS_Collection c = data.getCollection(cID);
+        } else if (wave == we.W5) {
+            tFINCVB = env.we.data.collections.keySet().stream().mapToLong(cID -> {
+                WaAS_Collection c = env.we.data.getCollection(cID);
                 long cFINCVB = c.getData().keySet().stream().mapToLong(w1ID -> {
                     byte FINCVB = 0;
                     if (subset.contains(w1ID)) {
@@ -602,7 +599,7 @@ public class UKHI_Main_Process extends UKHI_Object {
                                     Iterator<WaAS_W5ID> ite4 = w5_4.keySet().iterator();
                                     while (ite4.hasNext()) {
                                         WaAS_W5ID w5ID = ite4.next();
-                                        ArrayList<WaAS_W5PRecord> w5p = w5_4.get(w5ID).getPeople();
+                                        ArrayList<WaAS_W5PRecord> w5p = w5_4.get(w5ID).getPrs();
                                         Iterator<WaAS_W5PRecord> ite5 = w5p.iterator();
                                         while (ite5.hasNext()) {
                                             FINCVB = ite5.next().getFINCVB();
@@ -617,7 +614,7 @@ public class UKHI_Main_Process extends UKHI_Object {
                     }
                     return FINCVB;
                 }).sum();
-                data.clearCollection(cID);
+                env.we.data.clearCollection(cID);
                 return cFINCVB;
             }).sum();
         } else {
@@ -631,7 +628,6 @@ public class UKHI_Main_Process extends UKHI_Object {
      * Get the total HPRICEB in subset.
      *
      * @param subset
-     * @param GORSubsets
      * @param gORSubsetsAndLookups
      * @param wave
      * @return Map with keys as GOR and Values as map with keys as CASEWX and
@@ -643,20 +639,20 @@ public class UKHI_Main_Process extends UKHI_Object {
             byte wave) {
         // Initialise result
         HashMap<Byte, HashMap<WaAS_ID, Integer>> r = new HashMap<>();
-        Iterator<Byte> ite = GORSubsetsAndLookups.GOR2W1IDSet.keySet().iterator();
+        Iterator<Byte> ite = GORSubsetsAndLookups.gor_To_w1.keySet().iterator();
         while (ite.hasNext()) {
             Byte GOR = ite.next();
             r.put(GOR, new HashMap<>());
         }
         // For brevity/convenience.
-        if (wave == env.W1) {
-            data.data.keySet().stream().forEach(cID -> {
-                WaAS_Collection c = data.getCollection(cID);
+        if (wave == we.W1) {
+            env.we.data.collections.keySet().stream().forEach(cID -> {
+                WaAS_Collection c = env.we.data.getCollection(cID);
                 c.getData().keySet().stream().forEach(w1ID -> {
                     if (subset.contains(w1ID)) {
                         WaAS_CombinedRecord cr = c.getData().get(w1ID);
-                        WaAS_W1HRecord w1 = cr.w1Rec.getHhold();
-                        Byte GOR = gORSubsetsAndLookups.W1ID2GOR.get(w1ID);
+                        WaAS_W1HRecord w1 = cr.w1Rec.getHr();
+                        Byte GOR = gORSubsetsAndLookups.w1_To_gor.get(w1ID);
                         int HPRICE = w1.getHPRICE();
                         if (HPRICE < 0) {
                             byte HPRICEB = w1.getHPRICEB();
@@ -669,19 +665,19 @@ public class UKHI_Main_Process extends UKHI_Object {
                         }
                     }
                 });
-                data.clearCollection(cID);
+                env.we.data.clearCollection(cID);
             });
-        } else if (wave == env.W2) {
-            data.data.keySet().stream().forEach(cID -> {
-                WaAS_Collection c = data.getCollection(cID);
+        } else if (wave == we.W2) {
+            env.we.data.collections.keySet().stream().forEach(cID -> {
+                WaAS_Collection c = env.we.data.getCollection(cID);
                 c.getData().keySet().stream().forEach(w1ID -> {
                     if (subset.contains(w1ID)) {
                         WaAS_CombinedRecord cr = c.getData().get(w1ID);
                         Iterator<WaAS_W2ID> ite2 = cr.w2Recs.keySet().iterator();
                         while (ite2.hasNext()) {
                             WaAS_W2ID w2ID = ite2.next();
-                            Byte GOR = gORSubsetsAndLookups.W2ID2GOR.get(w2ID);
-                            WaAS_W2HRecord w2 = cr.w2Recs.get(w2ID).getHhold();
+                            Byte GOR = gORSubsetsAndLookups.w2_To_gor.get(w2ID);
+                            WaAS_W2HRecord w2 = cr.w2Recs.get(w2ID).getHr();
                             int HPRICE = w2.getHPRICE();
                             if (HPRICE < 0) {
                                 byte HPRICEB = w2.getHPRICEB();
@@ -695,11 +691,11 @@ public class UKHI_Main_Process extends UKHI_Object {
                         }
                     }
                 });
-                data.clearCollection(cID);
+                env.we.data.clearCollection(cID);
             });
-        } else if (wave == env.W3) {
-            data.data.keySet().stream().forEach(cID -> {
-                WaAS_Collection c = data.getCollection(cID);
+        } else if (wave == we.W3) {
+            env.we.data.collections.keySet().stream().forEach(cID -> {
+                WaAS_Collection c = env.we.data.getCollection(cID);
                 c.getData().keySet().stream().forEach(w1ID -> {
                     if (subset.contains(w1ID)) {
                         WaAS_CombinedRecord cr = c.getData().get(w1ID);
@@ -711,8 +707,8 @@ public class UKHI_Main_Process extends UKHI_Object {
                             Iterator<WaAS_W3ID> ite2 = w3_2.keySet().iterator();
                             while (ite2.hasNext()) {
                                 WaAS_W3ID w3ID = ite2.next();
-                                Byte GOR = gORSubsetsAndLookups.W3ID2GOR.get(w3ID);
-                                WaAS_W3HRecord w3 = w3_2.get(w3ID).getHhold();
+                                Byte GOR = gORSubsetsAndLookups.w3_To_gor.get(w3ID);
+                                WaAS_W3HRecord w3 = w3_2.get(w3ID).getHr();
                                 int HPRICE = w3.getHPRICE();
                                 if (HPRICE < 0) {
                                     byte HPRICEB = w3.getHPRICEB();
@@ -727,11 +723,11 @@ public class UKHI_Main_Process extends UKHI_Object {
                         }
                     }
                 });
-                data.clearCollection(cID);
+                env.we.data.clearCollection(cID);
             });
-        } else if (wave == env.W4) {
-            data.data.keySet().stream().forEach(cID -> {
-                WaAS_Collection c = data.getCollection(cID);
+        } else if (wave == we.W4) {
+            env.we.data.collections.keySet().stream().forEach(cID -> {
+                WaAS_Collection c = env.we.data.getCollection(cID);
                 c.getData().keySet().stream().forEach(w1ID -> {
                     if (subset.contains(w1ID)) {
                         WaAS_CombinedRecord cr = c.getData().get(w1ID);
@@ -747,8 +743,8 @@ public class UKHI_Main_Process extends UKHI_Object {
                                 Iterator<WaAS_W4ID> ite3 = w4_3.keySet().iterator();
                                 while (ite3.hasNext()) {
                                     WaAS_W4ID w4ID = ite3.next();
-                                    Byte GOR = gORSubsetsAndLookups.W4ID2GOR.get(w4ID);
-                                    WaAS_W4HRecord w4 = w4_3.get(w4ID).getHhold();
+                                    Byte GOR = gORSubsetsAndLookups.w4_To_gor.get(w4ID);
+                                    WaAS_W4HRecord w4 = w4_3.get(w4ID).getHr();
                                     int HPRICE = w4.getHPRICE();
                                     if (HPRICE < 0) {
                                         byte HPRICEB = w4.getHPRICEB();
@@ -764,12 +760,11 @@ public class UKHI_Main_Process extends UKHI_Object {
                         }
                     }
                 });
-                data.clearCollection(cID);
+                env.we.data.clearCollection(cID);
             });
-        } else if (wave == env.W5) {
-            data.data.keySet().stream().forEach(cID -> {
-                WaAS_Collection c;
-                c = data.getCollection(cID);
+        } else if (wave == we.W5) {
+            env.we.data.collections.keySet().stream().forEach(cID -> {
+                WaAS_Collection c  = env.we.data.getCollection(cID);
                 c.getData().keySet().stream().forEach(w1ID -> {
                     if (subset.contains(w1ID)) {
                         WaAS_CombinedRecord cr = c.getData().get(w1ID);
@@ -790,8 +785,8 @@ public class UKHI_Main_Process extends UKHI_Object {
                                     Iterator<WaAS_W5ID> ite4 = w5_4.keySet().iterator();
                                     while (ite4.hasNext()) {
                                         WaAS_W5ID w5ID = ite4.next();
-                                        Byte GOR = gORSubsetsAndLookups.W5ID2GOR.get(w5ID);
-                                        WaAS_W5HRecord w5 = w5_4.get(w5ID).getHhold();
+                                        Byte GOR = gORSubsetsAndLookups.w5_To_gor.get(w5ID);
+                                        WaAS_W5HRecord w5 = w5_4.get(w5ID).getHr();
                                         int HPRICE = w5.getHPRICE();
                                         if (HPRICE < 0) {
                                             byte HPRICEB = w5.getHPRICEB();
@@ -808,7 +803,7 @@ public class UKHI_Main_Process extends UKHI_Object {
                         }
                     }
                 });
-                data.clearCollection(cID);
+                env.we.data.clearCollection(cID);
             });
         }
         return r;
@@ -918,7 +913,7 @@ public class UKHI_Main_Process extends UKHI_Object {
         File file;
         String format = "PNG";
         System.out.println("Title: " + title);
-        Generic_Files gf = new Generic_Files();
+        Generic_Files gf = env.ge.files;
         File outdir;
         outdir = gf.getOutputDataDir();
         String filename;

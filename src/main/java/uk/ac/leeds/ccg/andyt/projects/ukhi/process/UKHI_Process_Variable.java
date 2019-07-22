@@ -28,9 +28,8 @@ public class UKHI_Process_Variable extends UKHI_Main_Process {
         /**
          * Get Variable for each wave in the subsets.
          */
-        TreeMap<Byte, Double> mSubset = hh.getChangeVariableSubset(
-                vName, gors, GORSubsetsAndLookups, GORNameLookup, data,
-                subset);
+        TreeMap<Byte, Double> mSubset = env.we.hh.getChangeVariableSubset(
+                vName, gors, GORSubsetsAndLookups, GORNameLookup,                 subset);
 //        changeSubset = new TreeMap<>();
 //HVALUE
 //        changeSubset.put((byte) 1, 18783.080794344292);
@@ -60,7 +59,7 @@ public class UKHI_Process_Variable extends UKHI_Main_Process {
          * Get Variable Total Household Property Wealth for each wave for all
          * records.
          */
-        TreeMap<Byte, Double> changeAll = hh.getChangeVariableAll(
+        TreeMap<Byte, Double> changeAll = env.we.hh.getChangeVariableAll(
                 vName, gors, GORNameLookup);
 //        changeAll = new TreeMap<>();
 //HVALUE
