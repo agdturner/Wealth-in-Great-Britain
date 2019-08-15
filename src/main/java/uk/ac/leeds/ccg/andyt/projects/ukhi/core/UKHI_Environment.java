@@ -12,7 +12,6 @@ import uk.ac.leeds.ccg.andyt.projects.ukhi.io.UKHI_Files;
  */
 public class UKHI_Environment extends UKHI_OutOfMemoryErrorHandler  {
 
-    public transient UKHI_Strings strings;
     public transient UKHI_Files files;
     public transient Generic_Environment ge;
     public transient WaAS_Environment we;
@@ -41,8 +40,7 @@ public class UKHI_Environment extends UKHI_OutOfMemoryErrorHandler  {
      */
     public UKHI_Environment(Generic_Environment ge, File wasDataDir) {
         //Memory_Threshold = 3000000000L;
-        strings = new UKHI_Strings();
-        files = new UKHI_Files(strings);
+        files = new UKHI_Files();
         this.ge = ge;
         we = new WaAS_Environment(wasDataDir);
         File f = we.files.getEnvDataFile();

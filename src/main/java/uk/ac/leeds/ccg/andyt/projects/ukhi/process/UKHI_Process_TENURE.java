@@ -329,12 +329,10 @@ public class UKHI_Process_TENURE extends UKHI_Main_Process {
      * @return 
      */
     public <K> TreeMap<Byte, TreeMap<Byte, Integer>> getTenureCountsForGOR(
-            ArrayList<Byte> gors, TreeMap<K, ?> wAll,
-            byte wave) {
+            ArrayList<Byte> gors, TreeMap<K, ?> wAll, byte wave) {
         TreeMap<Byte, TreeMap<Byte, Integer>> TenureCountsGOR;
         TenureCountsGOR = TenureCountsWaveGOR.get(wave);
-        HashMap<Byte, HashMap<Short, Double>> r;
-        r = new HashMap<>();
+        HashMap<Byte, HashMap<Short, Double>> r = new HashMap<>();
         gors.stream().forEach(gor -> {
             r.put(gor, new HashMap<>());
         });
@@ -342,7 +340,34 @@ public class UKHI_Process_TENURE extends UKHI_Main_Process {
         while (ite.hasNext()) {
             K k = ite.next();
             WaAS_W1W2W3W4W5HRecord rec = (WaAS_W1W2W3W4W5HRecord) wAll.get(k);
-            Byte GOR = rec.getGOR();
+            Byte GOR;
+            /**
+             * The following change was required due to differences between the
+             * data obtained in November 2018 and August 2019
+             */
+            //GOR = rec.getGOR();
+            switch (wave) {
+                case 1:
+                    WaAS_W1HRecord w1HRec = (WaAS_W1HRecord) rec;
+                    GOR = w1HRec.getGOR();
+                    break;
+                case 2:
+                    WaAS_W2HRecord w2HRec = (WaAS_W2HRecord) rec;
+                    GOR = w2HRec.getGOR();
+                    break;
+                case 3:
+                    WaAS_W3HRecord w3HRec = (WaAS_W3HRecord) rec;
+                    GOR = w3HRec.getGOR();
+                    break;
+                case 5:
+                    WaAS_W5HRecord w5HRec = (WaAS_W5HRecord) rec;
+                    GOR = w5HRec.getGOR();
+                                        break;
+                default:
+                    env.log("Unrecognised type");
+                    GOR = null;
+                    break;
+            }
             TreeMap<Byte, Integer> TenureCounts;
             TenureCounts = TenureCountsGOR.get(GOR);
             if (TenureCounts == null) {

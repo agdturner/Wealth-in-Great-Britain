@@ -27,7 +27,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import uk.ac.leeds.ccg.andyt.generic.core.Generic_Environment;
-import uk.ac.leeds.ccg.andyt.generic.core.Generic_Strings;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Environment;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Strings;
 import uk.ac.leeds.ccg.andyt.projects.ukhi.core.UKHI_Environment;
@@ -62,6 +61,7 @@ import uk.ac.leeds.ccg.andyt.generic.io.Generic_Files;
 import uk.ac.leeds.ccg.andyt.generic.util.Generic_Collections;
 import uk.ac.leeds.ccg.andyt.generic.visualisation.Generic_Visualisation;
 import uk.ac.leeds.ccg.andyt.projects.ukhi.chart.UKHI_LineGraph;
+import uk.ac.leeds.ccg.andyt.projects.ukhi.core.UKHI_Strings;
 import uk.ac.leeds.ccg.andyt.projects.ukhi.io.UKHI_Files;
 
 /**
@@ -110,9 +110,9 @@ public class UKHI_Main_Process extends UKHI_Object {
         File wasDataDir = new File(
                 ge.files.getDataDir().getParentFile().getParentFile().getParentFile(),
                 ws.s_generic);
-        wasDataDir = new File(wasDataDir, ge.strings.s_data);
+        wasDataDir = new File(wasDataDir, UKHI_Strings.s_data);
         wasDataDir = new File(wasDataDir, ws.PROJECT_NAME);
-        wasDataDir = new File(wasDataDir, ge.strings.s_data);
+        wasDataDir = new File(wasDataDir, UKHI_Strings.s_data);
         UKHI_Environment env = new UKHI_Environment(ge, wasDataDir);
         UKHI_Main_Process p = new UKHI_Main_Process(env);
         p.files.setDataDirectory(UKHI_Files.getDefaultDataDir());
@@ -206,8 +206,8 @@ public class UKHI_Main_Process extends UKHI_Object {
          * HVALUE, HPROPW
          */
         UKHI_Process_Variable p = new UKHI_Process_Variable(this);
-        p.createGraph(new BigDecimal("20000"),  env.we.strings.s_HVALUE);
-        p.createGraph(new BigDecimal("20000"), env.we.strings.s_HPROPW);
+        p.createGraph(new BigDecimal("20000"),  UKHI_Strings.s_HVALUE);
+        p.createGraph(new BigDecimal("20000"), UKHI_Strings.s_HPROPW);
 
         // Check some counts
         WaAS_HHOLD_Handler hH = new WaAS_HHOLD_Handler(env.we);

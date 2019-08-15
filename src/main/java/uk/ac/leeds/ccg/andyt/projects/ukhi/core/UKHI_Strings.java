@@ -15,13 +15,13 @@
  */
 package uk.ac.leeds.ccg.andyt.projects.ukhi.core;
 
-import uk.ac.leeds.ccg.andyt.generic.core.Generic_Strings;
+import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Strings;
 
 /**
  *
  * @author geoagdt
  */
-public class UKHI_Strings extends Generic_Strings {
+public class UKHI_Strings extends WaAS_Strings {
 
     public static final String s_UKHI = "UKHI";
 

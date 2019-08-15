@@ -17,7 +17,6 @@ package uk.ac.leeds.ccg.andyt.projects.ukhi.io;
 
 import java.io.File;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_Files;
-import uk.ac.leeds.ccg.andyt.projects.ukhi.core.UKHI_Strings;
 
 /**
  *
@@ -25,51 +24,39 @@ import uk.ac.leeds.ccg.andyt.projects.ukhi.core.UKHI_Strings;
  */
 public class UKHI_Files extends Generic_Files {
 
-    /**
-     * @param s
-     */
-    public UKHI_Files(UKHI_Strings s){
-        super(s);
+    public UKHI_Files(){
+        super();
     }
 
     /**
-     * @param s
      * @param dataDir
      */
-    public UKHI_Files(UKHI_Strings s, File dataDir) {
-        super(s, dataDir);
+    public UKHI_Files(File dataDir) {
+        super(dataDir);
     }
 
     public File getWaASInputDir() {
-        File r;
-        r = new File(getInputDataDir(), "WaAS");
+        File r = new File(getInputDataDir(), "WaAS");
         r = new File(r, "UKDA-7215-tab");
         r = new File(r, "tab");
         return r;
     }
 
     public File getTIDataFile() {
-        File r;
-        File dir;
-        dir = new File(getInputDataDir(), "TransparencyInternational");
-        r = new File(dir, "Selection.csv");
-        return r;
+        File dir = new File(getInputDataDir(), "TransparencyInternational");
+        return new File(dir, "Selection.csv"); 
     }
 
     public File getGeneratedWaASDir() {
-        File dir;
-        dir = getGeneratedDataDir();
-        File f;
-        f = new File(dir, "WaAS");
+        File dir  = getGeneratedDataDir();
+        File f  = new File(dir, "WaAS");
         f.mkdirs();
         return f;
     }
     
     public File getGeneratedWaASSubsetsDir() {
-        File dir;
-        dir = getGeneratedWaASDir();
-        File f;
-        f = new File(dir, "Subsets");
+        File dir  = getGeneratedWaASDir();
+        File f  = new File(dir, "Subsets");
         f.mkdirs();
         return f;
     }
