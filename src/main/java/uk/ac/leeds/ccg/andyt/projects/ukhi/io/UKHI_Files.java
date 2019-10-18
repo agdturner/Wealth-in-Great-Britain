@@ -36,32 +36,32 @@ public class UKHI_Files extends Generic_Files {
     }
 
     public File getWaASInputDir() {
-        File r = new File(getInputDataDir(), "WaAS");
+        File r = new File(getInputDir(), "WaAS");
         r = new File(r, "UKDA-7215-tab");
         r = new File(r, "tab");
         return r;
     }
 
     public File getTIDataFile() {
-        File dir = new File(getInputDataDir(), "TransparencyInternational");
-        return new File(dir, "Selection.csv"); 
+        File d = new File(getInputDir(), "TransparencyInternational");
+        return new File(d, "Selection.csv"); 
     }
 
     public File getGeneratedWaASDir() {
-        File dir  = getGeneratedDataDir();
-        File f  = new File(dir, "WaAS");
+        File d  = getGeneratedDir();
+        File f  = new File(d, "WaAS");
         f.mkdirs();
         return f;
     }
     
     public File getGeneratedWaASSubsetsDir() {
-        File dir  = getGeneratedWaASDir();
-        File f  = new File(dir, "Subsets");
+        File d  = getGeneratedWaASDir();
+        File f  = new File(d, "Subsets");
         f.mkdirs();
         return f;
     }
 
     public File getEnvDataFile() {
-        return new File(getGeneratedDataDir(), "Env.dat");
+        return new File(getGeneratedDir(), "Env.dat");
     }
 }
