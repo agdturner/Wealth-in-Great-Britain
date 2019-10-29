@@ -16,6 +16,7 @@
 package uk.ac.leeds.ccg.andyt.projects.ukhi.process;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -27,8 +28,6 @@ import java.util.TreeMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import uk.ac.leeds.ccg.andyt.generic.core.Generic_Environment;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Environment;
 import uk.ac.leeds.ccg.andyt.generic.data.waas.core.WaAS_Strings;
@@ -78,6 +77,9 @@ public class UKHI_Main_Process extends UKHI_Object {
     protected final UKHI_Files files;
     protected final WaAS_Environment we;
 
+    protected final Generic_Visualisation vis;
+    protected final Generic_Execution exec;
+
     /**
      * Subset of CASEW1 for all records that have the same household
      * composition.
@@ -96,6 +98,8 @@ public class UKHI_Main_Process extends UKHI_Object {
         super(env);
         files = env.files;
         we = env.we;
+        vis = new Generic_Visualisation(env.env);
+        exec = new Generic_Execution(env.env);
     }
 
     public UKHI_Main_Process(UKHI_Main_Process p) {
@@ -106,6 +110,8 @@ public class UKHI_Main_Process extends UKHI_Object {
         GORNameLookup = p.GORNameLookup;
         GORSubsetsAndLookups = p.GORSubsetsAndLookups;
         we = env.we;
+        vis = new Generic_Visualisation(env.env);
+        exec = new Generic_Execution(env.env);
     }
 
     public static void main(String[] args) {
@@ -146,7 +152,7 @@ public class UKHI_Main_Process extends UKHI_Object {
      * words, how much mobility do households experience between the categories
      * of ‘winners’ and ‘losers’ over the course of those ten years?
      */
-    public void run() {
+    public void run() throws FileNotFoundException {
         String m = this.getClass().getName() + ".run()";
         env.logStartTag(m);
         subset = env.we.hh.getSubset(4);
@@ -214,7 +220,7 @@ public class UKHI_Main_Process extends UKHI_Object {
          * HVALUE, HPROPW
          */
         UKHI_Process_Variable p = new UKHI_Process_Variable(this);
-        p.createGraph(new BigDecimal("20000"),  UKHI_Strings.s_HVALUE);
+        p.createGraph(new BigDecimal("20000"), UKHI_Strings.s_HVALUE);
         p.createGraph(new BigDecimal("20000"), UKHI_Strings.s_HPROPW);
 
         // Check some counts
@@ -772,7 +778,7 @@ public class UKHI_Main_Process extends UKHI_Object {
             });
         } else if (wave == we.W5) {
             env.we.data.collections.keySet().stream().forEach(cID -> {
-                WaAS_Collection c  = env.we.data.getCollection(cID);
+                WaAS_Collection c = env.we.data.getCollection(cID);
                 c.getData().keySet().stream().forEach(w1ID -> {
                     if (subset.contains(w1ID)) {
                         WaAS_CombinedRecord cr = c.getData().get(w1ID);
@@ -914,15 +920,15 @@ public class UKHI_Main_Process extends UKHI_Object {
             TreeMap<Byte, Double> changeSubset,
             TreeMap<Byte, Double> changeAll, int numberOfYAxisTicks,
             BigDecimal yIncrement) {
-        Generic_Visualisation.getHeadlessEnvironment();
+        vis.getHeadlessEnvironment();
         /*
          * Initialise title and File to write image to
          */
         File file;
         String format = "PNG";
         System.out.println("Title: " + title);
-        Generic_Files gf = env.ge.files;
-        File outdir  = gf.getOutputDir();
+        Generic_Files gf = env.env.files;
+        File outdir = gf.getOutputDir();
         String filename;
         filename = title.replace(" ", "_");
         file = new File(outdir, filename + "." + format);
@@ -939,19 +945,24 @@ public class UKHI_Main_Process extends UKHI_Object {
         //BigDecimal yIncrement = null; // Setting this to null means that numberOfYAxisTicks is used.
         //BigDecimal yIncrement = new BigDecimal("20000");
         //int yAxisStartOfEndInterval = 60;
-        int decimalPlacePrecisionForCalculations = 10;
-        int decimalPlacePrecisionForDisplay = 3;
-        RoundingMode roundingMode = RoundingMode.HALF_UP;
+        /**
+         * decimalPlacePrecisionForCalculations
+         */
+        int dpc = 10;
+        /**
+         * decimalPlacePrecisionForDisplay
+         */
+        int dpd = 3;
+        boolean drawYZero = false;
+        RoundingMode rm = RoundingMode.HALF_UP;
         ExecutorService es = Executors.newSingleThreadExecutor();
-        UKHI_LineGraph chart = new UKHI_LineGraph(es, file, format, title,
-                dataWidth, dataHeight, xAxisLabel, yAxisLabel,
-                yMax, yPin, yIncrement, numberOfYAxisTicks,
-                decimalPlacePrecisionForCalculations,
-                decimalPlacePrecisionForDisplay, roundingMode);
+        UKHI_LineGraph chart = new UKHI_LineGraph(env.env, es, file, format,
+                title, dataWidth, dataHeight, xAxisLabel, yAxisLabel, yMax,
+                yPin, yIncrement, numberOfYAxisTicks, drawYZero, dpc, dpd, rm);
         chart.setData(variableName, gors, GORNameLookup, changeSubset, changeAll);
         chart.run();
 
         Future future = chart.future;
-        Generic_Execution.shutdownExecutorService(es, future, chart);
+        exec.shutdownExecutorService(es, future, chart);
     }
 }

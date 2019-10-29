@@ -23,6 +23,7 @@ import java.util.Iterator;
 import java.util.TreeMap;
 import java.util.concurrent.ExecutorService;
 import uk.ac.leeds.ccg.andyt.chart.examples.Chart_Line;
+import uk.ac.leeds.ccg.andyt.generic.core.Generic_Environment;
 import uk.ac.leeds.ccg.andyt.generic.util.Generic_Collections;
 
 /**
@@ -32,11 +33,13 @@ import uk.ac.leeds.ccg.andyt.generic.util.Generic_Collections;
  */
 public class UKHI_LineGraph extends Chart_Line {
 
-    public UKHI_LineGraph() {
+    public UKHI_LineGraph(Generic_Environment e) {
+        super(e);
     }
 
     /**
      *
+     * @param env
      * @param es
      * @param file
      * @param format
@@ -49,28 +52,26 @@ public class UKHI_LineGraph extends Chart_Line {
      * @param yPin
      * @param yIncrement
      * @param numberOfYAxisTicks
-     * @param decimalPlacePrecisionForCalculations
-     * @param decimalPlacePrecisionForDisplay
-     * @param r
+     * @param dpc decimalPlacePrecisionForCalculations
+     * @param dpd decimalPlacePrecisionForDisplay
+     * @param rm
      */
-    public UKHI_LineGraph(
-            ExecutorService es, File file, String format, String title,
-            int dataWidth, int dataHeight,
-            String xAxisLabel, String yAxisLabel,
-            BigDecimal yMax,
-            ArrayList<BigDecimal> yPin,
-            BigDecimal yIncrement,
-            int numberOfYAxisTicks,
-            int decimalPlacePrecisionForCalculations,
-            int decimalPlacePrecisionForDisplay,
-            RoundingMode r) {
-        this.yMax = yMax;
-        this.yPin = yPin;
-        this.yIncrement = yIncrement;
-        this.numberOfYAxisTicks = numberOfYAxisTicks;
-        init(es, file, format, title, dataWidth, dataHeight, xAxisLabel,
-                yAxisLabel, false, decimalPlacePrecisionForCalculations,
-                decimalPlacePrecisionForDisplay, r);
+    public UKHI_LineGraph(Generic_Environment env, ExecutorService es, File file,
+            String format, String title, int dataWidth, int dataHeight,
+            String xAxisLabel, String yAxisLabel, BigDecimal yMax,
+            ArrayList<BigDecimal> yPin, BigDecimal yIncrement,
+            int numberOfYAxisTicks, boolean drawYZero, int dpc, int dpd,
+            RoundingMode rm) {
+        super(env, es, file, format, title, dataWidth, dataHeight, xAxisLabel, 
+                yAxisLabel, yMax, yPin, yIncrement, numberOfYAxisTicks, 
+                drawYZero, dpc, dpd, rm);
+//        this.yMax = yMax;
+//        this.yPin = yPin;
+//        this.yIncrement = yIncrement;
+//        this.numberOfYAxisTicks = numberOfYAxisTicks;
+//        init(env, es, file, format, title, dataWidth, dataHeight, xAxisLabel,
+//                yAxisLabel, false, dpc,
+//                dpc, rm);
     }
 
     public void setData(
@@ -108,9 +109,9 @@ public class UKHI_LineGraph extends Chart_Line {
         BigDecimal[] minMaxBigDecimal;
         minMaxBigDecimal = Generic_Collections.getMinMaxBigDecimal(map);
         minY = minMaxBigDecimal[0];
-         maxY = minMaxBigDecimal[1];
-         minX = map.firstKey();
-         maxX = map.lastKey();
+        maxY = minMaxBigDecimal[1];
+        minX = map.firstKey();
+        maxX = map.lastKey();
         minMaxBigDecimal = Generic_Collections.getMinMaxBigDecimal(map2);
         if (minY.compareTo(minMaxBigDecimal[0]) == 1) {
             minY = minMaxBigDecimal[0];

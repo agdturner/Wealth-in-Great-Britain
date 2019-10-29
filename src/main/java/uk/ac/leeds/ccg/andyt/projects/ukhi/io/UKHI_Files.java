@@ -16,6 +16,7 @@
 package uk.ac.leeds.ccg.andyt.projects.ukhi.io;
 
 import java.io.File;
+import java.io.IOException;
 import uk.ac.leeds.ccg.andyt.generic.io.Generic_Files;
 
 /**
@@ -24,14 +25,10 @@ import uk.ac.leeds.ccg.andyt.generic.io.Generic_Files;
  */
 public class UKHI_Files extends Generic_Files {
 
-    public UKHI_Files(){
-        super();
-    }
-
     /**
      * @param dataDir
      */
-    public UKHI_Files(File dataDir) {
+    public UKHI_Files(File dataDir) throws IOException {
         super(dataDir);
     }
 

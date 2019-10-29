@@ -14,7 +14,7 @@ import uk.ac.leeds.ccg.andyt.projects.ukhi.io.UKHI_Files;
 public class UKHI_Environment extends UKHI_OutOfMemoryErrorHandler  {
 
     public transient UKHI_Files files;
-    public transient Generic_Environment ge;
+    public transient Generic_Environment env;
     public transient WaAS_Environment we;
     
     /**
@@ -41,8 +41,9 @@ public class UKHI_Environment extends UKHI_OutOfMemoryErrorHandler  {
      */
     public UKHI_Environment(Generic_Environment ge, File wasDataDir) throws IOException {
         //Memory_Threshold = 3000000000L;
-        files = new UKHI_Files();
-        this.ge = ge;
+        //files = new UKHI_Files();
+        files = new UKHI_Files(ge.files.getDir());
+        this.env = ge;
         we = new WaAS_Environment(wasDataDir);
         File f = we.files.getEnvDataFile();
         if (f.exists()) {
@@ -108,7 +109,7 @@ public class UKHI_Environment extends UKHI_OutOfMemoryErrorHandler  {
      * @param s The tag name.
      */
     public final void logStartTag(String s) {
-        ge.logStartTag(s, logID);
+        env.logStartTag(s, logID);
     }
     
     /**
@@ -117,7 +118,7 @@ public class UKHI_Environment extends UKHI_OutOfMemoryErrorHandler  {
      * @param s The message to be logged.
      */
     public void log(String s) {
-        ge.log(s, logID);
+        env.log(s, logID);
     }
     
     /**
@@ -127,6 +128,6 @@ public class UKHI_Environment extends UKHI_OutOfMemoryErrorHandler  {
      * @param s The tag name.
      */
     public final void logEndTag(String s) {
-        ge.logEndTag(s, logID);
+        env.logEndTag(s, logID);
     }
 }
