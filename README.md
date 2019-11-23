@@ -6,8 +6,14 @@ A Java library for processing data for a project exploring contemporary UK housi
 This library evolved to process data to explore who the winners and losers are from the contemporary UK housing market. The following links to a document about this currently dormant under the radar research project started at the University of Leeds:
 https://docs.google.com/document/d/1noMZiSz8V06eLJSipIblIEU5Av0ajxPLaVOqzuDKg-4/edit#
 
+## Usage
+This library is immature and is not recommended for use by others.
+
 ## Dependencies
 Please see pom.xml for details.
+
+## Contributions
+This library is immature and under development and not accepting contributions at present.
 
 ## LICENCE
 Please see the standard Apache 2.0 open source LICENCE.
